@@ -1042,13 +1042,18 @@ tbody td strong { color: var(--text); }
   .search-open span { display: none; }
   .search-icon { display: block; }
   .search-open { padding: 7px 10px; }
+  /* The date is the widest thing in the bar that is not a link, so it goes
+     before the links do. The series is still dated in the footer, to the
+     month rather than the day. */
+  .freshness { display: none; }
 }
 
 /* Below this the nine links no longer fit beside the brand and the controls,
    so they become a menu. This is the bar's breakpoint, not the page's: the
-   grids stay two and three columns down to 860px. */
-@media (max-width: 1020px) {
-  .freshness { display: none; }
+   grids stay two and three columns down to 860px. The number is what the
+   parts measure, not a round figure: brand and nine links and two buttons
+   come to about 1,020px, and the bar is given a little over that. */
+@media (max-width: 1080px) {
   /* The nav is out of flow once it is a menu, so its margin-left:auto no
      longer pushes anything: the first remaining control takes over. */
   .theme-toggle { margin-left: auto; }

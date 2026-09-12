@@ -111,7 +111,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=31" alt="Flag of Palestine">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
