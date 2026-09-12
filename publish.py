@@ -320,6 +320,16 @@ def mirror():
         args += ['--exclude', pattern]
     args += [str(HERE) + '/', str(DEPLOY) + '/']
     run(args)
+    # An excluded file is also protected from --delete, so anything that was
+    # published before it was excluded stays served until it is removed here.
+    # --delete-excluded is not the answer: .git/ is on the same list.
+    for name in EXCLUDES:
+        if '*' in name or name.endswith('/'):
+            continue
+        stale = DEPLOY / name
+        if stale.exists():
+            stale.unlink()
+            say('pruned %s from the published site' % name)
     changed = run(['git', 'status', '--porcelain'], cwd=DEPLOY)
     lines = [line for line in changed.splitlines() if line.strip()]
     say('mirror: %d paths differ from the published site' % len(lines))
