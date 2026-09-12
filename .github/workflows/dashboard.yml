@@ -93,18 +93,23 @@ jobs:
       # date and produce a commit saying nothing happened. A push or a manual
       # run rebuilds them regardless, because the routes or the copy may be
       # what changed.
-      - name: Rebuild the static snapshots, cards and sitemap
+      # The share cards are deliberately not rebuilt here. They are text drawn
+      # with whichever fonts the machine has, so the runner's copies differ from
+      # the ones built on the workstation even when nothing about the site has
+      # changed — each would overwrite the other for ever. A card changes only
+      # when a route's title or description changes, and that arrives in a push
+      # from the workstation, which builds the cards in the same pass.
+      - name: Rebuild the static snapshots and sitemap
         id: static
         if: steps.diff.outputs.changed == 'true' || github.event_name != 'schedule'
         run: |
           set -o pipefail
-          python3 -m pip install --quiet Pillow
           CHROME="$(command -v google-chrome || command -v chromium-browser || true)"
           if [ -z "$CHROME" ]; then
             echo 'No Chrome on the runner; the snapshots cannot be rendered.' >&2
             exit 1
           fi
-          python3 prerender.py --chrome "$CHROME" | tee "$RUNNER_TEMP/prerender.log"
+          python3 prerender.py --chrome "$CHROME" --no-cards | tee "$RUNNER_TEMP/prerender.log"
 
       - name: Commit the refreshed data and static layer
         if: steps.diff.outputs.changed == 'true' || steps.static.outcome == 'success'
@@ -114,7 +119,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ snapshot/ assets/og/ sitemap.xml feed.xml index.html
+          git add data/ snapshot/ sitemap.xml feed.xml index.html
           if git diff --cached --quiet; then
             echo 'Nothing staged; the rebuild was byte-identical.'
             exit 0
