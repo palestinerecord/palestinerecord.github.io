@@ -6,8 +6,8 @@
 <meta name="description" content="The long death toll from 1948 to 2026, and the periods for which no one kept a count.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=28" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=28">
+<link rel="icon" href="../assets/favicon.svg?v=30" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=30">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -29,7 +29,11 @@
 <meta name="twitter:title" content="Since 1948 — seventy-eight years of the toll · The Documented Record">
 <meta name="twitter:description" content="The long death toll from 1948 to 2026, and the periods for which no one kept a count.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/data-since-1948.png">
-<link rel="stylesheet" href="../css/style.css?v=28">
+<link rel="stylesheet" href="../css/style.css?v=30">
+<!-- Before the stylesheet paints anything: a reader who chose the light theme
+     should not be shown the dark one first. Inline and synchronous by
+     necessity; a deferred script runs too late to prevent the flash. -->
+
 
 
 
@@ -53,7 +57,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -70,7 +74,8 @@
     <a href="../index.html#/legal" data-view="legal">Legal</a>
     <a href="../index.html#/sources" data-view="sources">Sources</a>
   </nav>
-  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span>Casualty data <b>10 September 2026</b></span></div>
+  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>10 September 2026</b></span></div>
+  
   
   
 </header>
@@ -84,11 +89,12 @@
       <p>Everything else on this dashboard runs on a daily or monthly series that begins in October 2023. This block carries the periods before it. No continuous Palestinian death register has ever existed, so the record is assembled from separate bodies of work — a contemporaneous Palestinian enumeration of 1948, B'Tselem's case-by-case database from 1987, OCHA's monitoring from 2005, the Gaza Ministry of Health register from 2023 — each with its own definitions, geography and start date.</p>
     </div>
         <div class="grid">
-          <div class="card chart-card" id="chart-long-toll" data-chart-card="long-toll" data-title="Palestinians killed, by documented period" data-source="See the table below">
+          <div class="card chart-card" id="chart-long-toll" data-chart-card="long-toll" data-title="Palestinians killed, by documented period" data-source="See the table below" data-note="Log scale. Amber: periods documented by a named organisation. Grey: an overlapping or partial series. Red: the current war. Violet, hatched: no organisation published a figure, so one is constructed here from adjacent counts — the arithmetic is set out in the table, and the estimate is never added to the documented running total.">
       <div class="chart-head">
         <div><h3>Palestinians killed, by documented period</h3><p>Log scale. Amber: periods documented by a named organisation. Grey: an overlapping or partial series. Red: the current war. Violet, hatched: no organisation published a figure, so one is constructed here from adjacent counts — the arithmetic is set out in the table, and the estimate is never added to the documented running total.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">See the table below</span>
+          
           
           
           
@@ -99,11 +105,12 @@
       <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/data/since-1948&chart=long-toll">open it in the live record</a>.</p>
       <div class="chart-table" hidden=""></div>
     </div>
-          <div class="card chart-card" id="chart-long-cumulative" data-chart-card="long-cumulative" data-title="The documented running total, against the only cumulative figure that exists" data-source="PCBS, June 2024">
+          <div class="card chart-card" id="chart-long-cumulative" data-chart-card="long-cumulative" data-title="The documented running total, against the only cumulative figure that exists" data-source="PCBS, June 2024" data-note="Bars: deaths added in each period that can be counted without double counting. Amber line: the running total. Blue dashed line: the Palestinian Central Bureau of Statistics figure for the whole period since 1948.">
       <div class="chart-head">
         <div><h3>The documented running total, against the only cumulative figure that exists</h3><p>Bars: deaths added in each period that can be counted without double counting. Amber line: the running total. Blue dashed line: the Palestinian Central Bureau of Statistics figure for the whole period since 1948.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">PCBS, June 2024</span>
+          
           
           
           
@@ -196,11 +203,12 @@
       <p>What happens to a complaint about a soldier killing or injuring a Palestinian, from the Israeli organisation that follows every one of them through the Israeli military justice system. Yesh Din has been tracking the funnel since 2003.</p>
     </div>
         <div class="grid wide-left">
-          <div class="card chart-card" id="chart-accountability-funnel" data-chart-card="accountability-funnel" data-title="Complaints, investigations and indictments, 2016–2024" data-source="Yesh Din">
+          <div class="card chart-card" id="chart-accountability-funnel" data-chart-card="accountability-funnel" data-title="Complaints, investigations and indictments, 2016–2024" data-source="Yesh Din" data-note="Every stage as a share of the complaints that started it.">
       <div class="chart-head">
         <div><h3>Complaints, investigations and indictments, 2016–2024</h3><p>Every stage as a share of the complaints that started it.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Yesh Din</span>
+          
           
           
           
@@ -235,21 +243,24 @@
           </div>
         </div>
         <div class="grid c3" style="margin-top:22px">
-          <div class="stat red">
+          <div class="stat red" data-tone="red">
       <div class="val" data-count="0.4">0.4%</div>
       <div class="lbl">Chance of prosecution for killing a Palestinian</div>
       <div class="note">One prosecution in 219 recorded fatalities</div>
       <div class="src">Yesh Din</div>
-    </div><div class="stat red">
+      
+    </div><div class="stat red" data-tone="red">
       <div class="val" data-count="77.3">77.3%</div>
       <div class="lbl">Complaints that never reach an investigation</div>
       <div class="note">2016–2024: 1,875 of 2,427 closed without a criminal investigation being opened</div>
       <div class="src">Yesh Din</div>
-    </div><div class="stat amber">
+      
+    </div><div class="stat amber" data-tone="amber">
       <div class="val" data-count="23">23</div>
       <div class="lbl">Indictments in nine years</div>
       <div class="note">against 2,427 complaints of soldiers killing or injuring Palestinians</div>
       <div class="src">Yesh Din</div>
+      
     </div>
         </div>
         <ul style="margin-top:18px"><li class="lvl0">The funnel is not a backlog. Most complaints are closed without a criminal investigation ever being opened, so the case never enters the system that could convict anyone.</li><li class="lvl0">This matters legally, not just morally. Complementarity under the Rome Statute means the International Criminal Court may act only where the state is unwilling or unable genuinely to investigate. A 0.9% indictment rate over nine years is the evidentiary basis for that finding, produced by an Israeli organisation from Israeli military records.</li><li class="lvl0">Yesh Din's figures cover soldiers only. Israeli civilians who attack Palestinians in the West Bank are handled by the Israel Police, whose own closure rates over the same period are of the same order.</li></ul>
@@ -261,11 +272,12 @@
       <h2>The continuous mechanism</h2>
       <p>Killing is the most visible part of the record and the smallest part of it by number. Dispossession is the continuous mechanism, and it runs through every period above without a break.</p>
     </div>
-        <div class="card chart-card" id="chart-dispossession" data-chart-card="dispossession" data-title="People displaced and structures demolished, 1948–2026" data-source="UN; UNRWA; ICAHD; Land Research Center">
+        <div class="card chart-card" id="chart-dispossession" data-chart-card="dispossession" data-title="People displaced and structures demolished, 1948–2026" data-source="UN; UNRWA; ICAHD; Land Research Center" data-note="Log scale. Blue: people displaced. Amber: homes and structures demolished.">
       <div class="chart-head">
         <div><h3>People displaced and structures demolished, 1948–2026</h3><p>Log scale. Blue: people displaced. Amber: homes and structures demolished.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">UN; UNRWA; ICAHD; Land Research Center</span>
+          
           
           
           
@@ -277,21 +289,24 @@
       <div class="chart-table" hidden=""></div>
     </div>
         <div class="grid c3" style="margin-top:22px">
-          <div class="stat red">
+          <div class="stat red" data-tone="red">
       <div class="val" data-count="750000">750k<span class="suffix">+</span></div>
       <div class="lbl">Expelled or fled, 1948</div>
       <div class="note">Over half the Arab population of Palestine. 530 villages destroyed, 11 towns and cities depopulated.</div>
       <div class="src">UN; report §2.3 · 1947–1949</div>
-    </div><div class="stat amber">
+      
+    </div><div class="stat amber" data-tone="amber">
       <div class="val" data-count="300000">300k</div>
       <div class="lbl">Displaced, 1967</div>
       <div class="note">Estimates range from 280,000 to 325,000. Over 100,000 of them were being displaced for the second time, having already been made refugees in 1948.</div>
       <div class="src">UN Secretary-General, 1967 · 1967</div>
-    </div><div class="stat ">
+      
+    </div><div class="stat " data-tone="">
       <div class="val" data-count="160000">160k</div>
       <div class="lbl">Internally displaced under occupation</div>
       <div class="note">Within the West Bank and Gaza, by demolition, revocation and closure rather than by war.</div>
       <div class="src">BADIL; ICAHD · 1967–2023</div>
+      
     </div>
         </div>
         <ul style="margin-top:18px"><li class="lvl0">ICAHD's figure for the occupied territory is published in three versions — 26,000, 48,038 and 55,000 — which differ by date and by what counts as a structure, not by disagreement about the events. The highest is its February 2019 compilation and is the one shown here.</li><li class="lvl0">ICAHD's own methodological warning applies to every figure in this block: neither Israel nor OCHA keeps a count of home demolitions separately from the demolition of structures, so barns, animal pens, cisterns and fencing are inside the same totals. ICAHD also states that it is still investigating demolitions carried out between 1967 and 1982, before the Civil Administration began keeping records.</li><li class="lvl0">Demolition is administrative, not military. The stated ground in the large majority of cases is building without an Israeli permit, in a permit system that almost never issues one to a Palestinian while approving thousands of settlement housing units over the same period.</li></ul>
@@ -304,11 +319,12 @@
       <p>The occupation's other continuous instrument. Israel has held Palestinians under military order in the occupied territory since 1967, and administrative detention — indefinite imprisonment on secret evidence, without charge or trial — has been available to it throughout.</p>
     </div>
         <div class="grid wide-left">
-          <div class="card chart-card" id="chart-detention-series" data-chart-card="detention-series" data-title="Palestinians held in administrative detention, at each documented snapshot" data-source="Addameer">
+          <div class="card chart-card" id="chart-detention-series" data-chart-card="detention-series" data-title="Palestinians held in administrative detention, at each documented snapshot" data-source="Addameer" data-note="Detention without charge, without trial, and on evidence the detainee may not see. The orders are renewable without limit.">
       <div class="chart-head">
         <div><h3>Palestinians held in administrative detention, at each documented snapshot</h3><p>Detention without charge, without trial, and on evidence the detainee may not see. The orders are renewable without limit.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Addameer</span>
+          
           
           
           
@@ -327,21 +343,24 @@
           </div>
         </div>
         <div class="grid c3" style="margin-top:22px">
-          <div class="stat red">
+          <div class="stat red" data-tone="red">
       <div class="val" data-count="800000">800k<span class="suffix">+</span></div>
       <div class="lbl">Palestinians detained under Israeli military orders since 1967</div>
       <div class="note">roughly 20% of the population of the occupied territory, and up to 40% of all Palestinian males</div>
       <div class="src">Addameer Prisoner Support and Human Rights Association</div>
-    </div><div class="stat amber">
+      
+    </div><div class="stat amber" data-tone="amber">
       <div class="val" data-count="11100">11k<span class="suffix">+</span></div>
       <div class="lbl">Political prisoners, October 2025</div>
       <div class="note">the highest total since the Second Intifada began in 2000, excluding army-run military camps</div>
       <div class="src">Addameer</div>
-    </div><div class="stat blue">
+      
+    </div><div class="stat blue" data-tone="blue">
       <div class="val" data-count="9">9</div>
       <div class="lbl">Israeli settlers ever held in administrative detention</div>
       <div class="note">over the entire history of the power, against more than 800,000 Palestinian detentions</div>
       <div class="src">Addameer</div>
+      
     </div>
         </div>
         <ul style="margin-top:18px"><li class="lvl0">Administrative detention is not a charge that has yet to be brought. It is a procedure that replaces charge: the detainee is not told the evidence, cannot answer it, and the order is renewable indefinitely.</li><li class="lvl0">Children are inside these figures. Israel is the only state in the world that systematically prosecutes children in military courts, at roughly 500 to 700 cases a year before the war and 370 child prisoners held as of the October 2025 snapshot.</li><li class="lvl0">98 Palestinians have died in Israeli custody since October 2023, documented by Physicians for Human Rights–Israel.</li></ul>
@@ -350,15 +369,20 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">96,545 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="footer-links">
+      <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a>
+    </p>
   </div>
 </footer>
+
 
 
 

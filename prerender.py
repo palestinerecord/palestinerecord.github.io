@@ -70,6 +70,13 @@ SANS_BOLD = '/System/Library/Fonts/Supplemental/Arial Bold.ttf'
 
 # ---------------------------------------------------------------- routes
 
+# `#/embed/<chart>` is a route with no page of its own: it renders one chart for
+# an iframe on somebody else's site, and there are ninety-odd of them. It is a
+# view, so it lives in VIEWS, but it is not a document, so it gets no snapshot,
+# no social card and no sitemap entry.
+UNCRAWLED = ('embed',)
+
+
 def discover_routes():
     """The route list, read from the application rather than kept in step with it.
 
@@ -97,6 +104,8 @@ def discover_routes():
     # would publish the same page twice under two URLs. The chapters win.
     routes = []
     for name in top:
+        if name in UNCRAWLED:
+            continue
         if name == 'data':
             routes.extend(('data-%s' % c, '#/data/%s' % c) for c in chapters)
         elif name == 'tour':

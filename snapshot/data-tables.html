@@ -6,8 +6,8 @@
 <meta name="description" content="Each table from the source report reproduced exactly, with the part and section it belongs to.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=28" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=28">
+<link rel="icon" href="../assets/favicon.svg?v=30" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=30">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -29,7 +29,11 @@
 <meta name="twitter:title" content="Source tables — every table in the report · The Documented Record">
 <meta name="twitter:description" content="Each table from the source report reproduced exactly, with the part and section it belongs to.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/data-tables.png">
-<link rel="stylesheet" href="../css/style.css?v=28">
+<link rel="stylesheet" href="../css/style.css?v=30">
+<!-- Before the stylesheet paints anything: a reader who chose the light theme
+     should not be shown the dark one first. Inline and synchronous by
+     necessity; a deferred script runs too late to prevent the flash. -->
+
 
 
 
@@ -53,7 +57,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -70,7 +74,8 @@
     <a href="../index.html#/legal" data-view="legal">Legal</a>
     <a href="../index.html#/sources" data-view="sources">Sources</a>
   </nav>
-  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span>Casualty data <b>10 September 2026</b></span></div>
+  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>10 September 2026</b></span></div>
+  
   
   
 </header>
@@ -219,15 +224,20 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">96,545 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="footer-links">
+      <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a>
+    </p>
   </div>
 </footer>
+
 
 
 

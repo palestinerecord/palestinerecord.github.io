@@ -6,8 +6,8 @@
 <meta name="description" content="Arms transfers, trade, Security Council vetoes, and the companies named in the UN database of businesses operating in the settlements.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=28" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=28">
+<link rel="icon" href="../assets/favicon.svg?v=30" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=30">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -29,7 +29,11 @@
 <meta name="twitter:title" content="Complicity — who supplies the war · The Documented Record">
 <meta name="twitter:description" content="Arms transfers, trade, Security Council vetoes, and the companies named in the UN database of businesses operating in the settlements.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/data-complicity.png">
-<link rel="stylesheet" href="../css/style.css?v=28">
+<link rel="stylesheet" href="../css/style.css?v=30">
+<!-- Before the stylesheet paints anything: a reader who chose the light theme
+     should not be shown the dark one first. Inline and synchronous by
+     necessity; a deferred script runs too late to prevent the flash. -->
+
 
 
 
@@ -53,7 +57,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -70,7 +74,8 @@
     <a href="../index.html#/legal" data-view="legal">Legal</a>
     <a href="../index.html#/sources" data-view="sources">Sources</a>
   </nav>
-  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span>Casualty data <b>10 September 2026</b></span></div>
+  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>10 September 2026</b></span></div>
+  
   
   
 </header>
@@ -84,11 +89,12 @@
       <p>No state sustains a war of this scale alone. The weapons, the money and the diplomatic cover are supplied, and every supplier is named in the public record. This is the ledger of who supplies what — and of who has stopped.</p>
     </div>
         <div class="grid wide-left">
-          <div class="card chart-card" id="chart-arms-suppliers" data-chart-card="arms-suppliers" data-title="Where Israel's major arms imports come from, 2020–2024" data-source="SIPRI">
+          <div class="card chart-card" id="chart-arms-suppliers" data-chart-card="arms-suppliers" data-title="Where Israel's major arms imports come from, 2020–2024" data-source="SIPRI" data-note="Share of major conventional arms deliveries. Two states account for ninety-nine per cent of them.">
       <div class="chart-head">
         <div><h3>Where Israel's major arms imports come from, 2020–2024</h3><p>Share of major conventional arms deliveries. Two states account for ninety-nine per cent of them.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">SIPRI</span>
+          
           
           
           
@@ -108,11 +114,12 @@
           </div>
         </div>
         <div class="grid" style="margin-top:22px">
-          <div class="card chart-card" id="chart-us-aid" data-chart-card="us-aid" data-title="United States bilateral aid to Israel, cumulative" data-source="Congressional Research Service; Costs of War">
+          <div class="card chart-card" id="chart-us-aid" data-chart-card="us-aid" data-title="United States bilateral aid to Israel, cumulative" data-source="Congressional Research Service; Costs of War" data-note="Each bar is a published cumulative total at the date stated. The last bar is the same aid adjusted for inflation, which is the honest comparison across eighty years.">
       <div class="chart-head">
         <div><h3>United States bilateral aid to Israel, cumulative</h3><p>Each bar is a published cumulative total at the date stated. The last bar is the same aid adjusted for inflation, which is the honest comparison across eighty years.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Congressional Research Service; Costs of War</span>
+          
           
           
           
@@ -125,11 +132,12 @@
     </div>
         </div>
         <div class="grid" style="margin-top:22px">
-          <div class="card chart-card" id="chart-us-aid-flows" data-chart-card="us-aid-flows" data-title="The annual flows, and the war supplementals" data-source="Congressional Research Service; Public Law 118-50">
+          <div class="card chart-card" id="chart-us-aid-flows" data-chart-card="us-aid-flows" data-title="The annual flows, and the war supplementals" data-source="Congressional Research Service; Public Law 118-50" data-note="The 2016 Memorandum of Understanding fixed $3.8 billion a year to 2028. The war added more in one year than the Memorandum provides in four.">
       <div class="chart-head">
         <div><h3>The annual flows, and the war supplementals</h3><p>The 2016 Memorandum of Understanding fixed $3.8 billion a year to 2028. The war added more in one year than the Memorandum provides in four.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Congressional Research Service; Public Law 118-50</span>
+          
           
           
           
@@ -142,26 +150,30 @@
     </div>
         </div>
         <div class="grid c4" style="margin-top:22px">
-          <div class="stat ">
+          <div class="stat " data-tone="">
       <div class="val" data-count="150">150<span class="suffix">$</span>bn</div>
       <div class="lbl">Cumulative bilateral aid, 1946 to February 2022</div>
       
       <div class="src">Congressional Research Service, RL33222, February 2022</div>
-    </div><div class="stat ">
+      
+    </div><div class="stat " data-tone="">
       <div class="val" data-count="158.7">158.7<span class="suffix">$</span>bn</div>
       <div class="lbl">Cumulative bilateral aid, to March 2023</div>
       
       <div class="src">Congressional Research Service, RL33222, March 2023</div>
-    </div><div class="stat red">
+      
+    </div><div class="stat red" data-tone="red">
       <div class="val" data-count="174">174<span class="suffix">$</span>bn</div>
       <div class="lbl">Cumulative bilateral aid, latest published</div>
       
       <div class="src">Congressional Research Service, RL33222, current edition</div>
-    </div><div class="stat amber">
+      
+    </div><div class="stat amber" data-tone="amber">
       <div class="val" data-count="317.9">317.9<span class="suffix">$</span>bn</div>
       <div class="lbl">The same aid adjusted for inflation, 1959–2024</div>
       
       <div class="src">Costs of War Project, Brown University, October 2024</div>
+      
     </div>
         </div>
         <ul style="margin-top:18px"><li class="lvl0">Israel is the largest cumulative recipient of United States foreign assistance since the Second World War.</li><li class="lvl0">United States law already contains the instruments that would restrict this. Section 502B of the Foreign Assistance Act bars security assistance to any government engaged in a consistent pattern of gross violations of internationally recognised human rights; the Leahy Laws bar assistance to units credibly implicated in such violations; and Section 620I bars assistance to any country that restricts the delivery of United States humanitarian aid. None has been applied.</li><li class="lvl0">The aid figures are the published cumulative totals at three dates, not an annual series. The Congressional Research Service does not publish a continuous machine-readable annual table.</li></ul>
@@ -174,11 +186,12 @@
       <p>SIPRI measures deliveries of major conventional weapons. The supplying states publish something different, and more specific: what they authorised, when, and to what value. Those three national records are set out here as each government reported them, including the German ministry's answer to a parliamentary question, the US congressional and Costs of War tallies, and the UK's own count of the licences it suspended against the ones it left in force.</p>
     </div>
         <div class="grid">
-          <div class="card chart-card" id="chart-arms-germany" data-chart-card="arms-germany" data-title="German arms export licences to Israel, by year" data-source="§13.4">
+          <div class="card chart-card" id="chart-arms-germany" data-chart-card="arms-germany" data-title="German arms export licences to Israel, by year" data-source="§13.4" data-note="The bar for 2022 is derived from the report's &quot;tenfold increase&quot; wording rather than separately published, and is drawn dashed for that reason. The 2026 bar is half a year. Chancellor Friedrich Merz suspended export licences for military equipment potentially usable in Gaza — the first German arms restriction on Israel. Berlin lifted it on 24 November 2025, citing the October 2025 ceasefire as having &amp;quot;stabilised&amp;quot;. Amnesty International called the lifting &amp;quot;reckless, unlawful and risks complicity in Israel's international crimes&amp;quot;.">
       <div class="chart-head">
         <div><h3>German arms export licences to Israel, by year</h3><p>The bar for 2022 is derived from the report's "tenfold increase" wording rather than separately published, and is drawn dashed for that reason. The 2026 bar is half a year. Chancellor Friedrich Merz suspended export licences for military equipment potentially usable in Gaza — the first German arms restriction on Israel. Berlin lifted it on 24 November 2025, citing the October 2025 ceasefire as having "stabilised". Amnesty International called the lifting "reckless, unlawful and risks complicity in Israel's international crimes".</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§13.4</span>
+          
           
           
           
@@ -208,11 +221,12 @@
         </div>
         <ul style="margin-top:18px"><li class="lvl0">The fourfold surge in the six months after the embargo was lifted shows the embargo functioned as a pause, not a reversal: German supply resumed at a higher rate than at any point before it was imposed.</li><li class="lvl0">The Left Party, whose parliamentary question produced the figures, accused Berlin of "unlimited double standards".</li><li class="lvl0">Nicaragua's case against Germany for complicity in genocide, filed at the ICJ in April 2024, was still pending when the 2026 approvals were disclosed.</li></ul>
         <div class="grid" style="margin-top:22px">
-          <div class="card chart-card" id="chart-arms-us" data-chart-card="arms-us" data-title="United States arms to Israel since 7 October 2023" data-source="§13.2">
+          <div class="card chart-card" id="chart-arms-us" data-chart-card="arms-us" data-title="United States arms to Israel since 7 October 2023" data-source="§13.2" data-note="The bars are separate announcements and standing case values; they overlap in scope and do not sum. The two dashed lines are the published totals: what Congress enacted, and what the Costs of War project counts including transfers, foreign military sales and emergency authority.">
       <div class="chart-head">
         <div><h3>United States arms to Israel since 7 October 2023</h3><p>The bars are separate announcements and standing case values; they overlap in scope and do not sum. The two dashed lines are the published totals: what Congress enacted, and what the Costs of War project counts including transfers, foreign military sales and emergency authority.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§13.2</span>
+          
           
           
           
@@ -225,24 +239,27 @@
     </div>
         </div>
         <div class="grid c2" style="margin-top:22px">
-          <div class="stat amber">
+          <div class="stat amber" data-tone="amber">
       <div class="val" data-count="16.3">16.3<span class="suffix">$</span>bn</div>
       <div class="lbl">Enacted by US legislation since 7 October 2023</div>
       
       <div class="src">US Congress, Library of Congress</div>
-    </div><div class="stat red">
+      
+    </div><div class="stat red" data-tone="red">
       <div class="val" data-count="21.7">21.7<span class="suffix">$</span>bn</div>
       <div class="lbl">All military aid, October 2023 to September 2025, including transfers, foreign military sales and emergency authority</div>
       
       <div class="src">Brown University Costs of War, through September 2025</div>
+      
     </div>
         </div>
         <div class="grid wide-left" style="margin-top:22px">
-          <div class="card chart-card" id="chart-arms-uk" data-chart-card="arms-uk" data-title="What the United Kingdom suspended, and what it left in force" data-source="§13.3, §15.2">
+          <div class="card chart-card" id="chart-arms-uk" data-chart-card="arms-uk" data-title="What the United Kingdom suspended, and what it left in force" data-source="§13.3, §15.2" data-note="Roughly 30 of 350 extant export licences suspended over the risk of breaches of international humanitarian law. The remainder, including the disputed exemption for F-35 components, were left intact.">
       <div class="chart-head">
         <div><h3>What the United Kingdom suspended, and what it left in force</h3><p>Roughly 30 of 350 extant export licences suspended over the risk of breaches of international humanitarian law. The remainder, including the disputed exemption for F-35 components, were left intact.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§13.3, §15.2</span>
+          
           
           
           
@@ -269,11 +286,12 @@
       <h2>Who has stopped, and who has not</h2>
       <p>Which states have restricted arms transfers to Israel since October 2023, and which have not.</p>
     </div>
-        <div class="card chart-card" id="chart-embargo-tracker" data-chart-card="embargo-tracker" data-title="Arms transfer restrictions by state, since October 2023" data-source="National export-licensing records; court judgments">
+        <div class="card chart-card" id="chart-embargo-tracker" data-chart-card="embargo-tracker" data-title="Arms transfer restrictions by state, since October 2023" data-source="National export-licensing records; court judgments" data-note="Green: halted. Amber: partial or court-ordered. Red: continuing without restriction. Hover for the measure and its date.">
       <div class="chart-head">
         <div><h3>Arms transfer restrictions by state, since October 2023</h3><p>Green: halted. Amber: partial or court-ordered. Red: continuing without restriction. Hover for the measure and its date.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">National export-licensing records; court judgments</span>
+          
           
           
           
@@ -355,11 +373,12 @@
       <p>In 2016 the Human Rights Council instructed its own office to compile a database of businesses operating in the Israeli settlements. It is the only official list of its kind, and it has grown at every revision.</p>
     </div>
         <div class="grid wide-left">
-          <div class="card chart-card" id="chart-settlement-business" data-chart-card="settlement-business" data-title="Businesses listed by the United Nations as operating in the settlements" data-source="OHCHR, HRC resolution 31/36">
+          <div class="card chart-card" id="chart-settlement-business" data-chart-card="settlement-business" data-title="Businesses listed by the United Nations as operating in the settlements" data-source="OHCHR, HRC resolution 31/36" data-note="Three releases in five years. The 2023 fall is not a reprieve: fifteen entities were removed because they stopped.">
       <div class="chart-head">
         <div><h3>Businesses listed by the United Nations as operating in the settlements</h3><p>Three releases in five years. The 2023 fall is not a reprieve: fifteen entities were removed because they stopped.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">OHCHR, HRC resolution 31/36</span>
+          
           
           
           
@@ -409,11 +428,12 @@
       <h2>One state against fourteen</h2>
       <p>The Security Council is the only United Nations organ whose decisions bind. Since 1972 the United States has used its permanent-member veto to stop draft resolutions concerning Israel more often than on any other subject in the Council's history.</p>
     </div>
-        <div class="card chart-card" id="chart-un-vetoes" data-chart-card="un-vetoes" data-title="Security Council drafts blocked since 7 October 2023" data-source="UN Security Council records">
+        <div class="card chart-card" id="chart-un-vetoes" data-chart-card="un-vetoes" data-title="Security Council drafts blocked since 7 October 2023" data-source="UN Security Council records" data-note="Each bar is the whole Council: green voted for, grey abstained, red is the single vote that stopped it.">
       <div class="chart-head">
         <div><h3>Security Council drafts blocked since 7 October 2023</h3><p>Each bar is the whole Council: green voted for, grey abstained, red is the single vote that stopped it.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">UN Security Council records</span>
+          
           
           
           
@@ -425,20 +445,23 @@
       <div class="chart-table" hidden=""></div>
     </div>
         <div class="grid c3" style="margin-top:22px">
-          <div class="stat red">
+          <div class="stat red" data-tone="red">
       <div class="val" data-count="49">49</div>
       <div class="lbl">United States vetoes of draft resolutions on Israel and Palestine</div>
       <div class="note">Since the first on 10 September 1972, document S/10784, on a draft concerning Israeli attacks in Lebanon and Syria. Counts vary between 45 and 53 depending on whether blocked presidential statements and unpublished drafts are included.</div>
       
-    </div><div class="stat amber">
+      
+    </div><div class="stat amber" data-tone="amber">
       <div class="val" data-count="55">55%</div>
       <div class="lbl">Share of all United States vetoes ever cast</div>
       <div class="note">More than half of every veto the United States has cast since 1945 has concerned Israel.</div>
       
-    </div><div class="stat red">
+      
+    </div><div class="stat red" data-tone="red">
       <div class="val" data-count="7">7</div>
       <div class="lbl">Vetoes since 7 October 2023</div>
       <div class="note">Six of them on drafts calling for a ceasefire or humanitarian access, and one on Palestinian membership of the United Nations.</div>
+      
       
     </div>
         </div>
@@ -498,11 +521,12 @@
       <h2>Thirty-seven years in one direction</h2>
       <p>Recognition of the State of Palestine has moved in one direction for thirty-seven years, and it accelerated sharply in 2024 and 2025.</p>
     </div>
-        <div class="card chart-card" id="chart-recognition-timeline" data-chart-card="recognition-timeline" data-title="UN member states recognising the State of Palestine, 1988–2026" data-source="UN records; national declarations">
+        <div class="card chart-card" id="chart-recognition-timeline" data-chart-card="recognition-timeline" data-title="UN member states recognising the State of Palestine, 1988–2026" data-source="UN records; national declarations" data-note="A step line: each step is a documented wave of recognitions. The dashed line is all 193 member states.">
       <div class="chart-head">
         <div><h3>UN member states recognising the State of Palestine, 1988–2026</h3><p>A step line: each step is a documented wave of recognitions. The dashed line is all 193 member states.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">UN records; national declarations</span>
+          
           
           
           
@@ -514,20 +538,23 @@
       <div class="chart-table" hidden=""></div>
     </div>
         <div class="grid c3" style="margin-top:22px">
-          <div class="stat amber">
+          <div class="stat amber" data-tone="amber">
       <div class="val" data-count="157">157</div>
       <div class="lbl">States recognising the State of Palestine</div>
       <div class="note">of 193 states</div>
       
-    </div><div class="stat red">
+      
+    </div><div class="stat red" data-tone="red">
       <div class="val" data-count="36">36</div>
       <div class="lbl">States not recognising</div>
       <div class="note">of 193 states</div>
       
-    </div><div class="stat blue">
+      
+    </div><div class="stat blue" data-tone="blue">
       <div class="val" data-count="14">14</div>
       <div class="lbl">G20 members recognising</div>
       <div class="note">of 19 states</div>
+      
       
     </div>
         </div>
@@ -562,15 +589,20 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">96,545 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="footer-links">
+      <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a>
+    </p>
   </div>
 </footer>
+
 
 
 

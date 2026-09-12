@@ -38,9 +38,12 @@ const Views = (function () {
      impossible to check. Every card therefore carries its own anchor, a
      captioned PNG export, a CSV of the plotted series, and a table view
      of the same numbers. */
+  // Notes are written with markup in them; the attribute carries the words only.
+  const plain = (html) => String(html || '').replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+
   function chartCard(name, title, note, ref, cls) {
     return `<div class="card chart-card" id="chart-${name}" data-chart-card="${name}"
-        data-title="${esc(title)}" data-source="${esc(ref || '')}">
+        data-title="${esc(title)}" data-source="${esc(ref || '')}" data-note="${esc(plain(note))}">
       <div class="chart-head">
         <div><h3>${esc(title)}</h3><p>${note || ''}</p></div>
         <div class="chart-tools">
@@ -53,6 +56,7 @@ const Views = (function () {
           <button class="chart-tool" data-tool="link" title="Copy a link to this chart" aria-label="Copy a link to this chart">link</button>
           <button class="chart-tool" data-tool="png" title="Download a captioned PNG" aria-label="Download this chart as a PNG">png</button>
           <button class="chart-tool" data-tool="csv" title="Download the plotted data" aria-label="Download this chart's data as CSV">csv</button>
+          <button class="chart-tool" data-tool="embed" title="Copy an iframe that shows this chart on another site" aria-label="Copy an embed code for this chart">embed</button>
           <button class="chart-tool" data-tool="table" title="Read the numbers as a table" aria-label="Show this chart as a table" aria-expanded="false">table</button>
         </div>
       </div>
@@ -61,12 +65,17 @@ const Views = (function () {
     </div>`;
   }
 
+  /* Every figure carries a button that saves it as a square card with its
+     label, its note and its source drawn into the image. A figure screenshotted
+     off the page arrives somewhere else stripped of all three. */
   function statCard(s, tone) {
-    return `<div class="stat ${tone || ''}">
+    return `<div class="stat ${tone || ''}" data-tone="${esc(tone || '')}">
       <div class="val" data-count="${s.value}">${compact(s.value)}${s.suffix ? `<span class="suffix">${esc(s.suffix)}</span>` : ''}${s.unit || ''}</div>
       <div class="lbl">${esc(s.label)}</div>
       ${s.note ? `<div class="note">${esc(s.note)}</div>` : ''}
       ${s.source ? `<div class="src">${esc(s.source)}${s.ref ? ' · ' + esc(s.ref) : ''}</div>` : ''}
+      <button class="share-card" data-share="figure" title="Save this figure as a shareable card"
+        aria-label="Save this figure as a shareable image">card</button>
     </div>`;
   }
 
@@ -102,7 +111,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -1462,6 +1471,8 @@ const Views = (function () {
       <div class="st-top">
         <span class="st-tier">${esc(x.tier)}</span>
         <span class="st-date">${esc(x.date)}</span>
+        <button class="share-card" data-share="statement" title="Save this statement as a shareable card"
+          aria-label="Save this statement as a shareable image">card</button>
       </div>
       <blockquote>“${esc(x.quote)}”</blockquote>
       <div class="who">${esc(x.speaker)}</div>
@@ -2005,6 +2016,220 @@ const Views = (function () {
     </div>`;
   }
 
+  /* ---------- the chart index ---------- */
+
+  /* Every chart card already declares its own name, title, source and note in
+     data attributes. The embed route and the open-data route both need that
+     list, and a second hand-written copy of it would go stale the first time a
+     chart was renamed. So build it from the markup itself: render every route
+     into a string once, read the attributes back out, and keep the result. */
+  const UNESC = { amp: '&', lt: '<', gt: '>', quot: '"' };
+  const unesc = (s) => String(s).replace(/&(amp|lt|gt|quot);/g, (m, name) => UNESC[name]);
+
+  const CARD_RE = new RegExp('data-chart-card="([^"]+)"\\s+data-title="([^"]*)"'
+    + '\\s+data-source="([^"]*)"\\s+data-note="([^"]*)"', 'g');
+
+  let CHART_INDEX = null;
+
+  function chartIndex() {
+    if (CHART_INDEX) return CHART_INDEX;
+    const index = {};
+    const scan = (html, route) => {
+      CARD_RE.lastIndex = 0;
+      let m;
+      while ((m = CARD_RE.exec(html))) {
+        if (index[m[1]]) continue;
+        index[m[1]] = {
+          name: m[1], route,
+          title: unesc(m[2]), source: unesc(m[3]), note: unesc(m[4]),
+        };
+      }
+    };
+    // A view that throws takes its own charts out of the index and nothing else.
+    const safely = (fn, route) => { try { scan(fn(), route); } catch (err) { console.error('index', route, err); } };
+    DATA_CHAPTERS.forEach((c) => safely(() => dataView(c.id), `#/data/${c.id}`));
+    safely(overview, '#/overview');
+    safely(timelineView, '#/timeline');
+    safely(rebuttalsView, '#/rebuttals');
+    safely(statementsView, '#/statements');
+    safely(legalView, '#/legal');
+    safely(sourcesView, '#/sources');
+    tourSteps().forEach((s, i) => safely(() => tourView(String(i + 1)), `#/tour/${i + 1}`));
+    CHART_INDEX = index;
+    return index;
+  }
+
+  /* ---------- embed ---------- */
+
+  /* One chart on an otherwise empty page, sized to whatever frame holds it, so
+     the record can be quoted in place. A newsroom or a campaign that iframes a
+     chart gets the figure, its caption, the report section it came from and a
+     link back — the source travels with the number rather than being stripped
+     off it, which is what happens when a chart is screenshotted instead. */
+  function embedView(name) {
+    const chart = chartIndex()[name];
+    if (!chart) {
+      return `<div class="embed-missing wrap">
+        <p>No chart is registered under the name <b>${esc(name || '')}</b>.</p>
+        <p><a href="#/api">See the list of embeddable charts</a>.</p>
+      </div>`;
+    }
+    return `<div class="embed">
+      <div class="embed-head">
+        <h1>${esc(chart.title)}</h1>
+        ${chart.note ? `<p>${esc(chart.note)}</p>` : ''}
+      </div>
+      <div class="chart" data-chart="${esc(chart.name)}" role="img" aria-label="${esc(chart.title)}"></div>
+      <div class="embed-foot">
+        <span>${chart.source ? esc(chart.source) + ' · ' : ''}Every figure carries its source.</span>
+        <a href="${esc(SITE_ORIGIN + '/#' + chart.route.slice(1) + '&chart=' + chart.name)}"
+           target="_blank" rel="noopener">The Documented Record ↗</a>
+      </div>
+    </div>`;
+  }
+
+  /* ---------- open data ---------- */
+
+  /* The dashboard is a reader for a set of JSON files that are useful on their
+     own. Publishing them as a described, addressable list — rather than leaving
+     them as an implementation detail of this page — means the record can be
+     checked, re-plotted and re-used by anyone, which is the whole point of
+     holding it in the open. data/index.json is written by manifest.py. */
+  function apiView() {
+    const index = chartIndex();
+    const names = Object.keys(index).sort();
+    const sets = (D.manifest && D.manifest.datasets) || [];
+    const bytes = (n) => (n >= 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.round(n / 1024) + ' kB');
+
+    const embedExample = names.length ? names[0] : 'gaza-monthly';
+
+    return `<div class="view wrap">
+      <section class="section">
+        ${head('Open data', 'The record as data, not just as a page',
+          'Everything plotted here is held in plain JSON, served from this domain, under no login and no key. '
+          + 'The files below are the same ones this page reads. Take them, check them, plot them yourself.')}
+        <div class="grid c4">
+          ${[
+            { value: sets.length, label: 'Published datasets', note: 'each described, dated and addressable' },
+            { value: names.length, label: 'Charts, individually embeddable', note: 'every one with its source attached' },
+            {
+              value: Math.round(((D.manifest && D.manifest.total_bytes) || 0) / 104857.6) / 10,
+              unit: ' MB', label: 'Of published data', note: 'the complete set, uncompressed, over plain HTTPS',
+            },
+            { value: D.report.bibliography.length, label: 'Sources behind it', note: 'courts, UN bodies, NGOs, datasets and academic work' },
+          ].map((x, i) => statCard(x, ['', 'blue', '', 'amber'][i])).join('')}
+        </div>
+      </section>
+
+      <section class="section">
+        ${head('The files', `${sets.length} datasets`, 'Licensed for re-use with attribution to the sources named in each file. '
+          + 'The figures are not ours to licence — they belong to the bodies that recorded them, and each record says which.')}
+        <div class="ds-list">
+          ${sets.map((s) => `<div class="ds">
+            <div>
+              <h3><a href="${esc(s.path)}" target="_blank" rel="noopener">${esc(s.title)}</a>
+                <code>${esc(s.path)}</code></h3>
+              <p>${esc(s.description)}</p>
+              ${s.source ? `<div class="src">${esc(s.source)}</div>` : ''}
+            </div>
+            <div class="ds-meta">
+              ${esc(bytes(s.bytes))}${s.records ? `<br>${fmt(s.records)} records` : ''}<br>${esc(s.updated || '')}
+              <a href="${esc(s.path)}" download>download ↓</a>
+            </div>
+            ${s.fields && s.fields.length ? `<div class="ds-fields">${s.fields.map(esc).join(' · ')}</div>` : ''}
+          </div>`).join('')}
+        </div>
+        ${sets.length
+          ? `<p class="small muted" style="margin-top:14px">${esc(D.manifest.licence)}
+             The manifest itself is at <a href="data/index.json">data/index.json</a>, generated
+             ${esc(D.manifest.generated)}.</p>`
+          : '<p class="small muted">The manifest has not been built. Run <code>python3 manifest.py</code>.</p>'}
+      </section>
+
+      <section class="section">
+        ${head('Embedding a chart', 'Any chart on this site, on any other site',
+          'Each chart has its own address and renders on its own, with its caption and its source. '
+          + 'The <b>embed</b> button on any chart copies the markup below with that chart’s name already in it.')}
+        <div class="card">
+          <pre class="code-block"><code>${esc(`<iframe src="${SITE_ORIGIN}/#/embed/${embedExample}"
+        width="100%" height="460" loading="lazy" frameborder="0"
+        title="${(index[embedExample] || {}).title || 'The Documented Record'}"></iframe>`)}</code></pre>
+        </div>
+        <div class="ds-list" style="margin-top:14px">
+          ${names.map((n) => `<div class="ds">
+            <div>
+              <h3><a href="#/embed/${esc(n)}">${esc(index[n].title)}</a></h3>
+              ${index[n].source ? `<div class="src">${esc(index[n].source)}</div>` : ''}
+            </div>
+            <div class="ds-meta">${esc(n)}<br><a href="${esc(index[n].route)}">on the page ↗</a></div>
+          </div>`).join('')}
+        </div>
+      </section>
+    </div>`;
+  }
+
+  /* ---------- changelog ---------- */
+
+  /* Appendix F of the report is a dated log of every change made to it. A
+     record that is revised without saying so is worth less than one that is
+     not revised at all, so the log is a route of its own: what changed, when,
+     and what it was changed to. */
+  function changelogView() {
+    const part = (D.report.parts || []).filter((p) => /revision-history/.test(p.id))[0];
+    const blocks = (part ? part.blocks : []).filter((b) => b.type === 'paragraph');
+    const DATED = /^\s*(?:<em>)?\s*(?:Update|Enhanced edition|[A-Z][a-z]+ \d{4} update)[^(]*\(([^)]+)\)\s*:\s*/;
+
+    const entries = [];
+    let preamble = '';
+    blocks.forEach((b) => {
+      const text = plain(b.html);
+      const m = DATED.exec(text);
+      if (!m) { if (!entries.length) preamble = b.html; return; }
+      entries.push({ when: m[1], what: b.html.replace(/^(\s*<em>)?\s*[^(]*\([^)]+\)\s*:\s*/, '$1') });
+    });
+
+    // Newest first: a log is read from the present backwards.
+    const key = (e) => {
+      const d = Date.parse(e.when.replace(/^(\d+)\s/, '$1 '));
+      return isNaN(d) ? 0 : d;
+    };
+    const ordered = entries.slice().sort((a, b) => key(b) - key(a));
+
+    return `<div class="view wrap">
+      <section class="section">
+        ${head('Changelog', `${entries.length} dated revisions to the record`,
+          'Every change to the source report, in the words of the report itself. Figures move because the '
+          + 'bodies that count them publish again; findings are added as courts and commissions make them. '
+          + 'Nothing is removed — the log says what was added and when.')}
+        ${preamble ? `<p class="small muted">${preamble}</p>` : ''}
+      </section>
+
+      <section class="section">
+        <div class="log">
+          ${ordered.map((e) => `<div class="log-entry">
+            <div class="log-when">${esc(e.when)}</div>
+            <div class="log-what"><p>${e.what}</p></div>
+          </div>`).join('')}
+        </div>
+      </section>
+
+      <section class="section">
+        ${head('How to check this', 'The record is auditable by design',
+          'The report, the figures and the chronology are published as files, not as claims about files.')}
+        <div class="grid c2">
+          <a class="card lift" href="#/api" style="text-decoration:none">
+            <h3 style="font-size:17px;margin-bottom:8px">The data, as data</h3>
+            <p class="small muted" style="margin:0">Every dataset this page reads, described and downloadable.</p>
+          </a>
+          <a class="card lift" href="#/sources" style="text-decoration:none">
+            <h3 style="font-size:17px;margin-bottom:8px">The sources</h3>
+            <p class="small muted" style="margin:0">Courts, UN bodies, human rights organisations and open datasets, each one linked.</p>
+          </a>
+        </div>
+      </section>
+    </div>`;
+  }
+
   /* ---------- per-route metadata ---------- */
 
   /* A hash route never reaches the server, so without this every route
@@ -2013,6 +2238,15 @@ const Views = (function () {
      result back out of the rendered DOM rather than keeping a second copy
      of it — so a static snapshot cannot disagree with the live page. */
   const SITE = 'The Documented Record';
+  /* The deployed origin, taken from the canonical tag rather than from
+     location, so an embed snippet copied from a local server still points a
+     third-party site at the published one. */
+  const SITE_ORIGIN = (function () {
+    const tag = document.querySelector('link[rel=canonical]');
+    const href = tag ? (tag.getAttribute('data-site') || tag.href) : location.href;
+    return String(href).replace(/[#?].*$/, '').replace(/\/+$/, '');
+  })();
+
   const SITE_TITLE = `${SITE} — Israel and the Occupied Territories, 1917–2026`;
   const SITE_DESC = 'Every figure carries its source. A forensic survey of state conduct, alleged '
     + 'violations of international law, and the documented record — 1917 to 2026.';
@@ -2058,6 +2292,20 @@ const Views = (function () {
       title: 'Sources — what the record rests on',
       desc: 'The evidentiary base: courts, UN bodies, human rights organisations, open datasets, academic '
         + 'work and Israeli sources, each one linked.',
+    },
+    api: {
+      title: 'Open data — the record as files',
+      desc: 'Every dataset behind these charts, published as plain JSON under no login and no key, with '
+        + 'an embeddable address for each of the charts drawn from them.',
+    },
+    changelog: {
+      title: 'Changelog — every revision, dated',
+      desc: 'What changed in the record and when: each figure refreshed, each finding added, in the words '
+        + 'of the report itself.',
+    },
+    embed: {
+      title: 'Embedded chart',
+      desc: 'A single chart from the documented record, with its caption and its source.',
     },
   };
 
@@ -2110,13 +2358,21 @@ const Views = (function () {
     const chapter = name === 'data' && CHAPTER_META[sub] ? CHAPTER_META[sub] : null;
     const m = chapter || META[name] || META.overview;
     const slug = chapter ? `data-${sub}` : (META[name] ? name : 'overview');
+    // An embedded chart names itself; it has no card of its own, so it borrows
+    // the site card, and its canonical URL keeps the chart it is showing.
+    const embedded = slug === 'embed' ? (chartIndex()[sub] || null) : null;
+    const path = chapter ? `#/data/${sub}`
+      : slug === 'embed' ? `#/embed/${sub || ''}`
+      // The tour has no meaningful step 0, so its canonical route is step one.
+      : slug === 'tour' ? '#/tour/1'
+      : `#/${slug}`;
     return {
       slug,
-      // The tour has no meaningful step 0, so its canonical route is step one.
-      path: chapter ? `#/data/${sub}` : (slug === 'tour' ? '#/tour/1' : `#/${slug}`),
-      title: slug === 'overview' ? m.title : `${m.title} · ${SITE}`,
-      desc: m.desc,
-      card: `assets/og/${slug}.png`,
+      path,
+      title: slug === 'overview' ? m.title
+        : `${embedded ? embedded.title : m.title} · ${SITE}`,
+      desc: embedded ? (embedded.note || m.desc) : m.desc,
+      card: `assets/og/${slug === 'embed' ? 'overview' : slug}.png`,
     };
   }
 
@@ -2126,7 +2382,7 @@ const Views = (function () {
     overview, data: dataView, timeline: timelineView,
     evidence: evidenceView, rebuttals: rebuttalsView,
     statements: statementsView, legal: legalView, sources: sourcesView,
-    tour: tourView,
+    tour: tourView, api: apiView, changelog: changelogView, embed: embedView,
   };
 
   return {
@@ -2134,6 +2390,8 @@ const Views = (function () {
     render(name, sub) { return (routes[name] || overview)(sub); },
     has(name) { return !!routes[name]; },
     dataChapters: DATA_CHAPTERS,
+    charts: chartIndex,
+    origin: SITE_ORIGIN,
     meta,
     blocksHTML, esc, fmt,
   };

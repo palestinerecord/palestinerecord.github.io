@@ -19,7 +19,8 @@ const App = (function () {
 
   if (window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
-  const VIEWS = ['overview', 'tour', 'data', 'timeline', 'evidence', 'rebuttals', 'statements', 'legal', 'sources'];
+  const VIEWS = ['overview', 'tour', 'data', 'timeline', 'evidence', 'rebuttals', 'statements', 'legal',
+    'sources', 'api', 'changelog', 'embed'];
 
   /* index.html?prerender=1 renders the text and nothing else: no charts, no
      scroll reveals, no counting numbers, no WebGL scene. prerender.py uses it
@@ -51,6 +52,10 @@ const App = (function () {
       ['events', 'data/chart-events.json'],
       ['elements', 'data/elements.json'],
     ];
+    // The open-data manifest is written by manifest.py and describes the files
+    // above. It is fetched separately and never fatally: a dashboard that will
+    // not load because its own index of itself is missing would be absurd.
+    const manifest = fetch('data/index.json').then((r) => (r.ok ? r.json() : null)).catch(() => null);
     let done = 0;
     bootStatus.textContent = 'Loading the documented record…';
     const parts = await Promise.all(files.map(async ([key, path]) => {
@@ -64,6 +69,7 @@ const App = (function () {
     const D = {};
     parts.forEach(([key, json]) => { D[key] = json; });
     D.timeline = mergeTimeline(D.report.timeline, D.extra);
+    D.manifest = await manifest;
     return D;
   }
 
@@ -309,7 +315,11 @@ const App = (function () {
     if (!el) return;
     const feed = D.ts.meta.last_daily_update;
     const age = Math.floor((Date.now() - new Date(feed + 'T00:00:00Z').getTime()) / DAY);
-    el.innerHTML = `<span class="dot"></span><span>Casualty data <b>${Views.esc(readableDate(feed))}</b></span>`;
+    /* The label is its own element because the bar drops it before it drops
+       the date: narrow, the pill is a dot and a date, and the title explains
+       the rest. */
+    el.innerHTML = `<span class="dot"></span><span><span class="fresh-label">Casualty data </span>` +
+      `<b>${Views.esc(readableDate(feed))}</b></span>`;
     el.title = `Casualty time-series last updated ${readableDate(feed)} (${age} days ago). Report and curated figures compiled ${readableDate(D.ts.meta.generated)}.`;
     el.classList.toggle('stale', age > 7);
     el.hidden = false;
@@ -432,6 +442,16 @@ const App = (function () {
         flash(Charts.csv(name, card.dataset.title) ? 'saved' : 'not available');
         return;
       }
+      if (tool === 'embed') {
+        // The snippet points at the published site, not at whatever host is
+        // serving this copy, so a snippet copied from a local server still works.
+        const src = `${Views.origin}/#/embed/${name}`;
+        const code = `<iframe src="${src}" width="100%" height="460" loading="lazy" frameborder="0" `
+          + `title="${Views.esc(card.dataset.title || 'The Documented Record')}"></iframe>`;
+        if (navigator.clipboard) navigator.clipboard.writeText(code).then(() => flash('copied'), () => flash('press ⌘C'));
+        else flash('see #/api');
+        return;
+      }
       if (tool === 'table') {
         const box = card.querySelector('.chart-table');
         if (!box) return;
@@ -449,6 +469,89 @@ const App = (function () {
         box.hidden = false;
         btn.setAttribute('aria-expanded', 'true');
       }
+    });
+  }
+
+  /* ---------- share cards ---------- */
+
+  /* One delegated handler for every `card` button: read the statement or the
+     figure out of the card it sits in — rather than keeping a second copy of
+     the text in a data attribute — and hand it to share.js, which draws it.
+     What is on screen and what lands in the image are then the same words. */
+  function shareCards() {
+    const text = (root, selector) => {
+      const el = root.querySelector(selector);
+      return el ? el.textContent.replace(/\s+/g, ' ').trim() : '';
+    };
+
+    app.addEventListener('click', (e) => {
+      const btn = e.target.closest && e.target.closest('.share-card');
+      if (!btn) return;
+      const kind = btn.dataset.share;
+      const flash = (t) => {
+        const was = btn.textContent;
+        btn.textContent = t;
+        setTimeout(() => { btn.textContent = was; }, 1400);
+      };
+      if (typeof Share === 'undefined') { flash('not available'); return; }
+
+      if (kind === 'statement') {
+        const box = btn.closest('.st-card');
+        if (!box) return;
+        flash(Share.statement({
+          quote: text(box, 'blockquote').replace(/^[“"]|[”"]$/g, ''),
+          speaker: text(box, '.who'),
+          role: text(box, '.role'),
+          date: text(box, '.st-date'),
+          source: text(box, '.st-src'),
+          url: location.href,
+        }) ? 'saved' : 'failed');
+        return;
+      }
+
+      const box = btn.closest('.stat');
+      if (!box) return;
+      flash(Share.figure({
+        value: text(box, '.val'),
+        label: text(box, '.lbl'),
+        note: text(box, '.note'),
+        source: text(box, '.src'),
+        tone: box.dataset.tone || '',
+        url: location.href,
+      }) ? 'saved' : 'failed');
+    });
+  }
+
+  /* ---------- theme ---------- */
+
+  /* Dark by default, because the record is read at length and most of it is
+     read at night; light because some people cannot read white-on-black at all,
+     and because a page that cannot be printed legibly cannot be handed out.
+     The choice is remembered, and the charts are redrawn from the CSS custom
+     properties rather than from a second palette of their own. */
+  function theme() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const label = (mode) => {
+      btn.textContent = mode === 'light' ? '☾' : '☀';
+      btn.setAttribute('title', mode === 'light' ? 'Switch to the dark theme' : 'Switch to the light theme');
+      btn.setAttribute('aria-label', btn.getAttribute('title'));
+      btn.setAttribute('aria-pressed', mode === 'light' ? 'true' : 'false');
+    };
+
+    // index.html sets the attribute before first paint, so there is no flash of
+    // the wrong theme; all this has to do is agree with it.
+    label(document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+
+    btn.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      if (next === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      else document.documentElement.removeAttribute('data-theme');
+      try { localStorage.setItem('record-theme', next); } catch (err) { /* private browsing */ }
+      label(next);
+      // Charts read their colours once, at init, so they are rebuilt to pick
+      // up the new ones. The data is already in memory; nothing is refetched.
+      if (rendered) render(rendered, renderedSub);
     });
   }
 
@@ -860,6 +963,8 @@ const App = (function () {
     window.addEventListener('hashchange', route);
     initSearch();
     chartTools();
+    shareCards();
+    theme();
     heroNames();
     skipLink();
     printExpansion();

@@ -6,8 +6,8 @@
 <meta name="description" content="Where the land went, from the 1947 partition to the settlements of 2026, with the villages depopulated in 1948 mapped one by one.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=28" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=28">
+<link rel="icon" href="../assets/favicon.svg?v=30" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=30">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -29,7 +29,11 @@
 <meta name="twitter:title" content="The land — six per cent to seventy-eight · The Documented Record">
 <meta name="twitter:description" content="Where the land went, from the 1947 partition to the settlements of 2026, with the villages depopulated in 1948 mapped one by one.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/data-land.png">
-<link rel="stylesheet" href="../css/style.css?v=28">
+<link rel="stylesheet" href="../css/style.css?v=30">
+<!-- Before the stylesheet paints anything: a reader who chose the light theme
+     should not be shown the dark one first. Inline and synchronous by
+     necessity; a deferred script runs too late to prevent the flash. -->
+
 
 
 
@@ -53,7 +57,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -70,7 +74,8 @@
     <a href="../index.html#/legal" data-view="legal">Legal</a>
     <a href="../index.html#/sources" data-view="sources">Sources</a>
   </nav>
-  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span>Casualty data <b>10 September 2026</b></span></div>
+  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>10 September 2026</b></span></div>
+  
   
   
 </header>
@@ -83,11 +88,12 @@
       <h2>Six per cent to seventy-eight, and four per cent back</h2>
       <p>Every other figure on this page follows from this one. In 1946 Jewish landholding in Mandatory Palestine was about six per cent of the territory. Today the area under full Palestinian civil and security control is about four per cent.</p>
     </div>
-        <div class="card chart-card" id="chart-land-control" data-chart-card="land-control" data-title="Mandatory Palestine, by who controls it" data-source="Survey of Palestine; UNGA 181; Oslo II">
+        <div class="card chart-card" id="chart-land-control" data-chart-card="land-control" data-title="Mandatory Palestine, by who controls it" data-source="Survey of Palestine; UNGA 181; Oslo II" data-note="Every bar is the same territory — about 26,320 square kilometres — at five dates. Red: Israeli or Jewish control. Green: Palestinian. Grey and violet: Jordanian and Egyptian administration, 1949–1967.">
       <div class="chart-head">
         <div><h3>Mandatory Palestine, by who controls it</h3><p>Every bar is the same territory — about 26,320 square kilometres — at five dates. Red: Israeli or Jewish control. Green: Palestinian. Grey and violet: Jordanian and Egyptian administration, 1949–1967.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Survey of Palestine; UNGA 181; Oslo II</span>
+          
           
           
           
@@ -99,11 +105,12 @@
       <div class="chart-table" hidden=""></div>
     </div>
         <div style="margin-top:22px">
-          <div class="card chart-card" id="chart-land-map" data-chart-card="land-map" data-title="The same territory, on the ground" data-source="Natural Earth; Survey of Palestine; Oslo II Interim Agreement">
+          <div class="card chart-card" id="chart-land-map" data-chart-card="land-map" data-title="The same territory, on the ground" data-source="Natural Earth; Survey of Palestine; Oslo II Interim Agreement" data-note="Drag the slider, or press play, to step through the four dates the geometry can carry. The 1947 partition plan and the Oslo Areas A, B and C are deliberately not drawn: no sourced polygon for either is held here, and their shares are in the chart above and the table below. The base map is Natural Earth, a cartographic base and not an adjudication of any boundary.">
       <div class="chart-head">
         <div><h3>The same territory, on the ground</h3><p>Drag the slider, or press play, to step through the four dates the geometry can carry. The 1947 partition plan and the Oslo Areas A, B and C are deliberately not drawn: no sourced polygon for either is held here, and their shares are in the chart above and the table below. The base map is Natural Earth, a cartographic base and not an adjudication of any boundary.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Natural Earth; Survey of Palestine; Oslo II Interim Agreement</span>
+          
           
           
           
@@ -116,11 +123,12 @@
     </div>
         </div>
         <div class="grid wide-left" style="margin-top:22px">
-          <div class="card chart-card" id="chart-land-areas" data-chart-card="land-areas" data-title="The West Bank under Oslo II, thirty-one years on" data-source="Oslo II Interim Agreement, Annex I">
+          <div class="card chart-card" id="chart-land-areas" data-chart-card="land-areas" data-title="The West Bank under Oslo II, thirty-one years on" data-source="Oslo II Interim Agreement, Annex I" data-note="A five-year interim arrangement signed in September 1995. Area C, under full Israeli control, holds every settlement, the Jordan Valley and the aquifers.">
       <div class="chart-head">
         <div><h3>The West Bank under Oslo II, thirty-one years on</h3><p>A five-year interim arrangement signed in September 1995. Area C, under full Israeli control, holds every settlement, the Jordan Valley and the aquifers.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Oslo II Interim Agreement, Annex I</span>
+          
           
           
           
@@ -139,21 +147,24 @@
           </div>
         </div>
         <div class="grid c3" style="margin-top:22px">
-          <div class="stat amber">
+          <div class="stat amber" data-tone="amber">
       <div class="val" data-count="2">2%</div>
       <div class="lbl">Settlement built-up area, share of the West Bank</div>
       <div class="note">The footprint of the houses themselves.</div>
       <div class="src">B’Tselem; OCHA</div>
-    </div><div class="stat red">
+      
+    </div><div class="stat red" data-tone="red">
       <div class="val" data-count="40">40%</div>
       <div class="lbl">Land under settlement regional council jurisdiction</div>
       <div class="note">The area from which Palestinians are excluded is twenty times the built-up area.</div>
       <div class="src">B’Tselem; OCHA</div>
-    </div><div class="stat red">
+      
+    </div><div class="stat red" data-tone="red">
       <div class="val" data-count="23.7">23.7<span class="suffix"> km²</span></div>
       <div class="lbl">Land declared Israeli state land in 2024</div>
       <div class="note">The largest single year of state-land declarations since the Oslo Accords.</div>
       <div class="src">Peace Now</div>
+      
     </div>
         </div>
         <div class="card" style="margin-top:20px;padding:0;overflow:hidden">
@@ -192,11 +203,12 @@
       
     </div>
         <div class="grid wide-left">
-          <div class="card chart-card" id="chart-nakba" data-chart-card="nakba" data-title="The Nakba, 1948: the quantitative record" data-source="§2.3">
+          <div class="card chart-card" id="chart-nakba" data-chart-card="nakba" data-title="The Nakba, 1948: the quantitative record" data-source="§2.3" data-note="Log scale.">
       <div class="chart-head">
         <div><h3>The Nakba, 1948: the quantitative record</h3><p>Log scale.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§2.3</span>
+          
           
           
           
@@ -222,11 +234,12 @@
       <h2>The villages, one by one</h2>
       <p>The aggregate above is the sum of a list. Abu Sitta’s <em>Atlas of Palestine 1917–1966</em> records every town and village emptied of its Arab population, with the date, the population it held, the land it held, the Israeli operation it fell to, whether a massacre is recorded there, and what stands on the site now. Four hundred and fifty-six of those rows are drawn here, four hundred and thirty-eight of them on the map.</p>
     </div>
-        <div class="card chart-card" id="chart-nakba-map" data-chart-card="nakba-map" data-title="Every village emptied, in the month it was emptied" data-source="Salman Abu Sitta, Atlas of Palestine 1917–1966, pp. 108–115">
+        <div class="card chart-card" id="chart-nakba-map" data-chart-card="nakba-map" data-title="Every village emptied, in the month it was emptied" data-source="Salman Abu Sitta, Atlas of Palestine 1917–1966, pp. 108–115" data-note="Drag the slider, or press play, to move through the seventeen months in which the atlas records a depopulation, from December 1947 to June 1950. Dots accumulate: what is on screen is everything emptied up to that month, and the white rings are the places emptied in the month itself. Size is the 1948 population. Hover any dot for the village’s own record. The sand outline is Mandatory Palestine; the faint lines inside it are the modern boundaries, drawn only to orient a reader who knows the present map.">
       <div class="chart-head">
         <div><h3>Every village emptied, in the month it was emptied</h3><p>Drag the slider, or press play, to move through the seventeen months in which the atlas records a depopulation, from December 1947 to June 1950. Dots accumulate: what is on screen is everything emptied up to that month, and the white rings are the places emptied in the month itself. Size is the 1948 population. Hover any dot for the village’s own record. The sand outline is Mandatory Palestine; the faint lines inside it are the modern boundaries, drawn only to orient a reader who knows the present map.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Salman Abu Sitta, Atlas of Palestine 1917–1966, pp. 108–115</span>
+          
           
           
           
@@ -238,11 +251,12 @@
       <div class="chart-table" hidden=""></div>
     </div>
         <div class="grid" style="margin-top:22px">
-          <div class="card chart-card" id="chart-nakba-months" data-chart-card="nakba-months" data-title="The pace of it: villages emptied each month" data-source="Abu Sitta, Atlas of Palestine; Plan Dalet dated from the Haganah archive">
+          <div class="card chart-card" id="chart-nakba-months" data-chart-card="nakba-months" data-title="The pace of it: villages emptied each month" data-source="Abu Sitta, Atlas of Palestine; Plan Dalet dated from the Haganah archive" data-note="Red bars are months in which the atlas records a massacre at one or more of the villages emptied. Two thirds of the whole list falls in April, May and July 1948. A month with no bar is a month in which the atlas records no depopulation.">
       <div class="chart-head">
         <div><h3>The pace of it: villages emptied each month</h3><p>Red bars are months in which the atlas records a massacre at one or more of the villages emptied. Two thirds of the whole list falls in April, May and July 1948. A month with no bar is a month in which the atlas records no depopulation.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Abu Sitta, Atlas of Palestine; Plan Dalet dated from the Haganah archive</span>
+          
           
           
           
@@ -255,11 +269,12 @@
     </div>
         </div>
         <div class="grid c2" style="margin-top:22px">
-          <div class="card chart-card" id="chart-nakba-subdistricts" data-chart-card="nakba-subdistricts" data-title="Which sub-districts were emptied" data-source="Abu Sitta, Atlas of Palestine">
+          <div class="card chart-card" id="chart-nakba-subdistricts" data-chart-card="nakba-subdistricts" data-title="Which sub-districts were emptied" data-source="Abu Sitta, Atlas of Palestine" data-note="The fourteen Mandate sub-districts, by the number of towns and villages depopulated in each. The label gives the villages and the people.">
       <div class="chart-head">
         <div><h3>Which sub-districts were emptied</h3><p>The fourteen Mandate sub-districts, by the number of towns and villages depopulated in each. The label gives the villages and the people.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Abu Sitta, Atlas of Palestine</span>
+          
           
           
           
@@ -270,11 +285,12 @@
       <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/data/land&chart=nakba-subdistricts">open it in the live record</a>.</p>
       <div class="chart-table" hidden=""></div>
     </div>
-          <div class="card chart-card" id="chart-nakba-fate" data-chart-card="nakba-fate" data-title="What stands on the sites now" data-source="Abu Sitta, Atlas of Palestine">
+          <div class="card chart-card" id="chart-nakba-fate" data-chart-card="nakba-fate" data-title="What stands on the sites now" data-source="Abu Sitta, Atlas of Palestine" data-note="The atlas records the state of each site at the time of survey. “Rubble” and “no trace” together account for nearly half of the list. The violet bars are sites where Jewish families were recorded living among or on the remains.">
       <div class="chart-head">
         <div><h3>What stands on the sites now</h3><p>The atlas records the state of each site at the time of survey. “Rubble” and “no trace” together account for nearly half of the list. The violet bars are sites where Jewish families were recorded living among or on the remains.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Abu Sitta, Atlas of Palestine</span>
+          
           
           
           
@@ -300,11 +316,12 @@
       <p>The expulsions removed the population. A separate body of peacetime legislation, enacted by a parliament and upheld by courts, converted the vacancy into permanent title. The Absentees’ Property Law is in force in 2026.</p>
     </div>
         <div class="grid wide-left">
-          <div class="card chart-card" id="chart-land-transfer" data-chart-card="land-transfer" data-title="The legal machinery of transfer: how expulsion became title" data-source="§2.4">
+          <div class="card chart-card" id="chart-land-transfer" data-chart-card="land-transfer" data-title="The legal machinery of transfer: how expulsion became title" data-source="§2.4" data-note="Log scale. Dunams.">
       <div class="chart-head">
         <div><h3>The legal machinery of transfer: how expulsion became title</h3><p>Log scale. Dunams.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§2.4</span>
+          
           
           
           
@@ -323,11 +340,12 @@
           </div>
         </div>
         <div class="grid wide-left" style="margin-top:20px">
-          <div class="card chart-card" id="chart-jnf-growth" data-chart-card="jnf-growth" data-title="Jewish National Fund holdings: fifty years of purchase, two years of statute" data-source="§2.4">
+          <div class="card chart-card" id="chart-jnf-growth" data-chart-card="jnf-growth" data-title="Jewish National Fund holdings: fifty years of purchase, two years of statute" data-source="§2.4" data-note="Cumulative. The 1941 baseline was acquired on the open market over five decades; the 1949 and 1950 tranches were refugee land conveyed by the Development Authority.">
       <div class="chart-head">
         <div><h3>Jewish National Fund holdings: fifty years of purchase, two years of statute</h3><p>Cumulative. The 1941 baseline was acquired on the open market over five decades; the 1949 and 1950 tranches were refugee land conveyed by the Development Authority.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§2.4</span>
+          
           
           
           
@@ -359,11 +377,12 @@
       <p>The current coalition has approved more settlements than the entire thirty years of the Oslo process.</p>
     </div>
         <div class="grid wide-left">
-          <div class="card chart-card" id="chart-settlements" data-chart-card="settlements" data-title="Settlements approved: Oslo era vs current coalition" data-source="§3.3">
+          <div class="card chart-card" id="chart-settlements" data-chart-card="settlements" data-title="Settlements approved: Oslo era vs current coalition" data-source="§3.3" data-note="">
       <div class="chart-head">
         <div><h3>Settlements approved: Oslo era vs current coalition</h3><p></p></div>
         <div class="chart-tools">
           <span class="chart-ref">§3.3</span>
+          
           
           
           
@@ -376,24 +395,27 @@
     </div>
           <div class="card">
             <h3 style="font-size:18px;margin-bottom:14px">Settler population</h3>
-            <div class="grid"><div class="stat ">
+            <div class="grid"><div class="stat " data-tone="">
       <div class="val" data-count="529455">529k</div>
       <div class="lbl">West Bank (excl. East Jerusalem)</div>
       
       <div class="src">UN Human Rights Council, 2026 · §3.3</div>
-    </div><div class="stat ">
+      
+    </div><div class="stat " data-tone="">
       <div class="val" data-count="246000">246k</div>
       <div class="lbl">East Jerusalem</div>
       
       <div class="src">UN Human Rights Council, 2026 · §3.3</div>
+      
     </div></div>
           </div>
         </div>
-        <div style="margin-top:18px"><div class="card chart-card" id="chart-settlement-detail" data-chart-card="settlement-detail" data-title="The settlement enterprise in detail" data-source="§3.3">
+        <div style="margin-top:18px"><div class="card chart-card" id="chart-settlement-detail" data-chart-card="settlement-detail" data-title="The settlement enterprise in detail" data-source="§3.3" data-note="Log scale — the categories differ by orders of magnitude.">
       <div class="chart-head">
         <div><h3>The settlement enterprise in detail</h3><p>Log scale — the categories differ by orders of magnitude.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§3.3</span>
+          
           
           
           
@@ -409,15 +431,20 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">96,545 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="footer-links">
+      <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a>
+    </p>
   </div>
 </footer>
+
 
 
 

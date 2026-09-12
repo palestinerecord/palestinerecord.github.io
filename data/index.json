@@ -1,0 +1,302 @@
+{
+  "name": "The Documented Record — published data",
+  "description": "Every dataset behind the charts at palestinerecord.github.io, as plain JSON over HTTPS, with no login and no key.",
+  "site": "https://palestinerecord.github.io/",
+  "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
+  "generated": "2026-09-12",
+  "total_bytes": 3591443,
+  "datasets": [
+    {
+      "path": "data/chart-events.json",
+      "title": "Dated events for the series",
+      "description": "The events marked on the time series — ceasefires, offensives, crossings closed and reopened — so a change in a line can be read against what happened.",
+      "source": "OCHA situation reports and contemporaneous reporting.",
+      "bytes": 4760,
+      "records": null,
+      "fields": [
+        "meta",
+        "events"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/conduct-record.json",
+      "title": "Conduct of the war",
+      "description": "Aid, hospitals, schools, heritage, journalists, medics and what remains functioning, measured against the obligations each engages.",
+      "source": "WHO, UNRWA, UNESCO, OCHA, CPJ and Physicians for Human Rights.",
+      "bytes": 41326,
+      "records": null,
+      "fields": [
+        "meta",
+        "aid",
+        "hunger",
+        "targeting",
+        "shields",
+        "hannibal",
+        "funding",
+        "remains",
+        "children",
+        "custody",
+        "nuclear",
+        "media"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/elements.json",
+      "title": "The elements of the legal tests",
+      "description": "The elements of genocide, apartheid and the grave breaches, each set against the evidence advanced for it and the body that made the finding.",
+      "source": "Genocide Convention, Apartheid Convention, Rome Statute, Fourth Geneva Convention.",
+      "bytes": 31865,
+      "records": null,
+      "fields": [
+        "meta",
+        "matrices",
+        "instruments",
+        "scorecard"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/figures.json",
+      "title": "The curated statistics",
+      "description": "The headline figures and the topic groups behind them — each with its label, its value, the note that qualifies it, and the report section it came from.",
+      "source": "Each record carries its own source field.",
+      "bytes": 33487,
+      "records": null,
+      "fields": [
+        "meta",
+        "headline",
+        "gaza_toll_estimates",
+        "pre2023_wars",
+        "protected_categories",
+        "oct7",
+        "nakba",
+        "land_transfer",
+        "settlements",
+        "infrastructure_report",
+        "recognition",
+        "opinion"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/history.json",
+      "title": "The pre-October-2023 baseline and the undercount",
+      "description": "West Bank annual tolls and settler violence rates before October 2023, together with the undercount layer: the Lancet capture–recapture estimate, the Gaza Mortality Survey, and the bodies under the rubble.",
+      "source": "B'Tselem, OCHA, The Lancet, and the Gaza Mortality Survey.",
+      "bytes": 9385,
+      "records": null,
+      "fields": [
+        "meta",
+        "west_bank",
+        "before_after",
+        "settler_violence",
+        "true_toll"
+      ],
+      "updated": "2026-09-11"
+    },
+    {
+      "path": "data/legal.json",
+      "title": "Proceedings, findings and instruments",
+      "description": "The ICJ cases and their orders, the ICC warrants, the treaty provisions engaged, and the findings made under the Genocide, Fourth Geneva and Apartheid Conventions.",
+      "source": "ICJ and ICC filings and orders; UN Commission of Inquiry reports.",
+      "bytes": 12007,
+      "records": null,
+      "fields": [
+        "meta",
+        "classes",
+        "determinations",
+        "recognition"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/long-record.json",
+      "title": "The long record, 1917–2026",
+      "description": "Dispossession, detention, demolition, recognition and complicity across the whole period, as series rather than as single figures.",
+      "source": "Each record carries its own source field.",
+      "bytes": 52765,
+      "records": null,
+      "fields": [
+        "meta",
+        "toll",
+        "asymmetry",
+        "accountability",
+        "dispossession",
+        "detention",
+        "complicity",
+        "divestment",
+        "vetoes",
+        "recognition",
+        "land"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/maps.json",
+      "title": "Map geometry",
+      "description": "The boundaries, governorates and place points the maps are drawn from, joined to the data by name with the aliases resolved.",
+      "source": "Public-domain and openly licensed boundary data.",
+      "bytes": 10015,
+      "records": null,
+      "fields": [
+        "meta",
+        "gaza_ipc",
+        "west_bank"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/nakba.json",
+      "title": "The depopulated villages of 1948",
+      "description": "Each village depopulated in 1948 with its district, its population, the date and the means, mapped point by point.",
+      "source": "Walid Khalidi, All That Remains; Salman Abu Sitta, Atlas of Palestine.",
+      "bytes": 97283,
+      "records": 456,
+      "fields": [
+        "meta",
+        "subdistricts",
+        "months",
+        "causes",
+        "remains",
+        "villages"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/names-boot.json",
+      "title": "A slice of the identification list",
+      "description": "A short excerpt of names.json, loaded while the record loads, so the count is not the only thing on screen.",
+      "source": "Gaza Ministry of Health, via Tech For Palestine (public domain).",
+      "bytes": 22848,
+      "records": 260,
+      "fields": [
+        "meta",
+        "people"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/names.json",
+      "title": "The identification list",
+      "description": "The named dead of Gaza as published by the Ministry of Health: name in Arabic and in English, age, sex and date of record. Two megabytes; loaded only on request.",
+      "source": "Gaza Ministry of Health, via Tech For Palestine (public domain).",
+      "bytes": 2084014,
+      "records": 24279,
+      "fields": [
+        "meta",
+        "people"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/report.json",
+      "title": "The source report, parsed",
+      "description": "Every part, section, paragraph, list, table, chronology entry and bibliography entry of report-final.md, converted losslessly by build.py and checked by verify.py. This is the whole document as structured data.",
+      "source": "report-final.md — A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026).",
+      "bytes": 881108,
+      "records": null,
+      "fields": [
+        "title",
+        "parts",
+        "stats",
+        "timeline",
+        "statements",
+        "bibliography",
+        "tables"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/sources.json",
+      "title": "The linked source library",
+      "description": "The evidentiary base grouped by kind: courts and tribunals, UN bodies, human rights organisations, open datasets, academic work, Israeli sources, journalism and archives.",
+      "source": "Each entry links to the publisher.",
+      "bytes": 42400,
+      "records": null,
+      "fields": [
+        "meta",
+        "groups"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/statements.json",
+      "title": "Documented statements of intent",
+      "description": "Statements by named officials with speaker, role, date, the verbatim quotation, its context, its evidentiary categories, its tier and its legal significance. Contested attributions are marked contested.",
+      "source": "Primary reporting as cited per record; §6.2 and Appendix C of the report.",
+      "bytes": 92278,
+      "records": 85,
+      "fields": [
+        "meta",
+        "categories",
+        "items"
+      ],
+      "updated": "2026-09-11"
+    },
+    {
+      "path": "data/timeline-extra.json",
+      "title": "The contextual chronology",
+      "description": "The legal and political steps between the massacres recorded in Appendix B — mandates, partitions, laws, plans, rulings, resolutions and admissions.",
+      "source": "Primary documents as cited per entry.",
+      "bytes": 26475,
+      "records": 74,
+      "fields": [
+        "meta",
+        "items"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/timeseries.json",
+      "title": "Daily and monthly casualty series",
+      "description": "Killed and injured in Gaza and the West Bank, day by day and aggregated by month, with the reporting gaps left as gaps rather than interpolated.",
+      "source": "Tech For Palestine, from Gaza Ministry of Health and OCHA reporting (public domain).",
+      "bytes": 95889,
+      "records": null,
+      "fields": [
+        "meta",
+        "summary",
+        "gaza",
+        "west_bank",
+        "daily",
+        "infrastructure",
+        "press_killed_count",
+        "demographics"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/war-record.json",
+      "title": "The wars and 7 October",
+      "description": "Each Gaza campaign, what it was called, what it killed, and what the inquiries into it found — alongside the documented record of 7 October 2023.",
+      "source": "UN Commission of Inquiry, OCHA, B'Tselem and Israeli state inquiries.",
+      "bytes": 23304,
+      "records": null,
+      "fields": [
+        "meta",
+        "arms",
+        "lebanon",
+        "regional"
+      ],
+      "updated": "2026-09-12"
+    },
+    {
+      "path": "data/world-positions.json",
+      "title": "State positions",
+      "description": "Recognition of Palestine, arms embargoes, ICJ interventions, sanctions and Security Council vetoes, by state, with the date each position was taken.",
+      "source": "UN records; national foreign ministry statements.",
+      "bytes": 30234,
+      "records": null,
+      "fields": [
+        "meta",
+        "recognition",
+        "sanctions",
+        "icj",
+        "alias"
+      ],
+      "updated": "2026-09-12"
+    }
+  ]
+}

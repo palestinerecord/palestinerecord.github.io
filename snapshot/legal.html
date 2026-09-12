@@ -6,8 +6,8 @@
 <meta name="description" content="The ICJ proceedings, the ICC warrants, and the findings made under the Genocide Convention, the Fourth Geneva Convention and the Apartheid Convention.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=28" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=28">
+<link rel="icon" href="../assets/favicon.svg?v=30" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=30">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -29,7 +29,11 @@
 <meta name="twitter:title" content="Legal — the findings and the instruments they rest on · The Documented Record">
 <meta name="twitter:description" content="The ICJ proceedings, the ICC warrants, and the findings made under the Genocide Convention, the Fourth Geneva Convention and the Apartheid Convention.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/legal.png">
-<link rel="stylesheet" href="../css/style.css?v=28">
+<link rel="stylesheet" href="../css/style.css?v=30">
+<!-- Before the stylesheet paints anything: a reader who chose the light theme
+     should not be shown the dark one first. Inline and synchronous by
+     necessity; a deferred script runs too late to prevent the flash. -->
+
 
 
 
@@ -53,7 +57,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -70,7 +74,8 @@
     <a href="../index.html#/legal" data-view="legal" class="active">Legal</a>
     <a href="../index.html#/sources" data-view="sources">Sources</a>
   </nav>
-  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span>Casualty data <b>10 September 2026</b></span></div>
+  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>10 September 2026</b></span></div>
+  
   
   
 </header>
@@ -83,25 +88,29 @@
       <p>The parts of the report that state the legal case: genocide, apartheid, the comprehensive synthesis, the international verdict, the assessment of Hamas's conduct on 7 October under the same standards, and the instruments cited throughout. The full text of each appears here; every other part is in <a href="../index.html#/evidence">Evidence</a>.</p>
     </div>
         <div class="grid c4" style="margin-bottom:38px">
-          <div class="stat amber">
+          <div class="stat amber" data-tone="amber">
       <div class="val" data-count="3">3</div>
       <div class="lbl">ICJ provisional measures</div>
       <div class="note">26 January, 28 March and 24 May 2024 — binding orders on the plausible risk of genocide</div>
       
-    </div><div class="stat amber">
+      
+    </div><div class="stat amber" data-tone="amber">
       <div class="val" data-count="2">2</div>
       <div class="lbl">ICC arrest warrants</div>
       <div class="note">Netanyahu and Gallant, 21 November 2024 — starvation as a method of warfare</div>
       
-    </div><div class="stat amber">
+      
+    </div><div class="stat amber" data-tone="amber">
       <div class="val" data-count="25">25</div>
       <div class="lbl">Institutions finding genocide</div>
       <div class="note">courts, UN mechanisms, genocide scholars, human-rights organisations, and Israeli, Palestinian and Jewish bodies (§15.8)</div>
       
-    </div><div class="stat amber">
+      
+    </div><div class="stat amber" data-tone="amber">
       <div class="val" data-count="157">157</div>
       <div class="lbl">States recognising Palestine</div>
       <div class="note">of 193 UN member states — 81% of the international community</div>
+      
       
     </div>
         </div>
@@ -113,11 +122,12 @@
       <h2>Who has found genocide, and when</h2>
       <p>The answer to <i>but who is actually calling it genocide?</i> is the list itself. Each finding below was reached independently, on the institution's own evidence and under its own procedure. Hover any point for the finding and its terms.</p>
     </div>
-        <div class="card chart-card" id="chart-findings-time" data-chart-card="findings-time" data-title="Every determination on one axis" data-source="§15.8">
+        <div class="card chart-card" id="chart-findings-time" data-chart-card="findings-time" data-title="Every determination on one axis" data-source="§15.8" data-note="One dot per finding, placed on the date it was published. Institutions that have made a determination without a single dated report are counted in the chart below but not plotted here.">
       <div class="chart-head">
         <div><h3>Every determination on one axis</h3><p>One dot per finding, placed on the date it was published. Institutions that have made a determination without a single dated report are counted in the chart below but not plotted here.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§15.8</span>
+          
           
           
           
@@ -128,11 +138,12 @@
       <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/legal&chart=findings-time">open it in the live record</a>.</p>
       <div class="chart-table" hidden=""></div>
     </div>
-        <div class="card chart-card" id="chart-findings-class" data-chart-card="findings-class" data-title="Determinations by class of institution" data-source="§15.8">
+        <div class="card chart-card" id="chart-findings-class" data-chart-card="findings-class" data-title="Determinations by class of institution" data-source="§15.8" data-note="Counting institutions, not statements. The roster crosses courts, the UN's own machinery, the genocide-scholarship field, and Israeli, Palestinian and Jewish organisations.">
       <div class="chart-head">
         <div><h3>Determinations by class of institution</h3><p>Counting institutions, not statements. The roster crosses courts, the UN's own machinery, the genocide-scholarship field, and Israeli, Palestinian and Jewish organisations.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§15.8</span>
+          
           
           
           
@@ -317,11 +328,12 @@
       <h2>What the findings rest on</h2>
       <p>Every finding in the record is an application of an instrument that already existed. This is the map of which body relied on which text. Nothing here is a novel legal theory: the newest instrument on the ring was drafted in 1998, and the oldest in 1907.</p>
     </div>
-        <div class="card chart-card" id="chart-instrument-graph" data-chart-card="instrument-graph" data-title="Which finding rests on which instrument" data-source="Appendix A + §15.8">
+        <div class="card chart-card" id="chart-instrument-graph" data-chart-card="instrument-graph" data-title="Which finding rests on which instrument" data-source="Appendix A + §15.8" data-note="Instruments on the outer ring in amber; the bodies that relied on them coloured by class. Hover any node for what it is, or any edge for the article cited.">
       <div class="chart-head">
         <div><h3>Which finding rests on which instrument</h3><p>Instruments on the outer ring in amber; the bodies that relied on them coloured by class. Hover any node for what it is, or any edge for the article cited.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Appendix A + §15.8</span>
+          
           
           
           
@@ -648,11 +660,12 @@
       <p>Documented waypoints, not a continuous series. Contemporaneous counts for the late 1980s and early 1990s conflict between sources, so only figures attributable to a named source on a named date are plotted.</p>
     </div>
         <div class="grid wide-left">
-          <div class="card chart-card" id="chart-recognition-wave" data-chart-card="recognition-wave" data-title="States recognising Palestine, 1988–2025" data-source="§15.1">
+          <div class="card chart-card" id="chart-recognition-wave" data-chart-card="recognition-wave" data-title="States recognising Palestine, 1988–2025" data-source="§15.1" data-note="Documented waypoints. Hover each for what happened and who recognised.">
       <div class="chart-head">
         <div><h3>States recognising Palestine, 1988–2025</h3><p>Documented waypoints. Hover each for what happened and who recognised.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§15.1</span>
+          
           
           
           
@@ -663,11 +676,12 @@
       <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/legal&chart=recognition-wave">open it in the live record</a>.</p>
       <div class="chart-table" hidden=""></div>
     </div>
-          <div class="card chart-card" id="chart-recognition" data-chart-card="recognition" data-title="Where the count stands" data-source="§15.1">
+          <div class="card chart-card" id="chart-recognition" data-chart-card="recognition" data-title="Where the count stands" data-source="§15.1" data-note="157 of 193 UN member states, including 14 of the 19 G20 member states.">
       <div class="chart-head">
         <div><h3>Where the count stands</h3><p>157 of 193 UN member states, including 14 of the 19 G20 member states.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§15.1</span>
+          
           
           
           
@@ -732,15 +746,20 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">96,545 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="footer-links">
+      <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a>
+    </p>
   </div>
 </footer>
+
 
 
 

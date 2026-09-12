@@ -6,8 +6,8 @@
 <meta name="description" content="Killings, settler attacks, demolitions, displacement, and Palestinian children in the Israeli military courts.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=28" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=28">
+<link rel="icon" href="../assets/favicon.svg?v=30" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=30">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -29,7 +29,11 @@
 <meta name="twitter:title" content="The West Bank — before and after October 2023 · The Documented Record">
 <meta name="twitter:description" content="Killings, settler attacks, demolitions, displacement, and Palestinian children in the Israeli military courts.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/data-west-bank.png">
-<link rel="stylesheet" href="../css/style.css?v=28">
+<link rel="stylesheet" href="../css/style.css?v=30">
+<!-- Before the stylesheet paints anything: a reader who chose the light theme
+     should not be shown the dark one first. Inline and synchronous by
+     necessity; a deferred script runs too late to prevent the flash. -->
+
 
 
 
@@ -53,7 +57,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -70,7 +74,8 @@
     <a href="../index.html#/legal" data-view="legal">Legal</a>
     <a href="../index.html#/sources" data-view="sources">Sources</a>
   </nav>
-  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span>Casualty data <b>10 September 2026</b></span></div>
+  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>10 September 2026</b></span></div>
+  
   
   
 </header>
@@ -84,11 +89,12 @@
       <p>The record did not begin on 7 October 2023. By the time it did, 2023 was already the deadliest year for Palestinians in the West Bank since the United Nations began systematically recording casualties there in 2005 — and 2022 had held that record before it. This section carries the pre-war baseline and the estimates of what the recorded Gaza toll leaves out.</p>
     </div>
         <div class="grid wide-left">
-          <div class="card chart-card" id="chart-wb-annual" data-chart-card="wb-annual" data-title="Palestinians killed in the West Bank, by year" data-source="OCHA; Tech For Palestine">
+          <div class="card chart-card" id="chart-wb-annual" data-chart-card="wb-annual" data-title="Palestinians killed in the West Bank, by year" data-source="OCHA; Tech For Palestine" data-note="Amber: 2022, the record year on OCHA's series until it was broken. Red: 2023. The child share is overlaid on each bar.">
       <div class="chart-head">
         <div><h3>Palestinians killed in the West Bank, by year</h3><p>Amber: 2022, the record year on OCHA's series until it was broken. Red: 2023. The child share is overlaid on each bar.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">OCHA; Tech For Palestine</span>
+          
           
           
           
@@ -99,11 +105,12 @@
       <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/data/west-bank&chart=wb-annual">open it in the live record</a>.</p>
       <div class="chart-table" hidden=""></div>
     </div>
-          <div class="card chart-card" id="chart-settler-rate" data-chart-card="settler-rate" data-title="Settler incidents against Palestinians, per day" data-source="OCHA">
+          <div class="card chart-card" id="chart-settler-rate" data-chart-card="settler-rate" data-title="Settler incidents against Palestinians, per day" data-source="OCHA" data-note="The daily average by year. OCHA excludes harassment, trespass and intimidation, so this understates it.">
       <div class="chart-head">
         <div><h3>Settler incidents against Palestinians, per day</h3><p>The daily average by year. OCHA excludes harassment, trespass and intimidation, so this understates it.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">OCHA</span>
+          
           
           
           
@@ -116,11 +123,12 @@
     </div>
         </div>
         <div class="grid" style="margin-top:22px">
-          <div class="card chart-card" id="chart-wb-before-after" data-chart-card="wb-before-after" data-title="2023 in the West Bank, either side of 7 October" data-source="OCHA">
+          <div class="card chart-card" id="chart-wb-before-after" data-chart-card="wb-before-after" data-title="2023 in the West Bank, either side of 7 October" data-source="OCHA" data-note="The pre-war period was already the deadliest on record. The bar labels give the killing rate per day.">
       <div class="chart-head">
         <div><h3>2023 in the West Bank, either side of 7 October</h3><p>The pre-war period was already the deadliest on record. The bar labels give the killing rate per day.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">OCHA</span>
+          
           
           
           
@@ -164,11 +172,12 @@
       <p>The West Bank series runs on the same monthly axis as Gaza. Settler attacks are plotted on the right-hand axis.</p>
     </div>
         <div class="grid">
-          <div class="card chart-card" id="chart-west-bank" data-chart-card="west-bank" data-title="West Bank: killed and settler attacks per month" data-source="§9.2">
+          <div class="card chart-card" id="chart-west-bank" data-chart-card="west-bank" data-title="West Bank: killed and settler attacks per month" data-source="§9.2" data-note="Bars: Palestinians killed, with the child share. Line: recorded settler attacks.">
       <div class="chart-head">
         <div><h3>West Bank: killed and settler attacks per month</h3><p>Bars: Palestinians killed, with the child share. Line: recorded settler attacks.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§9.2</span>
+          
           
           
           
@@ -179,11 +188,12 @@
       <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/data/west-bank&chart=west-bank">open it in the live record</a>.</p>
       <div class="chart-table" hidden=""></div>
     </div>
-          <div class="card chart-card" id="chart-locations" data-chart-card="locations" data-title="Gaza and the West Bank compared" data-source="§9.2">
+          <div class="card chart-card" id="chart-locations" data-chart-card="locations" data-title="Gaza and the West Bank compared" data-source="§9.2" data-note="Cumulative deaths in each territory on independent axes — the shapes, not the magnitudes, are the comparison.">
       <div class="chart-head">
         <div><h3>Gaza and the West Bank compared</h3><p>Cumulative deaths in each territory on independent axes — the shapes, not the magnitudes, are the comparison.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§9.2</span>
+          
           
           
           
@@ -196,11 +206,12 @@
     </div>
         </div>
         <div class="grid" style="margin-top:22px">
-          <div class="card chart-card" id="chart-wb-displacement" data-chart-card="wb-displacement" data-title="Displacement in the West Bank" data-source="OCHA">
+          <div class="card chart-card" id="chart-wb-displacement" data-chart-card="wb-displacement" data-title="Displacement in the West Bank" data-source="OCHA" data-note="Cumulative people and children driven from their homes, with displaced households on the right-hand axis. Demolition, settler violence and military operations are counted together here, as OCHA records them.">
       <div class="chart-head">
         <div><h3>Displacement in the West Bank</h3><p>Cumulative people and children driven from their homes, with displaced households on the right-hand axis. Demolition, settler violence and military operations are counted together here, as OCHA records them.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">OCHA</span>
+          
           
           
           
@@ -213,26 +224,30 @@
     </div>
         </div>
         <div class="grid c4" style="margin-top:22px">
-          <div class="stat red">
+          <div class="stat red" data-tone="red">
       <div class="val" data-count="9553">9,553</div>
       <div class="lbl">People displaced</div>
       <div class="note">West Bank, since October 2023</div>
       <div class="src">OCHA</div>
-    </div><div class="stat amber">
+      
+    </div><div class="stat amber" data-tone="amber">
       <div class="val" data-count="3963">3,963</div>
       <div class="lbl">of whom children</div>
       <div class="note">West Bank, since October 2023</div>
       <div class="src">OCHA</div>
-    </div><div class="stat ">
+      
+    </div><div class="stat " data-tone="">
       <div class="val" data-count="1423">1,423</div>
       <div class="lbl">Households displaced</div>
       <div class="note">each one a family home lost</div>
       <div class="src">OCHA</div>
-    </div><div class="stat amber">
+      
+    </div><div class="stat amber" data-tone="amber">
       <div class="val" data-count="1913">1,913</div>
       <div class="lbl">Children injured</div>
       <div class="note">West Bank, since October 2023</div>
       <div class="src">OCHA</div>
+      
     </div>
         </div>
       </section>
@@ -243,11 +258,12 @@
       <h2>Where the settlers attack, and where the displacement lands</h2>
       <p>OCHA records every settler incident and every displacement by governorate. Al Jazeera’s July 2026 analysis of that record published the three highest governorates for each — 3,033 attacks in the eighteen months from January 2025, of which Ramallah and el-Bireh alone accounted for 881. The governorates OCHA has not published separately are drawn unshaded rather than as zero: they are unreported, not unharmed.</p>
     </div>
-        <div class="card chart-card" id="chart-wb-gov-map" data-chart-card="wb-gov-map" data-title="Settler attacks and displacement, by governorate" data-source="OCHA, via Al Jazeera, 27 July 2026; boundaries from the OCHA Common Operational Dataset">
+        <div class="card chart-card" id="chart-wb-gov-map" data-chart-card="wb-gov-map" data-title="Settler attacks and displacement, by governorate" data-source="OCHA, via Al Jazeera, 27 July 2026; boundaries from the OCHA Common Operational Dataset" data-note="Two layers on one map: step the slider to move between them. Depth of colour is the figure against the highest published one. Eight of the eleven governorates carry no shading because no separate figure for them has been published, not because nothing was recorded there.">
       <div class="chart-head">
         <div><h3>Settler attacks and displacement, by governorate</h3><p>Two layers on one map: step the slider to move between them. Depth of colour is the figure against the highest published one. Eight of the eleven governorates carry no shading because no separate figure for them has been published, not because nothing was recorded there.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">OCHA, via Al Jazeera, 27 July 2026; boundaries from the OCHA Common Operational Dataset</span>
+          
           
           
           
@@ -259,11 +275,12 @@
       <div class="chart-table" hidden=""></div>
     </div>
         <div class="grid c2" style="margin-top:22px">
-          <div class="card chart-card" id="chart-settler-annual" data-chart-card="settler-annual" data-title="Recorded settler attacks, per year" data-source="OCHA, via Al Jazeera, 27 July 2026">
+          <div class="card chart-card" id="chart-settler-annual" data-chart-card="settler-annual" data-title="Recorded settler attacks, per year" data-source="OCHA, via Al Jazeera, 27 July 2026" data-note="The 2026 bar is outlined rather than filled because it covers the first four months only: 761 attacks, an average of 190 a month against 153 a month in 2025, a rise of 24 per cent.">
       <div class="chart-head">
         <div><h3>Recorded settler attacks, per year</h3><p>The 2026 bar is outlined rather than filled because it covers the first four months only: 761 attacks, an average of 190 a month against 153 a month in 2025, a rise of 24 per cent.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">OCHA, via Al Jazeera, 27 July 2026</span>
+          
           
           
           
@@ -274,11 +291,12 @@
       <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/data/west-bank&chart=settler-annual">open it in the live record</a>.</p>
       <div class="chart-table" hidden=""></div>
     </div>
-          <div class="card chart-card" id="chart-iron-wall" data-chart-card="iron-wall" data-title="Operation Iron Wall: what is left of the three camps" data-source="OHCHR, 4 September 2026">
+          <div class="card chart-card" id="chart-iron-wall" data-chart-card="iron-wall" data-title="Operation Iron Wall: what is left of the three camps" data-source="OHCHR, 4 September 2026" data-note="Share of structures destroyed or damaged by October 2025. The operation began on 21 January 2025. The UN Human Rights Office found in September 2026 that Israeli forces had displaced the entire population of these camps — more than 33,000 people — and continue to prevent their return, displacement it described as large-scale, long-term and systematic, raising concerns of the crime against humanity of forcible transfer. 102 Palestinians were killed in the operation, 21 of them children; 46 per cent of those killed were not taking part in hostilities.">
       <div class="chart-head">
         <div><h3>Operation Iron Wall: what is left of the three camps</h3><p>Share of structures destroyed or damaged by October 2025. The operation began on 21 January 2025. The UN Human Rights Office found in September 2026 that Israeli forces had displaced the entire population of these camps — more than 33,000 people — and continue to prevent their return, displacement it described as large-scale, long-term and systematic, raising concerns of the crime against humanity of forcible transfer. 102 Palestinians were killed in the operation, 21 of them children; 46 per cent of those killed were not taking part in hostilities.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">OHCHR, 4 September 2026</span>
+          
           
           
           
@@ -304,11 +322,12 @@
       <p>Israel is the only state in the world that systematically prosecutes children in military courts. The figures below are what its own record and the monitoring organisations produce.</p>
     </div>
         <div class="grid wide-left">
-          <div class="card chart-card" id="chart-child-detention" data-chart-card="child-detention" data-title="Children in the military courts" data-source="§10.2">
+          <div class="card chart-card" id="chart-child-detention" data-chart-card="child-detention" data-title="Children in the military courts" data-source="§10.2" data-note="One cohort of 766 children, documented by Defence for Children International–Palestine over seven years, split by what happened after the arrest.">
       <div class="chart-head">
         <div><h3>Children in the military courts</h3><p>One cohort of 766 children, documented by Defence for Children International–Palestine over seven years, split by what happened after the arrest.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§10.2</span>
+          
           
           
           
@@ -326,23 +345,26 @@
           </div>
         </div>
         <div class="grid c3" style="margin-top:22px">
-          <div class="stat red">
+          <div class="stat red" data-tone="red">
       <div class="val" data-count="500–700">500–700</div>
       <div class="lbl">Children prosecuted in military courts each year</div>
       <div class="note">Palestinian children detained and prosecuted in military courts each year.</div>
       <div class="src">DCI-Palestine; UNICEF</div>
+      
     </div>
-          <div class="stat red">
+          <div class="stat red" data-tone="red">
       <div class="val" data-count="75">75%</div>
       <div class="lbl">Of the documented cohort, subjected to physical violence</div>
       <div class="note">DCI-Palestine documented 766 child detainees between 2016 and 2022, of whom 75 per cent experienced physical violence following arrest. The split into 575 and 191 is that percentage applied to that total.</div>
       <div class="src">DCI-Palestine, 2016–2022</div>
+      
     </div>
-          <div class="stat red">
+          <div class="stat red" data-tone="red">
       <div class="val" data-count="98">98</div>
       <div class="lbl">Deaths in Israeli custody since October 2023</div>
       <div class="note">At least. Physicians for Human Rights–Israel states this is likely an undercount.</div>
       <div class="src">Physicians for Human Rights–Israel, September 2026</div>
+      
     </div>
         </div>
       </section>
@@ -354,11 +376,12 @@
       <p>Each figure is the floor established by a different body on a different date. None of them is an official Israeli count, because no official Israeli count is published.</p>
     </div>
         <div class="grid">
-          <div class="card chart-card" id="chart-custody-deaths" data-chart-card="custody-deaths" data-title="Deaths in Israeli custody" data-source="§10.3, §10.3A, §10.4">
+          <div class="card chart-card" id="chart-custody-deaths" data-chart-card="custody-deaths" data-title="Deaths in Israeli custody" data-source="§10.3, §10.3A, §10.4" data-note="The three red bars are death counts, each the floor established by the body named on it. The amber bar is not a death toll: it is the number of prison guards charged over one of those deaths, which is the whole of the prosecution record.">
       <div class="chart-head">
         <div><h3>Deaths in Israeli custody</h3><p>The three red bars are death counts, each the floor established by the body named on it. The amber bar is not a death toll: it is the number of prison guards charged over one of those deaths, which is the whole of the prosecution record.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§10.3, §10.3A, §10.4</span>
+          
           
           
           
@@ -381,15 +404,20 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">96,545 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="footer-links">
+      <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a>
+    </p>
   </div>
 </footer>
+
 
 
 

@@ -7,8 +7,8 @@
 <meta name="description" content="An interactive forensic survey of state conduct, alleged violations of international law, and the documented record (1917–2026).">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="assets/favicon.svg?v=28" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/flag-palestine.svg?v=28">
+<link rel="icon" href="assets/favicon.svg?v=30" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/flag-palestine.svg?v=30">
 <link rel="canonical" href="https://palestinerecord.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://palestinerecord.github.io/">
@@ -24,7 +24,20 @@
 <meta name="twitter:title" content="The Documented Record — Israel and the Occupied Territories, 1917–2026">
 <meta name="twitter:description" content="Every figure carries its source. A forensic survey of state conduct, alleged violations of international law, and the documented record — 1917 to 2026.">
 <meta name="twitter:image" content="assets/share-card.png">
-<link rel="stylesheet" href="css/style.css?v=28">
+<link rel="stylesheet" href="css/style.css?v=30">
+<!-- Before the stylesheet paints anything: a reader who chose the light theme
+     should not be shown the dark one first. Inline and synchronous by
+     necessity; a deferred script runs too late to prevent the flash. -->
+<script>
+(function () {
+  try {
+    var forced = (location.search.match(/[?&]theme=(light|dark)/) || [])[1];
+    var saved = forced || localStorage.getItem('record-theme');
+    var light = saved ? saved === 'light' : matchMedia('(prefers-color-scheme: light)').matches;
+    if (light) document.documentElement.setAttribute('data-theme', 'light');
+  } catch (err) { /* storage blocked; the dark default stands */ }
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js" integrity="sha384-Mx5lkUEQPM1pOJCwFtUICyX45KNojXbkWdYhkKUKsbv391mavbfoAmONbzkgYPzR" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts-gl@2.0.9/dist/echarts-gl.min.js" integrity="sha384-f4gAUkb5Y6LE9n50CbiH1hCBCw7021OeJu0ZrgRpgW6G1CZjPR8cu33e8rCFLqCl" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -93,6 +106,7 @@
     { "@type": "PropertyValue", "name": "States recognising Palestine, by date of recognition" }
   ],
   "distribution": [
+    { "@type": "DataDownload", "name": "The manifest: every published file, described and dated", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/index.json" },
     { "@type": "DataDownload", "name": "Daily and monthly casualty series", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/timeseries.json" },
     { "@type": "DataDownload", "name": "Curated headline figures, each with its source", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/figures.json" },
     { "@type": "DataDownload", "name": "The long record, 1948–2026", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/long-record.json" },
@@ -112,7 +126,7 @@
 
 <div id="boot">
   <div class="boot-inner">
-    <img class="flag-ps boot-flag" src="assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <img class="flag-ps boot-flag" src="assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
     <div class="boot-mark">FORENSIC RECORD</div>
     <div class="boot-bar"><span></span></div>
     <div class="boot-status">Loading documented record…</div>
@@ -125,7 +139,7 @@
 
 <header class="topbar">
   <a class="brand" href="#/overview">
-    <img class="brand-mark flag-ps" src="assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -143,7 +157,12 @@
     <a href="#/sources" data-view="sources">Sources</a>
   </nav>
   <div class="freshness" id="freshness" hidden></div>
+  <button class="theme-toggle" id="theme-toggle" title="Switch to the light theme" aria-label="Switch to the light theme" aria-pressed="false">☀</button>
   <button class="search-open" id="search-open" title="Search the record (press /)">
+    <svg class="search-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+      <path d="M10.4 10.4 L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+    </svg>
     <span>Search</span><kbd>/</kbd>
   </button>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span></button>
@@ -154,13 +173,17 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+      <img class="flag-ps" src="assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="#/evidence">Evidence</a> section without omission.</p>
     <p class="muted" id="footer-stats"></p>
+    <p class="footer-links">
+      <a href="#/api">Open data</a> · <a href="#/changelog">Changelog</a> ·
+      <a href="data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a>
+    </p>
   </div>
 </footer>
 
@@ -172,14 +195,15 @@
   </div>
 </div>
 
-<script src="js/charts.js?v=28"></script>
-<script src="js/views.js?v=28"></script>
-<script src="js/app.js?v=28"></script>
+<script src="js/charts.js?v=30"></script>
+<script src="js/share.js?v=30"></script>
+<script src="js/views.js?v=30"></script>
+<script src="js/app.js?v=30"></script>
 <!-- Loaded dynamically so ?prerender=1 never builds the 24,000-point WebGL field:
      prerender.py dumps the text of a route, and software WebGL would spend the
      whole budget on a scene no snapshot can contain. -->
 <script type="module">
-  if (!/(^|[?&])prerender=1(&|$)/.test(location.search)) import('./js/scene.js?v=28');
+  if (!/(^|[?&])prerender=1(&|$)/.test(location.search)) import('./js/scene.js?v=30');
 </script>
 </body>
 </html>

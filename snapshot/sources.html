@@ -6,8 +6,8 @@
 <meta name="description" content="The evidentiary base: courts, UN bodies, human rights organisations, open datasets, academic work and Israeli sources, each one linked.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=28" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=28">
+<link rel="icon" href="../assets/favicon.svg?v=30" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=30">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -29,7 +29,11 @@
 <meta name="twitter:title" content="Sources — what the record rests on · The Documented Record">
 <meta name="twitter:description" content="The evidentiary base: courts, UN bodies, human rights organisations, open datasets, academic work and Israeli sources, each one linked.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/sources.png">
-<link rel="stylesheet" href="../css/style.css?v=28">
+<link rel="stylesheet" href="../css/style.css?v=30">
+<!-- Before the stylesheet paints anything: a reader who chose the light theme
+     should not be shown the dark one first. Inline and synchronous by
+     necessity; a deferred script runs too late to prevent the flash. -->
+
 
 
 
@@ -53,7 +57,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -70,7 +74,8 @@
     <a href="../index.html#/legal" data-view="legal">Legal</a>
     <a href="../index.html#/sources" data-view="sources" class="active">Sources</a>
   </nav>
-  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span>Casualty data <b>10 September 2026</b></span></div>
+  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>10 September 2026</b></span></div>
+  
   
   
 </header>
@@ -83,25 +88,29 @@
       <p>The evidentiary base of the record: courts, UN bodies, human rights organisations, peer-reviewed research, open datasets, declassified archives and the Israeli press. Sources are grouped by the weight they carry, not by convenience. Every claim in the report is anchored to a source of one of these classes.</p>
     </div>
         <div class="grid c4">
-          <div class="stat blue">
+          <div class="stat blue" data-tone="blue">
       <div class="val" data-count="104">104</div>
       <div class="lbl">Linked primary sources</div>
       <div class="note">courts, UN bodies, human rights organisations, datasets, archives and the Israeli press</div>
       
-    </div><div class="stat ">
+      
+    </div><div class="stat " data-tone="">
       <div class="val" data-count="10">10</div>
       <div class="lbl">Classes of source</div>
       <div class="note">grouped by the evidentiary weight each class carries</div>
       
-    </div><div class="stat ">
+      
+    </div><div class="stat " data-tone="">
       <div class="val" data-count="101">101</div>
       <div class="lbl">Bibliography entries</div>
       <div class="note">the report's own bibliography, reproduced in full below</div>
       
-    </div><div class="stat amber">
+      
+    </div><div class="stat amber" data-tone="amber">
       <div class="val" data-count="2">2</div>
       <div class="lbl">Independent sources required</div>
       <div class="note">no new statistic enters the record on a single source</div>
+      
       
     </div>
         </div>
@@ -113,10 +122,11 @@
       <h2>What the record rests on</h2>
       <p>Findings by courts and mandated inquiries sit at the top of this hierarchy; field documentation and the Israeli press sit alongside them because admissions against interest carry their own weight.</p>
     </div>
-        <div class="card chart-card" id="chart-sources-groups" data-chart-card="sources-groups" data-title="Sources by class" data-source="">
+        <div class="card chart-card" id="chart-sources-groups" data-chart-card="sources-groups" data-title="Sources by class" data-source="" data-note="Counts are of the linked entries below, not of every citation in the report.">
       <div class="chart-head">
         <div><h3>Sources by class</h3><p>Counts are of the linked entries below, not of every citation in the report.</p></div>
         <div class="chart-tools">
+          
           
           
           
@@ -683,15 +693,20 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">96,545 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="footer-links">
+      <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a>
+    </p>
   </div>
 </footer>
+
 
 
 

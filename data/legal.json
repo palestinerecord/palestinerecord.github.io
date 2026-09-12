@@ -40,6 +40,8 @@
   ],
   "recognition": {
     "title": "Recognition of the State of Palestine",
+    "source": "Palestinian Ministry of Foreign Affairs list of recognitions and the UN documents underlying each entry, compiled as at 12 September 2026; the 2011 count as given by the Palestinian UN ambassador Riyad Mansour, the 2012 figure from UNGA Resolution 67/19.",
+    "ref": "§15.4",
     "note": "Documented waypoints, not a continuous series. Contemporaneous counts for the late 1980s and early 1990s conflict between sources, so only figures attributable to a named source on a named date are plotted.",
     "points": [
       { "date": "Nov 1988", "sort": "1988-11-15", "value": 80, "label": "Declaration of Independence", "note": "More than 80 states recognised the State of Palestine within weeks of the PLO's declaration in Algiers, overwhelmingly in Africa, Asia, Latin America and the socialist bloc. The floor figure is used here because contemporaneous counts differ." },

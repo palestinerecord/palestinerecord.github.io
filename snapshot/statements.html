@@ -6,8 +6,8 @@
 <meta name="description" content="Statements by named officials, each with speaker, role, date, the verbatim quote, and the legal significance of what was said.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=28" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=28">
+<link rel="icon" href="../assets/favicon.svg?v=30" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=30">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -29,7 +29,11 @@
 <meta name="twitter:title" content="Statements — the documented record of intent · The Documented Record">
 <meta name="twitter:description" content="Statements by named officials, each with speaker, role, date, the verbatim quote, and the legal significance of what was said.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/statements.png">
-<link rel="stylesheet" href="../css/style.css?v=28">
+<link rel="stylesheet" href="../css/style.css?v=30">
+<!-- Before the stylesheet paints anything: a reader who chose the light theme
+     should not be shown the dark one first. Inline and synchronous by
+     necessity; a deferred script runs too late to prevent the flash. -->
+
 
 
 
@@ -53,7 +57,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -70,7 +74,8 @@
     <a href="../index.html#/legal" data-view="legal">Legal</a>
     <a href="../index.html#/sources" data-view="sources">Sources</a>
   </nav>
-  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span>Casualty data <b>10 September 2026</b></span></div>
+  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (2 days ago). Report and curated figures compiled 12 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>10 September 2026</b></span></div>
+  
   
   
 </header>
@@ -83,25 +88,29 @@
       <p>A curated register of statements bearing on intent: genocide, ethnic cleansing, apartheid, annexation, starvation and war crimes. Every entry is verbatim, attributed to a named speaker with role and date, and carries the source and a note on evidentiary significance. Statements by serving officials are admissions, not allegations. Statements by serving officials carry particular evidentiary weight in the assessment of intent: they are admissions, not allegations. Contested attributions are marked as contested and are not relied on.</p>
     </div>
         <div class="grid c4">
-          <div class="stat red">
+          <div class="stat red" data-tone="red">
       <div class="val" data-count="85">85</div>
       <div class="lbl">Statements catalogued here</div>
       <div class="note">each with speaker, role, date, verbatim quotation, context, source and legal significance</div>
       
-    </div><div class="stat ">
+      
+    </div><div class="stat " data-tone="">
       <div class="val" data-count="13">13</div>
       <div class="lbl">Evidentiary categories</div>
       <div class="note">from genocidal intent and incitement to formal findings and internal dissent</div>
       
-    </div><div class="stat red">
+      
+    </div><div class="stat red" data-tone="red">
       <div class="val" data-count="34">34</div>
       <div class="lbl">Advanced as evidence of intent</div>
       <div class="note">dolus specialis under Article II, or incitement under Article III(c)</div>
       
-    </div><div class="stat green">
+      
+    </div><div class="stat green" data-tone="green">
       <div class="val" data-count="15">15</div>
       <div class="lbl">Israeli and Jewish dissent</div>
       <div class="note">the internal record, which forecloses the claim that only outside critics use these words</div>
+      
       
     </div>
         </div>
@@ -114,11 +123,12 @@
       <p>The statements below are not a selection of outliers. They cluster in defined categories, and they do not begin in October 2023.</p>
     </div>
         <div class="grid wide-left">
-          <div class="card chart-card" id="chart-statements-cats" data-chart-card="statements-cats" data-title="Statements by evidentiary category" data-source="§6.2, Appendix C">
+          <div class="card chart-card" id="chart-statements-cats" data-chart-card="statements-cats" data-title="Statements by evidentiary category" data-source="§6.2, Appendix C" data-note="A statement may fall into more than one category, so the categories sum to more than the total.">
       <div class="chart-head">
         <div><h3>Statements by evidentiary category</h3><p>A statement may fall into more than one category, so the categories sum to more than the total.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">§6.2, Appendix C</span>
+          
           
           
           
@@ -129,11 +139,12 @@
       <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/statements&chart=statements-cats">open it in the live record</a>.</p>
       <div class="chart-table" hidden=""></div>
     </div>
-          <div class="card chart-card" id="chart-statements-era" data-chart-card="statements-era" data-title="Statements by period" data-source="Appendix C">
+          <div class="card chart-card" id="chart-statements-era" data-chart-card="statements-era" data-title="Statements by period" data-source="Appendix C" data-note="The founding-era record is on the same axis as the present one.">
       <div class="chart-head">
         <div><h3>Statements by period</h3><p>The founding-era record is on the same axis as the present one.</p></div>
         <div class="chart-tools">
           <span class="chart-ref">Appendix C</span>
+          
           
           
           
@@ -185,6 +196,7 @@
       <div class="st-top">
         <span class="st-tier">Founder</span>
         <span class="st-date">1891</span>
+        
       </div>
       <blockquote>“[Jewish settlers] treat the Arabs with hostility and cruelty, trespass unjustly upon their boundaries, beat them shamefully without reason, and even brag about it.”</blockquote>
       <div class="who">Ahad Ha'am (Asher Ginsberg)</div>
@@ -199,6 +211,7 @@
       <div class="st-top">
         <span class="st-tier">Founder</span>
         <span class="st-date">1896</span>
+        
       </div>
       <blockquote>“[A Jewish state in Palestine would form] a portion of a rampart of Europe against Asia, an outpost of civilization as opposed to barbarism.”</blockquote>
       <div class="who">Theodor Herzl</div>
@@ -213,6 +226,7 @@
       <div class="st-top">
         <span class="st-tier">Founder</span>
         <span class="st-date">1923</span>
+        
       </div>
       <blockquote>“[Zionist settlement is] a colonising adventure [that will be resisted] as any indigenous people [would resist]… colonisation can have only one goal [and must proceed] regardless of the native population.”</blockquote>
       <div class="who">Vladimir Jabotinsky</div>
@@ -227,6 +241,7 @@
       <div class="st-top">
         <span class="st-tier">Founder</span>
         <span class="st-date">12 July 1937</span>
+        
       </div>
       <blockquote>“[Compulsory transfer is] an opportunity which we never dared to dream of in our wildest imaginings… national consolidation in a free homeland.”</blockquote>
       <div class="who">David Ben-Gurion</div>
@@ -241,6 +256,7 @@
       <div class="st-top">
         <span class="st-tier">Founder</span>
         <span class="st-date">1938</span>
+        
       </div>
       <blockquote>“I do not believe in the transfer of the individual, I believe in the transfer of entire [Palestinian] villages.”</blockquote>
       <div class="who">Arthur Ruppin</div>
@@ -255,6 +271,7 @@
       <div class="st-top">
         <span class="st-tier">Contemporaneous witness</span>
         <span class="st-date">4 December 1948</span>
+        
       </div>
       <blockquote>“[Herut is] a political party closely akin in its organization, methods, political philosophy and social appeal to the Nazi and Fascist parties.”</blockquote>
       <div class="who">Albert Einstein, Hannah Arendt, Sidney Hook and others</div>
@@ -269,6 +286,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">19 March 1969</span>
+        
       </div>
       <blockquote>“Jewish villages were built in the place of Arab villages. You do not even know the names of these Arab villages, and I do not blame you because geography books no longer exist. Not only do the books not exist, the Arab villages are not there either… There is not a single place built in this country that did not have a former Arab population.”</blockquote>
       <div class="who">Moshe Dayan</div>
@@ -283,6 +301,7 @@
       <div class="st-top">
         <span class="st-tier">Head of government</span>
         <span class="st-date">15 June 1969</span>
+        
       </div>
       <blockquote>“There was no such thing as Palestinians. When was there an independent Palestinian people with a Palestinian state? … It was not as though there was a Palestinian people in Palestine considering itself as a Palestinian people and we came and threw them out and took their country from them.”</blockquote>
       <div class="who">Golda Meir</div>
@@ -297,6 +316,7 @@
       <div class="st-top">
         <span class="st-tier">Head of government</span>
         <span class="st-date">1976</span>
+        
       </div>
       <blockquote>“[Israel risks becoming an apartheid state if it annexes and absorbs the West Bank's Arab population.]”</blockquote>
       <div class="who">Yitzhak Rabin</div>
@@ -311,6 +331,7 @@
       <div class="st-top">
         <span class="st-tier">Military</span>
         <span class="st-date">April 1983</span>
+        
       </div>
       <blockquote>“When we have settled the land, all the Arabs will be able to do about it will be to scurry around like drugged cockroaches in a bottle.”</blockquote>
       <div class="who">Lt. Gen. Rafael Eitan</div>
@@ -325,6 +346,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">January 1988</span>
+        
       </div>
       <blockquote>“[Ordering soldiers to] break their bones.”</blockquote>
       <div class="who">Yitzhak Rabin</div>
@@ -339,6 +361,7 @@
       <div class="st-top">
         <span class="st-tier">Israeli historian</span>
         <span class="st-date">2006</span>
+        
       </div>
       <blockquote>“[The 1948 expulsion of the Palestinians was] an ethnic cleansing operation [planned in advance and executed systematically.]”</blockquote>
       <div class="who">Ilan Pappé</div>
@@ -353,6 +376,7 @@
       <div class="st-top">
         <span class="st-tier">Head of government</span>
         <span class="st-date">November 2007</span>
+        
       </div>
       <blockquote>“[If the two-state solution collapses, Israel will] face a South African-style struggle for equal voting rights, and as soon as that happens, the state of Israel is finished.”</blockquote>
       <div class="who">Ehud Olmert</div>
@@ -367,6 +391,7 @@
       <div class="st-top">
         <span class="st-tier">Military</span>
         <span class="st-date">2008</span>
+        
       </div>
       <blockquote>“What happened in the Dahiya quarter of Beirut in 2006 will happen in every village from which Israel is fired on. […] We will apply disproportionate force on it… From our standpoint, these are not civilian villages, they are military bases.”</blockquote>
       <div class="who">Maj. Gen. Gadi Eisenkot</div>
@@ -381,6 +406,7 @@
       <div class="st-top">
         <span class="st-tier">Head of government</span>
         <span class="st-date">2 February 2010</span>
+        
       </div>
       <blockquote>“As long as in this territory west of the Jordan River there is only one political entity called Israel it is going to be either non-Jewish, or non-democratic. If this bloc of millions of Palestinians cannot vote, that will be an apartheid state.”</blockquote>
       <div class="who">Ehud Barak</div>
@@ -395,6 +421,7 @@
       <div class="st-top">
         <span class="st-tier">Former law officer</span>
         <span class="st-date">November 2014</span>
+        
       </div>
       <blockquote>“[Israel has imposed] an apartheid regime [on the West Bank.]”</blockquote>
       <div class="who">Michael Ben-Yair</div>
@@ -409,6 +436,7 @@
       <div class="st-top">
         <span class="st-tier">Former intelligence chief</span>
         <span class="st-date">2015</span>
+        
       </div>
       <blockquote>“[Continuing Netanyahu's policies will result in an Israel that is] either a binational state or an apartheid state.”</blockquote>
       <div class="who">Meir Dagan</div>
@@ -423,6 +451,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">2017</span>
+        
       </div>
       <blockquote>“[The Palestinian people are] an invention of less than a hundred years.”</blockquote>
       <div class="who">Bezalel Smotrich</div>
@@ -437,6 +466,7 @@
       <div class="st-top">
         <span class="st-tier">Israeli human rights organisation</span>
         <span class="st-date">12 January 2021</span>
+        
       </div>
       <blockquote>“This is not democracy plus occupation. This is apartheid between the river and the sea.”</blockquote>
       <div class="who">B'Tselem</div>
@@ -451,6 +481,7 @@
       <div class="st-top">
         <span class="st-tier">NGO finding</span>
         <span class="st-date">27 April 2021</span>
+        
       </div>
       <blockquote>“[Israeli authorities are committing] the crimes against humanity of apartheid and persecution.”</blockquote>
       <div class="who">Human Rights Watch</div>
@@ -465,6 +496,7 @@
       <div class="st-top">
         <span class="st-tier">NGO finding</span>
         <span class="st-date">1 February 2022</span>
+        
       </div>
       <blockquote>“[Israel maintains] a system of oppression and domination [over Palestinians, meeting the international legal definition of apartheid.]”</blockquote>
       <div class="who">Amnesty International</div>
@@ -479,6 +511,7 @@
       <div class="st-top">
         <span class="st-tier">Legislature</span>
         <span class="st-date">7 October 2023</span>
+        
       </div>
       <blockquote>“Bring down buildings! Bomb without distinction!! Stop with this impotence. You have ability. There is worldwide legitimacy! Flatten Gaza. Without mercy! This time, there is no room for mercy.”</blockquote>
       <div class="who">Tally Gotliv</div>
@@ -493,6 +526,7 @@
       <div class="st-top">
         <span class="st-tier">Legislature</span>
         <span class="st-date">8 October 2023</span>
+        
       </div>
       <blockquote>“Nakba to the enemy now! This day is our Pearl Harbor. We will still learn the lessons. Right now, one goal: Nakba! A Nakba that will overshadow the Nakba of 48. A Nakba in Gaza and a Nakba for anyone who dares to join.”</blockquote>
       <div class="who">Ariel Kallner</div>
@@ -507,6 +541,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">9 October 2023</span>
+        
       </div>
       <blockquote>“I have ordered a complete siege on the Gaza Strip. There will be no electricity, no food, no fuel, everything is closed. We are fighting human animals, and we are acting accordingly.”</blockquote>
       <div class="who">Yoav Gallant</div>
@@ -521,6 +556,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">9 October 2023</span>
+        
       </div>
       <blockquote>“Those are animals, they have no right to exist. I am not debating the way it will happen, but they need to be exterminated… until we see hundreds of thousands fleeing Gaza, we, the IDF has not achieved its mission.”</blockquote>
       <div class="who">Yoav Kisch</div>
@@ -535,6 +571,7 @@
       <div class="st-top">
         <span class="st-tier">Legislature</span>
         <span class="st-date">9 October 2023</span>
+        
       </div>
       <blockquote>“Erase Gaza. Nothing else will satisfy us. It is not acceptable that we maintain a terrorist authority next to Israel. Don't leave a child there — expel everyone.”</blockquote>
       <div class="who">Nissim Vaturi</div>
@@ -549,6 +586,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">10 October 2023</span>
+        
       </div>
       <blockquote>“Gaza won't return to what it was before. We will eliminate everything.”</blockquote>
       <div class="who">Yoav Gallant</div>
@@ -563,6 +601,7 @@
       <div class="st-top">
         <span class="st-tier">Military</span>
         <span class="st-date">10 October 2023</span>
+        
       </div>
       <blockquote>“Human animals must be treated as such. There will be no electricity and no water, there will only be destruction. You wanted hell, you will get hell.”</blockquote>
       <div class="who">Maj. Gen. Ghassan Alian</div>
@@ -577,6 +616,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">12 October 2023</span>
+        
       </div>
       <blockquote>“Humanitarian aid to Gaza? No electrical switch will be turned on, no water hydrant will be opened, and no fuel truck will enter Gaza until the Israeli abductees are returned. No one will preach morals to us.”</blockquote>
       <div class="who">Israel Katz</div>
@@ -591,6 +631,7 @@
       <div class="st-top">
         <span class="st-tier">Head of state</span>
         <span class="st-date">13 October 2023</span>
+        
       </div>
       <blockquote>“It is an entire nation out there that is responsible. It is not true this rhetoric about civilians not aware, not involved. It's absolutely not true. They could've risen up, they could have fought against that evil regime.”</blockquote>
       <div class="who">Isaac Herzog</div>
@@ -605,6 +646,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">13 October 2023</span>
+        
       </div>
       <blockquote>“I don't care about Gaza. I literally don't care at all. They can go out and swim in the sea. I want to see dead bodies of terrorists around Gaza. […] I am personally proud of the ruins of Gaza.”</blockquote>
       <div class="who">May Golan</div>
@@ -619,6 +661,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">October 2023</span>
+        
       </div>
       <blockquote>“Erase all of Gaza from the face of the earth.”</blockquote>
       <div class="who">Galit Distel-Atbaryan</div>
@@ -633,6 +676,7 @@
       <div class="st-top">
         <span class="st-tier">Legislature</span>
         <span class="st-date">23 October 2023</span>
+        
       </div>
       <blockquote>“Without hunger and thirst among the Gazan population, we will not succeed in recruiting collaborators, we will not succeed in recruiting intelligence, or in bribing people with food, drink, medicine, in order to obtain intelligence.”</blockquote>
       <div class="who">Tally Gotliv</div>
@@ -647,6 +691,7 @@
       <div class="st-top">
         <span class="st-tier">Legislature</span>
         <span class="st-date">23 October 2023</span>
+        
       </div>
       <blockquote>“Destroy a neighborhood in Gaza everyday the abductees are in their hands. If we blink, we run out of global credit. Every day that the abductees are with them, a neighborhood must be destroyed on its inhabitants.”</blockquote>
       <div class="who">Almog Cohen</div>
@@ -661,6 +706,7 @@
       <div class="st-top">
         <span class="st-tier">Legislature</span>
         <span class="st-date">23 October 2023</span>
+        
       </div>
       <blockquote>“We cannot go back to the same conception… we need to exact a territorial price from them, including returning Jewish settlements at least to the north of Gaza Strip.”</blockquote>
       <div class="who">Ohad Tal</div>
@@ -675,6 +721,7 @@
       <div class="st-top">
         <span class="st-tier">Head of government</span>
         <span class="st-date">28 October 2023</span>
+        
       </div>
       <blockquote>“You must remember what Amalek did to you, says our Holy Bible. And we do remember.”</blockquote>
       <div class="who">Benjamin Netanyahu</div>
@@ -689,6 +736,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">2023</span>
+        
       </div>
       <blockquote>“We will encourage voluntary transfer of all Gazan citizens. We will offer them the opportunity to move to other countries because that land belongs to us.”</blockquote>
       <div class="who">Itamar Ben-Gvir</div>
@@ -703,6 +751,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">2023</span>
+        
       </div>
       <blockquote>“There are no uninvolved civilians in Gaza.”</blockquote>
       <div class="who">Bezalel Smotrich</div>
@@ -717,6 +766,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">5 November 2023</span>
+        
       </div>
       <blockquote>“[Asked whether Israel should drop a nuclear bomb on Gaza:] That's one way.”</blockquote>
       <div class="who">Amichai Eliyahu</div>
@@ -731,6 +781,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">November 2023</span>
+        
       </div>
       <blockquote>“[This is] Gaza Nakba 2023.”</blockquote>
       <div class="who">Avi Dichter</div>
@@ -745,6 +796,7 @@
       <div class="st-top">
         <span class="st-tier">Head of government</span>
         <span class="st-date">November 2023</span>
+        
       </div>
       <blockquote>“[Letter to Israeli soldiers invoking the biblical war of total annihilation.]”</blockquote>
       <div class="who">Benjamin Netanyahu</div>
@@ -759,6 +811,7 @@
       <div class="st-top">
         <span class="st-tier">Database</span>
         <span class="st-date">4 January 2024 (continuously updated)</span>
+        
       </div>
       <blockquote>“500+ instances of Israeli incitement to genocide.”</blockquote>
       <div class="who">Law for Palestine</div>
@@ -773,6 +826,7 @@
       <div class="st-top">
         <span class="st-tier">Court</span>
         <span class="st-date">26 January 2024</span>
+        
       </div>
       <blockquote>“[Israel must] take all measures within its power to prevent and punish the direct and public incitement to commit genocide in relation to members of the Palestinian group in the Gaza Strip.”</blockquote>
       <div class="who">International Court of Justice</div>
@@ -787,6 +841,7 @@
       <div class="st-top">
         <span class="st-tier">UN mandate holder</span>
         <span class="st-date">March 2024</span>
+        
       </div>
       <blockquote>“[There are reasonable grounds to believe that the threshold indicating Israel's commission of genocide has been met.]”</blockquote>
       <div class="who">Francesca Albanese</div>
@@ -801,6 +856,7 @@
       <div class="st-top">
         <span class="st-tier">Database</span>
         <span class="st-date">2024–2026 (continuously updated)</span>
+        
       </div>
       <blockquote>“A Registry of Israeli Genocidal Statements on Gaza — over 1,000 instances of incitement and genocidal intent documented since 7 October 2023.”</blockquote>
       <div class="who">Al-Haq Forensic Architecture Investigation Unit</div>
@@ -815,6 +871,7 @@
       <div class="st-top">
         <span class="st-tier">Court</span>
         <span class="st-date">19 July 2024</span>
+        
       </div>
       <blockquote>“[Israel's legislation and measures] impose and serve to maintain a near-complete separation in the West Bank and East Jerusalem between the settler and Palestinian communities [and] constitute a breach of Article 3 of CERD.”</blockquote>
       <div class="who">International Court of Justice</div>
@@ -829,6 +886,7 @@
       <div class="st-top">
         <span class="st-tier">Military</span>
         <span class="st-date">13 August 2024</span>
+        
       </div>
       <blockquote>“In Gaza, human shields are used by Israeli soldiers at least six times a day… almost every platoon [keeps a Palestinian detainee for this purpose].”</blockquote>
       <div class="who">Anonymous IDF officer</div>
@@ -843,6 +901,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">August 2024</span>
+        
       </div>
       <blockquote>“[Calling for the] total annihilation [of Gaza, invoking the biblical injunction against Amalek.]”</blockquote>
       <div class="who">Bezalel Smotrich</div>
@@ -857,6 +916,7 @@
       <div class="st-top">
         <span class="st-tier">Court</span>
         <span class="st-date">21 November 2024</span>
+        
       </div>
       <blockquote>“[There are reasonable grounds to believe that Netanyahu and Gallant bear criminal responsibility for] the war crime of starvation as a method of warfare [and crimes against humanity of murder, persecution and other inhumane acts.]”</blockquote>
       <div class="who">International Criminal Court, Pre-Trial Chamber I</div>
@@ -871,6 +931,7 @@
       <div class="st-top">
         <span class="st-tier">Israeli human rights organisation</span>
         <span class="st-date">2005–2026 (cumulative monitoring)</span>
+        
       </div>
       <blockquote>“[Over 93 per cent of investigations into settler violence against Palestinians are closed without indictment.]”</blockquote>
       <div class="who">Yesh Din</div>
@@ -885,6 +946,7 @@
       <div class="st-top">
         <span class="st-tier">Allied head of state</span>
         <span class="st-date">4 February 2025</span>
+        
       </div>
       <blockquote>“The US will take over the Gaza Strip, and we will do a job with it too… We'll own it… Level the site, and get rid of the destroyed buildings, level it out, create an economic development…”</blockquote>
       <div class="who">Donald J. Trump</div>
@@ -899,6 +961,7 @@
       <div class="st-top">
         <span class="st-tier">Polling</span>
         <span class="st-date">March 2025</span>
+        
       </div>
       <blockquote>“82 per cent support the forced expulsion of the entire Palestinian population of Gaza; 47 per cent answered yes when asked whether the Israeli army should act as the biblical Israelites did under Joshua at Jericho — that is, kill all the inhabitants of a conquered city.”</blockquote>
       <div class="who">Geocartography Knowledge Group / Penn State University</div>
@@ -913,6 +976,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">7 April 2025</span>
+        
       </div>
       <blockquote>“Read my lips: not a single grain of wheat will enter Gaza.”</blockquote>
       <div class="who">Bezalel Smotrich</div>
@@ -927,6 +991,7 @@
       <div class="st-top">
         <span class="st-tier">Soldier testimony</span>
         <span class="st-date">April 2025</span>
+        
       </div>
       <blockquote>“We decided on a line which is the borderline, past which everyone is a suspect, but it's not clear to me how familiar Palestinians are with this line.”</blockquote>
       <div class="who">Breaking the Silence</div>
@@ -941,6 +1006,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">6 May 2025</span>
+        
       </div>
       <blockquote>“Gaza will be entirely destroyed [and Palestinians will] leave in great numbers to third countries.”</blockquote>
       <div class="who">Bezalel Smotrich</div>
@@ -955,6 +1021,7 @@
       <div class="st-top">
         <span class="st-tier">Legislature</span>
         <span class="st-date">13 May 2025</span>
+        
       </div>
       <blockquote>“There are no uninvolved in Gaza. […] [Of the children:] Yes, they will also have to kill them, because there is no choice. […] It is a shame that what's been done in Gaza didn't get worse.”</blockquote>
       <div class="who">Michal Waldiger</div>
@@ -969,6 +1036,7 @@
       <div class="st-top">
         <span class="st-tier">Head of government</span>
         <span class="st-date">May 2025</span>
+        
       </div>
       <blockquote>“We are destroying more and more houses [so that Palestinians] have nowhere to return… the only obvious result will be Gazans choosing to emigrate outside of the Strip… but our main problem is finding countries to take them in.”</blockquote>
       <div class="who">Benjamin Netanyahu</div>
@@ -983,6 +1051,7 @@
       <div class="st-top">
         <span class="st-tier">Former legislator</span>
         <span class="st-date">c. 20 May 2025</span>
+        
       </div>
       <blockquote>“The enemy is not Hamas… Every child, every baby in Gaza is an enemy. […] [Gaza must be] occupied as well as settled [and] not a single child should remain. […] Every child of this kind to whom you're giving milk now — in 15 years will rape your daughters and slaughter your sons.”</blockquote>
       <div class="who">Moshe Feiglin</div>
@@ -997,6 +1066,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">2025</span>
+        
       </div>
       <blockquote>“'Voluntary' is at times a state you impose [on someone] until they give their consent.”</blockquote>
       <div class="who">Shlomo Karhi</div>
@@ -1011,6 +1081,7 @@
       <div class="st-top">
         <span class="st-tier">Polling</span>
         <span class="st-date">2025</span>
+        
       </div>
       <blockquote>“65 per cent of Jewish Israelis believe the IDF is held back from achieving its military objectives by adherence to the principle of minimising unnecessary killing and harm to civilians.”</blockquote>
       <div class="who">Israeli public opinion</div>
@@ -1025,6 +1096,7 @@
       <div class="st-top">
         <span class="st-tier">Israeli human rights organisation</span>
         <span class="st-date">July 2025</span>
+        
       </div>
       <blockquote>“[Israel's systematic destruction of Gaza's health system constitutes an act of genocide.]”</blockquote>
       <div class="who">Physicians for Human Rights Israel</div>
@@ -1039,6 +1111,7 @@
       <div class="st-top">
         <span class="st-tier">Polling</span>
         <span class="st-date">August 2025</span>
+        
       </div>
       <blockquote>“76 per cent of Jewish Israelis agree or partially agree that there are no innocents in Gaza.”</blockquote>
       <div class="who">aChord Center, Hebrew University of Jerusalem</div>
@@ -1053,6 +1126,7 @@
       <div class="st-top">
         <span class="st-tier">Military</span>
         <span class="st-date">August 2025</span>
+        
       </div>
       <blockquote>“For everything that happened on October 7, for every one person on October 7, 50 Palestinians must die. […] The fact that there are already 50,000 dead in Gaza is necessary and required for future generations. […] There is no choice — every now and then, they need a Nakba in order to feel the price.”</blockquote>
       <div class="who">Maj. Gen. Aharon Haliva</div>
@@ -1067,6 +1141,7 @@
       <div class="st-top">
         <span class="st-tier">Scholarly body</span>
         <span class="st-date">31 August 2025</span>
+        
       </div>
       <blockquote>“[Israel's actions in Gaza meet the legal definition of genocide under the 1948 Convention.]”</blockquote>
       <div class="who">International Association of Genocide Scholars</div>
@@ -1081,6 +1156,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">September 2025</span>
+        
       </div>
       <blockquote>“The overriding principle for applying sovereignty [to the West Bank] is maximum territory with minimum Arabs… There will never, and can never be, a Palestinian state in our land.”</blockquote>
       <div class="who">Bezalel Smotrich</div>
@@ -1095,6 +1171,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">September 2025</span>
+        
       </div>
       <blockquote>“Sovereignty, and also encouraging [Palestinian] voluntary emigration, which we should do also in Judea and Samaria.”</blockquote>
       <div class="who">Itamar Ben-Gvir</div>
@@ -1109,6 +1186,7 @@
       <div class="st-top">
         <span class="st-tier">UN body</span>
         <span class="st-date">16 September 2025</span>
+        
       </div>
       <blockquote>“On incitement to genocide, the Commission concludes that Israeli President Isaac Herzog, Prime Minister Benjamin Netanyahu and then Defence Minister Yoav Gallant, have incited the commission of genocide and that Israeli authorities have failed to take action against them to punish this.”</blockquote>
       <div class="who">UN Independent International Commission of Inquiry on the OPT</div>
@@ -1123,6 +1201,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">September 2025</span>
+        
       </div>
       <blockquote>“The Land of Israel belongs exclusively to the people of Israel — there is no Palestinian people and no Palestinian state.”</blockquote>
       <div class="who">Yitzhak Wasserlauf</div>
@@ -1137,6 +1216,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">5 March 2026</span>
+        
       </div>
       <blockquote>“[Beirut's southern suburb of Dahiyeh will] soon resemble Khan Younis.”</blockquote>
       <div class="who">Bezalel Smotrich</div>
@@ -1151,6 +1231,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">March 2026</span>
+        
       </div>
       <blockquote>“[The IDF will demolish all homes in Lebanese border villages] in accordance with the Rafah and Beit Hanoun model in Gaza.”</blockquote>
       <div class="who">Israel Katz</div>
@@ -1165,6 +1246,7 @@
       <div class="st-top">
         <span class="st-tier">Military</span>
         <span class="st-date">4 May 2026</span>
+        
       </div>
       <blockquote>“[On why Palestinian stone-throwers are shot dead while Jewish settlers who throw stones at IDF forces are not:] Soldiers' firing on Jews has profound sociological consequences. […] [Asked directly whether this constitutes discrimination:] Yes, it involves discrimination.”</blockquote>
       <div class="who">Maj. Gen. Avi Bluth</div>
@@ -1179,6 +1261,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">May 2026</span>
+        
       </div>
       <blockquote>“The time has come to finally erase the lines that separate Areas A, B, and C.”</blockquote>
       <div class="who">Bezalel Smotrich</div>
@@ -1193,6 +1276,7 @@
       <div class="st-top">
         <span class="st-tier">Head of government</span>
         <span class="st-date">28 May 2026</span>
+        
       </div>
       <blockquote>“At this point, we are fully in control of 60 percent of the territory of the Gaza Strip… My directive is to move to [70 percent]… Wait, let's go in order. First 70 percent. Let's start with that.”</blockquote>
       <div class="who">Benjamin Netanyahu</div>
@@ -1207,6 +1291,7 @@
       <div class="st-top">
         <span class="st-tier">Former head of government</span>
         <span class="st-date">18 June 2026</span>
+        
       </div>
       <blockquote>“The State of Israel is conducting an organized, systematic, state-funded campaign of ethnic cleansing and crimes against humanity [in the West Bank]. […] These are unprecedented and harsh accusations against the Israeli government and the defense establishment, especially from a former prime minister. But after years of restraint, I have no choice but to make them.”</blockquote>
       <div class="who">Ehud Olmert</div>
@@ -1221,6 +1306,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">19 June 2026</span>
+        
       </div>
       <blockquote>“For every tear of an Israeli mother, a thousand Lebanese mothers must weep. All of Lebanon must burn! […] In the Middle East, you don't win with measured responses and restraint — you need to go berserk. To obliterate. To crush the terror.”</blockquote>
       <div class="who">Itamar Ben-Gvir</div>
@@ -1235,6 +1321,7 @@
       <div class="st-top">
         <span class="st-tier">Institutional finding</span>
         <span class="st-date">July 2026</span>
+        
       </div>
       <blockquote>“[Gaza is at Stage 8 (Persecution), Stage 9 (Extermination) and Stage 10 (Denial) simultaneously.]”</blockquote>
       <div class="who">Genocide Watch</div>
@@ -1249,6 +1336,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet and legislature</span>
         <span class="st-date">19 July 2026</span>
+        
       </div>
       <blockquote>“Returning home after 21 years.”</blockquote>
       <div class="who">Nachala settler movement march — 28 ministers and MKs</div>
@@ -1263,6 +1351,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">30–31 July 2026</span>
+        
       </div>
       <blockquote>“The assassinations in Gaza must continue, the encouragement of emigration must happen. Israel must win.”</blockquote>
       <div class="who">Itamar Ben-Gvir</div>
@@ -1277,6 +1366,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">c. 16 August 2026</span>
+        
       </div>
       <blockquote>“I think targeted assassinations should be carried out in Gaza, taking down 30 to 40 every night… There are people there who are not worthy of life. They shouldn't live. They're not even people.”</blockquote>
       <div class="who">Itamar Ben-Gvir</div>
@@ -1291,6 +1381,7 @@
       <div class="st-top">
         <span class="st-tier">Institutional finding</span>
         <span class="st-date">1 September 2026</span>
+        
       </div>
       <blockquote>“[Ben-Gvir's call for the deliberate killing of “30 to 40” Palestinians nightly] must be identified as direct incitement to commit genocide under Article III(c) of the 1948 Genocide Convention.”</blockquote>
       <div class="who">Lemkin Institute for Genocide Prevention</div>
@@ -1305,6 +1396,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">2 September 2026</span>
+        
       </div>
       <blockquote>“In the end, there is no real solution for Gaza without this migration… [Israel is prepared to achieve it] by sea, by air, and by every way possible… [Trump] has not canceled it; he has frozen it.”</blockquote>
       <div class="who">Israel Katz</div>
@@ -1319,6 +1411,7 @@
       <div class="st-top">
         <span class="st-tier">Cabinet</span>
         <span class="st-date">3 September 2026</span>
+        
       </div>
       <blockquote>“Instead of illusions of peace now, we need actions of emigration now.”</blockquote>
       <div class="who">Itamar Ben-Gvir</div>
@@ -1333,6 +1426,7 @@
       <div class="st-top">
         <span class="st-tier">UN body</span>
         <span class="st-date">4 September 2026</span>
+        
       </div>
       <blockquote>“[The displacement is] large-scale, long-term and systematic [raising serious concerns of the crime against humanity of forcible transfer.]”</blockquote>
       <div class="who">OHCHR</div>
@@ -1347,6 +1441,7 @@
       <div class="st-top">
         <span class="st-tier">Allied government</span>
         <span class="st-date">5 September 2026</span>
+        
       </div>
       <blockquote>“Crime is crime, terror is terror. […] [There must be] severe consequences.”</blockquote>
       <div class="who">Mike Huckabee</div>
@@ -1361,6 +1456,7 @@
       <div class="st-top">
         <span class="st-tier">Former head of government</span>
         <span class="st-date">10 September 2026</span>
+        
       </div>
       <blockquote>“[Events in the West Bank amount to] no less than attempted ethnic cleansing by a group of murderous criminal terrorists [operating] to harm, steal, destroy, burn and kill Palestinians.”</blockquote>
       <div class="who">Ehud Olmert</div>
@@ -1379,15 +1475,20 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=30" alt="Flag of Palestine">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">96,545 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="footer-links">
+      <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a>
+    </p>
   </div>
 </footer>
+
 
 
 

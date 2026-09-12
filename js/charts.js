@@ -5,6 +5,19 @@
    ============================================================ */
 
 const Charts = (function () {
+  /* index.html?still=1 stops the two 3D charts rotating. A headless render
+     dumps the page once virtual time runs out, and virtual time advances one
+     animation frame at a time, so a scene that asks for frames forever costs
+     minutes of software rendering before the check can read the result. The
+     flag is for the render checks in publish.py; nothing a reader sees uses it. */
+  const STILL = /(^|[?&])still=1(&|$)/.test(location.search);
+
+  /* The greys, and the neutral the charts lay over the background, are read
+     from the stylesheet rather than held here a second time, so the light
+     theme and the dark theme are described in exactly one place. `ink` is that
+     neutral at whatever opacity the caller asks for: white on the dark theme,
+     near-black on the light one. The hues are read the same way, so the light
+     theme can carry versions that hold their contrast against white. */
   const C = {
     red: '#d2534c',
     amber: '#d9a441',
@@ -15,7 +28,38 @@ const Charts = (function () {
     text: '#e9edf6',
     text2: '#b9c2d4',
     line: 'rgba(255,255,255,0.08)',
+    inkRGB: '255,255,255',
+    plate: 'rgba(10,14,23,0.96)',
+    ink(alpha) { return 'rgba(' + C.inkRGB + ',' + alpha + ')'; },
   };
+
+  /* Re-read the palette and repaint the shared option base. Called before
+     every build, so switching theme and re-rendering is all it takes. */
+  function readTheme() {
+    const style = getComputedStyle(document.documentElement);
+    const pick = (name, fallback) => (style.getPropertyValue(name).trim() || fallback);
+    C.text = pick('--text', C.text);
+    C.text2 = pick('--text-2', C.text2);
+    C.muted = pick('--chart-muted', pick('--muted', C.muted));
+    /* The hues come from the stylesheet too. They are the same five in both
+       themes, but the light theme darkens each one: a series label set in the
+       dark red reads at 4.1:1 on white, which is under what small text needs,
+       and a chart whose labels cannot be read is not a chart. */
+    C.red = pick('--red', C.red);
+    C.amber = pick('--accent', C.amber);
+    C.blue = pick('--blue', C.blue);
+    C.green = pick('--green', C.green);
+    C.violet = pick('--violet', C.violet);
+    C.inkRGB = pick('--ink-rgb', C.inkRGB);
+    C.plate = pick('--chart-plate', C.plate);
+    C.line = C.ink(0.08);
+    base.textStyle.color = C.text2;
+    base.tooltip.backgroundColor = C.plate;
+    base.tooltip.borderColor = C.ink(0.14);
+    base.tooltip.textStyle.color = C.text;
+    base.legend.textStyle.color = C.text2;
+    base.legend.inactiveColor = C.ink(0.22);
+  }
 
   const live = [];
   let data = null;
@@ -28,18 +72,18 @@ const Charts = (function () {
     animationDuration: 900,
     animationEasing: 'cubicOut',
     tooltip: {
-      backgroundColor: 'rgba(10,14,23,0.96)',
-      borderColor: 'rgba(255,255,255,0.14)',
+      backgroundColor: C.plate,
+      borderColor: C.ink(0.14),
       borderWidth: 1,
       textStyle: { color: C.text, fontSize: 12.5 },
       extraCssText: 'border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,.55);backdrop-filter:blur(8px);',
     },
-    legend: { textStyle: { color: C.text2, fontSize: 12 }, inactiveColor: 'rgba(255,255,255,.22)', top: 0 },
+    legend: { textStyle: { color: C.text2, fontSize: 12 }, inactiveColor: C.ink(.22), top: 0 },
   };
 
   const axisX = (extra) => Object.assign({
     type: 'category',
-    axisLine: { lineStyle: { color: 'rgba(255,255,255,.16)' } },
+    axisLine: { lineStyle: { color: C.ink(.16) } },
     axisTick: { show: false },
     axisLabel: { color: C.muted, fontSize: 11 },
   }, extra || {});
@@ -97,7 +141,8 @@ const Charts = (function () {
      the state survives a re-render of the same route. */
   const eventsOn = {};
 
-  const EVENT_TONE = { red: C.red, amber: C.amber, blue: C.blue, green: C.green, violet: C.violet };
+  // Read at call time, not at load time: the palette changes with the theme.
+  const eventTone = (tone) => C[tone] || C.amber;
 
   /* Marker labels stand upright and on one line: thirteen horizontal two-line
      labels across thirty-five months run together into an unreadable band. They
@@ -158,7 +203,7 @@ const Charts = (function () {
           groups.push({ i: x.i, list: [x.e] });
         });
       groups.forEach((g) => {
-        const colour = EVENT_TONE[g.list[0].tone] || C.muted;
+        const colour = eventTone(g.list[0].tone) || C.muted;
         items.push({
           xAxis: g.i,
           name: g.list.map((e) => e.label).join(' · '),
@@ -177,7 +222,7 @@ const Charts = (function () {
         symbol: 'none', animation: false, emphasis: { disabled: true },
         data: items,
         tooltip: {
-          show: true, backgroundColor: 'rgba(11,15,24,.96)', borderColor: 'rgba(255,255,255,.12)',
+          show: true, backgroundColor: 'rgba(11,15,24,.96)', borderColor: C.ink(.12),
           textStyle: { color: C.text, fontSize: 12 },
           formatter: (t) => `<b>${t.name}</b><br><span style="opacity:.75;font-size:11.5px">${(t.data || {}).detail || ''}</span>`,
         },
@@ -259,7 +304,7 @@ const Charts = (function () {
         { type: 'inside', throttle: 60 },
         {
           type: 'slider', height: 20, bottom: 12,
-          borderColor: 'rgba(255,255,255,.12)', backgroundColor: 'rgba(255,255,255,.03)',
+          borderColor: C.ink(.12), backgroundColor: C.ink(.03),
           fillerColor: hexToRgba(C.amber, 0.1), handleStyle: { color: C.amber },
           textStyle: { color: C.muted, fontSize: 10 },
           dataBackground: { lineStyle: { color: C.muted }, areaStyle: { color: hexToRgba(C.muted, 0.2) } },
@@ -292,7 +337,7 @@ const Charts = (function () {
         { type: 'inside', throttle: 60 },
         {
           type: 'slider', height: 20, bottom: 12,
-          borderColor: 'rgba(255,255,255,.12)', backgroundColor: 'rgba(255,255,255,.03)',
+          borderColor: C.ink(.12), backgroundColor: C.ink(.03),
           fillerColor: hexToRgba(C.amber, 0.1), handleStyle: { color: C.amber },
           textStyle: { color: C.muted, fontSize: 10 },
         },
@@ -732,12 +777,12 @@ const Charts = (function () {
         left: 'center', top: 8, itemWidth: 12, itemHeight: 120,
         textStyle: { color: C.muted, fontSize: 11 },
         text: ['600+ killed in a day', 'none reported'],
-        inRange: { color: ['rgba(255,255,255,.06)', hexToRgba(C.amber, .55), C.red, '#7a1f1c'] },
+        inRange: { color: [C.ink(.06), hexToRgba(C.amber, .55), C.red, '#7a1f1c'] },
       },
       calendar: years.map((y, i) => ({
         top: top + i * gap, left: 62, right: 26, cellSize: ['auto', 15], range: y,
         splitLine: { show: false },
-        itemStyle: { color: 'rgba(255,255,255,.02)', borderColor: 'rgba(255,255,255,.06)', borderWidth: 1 },
+        itemStyle: { color: C.ink(.02), borderColor: C.ink(.06), borderWidth: 1 },
         yearLabel: { show: true, color: C.text2, fontSize: 13, margin: 34 },
         monthLabel: { color: C.muted, fontSize: 10.5 },
         dayLabel: { color: C.muted, fontSize: 9.5, firstDay: 1, nameMap: ['S', 'M', 'T', 'W', 'T', 'F', 'S'] },
@@ -784,7 +829,7 @@ const Charts = (function () {
         min: 0, max: 100, calculable: true, orient: 'horizontal', left: 'center', top: 8,
         itemWidth: 12, itemHeight: 150, textStyle: { color: C.muted, fontSize: 11 },
         text: ['worst month for this category', 'none'],
-        inRange: { color: ['rgba(255,255,255,.05)', hexToRgba(C.blue, .4), C.amber, C.red] },
+        inRange: { color: [C.ink(.05), hexToRgba(C.blue, .4), C.amber, C.red] },
       },
       xAxis: axisX({ data: months.map(monthLabel), axisLabel: { color: C.muted, fontSize: 10, rotate: 60, interval: 1 }, splitArea: { show: false } }),
       yAxis: axisX({ data: rows.map((r) => r.name), inverse: true, axisLabel: { color: C.text2, fontSize: 11.5, interval: 0 } }),
@@ -854,7 +899,7 @@ const Charts = (function () {
         type: 'pie', radius: ['42%', '72%'], center: ['50%', '54%'], avoidLabelOverlap: true,
         itemStyle: { borderColor: '#0b0f18', borderWidth: 2 },
         label: { color: C.text2, fontSize: 11.5, formatter: '{b}\n{c}%' },
-        labelLine: { lineStyle: { color: 'rgba(255,255,255,.22)' } },
+        labelLine: { lineStyle: { color: C.ink(.22) } },
         data: a.map((x) => ({
           name: x.label, value: x.value,
           itemStyle: { color: x.label === 'Area A' ? C.green : x.label === 'Area B' ? C.amber : C.red },
@@ -882,7 +927,7 @@ const Charts = (function () {
         type: 'pie', radius: ['40%', '70%'], center: ['50%', '52%'], startAngle: 90,
         itemStyle: { borderColor: '#0b0f18', borderWidth: 2 },
         label: { color: C.text2, fontSize: 12, formatter: '{b}\n{c}%' },
-        labelLine: { lineStyle: { color: 'rgba(255,255,255,.22)' } },
+        labelLine: { lineStyle: { color: C.ink(.22) } },
         data: s.items.map((x, i) => ({ name: x.country, value: x.share, itemStyle: { color: [C.red, C.amber, C.blue][i] || C.muted } })),
       }],
     });
@@ -1147,7 +1192,7 @@ const Charts = (function () {
       }),
       dataZoom: [{
         type: 'slider', xAxisIndex: 0, bottom: 18, height: 20,
-        borderColor: 'rgba(255,255,255,.14)', fillerColor: 'rgba(86,168,224,.16)',
+        borderColor: C.ink(.14), fillerColor: 'rgba(86,168,224,.16)',
         handleStyle: { color: C.blue }, textStyle: { color: C.muted, fontSize: 10 },
         labelFormatter: (v) => String(Math.round(v)),
       }],
@@ -1298,7 +1343,7 @@ const Charts = (function () {
         {
           type: 'bar', stack: 'all', barMaxWidth: 18, silent: true,
           data: it.map((x) => 100 - x.destroyed).reverse(),
-          itemStyle: { color: 'rgba(255,255,255,.06)', borderRadius: [0, 3, 3, 0] },
+          itemStyle: { color: C.ink(.06), borderRadius: [0, 3, 3, 0] },
         },
       ],
     });
@@ -1377,7 +1422,7 @@ const Charts = (function () {
         pieces: [
           { value: 2, label: s.states.found.label, color: hexToRgba(C.red, 0.8) },
           { value: 1, label: s.states.none.label, color: hexToRgba(C.green, 0.7) },
-          { value: 0, label: s.states.na.label, color: 'rgba(255,255,255,.07)' },
+          { value: 0, label: s.states.na.label, color: C.ink(.07) },
         ],
       },
       xAxis: axisX({
@@ -1437,21 +1482,28 @@ const Charts = (function () {
   /* The money Israel approved, annualised from the documented monthly rate. */
   R['qatar-funding'] = () => {
     const f = data.conduct.funding.transfers;
+    /* A year can carry more than one event — 2023 holds both the request to
+       Qatar to raise the payments and the warnings that arrived in the same
+       month — so the index is a list per year, not one event per year. */
     const ev = {};
-    data.conduct.funding.events.forEach((e) => { ev[e.year] = e; });
+    data.conduct.funding.events.forEach((e) => { (ev[e.year] = ev[e.year] || []).push(e); });
     return Object.assign({}, base, {
       grid: { left: 70, right: 26, top: 86, bottom: 40 },
       legend: { show: false },
       tooltip: Object.assign({}, base.tooltip, {
         trigger: 'axis',
         axisPointer: { type: 'shadow' },
+        /* The event notes run to several sentences and two of them land on the
+           same bar, so the box is capped rather than left to stretch across the
+           chart. */
+        extraCssText: base.tooltip.extraCssText + 'max-width:min(420px,84vw);white-space:normal;',
         formatter: (t) => {
           const x = f.years[t[0].dataIndex];
-          const e = ev[x.year];
           return `<b>${x.year}</b>: $${x.value}m approved` +
             (x.partial ? ` <span style="opacity:.75">(part year)</span>` : '') +
             (x.note ? `<br><span style="opacity:.7;font-size:11.5px">${x.note}</span>` : '') +
-            (e ? `<br><span style="color:${C.amber}">${e.label}</span><br><span style="opacity:.7;font-size:11.5px">${e.detail}</span>` : '');
+            (ev[x.year] || []).map((e) => `<br><span style="color:${C.amber}">${e.label}</span>` +
+              `<br><span style="opacity:.7;font-size:11.5px">${e.detail}</span>`).join('');
         },
       }),
       xAxis: axisX({ data: f.years.map((x) => x.year), axisLabel: { color: C.text2, fontSize: 12 } }),
@@ -1584,7 +1636,7 @@ const Charts = (function () {
         pieces: [
           { value: 2, label: 'Outside the regime, unconstrained', color: hexToRgba(C.red, 0.72) },
           { value: 0, label: 'Inside the regime, constrained', color: hexToRgba(C.blue, 0.55) },
-          { value: 1, label: 'Not stated in this record', color: 'rgba(255,255,255,.07)' },
+          { value: 1, label: 'Not stated in this record', color: C.ink(.07) },
         ],
       },
       xAxis: axisX({
@@ -1975,11 +2027,11 @@ const Charts = (function () {
       zAxis3D: { type: 'value', axisLabel: { color: C.muted, fontSize: 10 }, name: 'killed' },
       grid3D: {
         boxWidth: 200, boxDepth: 62, boxHeight: 72,
-        viewControl: { alpha: 22, beta: 32, distance: 235, autoRotate: true, autoRotateSpeed: 3, rotateSensitivity: 1.4 },
+        viewControl: { alpha: 22, beta: 32, distance: 235, autoRotate: !STILL, autoRotateSpeed: 3, rotateSensitivity: 1.4 },
         light: { main: { intensity: 1.25, shadow: true, alpha: 40, beta: 40 }, ambient: { intensity: 0.42 } },
-        axisLine: { lineStyle: { color: 'rgba(255,255,255,.25)' } },
+        axisLine: { lineStyle: { color: C.ink(.25) } },
         axisPointer: { lineStyle: { color: C.amber } },
-        splitLine: { lineStyle: { color: 'rgba(255,255,255,.06)' } },
+        splitLine: { lineStyle: { color: C.ink(.06) } },
         environment: 'transparent',
       },
       series: [{
@@ -2128,10 +2180,10 @@ const Charts = (function () {
       zAxis3D: { type: 'value', axisLabel: { color: C.muted, fontSize: 10 } },
       grid3D: {
         boxWidth: 190, boxDepth: 80, boxHeight: 70,
-        viewControl: { alpha: 24, beta: 38, distance: 250, autoRotate: true, autoRotateSpeed: 2.5 },
+        viewControl: { alpha: 24, beta: 38, distance: 250, autoRotate: !STILL, autoRotateSpeed: 2.5 },
         light: { main: { intensity: 1.2, shadow: true, alpha: 40, beta: 40 }, ambient: { intensity: 0.45 } },
-        axisLine: { lineStyle: { color: 'rgba(255,255,255,.22)' } },
-        splitLine: { lineStyle: { color: 'rgba(255,255,255,.05)' } },
+        axisLine: { lineStyle: { color: C.ink(.22) } },
+        splitLine: { lineStyle: { color: C.ink(.05) } },
         environment: 'transparent',
       },
       series: [{ type: 'bar3D', data: pts, shading: 'lambert', barSize: 1.5, itemStyle: { opacity: 0.93 } }],
@@ -2150,7 +2202,7 @@ const Charts = (function () {
       yAxis: axisX({ data: it.map((x) => x.label).reverse(), axisLabel: { color: C.text2, fontSize: 11.5 } }),
       series: [{
         type: 'bar', data: it.map((x) => x.pct).reverse(), barMaxWidth: 18,
-        showBackground: true, backgroundStyle: { color: 'rgba(255,255,255,.04)', borderRadius: 4 },
+        showBackground: true, backgroundStyle: { color: C.ink(.04), borderRadius: 4 },
         label: { show: true, position: 'right', color: C.text, fontSize: 11.5, formatter: '{c}%' },
         itemStyle: {
           borderRadius: [0, 4, 4, 0],
@@ -2241,7 +2293,7 @@ const Charts = (function () {
         emphasis: { scale: false },
         data: [
           { name: 'Recognise Palestine', value: r.recognise, itemStyle: { color: C.green } },
-          { name: 'Do not recognise', value: r.do_not_recognise, itemStyle: { color: 'rgba(255,255,255,.13)' } },
+          { name: 'Do not recognise', value: r.do_not_recognise, itemStyle: { color: C.ink(.13) } },
         ],
       }],
     });
@@ -2728,7 +2780,7 @@ const Charts = (function () {
     cls.forEach((c, i) => { yOf[c.id] = i; });
     const series = cls.map((c) => ({
       name: c.label, type: 'scatter', symbolSize: 15,
-      itemStyle: { color: c.colour, opacity: 0.85, borderColor: 'rgba(255,255,255,.35)', borderWidth: 1 },
+      itemStyle: { color: c.colour, opacity: 0.85, borderColor: C.ink(.35), borderWidth: 1 },
       data: dated.filter((d) => d.class === c.id).map((d) => ({ value: [d.sort, yOf[d.class]], d })),
     }));
     return Object.assign({}, base, {
@@ -2743,7 +2795,7 @@ const Charts = (function () {
       }),
       xAxis: {
         type: 'time', min: '2023-11-01', max: '2026-09-30',
-        axisLine: { lineStyle: { color: 'rgba(255,255,255,.16)' } },
+        axisLine: { lineStyle: { color: C.ink(.16) } },
         axisLabel: { color: C.muted, fontSize: 11 },
         splitLine: { lineStyle: { color: C.line } },
       },
@@ -2820,7 +2872,7 @@ const Charts = (function () {
         })),
         label: { show: true, position: 'right', formatter: '{b}' },
         emphasis: { focus: 'adjacency', lineStyle: { width: 2.4, opacity: 0.9 }, label: { color: C.text } },
-        itemStyle: { borderColor: 'rgba(255,255,255,.25)', borderWidth: 1 },
+        itemStyle: { borderColor: C.ink(.25), borderWidth: 1 },
       }],
     });
   };
@@ -2849,7 +2901,7 @@ const Charts = (function () {
         label: { show: true, position: 'top', color: C.text, fontSize: 11.5 },
         markLine: {
           silent: true, symbol: 'none',
-          lineStyle: { color: 'rgba(255,255,255,.28)', type: 'dashed', width: 1 },
+          lineStyle: { color: C.ink(.28), type: 'dashed', width: 1 },
           label: { color: C.muted, fontSize: 10.5, formatter: 'all 193 UN member states', position: 'insideEndTop' },
           data: [{ yAxis: 193 }],
         },
@@ -2911,8 +2963,8 @@ const Charts = (function () {
     // A map series otherwise stamps its legend symbol on the centre of every
     // region it draws, which on a world map is 241 identical dots.
     showLegendSymbol: false,
-    itemStyle: { areaColor: 'rgba(255,255,255,.05)', borderColor: 'rgba(255,255,255,.20)', borderWidth: 0.5 },
-    emphasis: { itemStyle: { areaColor: 'rgba(255,255,255,.40)' }, label: { show: false } },
+    itemStyle: { areaColor: C.ink(.05), borderColor: C.ink(.20), borderWidth: 0.5 },
+    emphasis: { itemStyle: { areaColor: C.ink(.40) }, label: { show: false } },
   };
 
   const mapNote = (s) => `<span style="color:${C.muted};display:block;max-width:320px;white-space:normal;margin-top:2px">${s}</span>`;
@@ -2927,7 +2979,7 @@ const Charts = (function () {
     playInterval: interval || 2600,
     bottom: 4, left: 40, right: 40,
     symbolSize: 8,
-    lineStyle: { color: 'rgba(255,255,255,.22)' },
+    lineStyle: { color: C.ink(.22) },
     label: { color: C.muted, fontSize: 11 },
     itemStyle: { color: C.muted },
     checkpointStyle: { color: C.red, borderColor: 'rgba(210,83,76,.35)', borderWidth: 6 },
@@ -3069,7 +3121,7 @@ const Charts = (function () {
         textStyle: { color: C.text2, fontSize: 11 },
         pieces: RANK.slice(1).concat([RANK[0]])
           .map((x) => ({ value: x.value, label: x.label, color: x.colour }))
-          .concat([{ value: 0, label: 'No documented measure', color: 'rgba(255,255,255,.07)' }]),
+          .concat([{ value: 0, label: 'No documented measure', color: C.ink(.07) }]),
       },
       series: [Object.assign({}, MAP_BASE, { map: 'world', name: 'Measures taken', data: rows })],
     });
@@ -3185,7 +3237,7 @@ const Charts = (function () {
         // Israel's centroid sits a few pixels from Gaza's, so the two
         // captions collide at this scale unless they are pushed apart.
         label: { offset: LABEL_NUDGE[name] || [0, 0] },
-        itemStyle: { areaColor: colour, borderColor: 'rgba(255,255,255,.45)', borderWidth: 0.8 },
+        itemStyle: { areaColor: colour, borderColor: C.ink(.45), borderWidth: 0.8 },
         emphasis: { itemStyle: { areaColor: colour, borderColor: '#ffffff', borderWidth: 1.6 } },
       })),
     })];
@@ -3257,7 +3309,7 @@ const Charts = (function () {
         name: 'Emptied in this month',
         type: 'scatter', coordinateSystem: 'geo', z: 5,
         symbolSize: (v) => villageSize(v) + 7,
-        itemStyle: { color: 'transparent', borderColor: 'rgba(255,255,255,.85)', borderWidth: 1.3 },
+        itemStyle: { color: 'transparent', borderColor: C.ink(.85), borderWidth: 1.3 },
         data: now.map(point),
       }]);
     };
@@ -3297,8 +3349,8 @@ const Charts = (function () {
           map: 'palestine',
           roam: 'move',
           top: 92, bottom: 96,
-          itemStyle: { areaColor: 'rgba(255,255,255,.045)', borderColor: 'rgba(255,255,255,.20)', borderWidth: 0.6 },
-          emphasis: { itemStyle: { areaColor: 'rgba(255,255,255,.06)' }, label: { show: false } },
+          itemStyle: { areaColor: C.ink(.045), borderColor: C.ink(.20), borderWidth: 0.6 },
+          emphasis: { itemStyle: { areaColor: C.ink(.06) }, label: { show: false } },
           // The Mandate outline draws last and over the rest, so it carries the
           // fill: in 1948 this was one territory, and the lines inside it are
           // there to orient a reader who knows the modern map, not to date it.
@@ -3362,7 +3414,7 @@ const Charts = (function () {
         },
         markLine: {
           silent: true, symbol: 'none',
-          lineStyle: { color: 'rgba(255,255,255,.30)', type: 'dashed', width: 1.2 },
+          lineStyle: { color: C.ink(.30), type: 'dashed', width: 1.2 },
           data: marks.filter((k) => axis.indexOf(k.month) >= 0).map((k) => ({
             xAxis: axis.indexOf(k.month),
             label: Object.assign({ formatter: k.label, color: C.text2 }, MARK_LABEL),
@@ -3478,13 +3530,13 @@ const Charts = (function () {
         value: round.areas[name].phase,
         cap: `${name}\nPhase ${round.areas[name].phase}`,
         detail: round.areas[name].note,
-        itemStyle: { areaColor: colour[round.areas[name].phase], borderColor: 'rgba(255,255,255,.45)', borderWidth: 0.8 },
+        itemStyle: { areaColor: colour[round.areas[name].phase], borderColor: C.ink(.45), borderWidth: 0.8 },
       })).concat(Object.keys(round.unreported).map((name) => ({
         name,
         value: 0,
         cap: name,
         detail: round.unreported[name],
-        itemStyle: { areaColor: g.unreported.colour, borderColor: 'rgba(255,255,255,.30)', borderWidth: 0.8 },
+        itemStyle: { areaColor: g.unreported.colour, borderColor: C.ink(.30), borderWidth: 0.8 },
       }))),
     })];
 
@@ -3552,7 +3604,7 @@ const Charts = (function () {
             // floored so the lowest of the three is still plainly coloured.
             itemStyle: {
               areaColor: hexToRgba(layer.colour, 0.35 + 0.55 * (a.value / top)),
-              borderColor: 'rgba(255,255,255,.45)', borderWidth: 0.8,
+              borderColor: C.ink(.45), borderWidth: 0.8,
             },
           };
         }),
@@ -3693,6 +3745,7 @@ const Charts = (function () {
 
   function init(root, payload) {
     data = payload;
+    readTheme();
     root.querySelectorAll('[data-chart]').forEach((el) => {
       const name = el.getAttribute('data-chart');
       if (!R[name]) return;

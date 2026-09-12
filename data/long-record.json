@@ -727,6 +727,8 @@
   },
   "recognition": {
     "title": "Recognition",
+    "source": "Palestinian Ministry of Foreign Affairs list of recognitions and the UN documents underlying each entry, compiled as at 12 September 2026. The same list drives the recognition map in data/world-positions.json, so the counts here and there are one figure, not two.",
+    "ref": "§15.4",
     "lede": "Recognition of the State of Palestine has moved in one direction for thirty-seven years, and it accelerated sharply in 2024 and 2025.",
     "timeline": [
       {

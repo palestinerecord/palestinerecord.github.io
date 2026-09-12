@@ -26,17 +26,19 @@ Libraries load from CDN as UMD scripts (echarts 5.5.1, echarts-gl 2.0.9, gsap 3.
 
 ### Routing
 
-A hash router over nine routes: `#/overview`, `#/tour`, `#/data`, `#/timeline`, `#/evidence`, `#/rebuttals`, `#/statements`, `#/legal`, `#/sources`. The data route is split into nine chapters, each its own sub-route: `#/data/gaza`, `#/data/asymmetry`, `#/data/since-1948`, `#/data/complicity`, `#/data/land`, `#/data/west-bank`, `#/data/wars`, `#/data/world`, `#/data/tables`. The tour takes a step number the same way — `#/tour/1` to `#/tour/8` — so a single step of the guided path can be linked to on its own. In-page anchors (`#part-…`, `#sec-…`) are deliberately **not** routes — `route()` scrolls to them rather than re-rendering, so a link into the middle of the evidence browser lands where it points.
+A hash router over twelve routes: `#/overview`, `#/tour`, `#/data`, `#/timeline`, `#/evidence`, `#/rebuttals`, `#/statements`, `#/legal`, `#/sources`, `#/api`, `#/changelog`, `#/embed`. The data route is split into nine chapters, each its own sub-route: `#/data/gaza`, `#/data/asymmetry`, `#/data/since-1948`, `#/data/complicity`, `#/data/land`, `#/data/west-bank`, `#/data/wars`, `#/data/world`, `#/data/tables`. The tour takes a step number the same way — `#/tour/1` to `#/tour/8` — so a single step of the guided path can be linked to on its own. In-page anchors (`#part-…`, `#sec-…`) are deliberately **not** routes — `route()` scrolls to them rather than re-rendering, so a link into the middle of the evidence browser lands where it points.
 
 ### Crawlability and sharing
 
 A hash never reaches the server, so to a crawler or a link preview every route is the same URL — `index.html`, which before any JavaScript runs is an empty `<main>`. Two mechanisms fix that without abandoning hash routing.
 
-**The head is rewritten per route.** `Views.meta(name, sub)` holds a title and a description for each of the seventeen routes, and `setHead()` in `js/app.js` writes them into `document.title`, the description, the canonical link and the whole og/twitter block on every render, pointing the card at `assets/og/<slug>.png`. The base URL comes from the canonical tag rather than from `location`, so a page rendered on localhost still advertises the public URL.
+**The head is rewritten per route.** `Views.meta(name, sub)` holds a title and a description for each of the nineteen crawled routes, and `setHead()` in `js/app.js` writes them into `document.title`, the description, the canonical link and the whole og/twitter block on every render, pointing the card at `assets/og/<slug>.png`. The base URL comes from the canonical tag rather than from `location`, so a page rendered on localhost still advertises the public URL. An embed URL takes its title from the chart it carries and borrows the overview's card, since a chromeless iframe is not a page anyone should be landing on from a search result.
 
 **Each route is also written out as a static page.** `prerender.py` renders every route in headless Chrome with `?prerender=1` — a flag that turns off the charts, the scroll reveals, the counting numbers and the WebGL field, so the dump catches the text at rest rather than a page frozen mid-animation — and writes `snapshot/<slug>.html`. The snapshots keep the text, the tables, the links and the source references, and drop everything that cannot work without script: the scripts themselves, every `<button>`, the canvases and the search overlay. `<details>` stays, because the rebuttals open without JavaScript. Each empty chart container becomes a line of prose linking to the live chart through the app's own deep-link form, `#/data/gaza&chart=gaza-monthly`.
 
-Snapshots are **self-canonical**. A canonical pointing back at a fragment URL would collapse to the site root for every search engine and leave sixteen of the seventeen routes unindexed, which is the problem the snapshots exist to solve. Nothing is served to a crawler that a reader is not also shown: each snapshot opens with a visible note saying what it is, when it was generated, and where the interactive version is.
+Snapshots are **self-canonical**. A canonical pointing back at a fragment URL would collapse to the site root for every search engine and leave eighteen of the nineteen routes unindexed, which is the problem the snapshots exist to solve. Nothing is served to a crawler that a reader is not also shown: each snapshot opens with a visible note saying what it is, when it was generated, and where the interactive version is.
+
+`#/embed` is the one route that is deliberately never crawled: `UNCRAWLED` in `prerender.py` skips it, because a chromeless single chart has no text of its own and a snapshot of one would compete in search with the chapter it came from.
 
 Structured data lives in two JSON-LD blocks in `index.html` — a `ScholarlyArticle` describing the report, and a `Dataset` describing the JSON under `data/` with its distributions and measured variables, so it can be found through Google Dataset Search. `prerender.py` stamps both `dateModified` values from `data/timeseries.json`, and fails if it cannot find exactly two, so the structured data cannot drift from the data actually shipped.
 
@@ -50,7 +52,41 @@ A builder may also return a promise of an option; `init()` awaits it before call
 
 ### Chart tools
 
-Every card carries `link`, `png`, `csv` and `table`. Charts listed in `EVENTED` in `js/charts.js` carry a fifth, `events`, which draws the dated turning points in `data/chart-events.json` across the series as a `markLine`. The layer is off by default so the shape of the series is read first; `Charts.toggleEvents(name)` flips it and rebuilds the chart with `{ notMerge: true }`, which is what actually removes the markers again — a merged `setOption` would leave the previous `markLine` in place. The 11 October 2025 ceasefire is not part of that layer: it is drawn on every dated series unconditionally, which is why both it and the optional events are built by one `seriesMarks()` call. A series may hold only one `markLine`, so they cannot be separate.
+Every card carries `link`, `png`, `csv`, `embed` and `table`. Charts listed in `EVENTED` in `js/charts.js` carry a sixth, `events`, which draws the dated turning points in `data/chart-events.json` across the series as a `markLine`. The layer is off by default so the shape of the series is read first; `Charts.toggleEvents(name)` flips it and rebuilds the chart with `{ notMerge: true }`, which is what actually removes the markers again — a merged `setOption` would leave the previous `markLine` in place. The 11 October 2025 ceasefire is not part of that layer: it is drawn on every dated series unconditionally, which is why both it and the optional events are built by one `seriesMarks()` call. A series may hold only one `markLine`, so they cannot be separate.
+
+### Embeds
+
+`#/embed/<chart>` renders one chart and nothing else: no topbar, no subnav, no hero, no footer, just the card with its title, its note and its source line, sized to the frame. The `embed` tool on every card copies the snippet that produces it, with the site's own origin read from the canonical tag rather than from `location`, so a snippet copied on localhost still points at the live site.
+
+The route exists so the charts can travel. A journalist, a campaign or a teaching page can carry the figure with its attribution attached and its source named, which a screenshot cannot do, and the chart stays current because it is still being drawn from the data here. The frame accepts `?theme=light` for a page that is not dark.
+
+`Views.charts()` is the index behind it, and it is derived rather than curated: it renders every route once into a string, scans the markup for `data-chart-card` and the title, source and note attributes the card already carries, and caches the result. A hand-kept second list of charts would go stale the first time one was renamed; this one cannot disagree with what the page draws, because it is read out of what the page draws. It currently indexes all 93.
+
+### Share cards
+
+`js/share.js` draws a 1080×1080 PNG for any statement and any headline figure, on a canvas, with no network call and no dependency: the flag is drawn rather than fetched, and the text is laid out by `wrap()` and `fitted()`, which shrinks the type to make a long quotation fit rather than truncating it — a quotation cut off mid-sentence is a misquotation.
+
+Every statement card and every `.stat` block carries a `card` button. The button is invisible until the card is hovered or focused, and permanently visible under `@media (hover: none)`, where there is no hover to reveal it.
+
+The text is read out of the rendered DOM rather than out of the data — the quote from the `<blockquote>`, the speaker from `.who`, the role, date and source from their own elements; the figure from `.val`, `.lbl`, `.note` and `.src`. That is the whole point: an image generated from a second copy of the data can drift from the page it claims to represent, and an image that misquotes the record is worse than no image. Every card carries the speaker, the date, the source and the site's own URL, so the figure arrives attributable.
+
+### The open-data route
+
+`manifest.py` writes `data/index.json`: every published dataset with a title, a description, its source, its size, its top-level fields and a record count, plus the generation date. `#/api` renders it as the open-data page, listing the eighteen datasets with their download links and all 93 charts with their embed URLs.
+
+The manifest fails hard rather than shipping an incomplete index: a file in `data/` with no entry in `DESCRIPTIONS` stops the build, and so does a described file that no longer exists. `--check` compares only the dataset list, not the date, so it can be used as a gate without the timestamp making every run dirty.
+
+### Light theme
+
+`data-theme="light"` on `<html>` switches the palette. The choice is stored in `localStorage` under `record-theme` and applied by a small inline script in the head, before first paint, so a reader who chose light does not get a dark flash on every load; with nothing stored it follows `prefers-color-scheme`. `?theme=light` forces it, which is what the embeds use.
+
+The charts are not given a second palette. `readTheme()` in `js/charts.js` reads the colours — including `--red`, `--accent`, `--blue`, `--green` and `--violet` — from the CSS custom properties at build time, so a theme switch costs a re-render and nothing else, and the two palettes cannot drift apart. Anything that captures a colour at module load would freeze the palette it was loaded under; that is why `eventTone()` is a function rather than the `EVENT_TONE` table it replaced.
+
+The light palette is chosen for contrast, not for a lighter look: the chart hues meet 4.5:1 against white, which the dark palette's red does not.
+
+### Changelog
+
+`#/changelog` is the revision history, read out of Appendix F of `report.json` rather than kept separately: it takes the paragraphs whose text opens with a dated `Update (…)` or `Enhanced edition (…)` prefix, strips the prefix, and sorts newest first. Fifty revisions, each dated. The report records its own history, so the page that publishes the report can publish that history without a second file to keep in step.
 
 ### The names
 
@@ -117,11 +153,12 @@ PY
 | `data/chart-events.json` | hand-curated | The dated events the Gaza series can be annotated with: the siege order, the ICJ orders and advisory opinion, the ICC warrants, the two massacres at aid and displacement sites, the total blockade, the famine declaration, the two Commission of Inquiry findings and the closure of the last crossings. Each carries the tooltip text and the report section it comes from |
 | `data/nakba.json` | `build_nakba.py` | Every town and village depopulated in 1947–50, one record each: name, sub-district, date, 1948 population and land area, the Israeli operation it fell to, what the atlas records happened there, what stands on the site now, and coordinates (456 villages, 438 placed, 95 KB). Also the monthly, sub-district, cause and site-condition tallies the charts read |
 | `data/maps.json` | hand-curated | The governorate-level figures neither `build.py` nor the timeseries can derive: Gaza on the IPC scale at each of the three rounds published since the famine was confirmed, and the West Bank settler-attack, displacement, annual and Operation Iron Wall series. Every governorate is keyed by its OCHA name; a governorate no body has published a figure for is left out of the series and drawn as unreported, never given a value |
+| `data/index.json` | `manifest.py` | The open-data manifest `#/api` is built from: every published dataset with its title, description, source, byte size, top-level fields and record count, and the date the set was generated |
 | `data/geo/world.json` | `build_geo.py` | Natural Earth 1:50m country polygons (241 features, 302 KB) for the two world choropleths |
 | `data/geo/palestine.json` | `build_geo.py` | Natural Earth 1:10m polygons for Israel, the West Bank and Gaza, plus the Mandate outline derived from them |
 | `data/geo/governorates.json` | `build_geo.py` | The sixteen governorates of the West Bank and Gaza Strip from the OCHA Common Operational Dataset (2,027 points, 38 KB), each carrying its P-code, its region and its area |
 
-`app.js` fetches the fourteen non-geometry files together rather than one after another, so the boot time is the slowest single file and not the sum of all fourteen. The geometry, the names, `nakba.json` and `maps.json` are all outside that payload: `charts.js` fetches a map or data file the first time a chart needs it and keeps the promise, so the two world maps share one request, the three governorate charts share one download of `maps.json`, a reader who never opens a map chapter never pays the 302 KB, and `scene.js` fetches `names.json` only when the reader asks for it. `names-boot.json` is fetched on its own alongside the fourteen and never blocks them — if it is slow or missing, the boot screen simply does not show a name.
+`app.js` fetches the fourteen non-geometry files together rather than one after another, so the boot time is the slowest single file and not the sum of all fourteen. The geometry, the names, `nakba.json` and `maps.json` are all outside that payload: `charts.js` fetches a map or data file the first time a chart needs it and keeps the promise, so the two world maps share one request, the three governorate charts share one download of `maps.json`, a reader who never opens a map chapter never pays the 302 KB, and `scene.js` fetches `names.json` only when the reader asks for it. `names-boot.json` is fetched on its own alongside the fourteen and never blocks them — if it is slow or missing, the boot screen simply does not show a name. `index.json` is fetched the same way and is equally non-fatal: it feeds one route, and a reader who came for the charts should not be held at the boot screen by the manifest.
 
 `app.js` merges `report.json`'s Appendix B chronology with `timeline-extra.json` into one ordered array (`D.timeline`), tagging each entry `record` or `context` so the two remain distinguishable in the UI. Appendix B entries carry no sort key, so one is derived from the date string.
 
@@ -153,36 +190,41 @@ python3 build_nakba.py      # Abu Sitta's village list  →  data/nakba.json
 
 All three scripts take `--offline` to rebuild from the cached raw download in `data/raw/`.
 
-Last, after any change to the routes, the data or the copy, regenerate the static layer:
+Last, after any change to the routes, the data or the copy, regenerate the manifest and the static layer:
 
 ```bash
+python3 manifest.py         # data/*.json  →  data/index.json   (--check compares without rewriting)
 python3 prerender.py        # snapshot/*.html, assets/og/*.png, sitemap.xml
 ```
 
+`manifest.py` raises rather than emitting a partial index: a data file with no entry in `DESCRIPTIONS`, or an entry whose file has gone, stops the run. A published open-data index that is missing a dataset is worse than no index, because it is believed.
+
 It serves the folder on a free port itself, so nothing need be running, and it touches the network not at all. `--only <slug> …` re-renders named routes, `--no-cards` skips the Pillow step, `--no-snapshots` redraws the cards from the snapshots already on disk, and `--budget N` raises the virtual-time budget on a slower machine. The script fails loudly rather than shipping a hole: an empty DOM, a route reporting a data load failure, a loading screen still up when the budget expired, or a `VIEWS`/`DATA_CHAPTERS` list it could not parse all stop the run. That last check is why the route list is read out of `js/app.js` and `js/views.js` rather than kept here — a chapter cannot be added and then silently never crawled.
 
-`sitemap.xml` lists the site root and all seventeen snapshots. GitHub Pages only honours `robots.txt` at a domain root, so for a project site the sitemap has to be submitted directly in Search Console rather than advertised from a `Sitemap:` line.
+`sitemap.xml` lists the site root and all nineteen snapshots. `--only` filters the sitemap as well as the snapshots, so a run that regenerates one route must not be the run that writes the sitemap — regenerate unfiltered after adding a route. GitHub Pages only honours `robots.txt` at a domain root, so for a project site the sitemap has to be submitted directly in Search Console rather than advertised from a `Sitemap:` line.
 
 The hand-curated files are not regenerated and must be edited directly when the report gains a figure, a statement or a source. Keep their schemas exactly as they are — the chart registry reads those field names.
 
 ## Verifying
 
-Render each route in headless Chrome with software WebGL and count what actually built. A chart that fails leaves its container empty rather than throwing, so the counts are the only honest check:
+Render each route in headless Chrome and count what actually built. A chart that fails leaves its container empty rather than throwing, so the counts are the only honest check:
 
 ```bash
-for r in overview timeline evidence rebuttals statements legal sources \
+for r in overview timeline evidence rebuttals statements legal sources api changelog \
          data/gaza data/asymmetry data/since-1948 data/complicity data/land \
          data/west-bank data/wars data/world data/tables; do
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-    --headless=new --no-sandbox --use-gl=swiftshader --enable-unsafe-swiftshader \
-    --virtual-time-budget=12000 --dump-dom "http://localhost:8777/index.html#/$r" 2>/dev/null \
+    --headless=new --no-sandbox --disable-gpu --disable-software-rasterizer \
+    --virtual-time-budget=12000 --dump-dom "http://localhost:8777/index.html?still=1#/$r" 2>/dev/null \
   | python3 -c "import sys,re; h=sys.stdin.read(); c=len(re.findall(r'data-chart=',h)); v=len(re.findall(r'<canvas',h)); g=h.count('map geometry could not'); w=h.count('needs WebGL'); print('$r','bytes=%d'%len(h),'charts=%d'%c,'canvas=%d'%v,'geomfail=%d'%g,'webglfail=%d'%w,'FAIL' if (len(h)<5000 or v<c or g or w or 'Could not load' in h) else 'ok')"
 done
 ```
 
 `canvas` must be at least `charts` on every route, and `geomfail` and `webglfail` must both be `0` — a chart that fails to build leaves a note in its container rather than throwing, so the counts are the only honest check.
 
-`bytes` is in the line for a reason, and the failure condition tests it first. If Chrome is killed, or exits before the route has rendered, `--dump-dom` emits nothing at all; a check that only looks for the words `Could not load` then reads that empty stream as zero charts, zero canvases and no error, and prints `ok`. A DOM under 5,000 bytes is not a passing route, it is an absent one. The heavy chapters are the ones this bites on: `data/gaza` carries twenty charts including a three.js scene, and every frame that scene draws advances the virtual clock by another 16 ms, so a generous `--virtual-time-budget` buys hundreds of software-rendered frames and minutes of real time. Give the slow chapters a smaller budget rather than a larger one, and never run two headless instances against the same Chrome profile at once.
+`bytes` is in the line for a reason, and the failure condition tests it first. If Chrome is killed, or exits before the route has rendered, `--dump-dom` emits nothing at all; a check that only looks for the words `Could not load` then reads that empty stream as zero charts, zero canvases and no error, and prints `ok`. A DOM under 5,000 bytes is not a passing route, it is an absent one.
+
+The GL flags matter more than the budget. Under `--use-gl=swiftshader` the one heavy chapter never finishes: `data/gaza` carries twenty charts, the software renderer stalls in `ReadPixels`, and virtual time does not advance while it waits, so the route writes zero bytes whatever it is given — 1,200 ms of virtual time and ninety seconds of wall clock produce an empty file, exactly the case the byte count exists to catch. With no GL backend at all the same route settles in 2.4 seconds and all nineteen settle under three. Nothing is lost by dropping it: ECharts instantiates the canvas either way, and what a GPU paints inside that canvas was never something a headless count could prove. `?still=1` is in the URL for the same reason — it stops the two 3D charts rotating, and an animation that never stops is an animation that keeps consuming the clock. Never run two headless instances against the same Chrome profile at once.
 
 The maps need a visual check as well as a count: the DOM check confirms a canvas exists, not that the choropleth joined. Screenshot the two chapters that carry one:
 
@@ -195,7 +237,7 @@ for r in data/world data/land; do
 done
 ```
 
-A choropleth that has lost its join renders as a uniformly grey world, which is indistinguishable from a successful render in the DOM.
+A choropleth that has lost its join renders as a uniformly grey world, which is indistinguishable from a successful render in the DOM. This one keeps the software GL flags, because a screenshot of a page with no GL backend is a screenshot of what the maps are not; neither of these two chapters is the one that wedges under it.
 
 The static layer has its own check. Every snapshot must carry its own title and canonical, hold no script, button or canvas, and still contain the prose — a snapshot that came out of Chrome before the route rendered is a valid HTML file with nothing in it:
 
@@ -216,7 +258,7 @@ The scorecard needs a join check of its own, for the same reason the maps do: a 
 
 ```bash
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-  --headless=new --no-sandbox --use-gl=swiftshader --enable-unsafe-swiftshader \
+  --headless=new --no-sandbox --disable-gpu --disable-software-rasterizer \
   --virtual-time-budget=14000 --dump-dom "http://localhost:8777/index.html#/legal" 2>/dev/null \
 | python3 -c "
 import sys, re
@@ -229,6 +271,42 @@ print('duplicates', sorted({s for s in states if states.count(s) > 1}) or 'none'
 ```
 
 `duplicates` must print `none`, and `matrices` must be `2`.
+
+## Publishing
+
+The dashboard is published at **https://palestinerecord.github.io/**, from the `palestinerecord/palestinerecord.github.io` repository, GitHub Pages serving `main` at the root.
+
+**Every local change to the dashboard is published, once it has passed a check.** A local edit that is never deployed leaves the live site quietly wrong, and the live site is the only copy anyone reads. So the sequence after any change — a new figure, a new chart, a copy fix, a restyle — is: validate, regenerate the derived layer, publish.
+
+```bash
+python3 validate.py         # the facts, not the rendering; must print "0 failures"
+python3 manifest.py         # data/index.json
+python3 prerender.py        # snapshots, cards, sitemap
+python3 publish.py --render -m "What changed"
+```
+
+`publish.py` is the only thing that should ever push the site. It runs in one direction and stops at the first thing that is wrong:
+
+```
+validate.py  →  asset preflight  →  mirror  →  commit  →  push  →  Pages build  →  live fetch
+```
+
+- `--check` validates and preflights, never pushes.
+- `--dry-run` goes as far as the commit and stops before the push.
+- `--render` renders every route in headless Chrome first. Off by default because it is slow, and secondary in any case: a page that renders is not a page that is right.
+- `-m` sets the commit subject on the site repository.
+
+The mirror step is `rsync --delete`, so the folder is the site: anything sitting in it is served at the site root unless `EXCLUDES` names it. `dashboard_ideas.md` is working notes and is named there; `data/raw/` is the unprocessed fetch and is too.
+
+`validate.py` is the gate that matters, and it reads the data rather than the rendered page, because **a chart can draw a wrong number perfectly**. It checks broken section references, figures with no attribution, curated headline figures that disagree with the live series, country names that do not join to a polygon, cumulative series that fall, dates in the future, and that every registered chart is actually drawn by a view. Failures stop the publication; warnings do not. It also checks that the cache-bust is uniform, since a half-bumped `?v=` ships a new JS file to nobody.
+
+After the push, `publish.py` waits on the Pages API until the build is `built`, then fetches the live site and checks that what is being served is what was just sent — including that the served `index.html` asks for the `?v=` this folder carries, which catches a deployment that silently did not take.
+
+### The token
+
+The push reads `github-token` from the repository root at the moment it is needed and hands it to git through a temporary askpass helper, which is deleted afterwards. The token is never written into a file that survives the run, never committed, never placed in a remote URL, and never passed as a command-line argument, where `ps` would show it to every process on the machine. `git remote add` with a token in the URL writes it into `.git/config` in plain text, which is why the deploy clone has no credentialed remote at all.
+
+`token_guard()` refuses to publish unless the token file is gitignored, untracked, and absent from the folder being sent — it greps the published folder for a token's full shape, the prefix followed by its body, and stops on a hit. The prefix alone is not the test: this file and `publish.py` both have to name it in order to describe the guard, and a check that matched the prefix on its own failed on its own documentation. The site is committed as `328386359+palestinerecord@users.noreply.github.com`, so publishing never writes a personal address into a public history.
 
 ## Provenance
 
