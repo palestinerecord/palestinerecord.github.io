@@ -120,7 +120,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=33" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=34" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -234,7 +234,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=33" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=34" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2522,11 +2522,6 @@ const Views = (function () {
               ${note ? `<div class="full">${esc(note)}</div>` : ''}
             </figcaption>
           </figure>`).join('')}
-        </div>
-        <div class="card" style="padding:26px;margin-top:18px">
-          <h3>One line this record refuses to use</h3>
-          <p>\u201cThe hottest places in hell are reserved for those who in a period of moral crisis maintain their neutrality\u201d is attributed to Dante and is <b>not in Dante</b>. No such line appears in the <i>Commedia</i>; Dante\u2019s uncommitted souls are placed in the vestibule <i>before</i> Hell, not in its depths, and its depths are ice rather than fire (<i>Inferno</i>, Canto III). The attribution drifted into its modern form through a chain traceable from Theodore Roosevelt in 1915 to a 1944 aphorism collection, and was popularised by John F. Kennedy. A record that asks to be checked line by line cannot use a quotation it knows to be misattributed, however well it serves the argument.</p>
-          <p class="src">Quote Investigator, 14 January 2015; JFK Presidential Library.</p>
         </div>
       </section>
 
