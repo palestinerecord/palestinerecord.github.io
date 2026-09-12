@@ -227,6 +227,12 @@ def clean(html, snapshot_url, route_url, generated, depth_prefix='../'):
     # executable, and it is the one thing in the head a crawler reads closely.
     html = re.sub(r'<script\b(?![^>]*application/ld\+json)[^>]*>.*?</script>', '',
                   html, flags=re.S | re.I)
+    # The theme attribute records what the rendering browser's own
+    # prefers-color-scheme happened to be, so leaving it in makes the snapshot
+    # depend on the machine that built it — this workstation renders dark and
+    # the CI runner renders light, and every build then rewrites all twenty
+    # files. Stripping it hands the choice back to the reader's browser.
+    html = re.sub(r'(<html\b[^>]*?)\s+data-theme="[^"]*"', r'\1', html, flags=re.I)
     html = re.sub(r'<canvas\b[^>]*>.*?</canvas>', '', html, flags=re.S | re.I)
     html = re.sub(r'<button\b[^>]*>.*?</button>', '', html, flags=re.S | re.I)
     html = html.replace('<div id="scene-veil" aria-hidden="true"></div>', '')
