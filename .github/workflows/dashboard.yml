@@ -120,7 +120,21 @@ jobs:
             exit 0
           fi
           git commit -m "Refresh dashboard data ($(date -u '+%d %B %Y'))"
-          git push
+          # Runs queue rather than cancel, so a run held behind another one
+          # checked the branch out before that one pushed and its own push is
+          # then rejected. Rebase onto the tip and try again. The regenerated
+          # files win any conflict, since this run built them from the newest
+          # data: in a rebase `theirs` is the commit being replayed, which is
+          # the commit made above.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected; rebasing onto the branch tip (attempt $attempt)."
+            git pull --rebase -X theirs origin main
+          done
+          echo 'Could not push after three attempts.' >&2
+          exit 1
 
       - name: Write the run summary
         if: always()
