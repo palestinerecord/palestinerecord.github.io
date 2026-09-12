@@ -1,0 +1,141 @@
+name: Dashboard — refresh the data
+
+# The dashboard carries a live casualty series, so it goes stale on its own.
+# This workflow re-pulls the upstream feeds every night, refuses to publish
+# anything validate.py reports as broken, and commits only when a figure has
+# actually changed.
+#
+# There is no deploy job here on purpose. Pages serves this repository from the
+# main branch (a legacy build, source `main` `/`), so the commit this workflow
+# makes is itself the deployment. Adding an Actions deployment would mean
+# switching the Pages source and would gain nothing.
+#
+# build.py and verify.py are not run here either. Both read report-final.md
+# from the parent directory, and that markdown lives with the documents rather
+# than on the published site. data/report.json changes only when the report
+# changes, and it is rebuilt and pushed from there by publish.py.
+
+on:
+  schedule:
+    # 05:17 UTC daily. The upstream daily file is normally posted before 04:00.
+    - cron: '17 5 * * *'
+  push:
+    branches: [main]
+    paths:
+      # Anything that changes what the static layer should say.
+      - 'data/**'
+      - 'index.html'
+      - 'js/**'
+      - 'css/**'
+      - 'assets/**'
+      - 'prerender.py'
+      - 'validate.py'
+      - 'fetch_timeseries.py'
+      - '.github/workflows/dashboard.yml'
+  workflow_dispatch:
+    inputs:
+      skip_fetch:
+        description: 'Rebuild from the cached raw feeds instead of downloading'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # the nightly data commit
+
+# One refresh at a time, and never cancel one half way through.
+concurrency:
+  group: dashboard
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    name: Refresh the data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Pull the live casualty series
+        if: ${{ inputs.skip_fetch != true }}
+        run: python3 fetch_timeseries.py | tee "$RUNNER_TEMP/fetch.log"
+
+      - name: Rebuild from the cached raw feeds
+        if: ${{ inputs.skip_fetch == true }}
+        run: python3 fetch_timeseries.py --offline | tee "$RUNNER_TEMP/fetch.log"
+
+      - name: Validate the data
+        # validate.py exits non-zero on any failure, which stops the job before
+        # the commit, so the previously published data stays live rather than
+        # being replaced by something that does not hold together. It checks the
+        # data rather than the rendering: figure agreement across files, map
+        # joins, chart wiring, source attribution, canonical URLs.
+        run: |
+          set -o pipefail
+          python3 validate.py | tee "$RUNNER_TEMP/validate.log"
+
+      - name: Look for a change worth committing
+        id: diff
+        run: |
+          if [ -z "$(git status --porcelain -- data/)" ]; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            echo 'No change in the data files.'
+          else
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+            git status --porcelain -- data/
+          fi
+
+      # The static snapshots carry the figures and the generation date, so they
+      # are rebuilt whenever the data moved. On a nightly run with no change
+      # they are deliberately left alone: regenerating them would restamp the
+      # date and produce a commit saying nothing happened. A push or a manual
+      # run rebuilds them regardless, because the routes or the copy may be
+      # what changed.
+      - name: Rebuild the static snapshots, cards and sitemap
+        id: static
+        if: steps.diff.outputs.changed == 'true' || github.event_name != 'schedule'
+        run: |
+          set -o pipefail
+          python3 -m pip install --quiet Pillow
+          CHROME="$(command -v google-chrome || command -v chromium-browser || true)"
+          if [ -z "$CHROME" ]; then
+            echo 'No Chrome on the runner; the snapshots cannot be rendered.' >&2
+            exit 1
+          fi
+          python3 prerender.py --chrome "$CHROME" | tee "$RUNNER_TEMP/prerender.log"
+
+      - name: Commit the refreshed data and static layer
+        if: steps.diff.outputs.changed == 'true' || steps.static.outcome == 'success'
+        # A push made with GITHUB_TOKEN does not itself start a workflow run, so
+        # this commit cannot loop back into this workflow. Pages picks it up and
+        # rebuilds the site from the branch.
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/ snapshot/ assets/og/ sitemap.xml index.html
+          if git diff --cached --quiet; then
+            echo 'Nothing staged; the rebuild was byte-identical.'
+            exit 0
+          fi
+          git commit -m "Refresh dashboard data ($(date -u '+%d %B %Y'))"
+          git push
+
+      - name: Write the run summary
+        if: always()
+        run: |
+          {
+            echo '## Dashboard refresh'
+            echo
+            echo "Data changed: **${{ steps.diff.outputs.changed || 'unknown' }}**"
+            echo
+            for log in fetch validate prerender; do
+              if [ -f "$RUNNER_TEMP/$log.log" ]; then
+                echo "### $log"
+                echo '```'
+                cat "$RUNNER_TEMP/$log.log"
+                echo '```'
+              fi
+            done
+          } >> "$GITHUB_STEP_SUMMARY"

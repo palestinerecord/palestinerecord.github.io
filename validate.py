@@ -462,8 +462,14 @@ def check_sources(files):
 def check_staleness(files):
     """The dashboard must not quote a version of the report that no longer exists."""
     built = DATA / 'report.json'
-    if not MARKDOWN.exists() or not built.exists():
-        fail('staleness', 'report-final.md or data/report.json is missing')
+    if not built.exists():
+        fail('staleness', 'data/report.json is missing')
+        return
+    if not MARKDOWN.exists():
+        # The published repository carries the derived JSON but not the source
+        # markdown, which lives with the documents. There is nothing to compare
+        # against here, so the check does not apply rather than failing.
+        note('staleness: report-final.md is not in this checkout; skipped')
         return
     if MARKDOWN.stat().st_mtime > built.stat().st_mtime:
         fail('staleness', 'report-final.md is newer than data/report.json; run build.py')
