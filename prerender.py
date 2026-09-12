@@ -377,6 +377,87 @@ def sitemap(base, urls, lastmod):
     return len(urls)
 
 
+# ---------------------------------------------------------------- feed
+
+# Appendix F of the report is a dated log of every revision made to it, and the
+# Changelog route reads it straight out of data/report.json. The same log makes
+# a feed: a record that is revised should be followable without anyone having to
+# come back and check whether it was.
+
+DATED = re.compile(r'^\s*(?:Update|Enhanced edition|[A-Z][a-z]+\s+\d{4}\s+update)[^(]*\(([^)]+)\)\s*:\s*')
+TAGS = re.compile(r'<[^>]+>')
+FEED_MAX = 40
+
+
+def plain(html):
+    return saxutils.unescape(TAGS.sub('', html or '')).strip()
+
+
+def revisions():
+    """The revision log, newest first, as (date, title, html) triples."""
+    report = json.loads((ROOT / 'data' / 'report.json').read_text(encoding='utf-8'))
+    part = next((p for p in report.get('parts', []) if 'revision-history' in p.get('id', '')), None)
+    if not part:
+        return []
+
+    out = []
+    for block in part.get('blocks', []):
+        if block.get('type') != 'paragraph':
+            continue
+        text = plain(block.get('html', ''))
+        m = DATED.match(text)
+        if not m:
+            continue
+        try:
+            when = datetime.datetime.strptime(m.group(1).strip(), '%d %B %Y').date()
+        except ValueError:
+            try:
+                when = datetime.datetime.strptime(m.group(1).strip(), '%B %Y').date()
+            except ValueError:
+                continue
+        body = text[m.end():].strip()
+        # The title is the first clause of the entry: enough to tell a reader
+        # scanning a feed reader whether this revision concerns them.
+        title = re.split(r'(?<=[.;])\s', body)[0].strip().rstrip(';')
+        out.append((when, title[:140], body))
+    out.sort(key=lambda e: e[0], reverse=True)
+    return out
+
+
+def feed(base, generated):
+    entries = revisions()[:FEED_MAX]
+    host = base.replace('https://', '').replace('http://', '').rstrip('/')
+    stamp = lambda d: d.strftime('%Y-%m-%dT00:00:00Z')
+    newest = stamp(entries[0][0]) if entries else generated + 'T00:00:00Z'
+
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-GB">',
+             '  <title>The Documented Record — revisions</title>',
+             '  <subtitle>Every dated change to the record, in the words of the record itself. '
+             'Figures move because the bodies that count them publish again; findings are added as '
+             'courts and commissions make them.</subtitle>',
+             '  <id>tag:%s,2026:feed</id>' % host,
+             '  <updated>%s</updated>' % newest,
+             '  <link rel="self" type="application/atom+xml" href="%sfeed.xml"/>' % base,
+             '  <link rel="alternate" type="text/html" href="%s#/changelog"/>' % base,
+             '  <author><name>Dr. Usman Kayani</name></author>',
+             '  <rights>The record cites its sources; each source carries its own terms.</rights>',
+             '  <generator uri="%s">prerender.py</generator>' % base]
+
+    for i, (when, title, body) in enumerate(entries):
+        lines += ['  <entry>',
+                  '    <title>%s</title>' % saxutils.escape(title),
+                  '    <id>tag:%s,%s:revision-%d</id>' % (host, when.isoformat(), i),
+                  '    <updated>%s</updated>' % stamp(when),
+                  '    <published>%s</published>' % stamp(when),
+                  '    <link rel="alternate" type="text/html" href="%s#/changelog"/>' % base,
+                  '    <content type="text">%s</content>' % saxutils.escape(body),
+                  '  </entry>']
+    lines.append('</feed>')
+    (ROOT / 'feed.xml').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    return len(entries)
+
+
 def stamp_json_ld(generated):
     """Keep the structured data's dateModified honest without hand-editing."""
     path = ROOT / 'index.html'
@@ -462,6 +543,7 @@ def main():
     urls = [(base, 1.0)] + [('%ssnapshot/%s.html' % (base, slug), 0.8) for slug, _ in routes]
     n = sitemap(base, urls, generated)
     print('sitemap.xml: %d URLs' % n)
+    print('feed.xml: %d revisions' % feed(base, generated))
 
 
 if __name__ == '__main__':

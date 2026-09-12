@@ -536,6 +536,72 @@ def check_cache_bust():
     note('cache-bust: ?v=%s' % ', '.join(sorted(versions)) if versions else 'cache-bust: none found')
 
 
+def check_service_worker():
+    """A worker that precaches last version's URLs serves them to every installed reader."""
+    worker = HERE / 'sw.js'
+    if not worker.exists():
+        return
+    source = worker.read_text()
+    index = (HERE / 'index.html').read_text()
+    served = set(re.findall(r'\?v=(\d+)', index))
+    if not served:
+        return
+
+    declared = re.search(r"VERSION\s*=\s*'v(\d+)'", source)
+    if not declared:
+        fail('worker', "sw.js does not declare VERSION = 'vN'")
+    elif declared.group(1) not in served:
+        fail('worker', 'sw.js declares VERSION v%s while index.html serves ?v=%s'
+             % (declared.group(1), ', '.join(sorted(served))))
+
+    # The shell list hardcodes the query strings it precaches. If they fall
+    # behind the page, every installed reader is served the previous build's
+    # JavaScript from a cache the page cannot see or clear.
+    for other in sorted(set(re.findall(r'\?v=(\d+)', source))):
+        if other not in served:
+            fail('worker', 'sw.js precaches ?v=%s while index.html serves ?v=%s'
+                 % (other, ', '.join(sorted(served))))
+
+    if 'sw.js' not in index:
+        fail('worker', 'sw.js exists but index.html never registers it')
+
+    # Without the escape hatch a bad worker has to be waited out rather than
+    # cleared, and it outlives the deployment that caused it.
+    if 'nosw' not in index or 'nosw' not in source:
+        fail('worker', "the ?nosw=1 unregister path is missing from index.html or sw.js")
+
+    shell = re.search(r'SHELL_FILES\s*=\s*\[(.*?)\]', source, re.S)
+    listed = re.findall(r"'\./([^'?]*)", shell.group(1)) if shell else []
+    for name in sorted({n for n in listed if n}):
+        if not (HERE / name).exists():
+            fail('worker', 'sw.js precaches %s, which is not in the repository' % name)
+    note('service worker: v%s, %d shell files'
+         % (declared.group(1) if declared else '?', len(listed)))
+
+
+def check_manifest():
+    """An installed app that opens on a dead start_url is worse than no install."""
+    path = HERE / 'manifest.webmanifest'
+    if not path.exists():
+        return
+    try:
+        manifest = json.loads(path.read_text())
+    except json.JSONDecodeError as exc:
+        fail('manifest', 'manifest.webmanifest is not valid JSON: %s' % exc)
+        return
+    for field in ('name', 'short_name', 'start_url', 'display', 'icons'):
+        if not manifest.get(field):
+            fail('manifest', 'manifest.webmanifest has no %s' % field)
+    for icon in manifest.get('icons', []):
+        src = (icon.get('src') or '').lstrip('/').split('?')[0]
+        if src and not (HERE / src).exists():
+            fail('manifest', 'manifest.webmanifest names icon %s, which does not exist' % src)
+    if 'manifest.webmanifest' not in (HERE / 'index.html').read_text():
+        fail('manifest', 'manifest.webmanifest exists but index.html does not link it')
+    note('manifest: %d icons, %d shortcuts'
+         % (len(manifest.get('icons', [])), len(manifest.get('shortcuts', []))))
+
+
 def check_canonical(host='palestinerecord.github.io'):
     """Canonical, og:url and JSON-LD all advertise the site's own address."""
     index = (HERE / 'index.html').read_text()
@@ -577,6 +643,8 @@ def main():
         check_figures_against_markdown(files)
         check_chart_wiring()
         check_cache_bust()
+        check_service_worker()
+        check_manifest()
         check_canonical(args.host)
 
     if not args.quiet:

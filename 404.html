@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not found — The Documented Record</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b0f17">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<!-- GitHub Pages serves this file for any path it cannot find. The routes of
+     this site live behind a hash, so a link written or remembered as
+     /evidence rather than /#/evidence arrives here rather than at the record
+     it names. Where the path names a real route, send the reader there; where
+     it does not, say so plainly and offer the way in. Kept independent of the
+     stylesheet and of the application: this page has to work when the thing
+     it is apologising for did not. -->
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0; min-height: 100vh; background: #05070c; color: #e9edf6;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex; align-items: center; justify-content: center; padding: 32px;
+  }
+  .plate { max-width: 620px; width: 100%; }
+  .flag { width: 54px; height: 36px; display: block; margin-bottom: 22px; border: 1px solid rgba(255,255,255,0.14); }
+  .mark { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #98a2b6; margin-bottom: 10px; }
+  h1 { font-size: clamp(26px, 5vw, 34px); font-weight: 600; margin: 0 0 14px;
+       font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+  p { color: #b9c2d4; margin: 0 0 18px; }
+  code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+         font-size: 0.92em; color: #d9a441; word-break: break-all; }
+  .routes { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 26px 0 22px; }
+  .routes a {
+    display: block; padding: 12px 14px; border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.038); color: #e9edf6; text-decoration: none; border-radius: 2px;
+  }
+  .routes a:hover, .routes a:focus { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.07); }
+  .routes b { display: block; font-weight: 600; font-size: 15px; }
+  .routes span { color: #98a2b6; font-size: 12.5px; }
+  .foot { border-top: 1px solid rgba(255,255,255,0.09); padding-top: 16px; font-size: 13px; color: #98a2b6; }
+  .foot a { color: #d9a441; }
+</style>
+</head>
+<body>
+<div class="plate">
+  <svg class="flag" viewBox="0 0 90 60" aria-label="Flag of Palestine" role="img">
+    <rect width="90" height="20" fill="#000"></rect>
+    <rect y="20" width="90" height="20" fill="#fff"></rect>
+    <rect y="40" width="90" height="20" fill="#007a3d"></rect>
+    <polygon points="0,0 38,30 0,60" fill="#ce1126"></polygon>
+  </svg>
+  <div class="mark">The Documented Record</div>
+  <h1 id="title">That address is not part of the record</h1>
+  <p id="lede">Nothing is published at <code id="path"></code>. The record is one page with its
+    sections behind a hash, so an address written as <code>/evidence</code> rather than
+    <code>/#/evidence</code> arrives here.</p>
+
+  <div class="routes">
+    <a href="/#/overview"><b>Overview</b><span>What the record holds</span></a>
+    <a href="/#/data"><b>Data</b><span>The series, with sources</span></a>
+    <a href="/#/timeline"><b>Timeline</b><span>1917 to 2026</span></a>
+    <a href="/#/evidence"><b>Evidence</b><span>The complete report</span></a>
+    <a href="/#/statements"><b>Statements</b><span>Documented intent</span></a>
+    <a href="/#/sources"><b>Sources</b><span>Every citation, linked</span></a>
+  </div>
+
+  <p class="foot">Every published address is listed in the
+    <a href="/sitemap.xml">sitemap</a>, and every dataset in
+    <a href="/data/index.json">data/index.json</a>.</p>
+</div>
+
+<script>
+(function () {
+  var VIEWS = ['overview', 'tour', 'data', 'timeline', 'evidence', 'rebuttals', 'statements',
+    'legal', 'sources', 'api', 'changelog', 'embed'];
+
+  var path = location.pathname.replace(/^\/+|\/+$/g, '');
+  var el = document.getElementById('path');
+  if (el) el.textContent = '/' + path;
+
+  // A snapshot lives at /snapshot/<route>.html, so a link to /snapshot/<route>
+  // names a route too. So does /<route>.html, and /<route>/<anything>.
+  var parts = path.split('/').filter(Boolean);
+  if (parts[0] === 'snapshot') parts.shift();
+  var view = (parts[0] || '').replace(/\.html?$/i, '').toLowerCase();
+
+  if (VIEWS.indexOf(view) >= 0) {
+    var sub = (parts[1] || '').replace(/\.html?$/i, '');
+    // replace(), not assign(): the missing address should not sit in the
+    // history for the back button to return to.
+    location.replace('/#/' + view + (sub ? '/' + encodeURIComponent(sub) : ''));
+    return;
+  }
+
+  if (path) {
+    document.getElementById('title').textContent = 'No such section of the record';
+    document.getElementById('lede').innerHTML = 'Nothing is published at <code>/'
+      + path.replace(/[&<>"]/g, '') + '</code>. It may have been mistyped, or it may never '
+      + 'have existed — no address is ever removed from this site.';
+  }
+})();
+</script>
+</body>
+</html>

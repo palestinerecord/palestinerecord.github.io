@@ -7,9 +7,11 @@
 <meta name="description" content="An interactive forensic survey of state conduct, alleged violations of international law, and the documented record (1917–2026).">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="assets/favicon.svg?v=31" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/flag-palestine.svg?v=31">
+<link rel="icon" href="assets/favicon.svg?v=32" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/flag-palestine.svg?v=32">
 <link rel="canonical" href="https://palestinerecord.github.io/">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="The Documented Record — revisions" href="feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://palestinerecord.github.io/">
 <meta property="og:site_name" content="The Documented Record">
@@ -24,7 +26,7 @@
 <meta name="twitter:title" content="The Documented Record — Israel and the Occupied Territories, 1917–2026">
 <meta name="twitter:description" content="Every figure carries its source. A forensic survey of state conduct, alleged violations of international law, and the documented record — 1917 to 2026.">
 <meta name="twitter:image" content="assets/share-card.png">
-<link rel="stylesheet" href="css/style.css?v=31">
+<link rel="stylesheet" href="css/style.css?v=32">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -126,7 +128,7 @@
 
 <div id="boot">
   <div class="boot-inner">
-    <img class="flag-ps boot-flag" src="assets/flag-palestine.svg?v=31" alt="Flag of Palestine">
+    <img class="flag-ps boot-flag" src="assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
     <div class="boot-mark">FORENSIC RECORD</div>
     <div class="boot-bar"><span></span></div>
     <div class="boot-status">Loading documented record…</div>
@@ -139,7 +141,7 @@
 
 <header class="topbar">
   <a class="brand" href="#/overview">
-    <img class="brand-mark flag-ps" src="assets/flag-palestine.svg?v=31" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -173,16 +175,30 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="assets/flag-palestine.svg?v=31" alt="Flag of Palestine">
+      <img class="flag-ps" src="assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="#/evidence">Evidence</a> section without omission.</p>
     <p class="muted" id="footer-stats"></p>
+    <!-- A record meant to be used in an argument has to be citable in one.
+         Filled in by app.js with the route on screen and the date of the data
+         it is showing, so a citation copied from here names the version the
+         reader actually read. -->
+    <details class="cite" id="cite">
+      <summary>Cite this record</summary>
+      <div class="cite-body">
+        <p class="small muted" id="cite-note"></p>
+        <div class="cite-row" data-style="apa"><b>APA</b><code id="cite-apa"></code><button type="button" data-copy="cite-apa">Copy</button></div>
+        <div class="cite-row" data-style="harvard"><b>Harvard</b><code id="cite-harvard"></code><button type="button" data-copy="cite-harvard">Copy</button></div>
+        <div class="cite-row" data-style="bibtex"><b>BibTeX</b><code id="cite-bibtex"></code><button type="button" data-copy="cite-bibtex">Copy</button></div>
+      </div>
+    </details>
     <p class="footer-links">
       <a href="#/api">Open data</a> · <a href="#/changelog">Changelog</a> ·
-      <a href="data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a>
+      <a href="data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a> ·
+      <a href="feed.xml">Feed</a>
     </p>
   </div>
 </footer>
@@ -195,15 +211,44 @@
   </div>
 </div>
 
-<script src="js/charts.js?v=31"></script>
-<script src="js/share.js?v=31"></script>
-<script src="js/views.js?v=31"></script>
-<script src="js/app.js?v=31"></script>
+<script src="js/charts.js?v=32"></script>
+<script src="js/share.js?v=32"></script>
+<script src="js/views.js?v=32"></script>
+<script src="js/app.js?v=32"></script>
 <!-- Loaded dynamically so ?prerender=1 never builds the 24,000-point WebGL field:
      prerender.py dumps the text of a route, and software WebGL would spend the
      whole budget on a scene no snapshot can contain. -->
 <script type="module">
-  if (!/(^|[?&])prerender=1(&|$)/.test(location.search)) import('./js/scene.js?v=31');
+  if (!/(^|[?&])prerender=1(&|$)/.test(location.search)) import('./js/scene.js?v=32');
+</script>
+<!-- The offline worker. Registered after load so it never competes with the
+     record for the network, and never during a prerender pass. ?nosw=1 is the
+     way out: it unregisters the worker and empties its caches, so a bad
+     deployment of sw.js can be undone from the address bar. -->
+<script>
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  if (/(^|[?&])prerender=1(&|$)/.test(location.search)) return;
+
+  if (/(^|[?&])nosw=1(&|$)/.test(location.search)) {
+    navigator.serviceWorker.getRegistrations().then(function (regs) {
+      regs.forEach(function (reg) {
+        if (reg.active) reg.active.postMessage({ type: 'clear' });
+        reg.unregister();
+      });
+    });
+    if (window.caches) caches.keys().then(function (names) {
+      names.filter(function (n) { return /^record-/.test(n); }).forEach(function (n) { caches.delete(n); });
+    });
+    return;
+  }
+
+  addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').catch(function (err) {
+      console.warn('offline worker not registered', err);
+    });
+  });
+})();
 </script>
 </body>
 </html>

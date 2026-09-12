@@ -849,6 +849,36 @@ tbody td strong { color: var(--text); }
 .footer-flag .flag-ps { width: 34px; }
 .footer-flag .flag-rule { flex: 1 1 auto; opacity: .5; }
 
+/* The citation block. Closed by default: it is for the reader who needs it,
+   and it should not push the rest of the footer down for the reader who does
+   not. */
+.cite { margin: 18px 0 20px; max-width: 90ch; border: 1px solid var(--line); background: var(--panel); border-radius: 2px; }
+.cite > summary {
+  cursor: pointer; padding: 11px 15px; font-size: 13px; font-weight: 600; color: var(--text-2);
+  list-style: none; display: flex; align-items: center; gap: 9px;
+}
+.cite > summary::-webkit-details-marker { display: none; }
+.cite > summary::before { content: '＋'; font-family: var(--mono); color: var(--accent); font-size: 13px; }
+.cite[open] > summary::before { content: '－'; }
+.cite > summary:hover { color: var(--text); }
+.cite-body { padding: 4px 15px 15px; border-top: 1px solid var(--line); }
+.cite-body p { margin: 12px 0 14px; }
+.cite-row { display: grid; grid-template-columns: 74px 1fr auto; gap: 12px; align-items: start; margin-bottom: 11px; }
+.cite-row b { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 4px; }
+.cite-row code {
+  font-family: var(--mono); font-size: 12px; line-height: 1.6; color: var(--text-2);
+  white-space: pre-wrap; word-break: break-word; background: none; padding: 0;
+}
+.cite-row button {
+  font: inherit; font-size: 11.5px; padding: 4px 11px; cursor: pointer; white-space: nowrap;
+  color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 2px;
+}
+.cite-row button:hover { color: var(--text); border-color: var(--line-hi); }
+@media (max-width: 560px) {
+  .cite-row { grid-template-columns: 1fr auto; }
+  .cite-row b { grid-column: 1 / -1; padding-top: 0; }
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1080px) {
@@ -1204,15 +1234,25 @@ body[data-view="embed"] #app { padding: 0; }
 /* ---------- Print ---------- */
 
 @media print {
+  /* A4 with a real margin: the browser default leaves a line of body text
+     hard against the edge of the sheet. */
+  @page { size: A4; margin: 16mm 14mm; }
   :root { --bg: #ffffff; --bg-2: #ffffff; --text: #111318; --text-2: #333944; --muted: #5a6270; --line: #d6dae2; --line-hi: #b9bfcb; }
   body { background: #fff; color: #111318; }
   #scene, #scene-veil, #boot, .search-overlay, .nav-toggle, .search-open,
-  .scroll-hint, .chart-tools, .subnav, .freshness { display: none !important; }
+  .scroll-hint, .chart-tools, .subnav, .freshness,
+  .theme-toggle, .skip-link, .footer-links, .footer-flag { display: none !important; }
   .topbar { position: static; border-bottom: 1px solid #d6dae2; height: auto; padding: 10px 0; }
   .card, .stat { background: #fff !important; border: 1px solid #d6dae2; box-shadow: none; break-inside: avoid; }
   .card::before { display: none; }
-  .chart { height: 300px; break-inside: avoid; }
-  .chart-table[hidden] { display: block !important; }
+  /* app.js fills in every chart's table before the print starts and marks the
+     card. Those cards print the figures rather than the canvas: a chart drawn
+     for a dark screen prints as a grey slab or as nothing, and a table can be
+     read off the page and photocopied. A chart that could not be tabulated is
+     not marked, and keeps its canvas. */
+  .chart-card[data-print-table] .chart { display: none !important; }
+  .chart-table, .chart-table[hidden] { display: block !important; break-inside: avoid; }
+  .chart-table .table-wrap { max-height: none !important; overflow: visible !important; }
   /* A closed accordion prints as a list of claims with no answers. */
   .rebuttal-body { display: block !important; }
   .rebuttal { break-inside: avoid; border: 1px solid #d6dae2; background: #fff !important; }
@@ -1223,4 +1263,17 @@ body[data-view="embed"] #app { padding: 0; }
   a { color: #111318; text-decoration: underline; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 10px; color: #5a6270; word-break: break-all; }
   thead th { color: #111318; background: #f1f3f7; }
+  table { break-inside: auto; }
+  tr { break-inside: avoid; }
+  thead { display: table-header-group; }
+  h1, h2, h3, h4 { break-after: avoid; }
+  /* The citation is the reason to print a page of this at all: it is what
+     makes the printout quotable. It prints open, whatever state it is in on
+     screen, and without the buttons, which are furniture on paper. */
+  .cite, .cite-body { display: block !important; border-color: #d6dae2; background: #fff !important; break-inside: avoid; }
+  .cite > summary { list-style: none; font-weight: 600; }
+  .cite > summary::before { display: none; }
+  .cite-row button { display: none !important; }
+  .cite-row { grid-template-columns: 74px 1fr; }
+  .cite-row code { color: #333944; }
 }

@@ -1,0 +1,27 @@
+{
+  "name": "The Documented Record — Israel and the Occupied Territories, 1917–2026",
+  "short_name": "The Record",
+  "description": "An interactive forensic survey of state conduct, alleged violations of international law, and the documented record. Every figure carries its source.",
+  "id": "/",
+  "start_url": "/#/overview",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#0b0f17",
+  "background_color": "#05070c",
+  "lang": "en-GB",
+  "dir": "ltr",
+  "categories": ["news", "education", "reference"],
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/flag-palestine.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "The data", "short_name": "Data", "url": "/#/data", "description": "Casualty, land and conduct series, each with its source" },
+    { "name": "The evidence", "short_name": "Evidence", "url": "/#/evidence", "description": "The complete report, reproduced without omission" },
+    { "name": "Statements of intent", "short_name": "Statements", "url": "/#/statements", "description": "Documented statements, with speaker, date and source" },
+    { "name": "Rebuttals", "short_name": "Rebuttals", "url": "/#/rebuttals", "description": "The standard counter-claims, answered from the record" }
+  ]
+}

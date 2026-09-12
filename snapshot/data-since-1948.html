@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light"><head>
+<html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Since 1948 — seventy-eight years of the toll · The Documented Record</title>
 <meta name="description" content="The long death toll from 1948 to 2026, and the periods for which no one kept a count.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=31" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=31">
+<link rel="icon" href="../assets/favicon.svg?v=32" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=32">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -15,6 +15,8 @@
 .chart-missing { margin: 0; padding: 18px 20px; border: 1px dashed rgba(255,255,255,.16);
   border-radius: 12px; color: #7d879c; font-size: 13.5px; }</style>
 <link rel="canonical" href="https://palestinerecord.github.io/snapshot/data-since-1948.html">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="The Documented Record — revisions" href="feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://palestinerecord.github.io/snapshot/data-since-1948.html">
 <meta property="og:site_name" content="The Documented Record">
@@ -29,7 +31,7 @@
 <meta name="twitter:title" content="Since 1948 — seventy-eight years of the toll · The Documented Record">
 <meta name="twitter:description" content="The long death toll from 1948 to 2026, and the periods for which no one kept a count.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/data-since-1948.png">
-<link rel="stylesheet" href="../css/style.css?v=31">
+<link rel="stylesheet" href="../css/style.css?v=32">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -57,7 +59,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=31" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -369,16 +371,36 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=31" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
     <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <!-- A record meant to be used in an argument has to be citable in one.
+         Filled in by app.js with the route on screen and the date of the data
+         it is showing, so a citation copied from here names the version the
+         reader actually read. -->
+    <details class="cite" id="cite">
+      <summary>Cite this record</summary>
+      <div class="cite-body">
+        <p class="small muted" id="cite-note">This is a living document. The figures below were compiled on 12 September 2026; the casualty series runs to 10 September 2026. Cite the date you read it, not only the year.</p>
+        <div class="cite-row" data-style="apa"><b>APA</b><code id="cite-apa">Kayani, U. (2026). The Documented Record — Israel and the Occupied Territories, 1917–2026 (Since 1948 section) [Data set and report]. Retrieved 12 September 2026, from https://palestinerecord.github.io/#/data/since-1948</code></div>
+        <div class="cite-row" data-style="harvard"><b>Harvard</b><code id="cite-harvard">Kayani, U. (2026) The Documented Record — Israel and the Occupied Territories, 1917–2026 (Since 1948 section). Available at: https://palestinerecord.github.io/#/data/since-1948 (Accessed: 12 September 2026).</code></div>
+        <div class="cite-row" data-style="bibtex"><b>BibTeX</b><code id="cite-bibtex">@misc{palestinerecord2026,
+  author       = {Kayani, Usman},
+  title        = {{The Documented Record: Israel and the Occupied Territories, 1917--2026}, Since 1948 section},
+  year         = {2026},
+  howpublished = {\url{https://palestinerecord.github.io/#/data/since-1948}},
+  note         = {Data compiled 12 September 2026; accessed 12 September 2026}
+}</code></div>
+      </div>
+    </details>
     <p class="footer-links">
       <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
-      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a>
+      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a> ·
+      <a href="feed.xml">Feed</a>
     </p>
   </div>
 </footer>
@@ -392,6 +414,11 @@
 <!-- Loaded dynamically so ?prerender=1 never builds the 24,000-point WebGL field:
      prerender.py dumps the text of a route, and software WebGL would spend the
      whole budget on a scene no snapshot can contain. -->
+
+<!-- The offline worker. Registered after load so it never competes with the
+     record for the network, and never during a prerender pass. ?nosw=1 is the
+     way out: it unregisters the worker and empties its caches, so a bad
+     deployment of sw.js can be undone from the address bar. -->
 
 
 

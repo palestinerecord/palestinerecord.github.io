@@ -234,6 +234,7 @@ const App = (function () {
     try { behaviours[name] && behaviours[name](); } catch (err) { console.error('behaviour', name, err); }
     if (window.Scene && !STATIC) Scene.setView(name);
     try { scrollToChart(); } catch (err) { console.error('deep link', err); }
+    try { citation(name, sub); } catch (err) { console.error('citation', err); }
     rendered = name;
     renderedSub = sub || '';
   }
@@ -460,16 +461,27 @@ const App = (function () {
           btn.setAttribute('aria-expanded', 'false');
           return;
         }
-        const t = Charts.table(name);
-        if (!t) { flash('not available'); return; }
-        box.innerHTML = `<div class="table-wrap"><table>
-          <thead><tr>${t.header.map((h) => `<th>${Views.esc(h)}</th>`).join('')}</tr></thead>
-          <tbody>${t.rows.map((r) => `<tr>${r.map((c) => `<td>${Views.esc(c)}</td>`).join('')}</tr>`).join('')}</tbody>
-        </table></div>`;
-        box.hidden = false;
+        if (!fillChartTable(card)) { flash('not available'); return; }
         btn.setAttribute('aria-expanded', 'true');
       }
     });
+  }
+
+  /* Pull a built chart back out as a table and put it in the card's table box.
+     Returns false for a chart that cannot be tabulated. Shared by the `table`
+     button and by the print pass, which needs the same tables without anyone
+     having pressed anything. */
+  function fillChartTable(card) {
+    const box = card.querySelector('.chart-table');
+    if (!box) return false;
+    const t = Charts.table(card.dataset.chartCard);
+    if (!t) return false;
+    box.innerHTML = `<div class="table-wrap"><table>
+      <thead><tr>${t.header.map((h) => `<th>${Views.esc(h)}</th>`).join('')}</tr></thead>
+      <tbody>${t.rows.map((r) => `<tr>${r.map((c) => `<td>${Views.esc(c)}</td>`).join('')}</tr>`).join('')}</tbody>
+    </table></div>`;
+    box.hidden = false;
+    return true;
   }
 
   /* ---------- share cards ---------- */
@@ -584,10 +596,124 @@ const App = (function () {
      CSS cannot open one. Expand everything for the print, then put it back. */
   function printExpansion() {
     const opened = [];
+    const tabled = [];
     window.addEventListener('beforeprint', () => {
-      app.querySelectorAll('details:not([open])').forEach((d) => { opened.push(d); d.open = true; });
+      // The citation block is in the footer rather than in the view, and a
+      // printout without it is not citable, which is most of the reason to
+      // print one.
+      document.querySelectorAll('#cite:not([open]), #app details:not([open])')
+        .forEach((d) => { opened.push(d); d.open = true; });
+      // A chart is a canvas drawn for a dark screen; on paper it is a grey
+      // slab, or nothing. Every chart can give its figures back as a table, so
+      // build them all and let the stylesheet print those instead. Charts that
+      // cannot be tabulated keep their canvas.
+      app.querySelectorAll('.chart-card').forEach((card) => {
+        const box = card.querySelector('.chart-table');
+        if (!box || !box.hidden) return;
+        if (!fillChartTable(card)) return;
+        card.dataset.printTable = '1';
+        tabled.push(card);
+      });
     });
-    window.addEventListener('afterprint', () => { while (opened.length) opened.pop().open = false; });
+    window.addEventListener('afterprint', () => {
+      while (opened.length) opened.pop().open = false;
+      while (tabled.length) {
+        const card = tabled.pop();
+        delete card.dataset.printTable;
+        const box = card.querySelector('.chart-table');
+        if (box) box.hidden = true;
+      }
+    });
+  }
+
+  /* ---------- citation ---------- */
+
+  /* A record assembled to be used in an argument has to be citable in one, and
+     a citation of a living document is worthless without the version it names.
+     So the block carries two dates: the day the data was compiled, which is the
+     version, and the day the reader read it. Rebuilt on every route change, so
+     what is copied cites the section on screen rather than the front page. */
+
+  const CITE_AUTHOR = { family: 'Kayani', initials: 'U.' };
+
+  function citeParts(name, sub) {
+    const meta = Views.meta(name, sub);
+    const canonical = document.querySelector('link[rel=canonical]');
+    const url = canonical ? canonical.href : location.href;
+    const compiled = (D && D.ts && D.ts.meta.generated) || '';
+    const year = Number((compiled || '').slice(0, 4)) || new Date().getUTCFullYear();
+    const today = new Date().toISOString().slice(0, 10);
+    // The overview is the whole record; every other route is a section of it,
+    // and a citation that does not say which section sends the reader to the
+    // front door of a 96,000-word document.
+    const section = name === 'overview' ? '' : String(meta.title).split(' — ')[0];
+    return { url, compiled, year, today, section, title: 'The Documented Record — Israel and the Occupied Territories, 1917–2026' };
+  }
+
+  function citation(name, sub) {
+    const box = document.getElementById('cite');
+    if (!box || !D) return;
+    const p = citeParts(name, sub);
+    const A = CITE_AUTHOR;
+    const accessed = readableDate(p.today);
+    const compiled = p.compiled ? readableDate(p.compiled) : '';
+    const section = p.section ? ` (${p.section} section)` : '';
+
+    const text = {
+      apa: `${A.family}, ${A.initials} (${p.year}). ${p.title}${section} [Data set and report]. `
+        + `Retrieved ${accessed}, from ${p.url}`,
+      harvard: `${A.family}, ${A.initials} (${p.year}) ${p.title}${section}. `
+        + `Available at: ${p.url} (Accessed: ${accessed}).`,
+      bibtex: `@misc{palestinerecord${p.year},\n`
+        + `  author       = {${A.family}, Usman},\n`
+        + `  title        = {{The Documented Record: Israel and the Occupied Territories, 1917--2026}${p.section ? ', ' + p.section + ' section' : ''}},\n`
+        + `  year         = {${p.year}},\n`
+        + `  howpublished = {\\url{${p.url}}},\n`
+        + `  note         = {${compiled ? 'Data compiled ' + compiled + '; a' : 'A'}ccessed ${accessed}}\n`
+        + `}`,
+    };
+
+    Object.keys(text).forEach((style) => {
+      const el = document.getElementById('cite-' + style);
+      if (el) el.textContent = text[style];
+    });
+    const note = document.getElementById('cite-note');
+    if (note) {
+      note.textContent = compiled
+        ? `This is a living document. The figures below were compiled on ${compiled}; `
+          + `the casualty series runs to ${readableDate(D.ts.meta.last_daily_update)}. `
+          + 'Cite the date you read it, not only the year.'
+        : 'This is a living document. Cite the date you read it, not only the year.';
+    }
+  }
+
+  /* One listener for the three buttons, bound once. */
+  function citeCopy() {
+    const box = document.getElementById('cite');
+    if (!box) return;
+    box.addEventListener('click', (event) => {
+      const button = event.target.closest('button[data-copy]');
+      if (!button) return;
+      const source = document.getElementById(button.dataset.copy);
+      if (!source) return;
+      const done = () => {
+        const was = button.textContent;
+        button.textContent = 'Copied';
+        setTimeout(() => { button.textContent = was; }, 1400);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(source.textContent).then(done, () => {});
+        return;
+      }
+      // No clipboard API (an insecure origin, or an old browser): select the
+      // text instead, so it can still be copied with a keystroke.
+      const range = document.createRange();
+      range.selectNodeContents(source);
+      const selection = getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      done();
+    });
   }
 
   const highlight = (text, term) => {
@@ -968,6 +1094,7 @@ const App = (function () {
     heroNames();
     skipLink();
     printExpansion();
+    citeCopy();
     freshness();
     sinceLastVisit();
     route();
