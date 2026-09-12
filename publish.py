@@ -380,6 +380,33 @@ def wait_for_build(timeout=300):
     return False
 
 
+def wait_for_edge(expect, timeout=300):
+    """Wait for the CDN to stop serving the build before this one.
+
+    The Pages API reports `built` while the edge is still handing out the
+    previous index.html, for as long as its ten-minute cache holds. That is
+    not a failed deployment and should not be reported as one, so the version
+    is polled through a cache-busting query — which changes the edge key
+    without changing what is served — before the checks below run against it.
+    """
+    deadline = time.time() + timeout
+    while True:
+        try:
+            url = '%s/?cb=%d' % (SITE.rstrip('/'), int(time.time() * 1000))
+            with urllib.request.urlopen(url, timeout=30) as response:
+                served = set(re.findall(rb'\?v=(\d+)', response.read()))
+        except urllib.error.URLError:
+            served = set()
+        if expect.encode() in served:
+            say('edge: serving ?v=%s' % expect)
+            return True
+        if time.time() >= deadline:
+            say('edge: still serving ?v=%s after %ds'
+                % (b', '.join(sorted(served)).decode() or 'nothing', timeout))
+            return False
+        time.sleep(10)
+
+
 def check_live(expect_version=None):
     """Fetch the published files and confirm the site answers for itself."""
     problems = []
@@ -449,9 +476,12 @@ def main():
         push()
 
         print('deploying')
+        version = local_version()
         if not args.no_wait:
             wait_for_build()
-        ok = check_live(local_version())
+            if version:
+                wait_for_edge(version)
+        ok = check_live(version)
         print('published' if ok else 'published, but the live checks did not all pass')
         return 0 if ok else 1
     except Stop as stop:

@@ -302,6 +302,8 @@ The mirror step is `rsync --delete`, so the folder is the site: anything sitting
 
 After the push, `publish.py` waits on the Pages API until the build is `built`, then fetches the live site and checks that what is being served is what was just sent — including that the served `index.html` asks for the `?v=` this folder carries, which catches a deployment that silently did not take.
 
+`built` is not the same as live. The edge holds the previous `index.html` for up to its ten-minute cache, so the version is polled through a cache-busting query first; without that wait every publication reports a failure it does not have, and a check that cries wolf on every run is a check nobody reads.
+
 ### The token
 
 The push reads `github-token` from the repository root at the moment it is needed and hands it to git through a temporary askpass helper, which is deleted afterwards. The token is never written into a file that survives the run, never committed, never placed in a remote URL, and never passed as a command-line argument, where `ps` would show it to every process on the machine. `git remote add` with a token in the URL writes it into `.git/config` in plain text, which is why the deploy clone has no credentialed remote at all.
