@@ -1,0 +1,659 @@
+{
+  "meta": {
+    "title": "The conduct record",
+    "built": "2026-09-12",
+    "note": "The series the report carries in prose and tables that the dashboard had not yet plotted: how the siege was administered, how the targets were chosen, what the documenting bodies found about human shields, what Israeli fire did on 7 October, the policy of funding Hamas, what is left of Gaza's infrastructure, children in the military courts, deaths in custody, the nuclear double standard, the coverage and its cost, and the two monitored hate-incident series on one axis.",
+    "method": "Every value traces to a numbered section of report-final.md, named in each block's 'ref'. Where a figure is derived rather than published — the Tell MAMA 2022 total, the May 2025 under-five caseload, the cumulative Qatari transfers — it carries 'estimate': true and the derivation is stated in its own note."
+  },
+
+  "aid": {
+    "title": "Aid entering Gaza against the requirement",
+    "lede": "The requirement is not contested. Israel and the United Nations agree on what 2.1 million people need each day, and the record of what was allowed to cross is a record of a decision, not of a shortage.",
+    "ref": "§6.3",
+    "source": "UN OCHA; WHO; Human Rights Watch, 19 May 2026; Palestinian Ministry of Health in Gaza, May 2026",
+    "unit": "trucks per day",
+    "baseline": {
+      "value": 500,
+      "label": "Required each day",
+      "note": "The figure the UN uses as the minimum daily requirement for Gaza's population, and the throughput before October 2023."
+    },
+    "items": [
+      {
+        "label": "Required each day",
+        "value": 500,
+        "kind": "requirement",
+        "detail": "The minimum for 2.1 million people, and the pre-war rate."
+      },
+      {
+        "label": "Total blockade, from 2 March 2025",
+        "value": 0,
+        "kind": "blockade",
+        "detail": "Israel imposed a total blockade of all humanitarian aid on 2 March 2025. It lasted months, and the IPC declared famine in the Gaza Governorate on 22 August 2025."
+      },
+      {
+        "label": "Under the ceasefire, April–May 2026",
+        "value": 100,
+        "low": 80,
+        "high": 120,
+        "display": "80–120",
+        "kind": "actual",
+        "detail": "An average of 80 to 120 trucks a day entered Gaza under the ceasefire, against the 500 required."
+      },
+      {
+        "label": "Of which medical supplies",
+        "value": 12,
+        "low": 10,
+        "high": 15,
+        "display": "10–15",
+        "kind": "actual",
+        "detail": "Ten to fifteen trucks a day carried medical supplies, for a health system in which 86 per cent of essential medical needs are unmet."
+      }
+    ],
+    "shares": [
+      {
+        "label": "Expected aid trucks actually allowed to cross",
+        "value": 35,
+        "source": "Human Rights Watch, 19 May 2026",
+        "note": "Measured during the ceasefire, not during the blockade."
+      },
+      {
+        "label": "Permitted travellers actually allowed to cross",
+        "value": 36,
+        "source": "Human Rights Watch, 19 May 2026"
+      }
+    ],
+    "notes": [
+      "The 500-a-day figure is the requirement, not an aspiration: it is the rate at which aid entered Gaza before October 2023 and the rate the UN states is needed now.",
+      "The ICC arrest warrants issued against Netanyahu and Gallant on 21 November 2024 charge starvation as a method of warfare under Rome Statute Article 8(2)(b)(xxv). That is a judicial finding on this conduct, not an allegation about it.",
+      "Human Rights Watch's World Report 2026 records that between 17 August and 5 September 2025, 49 per cent of Gaza's population had access to less than the emergency minimum of six litres of drinking water a day, and characterises the denial of water as 'the crime against humanity of extermination and a genocidal act'."
+    ]
+  },
+
+  "hunger": {
+    "title": "Who is projected to die of hunger",
+    "lede": "Between the May 2025 assessment and the June 2026 projection, every malnutrition caseload the IPC and UNICEF track at least doubled.",
+    "ref": "§6.3",
+    "source": "IPC; UNICEF, 2026; Save the Children International, 2026; IPC famine declaration, 22 August 2025",
+    "items": [
+      {
+        "group": "Children at severe risk of death from malnutrition",
+        "from": 14100,
+        "to": 43400,
+        "factor": "tripled",
+        "from_label": "May 2025 IPC analysis",
+        "to_label": "projected by end June 2026"
+      },
+      {
+        "group": "Children under five at risk of death from acute malnutrition",
+        "from": 66000,
+        "to": 132000,
+        "factor": "doubled",
+        "estimate": true,
+        "from_label": "May 2025 IPC estimate (derived)",
+        "to_label": "through June 2026",
+        "note": "The May 2025 figure is not published separately in the record; the report states the June 2026 figure of 132,000 has doubled from it, which puts the earlier caseload at about 66,000."
+      },
+      {
+        "group": "Pregnant and breastfeeding women at perilous malnutrition levels",
+        "from": 17000,
+        "to": 55000,
+        "factor": "tripled",
+        "from_label": "May 2025 IPC analysis",
+        "to_label": "by mid-2026"
+      }
+    ],
+    "shares": [
+      { "label": "Gaza's population still facing acute food insecurity", "value": 77, "as_of": "April 2026", "source": "J Street / UN data" },
+      { "label": "Children projected to face catastrophic hunger in 2026", "value": 80, "as_of": "2026", "source": "Save the Children International", "note": "Four out of five." },
+      { "label": "Projected to face high acute food insecurity by end 2026", "value": 90, "as_of": "end 2026", "source": "World Food Programme", "note": "Absent continued humanitarian food aid." },
+      { "label": "Below the emergency minimum of six litres of drinking water a day", "value": 49, "as_of": "17 August – 5 September 2025", "source": "Human Rights Watch World Report 2026" },
+      { "label": "Reporting days at a time without eating", "value": 39, "as_of": "July 2025", "source": "Survey data cited at §6.3" }
+    ],
+    "deaths": {
+      "total": 440,
+      "children": 147,
+      "as_of": "September 2025",
+      "note": "Recognised as a significant undercount."
+    },
+    "famine": {
+      "declared": "22 August 2025",
+      "body": "IPC",
+      "detail": "The first formal famine declaration in the Middle East since the IPC system was established, and the first dual famine confirmation alongside Sudan since formal famine reporting began."
+    },
+    "notes": [
+      "The IPC publishes phase classifications by area and analysis round, not as a monthly series; the record carries the declaration date and the caseload projections, which is what is plotted here.",
+      "The UN Commission of Inquiry's 23 June 2026 report recorded a rise in miscarriages of up to 300 per cent and 70 per cent of newborns classified as premature or underweight by March 2026, characterising both as measures imposed to prevent births within the protected group under Article II(d) of the Genocide Convention."
+    ]
+  },
+
+  "targeting": {
+    "title": "The AI targeting systems",
+    "lede": "Three systems, disclosed by the Israeli intelligence officers who operated them: one that lists people, one that lists buildings, and one that waits until the person is inside his own house.",
+    "ref": "§6.4",
+    "source": "+972 Magazine and Local Call, April 2024, corroborated by The Guardian; accounts of Israeli intelligence officers",
+    "systems": [
+      {
+        "name": "Lavender",
+        "role": "Lists people",
+        "value": 37000,
+        "unit": "Palestinian men placed on kill lists",
+        "detail": "Officers were given sweeping authorisation to adopt the system's kill lists with no requirement to verify its reasoning."
+      },
+      {
+        "name": "Habsora (\"The Gospel\")",
+        "role": "Lists buildings",
+        "detail": "Identifies structures alleged to serve a military function and generates high-volume bombing target lists."
+      },
+      {
+        "name": "Where's Daddy?",
+        "role": "Waits for the house",
+        "detail": "Tracks a targeted individual to his family home and enables the strike when he is inside it, which guarantees the deaths of the spouse, the children and the neighbours."
+      }
+    ],
+    "review": {
+      "seconds": 20,
+      "note": "Officers spent as little as twenty seconds on a target before authorising a bombing, primarily to confirm the target was male."
+    },
+    "error_rate": {
+      "pct": 10,
+      "of": 37000,
+      "implied": 3700,
+      "estimate": true,
+      "note": "The system's known error rate is about 10 per cent. Applied to the 37,000 names, that is roughly 3,700 people knowingly placed on kill lists in error — the multiplication is this dashboard's, the two figures are the investigation's."
+    },
+    "thresholds": [
+      { "label": "Junior operative", "low": 15, "high": 20, "display": "15–20", "detail": "The collateral-damage threshold officers described as expected for a junior Hamas operative bombed in his home." },
+      { "label": "Senior commander", "low": 100, "high": 100, "display": "up to 100", "detail": "In some cases up to 100 civilians killed to take out a single mid-level commander." }
+    ],
+    "notes": [
+      "The systems were documented by Israeli intelligence officers speaking to +972 Magazine, not by the targets or their families.",
+      "The Lieber Institute at West Point and multiple international law scholars have raised whether AI targeting used in this manner inherently violates the principles of distinction and proportionality."
+    ]
+  },
+
+  "shields": {
+    "title": "Human shields: who found what",
+    "lede": "The accusation is made in one direction and established in the other. These are the bodies that investigated, and what each of them concluded.",
+    "ref": "§5.8, §19.5",
+    "source": "HCJ 3799/02 (6 October 2005); UN Secretary-General, Children and Armed Conflict, A/79/878-S/2025/247 (June 2025); UN Goldstone Report (2009); Amnesty International; Human Rights Watch; B'Tselem; Breaking the Silence; Al-Haq, Al Mezan and PCHR (27 June 2025); Haaretz, CNN, AP, CBS News, The Washington Post; Reuters, November 2025",
+    "columns": [
+      { "key": "israel", "label": "Israeli use of Palestinian civilians" },
+      { "key": "hamas", "label": "Hamas systematic direction of civilians" }
+    ],
+    "states": {
+      "found": { "label": "Documented or found", "value": 2 },
+      "none": { "label": "Investigated, no evidence of a systematic policy", "value": 1 },
+      "na": { "label": "Not assessed in this record", "value": 0 }
+    },
+    "rows": [
+      {
+        "body": "Israel's Supreme Court",
+        "israel": "found",
+        "hamas": "na",
+        "detail": "HCJ 3799/02, 6 October 2005: unanimously ruled the 'neighbour procedure' illegal and banned all use of Palestinian civilians in military operations, which establishes that the practice was occurring at institutional scale."
+      },
+      {
+        "body": "IDF Military Police Criminal Investigation Division",
+        "israel": "found",
+        "hamas": "na",
+        "detail": "March 2025: opened investigations into at least six cases, the first formal military acknowledgment of 'reasonable suspicion' that soldiers forced civilians to take part in military operations. No charges announced as of May 2026."
+      },
+      {
+        "body": "UN Secretary-General, Children and Armed Conflict",
+        "israel": "found",
+        "hamas": "na",
+        "detail": "June 2025 (A/79/878-S/2025/247): formally verified the use of 27 Palestinian boys as human shields by Israeli armed and security forces — 22 in Gaza, 5 in the West Bank."
+      },
+      {
+        "body": "Amnesty International",
+        "israel": "found",
+        "hamas": "none",
+        "detail": "On-the-ground investigations in 2014 and 2023–24 found no evidence of systematic policies directing civilians to shield military positions."
+      },
+      {
+        "body": "Human Rights Watch",
+        "israel": "found",
+        "hamas": "none",
+        "detail": "Has investigated specific incidents and, while noting some Hamas violations, has not found evidence of a systematic human-shields strategy."
+      },
+      {
+        "body": "UN Goldstone Report (2009)",
+        "israel": "na",
+        "hamas": "none",
+        "detail": "Found no evidence that Hamas ordered or systematically directed civilians to act as shields."
+      },
+      {
+        "body": "B'Tselem",
+        "israel": "found",
+        "hamas": "na",
+        "detail": "Documented continuing violations after the 2005 ruling, and described the security establishment's response to enforcement petitions as 'feeble — if at all'."
+      },
+      {
+        "body": "Breaking the Silence (IDF veterans)",
+        "israel": "found",
+        "hamas": "na",
+        "detail": "Testimonies spanning December 2023 to early 2025. Executive director Nadav Faiman: the accounts 'are not isolated' but 'point to a systemic failure and a horrific moral collapse'."
+      },
+      {
+        "body": "Al-Haq, Al Mezan and PCHR",
+        "israel": "found",
+        "hamas": "na",
+        "detail": "Urgent Appeal to UN Special Procedures, 27 June 2025, documenting coercion of civilians including children as young as nine."
+      },
+      {
+        "body": "US intelligence (Reuters)",
+        "israel": "found",
+        "hamas": "na",
+        "detail": "November 2025: intelligence gathered in 2024 showed Israeli officials discussing how their soldiers had sent Palestinians into potentially booby-trapped tunnels."
+      },
+      {
+        "body": "Haaretz, CNN, AP, CBS, Washington Post",
+        "israel": "found",
+        "hamas": "na",
+        "detail": "Independent investigations 2024–2025. CNN documented at least 11 army squads using human shields across five Gaza cities; a Haaretz source estimated the practice occurred at least six times a day and that 'almost every platoon' kept a Palestinian detainee for it."
+      }
+    ],
+    "counts": [
+      { "label": "Palestinian boys formally verified by the UN as used as human shields", "value": 27, "note": "22 in Gaza, 5 in the West Bank (UN Secretary-General, June 2025)." },
+      { "label": "Israeli army squads documented using human shields", "value": 11, "atleast": true, "note": "Across five Gaza cities (CNN, 24 October 2024)." },
+      { "label": "Cases the IDF Military Police opened investigations into", "value": 6, "atleast": true, "note": "March 2025." },
+      { "label": "Charges announced", "value": 0, "note": "As of May 2026." }
+    ],
+    "notes": [
+      "Rows marked 'not assessed' mean the body did not address that column in the material this record carries, not that it cleared the conduct.",
+      "Even fully accepted, the human-shields argument does not suspend the attacking force's obligations: Additional Protocol I Article 51(5)(b) and Article 57 bind regardless of the defender's conduct.",
+      "The state making the human-shields argument has been found by its own Supreme Court to have practised human shielding for two decades."
+    ]
+  },
+
+  "hannibal": {
+    "title": "What Israeli fire did on 7 October",
+    "lede": "The Hannibal Directive authorises lethal force to stop Israelis being taken captive, including force against the captives. It was formulated in 1986, rescinded in 2016, and reactivated on the morning of 7 October 2023.",
+    "ref": "§18.6, §18.1",
+    "source": "Haaretz, 7 July 2024 and 31 May 2024; Channel 12, February 2026; Yediot Ahronot, January 2024; IDF statement, 18 December 2023; Israel's National Insurance Institute",
+    "items": [
+      {
+        "label": "Military facilities where the directive was invoked",
+        "value": 3,
+        "detail": "The Beit Hanoun (Erez) crossing, the Re'im base — headquarters of the Gaza Division — and the Nahal Oz outpost. The order for Erez was transmitted at 7:18am; a blanket order followed that 'not a single vehicle can return to Gaza'."
+      },
+      {
+        "label": "Vehicles struck before reaching Gaza",
+        "value": 70,
+        "approx": true,
+        "detail": "Israeli military investigators examined approximately 70 vehicles hit by IDF helicopter gunships, drones or tanks. In at least some, everyone inside was killed, including Israeli hostages being transported."
+      },
+      {
+        "label": "Targets engaged by Apache crews in four hours",
+        "value": 300,
+        "approx": true,
+        "detail": "A police investigation found an Apache firing on Hamas fighters at the Nova festival site 'apparently also hit some festival participants'."
+      },
+      {
+        "label": "Hostages in the Be'eri house when a tank was ordered to fire",
+        "value": 15,
+        "detail": "Including 12-year-old twins. Brigadier General Barak Hiram ordered the tank to fire: 'The negotiations are over. Break in, even at the cost of civilian casualties.'"
+      },
+      {
+        "label": "Of them killed",
+        "value": 13,
+        "detail": "Two survived: Hadas Dagan and Yasmin Porat, whose testimony described 'insane' crossfire with the IDF firing on the building knowing hostages were inside. An IDF investigation later attributed the deaths to small-arms fire rather than the tank shell and cleared Hiram."
+      },
+      {
+        "label": "Autopsies establishing which weapon killed each victim",
+        "value": 0,
+        "detail": "None were conducted. The IDF acknowledged on 18 December 2023 that people 'fell as a result of friendly fire on October 7' and stated it would not be 'morally sound' to investigate, citing the 'immense and complex quantity'."
+      }
+    ],
+    "unknown": {
+      "label": "Israelis killed by Israeli fire on 7 October",
+      "detail": "Not established, and deliberately so. Without autopsies or an investigation, the share of the 1,139 dead killed by the IDF rather than by Hamas cannot be stated.",
+      "of": 1139
+    },
+    "toll": {
+      "total": 1139,
+      "source": "Israel's National Insurance Institute, December 2023",
+      "note": "Revised down from the initial claim of about 1,400."
+    },
+    "notes": [
+      "In February 2026, Channel 12 aired footage from the Israeli Police national command centre in which a senior officer calls for the directive explicitly — '(Strike) Gaza. Break it all apart. Along with the soldiers who got abducted' — after which Itamar Ben-Gvir enters the room and orders the cameras stopped.",
+      "The figures plotted are incidents and counts, not a casualty breakdown: the breakdown does not exist because the investigation that would produce it was refused.",
+      "This section does not diminish what Hamas did on 7 October, which the report treats as war crimes in its own Part XVIII. It establishes that the casualty figure used to justify what followed has never been disaggregated by who fired."
+    ]
+  },
+
+  "funding": {
+    "title": "The policy of keeping Hamas funded",
+    "lede": "Successive Israeli governments treated a strong Hamas in Gaza as the guarantee against a Palestinian state. The record is Israeli: the Wall Street Journal, Haaretz, the Shin Bet's own investigation, and Netanyahu in his own words.",
+    "ref": "§11.1",
+    "source": "Wall Street Journal, 24 January 2009; Haaretz, March 2019, January 2026 and 4 March 2025; Times of Israel; Jerusalem Post",
+    "transfers": {
+      "from": 2018,
+      "to": 2023,
+      "monthly_usd_m": 15,
+      "annual_usd_m": 180,
+      "estimate": true,
+      "note": "The record states monthly Qatari cash payments of $15 million and more, hand-delivered through the Rafah crossing with explicit Israeli government approval, continuing for years from 2018. The yearly bars are that monthly rate annualised — the rate is documented, the totals are this dashboard's arithmetic, and the true figure is higher because the record says '$15 million+'.",
+      "years": [
+        { "year": 2018, "value": 180 },
+        { "year": 2019, "value": 180 },
+        { "year": 2020, "value": 180 },
+        { "year": 2021, "value": 180 },
+        { "year": 2022, "value": 180 },
+        { "year": 2023, "value": 135, "partial": true, "note": "To September 2023, the month Israel asked Qatar to increase the funding." }
+      ]
+    },
+    "events": [
+      {
+        "year": 1982,
+        "label": "Israel's military governor funds the network",
+        "detail": "Brigadier General Yitzhak Segev, military governor of Gaza in the early 1980s, said he had personally funded the Islamist welfare network that became Hamas, as a counterweight to the secular PLO (Wall Street Journal, 24 January 2009)."
+      },
+      {
+        "year": 2012,
+        "label": "Netanyahu to Dan Margalit",
+        "detail": "It was important to keep Hamas strong as a counterweight to the Palestinian Authority (Israel Hayom, December 2012)."
+      },
+      {
+        "year": 2018,
+        "label": "The suitcases begin",
+        "detail": "Netanyahu's government approves monthly Qatari cash payments of $15 million and more, hand-delivered through Rafah with explicit Israeli approval."
+      },
+      {
+        "year": 2019,
+        "label": "Netanyahu states the strategy",
+        "detail": "To his Likud Knesset members, March 2019: 'Anyone who wants to thwart the establishment of a Palestinian state has to support bolstering Hamas and transferring money to Hamas.' Ehud Barak confirmed the strategy was to keep Hamas 'alive and kicking'."
+      },
+      {
+        "year": 2023,
+        "label": "Israel asks Qatar to increase the funding",
+        "detail": "September 2023, one month before the 7 October attack, following Hamas threats of escalation (Haaretz, January 2026; corroborated by Ynet and the Times of Israel)."
+      },
+      {
+        "year": 2025,
+        "label": "The Shin Bet's own finding",
+        "detail": "4 March 2025: the Shin Bet's internal investigation found Qatari funds reaching Hamas's military wing, through a pipeline that circumvented Israeli civilian-aid oversight, were among the factors that enabled preparation for 7 October. The probe flagged Netanyahu's facilitation of the funding and his opposition to operations against senior Hamas leaders. Qatar disputes the characterisation, stating no funds reached Hamas's political or military wing."
+      }
+    ],
+    "notes": [
+      "Qatar's position is recorded alongside the Shin Bet's: it states that no funds reached Hamas's political or military wing.",
+      "The bars are a rate annualised, not a published total. They are drawn because the rate and the duration are both documented; they are marked as constructed for the same reason."
+    ]
+  },
+
+  "remains": {
+    "title": "What is left",
+    "lede": "Appendix E of the report is a table of categories and percentages. Drawn as proportions of what existed, it is a picture of a place that has been taken apart.",
+    "ref": "Appendix E, §6.3",
+    "source": "UN OCHA Humanitarian Situation Reports, 15 and 25 May 2026; WHO; UNESCO; PCHR; Al Jazeera 1,000-day assessment, 2 July 2026",
+    "items": [
+      { "label": "Universities", "destroyed": 100, "detail": "All 12 destroyed." },
+      { "label": "Housing units", "destroyed": 92, "detail": "Destroyed or damaged (OCHA)." },
+      { "label": "University buildings", "destroyed": 90, "approx": true, "detail": "Damaged or destroyed." },
+      { "label": "Schools", "destroyed": 90, "approx": true, "detail": "Damaged or destroyed. OCHA separately records 88 per cent of school buildings damaged." },
+      { "label": "Health centres and clinics", "destroyed": 84, "detail": "Destroyed or damaged." },
+      { "label": "Mosques", "destroyed": 83, "detail": "About 1,000 of 1,200 destroyed." },
+      { "label": "Electricity infrastructure", "destroyed": 80, "approx": true },
+      { "label": "Bakeries", "destroyed": 70, "approx": true },
+      { "label": "Water and sanitation infrastructure", "destroyed": 70, "approx": true },
+      { "label": "All structures", "destroyed": 69, "detail": "Destroyed or damaged (OCHA)." },
+      { "label": "Solid waste management", "destroyed": 60, "approx": true },
+      { "label": "Major hospitals completely destroyed", "destroyed": 50, "approx": true, "detail": "All 36 were attacked; about half were completely destroyed." }
+    ],
+    "functioning": [
+      { "label": "Hospitals partially functional", "value": 19, "of": 36, "as_of": "March 2026", "source": "WHO" },
+      { "label": "Primary health care facilities partially functional", "value": 114, "of": 212, "as_of": "March 2026", "source": "WHO" },
+      { "label": "Health service points operational", "value": 296, "of": 683, "as_of": "25 April 2026", "note": "Mostly partially; just 23 fully functional." }
+    ],
+    "heritage": [
+      { "label": "UNESCO-verified cultural heritage sites damaged", "value": 164 },
+      { "label": "Historical monuments destroyed in Gaza's Old City", "value": 144 },
+      { "label": "Churches damaged or destroyed", "value": 3, "note": "Including St Porphyrius, among the oldest churches in the world, bombed in October 2023 while displaced families sheltered there." }
+    ],
+    "notes": [
+      "Individual category figures reflect the most recent assessment available for that category and may derive from different survey dates than the OCHA topline figures.",
+      "Israel's ban on 37 international NGOs threatens what capacity remains: the UK government assessed that one in three remaining healthcare facilities in Gaza would close if the ban were fully enforced. Israel's High Court froze the ban temporarily in February 2026.",
+      "The UN Commission of Inquiry found in June 2025 that Israeli attacks on educational, religious and cultural sites constitute war crimes and the crime against humanity of extermination."
+    ]
+  },
+
+  "children": {
+    "title": "Children in the military courts",
+    "lede": "Israel is the only state in the world that systematically prosecutes children in military courts. The figures below are what its own record and the monitoring organisations produce.",
+    "ref": "§10.2",
+    "source": "Defence for Children International – Palestine; UNICEF; OMCT",
+    "annual": {
+      "low": 500,
+      "high": 700,
+      "display": "500–700",
+      "note": "Palestinian children detained and prosecuted in military courts each year."
+    },
+    "cohort": {
+      "total": 766,
+      "period": "2016–2022",
+      "violence_pct": 75,
+      "violence": 575,
+      "no_violence": 191,
+      "estimate": true,
+      "note": "DCI-Palestine documented 766 child detainees between 2016 and 2022, of whom 75 per cent experienced physical violence following arrest. The split into 575 and 191 is that percentage applied to that total."
+    },
+    "practices": [
+      "Arrested in night raids",
+      "Bound and blindfolded",
+      "Interrogated without a parent or a lawyer present",
+      "Denied sleep",
+      "Confessions routinely extracted under coercion"
+    ],
+    "instruments": [
+      "Convention Against Torture, to which Israel is party",
+      "Convention on the Rights of the Child, to which Israel is party",
+      "International Covenant on Civil and Political Rights"
+    ],
+    "notes": [
+      "UNICEF, the World Organisation Against Torture and DCI-Palestine have all documented these practices as torture and cruel, inhuman or degrading treatment.",
+      "The UN Commission of Inquiry found in June 2026 that the targeting of children in Gaza was itself a genocidal act (§10.7)."
+    ]
+  },
+
+  "custody": {
+    "title": "Deaths in Israeli custody",
+    "lede": "Each figure is the floor established by a different body on a different date. None of them is an official Israeli count, because no official Israeli count is published.",
+    "ref": "§10.3, §10.3A, §10.4",
+    "counts": [
+      {
+        "label": "Sde Teiman alone",
+        "value": 36,
+        "atleast": true,
+        "period": "October 2023 – July 2024",
+        "date": "2024-07",
+        "source": "Human Rights Watch, B'Tselem, Israeli press"
+      },
+      {
+        "label": "All Israeli custody",
+        "value": 90,
+        "atleast": true,
+        "period": "since October 2023",
+        "date": "2025-11",
+        "source": "B'Tselem, November 2025"
+      },
+      {
+        "label": "All Israeli prisons and military detention",
+        "value": 98,
+        "atleast": true,
+        "period": "since 7 October 2023",
+        "date": "2026-09",
+        "source": "Physicians for Human Rights–Israel, September 2026",
+        "note": "The organisation states this is likely an undercount, because rights groups have been unable to locate hundreds of additional Gaza-war detainees."
+      }
+    ],
+    "prosecution": {
+      "case": "Thaer Abu Asab, Ketziot Prison, 18 November 2023",
+      "indicted": 12,
+      "questioned": 19,
+      "charge": "Reckless homicide, with aggravated assault and causing serious bodily harm; the shift commander and shift sergeant additionally charged with obstruction of justice",
+      "date": "1 September 2026",
+      "note": "One of only a small number of criminal cases brought over a Palestinian death in Israeli custody since 7 October 2023. The indictment records that the beating tore the walls of Abu Asab's heart and broke several ribs."
+    },
+    "finding": {
+      "body": "Francesca Albanese, UN Special Rapporteur",
+      "date": "23 March 2026",
+      "quote": "state doctrine",
+      "detail": "Presenting to the Human Rights Council's 61st session, she found that torture has become state doctrine in Israel, making Israeli prisons 'instruments of genocide and torture'."
+    },
+    "notes": [
+      "The Ketziot case is evidentially unusual: the primary evidence is the guards' own contemporaneous WhatsApp messages, written while they believed no outside party would see them.",
+      "B'Tselem, August 2024: 'Sde Teiman is only the tip of the iceberg: Israeli detention centres turned into a network of torture camps for Palestinians.'"
+    ]
+  },
+
+  "nuclear": {
+    "title": "The nuclear exception",
+    "lede": "One state in the region holds an undeclared arsenal, refuses inspection and is outside the treaty. The other is inside the treaty, inspected, sanctioned, and was bombed. Set side by side, the double standard is not an argument but a table.",
+    "ref": "§12.1–12.3, §8.5–8.6",
+    "source": "SIPRI; Federation of American Scientists; NPT and IAEA status; report §12 and §8",
+    "columns": [
+      { "key": "israel", "label": "Israel" },
+      { "key": "iran", "label": "Iran" }
+    ],
+    "rows": [
+      {
+        "label": "Estimated nuclear warheads",
+        "israel": "80–400",
+        "iran": "None assessed",
+        "israel_state": "exempt",
+        "iran_state": "constrained",
+        "detail": "Estimates by SIPRI, the Federation of American Scientists and academic specialists. Delivered by aircraft, Dolphin-class submarines and Jericho missiles; the first weapon is believed to have been operational by 1967."
+      },
+      {
+        "label": "Party to the Non-Proliferation Treaty",
+        "israel": "No",
+        "iran": "Yes",
+        "israel_state": "exempt",
+        "iran_state": "constrained",
+        "detail": "Israel is one of only four states outside the NPT, with India, Pakistan and North Korea, and the only state in the Middle East outside it."
+      },
+      {
+        "label": "IAEA inspections of its nuclear sites",
+        "israel": "No",
+        "iran": "Yes",
+        "israel_state": "exempt",
+        "iran_state": "constrained",
+        "detail": "Israel does not allow IAEA inspection of Dimona."
+      },
+      {
+        "label": "Signed the Comprehensive Test Ban Treaty",
+        "israel": "No",
+        "iran": "Not stated in this record",
+        "israel_state": "exempt",
+        "iran_state": "unknown",
+        "detail": "Israel has never signed the CTBT."
+      },
+      {
+        "label": "Sanctioned over its nuclear programme",
+        "israel": "No",
+        "iran": "Yes",
+        "israel_state": "exempt",
+        "iran_state": "constrained",
+        "detail": "Western states have sanctioned Iran for activities that have not produced a weapon, while tolerating an undeclared arsenal next door."
+      },
+      {
+        "label": "Bombed over its nuclear programme",
+        "israel": "No",
+        "iran": "Yes",
+        "israel_state": "exempt",
+        "iran_state": "constrained",
+        "detail": "The Twelve-Day War of June 2025 and the 2026 US–Israel war on Iran (§8.5–8.6)."
+      }
+    ],
+    "whistleblower": {
+      "name": "Mordechai Vanunu",
+      "detail": "Published photographic evidence of the programme in The Sunday Times on 5 October 1986. Kidnapped by Mossad in Rome on 30 September 1986, convicted of treason and espionage, sentenced to 18 years, 11 of them in solitary confinement. Restrictions on his movement and speech remain partially in force in 2026."
+    },
+    "notes": [
+      "Israel's policy of nuclear ambiguity was secured by a 1969 agreement between Richard Nixon and Golda Meir: the United States would stop pressing Israel to sign the NPT, in exchange for Israel not testing or acknowledging the arsenal.",
+      "The row marked 'not stated in this record' is left blank rather than filled from outside the report."
+    ]
+  },
+
+  "media": {
+    "title": "The coverage, and what it cost",
+    "lede": "The institutions that would not print the word while the events were happening have lost the audiences who watched the same events on their phones.",
+    "ref": "§15.9",
+    "source": "Reuters Institute Digital News Report 2026, 16 June 2026, surveying nearly 100,000 people across 48 markets; Novara Media, April 2026; Centre for Media Monitoring; Media Bias Meter, 'Framing Gaza', November 2025; BBC staff open letters, 2024–2025",
+    "trust": [
+      { "label": "Trust in news worldwide", "value": 37, "note": "The lowest since the series began in 2015." },
+      { "label": "Trust in news, United Kingdom", "value": 30, "note": "Down five points in a single year, and roughly twenty over the decade." },
+      { "label": "UK respondents avoiding the news at least some of the time", "value": 50 }
+    ],
+    "attribution": [
+      { "outlet": "BBC", "value": 50, "approx": true, "label": "Reports of Palestinian civilian casualties that do not name Israel as the perpetrator" },
+      { "outlet": "Al Jazeera", "value": 11, "label": "The same measure" }
+    ],
+    "words": [
+      { "label": "BBC uses of \"murder\" for Israeli deaths", "value": 220, "tone": "israeli" },
+      { "label": "BBC uses of \"murder\" for Palestinian deaths", "value": 1, "tone": "palestinian" },
+      { "label": "Times UK presenters shut down a genocide claim", "value": 100, "atleast": true, "tone": "israeli" },
+      { "label": "Times an Israeli official was challenged on their own ministers' statements", "value": 0, "tone": "palestinian" }
+    ],
+    "dissent": [
+      { "label": "BBC staff signing an open letter on the corporation's Gaza coverage, 2024", "value": 230, "atleast": true },
+      { "label": "And again in 2025", "value": 111 }
+    ],
+    "notes": [
+      "The word counts are the Centre for Media Monitoring's, across a full year of coverage; 'massacre' was applied to Israeli casualties 18 times more often than to Palestinian ones.",
+      "Media Bias Meter's 'Framing Gaza' study analysed 54,449 articles across eight Western outlets over 100 weeks and found the same asymmetry in framing and word choice.",
+      "The failure is not only framing: in 2024 The Jewish Chronicle published fabricated stories by a freelancer using the byline 'Elon Perry', retracted the material, and lost four columnists — Jonathan Freedland, David Aaronovitch, Hadley Freeman and David Baddiel — who resigned over its handling."
+    ]
+  },
+
+  "hate": {
+    "title": "Two monitored series, one axis",
+    "lede": "The report's own comparison: the antisemitic incident count Britain discusses, and the anti-Muslim incident count it does not.",
+    "ref": "§21.6, §22.1",
+    "source": "CST, Antisemitic Incidents Report 2025, 11 February 2026; Tell MAMA 2024 annual report; Home Office hate crime statistics, England and Wales, 2025",
+    "series": [
+      { "year": 2021, "cst": 2261, "tellmama": null },
+      { "year": 2022, "cst": 1662, "tellmama": 2382, "tellmama_estimate": true },
+      { "year": 2023, "cst": 4298, "tellmama": null },
+      { "year": 2024, "cst": 3556, "tellmama": 6313 },
+      { "year": 2025, "cst": 3700, "tellmama": null }
+    ],
+    "estimate_note": "Tell MAMA publishes an annual report rather than a continuous series, and the record carries only the 2024 total of 6,313 — the highest since the organisation was founded — together with its statement that this was a 165 per cent rise over two years. The 2022 bar is that statement solved backwards, and is drawn dashed for that reason.",
+    "shares": [
+      { "label": "Muslims as a share of religious-hate-crime victims", "value": 44, "period": "year ending March 2025", "source": "Home Office" },
+      { "label": "Muslim share of the population of England and Wales", "value": 7, "approx": true, "note": "Under 7 per cent." }
+    ],
+    "counts": [
+      { "label": "Rise in street-based threatening behaviour recorded by Tell MAMA", "value": 715, "unit": "%" },
+      { "label": "Rise in attacks on visibly Muslim individuals", "value": 103, "unit": "%" },
+      { "label": "Racially or religiously aggravated offences in August 2024", "value": 10097, "note": "The highest monthly figure ever recorded in England and Wales, after the far-right disorder that followed the Southport killings." },
+      { "label": "Anti-Muslim incidents reported to police", "value": 12.5, "unit": "%" }
+    ],
+    "notes": [
+      "CST's own analysis attributes the incident pattern to Israeli military action rather than to British policy: before October 2023 monthly totals above 200 had occurred only five times, 'each coinciding with past periods when Israel was at war', and the record annual total of 4,298 in 2023 preceded British recognition of Palestine by two years.",
+      "The Home Office's February 2026 protective-security settlement allocated up to £40 million to mosques, £28.4 million to the Jewish community grant administered by CST — later raised to £32.4 million — and £5 million to all other faiths. Of 510 mosque applications received between 1 July 2024 and 3 November 2025, 199 had been approved, 311 remained pending, and none had been rejected.",
+      "45.3 per cent of Muslim women report feeling unsafe on public transport, against an 8 per cent national average."
+    ]
+  },
+
+  "measures": {
+    "title": "States that have taken a restrictive measure",
+    "lede": "Arms restrictions and sanctions, counted by the date each was announced. The step is the count of states that have done at least one of the two.",
+    "ref": "§15.2–15.5",
+    "source": "Derived from the embargo tracker in long-record.json and the sanctions measures in world-positions.json, both of which carry the announcement date of each measure",
+    "ruptures": {
+      "states": ["South Africa", "Bolivia", "Colombia", "Honduras", "Belize", "Türkiye", "Jordan", "Bahrain", "Chad"],
+      "count": 9,
+      "note": "Severed or downgraded diplomatic relations since October 2023. The record names the states but does not date each rupture individually, so they are not plotted on the step; they are counted here instead."
+    },
+    "icc": {
+      "states": 125,
+      "note": "All 125 ICC member states are legally obliged to arrest Netanyahu and Gallant on their territory. That obligation is not a measure a state chose, so it is not counted in the step either."
+    },
+    "notes": [
+      "A state is counted once, on the date of its first measure; later measures by the same state do not raise the line.",
+      "The line counts states, not the weight of what they did: a full arms ban and a travel ban on two ministers each move it by one.",
+      "Undated ruptures and the ICC obligation are excluded from the step for the reasons given above, which means the line understates the number of states that have acted."
+    ]
+  }
+}

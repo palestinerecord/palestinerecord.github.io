@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="The Documented Record — Israel and the Occupied Territories, 1917–2026">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1220"/>
+      <stop offset="55%" stop-color="#0b0f17"/>
+      <stop offset="100%" stop-color="#141a2b"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d2534c"/>
+      <stop offset="50%" stop-color="#d9a441"/>
+      <stop offset="100%" stop-color="#4fae82"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#rule)"/>
+
+  <g transform="translate(72 92)">
+    <rect width="132" height="30" fill="#000000"/>
+    <rect y="30" width="132" height="30" fill="#ffffff"/>
+    <rect y="60" width="132" height="30" fill="#009736"/>
+    <path d="M0 0 L54 45 L0 90 Z" fill="#ee2a35"/>
+  </g>
+
+  <text x="72" y="234" font-family="Georgia, 'Times New Roman', serif" font-size="66" fill="#e9edf6">The Documented Record</text>
+  <text x="72" y="286" font-family="Helvetica, Arial, sans-serif" font-size="27" fill="#b9c2d4">Israel and the Occupied Territories &#183; 1917&#8211;2026</text>
+
+  <rect x="72" y="322" width="1056" height="1" fill="#2a3245"/>
+
+  <g font-family="Helvetica, Arial, sans-serif">
+    <text x="72" y="404" font-size="62" font-weight="bold" fill="#d2534c">73,670</text>
+    <text x="72" y="438" font-size="21" fill="#b9c2d4">killed in Gaza since 7 October 2023</text>
+
+    <text x="452" y="404" font-size="62" font-weight="bold" fill="#d9a441">20,179</text>
+    <text x="452" y="438" font-size="21" fill="#b9c2d4">of them children</text>
+
+    <text x="806" y="404" font-size="62" font-weight="bold" fill="#56a8e0">157</text>
+    <text x="806" y="438" font-size="21" fill="#b9c2d4">states recognising Palestine</text>
+  </g>
+
+  <rect x="72" y="486" width="1056" height="1" fill="#2a3245"/>
+  <text x="72" y="534" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#e9edf6">Every figure carries its source.</text>
+  <text x="72" y="570" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#7d879c">An interactive forensic survey &#183; 127 sections &#183; 94,098 words &#183; all sources linked</text>
+</svg>

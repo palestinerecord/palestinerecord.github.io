@@ -1,0 +1,1061 @@
+{
+ "meta": {
+  "note": "Figures curated from report-final.md. Each entry cites the report section it is drawn from and the original source named there.",
+  "source_document": "report-final.md"
+ },
+ "headline": [
+  {
+   "label": "Palestinians killed in Gaza",
+   "value": 73670,
+   "suffix": "+",
+   "note": "identified killed, Oct 2023 – Sept 2026",
+   "source": "Gaza MoH / OCHA",
+   "ref": "§6.3"
+  },
+  {
+   "label": "Children killed in Gaza",
+   "value": 20179,
+   "note": "~27% of all identified fatalities",
+   "source": "Gaza MoH / UN COI",
+   "ref": "§6.3"
+  },
+  {
+   "label": "Injured in Gaza",
+   "value": 174682,
+   "note": "cumulative recorded injuries",
+   "source": "Gaza MoH",
+   "ref": "§6.3"
+  },
+  {
+   "label": "Displaced in Gaza",
+   "value": 1900000,
+   "note": "83% of the population, repeatedly displaced",
+   "source": "UNRWA / OCHA",
+   "ref": "§6.3"
+  },
+  {
+   "label": "Killed in the West Bank",
+   "value": 1114,
+   "note": "including 238 children, since Oct 2023",
+   "source": "OCHA",
+   "ref": "§9.2"
+  },
+  {
+   "label": "Settler attacks recorded",
+   "value": 4554,
+   "note": "West Bank, since Oct 2023",
+   "source": "OCHA",
+   "ref": "§9.2"
+  },
+  {
+   "label": "Settlers in occupied territory",
+   "value": 700000,
+   "note": "West Bank and East Jerusalem",
+   "source": "UN Human Rights Council, 2026",
+   "ref": "§3.3"
+  },
+  {
+   "label": "States recognising Palestine",
+   "value": 157,
+   "suffix": " of 193",
+   "note": "81% of UN member states",
+   "source": "UN membership records",
+   "ref": "§15.1"
+  }
+ ],
+ "gaza_toll_estimates": {
+  "title": "Gaza death toll: competing estimates",
+  "subtitle": "Different methodologies, different totals. Ministry counts are identified-body counts; peer-reviewed and modelled estimates are higher.",
+  "ref": "§6.3",
+  "items": [
+   {
+    "source": "Gaza MoH (5 Sept 2026)",
+    "value": 73651,
+    "kind": "count"
+   },
+   {
+    "source": "Gaza MoH / WAFA (July 2026)",
+    "value": 73329,
+    "kind": "count"
+   },
+   {
+    "source": "UNICEF / UN (Feb 2026)",
+    "value": 71803,
+    "kind": "count"
+   },
+   {
+    "source": "OCHA cumulative (May 2026)",
+    "value": 75811,
+    "kind": "count"
+   },
+   {
+    "source": "Lancet Global Health (2025)",
+    "value": 75200,
+    "kind": "peer-reviewed"
+   },
+   {
+    "source": "Max Planck Institute (2025)",
+    "value": 78318,
+    "kind": "modelled"
+   },
+   {
+    "source": "Independent modelling (late 2025)",
+    "value": 100000,
+    "kind": "modelled"
+   },
+   {
+    "source": "Brown Costs of War (incl. indirect)",
+    "value": 186000,
+    "kind": "modelled"
+   }
+  ]
+ },
+ "pre2023_wars": {
+  "title": "Gaza military operations before 2023",
+  "ref": "§5.5",
+  "items": [
+   {
+    "operation": "Cast Lead",
+    "period": "Dec 2008 – Jan 2009",
+    "deaths": 1400,
+    "civilian_pct": 80,
+    "finding": "Goldstone Report — war crimes, possible crimes against humanity"
+   },
+   {
+    "operation": "Pillar of Defense",
+    "period": "Nov 2012",
+    "deaths": 165,
+    "civilian_pct": 70,
+    "finding": "OHCHR — IHL violations"
+   },
+   {
+    "operation": "Protective Edge",
+    "period": "Jul – Aug 2014",
+    "deaths": 2250,
+    "civilian_pct": 70,
+    "finding": "Schabas Commission — credible evidence of war crimes"
+   },
+   {
+    "operation": "Great March of Return",
+    "period": "Mar 2018 – Dec 2019",
+    "deaths": 214,
+    "civilian_pct": 100,
+    "finding": "UN COI — possible crimes against humanity"
+   },
+   {
+    "operation": "Guardian of the Walls",
+    "period": "May 2021",
+    "deaths": 260,
+    "civilian_pct": 75,
+    "finding": "Multiple IHL violations documented"
+   },
+   {
+    "operation": "Breaking Dawn",
+    "period": "Aug 2022",
+    "deaths": 49,
+    "civilian_pct": 70,
+    "finding": "IHL violations documented"
+   },
+   {
+    "operation": "Gaza 2023–2026",
+    "period": "Oct 2023 – Sept 2026",
+    "deaths": 73670,
+    "civilian_pct": 70,
+    "finding": "UN COI — genocide; ICC warrants; ICJ plausible-risk order"
+   }
+  ]
+ },
+ "protected_categories": {
+  "title": "Protected persons killed in Gaza",
+  "subtitle": "Categories granted specific protection under international humanitarian law.",
+  "ref": "§6.3",
+  "items": [
+   {
+    "label": "Children",
+    "value": 20179,
+    "source": "Gaza MoH / UN COI"
+   },
+   {
+    "label": "Women",
+    "value": 12500,
+    "source": "Gaza MoH"
+   },
+   {
+    "label": "Medical personnel",
+    "value": 1701,
+    "source": "WHO / Gaza MoH"
+   },
+   {
+    "label": "Aid workers",
+    "value": 589,
+    "source": "OHCHR, April 2026"
+   },
+   {
+    "label": "UN staff",
+    "value": 397,
+    "source": "OHCHR — highest in UN history"
+   },
+   {
+    "label": "Journalists",
+    "value": 262,
+    "source": "Gaza MoH / CPJ"
+   },
+   {
+    "label": "Civil defence",
+    "value": 140,
+    "source": "Gaza Civil Defence"
+   }
+  ]
+ },
+ "oct7": {
+  "title": "7 October 2023: the documented breakdown",
+  "subtitle": "The report applies identical evidentiary standards to all actors. These are the verified Israeli figures.",
+  "ref": "§18.1",
+  "items": [
+   {
+    "label": "Israeli civilians",
+    "value": 695
+   },
+   {
+    "label": "IDF soldiers",
+    "value": 283
+   },
+   {
+    "label": "Foreign nationals",
+    "value": 71
+   },
+   {
+    "label": "Israel Police officers",
+    "value": 57
+   },
+   {
+    "label": "Shin Bet personnel",
+    "value": 10
+   }
+  ],
+  "total": 1139,
+  "total_note": "Israel's National Insurance Institute (Dec 2023), revised down from the initial IDF claim of ~1,400",
+  "hostages": {
+   "taken": 251,
+   "living_at_ceasefire": 20,
+   "remains_recovered": 28
+  }
+ },
+ "nakba": {
+  "title": "The Nakba, 1948: the quantitative record",
+  "ref": "§2.3",
+  "items": [
+   {
+    "label": "Palestinians expelled or forced to flee",
+    "value": 750000,
+    "note": "over half the Arab population"
+   },
+   {
+    "label": "Palestinian villages destroyed",
+    "value": 530
+   },
+   {
+    "label": "Towns and cities depopulated",
+    "value": 11
+   },
+   {
+    "label": "Documented massacres",
+    "value": 30,
+    "suffix": "+"
+   },
+   {
+    "label": "Percentage of historic Palestine seized",
+    "value": 78,
+    "unit": "%"
+   },
+   {
+    "label": "Registered refugee descendants today",
+    "value": 6000000,
+    "suffix": "+",
+    "note": "UNRWA registered"
+   },
+   {
+    "label": "Years the right of return has been blocked",
+    "value": 78,
+    "note": "UNGA 194 (1948) — 2026"
+   }
+  ]
+ },
+ "land_transfer": {
+  "title": "The legal machinery of transfer: how expulsion became title",
+  "ref": "§2.4",
+  "source": "Absentees' Property Law 5710-1950 (Adalah Discriminatory Laws Database); Development Authority (Transfer of Property) Law 5710-1950 (UNCCP, UNISPAL); Land Acquisition (Validation of Acts and Compensation) Law 5713-1953; BADIL; Norwegian Refugee Council",
+  "statutes": [
+   {
+    "year": 1948,
+    "date": "2 December 1948",
+    "name": "Emergency Regulations on Property of Absentees",
+    "effect": "Promulgated while the expulsions were still in progress. Vests the property of anyone classed 'absent' in a state Custodian."
+   },
+   {
+    "year": 1950,
+    "date": "14 March 1950",
+    "name": "Absentees' Property Law, 5710-1950",
+    "effect": "Converts the emergency regulations into permanent statute. Retroactive to 29 November 1947, before the war. Defines 'absentee' by mere physical presence in Lebanon, Egypt, Syria, Saudi Arabia, Trans-Jordan, Iraq, Yemen or non-Israeli-held Palestine. Still in force in 2026: the 1948 state of emergency has never been lifted."
+   },
+   {
+    "year": 1950,
+    "date": "9 August 1950",
+    "name": "Development Authority (Transfer of Property) Law, 5710-1950",
+    "effect": "Supplies the disposal power the Custodian lacked. Onward sale restricted to the State, the Jewish National Fund, an institution for the settlement of landless Arabs, or a local authority, with a JNF right of first refusal. The UNCCP called the two statutes 'the two shutters of a legal diptych'."
+   },
+   {
+    "year": 1953,
+    "date": "10 March 1953",
+    "name": "Land Acquisition (Validation of Acts and Compensation) Law, 5713-1953",
+    "effect": "Confers clean title retroactively, validating takings that were unlawful when carried out, on a written certificate of the Minister of Finance that no court may review (rulings of 1954 and 1981). No hearing before confiscation, no notification after. Reaches the property of Israeli citizens."
+   }
+  ],
+  "jnf_holdings": [
+   {
+    "label": "JNF holdings, 1941 baseline",
+    "value": 600000,
+    "unit": "dunams",
+    "note": "purchased on the open market over five decades"
+   },
+   {
+    "label": "Acquired from the state, January 1949",
+    "value": 1000000,
+    "unit": "dunams",
+    "note": "refugee land, via the Development Authority"
+   },
+   {
+    "label": "Acquired from the state, October 1950",
+    "value": 1270000,
+    "unit": "dunams",
+    "note": "refugee land, via the Development Authority"
+   }
+  ],
+  "items": [
+   {
+    "label": "Transferred to the JNF in two tranches, 1949–1950",
+    "value": 2400000,
+    "unit": "dunams",
+    "note": "more than trebled JNF holdings against 1941"
+   },
+   {
+    "label": "JNF holdings after transfer",
+    "value": 2500000,
+    "unit": "dunams",
+    "note": "~13% of all land inside pre-1967 Israel"
+   },
+   {
+    "label": "Share of JNF land confiscated from Palestinians",
+    "value": 70,
+    "unit": "%",
+    "suffix": "+",
+    "note": "from refugees and Palestinian citizens of Israel"
+   },
+   {
+    "label": "Classified as absentee land by 1954",
+    "value": 4500000,
+    "suffix": "+",
+    "unit": "dunams"
+   },
+   {
+    "label": "Expropriated under the 1953 Land Acquisition Law",
+    "value": 1250000,
+    "unit": "dunams",
+    "note": "consensus range 1.2–1.3 million"
+   },
+   {
+    "label": "Towns and villages stripped under the 1953 law",
+    "value": 349,
+    "note": "plus the built-up areas of some 68 further villages"
+   },
+   {
+    "label": "Years the statute has been in force",
+    "value": 76,
+    "note": "1950–2026; the Custodian is an operating office of the Ministry of Finance"
+   }
+  ],
+  "notes": [
+   "The definition of 'absentee' turns on presence, not intention. A landowner who spent a week in a neighbouring village while his own was attacked satisfies it.",
+   "The breadth of the definition produced 'present absentees' (nifkadim nokhahim): Palestinians displaced inside the territory that became Israel, who never left the country, returned within weeks and became Israeli citizens, but whose homes remain vested in the Custodian on the legal fiction that they are absent from them. Israel has never established a registration system for them.",
+   "In Jabareen v. State of Israel (CA 4067/07), descendants of the destroyed village of al-Lajun challenged the expropriation of land taken from roughly 34,000 dunams by notice of Finance Minister Levi Eshkol on 15 November 1953, on the statutory ground that it was needed for 'settlement needs'. No settlement was built; a forest was planted on it. The claim failed.",
+   "The UN Conciliation Commission for Palestine valued the property as a quantifiable debt. Its land specialist John Berncastle produced working paper A/AC.25/W/63 on 1 May 1951, and the Commission held that the value of the abandoned Arab property 'constituted a debt by the Government of Israel to the refugees'. No compensation settlement has been concluded in the 75 years since.",
+   "After 1967 the statute was applied to East Jerusalem property owned by West Bank residents: people who had not moved, but whose property Israel's own unilateral boundary change had brought inside Jerusalem. A ministerial committee attended by two ministers 'clarified' the Custodian's full Article 19 powers over it in June 2004."
+  ],
+  "supreme_court_2015": {
+   "case": "Custodian of Absentees' Property et al. v. Daqaq Nuha et al., CA 2250/06 (heard with HCJ 5931/06)",
+   "date": "15 April 2015",
+   "bench": "Seven justices, President Asher Grunis presiding",
+   "holding": "The Absentees' Property Law does apply to East Jerusalem property owned by West Bank Palestinians. Prospectively confined to the 'rarest of rare cases', requiring the personal authorisation of the Attorney General together with a decision of the government or a ministerial committee. Expropriations already carried out were in substance validated.",
+   "grunis_note": "President Grunis observed that Israeli settlers resident in the West Bank fall within the literal definition of 'absentee' in respect of property they own inside Israel, that the law has never once been applied to them, and called the asymmetry \"absurd\".",
+   "adalah_response": "The Court's decision has validated one of Israel's most racist and arbitrary laws, and has given the green light for the application of arbitrary codes on occupied land and its population."
+  }
+ },
+ "settlements": {
+  "title": "The settlement enterprise",
+  "ref": "§3.3",
+  "population": [
+   {
+    "label": "West Bank (excl. East Jerusalem)",
+    "value": 529455
+   },
+   {
+    "label": "East Jerusalem",
+    "value": 246000
+   }
+  ],
+  "items": [
+   {
+    "label": "Settlements and outposts",
+    "value": 210,
+    "note": "up 50% since 2022"
+   },
+   {
+    "label": "New illegal outposts in 2024",
+    "value": 84,
+    "note": "record high"
+   },
+   {
+    "label": "New settlements approved by current coalition",
+    "value": 103,
+    "note": "vs 6 in 30 years of Oslo"
+   },
+   {
+    "label": "Approved in a single cabinet session (Apr 2026)",
+    "value": 34,
+    "note": "record for one session"
+   },
+   {
+    "label": "Housing units advanced, East Jerusalem (12mo to Oct 2025)",
+    "value": 36973
+   },
+   {
+    "label": "Housing units advanced, West Bank (12mo to Oct 2025)",
+    "value": 27200
+   },
+   {
+    "label": "Dunams declared \"State Land\" in 2024",
+    "value": 24258,
+    "note": "~half of all such declarations since Oslo"
+   }
+  ],
+  "oslo_comparison": [
+   {
+    "label": "Approved in 30 years of Oslo",
+    "value": 6
+   },
+   {
+    "label": "Approved by the current coalition",
+    "value": 103
+   }
+  ]
+ },
+ "infrastructure_report": {
+  "title": "Infrastructure destroyed in Gaza",
+  "subtitle": "Proportion of each category destroyed or damaged, Oct 2023 – May 2026.",
+  "ref": "Appendix E",
+  "items": [
+   {
+    "label": "Universities",
+    "pct": 100,
+    "detail": "12 of 12 destroyed or damaged"
+   },
+   {
+    "label": "University buildings",
+    "pct": 90,
+    "detail": "90%+ damaged or destroyed"
+   },
+   {
+    "label": "Schools",
+    "pct": 90,
+    "detail": "90%+ damaged or destroyed"
+   },
+   {
+    "label": "Hospitals (major)",
+    "pct": 100,
+    "detail": "all 36 attacked; ~half completely destroyed"
+   },
+   {
+    "label": "Health centres / clinics",
+    "pct": 84,
+    "detail": "84% destroyed or damaged"
+   },
+   {
+    "label": "Mosques",
+    "pct": 83,
+    "detail": "~1,000 of 1,200 destroyed"
+   },
+   {
+    "label": "Bakeries",
+    "pct": 70,
+    "detail": "70%+ destroyed"
+   },
+   {
+    "label": "Water and sanitation",
+    "pct": 70,
+    "detail": "~70% destroyed"
+   },
+   {
+    "label": "Electricity infrastructure",
+    "pct": 80,
+    "detail": "~80% destroyed"
+   },
+   {
+    "label": "Solid waste management",
+    "pct": 60,
+    "detail": "~60% destroyed"
+   }
+  ],
+  "heritage": [
+   {
+    "label": "Cultural heritage sites (UNESCO-verified)",
+    "value": 164
+   },
+   {
+    "label": "Historical monuments, Old City of Gaza",
+    "value": 144
+   },
+   {
+    "label": "Churches damaged or destroyed",
+    "value": 3,
+    "note": "incl. St Porphyrius, 5th century"
+   }
+  ]
+ },
+ "recognition": {
+  "title": "International recognition of Palestine",
+  "ref": "§15.1",
+  "recognise": 157,
+  "do_not_recognise": 36,
+  "total": 193,
+  "g20_recognise": 14,
+  "g20_total": 19
+ },
+ "opinion": {
+  "title": "Public opinion has moved ahead of government policy",
+  "ref": "§15.10–15.11",
+  "uk": {
+   "poll": "YouGov for Caabu, 2–3 July 2026, n=2,125 GB adults",
+   "items": [
+    {
+     "label": "Israel is committing genocide in Gaza",
+     "agree": 50,
+     "disagree": 17
+    },
+    {
+     "label": "UK should no longer consider Israel an ally",
+     "agree": 55,
+     "disagree": 15
+    },
+    {
+     "label": "Support a settlement trade ban",
+     "agree": 48,
+     "disagree": null
+    },
+    {
+     "label": "2024 Labour voters: support settlement trade ban",
+     "agree": 62,
+     "disagree": null
+    },
+    {
+     "label": "2024 Labour voters: suspend arms sales",
+     "agree": 72,
+     "disagree": null
+    }
+   ]
+  },
+  "us": {
+   "poll": "Pew Research (April 2026); Gallup (February 2026)",
+   "items": [
+    {
+     "label": "Unfavourable view of Israel",
+     "agree": 60,
+     "disagree": 37,
+     "note": "lowest favourability Pew has recorded; ~20pt swing since 2022"
+    },
+    {
+     "label": "Back Israel's military operations in Gaza",
+     "agree": 32,
+     "disagree": null,
+     "note": "record low (Gallup)"
+    }
+   ]
+  }
+ },
+ "starvation": {
+  "title": "Starvation and siege",
+  "ref": "§6.3 (Act c)",
+  "items": [
+   {
+    "label": "Starvation deaths recorded",
+    "value": 440,
+    "note": "including 147 children, by Sept 2025 — a significant undercount",
+    "source": "IPC / Gaza MoH"
+   },
+   {
+    "label": "Facing severe hunger",
+    "value": 1600000,
+    "source": "IPC"
+   },
+   {
+    "label": "Displaced",
+    "value": 1900000,
+    "note": "83% of the population",
+    "source": "UNRWA"
+   }
+  ]
+ },
+ "detention": {
+  "title": "Detention",
+  "ref": "Part X",
+  "items": [
+   {
+    "label": "Palestinians held",
+    "value": 15000,
+    "note": "peak figure during the war"
+   },
+   {
+    "label": "Serving life sentences",
+    "value": 250
+   },
+   {
+    "label": "Deaths in Israeli custody since Oct 2023",
+    "value": 98,
+    "source": "Physicians for Human Rights–Israel"
+   }
+  ]
+ },
+ "uk_antisemitism": {
+  "title": "Antisemitic incidents in the UK, and what the series tracks",
+  "ref": "§21.6",
+  "source": "CST, Antisemitic Incidents Report 2025 (11 February 2026)",
+  "series": [
+   {
+    "year": "2021",
+    "value": 2261
+   },
+   {
+    "year": "2022",
+    "value": 1662
+   },
+   {
+    "year": "2023",
+    "value": 4298,
+    "note": "Record annual total. UK still opposed recognition of Palestine."
+   },
+   {
+    "year": "2024",
+    "value": 3556
+   },
+   {
+    "year": "2025",
+    "value": 3700,
+    "note": "Second-highest ever. UK recognised Palestine on 21 September 2025."
+   }
+  ],
+  "monthly_average": [
+   {
+    "label": "Year before 7 October 2023",
+    "value": 154
+   },
+   {
+    "label": "2025",
+    "value": 308
+   }
+  ],
+  "notes": [
+   "For the first time, CST recorded more than 200 incidents in every calendar month of 2025.",
+   "Before October 2023, monthly totals above 200 had occurred only five times, “each coinciding with past periods when Israel was at war” (CST).",
+   "Worst month of 2025: October, 463 incidents.",
+   "A further 3,001 reports in 2025 were assessed by CST and excluded as not antisemitic, a category CST describes as including “anti-Israel activity without antisemitic language, motivation or targeting”."
+  ],
+  "security_funding": {
+   "title": "Home Office protective security for faith sites, 2026/27",
+   "ref": "§21.6, §22",
+   "source": "Home Office, “Record funding to protect faith communities”, 19 February 2026",
+   "total_m": 73.4,
+   "items": [
+    {
+     "label": "Protective Security for Mosques Scheme",
+     "value": 40.0,
+     "note": "Mosques, Muslim faith schools and community centres"
+    },
+    {
+     "label": "Jewish Community Protective Security Grant",
+     "value": 28.4,
+     "note": "Administered by CST; raised to £32.4m with a further £4m in May 2026"
+    },
+    {
+     "label": "Places of Worship Protective Security Scheme",
+     "value": 5.0,
+     "note": "All other faiths"
+    }
+   ],
+   "context": [
+    "45% of recorded religious hate crimes in the 2025 England and Wales figures targeted Muslims.",
+    "Of 510 mosque applications received between 1 July 2024 and 3 November 2025, 199 were approved, 311 remained pending and none was formally rejected (disclosed August 2026 after an Information Commissioner’s Office ruling).",
+    "Dr Naomi Green, deputy secretary general of the Muslim Council of Britain: “this scheme is not fit for purpose”."
+   ]
+  }
+ },
+ "definitions": {
+  "title": "The definition, the declaration and the law",
+  "ref": "§21.2, §21.7",
+  "lede": "Three documents claim to define antisemitism, fifty-nine Jewish organisations have declared anti-Zionism to be an instance of it, and one appellate court has decided the question the other way. The dashboard holds all four records because the report does.",
+  "j50": {
+   "title": "The J50 Declaration on Zionism and Antisemitism",
+   "date": "11 September 2026",
+   "place": "Jerusalem",
+   "source": "J50 Declaration on Zionism and Antisemitism, issued on the eve of Rosh Hashanah 5787 and published by the European Jewish Congress",
+   "url": "https://eurojewcong.org/wp-content/uploads/2026/09/J50-Declaration-of-Zionism-and-Antisemitism-rev-1.pdf",
+   "operative": "Anti-Zionism, as manifested today through efforts to deny the Jewish people their right to self-determination, or demand that Jews renounce Zionism as the price of acceptance in political, academic, professional, or cultural life, is antisemitic.",
+   "closing": "Zionism is part of Jewish identity. We will not allow others to define it for us.",
+   "totals": {
+    "global": 7,
+    "national": 52,
+    "countries": 40,
+    "total": 59
+   },
+   "global_orgs": [
+    "Conference of Presidents of Major American Jewish Organizations",
+    "Anti-Defamation League, ADL",
+    "American Jewish Committee, AJC",
+    "B'nai B'rith International",
+    "World Jewish Congress",
+    "European Jewish Congress, EJC",
+    "Conference of European Rabbis, CER"
+   ],
+   "countries": [
+    {
+     "name": "Argentina",
+     "orgs": [
+      "Representación Política de la Comunidad Judía Argentina, DAIA"
+     ]
+    },
+    {
+     "name": "Australia",
+     "orgs": [
+      "Executive Council of Australian Jewry, ECAJ"
+     ]
+    },
+    {
+     "name": "Austria",
+     "orgs": [
+      "Jewish Community of Vienna"
+     ]
+    },
+    {
+     "name": "Azerbaijan",
+     "orgs": [
+      "Sephardi Jewish Community of Azerbaijan"
+     ]
+    },
+    {
+     "name": "Belgium",
+     "orgs": [
+      "Antwerp Jewish Community",
+      "Forum der Joodse Organisaties and Hidden Children",
+      "Joods Informatie- en Documentatiecentrum, JID"
+     ]
+    },
+    {
+     "name": "Bosnia and Herzegovina",
+     "orgs": [
+      "Jewish Community of Bosnia and Herzegovina"
+     ]
+    },
+    {
+     "name": "Brazil",
+     "orgs": [
+      "Confederação Israelita do Brasil, CONIB"
+     ]
+    },
+    {
+     "name": "Bulgaria",
+     "orgs": [
+      "Organization of Jews in Bulgaria"
+     ]
+    },
+    {
+     "name": "Canada",
+     "orgs": [
+      "Center for Israel and Jewish Affairs, CIJA",
+      "B'nai B'rith Canada"
+     ]
+    },
+    {
+     "name": "Chile",
+     "orgs": [
+      "Jewish Community of Chile"
+     ]
+    },
+    {
+     "name": "Colombia",
+     "orgs": [
+      "Confederation of Jewish Communities of Colombia"
+     ]
+    },
+    {
+     "name": "Cyprus",
+     "orgs": [
+      "Jewish Community of Cyprus"
+     ]
+    },
+    {
+     "name": "Czech Republic",
+     "orgs": [
+      "Federation of Jewish Communities"
+     ]
+    },
+    {
+     "name": "Denmark",
+     "orgs": [
+      "Jewish Community of Denmark"
+     ]
+    },
+    {
+     "name": "Estonia",
+     "orgs": [
+      "Jewish Community of Estonia"
+     ]
+    },
+    {
+     "name": "Finland",
+     "orgs": [
+      "Central Council of Jewish Communities in Finland",
+      "Jewish Community of Helsinki"
+     ]
+    },
+    {
+     "name": "France",
+     "orgs": [
+      "Conseil Représentatif des Institutions Juives de France, CRIF"
+     ]
+    },
+    {
+     "name": "Germany",
+     "orgs": [
+      "Central Council of Jews in Germany"
+     ]
+    },
+    {
+     "name": "Greece",
+     "orgs": [
+      "Jewish Community of Athens"
+     ]
+    },
+    {
+     "name": "Hungary",
+     "orgs": [
+      "Action and Protection League, Budapest",
+      "Autonomous Orthodox Jewish Communities"
+     ]
+    },
+    {
+     "name": "Ireland",
+     "orgs": [
+      "The Jewish Representative Council of Ireland"
+     ]
+    },
+    {
+     "name": "Italy",
+     "orgs": [
+      "Unione delle Comunità Ebraiche Italiane, UCEI"
+     ]
+    },
+    {
+     "name": "Latvia",
+     "orgs": [
+      "Jewish Community of Latvia"
+     ]
+    },
+    {
+     "name": "Moldova",
+     "orgs": [
+      "Jewish Community of the Republic of Moldova"
+     ]
+    },
+    {
+     "name": "Netherlands",
+     "orgs": [
+      "Central Jewish Board, CJO"
+     ]
+    },
+    {
+     "name": "New Zealand",
+     "orgs": [
+      "New Zealand Jewish Council"
+     ]
+    },
+    {
+     "name": "Norway",
+     "orgs": [
+      "National Council for Jewish Communities"
+     ]
+    },
+    {
+     "name": "Poland",
+     "orgs": [
+      "Michael Schudrich, Chief Rabbi of Poland"
+     ]
+    },
+    {
+     "name": "Portugal",
+     "orgs": [
+      "B'nai B'rith International Portugal",
+      "Comunidade Israelita de Lisboa, CIL",
+      "Holocaust Museum of Porto",
+      "Oporto Jewish Community"
+     ]
+    },
+    {
+     "name": "Russia",
+     "orgs": [
+      "Russian Jewish Congress"
+     ]
+    },
+    {
+     "name": "Serbia",
+     "orgs": [
+      "Jewish Community of Serbia"
+     ]
+    },
+    {
+     "name": "Slovenia",
+     "orgs": [
+      "Jewish Association of Slovenia"
+     ]
+    },
+    {
+     "name": "South Africa",
+     "orgs": [
+      "South African Jewish Board of Deputies, SAJBD"
+     ]
+    },
+    {
+     "name": "Spain",
+     "orgs": [
+      "Action and Communication on the Middle East, ACOM",
+      "Comunitat Jueva de Barcelona",
+      "Fundación Hispano Judía",
+      "Federation of Jewish Communities of Spain"
+     ]
+    },
+    {
+     "name": "Sweden",
+     "orgs": [
+      "Council of Swedish Jewish Communities"
+     ]
+    },
+    {
+     "name": "Switzerland",
+     "orgs": [
+      "Swiss Federation of Jewish Communities"
+     ]
+    },
+    {
+     "name": "Ukraine",
+     "orgs": [
+      "Traditional Jewish Community"
+     ]
+    },
+    {
+     "name": "United Kingdom",
+     "orgs": [
+      "The Board of Deputies of British Jews, BoD",
+      "Jewish Leadership Council, JLC"
+     ]
+    },
+    {
+     "name": "United States",
+     "orgs": [
+      "Jewish Federations of North America, JFNA"
+     ]
+    },
+    {
+     "name": "Uruguay",
+     "orgs": [
+      "Uruguay Jewish Community"
+     ]
+    }
+   ],
+   "forum": {
+    "label": "The J50 Forum",
+    "note": "Established by Foreign Minister Gideon Sa’ar in May 2025 and convened by Israel’s Ministry of Foreign Affairs. Its third meeting was held in Jerusalem on 1 September 2026, chaired by William Daroff of the Conference of Presidents, with 59 senior representatives present; the agenda included “attempts to impose sanctions on Israel”.",
+    "source": "Israel Ministry of Foreign Affairs; JNS, 1 September 2026"
+   },
+   "notes": [
+    "Seven global and regional organisations signed, together with fifty-two national and community organisations across forty countries: fifty-nine signatories in total, the same number as the representatives at the forum of 1 September 2026.",
+    "The declaration reaffirms the IHRA working definition but reproduces neither of its two limiting clauses: that an example counts only “depending on the overall context”, and that “criticism of Israel similar to that levelled against any other country cannot be regarded as antisemitic”.",
+    "Two of the signatories, the Board of Deputies of British Jews and the Jewish Leadership Council, are British; the legal record below is the law of their jurisdiction.",
+    "A text declaring that Jews “will not allow others to define” Zionism was drafted through a forum established and hosted by a state’s foreign ministry."
+   ]
+  },
+  "frameworks": [
+   {
+    "name": "IHRA Working Definition of Antisemitism",
+    "date": "26 May 2016",
+    "by": "International Holocaust Remembrance Alliance plenary, Bucharest",
+    "holds": "A non-legally-binding working definition with eleven illustrative examples, seven of which concern Israel. Two clauses limit them: an example counts only “depending on the overall context”, and criticism of Israel “similar to that levelled against any other country cannot be regarded as antisemitic”.",
+    "adopted": "Adopted or endorsed by some 29 states and by both major British parties.",
+    "note": "Its lead drafter, Kenneth Stern, has testified against its use as a campus speech code, telling the US Senate Judiciary Committee on 17 September 2024 that it was written to help data collectors, not to police speech."
+   },
+   {
+    "name": "Jerusalem Declaration on Antisemitism",
+    "date": "25 March 2021",
+    "by": "Van Leer Jerusalem Institute; some 200 scholars of antisemitism, Jewish studies and Holocaust history",
+    "holds": "A core definition plus fifteen guidelines. Criticism of Zionism as a form of nationalism, and support for boycott, divestment and sanctions, are “not, in and of themselves, antisemitic”; evidence of antisemitism must be shown, not presumed from the target.",
+    "adopted": "Used by universities and unions as an alternative or supplement to IHRA.",
+    "note": "Drafted expressly as a corrective to the IHRA examples that its signatories judged too vague to apply consistently."
+   },
+   {
+    "name": "Nexus Document",
+    "date": "February 2021, revised June 2024",
+    "by": "A thirteen-member task force convened by the Center for the Study of Hate at Bard College, Kenneth Stern’s centre",
+    "holds": "It is antisemitic to oppose the existence of Israel “solely because it is a Jewish state”; but “paying disproportionate attention to Israel and treating Israel differently than other countries is not prima facie proof of antisemitism”.",
+    "adopted": "Cited in US policy debate; adopted by no state.",
+    "note": "Written by the institutional home of the IHRA definition’s own lead drafter."
+   }
+  ],
+  "law": [
+   {
+    "case": "University of Bristol v Dr David Miller",
+    "citation": "[2026] EAT 84 (EA-2024-000324-RS)",
+    "court": "Employment Appeal Tribunal",
+    "date": "4 August 2026",
+    "holds": "Eight of the university’s nine grounds of appeal were rejected. The Bristol employment tribunal’s decision of 6 February 2024 stands: Miller’s anti-Zionist belief satisfies the Grainger criteria and is a protected philosophical belief under s. 10 of the Equality Act 2010, and his dismissal for manifesting it was direct discrimination under s. 13.",
+    "note": "Lord Fairley KC presiding, with Nick Aziz and Dr Gillian Smith MBE. The protected belief was the bounded formulation Miller advanced, not anti-Zionism at large; Jonathan Turner of UK Lawyers for Israel, for the intervener, noted that the judgment “does not mean that all manifestations of anti-Zionism are protected”. Miller’s compensation was reduced by 50 per cent for contributory conduct."
+   },
+   {
+    "case": "Fraser v University and College Union",
+    "citation": "[2013] ET/2203390/2011",
+    "court": "Employment Tribunal",
+    "date": "22 March 2013",
+    "holds": "The claim that the union’s Israel-related activity amounted to institutional antisemitic harassment failed in every particular. The tribunal held that a belief in the Zionist project is a political belief, not a protected characteristic, and criticised the attempt to litigate it.",
+    "note": "The mirror of Miller: the first British case to hold that attachment to Zionism is politics rather than a protected characteristic."
+   }
+  ],
+  "dissent": [
+   {
+    "org": "Jewish Voice for Peace",
+    "where": "United States",
+    "position": "Describes itself as the largest anti-Zionist Jewish organisation in the world and “unequivocally reject[s] the conflation” of anti-Zionism with antisemitism; filed amicus briefs to the District Court of Massachusetts in June 2025."
+   },
+   {
+    "org": "Independent Jewish Voices",
+    "where": "Canada",
+    "position": "Adopted an explicitly anti-Zionist position by its steering committee on 15 January 2024, ratified by the membership in June 2024."
+   },
+   {
+    "org": "Jewish Council of Australia",
+    "where": "Australia",
+    "position": "Submitted to Australia’s Royal Commission into Antisemitism and Social Cohesion in June 2026 that “definitions that treat criticism of Israel as antisemitic do not make Jews safer and actually make things worse” (§21.5)."
+   }
+  ],
+  "counter": [
+   "A Jewish Majority poll of February 2025 found that about 70 per cent of American Jews regard anti-Zionism as a form of antisemitism; the declaration’s claim to speak for a majority view is not invented.",
+   "The ADL’s argument is that a rule distinguishing anti-Zionism from antisemitism “gives cover to antisemites” who have learned to phrase the old hostility in the new vocabulary.",
+   "The IHRA definition has been adopted or endorsed by some 29 states and by both major British parties; it is the mainstream instrument, not a fringe one.",
+   "In the one jurisdiction where the question has been litigated to appellate level, it has been decided the other way."
+  ]
+ }
+}

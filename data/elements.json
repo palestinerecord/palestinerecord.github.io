@@ -1,0 +1,925 @@
+{
+ "meta": {
+  "title": "The elements, the instruments and the states",
+  "description": "Three structured views of the legal record: the elements of each crime set against the evidence that supplies them, the instruments the findings rest on, and what each state has done since the duty to prevent was triggered.",
+  "compiled": "2026-09-12",
+  "note": "Every cell is drawn from report-final.md and carries the section it came from. Nothing here is inferred beyond what the report states."
+ },
+ "matrices": [
+  {
+   "id": "genocide",
+   "title": "Genocide Convention, Article II",
+   "instrument": "Convention on the Prevention and Punishment of the Crime of Genocide (1948), Article II",
+   "quote": "In the present Convention, genocide means any of the following acts committed with intent to destroy, in whole or in part, a national, ethnical, racial or religious group, as such:",
+   "lede": "Article II lists five acts. A finding of genocide requires one of them, committed with the specific intent the chapeau describes. Each row below is one act, set against what the record counts, who has found it, and what was said at the time by people with the authority to order it.",
+   "columns": [
+    {
+     "id": "record",
+     "label": "What the record counts",
+     "blurb": "The figure, and the chart that plots it."
+    },
+    {
+     "id": "finding",
+     "label": "Who has found it",
+     "blurb": "The court, inquiry or mandated body that has made the finding on this element."
+    },
+    {
+     "id": "intent",
+     "label": "What was said",
+     "blurb": "The contemporaneous statement by a person in authority that speaks to the element."
+    }
+   ],
+   "rows": [
+    {
+     "key": "(a)",
+     "title": "Killing members of the group",
+     "ref": "§6.3",
+     "cells": {
+      "record": {
+       "text": "73,651 identified killed by 5 September 2026, of whom the Commission of Inquiry counted 20,179 children in the first two years alone — roughly 30 per cent of all fatalities, against about 24 per cent in the 2008–09 and 2014 Gaza conflicts. The Lancet’s capture–recapture survey put violent deaths 34.7 per cent above the Ministry count for the same window.",
+       "ref": "§6.3",
+       "chart": "gaza-monthly",
+       "chapter": "gaza"
+      },
+      "finding": {
+       "text": "International Court of Justice, 26 January 2024: a plausible risk of genocide, with binding provisional measures under Article 41 of the Statute. UN Commission of Inquiry, 16 September 2025 and again on 23 June 2026 on the targeting of children.",
+       "ref": "§15.8",
+       "chart": "findings-time",
+       "route": "#/legal"
+      },
+      "intent": {
+       "text": "Defence Minister Yoav Gallant, 9 October 2023: “We are fighting human animals, and we are acting accordingly.” Major General Ghassan Alian, head of COGAT, the next day: “Human animals must be treated as such… You wanted hell, you will get hell.”",
+       "ref": "§6.2",
+       "route": "#/statements"
+      }
+     }
+    },
+    {
+     "key": "(b)",
+     "title": "Causing serious bodily or mental harm to members of the group",
+     "ref": "§6.3",
+     "cells": {
+      "record": {
+       "text": "174,575 injured as of September 2026, in a health system with 19 of 36 hospitals even partially functional. More than 20,000 amputees, including thousands of children — the highest per-capita rate of child amputation recorded in any modern conflict. Gaza medics coined a category that did not previously exist in medicine: Wounded Child, No Surviving Family.",
+       "ref": "§6.3",
+       "chart": "harm-heat",
+       "chapter": "gaza"
+      },
+      "finding": {
+       "text": "UN Commission of Inquiry, March 2025: sexual and gender-based violence used as a method of war, under either explicit orders or implicit encouragement from the top of the civilian and military leadership.",
+       "ref": "§6.3",
+       "chart": "custody-deaths",
+       "chapter": "west-bank"
+      },
+      "intent": {
+       "text": "Member of Knesset Michal Waldiger, 13 May 2025: “There are no uninvolved in Gaza… It is a shame that what’s been done in Gaza didn’t get worse.”",
+       "ref": "§6.2",
+       "route": "#/statements"
+      }
+     }
+    },
+    {
+     "key": "(c)",
+     "title": "Deliberately inflicting on the group conditions of life calculated to bring about its physical destruction in whole or in part",
+     "ref": "§6.3",
+     "cells": {
+      "record": {
+       "text": "A total aid blockade imposed on 2 March 2025. Famine formally declared by the IPC in Gaza Governorate on 22 August 2025 — the first such declaration in the Middle East since the system was created. At least 440 people had starved to death by September 2025, 147 of them children. Between 17 August and 5 September 2025, 49 per cent of the population had less than six litres of drinking water a day.",
+       "ref": "§6.3",
+       "chart": "hunger-risk",
+       "chapter": "gaza"
+      },
+      "finding": {
+       "text": "International Criminal Court, Pre-Trial Chamber I, 21 November 2024: arrest warrants for Netanyahu and Gallant charging starvation as a method of warfare, Rome Statute Article 8(2)(b)(xxv). Human Rights Watch, World Report 2026: the denial of water “amounts to the crime against humanity of extermination and a genocidal act”.",
+       "ref": "§6.3",
+       "chart": "famine-deaths",
+       "chapter": "gaza"
+      },
+      "intent": {
+       "text": "Gallant, 9 October 2023, in the same order: “I have ordered a complete siege on the Gaza Strip. There will be no electricity, no food, no fuel, everything is closed.”",
+       "ref": "§6.2",
+       "route": "#/statements"
+      }
+     }
+    },
+    {
+     "key": "(d)",
+     "title": "Imposing measures intended to prevent births within the group",
+     "ref": "§6.3",
+     "cells": {
+      "record": {
+       "text": "Maternal mortality at three times the pre-war rate; miscarriages up to 300 per cent higher; 70 per cent of newborns classified premature or underweight by March 2026; more than 15,000 women carrying dangerous pregnancies without prenatal care. Médecins Sans Frontières documented caesareans performed without anaesthesia.",
+       "ref": "§6.3"
+      },
+      "finding": {
+       "text": "UN Commission of Inquiry, March 2025, on the systematic destruction of women’s health facilities, and 23 June 2026, characterising the collapse of maternity and neonatal care as measures imposed to prevent births within the protected group.",
+       "ref": "§6.3",
+       "route": "#/legal"
+      },
+      "intent": {
+       "text": "The record carries no statement directed at births as such. This element rests on the pattern of the acts and on the Commission’s characterisation of them, not on an admission — which is how Article II(d) is ordinarily proved.",
+       "ref": "§6.3"
+      }
+     }
+    },
+    {
+     "key": "(e)",
+     "title": "Forcibly transferring children of the group to another group",
+     "ref": "§6.3",
+     "cells": {
+      "record": {
+       "text": "Children separated from their families in Israeli detention. The report treats the wider displacement — 1.9 million people, over 80 per cent of the population — under Rome Statute Article 7(1)(d), deportation or forcible transfer of population, rather than under this sub-paragraph, which is narrower than the displacement figure suggests.",
+       "ref": "§6.3",
+       "chart": "wb-displacement",
+       "chapter": "west-bank"
+      },
+      "finding": {
+       "text": "UN Human Rights Office, 4 September 2026: the displacement is “large-scale, long-term and systematic”, raising serious concerns of the crime against humanity of forcible transfer.",
+       "ref": "§6.3",
+       "route": "#/legal"
+      },
+      "intent": {
+       "text": "National Security Minister Itamar Ben-Gvir, 2023: “We will encourage voluntary transfer of all Gazan citizens… because that land belongs to us.” Communications Minister Shlomo Karhi, 2025: “‘Voluntary’ is at times a state you impose on someone until they give their consent.”",
+       "ref": "§6.2",
+       "route": "#/statements"
+      }
+     }
+    }
+   ],
+   "note": "Article II requires one act, not all five. Setting the five side by side is not a claim that each is equally evidenced; it is the standard way the elements of the crime are tested, and the empty places are left visible rather than filled."
+  },
+  {
+   "id": "apartheid",
+   "title": "The crime of apartheid, three elements",
+   "instrument": "Rome Statute Article 7(2)(h); International Convention on the Suppression and Punishment of the Crime of Apartheid (1973), Article II",
+   "quote": "Inhumane acts of a character similar to those referred to in paragraph 1, committed in the context of an institutionalised regime of systematic oppression and domination by one racial group over any other racial group or groups and committed with the intention of maintaining that regime.",
+   "lede": "Apartheid is not a comparison to South Africa. It is a codified crime with three elements, and §4.2 of the report states that Israel meets all three. The grid below is that statement, filled in.",
+   "columns": [
+    {
+     "id": "record",
+     "label": "What the record counts",
+     "blurb": "The figure, and the chart that plots it."
+    },
+    {
+     "id": "finding",
+     "label": "Who has found it",
+     "blurb": "The court, inquiry or mandated body that has made the finding on this element."
+    },
+    {
+     "id": "intent",
+     "label": "What was said",
+     "blurb": "The contemporaneous statement by a person in authority that speaks to the element."
+    }
+   ],
+   "rows": [
+    {
+     "key": "1",
+     "title": "An institutionalised regime of systematic oppression and domination by one racial group over another",
+     "ref": "§4.1",
+     "cells": {
+      "record": {
+       "text": "Two legal systems on one territory: West Bank Palestinians under military law and military courts, settlers in the same territory under Israeli civil law. Basic Law: Israel as the Nation-State of the Jewish People, passed 19 July 2018, contains no commitment to equality and makes Jewish settlement a national value. Adalah catalogues more than 65 discriminatory laws.",
+       "ref": "§4.3",
+       "chart": "land-control",
+       "chapter": "land"
+      },
+      "finding": {
+       "text": "ICJ Advisory Opinion, 19 July 2024, on systematic racial discrimination and segregation; the Declaration of President Nawaf Salam found conduct “tantamount to apartheid” and Judge Dire Tladi reached the same conclusion separately. UN ESCWA, 2017. Special Rapporteur Michael Lynk, 2022.",
+       "ref": "§4.2",
+       "chart": "findings-class",
+       "route": "#/legal"
+      },
+      "intent": {
+       "text": "Judge Salam cited Netanyahu’s own commitment to “promote and expand settlement in all areas of the Land of Israel” as direct evidence of the discriminatory intent the crime requires.",
+       "ref": "§4.2",
+       "route": "#/statements"
+      }
+     }
+    },
+    {
+     "key": "2",
+     "title": "Inhumane acts — the physical conduct of the regime",
+     "ref": "§4.3",
+     "cells": {
+      "record": {
+       "text": "Administrative detention without charge; home demolition and permit refusal running unbroken from 1948; 4,554 recorded settler attacks; a documented two-tier open-fire policy under which the rules depend on the ethnicity of the person in front of the soldier.",
+       "ref": "§9.4",
+       "chart": "detention-series",
+       "chapter": "since-1948"
+      },
+      "finding": {
+       "text": "Amnesty International, 2022, a 280-page analysis applying the Apartheid Convention and Rome Statute thresholds. Human Rights Watch, 2021. The Israeli organisations B’Tselem, January 2021, and Yesh Din, 2020. South Africa’s HSRC, 2009.",
+       "ref": "§4.2",
+       "chart": "settler-annual",
+       "chapter": "west-bank"
+      },
+      "intent": {
+       "text": "The open-fire policy is itself the admission: §9.4 records it as a documented two-tier rule, not an inference drawn from outcomes.",
+       "ref": "§9.4"
+      }
+     }
+    },
+    {
+     "key": "3",
+     "title": "Committed with the intention of maintaining that regime",
+     "ref": "§4.1",
+     "cells": {
+      "record": {
+       "text": "More than 700,000 settlers in the occupied West Bank and East Jerusalem, a population that has grown in every year of every peace process; settlement expansion continuing after the ICJ required the occupation to end.",
+       "ref": "§4.3",
+       "chart": "settlements",
+       "chapter": "land"
+      },
+      "finding": {
+       "text": "ICJ Advisory Opinion, 19 July 2024: the occupation is unlawful and must end as rapidly as possible. Security Council Resolution 2334 (2016): the settlements have no legal validity.",
+       "ref": "§15.1",
+       "chart": "settlement-detail",
+       "chapter": "land"
+      },
+      "intent": {
+       "text": "The admissions are Israeli and they are from the top of the state: former Prime Minister Ehud Barak on the “slippery slope to apartheid”; former Attorney General Michael Ben-Yair, “Israel today is an apartheid regime”; former Mossad Director Tamir Pardo, 2023, “There is an apartheid state here.”",
+       "ref": "§4.2",
+       "route": "#/statements"
+      }
+     }
+    }
+   ],
+   "note": "The Apartheid Convention has 109 states parties. Israel is not one, and neither is the United States; the Rome Statute definition binds regardless, and it is the definition the ICJ and the two Israeli organisations above applied."
+  }
+ ],
+ "instruments": {
+  "title": "What the findings rest on",
+  "lede": "Every finding in the record is an application of an instrument that already existed. This is the map of which body relied on which text. Nothing here is a novel legal theory: the newest instrument on the ring was drafted in 1998, and the oldest in 1907.",
+  "note": "Drawn from Appendix A of the report and from the determinations roster in §15.8. Instruments are placed on the outer arc in amber; the bodies that have relied on them are coloured by class. An edge means the finding cites the instrument, not that the instrument was the only basis for it.",
+  "kinds": [
+   {
+    "id": "instrument",
+    "label": "Instrument",
+    "colour": "rgb(217,164,65)"
+   },
+   {
+    "id": "court",
+    "label": "Court",
+    "colour": "rgb(210,83,76)"
+   },
+   {
+    "id": "un",
+    "label": "UN mechanism",
+    "colour": "rgb(86,168,224)"
+   },
+   {
+    "id": "ngo",
+    "label": "Human-rights organisation",
+    "colour": "rgb(79,174,130)"
+   },
+   {
+    "id": "scholar",
+    "label": "Genocide scholarship",
+    "colour": "rgb(155,127,212)"
+   }
+  ],
+  "nodes": [
+   {
+    "id": "genocide-convention",
+    "name": "Genocide Convention",
+    "kind": "instrument",
+    "branch": "International criminal law",
+    "year": 1948,
+    "full": "Convention on the Prevention and Punishment of the Crime of Genocide"
+   },
+   {
+    "id": "apartheid-convention",
+    "name": "Apartheid Convention",
+    "kind": "instrument",
+    "branch": "International criminal law",
+    "year": 1973,
+    "full": "International Convention on the Suppression and Punishment of the Crime of Apartheid"
+   },
+   {
+    "id": "rome-statute",
+    "name": "Rome Statute",
+    "kind": "instrument",
+    "branch": "International criminal law",
+    "year": 1998,
+    "full": "Rome Statute of the International Criminal Court"
+   },
+   {
+    "id": "cat",
+    "name": "Convention against Torture",
+    "kind": "instrument",
+    "branch": "International criminal law",
+    "year": 1984,
+    "full": "Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment"
+   },
+   {
+    "id": "geneva-iv",
+    "name": "Geneva Convention IV",
+    "kind": "instrument",
+    "branch": "International humanitarian law",
+    "year": 1949,
+    "full": "Geneva Convention relative to the Protection of Civilian Persons in Time of War"
+   },
+   {
+    "id": "hague-1907",
+    "name": "Hague Regulations",
+    "kind": "instrument",
+    "branch": "International humanitarian law",
+    "year": 1907,
+    "full": "Hague Convention IV and the annexed Regulations respecting the Laws and Customs of War on Land"
+   },
+   {
+    "id": "iccpr",
+    "name": "ICCPR",
+    "kind": "instrument",
+    "branch": "International human rights law",
+    "year": 1966,
+    "full": "International Covenant on Civil and Political Rights"
+   },
+   {
+    "id": "icescr",
+    "name": "ICESCR",
+    "kind": "instrument",
+    "branch": "International human rights law",
+    "year": 1966,
+    "full": "International Covenant on Economic, Social and Cultural Rights"
+   },
+   {
+    "id": "icerd",
+    "name": "ICERD",
+    "kind": "instrument",
+    "branch": "International human rights law",
+    "year": 1965,
+    "full": "International Convention on the Elimination of All Forms of Racial Discrimination"
+   },
+   {
+    "id": "crc",
+    "name": "Rights of the Child",
+    "kind": "instrument",
+    "branch": "International human rights law",
+    "year": 1989,
+    "full": "Convention on the Rights of the Child — Israel is a party"
+   },
+   {
+    "id": "icj-statute",
+    "name": "ICJ Statute, Art 41",
+    "kind": "instrument",
+    "branch": "The Charter and the Court",
+    "year": 1945,
+    "full": "Statute of the International Court of Justice, Article 41 — the power to indicate binding provisional measures"
+   },
+   {
+    "id": "un-charter",
+    "name": "UN Charter",
+    "kind": "instrument",
+    "branch": "The Charter and the Court",
+    "year": 1945,
+    "full": "Charter of the United Nations, including the prohibition on the acquisition of territory by force"
+   },
+   {
+    "id": "unsc-2334",
+    "name": "Resolution 2334",
+    "kind": "instrument",
+    "branch": "The Charter and the Court",
+    "year": 2016,
+    "full": "Security Council Resolution 2334 — the settlements have no legal validity"
+   },
+   {
+    "id": "icj-wall",
+    "name": "ICJ, the Wall",
+    "kind": "court",
+    "body": "International Court of Justice",
+    "date": "9 July 2004",
+    "sort": "2004-07-09",
+    "finding": "The wall and its associated regime breach international humanitarian and human rights law",
+    "ref": "Appendix A"
+   },
+   {
+    "id": "icj-pm",
+    "name": "ICJ, provisional measures",
+    "kind": "court",
+    "body": "International Court of Justice",
+    "date": "26 January 2024",
+    "sort": "2024-01-26",
+    "finding": "A plausible risk of genocide; three sets of binding provisional measures across 2024",
+    "ref": "Part VI"
+   },
+   {
+    "id": "icj-ao",
+    "name": "ICJ, advisory opinion",
+    "kind": "court",
+    "body": "International Court of Justice",
+    "date": "19 July 2024",
+    "sort": "2024-07-19",
+    "finding": "The occupation is unlawful in its entirety and must end as rapidly as possible",
+    "ref": "Part XV"
+   },
+   {
+    "id": "icc-warrants",
+    "name": "ICC, arrest warrants",
+    "kind": "court",
+    "body": "International Criminal Court",
+    "date": "21 November 2024",
+    "sort": "2024-11-21",
+    "finding": "Arrest warrants for Netanyahu and Gallant; starvation as a method of warfare",
+    "ref": "Part XV"
+   },
+   {
+    "id": "icc-deif",
+    "name": "ICC, warrant for Deif",
+    "kind": "court",
+    "body": "International Criminal Court",
+    "date": "21 November 2024",
+    "sort": "2024-11-22",
+    "finding": "Arrest warrant for Mohammed Deif for the crimes of 7 October",
+    "ref": "Appendix A"
+   },
+   {
+    "id": "icc-jurisdiction",
+    "name": "ICC, jurisdiction upheld",
+    "kind": "court",
+    "body": "International Criminal Court",
+    "date": "December 2025",
+    "sort": "2025-12-01",
+    "finding": "The Appeals Chamber upheld the Court’s jurisdiction over the Situation in the State of Palestine",
+    "ref": "Appendix A"
+   },
+   {
+    "id": "coi-sexual",
+    "name": "COI, sexual violence",
+    "kind": "un",
+    "body": "UN Commission of Inquiry",
+    "date": "March 2025",
+    "sort": "2025-03-01",
+    "finding": "Sexual and gender-based violence used as a method of war",
+    "ref": "§6.3"
+   },
+   {
+    "id": "coi-culture",
+    "name": "COI, cultural destruction",
+    "kind": "un",
+    "body": "UN Commission of Inquiry",
+    "date": "June 2025",
+    "sort": "2025-06-01",
+    "finding": "Attacks on educational, religious and cultural sites are war crimes and the crime against humanity of extermination",
+    "ref": "§6.3"
+   },
+   {
+    "id": "coi-genocide",
+    "name": "COI, genocide",
+    "kind": "un",
+    "body": "UN Commission of Inquiry",
+    "date": "16 September 2025",
+    "sort": "2025-09-16",
+    "finding": "Affirmative finding that genocide has been committed, with incitement findings against Herzog, Netanyahu and Gallant",
+    "ref": "§15.8"
+   },
+   {
+    "id": "coi-children",
+    "name": "COI, children",
+    "kind": "un",
+    "body": "UN Commission of Inquiry",
+    "date": "23 June 2026",
+    "sort": "2026-06-23",
+    "finding": "The killing of Palestinian children is itself a genocidal act",
+    "ref": "§10.7"
+   },
+   {
+    "id": "albanese",
+    "name": "Albanese, Anatomy of a Genocide",
+    "kind": "un",
+    "body": "UN Special Rapporteur on the OPT",
+    "date": "2024",
+    "sort": "2024-03-26",
+    "finding": "Anatomy of a Genocide — the threshold for genocide is met",
+    "ref": "§15.8"
+   },
+   {
+    "id": "lynk",
+    "name": "Lynk, apartheid",
+    "kind": "un",
+    "body": "UN Special Rapporteur on the OPT",
+    "date": "2022",
+    "sort": "2022-03-01",
+    "finding": "Formal finding of apartheid in the occupied territory",
+    "ref": "§4.2"
+   },
+   {
+    "id": "escwa",
+    "name": "ESCWA, apartheid",
+    "kind": "un",
+    "body": "UN ESCWA",
+    "date": "2017",
+    "sort": "2017-03-15",
+    "finding": "The first formal UN finding of Israeli apartheid",
+    "ref": "§4.2"
+   },
+   {
+    "id": "special-cttee",
+    "name": "Special Committee",
+    "kind": "un",
+    "body": "UN Special Committee on Israeli Practices",
+    "date": "November 2024",
+    "sort": "2024-11-14",
+    "finding": "Findings consistent with genocide",
+    "ref": "§15.8"
+   },
+   {
+    "id": "ohchr-transfer",
+    "name": "OHCHR, forcible transfer",
+    "kind": "un",
+    "body": "UN Human Rights Office",
+    "date": "4 September 2026",
+    "sort": "2026-09-04",
+    "finding": "Displacement “large-scale, long-term and systematic”, raising concerns of forcible transfer",
+    "ref": "§6.3"
+   },
+   {
+    "id": "amnesty-apartheid",
+    "name": "Amnesty, apartheid",
+    "kind": "ngo",
+    "body": "Amnesty International",
+    "date": "2022",
+    "sort": "2022-02-01",
+    "finding": "Israel’s apartheid against Palestinians: a cruel system of domination and a crime against humanity",
+    "ref": "§4.2"
+   },
+   {
+    "id": "hrw-apartheid",
+    "name": "HRW, apartheid",
+    "kind": "ngo",
+    "body": "Human Rights Watch",
+    "date": "2021",
+    "sort": "2021-04-27",
+    "finding": "A Threshold Crossed — the crimes of apartheid and persecution",
+    "ref": "§4.2"
+   },
+   {
+    "id": "btselem-apartheid",
+    "name": "B’Tselem, apartheid",
+    "kind": "ngo",
+    "body": "B’Tselem",
+    "date": "January 2021",
+    "sort": "2021-01-12",
+    "finding": "A regime of Jewish supremacy from the Jordan River to the Mediterranean Sea",
+    "ref": "§4.2"
+   },
+   {
+    "id": "amnesty-genocide",
+    "name": "Amnesty, genocide",
+    "kind": "ngo",
+    "body": "Amnesty International",
+    "date": "December 2024",
+    "sort": "2024-12-05",
+    "finding": "Genocide",
+    "ref": "§15.8"
+   },
+   {
+    "id": "hrw-genocide",
+    "name": "HRW, extermination",
+    "kind": "ngo",
+    "body": "Human Rights Watch",
+    "date": "December 2024",
+    "sort": "2024-12-19",
+    "finding": "Acts of genocide; the crime against humanity of extermination, restated on water denial in World Report 2026",
+    "ref": "§15.8"
+   },
+   {
+    "id": "btselem-genocide",
+    "name": "B’Tselem, Our Genocide",
+    "kind": "ngo",
+    "body": "B’Tselem",
+    "date": "July 2025",
+    "sort": "2025-07-28",
+    "finding": "Our Genocide",
+    "ref": "§15.8"
+   },
+   {
+    "id": "phr-israel",
+    "name": "PHR–Israel",
+    "kind": "ngo",
+    "body": "Physicians for Human Rights–Israel",
+    "date": "July 2025",
+    "sort": "2025-07-29",
+    "finding": "Genocide, on the destruction of the health system",
+    "ref": "§15.8"
+   },
+   {
+    "id": "iags",
+    "name": "IAGS, 86 per cent",
+    "kind": "scholar",
+    "body": "International Association of Genocide Scholars",
+    "date": "1 September 2025",
+    "sort": "2025-09-01",
+    "finding": "Resolution carried by 86 per cent: the conduct meets the legal definition of genocide",
+    "ref": "§15.8"
+   },
+   {
+    "id": "yesh-din",
+    "name": "Yesh Din, apartheid",
+    "kind": "ngo",
+    "body": "Yesh Din",
+    "date": "2020",
+    "sort": "2020-06-01",
+    "finding": "The crime of apartheid in the West Bank",
+    "ref": "§4.2"
+   }
+  ],
+  "links": [
+   {
+    "source": "icj-wall",
+    "target": "geneva-iv",
+    "article": "Article 49"
+   },
+   {
+    "source": "icj-wall",
+    "target": "hague-1907",
+    "article": "Articles 46, 52"
+   },
+   {
+    "source": "icj-wall",
+    "target": "un-charter",
+    "article": ""
+   },
+   {
+    "source": "icj-wall",
+    "target": "iccpr",
+    "article": ""
+   },
+   {
+    "source": "icj-wall",
+    "target": "icescr",
+    "article": ""
+   },
+   {
+    "source": "icj-pm",
+    "target": "genocide-convention",
+    "article": "Articles II, III, IX"
+   },
+   {
+    "source": "icj-pm",
+    "target": "icj-statute",
+    "article": "Article 41"
+   },
+   {
+    "source": "icj-ao",
+    "target": "geneva-iv",
+    "article": ""
+   },
+   {
+    "source": "icj-ao",
+    "target": "hague-1907",
+    "article": ""
+   },
+   {
+    "source": "icj-ao",
+    "target": "icerd",
+    "article": "Article 3"
+   },
+   {
+    "source": "icj-ao",
+    "target": "iccpr",
+    "article": ""
+   },
+   {
+    "source": "icj-ao",
+    "target": "icescr",
+    "article": ""
+   },
+   {
+    "source": "icj-ao",
+    "target": "un-charter",
+    "article": ""
+   },
+   {
+    "source": "icj-ao",
+    "target": "unsc-2334",
+    "article": ""
+   },
+   {
+    "source": "icc-warrants",
+    "target": "rome-statute",
+    "article": "Articles 7(1)(a), 7(1)(k), 8(2)(b)(xxv)"
+   },
+   {
+    "source": "icc-deif",
+    "target": "rome-statute",
+    "article": "Articles 7 and 8"
+   },
+   {
+    "source": "icc-jurisdiction",
+    "target": "rome-statute",
+    "article": "Article 12(2)(a)"
+   },
+   {
+    "source": "coi-sexual",
+    "target": "rome-statute",
+    "article": "Articles 7(1)(g), 8(2)(b)(xxii)"
+   },
+   {
+    "source": "coi-sexual",
+    "target": "geneva-iv",
+    "article": ""
+   },
+   {
+    "source": "coi-sexual",
+    "target": "cat",
+    "article": ""
+   },
+   {
+    "source": "coi-culture",
+    "target": "rome-statute",
+    "article": "Articles 7(1)(b), 8(2)(b)(ix)"
+   },
+   {
+    "source": "coi-culture",
+    "target": "geneva-iv",
+    "article": ""
+   },
+   {
+    "source": "coi-genocide",
+    "target": "genocide-convention",
+    "article": "Articles II(a)–(c), III(c)"
+   },
+   {
+    "source": "coi-children",
+    "target": "genocide-convention",
+    "article": "Articles II(a), II(d)"
+   },
+   {
+    "source": "coi-children",
+    "target": "crc",
+    "article": ""
+   },
+   {
+    "source": "albanese",
+    "target": "genocide-convention",
+    "article": "Article II"
+   },
+   {
+    "source": "lynk",
+    "target": "apartheid-convention",
+    "article": ""
+   },
+   {
+    "source": "lynk",
+    "target": "icerd",
+    "article": "Article 3"
+   },
+   {
+    "source": "lynk",
+    "target": "rome-statute",
+    "article": "Article 7(2)(h)"
+   },
+   {
+    "source": "escwa",
+    "target": "apartheid-convention",
+    "article": ""
+   },
+   {
+    "source": "escwa",
+    "target": "icerd",
+    "article": "Article 3"
+   },
+   {
+    "source": "special-cttee",
+    "target": "genocide-convention",
+    "article": "Article II"
+   },
+   {
+    "source": "ohchr-transfer",
+    "target": "rome-statute",
+    "article": "Article 7(1)(d)"
+   },
+   {
+    "source": "ohchr-transfer",
+    "target": "geneva-iv",
+    "article": "Article 49"
+   },
+   {
+    "source": "amnesty-apartheid",
+    "target": "apartheid-convention",
+    "article": ""
+   },
+   {
+    "source": "amnesty-apartheid",
+    "target": "rome-statute",
+    "article": "Article 7(2)(h)"
+   },
+   {
+    "source": "hrw-apartheid",
+    "target": "apartheid-convention",
+    "article": ""
+   },
+   {
+    "source": "hrw-apartheid",
+    "target": "rome-statute",
+    "article": "Articles 7(1)(h), 7(1)(j)"
+   },
+   {
+    "source": "btselem-apartheid",
+    "target": "apartheid-convention",
+    "article": ""
+   },
+   {
+    "source": "amnesty-genocide",
+    "target": "genocide-convention",
+    "article": "Article II"
+   },
+   {
+    "source": "hrw-genocide",
+    "target": "genocide-convention",
+    "article": "Article II(c)"
+   },
+   {
+    "source": "hrw-genocide",
+    "target": "rome-statute",
+    "article": "Article 7(1)(b)"
+   },
+   {
+    "source": "btselem-genocide",
+    "target": "genocide-convention",
+    "article": "Article II"
+   },
+   {
+    "source": "phr-israel",
+    "target": "genocide-convention",
+    "article": "Articles II(b), II(c)"
+   },
+   {
+    "source": "iags",
+    "target": "genocide-convention",
+    "article": "Article II"
+   },
+   {
+    "source": "yesh-din",
+    "target": "apartheid-convention",
+    "article": ""
+   },
+   {
+    "source": "yesh-din",
+    "target": "rome-statute",
+    "article": "Article 7(2)(h)"
+   }
+  ]
+ },
+ "scorecard": {
+  "title": "The duty to prevent, state by state",
+  "lede": "Bosnia v Serbia (2007) holds that the duty to prevent genocide arises the moment a state learns of a serious risk, not when a judgment arrives. The ICJ’s order of 26 January 2024 is that moment. Every state below has had since then to act, and this is what each has done.",
+  "note": "The rows are the G20, the parties to the ICJ case, the states that have restricted arms transfers, and the five states that sanctioned Ben-Gvir and Smotrich in June 2025. Intervening at the ICJ under Article 63 concerns the construction of the Genocide Convention and is not in itself support for either party — the United States and Hungary both filed. Sort any column by pressing its heading.",
+  "source": "Compiled from the recognition, sanctions and ICJ records in data/world-positions.json and the embargo and arms-supplier records in data/long-record.json, both of which carry their own sources.",
+  "g20": [
+   "Argentina",
+   "Australia",
+   "Brazil",
+   "Canada",
+   "China",
+   "France",
+   "Germany",
+   "India",
+   "Indonesia",
+   "Italy",
+   "Japan",
+   "Mexico",
+   "Russia",
+   "Saudi Arabia",
+   "South Africa",
+   "South Korea",
+   "Turkey",
+   "United Kingdom",
+   "United States"
+  ],
+  "g20_note": "The G20’s nineteen member states. The European Union and the African Union are also members and are not states.",
+  "columns": [
+   {
+    "id": "state",
+    "label": "State",
+    "blurb": "G20 members are marked."
+   },
+   {
+    "id": "recognises",
+    "label": "Recognises Palestine",
+    "blurb": "And the year it did so. 157 of the 193 UN member states now do."
+   },
+   {
+    "id": "arms",
+    "label": "Arms transfers",
+    "blurb": "Halted, restricted in part, or continuing. Blank where the state is not recorded as a supplier."
+   },
+   {
+    "id": "sanctions",
+    "label": "Sanctions",
+    "blurb": "On Israeli ministers, on settlers, or on settlement goods."
+   },
+   {
+    "id": "icj",
+    "label": "ICJ",
+    "blurb": "Applicant in South Africa v Israel, or a declaration of intervention under Article 63."
+   },
+   {
+    "id": "supplies",
+    "label": "Share of arms imports",
+    "blurb": "Share of Israel’s major conventional arms imports, 2020–2024 (SIPRI)."
+   }
+  ]
+ }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Documented Record — Israel and the Occupied Territories, 1917–2026</title>
+<meta name="description" content="An interactive forensic survey of state conduct, alleged violations of international law, and the documented record (1917–2026).">
+<meta name="theme-color" content="#0b0f17">
+<meta name="author" content="Dr. Usman Kayani">
+<link rel="icon" href="assets/favicon.svg?v=28" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/flag-palestine.svg?v=28">
+<link rel="canonical" href="https://palestinerecord.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://palestinerecord.github.io/">
+<meta property="og:site_name" content="The Documented Record">
+<meta property="og:title" content="The Documented Record — Israel and the Occupied Territories, 1917–2026">
+<meta property="og:description" content="Every figure carries its source. A forensic survey of state conduct, alleged violations of international law, and the documented record — 1917 to 2026.">
+<meta property="og:image" content="assets/share-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Documented Record — 73,670 killed in Gaza since 7 October 2023, 20,179 of them children, 157 states recognising Palestine.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Documented Record — Israel and the Occupied Territories, 1917–2026">
+<meta name="twitter:description" content="Every figure carries its source. A forensic survey of state conduct, alleged violations of international law, and the documented record — 1917 to 2026.">
+<meta name="twitter:image" content="assets/share-card.png">
+<link rel="stylesheet" href="css/style.css?v=28">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js" integrity="sha384-Mx5lkUEQPM1pOJCwFtUICyX45KNojXbkWdYhkKUKsbv391mavbfoAmONbzkgYPzR" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts-gl@2.0.9/dist/echarts-gl.min.js" integrity="sha384-f4gAUkb5Y6LE9n50CbiH1hCBCw7021OeJu0ZrgRpgW6G1CZjPR8cu33e8rCFLqCl" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="importmap">
+{
+  "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" },
+  "integrity": { "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js": "sha384-61S/Nu32S3E5+n+KpCOTb2eRYps6fVKm+9Gz1QBvSePFthb46f063Aa/qe/lykFZ" }
+}
+</script>
+<!-- Structured data. The article describes report-final.md, which the Evidence route
+     reproduces in full; the dataset describes the JSON under data/, which is a public
+     API in all but name. Both dateModified values are stamped by prerender.py from
+     data/timeseries.json, so neither can drift from the data actually shipped. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://palestinerecord.github.io/#report",
+  "headline": "The Documented Record — Israel and the Occupied Territories, 1917–2026",
+  "alternativeHeadline": "A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026)",
+  "description": "A source-anchored survey of state conduct in Israel and the occupied Palestinian territories, applying identical evidentiary and legal standards to every actor. Every figure carries its source.",
+  "author": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "publisher": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "inLanguage": "en-GB",
+  "url": "https://palestinerecord.github.io/",
+  "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
+  "image": "https://palestinerecord.github.io/assets/share-card.png",
+  "wordCount": 94098,
+  "dateModified": "2026-09-12",
+  "temporalCoverage": "1917/2026",
+  "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
+  "about": [
+    { "@type": "Thing", "name": "Israeli–Palestinian conflict" },
+    { "@type": "Thing", "name": "International humanitarian law" },
+    { "@type": "Thing", "name": "Occupied Palestinian territories" }
+  ],
+  "citation": "South Africa v. Israel (Application of the Convention on the Prevention and Punishment of the Crime of Genocide in the Gaza Strip), International Court of Justice, Order of 26 January 2024"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://palestinerecord.github.io/#dataset",
+  "name": "The Documented Record — casualty, land and conduct series, 1948–2026",
+  "description": "The machine-readable base of the dashboard: daily and monthly Gaza casualty series since October 2023, the long death toll from 1948, West Bank killings, demolitions and detention, land transfer and settlement figures, the 1948 village depopulations, documented statements of intent, and the recorded position of every state. Each figure carries the source it was taken from.",
+  "url": "https://palestinerecord.github.io/#/data",
+  "creator": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "inLanguage": "en-GB",
+  "dateModified": "2026-09-12",
+  "temporalCoverage": "1948/2026",
+  "spatialCoverage": { "@type": "Place", "name": "Israel and the occupied Palestinian territories" },
+  "keywords": ["Gaza casualties", "West Bank", "settlements", "demolitions", "administrative detention", "Nakba", "arms transfers", "recognition of Palestine"],
+  "isBasedOn": [
+    { "@type": "Dataset", "name": "Tech For Palestine open datasets (Gaza Ministry of Health, OCHA, UN)", "url": "https://data.techforpalestine.org/" },
+    { "@type": "Dataset", "name": "OCHA State of Palestine subnational administrative boundaries (Common Operational Dataset)", "url": "https://data.humdata.org/dataset/cod-ab-pse" }
+  ],
+  "variableMeasured": [
+    { "@type": "PropertyValue", "name": "Cumulative Palestinians killed in Gaza, by reporting day" },
+    { "@type": "PropertyValue", "name": "Children killed in Gaza, by reporting month" },
+    { "@type": "PropertyValue", "name": "Palestinians and Israelis killed, by period since 1948" },
+    { "@type": "PropertyValue", "name": "Palestinian structures demolished, by year" },
+    { "@type": "PropertyValue", "name": "Palestinians held in administrative detention, by snapshot" },
+    { "@type": "PropertyValue", "name": "Villages depopulated in 1947–1950, by month, sub-district and recorded cause" },
+    { "@type": "PropertyValue", "name": "States recognising Palestine, by date of recognition" }
+  ],
+  "distribution": [
+    { "@type": "DataDownload", "name": "Daily and monthly casualty series", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/timeseries.json" },
+    { "@type": "DataDownload", "name": "Curated headline figures, each with its source", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/figures.json" },
+    { "@type": "DataDownload", "name": "The long record, 1948–2026", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/long-record.json" },
+    { "@type": "DataDownload", "name": "Documented statements of intent", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/statements.json" },
+    { "@type": "DataDownload", "name": "Villages depopulated 1947–1950", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/nakba.json" },
+    { "@type": "DataDownload", "name": "The recorded position of every state", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/world-positions.json" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#app">Skip to the record</a>
+
+<canvas id="scene" aria-hidden="true"></canvas>
+<div id="scene-veil" aria-hidden="true"></div>
+
+<div id="boot">
+  <div class="boot-inner">
+    <img class="flag-ps boot-flag" src="assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <div class="boot-mark">FORENSIC RECORD</div>
+    <div class="boot-bar"><span></span></div>
+    <div class="boot-status">Loading documented record…</div>
+    <div class="boot-names" id="boot-names" hidden>
+      <div class="boot-name" id="boot-name"></div>
+      <div class="boot-names-note" id="boot-names-note"></div>
+    </div>
+  </div>
+</div>
+
+<header class="topbar">
+  <a class="brand" href="#/overview">
+    <img class="brand-mark flag-ps" src="assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+    <span class="brand-text">
+      <strong>The Documented Record</strong>
+      <em>Israel &amp; the Occupied Territories · 1917–2026</em>
+    </span>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#/overview" data-view="overview">Overview</a>
+    <a href="#/tour/1" data-view="tour">Start here</a>
+    <a href="#/data" data-view="data">Data</a>
+    <a href="#/timeline" data-view="timeline">Timeline</a>
+    <a href="#/evidence" data-view="evidence">Evidence</a>
+    <a href="#/rebuttals" data-view="rebuttals">Rebuttals</a>
+    <a href="#/statements" data-view="statements">Statements</a>
+    <a href="#/legal" data-view="legal">Legal</a>
+    <a href="#/sources" data-view="sources">Sources</a>
+  </nav>
+  <div class="freshness" id="freshness" hidden></div>
+  <button class="search-open" id="search-open" title="Search the record (press /)">
+    <span>Search</span><kbd>/</kbd>
+  </button>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span></button>
+</header>
+
+<main id="app" tabindex="-1"></main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-flag">
+      <img class="flag-ps" src="assets/flag-palestine.svg?v=28" alt="Flag of Palestine">
+      <span class="flag-rule"></span>
+    </div>
+    <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
+      evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
+      in the <a href="#/evidence">Evidence</a> section without omission.</p>
+    <p class="muted" id="footer-stats"></p>
+  </div>
+</footer>
+
+<div class="search-overlay" id="search-overlay" hidden>
+  <div class="search-panel">
+    <input type="search" id="search-input" placeholder="Search the full record — findings, figures, names, dates…" autocomplete="off" spellcheck="false">
+    <div class="search-meta" id="search-meta">Type at least two characters.</div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<script src="js/charts.js?v=28"></script>
+<script src="js/views.js?v=28"></script>
+<script src="js/app.js?v=28"></script>
+<!-- Loaded dynamically so ?prerender=1 never builds the 24,000-point WebGL field:
+     prerender.py dumps the text of a route, and software WebGL would spend the
+     whole budget on a scene no snapshot can contain. -->
+<script type="module">
+  if (!/(^|[?&])prerender=1(&|$)/.test(location.search)) import('./js/scene.js?v=28');
+</script>
+</body>
+</html>

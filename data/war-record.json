@@ -1,0 +1,395 @@
+{
+  "meta": {
+    "title": "Arms, Lebanon and the region",
+    "note": "Curated from report-final.md Parts VII, VIII and XIII. Every figure carries the source and the date at which it was published. Where a value is derived rather than published, it is marked with an estimate flag and the derivation is stated.",
+    "updated": "12 September 2026"
+  },
+  "arms": {
+    "title": "The suppliers' own numbers",
+    "lede": "SIPRI measures deliveries of major conventional weapons. The supplying states publish something different, and more specific: what they authorised, when, and to what value. Those three national records are set out here as each government reported them, including the German ministry's answer to a parliamentary question, the US congressional and Costs of War tallies, and the UK's own count of the licences it suspended against the ones it left in force.",
+    "germany": {
+      "title": "German arms export licences to Israel, by year",
+      "unit": "€m",
+      "ref": "§13.4",
+      "source": "German Federal Ministry for Economic Affairs and Energy, answer to a parliamentary inquiry by the Left Party, September 2026; reported by Der Spiegel via Anadolu Agency, and Globes",
+      "items": [
+        {
+          "period": "2022",
+          "value": 32.7,
+          "estimate": true,
+          "note": "Derived, not separately published: the report records 2023 as a tenfold increase on 2022, so the 2022 base is of the order of one tenth of the 2023 approval. Shown to give the 2023 jump its scale, and marked as a derived value."
+        },
+        {
+          "period": "2023",
+          "value": 326.5,
+          "note": "Roughly €327 million approved in the year of the attack on Gaza, about ten times the 2022 figure. Some sources give the same figure as $326 million."
+        },
+        {
+          "period": "2024",
+          "value": 161.1,
+          "note": "Approvals halved against 2023 as the Nicaraguan case against Germany for complicity in genocide, filed at the ICJ in April 2024, remained pending."
+        },
+        {
+          "period": "2025",
+          "value": 260,
+          "note": "The year of the partial embargo. Chancellor Friedrich Merz suspended licences for equipment usable in Gaza on 8 August 2025, citing Israel's \"even tougher military action\"; Berlin approved no arms shipments from that date until it lifted the suspension on 24 November 2025."
+        },
+        {
+          "period": "2026 (first six months)",
+          "value": 800,
+          "partial": true,
+          "note": "Nearly €800 million, about $930 million, in the first half of 2026 alone: more than four times the total for the whole of 2025, and more than the 2023, 2024 and 2025 approvals combined. Half a year, not a full one."
+        }
+      ],
+      "embargo": {
+        "imposed": "8 August 2025",
+        "lifted": "24 November 2025",
+        "detail": "Chancellor Friedrich Merz suspended export licences for military equipment potentially usable in Gaza — the first German arms restriction on Israel. Berlin lifted it on 24 November 2025, citing the October 2025 ceasefire as having \"stabilised\". Amnesty International called the lifting \"reckless, unlawful and risks complicity in Israel's international crimes\"."
+      },
+      "composition": [
+        {
+          "label": "INS Drakon, a Dolphin II-class submarine built by ThyssenKrupp Marine Systems",
+          "share": 66,
+          "note": "Roughly two-thirds of the approved value. The vessel departed Kiel in early September 2026 for the region."
+        },
+        {
+          "label": "German–Israeli defence-industry cooperation benefiting the German armed forces",
+          "share": 20,
+          "note": "About one fifth of the approved value."
+        },
+        {
+          "label": "Small arms, ammunition, explosives and drones",
+          "share": 14,
+          "note": "The remainder."
+        }
+      ],
+      "notes": [
+        "The fourfold surge in the six months after the embargo was lifted shows the embargo functioned as a pause, not a reversal: German supply resumed at a higher rate than at any point before it was imposed.",
+        "The Left Party, whose parliamentary question produced the figures, accused Berlin of \"unlimited double standards\".",
+        "Nicaragua's case against Germany for complicity in genocide, filed at the ICJ in April 2024, was still pending when the 2026 approvals were disclosed."
+      ]
+    },
+    "us": {
+      "title": "United States arms to Israel since 7 October 2023",
+      "unit": "$bn",
+      "ref": "§13.2",
+      "source": "Quincy Institute and Brown University Costs of War; US Congress via the Library of Congress; Defense Security Cooperation Agency notifications",
+      "totals": [
+        {
+          "label": "Enacted by US legislation since 7 October 2023",
+          "value": 16.3,
+          "source": "US Congress, Library of Congress"
+        },
+        {
+          "label": "All military aid, October 2023 to September 2025, including transfers, foreign military sales and emergency authority",
+          "value": 21.7,
+          "source": "Brown University Costs of War, through September 2025"
+        }
+      ],
+      "items": [
+        {
+          "label": "Biden administration military aid since October 2023",
+          "value": 17.9,
+          "admin": "Biden",
+          "note": "Includes Hellfire missiles, 2,000-pound bombs and 155mm artillery shells."
+        },
+        {
+          "label": "Arms sale announced in the administration's final days, January 2025",
+          "value": 8,
+          "admin": "Biden",
+          "note": "Announced after fifteen months of war and days before the transfer of power."
+        },
+        {
+          "label": "Major foreign military sales initially approved, from January 2025",
+          "value": 12,
+          "admin": "Trump",
+          "note": "The same administration lifted the suspension on Mark 84 2,000-pound and BLU-109 bombs, the weapons used against apartment buildings, hospitals and water infrastructure in Gaza."
+        },
+        {
+          "label": "Fast-tracked under emergency authority, March 2025",
+          "value": 4,
+          "admin": "Trump",
+          "note": "Secretary of State Marco Rubio signed the declaration as Israel prepared for a potential resumption of the war."
+        },
+        {
+          "label": "New arms sales approved, 31 January 2026",
+          "value": 6.67,
+          "admin": "Trump",
+          "note": "30 Apache attack helicopters ($3.8bn), infantry assault vehicles ($1.98bn), light utility helicopters ($150m) and a further $740m defence contract."
+        },
+        {
+          "label": "751 active Foreign Military Sales cases, April 2025",
+          "value": 39.2,
+          "admin": "standing",
+          "note": "The standing pipeline rather than a single authorisation: cases already open, most of them for future delivery."
+        }
+      ],
+      "notes": [
+        "The bars are separate announcements and standing case values. They overlap in scope and are not additive; the two published totals are drawn as reference lines instead.",
+        "Most of this aid is grant money under Foreign Military Financing, spent back inside the United States defence industry.",
+        "Tens of billions more are committed for future delivery."
+      ]
+    },
+    "uk": {
+      "title": "What the United Kingdom suspended, and what it left in force",
+      "ref": "§13.3, §15.2",
+      "source": "UK export-licensing records; High Court of Justice; gov.uk; Declassified UK and Novara Media flight-tracking",
+      "licences": {
+        "total": 350,
+        "suspended": 30,
+        "in_force": 320,
+        "date": "September 2024",
+        "note": "Roughly 30 of 350 extant export licences suspended over the risk of breaches of international humanitarian law. The remainder, including the disputed exemption for F-35 components, were left intact."
+      },
+      "facts": [
+        {
+          "label": "Share of every F-35 built globally that is made by BAE Systems in the UK",
+          "value": 15,
+          "unit": "%",
+          "note": "The aircraft used against Gaza and Beirut. The component exemption survived a legal challenge: in June 2025 the High Court dismissed the case brought by Al-Haq and the Global Legal Action Network, accepting that UK parts enter a multilateral collaborative pool rather than being sold directly to Israel."
+        },
+        {
+          "label": "RAF surveillance missions flown over Gaza",
+          "value": 600,
+          "unit": "+",
+          "note": "Flown from Cyprus, with intelligence shared with Israel."
+        },
+        {
+          "label": "UK aircraft flown to Israel in the months after 7 October 2023",
+          "value": 60,
+          "note": "Matt Kennard for Declassified UK, May 2024."
+        },
+        {
+          "label": "Military flights from RAF bases to Israel in the first six weeks of the Burnham premiership",
+          "value": 10,
+          "unit": "+",
+          "note": "Eight Stratotankers from RAF Mildenhall between 24 July and 26 August 2026; an A400M Atlas from RAF Akrotiri into Tel Aviv on 26 August 2026; a US C-17 from RAF Lakenheath on 11 August 2026. Novara Media, 3 September 2026."
+        }
+      ],
+      "notes": [
+        "Foreign Secretary Ed Miliband added a \"double lock\" on 8 September 2026 — a commitment to refuse future licence applications that materially contribute to the occupation — without extending the suspension to the F-35 exemption.",
+        "Nearly three years into the war, the UK had still not moved to a full two-way arms embargo, the demand made since 2024 by the TUC, the Green Party, Humza Yousaf and the Palestinian Youth Movement Britain.",
+        "In July 2025, while sitting in the cabinet licensing these exports, then-Health Secretary Wes Streeting wrote privately to Peter Mandelson that Israel was \"committing war crimes before our eyes\". He was appointed Defence Secretary on 20 July 2026."
+      ]
+    }
+  },
+  "lebanon": {
+    "title": "Lebanon",
+    "lede": "The Dahiya Doctrine is not an inference drawn by critics. It was set out by Major General Gadi Eisenkot, later IDF Chief of Staff, after the 2006 war: \"What happened in the Dahiya quarter of Beirut in 2006 will happen in every village from which Israel is fired on… We will apply disproportionate force on it… From our standpoint, these are not civilian villages, they are military bases.\" What follows is the record of its application.",
+    "ref": "§5.2, §7.1–7.2, §8.6",
+    "source": "Lebanese Ministry of Public Health; Lebanese government casualty figures; Kahan Commission; UN investigations",
+    "episodes": [
+      {
+        "label": "Sabra and Shatila",
+        "date": "16–18 September 1982",
+        "year": 1982,
+        "killed": 800,
+        "killed_high": 3500,
+        "display": "800–3,500",
+        "note": "Israeli forces under Defence Minister Ariel Sharon surrounded the camps and let in allied Phalangist militias, firing flares to light the camps at night over three days. Israel's own Kahan Commission found Sharon \"personally responsible\" and recommended his removal. He was Prime Minister nineteen years later."
+      },
+      {
+        "label": "Qana",
+        "date": "18 April 1996",
+        "year": 1996,
+        "killed": 106,
+        "note": "Israeli artillery struck a UN compound sheltering 800 civilians during Operation Grapes of Wrath. 106 killed, including 54 children. The UN investigation found the attack was not an accident."
+      },
+      {
+        "label": "The 2006 war",
+        "date": "July–August 2006, 34 days",
+        "year": 2006,
+        "killed": 1200,
+        "note": "About 1,200 Lebanese civilians killed in 34 days. Cluster munitions used; civilian infrastructure destroyed. The Dahiya Doctrine was articulated afterwards, in defence of what had been done."
+      },
+      {
+        "label": "Pager and walkie-talkie attacks",
+        "date": "17–18 September 2024",
+        "year": 2024,
+        "killed": 42,
+        "injured": 4000,
+        "note": "Thousands of booby-trapped devices, manufactured by Mossad through a shell company and embedded with PETN, detonated across Lebanon and Syria. 42 killed including 12 civilians, among them a nine-year-old girl and an eleven-year-old boy; more than 4,000 injured, with lost hands, lost eyes and shrapnel wounds. Amnesty International: the attack \"may amount to a war crime\"."
+      },
+      {
+        "label": "The bombing campaign",
+        "date": "September–November 2024",
+        "year": 2024.8,
+        "killed": 3800,
+        "displaced": 1200000,
+        "note": "Over 3,800 Lebanese killed by the November 2024 ceasefire, per the Lebanese health ministry. Whole Beirut neighbourhoods levelled; Hezbollah leader Hassan Nasrallah killed in a strike that destroyed an entire residential block; 1.2 million people displaced, about a quarter of Lebanon's population."
+      },
+      {
+        "label": "Operation Eternal Darkness",
+        "date": "7–8 April 2026",
+        "year": 2026.3,
+        "killed": 357,
+        "note": "Launched within hours of a US-brokered Iran ceasefire that the mediator, Pakistan, stated explicitly had included Lebanon. 50 fighter jets, about 160 munitions, against central Beirut and southern Lebanon without prior warning. At least 357 killed. UN experts called the bombing \"unprecedented\"; Lebanon called it \"Black Wednesday\"."
+      },
+      {
+        "label": "The 2026 campaign",
+        "date": "2 March – 10 July 2026",
+        "year": 2026.5,
+        "killed": 4321,
+        "injured": 12204,
+        "note": "The Lebanese Ministry of Public Health's cumulative count for the period, reported on 10 July 2026, after the 26 June framework deal Amnesty International and Human Rights Watch called a \"betrayal of victims of war crimes\" and which Israel violated within days."
+      }
+    ],
+    "occupation": {
+      "label": "The Yellow Line inside Lebanon",
+      "value": 10,
+      "unit": "km",
+      "note": "A military control zone extending roughly ten kilometres inside Lebanese sovereign territory, which Defence Minister Israel Katz said Israel \"will continue to hold and control\". Katz also announced the demolition of homes in border villages \"in accordance with the Rafah and Beit Hanoun model in Gaza\" and barred the return of more than 600,000 residents south of the Litani."
+    },
+    "notes": [
+      "The 1982 figure is a range because the killing was carried out by allied militias inside camps Israeli forces had surrounded, and no complete count was ever taken. The chart plots the low end of the documented range.",
+      "The 2024 and 2026 tolls are the Lebanese health ministry's own counts, published contemporaneously.",
+      "The Lemkin Institute for Genocide Prevention issued a Red Flag Alert, \"Israel in Lebanon\", in March 2026, after Finance Minister Bezalel Smotrich said Beirut's Dahiyeh would \"soon resemble Khan Younis\"."
+    ]
+  },
+  "regional": {
+    "title": "Beyond Gaza",
+    "lede": "In three calendar years, Israel conducted offensive military operations on the sovereign territory of at least four states: Lebanon, Syria, Yemen and Iran. Under Article 2(4) of the UN Charter, members shall refrain from the use of force against the territorial integrity of any state; under Article 51 the only exception is self-defence against an armed attack. Almost none of what follows was authorised by the Security Council.",
+    "ref": "§8.1–8.6",
+    "source": "UN Security Council records; report Part VIII",
+    "states": ["Lebanon", "Syria", "Yemen", "Iran"],
+    "events": [
+      {
+        "state": "Syria",
+        "label": "Occupation of the Golan Heights",
+        "date": "June 1967",
+        "year": 1967,
+        "note": "Occupied in the 1967 war and held since."
+      },
+      {
+        "state": "Syria",
+        "label": "Annexation of the Golan Heights",
+        "date": "14 December 1981",
+        "year": 1981,
+        "note": "The Golan Heights Law. UN Security Council Resolution 497 (1981) declared the annexation \"null and void and without international legal effect\". Rejected by the entire international community, with the partial exception of the United States from 2019."
+      },
+      {
+        "state": "Lebanon",
+        "label": "Sabra and Shatila",
+        "date": "16–18 September 1982",
+        "year": 1982,
+        "killed": 800,
+        "note": "800 to 3,500 killed over three days. The Kahan Commission found Defence Minister Ariel Sharon \"personally responsible\"."
+      },
+      {
+        "state": "Lebanon",
+        "label": "Qana",
+        "date": "18 April 1996",
+        "year": 1996,
+        "killed": 106,
+        "note": "A UN compound sheltering 800 civilians struck during Operation Grapes of Wrath. The UN found the attack was not an accident."
+      },
+      {
+        "state": "Lebanon",
+        "label": "The 2006 war",
+        "date": "July–August 2006",
+        "year": 2006,
+        "killed": 1200,
+        "note": "About 1,200 civilians killed in 34 days. The Dahiya Doctrine was articulated afterwards by Major General Gadi Eisenkot."
+      },
+      {
+        "state": "Iran",
+        "label": "Damascus consulate strike",
+        "date": "1 April 2024",
+        "year": 2024.25,
+        "killed": 16,
+        "note": "Israel bombed the Iranian consular building in Damascus, killing 16 including senior Iranian military officials. Bombing a diplomatic facility violates the Vienna Convention on Diplomatic Relations. The strike was on Syrian soil, against an Iranian protected facility."
+      },
+      {
+        "state": "Iran",
+        "label": "Assassination of Ismail Haniyeh in Tehran",
+        "date": "31 July 2024",
+        "year": 2024.6,
+        "killed": 1,
+        "note": "The killing of Hamas's political leader on Iranian territory — a violation of Iranian sovereignty and of the negotiating track he led."
+      },
+      {
+        "state": "Lebanon",
+        "label": "Pager and walkie-talkie attacks",
+        "date": "17–18 September 2024",
+        "year": 2024.72,
+        "killed": 42,
+        "note": "42 killed, more than 4,000 injured, by booby-trapped consumer devices distributed into a civilian population. Amnesty International: \"may amount to a war crime\"."
+      },
+      {
+        "state": "Lebanon",
+        "label": "The 2024 bombing campaign",
+        "date": "September–November 2024",
+        "year": 2024.8,
+        "killed": 3800,
+        "note": "Over 3,800 killed; 1.2 million displaced, about a quarter of Lebanon's population."
+      },
+      {
+        "state": "Iran",
+        "label": "First acknowledged strikes on Iranian territory",
+        "date": "26 October 2024",
+        "year": 2024.82,
+        "note": "The first Israeli airstrikes on Iran that Israel itself acknowledged."
+      },
+      {
+        "state": "Syria",
+        "label": "Invasion of the 1974 buffer zone",
+        "date": "December 2024",
+        "year": 2024.95,
+        "note": "After the fall of the Assad regime, Israel expanded its occupation into the demilitarised buffer zone established by the 1974 disengagement agreement, and conducted hundreds of further strikes on installations of a transitional authority with which it was in no state of armed conflict."
+      },
+      {
+        "state": "Yemen",
+        "label": "Long-range strikes on ports and airports",
+        "date": "2024–2026",
+        "year": 2025.0,
+        "note": "Multiple long-range strikes on the territory of a third state, against ports, airports and other infrastructure, raising the same Article 2(4) question."
+      },
+      {
+        "state": "Iran",
+        "label": "The Twelve-Day War",
+        "date": "13–24 June 2025",
+        "year": 2025.45,
+        "killed": 400,
+        "estimate": true,
+        "note": "A surprise attack with more than 200 aircraft against more than 100 targets including civilian areas; the United States struck three nuclear sites on 22 June. The report records hundreds of Iranian civilians killed and nuclear scientists assassinated without giving a single verified total, so the plotted value is a mid-range reading of \"hundreds\" and is marked as an estimate."
+      },
+      {
+        "state": "Iran",
+        "label": "The US–Israel war on Iran opens",
+        "date": "28 February 2026",
+        "year": 2026.16,
+        "note": "Coordinated US and Israeli airstrikes on military and government sites, formalised in letters to the Security Council (S/2026/161 and S/2026/162) invoking Article 51 — against the ICJ's own 2004 Wall Advisory Opinion, which holds that Article 51 does not apply to an occupying power. Supreme Leader Ali Khamenei was killed during the conflict: the targeted assassination of a sitting head of state, with no declaration of war and outside any legal framework."
+      },
+      {
+        "state": "Iran",
+        "label": "Minab girls' school strike",
+        "date": "28 February 2026",
+        "year": 2026.17,
+        "killed": 165,
+        "actor": "United States",
+        "note": "A US Tomahawk struck the Shajareh Tayyebeh girls' elementary school in Minab, Hormozgan, with between 170 and 264 pupils present, most of them girls aged 7 to 12. 165 killed, at least 95 wounded. A commander-directed US Army Regulation 15-6 inquiry concluded American forces were likely responsible and attributed the strike to \"targeting error rooted in stale intelligence data\". Human Rights Watch called on 20 April 2026 for an independent investigation of a potential war crime. Plotted because this record applies the same standard to US conduct against Iranian children that it applies to Israeli conduct against Palestinian children."
+      },
+      {
+        "state": "Lebanon",
+        "label": "Operation Eternal Darkness",
+        "date": "7–8 April 2026",
+        "year": 2026.27,
+        "killed": 357,
+        "note": "50 jets, about 160 munitions, within hours of a ceasefire the mediator said included Lebanon. At least 357 killed. Over twenty observer states issued formal condemnation."
+      },
+      {
+        "state": "Lebanon",
+        "label": "The March–July 2026 campaign",
+        "date": "2 March – 10 July 2026",
+        "year": 2026.52,
+        "killed": 4321,
+        "note": "The Lebanese Ministry of Public Health's cumulative count to 10 July 2026: 4,321 killed and 12,204 injured, including strikes that continued after the 26 June framework deal."
+      }
+    ],
+    "notes": [
+      "Symbol size is the documented death toll where one exists; events with no published toll are drawn at the minimum size rather than omitted.",
+      "The Minab strike is attributed by the United States' own preliminary inquiry to US forces, and is marked accordingly. The report does not exempt US or Israeli conduct against Iranian civilians from the standards it applies to Israeli conduct against Palestinian civilians.",
+      "The legal characterisation the report reaches: operations conducted without Security Council authorisation and beyond any defensible reading of Article 51 constitute acts of aggression under Article 8 bis of the Rome Statute."
+    ]
+  }
+}

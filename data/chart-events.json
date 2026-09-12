@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "title": "Dated events for annotation of the Gaza time series",
+    "built": "2026-09-12",
+    "note": "Each entry is a single dated event that the charts draw as a vertical marker on the Gaza monthly and daily series. Nothing is annotated that report-final.md does not date: the Gaza Humanitarian Foundation has no founding date in the record, so it carries no marker, and the Lebanon escalations are not here because the Lebanese toll is held by episode rather than as a dated series.",
+    "method": "Every date below appears verbatim in report-final.md. 'short' is the label drawn on the chart and is kept to two lines; 'label' and 'detail' are the tooltip. The 11 October 2025 ceasefire is deliberately absent: it is drawn on every monthly series already, by its own marker, whether or not the event layer is switched on."
+  },
+  "events": [
+    {
+      "date": "2023-10-09",
+      "short": "Complete siege\nordered",
+      "label": "Complete siege ordered",
+      "detail": "Defence Minister Yoav Gallant: 'I have ordered a complete siege on Gaza. There will be no electricity, no food, no fuel, everything is closed.'",
+      "tone": "red",
+      "ref": "§6.2"
+    },
+    {
+      "date": "2024-01-26",
+      "short": "ICJ\nprovisional measures",
+      "label": "ICJ provisional measures",
+      "detail": "The International Court of Justice finds it plausible that Israel's conduct falls within the Genocide Convention and orders provisional measures. Under Bosnia v Serbia (2007) this is the date the duty to prevent was triggered for every state party.",
+      "tone": "blue",
+      "ref": "§13"
+    },
+    {
+      "date": "2024-02-29",
+      "short": "Flour\nMassacre",
+      "label": "Flour Massacre, Al-Rashid Street",
+      "detail": "118 killed and 760 wounded at an aid convoy.",
+      "tone": "red",
+      "ref": "Appendix B"
+    },
+    {
+      "date": "2024-03-28",
+      "short": "ICJ\nagain",
+      "label": "ICJ further provisional measures",
+      "detail": "Strengthened orders on aid access.",
+      "tone": "blue",
+      "ref": "§13"
+    },
+    {
+      "date": "2024-05-24",
+      "short": "ICJ\non Rafah",
+      "label": "ICJ further provisional measures on Rafah",
+      "detail": "The Court orders Israel to halt its offensive in Rafah.",
+      "tone": "blue",
+      "ref": "§13"
+    },
+    {
+      "date": "2024-05-26",
+      "short": "Tel al-Sultan",
+      "label": "Tel al-Sultan / Rafah tent massacre",
+      "detail": "45 or more killed and 200 or more wounded, burned alive in a displaced persons camp, two days after the ICJ order on Rafah.",
+      "tone": "red",
+      "ref": "Appendix B"
+    },
+    {
+      "date": "2024-07-19",
+      "short": "ICJ advisory\nopinion",
+      "label": "ICJ advisory opinion",
+      "detail": "The occupation is declared unlawful in its entirety, 14 votes to 1, with an obligation on Israel to end its unlawful presence.",
+      "tone": "blue",
+      "ref": "§13"
+    },
+    {
+      "date": "2024-11-21",
+      "short": "ICC\nwarrants",
+      "label": "ICC arrest warrants",
+      "detail": "Pre-Trial Chamber I issues warrants for Netanyahu and Gallant, charging starvation as a method of warfare under Rome Statute Article 8(2)(b)(xxv).",
+      "tone": "blue",
+      "ref": "§13"
+    },
+    {
+      "date": "2025-03-02",
+      "short": "Total\nblockade",
+      "label": "Total blockade imposed",
+      "detail": "All humanitarian aid halted. Nothing crossed.",
+      "tone": "red",
+      "ref": "§6.3"
+    },
+    {
+      "date": "2025-08-22",
+      "short": "Famine\ndeclared",
+      "label": "IPC declares famine",
+      "detail": "The first formal famine declaration in the Middle East since the IPC system was created, confirmed in Gaza Governorate.",
+      "tone": "amber",
+      "ref": "§6.3"
+    },
+    {
+      "date": "2025-09-16",
+      "short": "Genocide\nfound",
+      "label": "UN Commission of Inquiry finds genocide",
+      "detail": "The UN Independent International Commission of Inquiry on the OPT, chaired by Navi Pillay, makes an affirmative genocide finding.",
+      "tone": "violet",
+      "ref": "§13"
+    },
+    {
+      "date": "2026-06-06",
+      "short": "Crossings\nsealed",
+      "label": "All crossings closed",
+      "detail": "Israel closes every entry point into Gaza, Rafah and Kerem Shalom included, 'until further notice', halting aid to roughly two million people.",
+      "tone": "red",
+      "ref": "§6.3"
+    },
+    {
+      "date": "2026-06-23",
+      "short": "Second\nfinding",
+      "label": "Second Commission of Inquiry finding",
+      "detail": "A/HRC/62/CRP.2, presented to the 62nd session of the Human Rights Council, on the deliberate targeting of children.",
+      "tone": "violet",
+      "ref": "§13"
+    }
+  ]
+}

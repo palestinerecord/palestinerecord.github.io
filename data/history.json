@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "Before October 2023",
+    "description": "The record did not begin on 7 October 2023. By the time it did, 2023 was already the deadliest year for Palestinians in the West Bank since the United Nations began systematically recording casualties there in 2005 — and 2022 had held that record before it. This section carries the pre-war baseline and the estimates of what the recorded Gaza toll leaves out.",
+    "compiled": "2026-09-11",
+    "note": "Figures for 2022 and 2023 are OCHA's, which cover the West Bank including East Jerusalem and count deaths verified against at least two independent sources. Figures from October 2023 onward are the Tech For Palestine aggregation of OCHA and Ministry of Health daily reporting. The two are not identical in method; where a year straddles both, the source is stated on the entry."
+  },
+
+  "west_bank": {
+    "label": "Palestinians killed in the West Bank, including East Jerusalem",
+    "years": [
+      { "year": 2022, "killed": 155, "children": 36, "source": "OCHA", "note": "Of these, 152 (including 35 children) were killed by Israeli forces. The deadliest year in the West Bank since OCHA began systematically recording casualties in 2005. B'Tselem, counting on its own methodology, recorded 146 killed by Israeli forces — the largest number since 2004 — plus five killed by Israeli civilians." },
+      { "year": 2023, "killed": 507, "children": 81, "source": "OCHA", "note": "More than triple the 2022 figure and the deadliest year on record. 208 of those deaths, including 42 children, occurred between 1 January and 6 October — before the war began. The UN also recorded 36 Israeli fatalities in attacks by Palestinians from the West Bank, the highest since 2005." },
+      { "year": 2024, "killed": 495, "children": 88, "source": "Tech For Palestine / OCHA", "note": "The second full year of the escalation, at almost exactly the 2023 rate, with the world's attention on Gaza." },
+      { "year": 2025, "killed": 237, "children": 49, "source": "Tech For Palestine / OCHA", "note": "Includes Operation Iron Wall in the northern camps, which displaced more than 33,000 people from Jenin, Nur Shams and Tulkarem." },
+      { "year": 2026, "killed": 75, "children": 22, "source": "Tech For Palestine / OCHA", "note": "To 10 September 2026. OCHA recorded at least 15 Palestinians killed by settlers by 24 July 2026, putting the year on course to pass the previous record of 16 settler killings set in 2023." }
+    ],
+    "record_note": "OCHA began systematically recording West Bank casualties in 2005. Every year from 2005 to 2021 fell below the 2022 figure; 2022 was then exceeded threefold by 2023."
+  },
+
+  "before_after": {
+    "label": "The West Bank in 2023, before and after 7 October",
+    "segments": [
+      { "label": "1 January – 6 October 2023", "killed": 208, "children": 42, "days": 279, "note": "Already the deadliest year on record in the West Bank before the war began. A rate of 0.75 killings a day." },
+      { "label": "7 October – 31 December 2023", "killed": 299, "days": 86, "note": "Derived as the balance of OCHA's full-year figure of 507; OCHA's own reporting for 7 October to 30 December gives about 310. A rate of roughly 3.5 killings a day — more than four times the pre-war rate. Israeli security forces were responsible for 97% of them." }
+    ],
+    "source": "OCHA, Data on Casualties and West Bank Snapshot, December 2023",
+    "significance": "The pre-7-October figure is the answer to the claim that West Bank violence is a consequence of the war. The trend was already at a twenty-year high when the war started; the war multiplied it."
+  },
+
+  "settler_violence": {
+    "label": "Settler incidents against Palestinians, daily average",
+    "years": [
+      { "year": 2021, "per_day": 1, "source": "OCHA" },
+      { "year": 2022, "per_day": 2, "source": "OCHA" },
+      { "year": 2023, "per_day": 3, "source": "OCHA", "note": "Average over the first eight months of 2023 — the highest daily average since the UN began recording this data in 2006, before the war began." },
+      { "year": 2024, "per_day": 7, "source": "OCHA", "note": "The post-7-October rate. Harassment, trespass and intimidation are excluded from OCHA's count, so this understates the pressure." }
+    ],
+    "displacement_note": "Settler violence has completely or partially displaced 107 Palestinian communities — some 5,900 people — since January 2023 (OCHA)."
+  },
+
+  "true_toll": {
+    "label": "What the recorded toll leaves out",
+    "lede": "The Gaza Ministry of Health count is a register of identified bodies, not an estimate of deaths. Three methodologically independent studies — statistical list-overlap modelling, household survey, and demographic reconstruction — converge on the same conclusion: it undercounts by roughly a third to two-fifths, and it excludes the dead still under the rubble.",
+    "estimates": [
+      {
+        "name": "Ministry of Health, recorded",
+        "value": 37877,
+        "kind": "count",
+        "period": "7 Oct 2023 – 30 Jun 2024",
+        "source": "Gaza Ministry of Health",
+        "note": "The contemporaneous count of identified dead for the period the Lancet study examined. Before October 2023 the ministry's under-reporting was estimated at 13%; the campaign against hospitals and communications degraded that capacity."
+      },
+      {
+        "name": "Lancet capture–recapture",
+        "value": 64260,
+        "low": 55298,
+        "high": 78525,
+        "kind": "estimate",
+        "period": "7 Oct 2023 – 30 Jun 2024",
+        "source": "The Lancet, 10 January 2025 (London School of Hygiene and Tropical Medicine, Yale and others)",
+        "note": "Traumatic-injury deaths only, excluding starvation, cold and disease. Implies the ministry under-reported by 41%. 59.1% of the dead were women, children or people over 65. About one in 35 of Gaza's pre-war population."
+      },
+      {
+        "name": "Ministry of Health, recorded",
+        "value": 49090,
+        "kind": "count",
+        "period": "7 Oct 2023 – 5 Jan 2025",
+        "source": "Gaza Ministry of Health",
+        "note": "The comparison baseline for the Gaza Mortality Survey."
+      },
+      {
+        "name": "Gaza Mortality Survey",
+        "value": 75200,
+        "kind": "estimate",
+        "period": "7 Oct 2023 – 5 Jan 2025",
+        "source": "The Lancet Global Health, February 2026",
+        "note": "Household survey of violent deaths — an empirical count by interview, not a model. Implies an undercount of about 35%, which the authors note closely aligns with the capture–recapture estimate: a rare cross-method validation. Women, children and people over 64 were 56.2% of violent deaths."
+      },
+      {
+        "name": "MPIDR demographic reconstruction",
+        "value": 78318,
+        "kind": "estimate",
+        "period": "7 Oct 2023 – 31 Dec 2024",
+        "source": "Max Planck Institute for Demographic Research, November 2025",
+        "note": "An independent demographic reconstruction over almost exactly the survey's period, arriving within 4% of it by a third method."
+      }
+    ],
+    "missing": {
+      "label": "Still unaccounted for",
+      "items": [
+        { "label": "Estimated dead under the rubble", "value": 9000, "range": "8,000–10,000", "source": "Gaza Civil Defence and Ministry of Health estimates", "note": "Excluded from the recorded toll by definition: the count registers bodies received, and these bodies have not been recovered." },
+        { "label": "Bodies recovered since the ceasefire", "value": 827, "source": "Gaza Civil Defence, 2025–2026", "note": "Recovered from rubble after 11 October 2025 and added to the count — direct confirmation that the register lags reality." },
+        { "label": "Children of unknown fate", "value": 2900, "source": "UNICEF and Ministry of Health", "note": "Registered as missing rather than dead: under rubble, unidentified, or separated." },
+        { "label": "Missing, per the mortality survey", "value": 12200, "source": "Gaza Mortality Survey, The Lancet Global Health, 2026", "note": "The survey's own estimate of persons missing and presumed dead, over and above its 75,200 violent deaths." }
+      ]
+    },
+    "indirect": {
+      "label": "Indirect and non-violent deaths",
+      "note": "The Gaza Mortality Survey estimated a further 16,300 non-violent excess deaths over the same period — deaths from the collapse of the health system, water and food supply rather than from weapons. Total estimated mortality on that basis is approximately 83,650. The widely circulated figure of 186,000 comes from a 2024 correspondence letter in The Lancet applying an indirect-to-direct multiplier of 4:1 drawn from other conflicts; it is a projection of eventual total war-attributable mortality, not a body count, and is presented here as such. The Costs of War Project at Brown University has published in the same terms.",
+      "violent": 75200,
+      "non_violent": 16300,
+      "total": 83650
+    },
+    "significance": "Under the Genocide Convention the legal question is the conduct and the intent, not the arithmetic. But the arithmetic matters to the public record: every figure quoted in this dashboard from the Ministry of Health is, on the evidence of three independent studies, a floor and not a ceiling."
+  }
+}

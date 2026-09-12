@@ -1,0 +1,1922 @@
+{{Short description|None}}
+{{pp-extended|small=yes}}
+<div class="thumb floatright"><div class="thumbinner" style="width: 302px;">
+<div class="thumbimage" style="width: 300px; height: 600px; overflow: hidden;"><div style="position: relative; top: -50px; left: -100px; width: 500px"><div class="noresize">{{Nakba map}}</div></div></div>
+<div class="thumbcaption"><div class="magnify">[[:Depopulated Palestinian locations in Israel| ]]</div>Clickable map of the depopulated locations</div>
+</div></div>
+[[File:Status of Palestinian villages depopulated in 1947-1949.webp|thumb|Chart showing the status of Palestinian villages depopulated in 1947-1949]]
+
+During the [[1947–1949 Palestine war]], or the [[Nakba]], around 400 [[Palestinians|Palestinian Arab]] towns and villages were [[1948 Palestinian expulsion and flight|forcibly depopulated]] by Israeli forces, with a majority being destroyed and left uninhabitable.<ref>{{cite book|author=Benny Morris|title=The Birth of the Palestinian Refugee Problem Revisited|url=https://books.google.com/books?id=uM_kFX6edX8C&pg=PA342|access-date=22 May 2013|year=2004|publisher=Cambridge University Press|isbn=978-0-521-00967-6|page=342|quote=About 400 villages and towns were depopulated in the course of the war and its immediate aftermath. By mid-1949, the majority of these sites were either completely or partly in ruins and uninhabitable.}}</ref><ref>{{cite book|author=Naseer Aruri|title=Palestinian Refugees: The Right of Return|url=https://books.google.com/books?id=teC6AAAAIAAJ|access-date=22 May 2013|date=20 July 2001|publisher=Pluto Press|isbn=978-0-7453-1777-9|page=50|quote=Of the 418 depopulated villages, 293 (70%) were totally destroyed and 90 (22%) were largely destroyed. Seven survived, including 'Ayn Karim (west of Jerusalem), but were taken by Israeli settlers.}}</ref> Today these locations are all in [[Israel]]; many of the locations were repopulated by [[aliyah|Jewish immigrants]], with their [[Hebraization of Palestinian place names|place names replaced with Hebrew place names]].
+
+Arabs remained in small numbers in some of the cities ([[Haifa]], [[Jaffa]] and [[Acre, Israel|Acre]]); and [[Jerusalem]] was divided between [[Jordan]] and Israel. Around 30,000 Palestinians remained in Jerusalem in what became the Arab part of it ([[East Jerusalem]]). In addition, some 30,000 non-Jewish refugees relocated to East Jerusalem, while 5,000 Jewish refugees moved from the [[Old City of Jerusalem|Old City]] to [[West Jerusalem]] on the Israeli side. An overwhelming number of the Arab residents who had lived in the cities that became a part of Israel and were renamed ([[Acre, Israel|Acre]], [[Haifa]], [[Safad]], [[Tiberias]], [[Ashkelon]], [[Beersheba]], [[Jaffa]] and [[Beisan]]) fled or were expelled. Most of the Palestinians who remain there are [[Present absentee|internally displaced people]] from the villages nearby.<ref>Davis, 2011, pp. 237-238</ref>
+
+A number of the towns and villages were destroyed by Israeli forces in the aftermath of the 1948 war, but it was not until 1965 that more than 100 remaining locations – including many of the largest depopulated places – were demolished by the [[Israel Land Administration]].<ref>Shai, Aron. “[https://www.jstor.org/stable/10.2979/his.2006.18.2.86 The Fate of Abandoned Arab Villages in Israel], 1965-1969.” History and Memory, vol. 18, no. 2, 2006, pp. 86–106: "In the spring of 1965, the Israel Land Administration (ILA) initiated the demolition (or to quote contemporary records, “leveling”) of more than one hundred of these abandoned Arab villages. For about fifteen years prior to the ILA initiative, some of the abandoned villages had been demolished, with just their mosques or churches left standing, while others still stood deserted. Some of the villages were well preserved, while others bore the ravages of time; some had been settled with Jewish immigrants at the Israeli government’s initiative (figures 1–4). In villages where the houses had collapsed or were on the verge of collapse, the scars of IDF urban warfare exercises could sometimes be seen, and there were signs of looting and vandalism. However, it was only in the spring of 1965 that a clear policy was established to “level” the abandoned villages with the aim of “clearing” the country, to quote the official term used at the time. The operation, which was deliberately planned and executed, unlike its predecessor in the aftermath of the 1948 war, lasted until the few weeks of political and military tension before the June 1967 Six-Day War, and was subsequently continued after the war, and even expanded to include the newly occupied territories... The demolition program affected a large number of villages, including al-Burj, Bir Ma‘in (near present-day Modi‘in), Tall al-Safi, Zakariyya (in the Elah Valley), Abu Shusha and al-Qubab (southeast of Ramle), al-Khayriyya (near Jaffa; the place later became the central garbage tip), and in the north—Lubya (east of Tiberias), Dalaata (near Safed), and the small town of Saffuriyya (now the Tzippori national park)."</ref>
+
+There are more than 120 "village memorial books" documenting the history of the depopulated Palestinian villages. These books are based on accounts given by villagers. Rochelle A. Davis has described the authors as seeking "to pass on information about their villages and their values to coming generations".<ref>Davis, 2011, p. Preface - xvii</ref>
+
+The towns and villages listed below are arranged according to the subdistricts of [[Mandatory Palestine]] in which they were situated.
+
+==Table==
+{{Sticky header}}{{row hover highlight}}
+{| class="wikitable sortable sticky-header mw-datatable"
+! Name !! Subdistrict 
+!Image!! Date of depopulation{{sfn|Abu Sitta|2010|pp=108–115}} !! Arab population 1948{{sfn|Abu Sitta|2010|pp=108–115}} !! Land area (dunums){{sfn|Abu Sitta|2010|pp=108–115}} !! Israeli operation{{sfn|Abu Sitta|2006|pp=108–115}} !! Massacres{{sfn|Abu Sitta|2010|pp=108–115}} !! Status{{sfn|Abu Sitta|2010|pp=108–115}} !! Coordinates !! Modern location
+|-
+! [[Jaffa]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|26 April 1948|format=dmy}} || 76,920 || 17,510 ||  || Massacre, atrocity ||  || {{#invoke:Coordinates|coord|32|03|08|N|34|45|11|E|region:IL_type:city|display=inline}} || 
+|-
+! [[Haifa]] (Arab)
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|21 April 1948|format=dmy}} || 72,848 || 54,305 ||  || Massacre, atrocity ||  || {{#invoke:Coordinates|coord|32|49|0|N|34|59|0|E|region:IL|format=dms|display=inline}} || 
+|-
+! [[Jerusalem]] ([[Katamon|Qatamon]])
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|28 April 1948|format=dmy}} || 69,693 || 20,790 || various || Massacre, atrocity ||  || {{#invoke:Coordinates|coord|31.761|N|35.207|E|region:IL_scale:20000|display=inline}} || 
+|-
+! [[Tarabin Bedouin]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|5 December 1948|format=dmy}} || 32,665 || 1,362,475 || [[Operation Yoav|Yoav]]/[[Operation Assaf|Assaf]] ||  || Some walls  || {{#invoke:Coordinates|coord|31.3455|N|34.7391|E|source:wikidata|display=inline}} || 
+|-
+! [[Lydda]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| [[File:St Georges Church Lydda.jpg |100px|frameless|alt=Photo of the village or town]]|| {{Date table sorting|10 July 1948|format=dmy}} || 19,442 || 23,723 ||  || Massacre, atrocity ||  || {{#invoke:Coordinates|coord|31|57|7|N|34|53|17|E|region:IL|format=dms|display=inline}} || 
+|-
+! [[Ramla]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| [[File:Ramleh.jpg |100px|frameless|alt=Photo of the village or town]]|| {{Date table sorting|10 July 1948|format=dmy}} || 17,586 || 40,567 ||  || Atrocity ||  || {{#invoke:Coordinates|coord|31|56|N|34|52|E|region:IL|format=dms|display=inline}} || 
+|-
+! [['Azazme]] Bedouin
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|1 May 1950|format=dmy}} || 16,746 || 5,700,000 ||  ||  ||  ||  || 
+|-
+! [[Tayaha Bedouin]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|20 October 1948|format=dmy}} || 16,248 || 2,085,825 || [[Operation Yoav|Yoav]] ||  ||  ||  || 
+|-
+! [[Acre, Israel|Acre]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|17 May 1948|format=dmy}} || 14,280 || 1,29 || [[Operation Ben-Ami|Ben-Ami]] || Massacre ||  || {{#invoke:Coordinates|coord|32|55|40|N|35|04|54|E|region:IL|format=dms|display=inline}} || 
+|-
+! [[Ashkelon|Al Majdal]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|4 November 1948|format=dmy}} || 11,496 || 43,680 || [[Operation Yoav|Yoav]] ||  ||  || {{#invoke:Coordinates|coord|31|40|N|34|34|E|region:IL|format=dms|display=inline}} || [[Ashkelon]]
+|-
+! [[Safad]] (Arab)
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| [[File:Safed1908.jpg |100px|frameless|alt=Photo of the village or town]]|| {{Date table sorting|11 May 1948|format=dmy}} || 11,055 || 4,431 || [[Operation Yiftach|Yiftach]] || Atrocity ||  || {{#invoke:Coordinates|coord|32|57|57|N|35|29|54|E|region:IL|format=dms|display= inline}} || 
+|-
+! [[Jbarat Bedouin]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|20 October 1948|format=dmy}} || 9,058 || 379,175 || [[Operation Yoav|Yoav]] ||  ||  ||  || 
+|-
+! [[Salama, Jaffa|Salama]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|25 April 1948|format=dmy}} || 7,807 || 6,471 || [[Operation Hametz|Hametz]] || Evacuation<ref>{{cite news |last1=Davidson |first1=Carter |title=Jewish Troops Surround Arab Points as Arabs Plan Wearing Down War |url=https://news.google.com/newspapers?id=8GEsAAAAIBAJ&sjid=LMsEAAAAIBAJ&dq=middleeast%20news%20jews%20arabs&pg=6318%2C3682 |access-date=20 October 2024 |work=The Spartanberg Herald |agency=Associated Press |date=May 1, 1948 |ref=AP}}</ref> || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|02|57|N|34|48|18|E|type:city_region:PS|display=inline}} || [[Tel Aviv]]
+|-
+! [[Hanajreh Bedouin]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|22 December 1948|format=dmy}} || 7,599 || 78,325 || [[Operation Yoav|Yoav]]/[[Battle of Hill 86|Hill 86]] ||  ||  ||  || 
+|-
+! [[al-'Abbasiyya]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|4 May 1948|format=dmy}} || 6,554 || 20,540 ||  || Atrocity || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|01|51|N|34|53|25|E|type:city_region:PS|display=inline}} || [[Yehud, Israel|Yehud]],<ref name=Khalidi235>Khalidi, 1992, p. 235</ref> [[Magshimim]],<ref name=Khalidi235/> [[Ganne Yehuda]],<ref name=Khalidi235/> [[Ganne Tiqwa]],<ref name=Khalidi235/> and [[Savyon]]<ref name=Khalidi235/>
+|-
+! [[Beersheba]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| [[File:Beersheba 1948.jpg |100px|frameless|alt=Photo of the village or town]] || {{Date table sorting|21 October 1948|format=dmy}} || 6,461 || 3,890 || [[Operation Yoav|Yoav]] || Massacre, military assault, expulsions ||  || {{#invoke:Coordinates|coord|31|15|32|N|34|47|59|E|region:IL|format=dms|display=inline}} || 
+|-
+! [[Yibna]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|4 June 1948|format=dmy}} || 6,287 || 59,554 || [[Operation Barak|Barak]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|51|58|N|34|44|47|E|type:city_region:PS|display=inline}} || [[Yavne]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #75</ref> [[Beit Raban]], [[Kfar HaNagid]], [[Beit Gamliel]]
+|-
+! [[al-Kabri]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|21 May 1948|format=dmy}} || 6,218 || 47,428 || [[Operation Ben-Ami|Ben-Ami]] || Massacre, military assault, fear<ref name=Mxv/> || Rubble  || {{#invoke:Coordinates|coord|33|00|56|N|35|09|03|E|type:city_region:PS|display=inline}} || [[Kabri, Israel|Kabri]],<ref name="Khalidi"/> [[Ga'aton]],<ref name="Khalidi"/> [[Me'ona]],<ref name="Khalidi"/> [[Ein Ya'akov]],<ref name="Khalidi"/> [[Ma'alot]],<ref name="Khalidi"/> [[Kefar Vradim]]<ref name="Khalidi"/>
+|-
+! [[Tiberias]] (Arab)
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|18 April 1948|format=dmy}} || 6,160 || 15,729 ||  || Massacre, atrocity ||  || {{#invoke:Coordinates|coord|32|47|40|N|35|32|00|E|region:IL|format=dms|display=inline}} || 
+|-
+! [[Al-Tira, Haifa|al-Tira]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|16 July 1948|format=dmy}} || 6,113 || 45,262 ||  || Massacre, atrocity || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|45|43|N|34|58|31|E|type:city_region:PS|display=inline}} || [[HaHotrim]],<ref name="Morris#8">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR20 xx], settlement #8.</ref><ref name=Khalidi198>Khalidi, 1992, p. 198</ref> [[Tirat Carmel]],<ref name=Khalidi198/> [[Megadim]],<ref name=Khalidi198/> [[Kfar Galim]],<ref name=Khalidi198/> [[Kfar Tzvi Sitrin]]<ref name=Khalidi198/>
+|-
+! [[Beit She'an#British Mandate period|Beisan]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 6,009 || 28,957 || [[Operation Gideon|Gideon]] || Massacre ||  || {{#invoke:Coordinates|coord|32|30|N|35|30|E|region:IL|format=dms|display=inline}} || 
+|-
+! [[Hamama]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|4 November 1948|format=dmy}} || 5,812 || 41,366 || [[Operation Yoav|Yoav]] ||  || No trace  || {{#invoke:Coordinates|coord|31|41|29|N|34|35|24|E|type:city_region:PS|display=inline}} || [[Nitzanim]],<ref name=Khalidi100>Khalidi, 1992, p. 100</ref> [[Beit Ezra]],<ref name=Khalidi100/> [[Eshkolot (farm)|Eshkolot]]<ref name=Khalidi100/>
+|-
+! [[al-Faluja]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| [[File:Al Faluja.jpg |100px|frameless|alt=Photo of the village or town]] || {{Date table sorting|1 March 1949|format=dmy}} || 5,417 || 38,038 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|31|37|29|N|34|44|52|E|type:city_region:PS|display=inline}} || [[Kiryat Gat]],<ref name=Khalidi97>Khalidi, 1992, p. 97</ref> [[Shahar, Israel|Shahar]],<ref name=Khalidi97/> [[Noga, Israel|Noga]],<ref name=Khalidi97/> [[Nir Chen]],<ref name=Khalidi97/> [[Nehora]]<ref name=Khalidi97/>
+|-
+! [[Isdud]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|28 October 1948|format=dmy}} || 5,359 || 47,871 || [[Operation Yoav|Yoav]]/[[Operation Ha-Har|Ha-Har]] || Massacre ||  ||  {{#invoke:Coordinates|coord| 31|45|13|N|34|39|43|E|type:city_region:PS|display=inline}} || [[Ashdod]]
+|-
+! [[Sepphoris|Saffuriyya]]
+| [[Nazareth Subdistrict, Mandatory Palestine|Nazareth]] 
+| || {{Date table sorting|16 July 1948|format=dmy}} || 5,023 || 55,378 || [[Operation Dekel|Dekel]] || Atrocity || Some houses  || {{#invoke:Coordinates|coord|32|44|44|N|35|16|43|E|display=inline}} || 
+|-
+! [[Balad al-Sheikh]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|25 April 1948|format=dmy}} || 4,779 || 9,849 || [[Operation Barak|Barak]] || [[Balad al-Shaykh massacre]], atrocity || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|46|18|N|35|02|32|E|type:city_region:PS|display=inline}} || [[Nesher]]<ref>Khalidi, 1992, p. 154</ref>
+|-
+! [[Yazur]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| [[File:Azor-S-679.jpg |100px|frameless|alt=Photo of the village or town]] || {{Date table sorting|1 May 1948|format=dmy}} || 4,675 || 11,807 || [[Operation Hametz|Hametz]] || Atrocity || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|32|01|44|N|34|47|58|E|type:city_region:PS|display=inline}} || [[Azor]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #92</ref> [[Holon]]
+|-
+! [[Bayt Dajan]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|25 April 1948|format=dmy}} || 4,454 || 17,327 || [[Operation Hametz|Hametz]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|0|13|N|34|49|46|E|type:city_region:PS|display=inline}} || [[Beit Dagan]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #91</ref><ref name=Khalidi3>Khalidi, 1992, p. 3</ref> [[Mishmar HaShiv'a]]<ref name="Khalidi3"/> [[Hemed]]<ref name="Khalidi3"/> [[Ganot]]<ref name="Khalidi3"/>
+|-
+! [['Ajjur]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|23 July 1948|format=dmy}} || 4,327 || 58,074 || [[Operation Yoav|Yoav]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|41|28|N|34|55|26|E|type:city_region:PS|display=inline}} || [[Agur, Israel|Agur]],<ref name="Khalidi2">Khalidi, 1992, p. 2</ref> [[Tzafririm]],<ref name="Khalidi2"/> [[Givat Yeshayahu]],<ref name="Khalidi2"/> [[Srigim|Li-On]],<ref name="Khalidi2"/> [[Tirosh]]<ref name="Khalidi2"/> [[Britannia Park]]<ref name=":0">[http://mondoweiss.net/2018/03/prince-william-count/ Dear Prince William, if you have to go, make it count], Robert Cohen, March 10, 2018, [[Mondoweiss]]</ref>
+|-
+! [[al-Dawayima]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|29 October 1948|format=dmy}} || 4,304 || 60,585 || [[Operation Yoav|Yoav]] || Massacre || Rubble  || {{#invoke:Coordinates|coord|31|32|10|N|34|54|43|E|type:city_region:PS|display=inline}} || [[Karmei Katif]]<ref>[https://www.haaretz.co.il/.premium-1.2051365 יישוב למפוני גוש קטיף נבנה על שרידי כפר פלסטיני] Haaretz, 21 June 2013</ref>[[Amatzia, Israel|Amatzia]]
+|-
+! [[Shefa-'Amr]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|16 July 1948|format=dmy}} || 4,211 || 89,985 || [[Operation Dekel|Dekel]] ||  ||  || {{#invoke:Coordinates|coord|32|48|20|N|35|10|10|E|region:IL|format=dms|display=inline}} || 
+|-
+! [[Samakh, Tiberias|Samakh]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| [[File:Valley_train_semakh_station.JPG |100px|frameless|alt=Photo of the village or town]]|| {{Date table sorting|28 April 1948|format=dmy}} || 4,014 || 18,611 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|42|18|N|35|35|15|E|type:city_region:PS|display=inline}} || [[Ma'agan]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #144</ref><ref name="khalidi538">Khalidi, 1992, p. 538</ref> [[Tel Katzir]]<ref name="khalidi538"/> [[Masada (kibbutz)|Masada]],<ref name="khalidi538"/> [[Sha'ar HaGolan]]<ref name="khalidi538"/>
+|-
+! [[Ein Karem|Ayn Karim]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| [[File:EinKarim.jpg |100px|frameless|alt=Photo of the village or town]]|| {{Date table sorting|18 July 1948|format=dmy}} || 3,689 || 15,029 ||  ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|45|55|N|35|8|58|E|region:IL_type:landmark|display=inline}} || 
+|-
+! [[al-Safiriyya]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|20 May 1948|format=dmy}} || 3,561 || 12,842 || [[Operation Hametz|Hametz]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|59|36|N|34|51|04|E|type:city_region:PS|display=inline}} || [[Tzafria]],<ref name=Khalidi253>Khalidi, 1992, p. 253</ref> [[Kfar Chabad]],<ref name=Khalidi253/> [[Ahi'ezer]]<ref name=Khalidi253/> [[Tochelet]]<ref name=Khalidi253/> [[Sharir]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #113</ref> Shafrir (at the site of what is now [[Kfar Chabad]]) has been absorbed in the previous, and in the suburbs of [[Rishon LeZion]]<ref name=Khalidi253/>
+|-
+! [[Ijzim]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|24 July 1948|format=dmy}} || 3,445 || 46,905 || [[Operation Shoter|Shoter]] || Massacre || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|38|41|N|34|59|17|E|type:city_region:PS|display=inline}} || [[Kerem Maharal]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #119</ref>
+|-
+! [[al-Bassa]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|14 May 1948|format=dmy}} || 3,422 || 29,535 ||  || Al-Bassa massacre, military assault, expulsion<ref name=Mxv>Morris, 2004, p. xv</ref> || Some houses  || {{#invoke:Coordinates|coord|33|04|34|N|35|08|27|E|type:city_region:PS|display=inline}} || [[Betzet]],<ref name=Khalidipp89>Khalidi, 1992, pp. 8-9</ref> [[Rosh HaNikra (kibbutz)|Rosh HaNiqra]],<ref name=Khalidipp89/> [[Shlomi, Israel|Shlomi]],<ref name=Khalidipp89/><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #153, in 1949-50.</ref> [[Liman, Israel|Tzahal]],<ref name=Khalidipp89/><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #184, in 1949.</ref> [[Matzuva]]<ref name=Khalidipp89/>
+|-
+! [[Kafr 'Ana]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|25 April 1948|format=dmy}} || 3,248 || 17,353 || [[Operation Hametz|Hametz]] ||  || No trace  || {{#invoke:Coordinates|coord|32|1|38|N|34|52|5|E|type:city_region:PS|display=inline}} || [[Neve Monosson]]<ref name=Khalidi248>Khalidi, 1992, p. 248</ref> [[Yagel]]<ref name=Khalidi248/> [[Or Yehuda]]<ref name=Volynsky2015>Volynsky and Arbel, 2015,  [http://www.hadashot-esi.org.il/report_detail_eng.aspx?id=20774&mag_id=122 Or Yehuda]</ref>
+|-
+! [[Bayt Daras]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|11 May 1948|format=dmy}} || 3,190 || 16,357 ||  || Massacre, atrocity || Rubble  || {{#invoke:Coordinates|coord|31|43|24|N|34|40|58|E|type:city_region:PS|display=inline}} || [[Giv'ati]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #65, 1949-1950</ref><ref name=Khalidi87>Khalidi, 1992, p. 87</ref> [[Emunim]]<ref name=Khalidi87/> [[Azrikam]]<ref name=Khalidi87/>
+|-
+! [[Burayr]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 3,178 || 46,184 || [[Operation Barak|Barak]] || Massacre || Some walls  || {{#invoke:Coordinates|coord|31|34|14|N|34|38|21|E|type:city_region:PS|display=inline}} || [[Bror Hayil]],<ref name="Morris#6">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR20 xx], settlement #6</ref><ref name=Khalidi92>Khalidi, 1992, p. 92</ref> [[Tlamim]],<ref name=Khalidi92/> [[Zohar, Israel|Zohar]],<ref name=Khalidi92/> [[Sde David]],<ref name=Khalidi92/> [[Heletz]]<ref name=Khalidi92/>
+|-
+! [[Lifta]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|1 January 1948|format=dmy}} || 2,958 || 8,743 ||  || Atrocity || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|47|43|N|35|11|47|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Masmiyya al-Kabira]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|8 July 1948|format=dmy}} || 2,923 || 20,687 || [[Operation An-Far|An-Far]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|45|27|N|34|47|05|E|type:city_region:PS|display=inline}} || [[Bnei Re'em]],<ref name="Khalidi"/> [[Hatzav]],<ref name="Khalidi"/> [[Yinon]],<ref name="Khalidi"/> [[Ahva, Israel|Ahva]]<ref name="Khalidi"/>
+|-
+! [[Aqir]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|6 May 1948|format=dmy}} || 2,877 || 15,825 ||  || Atrocity || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|51|40|N|34|49|23|E|type:city_region:PS|display=inline}} || [[Kiryat Ekron]],<ref name=Khalidi360/> [[Mazkeret Batya]]<ref name=Khalidi360>Khalidi, 1992, p. 360</ref> [[Ganei Yohanan]]<ref name=Khalidi360/>
+|-
+! [[Bayt Jibrin]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| [[File:BaytJibrin.jpg |100px|frameless|alt=Photo of the village or town]]  || {{Date table sorting|29 October 1948|format=dmy}} || 2,819 || 56,185 || [[Operation Yoav|Yoav]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|36|19|N|34|53|54|E|type:city_region:PS|display=inline}} || [[Beit Guvrin, Israel|Beit Guvrin]] ([[kibbutz]])<ref name="Morris">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #166</ref>
+|-
+! [[al-Jura]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|4 November 1948|format=dmy}} || 2,807 || 12,224 || [[Operation Yoav|Yoav]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|39|54|N|34|33|15|E|type:city_region:PS|display=inline}} || [[Ashkelon]]
+|-
+! [[Barbara, Gaza|Barbara]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|4 November 1948|format=dmy}} || 2,796 || 13,978 || [[Operation Yoav|Yoav]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|37|26|N|34|34|46|E|type:city_region:PS|display=inline}} || [[Mavki'im]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #50, January 1949.</ref><ref name=Khalidi82>Khalidi, 1992, p. 82</ref> [[Talmei Yafeh]]<ref name=Khalidi82/>
+|-
+! [[Bayt Mahsir]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|10 May 1948|format=dmy}} || 2,784 || 16,268 ||  ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|47|40|N|35|02|05|E|type:city_region:PS|display=inline}} || [[Beit Meir]],<ref name="Morris#28">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #28</ref><ref name=Khalidi277>Khalidi, 1992, p. 277</ref> [[Mesilat Zion]]<ref name=Khalidi277/>
+|-
+! [[Zarnuqa]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|27 May 1948|format=dmy}} || 2,761 || 6,068 || [[Operation Barak|Barak]] || Atrocity || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|31|52|49|N|34|47|23|E|type:city_region:PS|display=inline}} || [[Rehovot]], [[Kvutzat Shiller]], [[Gibton]] and [[Givat Brenner]]
+|-
+! [[Lubya]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|16 July 1948|format=dmy}} || 2,726 || 39,629 || [[Operation Dekel|Dekel]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|46|33|N|35|25|46|E|type:city_region:PS|display=inline}} || [[Lavi]], Lavi Pine Forest, South African Park
+|-
+! [[Bayt Nabala]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|13 May 1948|format=dmy}} || 2,680 || 15,051 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|31|59|11|N|34|57|32|E|type:city_region:PS|display=inline}} || [[Kfar Truman]],<ref name=Khalidi366>Khalidi, 1992, p. 366</ref> and [[Beit Nehemia]]<ref name=Khalidi366/>
+|-
+! [[Dayr al-Qassi]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 2,668 || 34,011 || [[Operation Hiram|Hiram]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|33|02|07|N|35|19|30|E|type:city_region:PS|display=inline}} || [[Mattat]],<ref name=Khalidi13>Khalidi, 1992, p. 13</ref> [[Elkosh]],<ref name=Khalidi13/><ref name=Morrisxxii>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #182</ref> [[Abirim]],<ref name=Khalidi13/> [[Netu'a]]<ref name=Khalidi13/>
+|-
+! [[Hiribya]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|1 November 1948|format=dmy}} || 2,598 || 22,312 || [[Operation Yoav|Yoav]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|36|21|N|34|32|47|E|type:city_region:PS|display=inline}} || [[Zikim]],<ref name=Khalidi102>Khalidi, 1992, p. 102</ref> [[Karmia]],<ref name=Khalidi102/> [[Yad Mordechai]]<ref name=Khalidi102/>
+|-
+! [[Wadi al-Hawarith]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|15 March 1948|format=dmy}} || 2,552 || 4,447 ||  || Atrocity || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|32|23|56|N|34|52|48|E|type:city_region:PS|display=inline}} || [[Kfar Haroeh]],<ref name=Khalidi565>Khalidi, 1992, p. 565</ref> [[Geulei Teiman]]<ref name=Khalidi565/>
+|-
+! [[Ayn Ghazal (village)|Ayn Ghazal]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|24 July 1948|format=dmy}} || 2,517 || 18,079 || [[Operation Shoter|Shoter]] || Massacre || Some walls  || {{#invoke:Coordinates|coord|32|37|55|N|34|58|03|E|type:city_region:PS|display=inline}} || [[Ein Ayala]]?<ref name="Morris 2004">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #118</ref>[[Ofer (moshav)|Ofer]]
+|-
+! [[Bayt Nattif]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|21 October 1948|format=dmy}} || 2,494 || 44,587 || [[Operation Ha-Har|Ha-Har]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|41|44|N|34|59|46|E|type:city_region:PS|display=inline}} || [[Netiv HaLamed-Heh]],<ref name=Khalidi212/> [[Aviezer]],<ref name=Khalidi212/> [[Neve Michael]]<ref name=Khalidi212>Khalidi, 1992, p. 212</ref>
+|-
+! [[al-Mansura, Tiberias|al-Mansura]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|10 May 1948|format=dmy}} || 2,482 || 55,583 || [[Operation Hiram|Hiram]] ||  || Some walls  || {{#invoke:Coordinates|coord|32|53|39|N|35|25|03|E|type:city_region:PS|display=inline}} || [[Chazon]]<ref name=Khalidi533>Khalidi, 1992, p. 533</ref> [[Tefashot]],<ref name=Khalidi533/> [[Kallanit]],<ref name=Khalidi533/> [[Ravid]]<ref name=Khalidi533/>
+|-
+! [[Dayr Aban]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|19 October 1948|format=dmy}} || 2,436 || 22,734 || [[Operation Ha-Har|Ha-Har]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|44|35|N|35|00|38|E|type:city_region:PS|display=inline}} || [[Tzora]],<ref name=Khalidi283>Khalidi, 1992, p. 283</ref> [[Mahseya]],<ref name=Khalidi283/> [[Beit Shemesh]],<ref name=Khalidi283/> and [[Yish'i]]<ref name=Khalidi283/>
+|-
+! [[Iraq al-Manshiyya]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|1 March 1949|format=dmy}} || 2,332 || 17,901 || [[Operation Yoav|Yoav]] ||  || No trace  || {{#invoke:Coordinates|coord|31|36|17|N|34|46|59|E|type:city_region:PS|display=inline}} || [[Gat, Israel|Gat]],<ref name=Khalidi108>Khalidi, 1992, p. 108</ref> [[Kiryat Gat]],<ref name=Khalidi108/> [[Sde Moshe]]<ref name=Khalidi108/>
+|-
+! [[al-Qubab]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|15 May 1948|format=dmy}} || 2,297 || 13,918 ||  ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|52|00|N|34|57|15|E|type:city_region:PS|display=inline}} || [[Gezer]],<ref name=Khalidi407>Khalidi, 1992, p. 407</ref> [[Kefar Bin-Nun]],<ref name=Khalidi407/><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #84</ref> [[Mishmar Ayyalon]]<ref name=Khalidi407/>
+|-
+! [[Qaqun]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| [[File:Qaqun-fortress-18.jpg |100px|frameless|alt=Photo of the village or town]] || {{Date table sorting|5 June 1948|format=dmy}} || 2,285 || 41,767 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|21|36|N|34|59|43|E|type:city_region:PS|display=inline}} || [[HaMa'apil]],<ref name=Khalidi560>Khalidi, 1992, p. 560</ref> [[Gan Yoshiya]],<ref name=Khalidi560/> [[Ometz, Israel|Ometz]],<ref name=Khalidi560/> [[´Olesh]],<ref name=Khalidi560/> [[Haniel, Israel|Haniel]],<ref name=Khalidi560/> [[Yikon]]<ref name=Khalidi560/>
+|-
+! [[Sarafand al-Amar]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|20 May 1948|format=dmy}} || 2,262 || 13,267 || [[Operation Barak|Barak]] ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|31|57|34|N|34|50|58|E|type:city_region:PS|display=inline}} || [[Zerifin]] and [[Nir Zevi]]
+|-
+! [[Malha|al-Maliha]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 2,250 || 6,828 || [[Operation Danny|Danny]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|45|08|N|35|10|55|E|region:IL_type:city_source:GNS-enwiki|display=inline}} || 
+|-
+! [[al-Shaykh Muwannis]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|30 March 1948|format=dmy}} || 2,239 || 15,972 ||  || Atrocity || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|06|50|N|34|48|15|E|type:city_region:PS|display=inline}} || [[Tel Aviv]]
+|-
+! [[Achziv|az-Zeeb]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|14 May 1948|format=dmy}} || 2,216 || 12,607 ||  || Military assault<ref name=Mxv/> || Some houses  || {{#invoke:Coordinates|coord|33|02|57|N|35|06|08|E|display=inline|region:IL_type:city}} || 
+|-
+! [[al-Mujaydil]]
+| [[Nazareth Subdistrict, Mandatory Palestine|Nazareth]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 2,204 || 18,836 || [[Operation Dekel|Dekel]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|40|40|N|35|14|31|E|type:city_region:PS|display=inline}} || [[Migdal HaEmek]], [[Yifat, Israel|Yifat]]
+|-
+! [[Abu Kishk]] 
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|30 March 1948|format=dmy}} || 2,204 || 18,470 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|8|11|N|34|51|55|E|type:city_region:PS|display=inline}} || [[Herzliya]]
+|-
+! [[Khirbat al-Wa'ra al-Sawda']]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|18 April 1948|format=dmy}} || 2,169 || 7,036 || [[Operation Dekel|Dekel]] || Massacre || Some walls  || {{#invoke:Coordinates|coord|32|50|02|N|35|28|51|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Khalisa]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|11 May 1948|format=dmy}} || 2,134 || 11,280 || [[Operation Yiftach|Yiftach]] ||  || Some houses  || {{#invoke:Coordinates|coord|33|12|52|N|35|34|02|E|type:city_region:PS|display=inline}} || [[Kiryat Shemona]]
+|-
+! [[Dayr Tarif]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 2,030 || 8,756 || [[Operation Danny|Danny]] || Atrocity || Rubble  || {{#invoke:Coordinates|coord|31|59|26|N|34|56|23|E|type:city_region:PS|display=inline}} || [[Beit Arif]]<ref name=Khalidi379>Khalidi, 1992, p. 379</ref>
+|-
+! [[al-Maghar]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|18 May 1948|format=dmy}} || 2,018 || 15,390 || [[Operation Barak|Barak]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|50|19|N|34|46|56|E|type:city_region:PS|display=inline}} || [[Beit Elazari]]<ref name=Khalidi395>Khalidi, 1992, p. 395</ref>
+|-
+! [[al-Qubayba, Ramle|al-Qubayba]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|27 May 1948|format=dmy}} || 1,995 || 10,737 || [[Operation Barak|Barak]] ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|31|53|41|N|34|46|17|E|type:city_region:PS|display=inline}} || [[Ge'alya]];<ref name=Khalidi408>Khalidi, 1992, p. 408</ref> [[Kfar Gevirol]];<ref name=Khalidi408/> [[Kefar Hanaggid]] is near settlement land,<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #85</ref> but located on land belonging to [[Yibna]]
+|-
+! [[Sabbarin]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 1,972 || 25,307 || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] || Massacre || Rubble  || {{#invoke:Coordinates|coord|32|34|16|N|35|1|23|E|type:city_region:PS|display=inline}} || [[Ramot Menashe]], [[Amikam]]
+|-
+! [[al-Walaja]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|21 October 1948|format=dmy}} || 1,914 || 17,708 || [[Operation Ha-Har|Ha-Har]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|43|53|N|35|09|49|E|region:PS|display=inline}} || [[Amminadav]]<ref>Khalidi, 1992, p. 323</ref>
+|-
+! [[Bashshit]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|13 May 1948|format=dmy}} || 1,879 || 18,553 ||  ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|31|49|27|N|34|44|48|E|type:city_region:PS|display=inline}} || [[Neve Mivtah]]<ref name=Khalidi363>Khalidi, 1992, p. 363</ref> [[Meshar]],<ref name=Khalidi363/> [[Kfar Mordechai]],<ref name=Khalidi363/> [[Misgav Dov]],<ref name=Khalidi363/> [[Kannot]],<ref name=Khalidi363/> [[Shedema]],<ref name=Khalidi363/> and [[Aseret]].<ref name=Khalidi363/>
+|-
+! [[Hunin]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|3 May 1948|format=dmy}} || 1,879 || 14,224 || [[Operation Yiftach|Yiftach]] || Massacre || Rubble  || {{#invoke:Coordinates|coord|33|12|52|N|35|32|41|E|type:city_region:PS|display=inline}} || [[Misgav Am]]<ref name=Khalidi455>Khalidi, 1992, p. 455</ref> [[Margaliot]]<ref name=Khalidi455/>
+|-
+! [[Wadi Hunayn]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|17 April 1948|format=dmy}} || 1,879 || 5,401 || [[Operation Nachshon|Nachshon]] ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|31|55|39|N|34|47|43|E|type:city_region:PS|display=inline}} || [[Israel Institute for Biological Research]],<ref>Khalidi, 1992, p. 421: part of it occupies the former palatial home of Abu Umar Effendi</ref><ref>[https://web.archive.org/web/20180518055041/http://weekly.ahram.org.eg/archive/2003/627/focus.htm Traces of poison], [[Salman Abu-Sitta]], 5 March 2003, [[Al-Ahram]]</ref> [[Nes Tziyyona]],
+|-
+! [[Arab al Bashatwi]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|16 May 1948|format=dmy}} || 1,810 || 20,739 ||  ||  || No trace  ||  || 
+|-
+! [[Majdal Yaba]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|13 July 1948|format=dmy}} || 1,763 || 26,632 || [[Operation Danny|Danny]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|04|51.04|N|34|57|24.97|E|type:city_region:PS|display=inline}} || [[Rosh HaAyin]], [[Givat HaShlosha]], [[Nahshonim]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #99</ref> [[Migdal Afek]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #100</ref>
+|-
+! [[Al-Salihiyya, Palestine|al-Salihiyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|25 May 1948|format=dmy}} || 1,763 || 5,607 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|10|02|N|35|36|45|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Jimzu]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 1,752 || 9,681 || [[Operation Danny|Danny]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|55|51|N|34|56|47|E|type:city_region:PS|display=inline}} || Moshav [[Gimzo]]<ref name=Khalidi387>Khalidi, 1992, p. 387</ref>
+|-
+! [[Khirbat Jiddin|Jiddin]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|1 July 1948|format=dmy}} || 1,740 || 7,587 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|59|40|N|35|13|19|E|type:city_region:PS|display=inline}} || [[Yehiam]],<ref name=Khalidi19>Khalidi, 1992, p. 19</ref> Kiryat, and [[Ga'aton]]<ref name=Khalidi19/><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #30</ref>
+|-
+! [[Tantura|al-Tantura]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|21 May 1948|format=dmy}} || 1,728 || 14,520 ||  || Massacre || Some houses  || {{#invoke:Coordinates|coord|32|36|34|N|34|55|04|E|type:city_region:PS|display=inline}} || [[Nahsholim]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR20 xx], settlement #9</ref>[[Dor, Hof HaCarmel|Dor]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #186</ref>
+|-
+! [[Umm az-Zinat]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|15 May 1948|format=dmy}} || 1,705 || 22,156 || [[Battle of Haifa (1948)|Bi’ur Hametz]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|38|50|N|35|03|47.8|E|type:city_region:PS|display=inline}} || [[Eliakim]]<ref name=Morrispxxii>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #117</ref><ref name=Khalidi200>Khalidi, 1992, p. 200</ref>
+|-
+! [[al-Na'ani]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|14 May 1948|format=dmy}} || 1,705 || 16,129 || [[Operation Barak|Barak]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|52|20|N|34|52|24|E|type:city_region:PS|display=inline}} || [[Na'an]],<ref name=Khalidi400>Khalidi, 1992, p. 400</ref> [[Ramot Me'ir]]<ref name=Khalidi400/>
+|-
+! [[al-Birwa]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|11 June 1948|format=dmy}} || 1,694 || 13,542 || [[Operation Ben-Ami|Ben-Ami]]/[[Operation Dekel|Dekel]] || Military assault<ref name=Mxv/> || Some houses  || {{#invoke:Coordinates|coord|32|54|19|N|35|10|49|E|type:city_region:PS|display=inline}} || [[Ahihud]],<ref name=Khalidi10>Khalidi, 1992, p. 10</ref> [[Yas'ur]]<ref name=Khalidi10/><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #47, January 1949</ref>
+|-
+! [[Nabi Rubin|al-Nabi Rubin]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|1 June 1948|format=dmy}} || 1,647 || 31,002 || [[Operation Barak|Barak]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|55|46|N|34|44|02|E|type:city_region:PS|display=inline}} || [[Palmachim]],<ref name=Khalidi403>Khalidi, 1992, p. 403</ref> [[Gan Sorek]]<ref name=Khalidi403/>
+|-
+! [[Zir'in]]
+| [[Jenin Subdistrict, Mandatory Palestine|Jenin]] 
+| [[File:Zir'in 1918.jpg |100px|frameless|alt=Photo of the village or town]]|| {{Date table sorting|28 May 1948|format=dmy}} || 1,647 || 23,920 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|33|27|N|35|19|40|E|type:city_region:PS|display=inline}} || [[Yizre'el]]
+|-
+! [[al-Khayriyya]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|25 April 1948|format=dmy}} || 1,647 || 13,672 || [[Operation Hametz|Hametz]] ||  || Some houses  || {{#invoke:Coordinates|coord|32|2|14|N|34|49|41|E|type:city_region:PS|display=inline}} || [[Ramat Pinkas]] [[Ariel Sharon Park]]
+|-
+! [[Innaba]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 1,647 || 12,857 || [[Operation Danny|Danny]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|54|08|N|34|56|52|E|type:city_region:PS|display=inline}} || [[Kefar Shemu'el]]<ref name=Khalidi384>Khalidi, 1992, p. 384</ref>
+|-
+! [[Karatiyya]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|17 July 1948|format=dmy}} || 1,589 || 13,709 ||  || Atrocity || Rubble  || {{#invoke:Coordinates|coord|31|38|37|N|34|43|33|E|type:city_region:PS|display=inline}} || [[Komemiyut]],<ref name=Khalidi119>Khalidi, 1992, p. 119</ref> [[Revaha]],<ref name=Khalidi119/> [[Nehora]]<ref name=Khalidi119/>
+|-
+! [[al-Damun]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 1,520 || 20,357 || [[Operation Dekel|Dekel]] || Military assault<ref name=Mxv/> || Rubble  || {{#invoke:Coordinates|coord|32|52|37|N|35|10|59|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Ni'ilya]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|4 November 1948|format=dmy}} || 1,520 || 5,233 || [[Operation Yoav|Yoav]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|38|46|N|34|34|18|E|type:city_region:PS|display=inline}} || [[Ashkelon]]<ref name=Khalidi129>Khalidi, 1992, p. 129</ref>
+|-
+! [[Tell es-Safi]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|9 July 1948|format=dmy}} || 1,496 || 28,925 || [[Operation An-Far|An-Far]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|41|59|N|34|50|49|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Simsim, Gaza|Simsim]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|13 May 1948|format=dmy}} || 1,496 || 16,797 ||  || Massacre || Rubble  || {{#invoke:Coordinates|coord|31|34|02|N|34|36|26|E|type:city_region:PS|display=inline}} || [[Gvar'am]]<ref name=Khalidi136>Khalidi, 1992, p. 136</ref>
+|-
+! [[Al-Tira, Ramle|al-Tira]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 1,496 || 6,956 || [[Operation Danny|Danny]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|01|02|N|34|56|35|E|type:city_region:PS|display=inline}} || [[Tirat Yehuda]],<ref name=Khalidi418>Khalidi, 1992, p. 418</ref> [[Giv'at Ko'ah]],<ref name=Khalidi418/> [[Bareket]]<ref name=Khalidi418/>
+|-
+! [[Kafr Saba]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|15 May 1948|format=dmy}} || 1,473 || 9,688 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|10|52|N|34|56|14|E|type:city_region:PS|display=inline}} || Hak'ramim,<ref>{{Cite book |last=Morris |first=Benny |author-link=Benny Morris |url=https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 |title=The Birth of the Palestinian Refugee Problem Revisited |publisher=Cambridge University Press |year=2004 |isbn=9780521009676 |edition=Revised |pages=xxii}}</ref> [[Beit Berl]], [[Kfar Saba]], [[Neve Yamin]]
+|-
+! [[al-Sindiyana]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 1,450 || 15,172 || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|33|24|N|35|0|08|E|type:city_region:PS|display=inline}} || [[Aviel]]<ref name=Khalidip193>Khalidi, 1992, p. 193</ref>
+|-
+! [[Ghuwayr Abu Shusha]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|21 April 1948|format=dmy}} || 1,438 || 12,098 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|51|13|N|35|30|34|E|type:city_region:PS|display=inline}} || [[Ginosar (kibbutz)|Ginosar]],<ref name=Khalidi517>Khalidi, 1992, p. 517</ref> [[Livnim]]<ref name=Khalidi517/>
+|-
+! [[al-Ghabisiyya]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || 1,438 || 11,786 || [[Operation Ben-Ami|Ben-Ami]] || Atrocity<ref name=Mxv/> || Rubble  || {{#invoke:Coordinates|coord|33|00|02|N|35|09|00|E|type:city_region:PS|display=inline}} || [[Netiv HaShayara]]<ref>Khalidi, 1992, p. 15</ref>
+|-
+! [[Ajanjul]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|12 July 1948|format=dmy}} || 1,438 || 11,401 || [[Operation Danny|Danny]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|52|17|N|35|01|26|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Amka|Amqa]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 1,438 || 6,068 || [[Operation Dekel|Dekel]] || Military assault<ref name=Mxv/> || Rubble  || {{#invoke:Coordinates|coord|32|58|46|N|35|9|48|E|display=inline}} || 
+|-
+! [[al-Jiyya]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|4 November 1948|format=dmy}} || 1,427 || 8,506 || [[Operation Yoav|Yoav]] ||  || No trace  || {{#invoke:Coordinates|coord|31|37|38|N|34|35|51|E|type:city_region:PS|display=inline}} || [[Beit Shikma]],<ref>In 1950, according to Khalidi, 1992, p. 114</ref> [[Ge'a]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #60, 1949.</ref><ref>In 1949, according to Khalidi, 1992, p. 114</ref>
+|-
+! [[al-'Abisiyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|25 May 1948|format=dmy}} || 1,415 || 15,429 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|11|55|N|35|37|59|E|type:city_region:PS|display=inline}} || [[Kfar Szold]]
+|-
+! [[Qatra]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|17 May 1948|format=dmy}} || 1,404 || 7,853 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|31|49|18.9|N|34|46|39.1|E|type:city_region:PS|display=inline}} || [[Gedera]]<ref name=Khalidi4045>Khalidi, 1992, pp. 404-5</ref> and [[Kidron, Israel|Kidron]]<ref name=Khalidi4045/><ref name=Morris2>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #76</ref>
+|-
+! [[al-Mansi]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|12 April 1948|format=dmy}} || 1,392 || 12,272 || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] || Atrocity || Some walls  || {{#invoke:Coordinates|coord|32|35|42|N|35|10|22|E|type:city_region:PS|display=inline}} || [[Midrakh Oz]]<ref name=Khalidi177>Khalidi, 1992, p. 117</ref>
+|-
+! [[Fajja]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|15 May 1948|format=dmy}} || 1,392 || 4,919 ||  || Atrocity || Some houses  || {{#invoke:Coordinates|coord|32|05|18|N|34|54|16|E|type:city_region:PS|display=inline}} || [[Petah Tikva]]<ref name=Khalidi240>Khalidi, 1992, p. 240</ref>
+|-
+! [[Hittin]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| [[File:Hittin-Khalidi-1934.JPG |100px|frameless|alt=Photo of the village or town]]|| {{Date table sorting|16 July 1948|format=dmy}} || 1,380 || 22,764 || [[Operation Dekel|Dekel]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|48|25|N|35|27|12|E|type:city_region:PS|display=inline}} || [[Arbel]], [[Kfar Zeitim|Kefar Zetim]]
+|-
+! [[az-Zakariyya]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|1 June 1950|format=dmy}} || 1,369 || 15,320 ||  ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|42|30|N|34|56|50|E|type:city_region:PS|display=inline}} || [[Zekharia]]<ref name=Khalidi226>Khalidi, 1992, p. 226</ref>
+|-
+! [[Jusayr]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|17 July 1948|format=dmy}} || 1,369 || 12,361 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|31|39|25|N|34|46|15|E|type:city_region:PS|display=inline}} || [[Menuha]],<ref name=Khalidi118>Khalidi, 1992, p. 118</ref> [[Wardon]]<ref name=Khalidi118/>
+|-
+! [[al-Muzayri'a]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|12 July 1948|format=dmy}} || 1,346 || 10,822 || [[Operation Danny|Danny]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|02|57|N|34|56|58|E|type:city_region:PS|display=inline}} || [[Mazor]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #98</ref><ref name=Khalidi399>Khalidi, 1992, p. 399</ref> [[Nechalim]]<ref name=Khalidi399/> [[El'ad]]<ref name=Jakoel>Jakoel, 2017, [http://www.hadashot-esi.org.il/report_detail_eng.aspx?id=25283&mag_id=125 Elʽad]</ref>
+|-
+! [[al-Ja'una]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|9 May 1948|format=dmy}} || 1,334 || 839 || [[Operation Yiftach|Yiftach]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|58|18|N|35|31|58|E|type:city_region:PS|display=inline}} || [[Rosh Pinna]]
+|-
+! [[Jaba', Haifa Subdistrict|Jaba']]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|24 July 1948|format=dmy}} || 1,322 || 7,012 || [[Operation Shoter|Shoter]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|39|05|N|34|57|43|E|type:city_region:PS|display=inline}} || [[Geva Karmel]]<ref name="Khalidi">Khalidi, 1992, pp. 166, 188</ref><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #120</ref>
+|-
+! [[Saidiyeen Bedouin]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|1 May 1950|format=dmy}} || 1,312 || 1,238,375 ||  ||  ||  ||  || 
+|-
+! [[Suhmata]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 1,311 || 17,056 || [[Operation Hiram|Hiram]] || Military assault<ref name=Mxv/> || Some walls  || {{#invoke:Coordinates|coord|33|00|19|N|35|18|14|E|type:city_region:PS|display=inline}} || [[Tzuriel]],<ref name=Khalidi30>Khalidi, 1992, p. 30</ref> [[Hosen]]<ref name=Khalidi30/>
+|-
+! [[Sa'sa', Palestine|Sa'sa']]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 1,311 || 14,796 || [[Operation Hiram|Hiram]] || Massacre || 3 or more Jewish families || {{#invoke:Coordinates|coord|33|01|43|N|35|23|40|E|type:city_region:PS|display=inline}} || [[Sasa, Israel|Sasa]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #51, established January 1949.</ref>
+|-
+! [[Naghnaghiya]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|12 April 1948|format=dmy}} || 1,311 || 12,139 || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] || Atrocity || Rubble  || {{#invoke:Coordinates|coord|32|36|12.2|N|35|09|26.9|E|type:city_region:PS|display=inline}}’ || 
+|-
+! [[Lajjun]]
+| [[Jenin Subdistrict, Mandatory Palestine|Jenin]] 
+| || {{Date table sorting|30 May 1948|format=dmy}} || 1,279 || 77,242 || [[Operation Gideon|Gideon]] || Massacre || Some houses  || {{#invoke:Coordinates|coord|32|34|29|N|35|10|40|E|type:city_region:PS|display=inline}} || [[Megiddo, Israel|Kibbutz Megiddo]]<ref name="Benvenistip319">Benvenisti, 2000, p. [https://archive.org/details/sacredlandscapeb00benvrich/page/n348 319]</ref>
+|-
+! [[Saqiya]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|25 April 1948|format=dmy}} || 1,276 || 5,850 ||  ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|01|44|N|34|50|35|E|type:city_region:PS|display=inline}} || [[Or Yehuda]]<ref name=Khalidi258>Khalidi, 1992, p. 258</ref>
+|-
+! [[al-Jammasin al-Gharbi]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|17 March 1948|format=dmy}} || 1,253 || 1,365 ||  ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|05|34|N|34|47|50|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Yasur, Gaza|Yasur]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|9 June 1948|format=dmy}} || 1,241 || 16,390 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|31|45|56|N|34|44|53|E|type:city_region:PS|display=inline}} || [[Talmei Yehiel]],<ref name="Khalidi"/> [[Bnei Ayish]]<ref name="Khalidi"/>
+|-
+! [[Saliha]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 1,241 || 11,735 || [[Operation Hiram|Hiram]] || Massacre || Some houses  || {{#invoke:Coordinates|coord|33|04|31|N|35|28|20|E|type:city_region:PS|display=inline}} || [[Yir'on]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #161, established 1949-50.</ref><ref name="Khalidi, 1992, p.492">Khalidi, 1992, p. 492</ref> and [[Avivim]]<ref name="Khalidi, 1992, p.492"/>
+|-
+! [[Al-Qubayba, Hebron|al-Qubayba]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|28 October 1948|format=dmy}} || 1,230 || 11,912 || [[Operation Yoav|Yoav]] ||  || No trace  || {{#invoke:Coordinates|coord|31|34|14|N|34|51|16|E|type:city_region:PS|display=inline}} || [[Lakhish, Israel|Lakhish]]
+|-
+! [[Bayt Tima]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|18 October 1948|format=dmy}} || 1,230 || 11,032 || [[Operation Yoav|Yoav]] || Massacre || Rubble  || {{#invoke:Coordinates|coord|31|37|24|N|34|38|21|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Zuq al-Tahtani]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|11 May 1948|format=dmy}} || 1,218 || 11,634 || [[Operation Yiftach|Yiftach]] ||  || Some houses  || {{#invoke:Coordinates|coord|33|12|54|N|35|36|04|E|type:city_region:PS|display=inline}} || [[Beyt Hillel]]<ref name=Khalidi510>Khalidi, 1992, p. 510</ref>
+|-
+! [[Kuwaykat]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 1,218 || 4,733 || [[Operation Dekel|Dekel]] || Military assault<ref name=Mxv/> || Rubble  || {{#invoke:Coordinates|coord|32|58|16|N|35|08|48|E|type:city_region:PS|display=inline}} || [[Beit HaEmek]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #45, January 1949</ref><ref name=Khalidi22>Khalidi, 1992, p. 22</ref>
+|-
+! [[Sarafand al-Kharab]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|20 April 1948|format=dmy}} || 1,206 || 5,503 || [[Operation Nachshon|Nachshon]] ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|31|56|11|N|34|48|20|E|type:city_region:PS|display=inline}} || [[Ness Ziona]]<ref name=Khalidi413>Khalidi, 1992, p. 413</ref>
+|-
+! [[Ehewat Bedouin]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|1 May 1950|format=dmy}} || 1,200 || 1,728,935 ||  ||  ||  ||  || 
+|-
+! [[Julis, Gaza|Julis]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|11 June 1948|format=dmy}} || 1,195 || 13,584 ||  ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|31|40|54|N|34|39|13|E|type:city_region:PS|display=inline}} || [[Hodaya]]<ref name=Khalidi116>Khalidi, 1992, p. 116</ref>
+|-
+! [[al-Sawafir al-Gharbiyya]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|18 May 1948|format=dmy}} || 1,195 || 7,523 || [[Operation Barak|Barak]] ||  || No trace  || {{#invoke:Coordinates|coord|31|41|57|N|34|42|11|E|type:city_region:PS|display=inline}} || [[Merkaz Shapira]],<ref name=Khalidi133>Khalidi, 1992, p. 133</ref> [[Masu'ot Yitzhak]],<ref name=Khalidi133/>
+|-
+! [[al-Na'ima]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|14 May 1948|format=dmy}} || 1,195 || 7,155 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|11|17|N|35|35|42|E|type:city_region:PS|display=inline}} || [[Neot Mordechai]],<ref name="khalidi482">Khalidi, 1992, p. 482</ref> [[Kefar Blum]],<ref name="khalidi482"/> and [[Beyt Hillel]]<ref name="khalidi482"/>
+|-
+! [[al-Ghazzawiyya]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|20 May 1948|format=dmy}} || 1,183 || 18,408 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|30|08|N|35|32|30|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Qula]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 1,172 || 4,347 ||  || Massacre || Rubble  || {{#invoke:Coordinates|coord|32|02|15|N|34|57|12|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Tarbikha]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|1 November 1948|format=dmy}} || 1,160 || 18,563 || [[Operation Hiram|Hiram]] || Expulsion<ref name=Mxv/> || 3 or more Jewish families || {{#invoke:Coordinates|coord|33|04|58|N|35|17|04|E|type:city_region:PS|display=inline}} || [[Shomera]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #154</ref><ref name=Khalidi34>Khalidi, 1992, p. 34</ref> [[Even Menachem]],<ref name=Khalidi34/> [[Shtula]],<ref name=Khalidi34/> [[Zar'it]]<ref name=Khalidi34/>
+|-
+! [[al-Batani al-Gharbi]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|13 May 1948|format=dmy}} || 1,137 || 4,574 || [[Operation Barak|Barak]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|45|29|N|34|41|58|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Sawafir al-Sharqiyya]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|18 May 1948|format=dmy}} || 1,125 || 13,831 || [[Operation Barak|Barak]] ||  || No trace  || {{#invoke:Coordinates|coord|31|42|00|N|34|42|45|E|type:city_region:PS|display=inline}} || [[Ein Tzurim]],<ref name=Khalidi135>Khalidi, 1992, p. 135</ref> [[Shafir]],<ref name=Khalidi135/> [[Zrahia]],<ref name=Khalidi135/> [[Nir Banim]]<ref name=Khalidi135/>
+|-
+! [[Hatta, Gaza|Hatta]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|17 July 1948|format=dmy}} || 1,125 || 5,305 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|31|39|06|N|34|44|28|E|type:city_region:PS|display=inline}} || [[Zavdiel]],<ref name=Khalidi101>Khalidi, 1992, p. 101</ref> [[Aluma, Israel|Aluma]]<ref name=Khalidi101/>
+|-
+! [[Umm Khalid]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|20 March 1948|format=dmy}} || 1,125 || 2,894 ||  ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|19|51|N|34|51|55|E|type:city_region:PS|display=inline}} || [[Netanya]]
+|-
+! [[Khirbat Qumbaza|Qumbaza]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|15 February 1948|format=dmy}} || 1,114 || 31,786 ||  || Massacre, atrocity || Some houses  || {{#invoke:Coordinates|coord|32|37|55|N|35|1|34|E|type:city_region:PS|display=inline}} || [[Kerem Maharal]]<ref name=Khalidi185>Khalidi, 1992, p. 185</ref>
+|-
+! [[Zikrin]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|22 October 1948|format=dmy}} || 1,114 || 17,195 || [[Operation Yoav|Yoav]] || Atrocity || Rubble  || {{#invoke:Coordinates|coord|31|39|48|N|34|51|38|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Alma, Safad|Alma]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 1,102 || 19,498 || [[Operation Hiram|Hiram]] ||  || Some walls  || {{#invoke:Coordinates|coord|33|3|20|N|35|29|28|E|type:city_region:PS|display=inline}} || [[Alma, Israel|Alma]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #162</ref>
+|-
+! [[Summil]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|8 July 1948|format=dmy}} || 1,102 || 19,304 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|31|39|56|N|34|47|43|E|type:city_region:PS|display=inline}} || [[Kedma, Israel|Kedma]],<ref name=Khalidi137>Khalidi, 1992, p. 137</ref> [[Sgula]],<ref name=Khalidi137/> [[Menuha]],<ref name=Khalidi137/> [[Nahala, Israel|Nahala]],<ref name=Khalidi137/> [[Vardon]]<ref name=Khalidi137/>
+|-
+! [[Qazaza]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|9 July 1948|format=dmy}} || 1,090 || 18,829 || [[Operation An-Far|An-Far]] || Atrocity ||  || {{#invoke:Coordinates|coord|31|46|44|N|34|52|34|E|type:city_region:PS|display=inline}} || [[Israel Defense Forces]] base
+|-
+! [[Bayt Jirja]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 1,090 || 8,481 || [[Operation Yoav|Yoav]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|36|11|N|34|34|51|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Qaytiyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|19 May 1948|format=dmy}} || 1,090 || 5,390 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|11|59|N|35|36|46|E|type:city_region:PS|display=inline}} || [[Kfar Blum]],<ref name=Khalidi486>Khalidi, 1992, p. 486</ref> possibly [[Beit Hillel]]<ref name=Khalidi486/>
+|-
+! [[al-Kafrayn]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|12 April 1948|format=dmy}} || 1,067 || 10,882 || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|34|25|N|35|07|08|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Safsaf]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|29 October 1948|format=dmy}} || 1,056 || 7,391 || [[Operation Hiram|Hiram]] || Massacre || Some houses  || {{#invoke:Coordinates|coord|33|00|42|N|35|26|44|E|type:city_region:PS|display=inline}} || [[Kfar Hoshen]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #49, established January 1949.</ref><ref name=Khalidi491>Khalidi, 1992, p. 491</ref> [[Bar Yohai]]<ref>Established in 1979. Khalidi, 1992, p. 491</ref>
+|-
+! [[Qalunya]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|3 April 1948|format=dmy}} || 1,056 || 4,844 || [[Operation Nachshon|Nachshon]] ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|31|47|39|N|35|9|27|E|type:city_region:PS|display=inline}} || [[Mevaseret Zion]]
+|-
+! [[Qastina]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|9 July 1948|format=dmy}} || 1,032 || 12,019 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|31|44|21|N|34|45|44|E|type:city_region:PS|display=inline}} || [[Kfar Warburg]],<ref name=Khalidi131>Khalidi, 1992, p. 131</ref> [[Arugot]],<ref name=Khalidi131/> [[Kfar Ahim]],<ref name=Khalidi131/> [[Avigdor]],<ref name=Khalidi131/> [[Kiryat Malakhi]]<ref name=Khalidi131/>
+|-
+! [[Barqa, Gaza|Barqa]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|13 May 1948|format=dmy}} || 1,032 || 5,206 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|31|46|39|N|34|41|59|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Mallaha]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|25 May 1948|format=dmy}} || 1,032 || 2,168 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|05|24|N|35|34|55|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Miska, Tulkarm|Miska]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|20 April 1948|format=dmy}} || 1,021 || 8,076 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|13|04|N|34|55|29|E|type:city_region:PS|display=inline}} || [[Sde Warburg]], [[Mishmeret]]<ref name="Khalidi 1992, p. 558">Khalidi, 1992, p. 558</ref>
+|-
+! [[Abu Shusha]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|14 May 1948|format=dmy}} || 1,009 || 9,425 || [[Operation Barak|Barak]] || Abu Shusha Massacre || No trace  || {{#invoke:Coordinates|coord|31|51|25|N|34|54|56|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Ubeidiya, Tiberias|al-'Ubaydiyya]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|3 March 1948|format=dmy}} || 1,009 || 5,173 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|41|00|N|35|33|00|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Mas'udiyya]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|25 December 1947|format=dmy}} || 986 ||  ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|05|07|N|34|46|54|E|type:city_region:PS|display=inline}} || [[Tel Aviv]]
+|-
+! [[al-Zanghariyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|4 May 1948|format=dmy}} || 974 || 27,918 || [[Operation Matateh|Matateh]]/[[Operation Yiftach|Yiftach]] ||  || Some walls  || {{#invoke:Coordinates|coord|32|56|29|N|35|35|10|E|type:city_region:PS|display=inline}} || [[Elifelet]]<ref name=Khalidi507>Khalidi, 1992, p. 507</ref>
+|-
+! [[Arab al-Nufay'at]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|10 April 1948|format=dmy}} || 951 || 8,937 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|25|23|N|34|52|54|E|type:city_region:PS|display=inline}} || [[Mikhmoret]]<ref name=Khalidi145>Khalidi, 1992, p. 145</ref>
+|-
+! [[Ein al-Zeitun|Ayn al-Zaytun]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| [[File:Eynzaytun.jpg |100px|frameless|alt=Photo of the village or town]]|| {{Date table sorting|2 May 1948|format=dmy}} || 951 || 1,100 || [[Operation Yiftach|Yiftach]] || [[Ein al-Zeitun massacre]], atrocity || Some houses  || {{#invoke:Coordinates|coord|32|59|14|N|35|29|30|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Sirin, Baysan|Sirin]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|6 April 1948|format=dmy}} || 940 || 28,445 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|39|15|N|35|30|25|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Huj, Gaza|Huj]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|31 May 1948|format=dmy}} || 940 || 21,988 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|31|30|35|N|34|37|21|E|type:city_region:PS|display=inline}} || [[Dorot]]<ref name=Khalidi103>Khalidi, 1992, p. 103</ref> [[Havat Shikmim]]
+|-
+! [[Al-Manshiyya, Acre|al-Manshiyya]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|14 May 1948|format=dmy}} || 940 || 14,886 || [[Operation Ben-Ami|Ben-Ami]] || Military assault<ref name=Mxv/> || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|32|56|06|N|35|05|26|E|type:city_region:PS|display=inline}} || [[Shomrat]],<ref name=Khalidi23>Khalidi, 1992, p. 23</ref> [[Bustan HaGalil]]<ref name=Khalidi23/>
+|-
+! [[al-Sawalima]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|30 March 1948|format=dmy}} || 928 || 5,942 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|06|59|N|34|50|51|E|type:city_region:PS|display=inline}} || [[Neve Sharett]]
+|-
+! [[Umm al-Faraj]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|21 May 1948|format=dmy}} || 928 || 825 ||  || Massacre, military assault<ref name=Mxv/> || Rubble  || {{#invoke:Coordinates|coord|33|00|18|N|35|07|16|E|type:city_region:PS|display=inline}} || [[Ben Ami]]<ref name=Khalidi35>Khalidi, 1992, p. 35</ref>
+|-
+! [[Mi'ar]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 893 || 10,788 || [[Operation Dekel|Dekel]] ||  || Some walls  || {{#invoke:Coordinates|coord|32|52|27|N|35|14|47|E|type:city_region:PS|display=inline}} || [[Atzmon|Segev]],<ref name=Khalidi26>Khalidi, 1992, p. 26</ref> [[Ya'ad (moshav)|Ya'ad]]<ref name=Khalidi26/> [[Manof]]<ref name=Khalidi26/>
+|-
+! [[al-Shajara, Tiberias|al-Shajara]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|6 May 1948|format=dmy}} || 893 || 3,754 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|45|16|N|35|23|56|E|type:city_region:PS|display=inline}} || [[Ilaniya]]
+|-
+! [[Tall al-Turmus]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|9 July 1948|format=dmy}} || 882 || 11,508 || [[Operation An-Far|An-Far]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|43|30|N|34|46|22|E|type:city_region:PS|display=inline}} || [[Timorim]]<ref name="Khalidi"/>
+|-
+! [[al-Sumayriyya]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|14 May 1948|format=dmy}} || 882 || 8,542 || [[Operation Ben-Ami|Ben-Ami]] || Military assault<ref name=Mxv/> || Some walls  || {{#invoke:Coordinates|coord|32|58|19|N|35|05|36|E|type:city_region:PS|display=inline}} || [[Lohamei HaGeta'ot]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #53, January 1949</ref><ref name=Khalidi31>Khalidi, 1992, p. 31</ref> [[Shomrat]]<ref name=Khalidi31/>
+|-
+! [[al-Haditha, Ramle|al-Haditha]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|12 July 1948|format=dmy}} || 882 || 7,110 || [[Operation Danny|Danny]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|57|48|N|34|57|07|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Zawiya, Safad|Zawiya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|24 May 1948|format=dmy}} || 882 || 3,958 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|09|19|N|35|35|50|E|type:city_region:PS|display=inline}} || [[Neot Mordechai]]
+|-
+! [[Qannir]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|25 April 1948|format=dmy}} || 870 || 11,331 ||  || Atrocity || Rubble  || {{#invoke:Coordinates|coord|32|31|42|N|35|01|51|E|type:city_region:PS|display=inline}} || [[Regavim]]<ref name=Khalidi181>Khalidi, 1992, p. 181</ref>
+|-
+! [[al-Tina]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|8 July 1948|format=dmy}} || 870 || 7,001 || [[Operation An-Far|An-Far]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|44|48|N|34|49|11|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Khirbat Umm Sabuna]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|21 May 1948|format=dmy}} || 868 ||  || [[Operation Gideon|Gideon]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|35|10|N|35|32|32|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Ghabat Kafr Sur]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|15 May 1948|format=dmy}} || 858 || 19,666 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|17|02|N|34|52|03|E|type:city_region:PS|display=inline}} || [[Beit Yehoshua]],<ref name=Khalidi553>Khalidi, 1992, p. 553</ref> [[Kfar Neter]],<ref name=Khalidi553/> [[Tel Yitzhaq]]<ref name=Khalidi553/>
+|-
+! [[Fir'im]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|26 May 1948|format=dmy}} || 858 || 2,191 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|59|07|N|35|31|59|E|type:city_region:PS|display=inline}} || [[Hatzor HaGlilit]]
+|-
+! [[al-Hamra, Baysan|al-Hamra]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|31 May 1948|format=dmy}} || 847 || 11,511 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|25|40|N|35|30|01|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Deir al-Dubban]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|23 October 1948|format=dmy}} || 847 || 7,784 || [[Operation Yoav|Yoav]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|40|23|N|34|53|33|E|type:city_region:PS|display=inline}} || [[Luzit]], [[Britannia Park]]<ref name=":0"/>
+|-
+! [[Barfiliya]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|14 July 1948|format=dmy}} || 847 || 7,134 || [[Operation Danny|Danny]] ||  ||  || {{#invoke:Coordinates|coord|31|54|36|N|34|59|22|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Dayr Sunayd]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 847 || 6,081 || [[Operation Yoav|Yoav]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|34|28|N|34|33|18|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Jammasin al-Sharqi]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|17 March 1948|format=dmy}} || 847 || 358 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|05|54|N|34|49|44|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Burayj]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|19 October 1948|format=dmy}} || 835 || 19,080 || [[Operation Ha-Har|Ha-Har]] ||  ||  || {{#invoke:Coordinates|coord|31|44|20|N|34|55|44|E|type:city_region:PS|display=inline}} || [[Sdot Micha]],<ref name=Khalidi282>Khalidi, 1991, p. 282</ref> [[Sdot Micha Airbase]]<ref name=Khalidi282/>
+|-
+! [[Awlam]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 835 || 18,546 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|39|59|N|35|29|57|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Abu Shusha, Haifa|Abu Shusha]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|9 April 1948|format=dmy}} || 835 || 8,960 || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|36|51|N|35|08|17|E|type:city_region:PS|display=inline}} || [[Mishmar HaEmek]]
+|-
+! [[Kafr Bir'im]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| [[File:Birem057.jpg |100px|frameless|alt=Photo of the village or town]]|| {{Date table sorting|4 November 1948|format=dmy}} || 824 || 12,250 || [[Operation Hiram|Hiram]] ||  || Some walls  || {{#invoke:Coordinates|coord|33|02|37|N|35|24|51|E|type:city_region:PS|display=inline}} || [[Bar'am]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #160</ref><ref name="Khalidi461"/> [[Dovev]]<ref name="Khalidi461">Khalidi, 1992, p. 461</ref>
+|-
+! [[Bayt 'Affa]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|10 January 1948|format=dmy}} || 812 || 5,808 ||  ||  || No trace  || {{#invoke:Coordinates|coord|31|39|41|N|34|42|24|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Dawwara]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|25 May 1948|format=dmy}} || 812 || 5,470 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|10|43|N|35|38|02|E|type:city_region:PS|display=inline}} || [[Amir, Israel|‘Amir]], [[Sde Nehemia]]
+|-
+! [[Ma'alul]]
+| [[Nazareth Subdistrict, Mandatory Palestine|Nazareth]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 800 || 4,698 || [[Operation Dekel|Dekel]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|41|44|N|35|14|22|E|type:city_region:PS|display=inline}} || [[Migdal HaEmek]], [[Kfar HaHoresh]], [[Timrat]],<ref name="Morris#12">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR20 xx], settlement #12</ref><ref name=Khalidi347>Khalidi, 1992, p. 347</ref> and an [[Israel Defense Forces|Israeli military]] base
+|-
+! [[Kawkaba]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 789 || 8,542 || [[Operation Barak|Barak]]/[[Operation Yoav|Yoav]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|37|51|N|34|39|46|E|type:city_region:PS|display=inline}} || [[Kokhav Michael]]<ref name=Khalidi122>Khalidi, 1992, p. 122</ref>
+|-
+! [[al-Sawafir al-Shamaliyya]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|18 May 1948|format=dmy}} || 789 || 5,861 || [[Operation Barak|Barak]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|42|48|N|34|42|15|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Farradiyya|al-Farradiyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|1 February 1949|format=dmy}} || 777 || 19,747 || [[Operation Hiram|Hiram]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|55|54|N|35|25|42|E|type:city_region:PS|display=inline}} || [[Parod]], [[Shefer]]
+|-
+! [[Iraq Suwaydan]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|9 November 1948|format=dmy}} || 766 || 7,529 || [[Operation Yoav|Yoav]] ||  || No trace  || {{#invoke:Coordinates|coord|31|38|55|N|34|41|19|E|type:city_region:PS|display=inline}} || [[Yad Natan]],<ref name=Khalidi109>Khalidi, 1992, p. 109</ref> [[Otzem]],<ref name=Khalidi109/> [[Sde Yoav]]<ref name=Khalidi109/>
+|-
+! [[al-Butayha]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|4 May 1948|format=dmy}} || 754 || 16,690 || [[Operation Matateh|Matateh]]/[[Operation Yiftach|Yiftach]] ||  || Some walls  || {{#invoke:Coordinates|coord|32|54|59|N|35|37|22|E|type:city_region:PS|display=inline}} || [[Almagor]]<ref name=Khalidi441>Khalidi, 1992, p. 441</ref>
+|-
+! [[Ein Hod|Ayn Hawd]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| [[File:Ein Hod house.jpg |100px|frameless|alt=Photo of the village or town]] || {{Date table sorting|15 July 1948|format=dmy}} || 754 || 12,605 ||  ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|42|05|N|34|58|48|E|display=inline}} || [[Ein Hod]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #123, established 1949.</ref><ref name=Khalidi151>Khalidi, 1992, p. 151</ref> [[Nir Etzion]]<ref name=Khalidi151/>
+|-
+! [[Arab al-Safa]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|20 May 1948|format=dmy}} || 754 || 12,518 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|26|27|N|35|32|16|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Batani al-Sharqi]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|13 May 1948|format=dmy}} || 754 || 5,764 || [[Operation Barak|Barak]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|45|07|N|34|43|24|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Khirbat al-Sarkas]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|15 April 1948|format=dmy}} || 751 ||  ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|26|49|N|34|57|37|E|type:city_region:PS|display=inline}} || [[Gan Shmuel]],<ref name=Khalidi189>Khalidi, 1992, p. 189</ref> [[Talmei Elazar]]<ref name=Khalidi189/>
+|-
+! [[Khirbat Lid|Lid]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|9 April 1948|format=dmy}} || 742 || 13,572 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|36|49|N|35|13|27|E|type:city_region:PS|display=inline}} || [[HaYogev]]<ref name=Khalidi174>Khalidi, 1992, p. 174</ref>
+|-
+! [[Najd, Gaza|Najd]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|13 May 1948|format=dmy}} || 719 || 13,576 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|31|33|02|N|34|35|55|E|type:city_region:PS|display=inline}} || [[Sderot]],<ref>Founded in 1951 on village land, to the south of the village. In Khalidi, 1992, p. 128</ref> [[Or HaNer]]<ref>Founded in 1957 on village land, to the northeast. In Khalidi, 1992, p. 128</ref>
+|-
+! [[Indur]]
+| [[Nazareth Subdistrict, Mandatory Palestine|Nazareth]] 
+| || {{Date table sorting|24 May 1948|format=dmy}} || 719 || 12,444 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|38|11|N|35|22|53|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Ras Abu 'Ammar]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|21 October 1948|format=dmy}} || 719 || 8,342 || [[Operation Ha-Har|Ha-Har]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|44|17|N|35|05|25|E|type:city_region:PS|display=inline}} || [[Tzur Hadassah]]<ref name=Khalidi312>Khalidi, 1992, p. 312</ref>
+|-
+! [[al-Ras al-Ahmar]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 719 || 7,934 || [[Operation Hiram|Hiram]] ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|33|2|28|N|35|27|52|E|type:city_region:PS|display=inline}} || [[Kerem Ben Zimra]]<ref name=Khalidi488>Khalidi, 1992, p. 488</ref>
+|-
+! [[Ishwa]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|18 July 1948|format=dmy}} || 719 || 5,522 ||  ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|46|50|N|35|00|40|E|type:city_region:PS|display=inline}} || [[Eshtaol]]{{sfn|Morris|2008|p=78}}
+|-
+! [[Suba, Jerusalem|Suba]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|13 July 1948|format=dmy}} || 719 || 4,102 || [[Operation Danny|Danny]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|47|5|N|35|7|26|E|type:city_region:PS|display=inline}} || [[Tzova]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #32</ref> [[Yedida]] school
+|-
+! [[Arab Ghawarina]] / Jidru
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|15 April 1948|format=dmy}} || 719 || 3,428 ||  ||  ||  ||  || 
+|-
+! [[Arab Zahrat al-Dumayri]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|10 April 1948|format=dmy}} || 719 || 1,387 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|27|31|N|34|54|24|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Nahr]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|21 May 1948|format=dmy}} || 708 || 5,261 ||  || Massacre, military assault<ref name=Mxv/> || Some houses  || {{#invoke:Coordinates|coord|33|00|26|N|35|08|29|E|type:city_region:PS|display=inline}} || [[Ben Ami]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], village 52</ref><ref name=Khalidi28b>Khalidi, 1992, p. 28</ref> [[Kabri, Israel|Kabri]]<ref name=Khalidi28b/>
+|-
+! [[Deir Yassin]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| [[File:Remains of Deir Yassin (6).jpg |100px|frameless|alt=Photo of the village or town]] || {{Date table sorting|9 April 1948|format=dmy}} || 708 || 2,857 ||  || [[Deir Yassin massacre]] || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|47|9|N|35|10|41|E|type:city_region:PS|display=inline}} || [[Givat Shaul Beth]] and [[Har Nof]] neighborhoods of [[Jerusalem]]
+|-
+! [[Yajur, Haifa|Yajur]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|25 April 1948|format=dmy}} || 708 || 2,720 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|45|31|N|35|03|26|E|type:city_region:PS|display=inline}} || [[Yagur]]<ref name=Khalidi203>Khalidi, 1992, p. 203</ref>
+|-
+! [[Dayr Nakhkhas]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|29 October 1948|format=dmy}} || 696 || 14,476 || [[Operation Yoav|Yoav]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|36|57|N|34|55|18|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Dayshum]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 684 || 23,044 || [[Operation Hiram|Hiram]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|04|49|N|35|30|26|E|type:city_region:PS|display=inline}} || [[Dishon]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #131. Settlement date uncertain, according to Morris, but possibly 1949 (re-established 1953)</ref><ref name=Khalidi446>Khalidi, 1992, p. 446</ref>
+|-
+! [[Rantiya]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 684 || 4,389 || [[Operation Danny|Danny]] ||  || Some houses  || {{#invoke:Coordinates|coord|32|2|40|N|34|55|17|E|type:city_region:PS|display=inline}} || [[Mazor]],<ref name=Khalidi252>Khalidi, 1992, p. 252</ref> [[Nofekh]],<ref name=Khalidi252/> [[Rinatia]]<ref name=Khalidi252/><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #97, in 1949</ref>
+|-
+! [[al-Muharraqa]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|27 May 1948|format=dmy}} || 673 || 4,855 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|31|28|01|N|34|36|41|E|type:city_region:PS|display=inline}} || [[Yakhini]]<ref name=Khalidi127>Khalidi, 1992, p. 127</ref>
+|-
+! [[Nuris]]
+| [[Jenin Subdistrict, Mandatory Palestine|Jenin]] 
+| || {{Date table sorting|29 May 1948|format=dmy}} || 661 || 6,256 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|32|06|N|35|21|49|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Saris, Jerusalem|Saris]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|16 April 1948|format=dmy}} || 650 || 10,699 || [[Operation Nachshon|Nachshon]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|47|53|N|35|04|26|E|type:city_region:PS|display=inline}} || [[Shoresh]], [[Sho'eva]], [[Neve Ilan]]
+|-
+! [[Bayt Jiz]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|30 May 1948|format=dmy}} || 638 || 8,357 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|31|48|46|N|34|57|15|E|type:city_region:PS|display=inline}} || [[Harel, Israel|Har'el]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #33, October 1948.</ref><ref name=Khalidi365>Khalidi, 1992, p. 365</ref> [[Tzelafon]],<ref name=Khalidi365/> [[Gizo, Israel|Gizo]]<ref name=Khalidi365/>
+|-
+! [[Abu Zurayq]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|12 April 1948|format=dmy}} || 638 || 6,493 || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] || Massacre || No trace  || {{#invoke:Coordinates|coord|32|38|03|N|35|07|34|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Mughallis]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|9 July 1948|format=dmy}} || 626 || 11,459 || [[Operation An-Far|An-Far]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|43|45|N|34|52|57|E|type:city_region:PS|display=inline}} || [[Gefen]]<ref name=Khalidi220>Khalidi, 1992, p. 220</ref>
+|-
+! [[Bayt 'Itab]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|21 October 1948|format=dmy}} || 626 || 8,757 || [[Operation Ha-Har|Ha-Har]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|44|06|N|35|03|11|E|type:city_region:PS|display=inline}} || [[Nes Harim]]<ref name=Khalidi275>Khalidi, 1992, p. 275</ref>
+|-
+! [[Ibdis]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|8 July 1948|format=dmy}} || 626 || 4,593 ||  ||  || No trace  || {{#invoke:Coordinates|coord|31|40|39|N|34|41|55|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Sataf]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|13 July 1948|format=dmy}} || 626 || 3,775 || [[Operation Danny|Danny]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|46|9|N|35|7|38|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Taytaba]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || 615 || 8,453 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|00|48|N|35|28|43|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Masmiyya al-Saghira]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|8 July 1948|format=dmy}} || 615 || 6,478 || [[Operation An-Far|An-Far]] ||  || No trace  || {{#invoke:Coordinates|coord|31|45|10|N|34|47|56|E|type:city_region:PS|display=inline}} || [[Masmiya Bet]],<ref>also known as [[Masmiya Shalom]]. Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #72, established in 1949</ref> [[Kfar HaRif]]<ref name=Khalidi126>Khalidi, 1992, p. 126</ref>
+|-
+! [[al-Sakhina]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 615 || 6,400 || [[Operation Gideon|Gideon]] ||  || No trace  || {{#invoke:Coordinates|coord|32|30|59|N|35|27|44|E|type:city_region:PS|display=inline}} || [[Nir David]]<ref name=Khalidi58>Khalidi, 1992, p. 58</ref>
+|-
+! [[Arab al-Bawati]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|16 May 1948|format=dmy}} || 603 || 10,641 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|31|41|N|35|32|21|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Hadatha]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 603 || 10,310 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|40|53|N|35|29|34|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Dimra]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|28 October 1948|format=dmy}} || 603 || 8,492 || [[Operation Yoav|Yoav]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|33|32|N|34|33|54|E|type:city_region:PS|display=inline}} || [[Erez]]<ref name=Khalidip942>Khalidi, 1992, p. 942</ref>
+|-
+! [[al-Haram, Jaffa|al-Haram]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|3 February 1948|format=dmy}} || 603 || 8,065 ||  ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|11|17.40|N|34|48|24.13|E|scale:3000|display=inline}} || 
+|-
+! [[al-Buwayziyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|11 May 1948|format=dmy}} || 592 || 14,620 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|09|22|N|35|34|13|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Bir Ma'in]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 592 || 9,319 || [[Operation Danny|Danny]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|53|17|N|35|01|08|E|type:city_region:PS|display=inline}} || [[Makkabim]]<ref name=Khalidi370>Khalidi, 1992, p. 370</ref>
+|-
+! [[Salbit]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 592 || 6,111 || [[Operation Danny|Danny]] ||  || No trace  || {{#invoke:Coordinates|coord|31|52|10|N|34|59|11|E|type:city_region:PS|display=inline}} || [[Shaalvim]]<ref name=Khalidip410>Khalidi, 1992, p. 410</ref>
+|-
+! [[Abu al-Fadl, Ramle|Abu al-Fadl]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|9 May 1948|format=dmy}} || 592 || 2,870 || [[Operation Barak|Barak]] || Atrocity || Some houses  || {{#invoke:Coordinates|coord|31|56|37|N|34|50|53|E|type:city_region:PS|display=inline}} || [[Sitria]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #87, established 1949.</ref><ref name=Khalidi357>Khalidi, 1992, p. 357</ref> [[Talmey Menashe]]<ref name=Khalidi357/>
+|-
+! [[al-Barriyya]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 592 || 2,831 || [[Operation Danny|Danny]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|53|14|N|34|54|58|E|type:city_region:PS|display=inline}} || [[Azarya]],<ref name="Morris#26">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #26</ref><ref name=Khalidi362>Khalidi, 1992, p. 362</ref> [[Beyt Chashmonay]]<ref name=Khalidi362/>
+|-
+! [[Kawfakha]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|25 May 1948|format=dmy}} || 580 || 8,569 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|31|28|42|N|34|39|42|E|type:city_region:PS|display=inline}} || [[Nir Akiva]]<ref name=Khalidi120>Khalidi, 1992, p. 120</ref>
+|-
+! [[Iqrit]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|1 November 1948|format=dmy}} || 568 || 24,722 ||  || Expulsion<ref name=Mxv/> || Rubble  || {{#invoke:Coordinates|coord|33|04|32|N|35|16|31|E|type:city_region:PS|display=inline}} || [[Shomera]],<ref name=Khalidi17>Khalidi, 1992, p. 17</ref> [[Even Menachem]],<ref name=Khalidi17/> [[Goren]],<ref name=Khalidi17/> [[Gornot ha-Galil]]<ref name=Khalidi17/>
+|-
+! [[Idnibba]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|9 July 1948|format=dmy}} || 568 || 8,103 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|31|44|32|N|34|51|22|E|type:city_region:PS|display=inline}} || [[Kfar Menahem]]
+|-
+! [[Al-Manara, Palestine|al-Manara]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|1 March 1948|format=dmy}} || 568 || 6,797 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|45|17|N|35|32|32|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Mughr al-Khayt]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|2 May 1948|format=dmy}} || 568 || 6,627 || [[Operation Yiftach|Yiftach]] ||  || Some houses  || {{#invoke:Coordinates|coord|32|59|19|N|35|32|17|E|type:city_region:PS|display=inline}} || [[Chatzor ha-Gelilit]] and [[Ro'sh Pinna]]
+|-
+! [[Ma'dhar]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 557 || 11,666 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|41|35|N|35|27|51|E|type:city_region:PS|display=inline}} || [[Kefar Qish]]<ref name=Khalidi529>Khalidi, 1992, p. 529</ref>
+|-
+! [[Kafr Sabt]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|22 April 1948|format=dmy}} || 557 || 9,850 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|44|37|N|35|26|27|E|type:city_region:PS|display=inline}} || [[Sdeh Ilan]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #179, 1949</ref> [[Ilaniya]] [[Sharona]]
+|-
+! [[Umm ash Shauf]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 557 || 7,426 || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] || Massacre || Rubble  || {{#invoke:Coordinates|coord|32|33|12|N|35|02|55|E|type:city_region:PS|display=inline}} || [[Givat Nili]]<ref name=Khalidi199>Khalidi, 1992, p. 199</ref>
+|-
+! [[al-Burj, Ramle|al-Burj]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 557 || 4,708 || [[Operation Danny|Danny]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|54|07|N|35|01|20|E|type:city_region:PS|display=inline}} || [[Kfar Rut]]<ref name=Khalidi371>Khalidi, 1992, p. 371</ref>
+|-
+! [[Ijlil al-Qibliyya]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|3 April 1948|format=dmy}} || 545 || 15,207 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|09|36|N|34|48|42|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Khisas]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|25 May 1948|format=dmy}} || 545 || 4,795 || [[Operation Yiftach|Yiftach]] || Massacre || Some houses  || {{#invoke:Coordinates|coord|33|13|30.59|N|35|37|10.00|E|type:city_region:PS|display=inline}} || [[HaGoshrim]]
+|-
+! [[al-Murassas]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|16 May 1948|format=dmy}} || 534 || 14,477 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|33|38|N|35|28|25|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Qabba'a]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|26 May 1948|format=dmy}} || 534 || 13,817 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|59|55|N|35|32|17|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Dayr Muhaysin]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|6 April 1948|format=dmy}} || 534 || 10,008 || [[Operation Nachshon|Nachshon]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|49|37|N|34|55|56|E|type:city_region:PS|display=inline}} || [[Beqoa']]<ref name=Khalidi378>Khalidi, 1992, p. 378</ref>
+|-
+! [[Khirbat Bayt Lid]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|5 April 1948|format=dmy}} || 534 || 5,336 || d ||  || No trace  || {{#invoke:Coordinates|coord|32|19|04|N|34|53|33|E|type:city_region:PS|display=inline}} || [[Nordia]]<ref name="Morris#23">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #23</ref><ref name=Khalidi550>Khalidi, 1992, p. 550</ref>
+|-
+! [[Kudna]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|22 October 1948|format=dmy}} || 522 || 15,744 || [[Operation Yoav|Yoav]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|38|42|N|34|53|40|E|type:city_region:PS|display=inline}} || [[Beit Nir]]<ref name="Khalidi"/> [[Britannia Park]]<ref name=":0"/>
+|-
+! [[Khirbat Al-Lawz|al-Lawz]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|13 July 1948|format=dmy}} || 522 || 4,502 || [[Operation Danny|Danny]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|46|04|N|35|06|41|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Allar, Jerusalem|Allar]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|22 October 1948|format=dmy}} || 510 || 12,356 || [[Operation Ha-Har|Ha-Har]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|43|26|N|35|03|45|E|type:city_region:PS|display=inline}} || [[Mata, Israel|Mata]],<ref name=Khalidi266>Khalidi, 1992, p. 266</ref> [[Bar Giora]]<ref name=Khalidi266/>
+|-
+! [[Qumya]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|26 March 1948|format=dmy}} || 510 || 4,898 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|33|55|N|35|23|45|E|type:city_region:PS|display=inline}} || [[Ein Harod (Ihud)]]<ref name=khalidi57>Khalidi, 1992, p. 57</ref>
+|-
+! [[Dayr Rafat]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|18 July 1948|format=dmy}} || 499 || 13,242 || [[Operation Danny|Danny]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|46|27|N|34|57|31|E|type:city_region:PS|display=inline}} || [[Givat Shemesh]]<ref name=Khalidi287>Khalidi, 1992, p. 287</ref>
+|-
+! [[Kafra, Baysan|Kafra]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|16 May 1948|format=dmy}} || 499 || 9,172 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|35|35|N|35|29|27|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Hulayqat]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 487 || 7,063 ||  ||  || No trace  || {{#invoke:Coordinates|coord|31|35|53|N|34|38|59|E|type:city_source:kolossus-plwiki|display=inline}} || 
+|-
+! [[al-Jura, Jerusalem|al-Jura]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|11 July 1948|format=dmy}} || 487 || 4,158 || [[Operation Danny|Danny]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|45|25|N|35|08|56|E|type:city_region:PS|display=inline}} || [[Ora, Israel|Ora]]<ref name=Khalidi298>Khalidi, 1992, p. 298</ref>
+|-
+! [[Jahula]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || 487 || 3,869 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|07|29|N|35|34|02|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Bir Salim]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|9 May 1948|format=dmy}} || 476 || 3,401 ||  ||  || No trace  || {{#invoke:Coordinates|coord|31|55|33|N|34|49|41|E|type:city_region:PS|display=inline}} || [[Netzer Sereni]]<ref name="Morris#11">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR20 xx], settlement #11</ref><ref name=Khalidi371/>
+|-
+! [[al-Dalhamiyya]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|15 April 1948|format=dmy}} || 476 || 2,852 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|39|38|N|35|35|52|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Daniyal]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 476 || 2,808 || [[Operation Danny|Danny]] ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|31|55|52|N|34|55|45|E|type:city_region:PS|display=inline}} || [[Kfar Daniel]]<ref name=Khalidi374>Khalidi, 1992, p. 374</ref><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #73</ref>
+|-
+! [[Qira, Haifa|Qira]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|1 March 1948|format=dmy}} || 476 || 7 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|38|42|N|35|06|09|E|type:city_region:PS|display=inline}} || [[Yokneam Moshava]], [[Yokneam Illit]], [[HaZore'a]]
+|-
+! [[Hawsha]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|16 April 1948|format=dmy}} || 464 ||  ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|47|33|N|35|08|37|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Arab Suqrir]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|25 May 1948|format=dmy}} || 452 || 40,224 || [[Operation Barak|Barak]]/Nikayon || Atrocity || Some houses  || {{#invoke:Coordinates|coord|31|49|31|N|34|39|28|E|type:city_region:PS|display=inline}} || [[Bnei Darom]]<ref name=Pet287>Petersen, 2001, p. [https://www.academia.edu/21620272/Gazetteer_6._S-Z 287]</ref> [[Netivot]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #77</ref> [[Nir Galim]],<ref name="Khalidi"/><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #130</ref> [[Ashdod]]<ref name="Khalidi"/>
+|-
+! [[Qadas]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|28 May 1948|format=dmy}} || 452 || 14,139 || [[Operation Yiftach|Yiftach]]/[[Operation Hiram|Hiram]] ||  || Some walls  || {{#invoke:Coordinates|coord|33|06|43|N|35|31|39|E|type:city_region:PS|display=inline}} || [[Yiftah]], [[Malkia]], [[Ramot Naftali]]
+|-
+! [[al-Qudayriyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|4 May 1948|format=dmy}} || 452 || 12,487 || [[Operation Matateh|Matateh]]/[[Operation Yiftach|Yiftach]] || Massacre || Some walls  || {{#invoke:Coordinates|coord|32|54|09|N|35|30|25|E|type:city_region:PS|display=inline}} || [[Kahal]]<ref name=Khalidi487>Khalidi, 1992, p. 487</ref>
+|-
+! [[al-Samakiyya]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|4 May 1948|format=dmy}} || 441 || 10,526 || [[Operation Matateh|Matateh]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|53|02|N|35|34|37|E|type:city_region:PS|display=inline}} || [[Amnun]],<ref name=Khalidi539>Khalidi, 1992, p. 539</ref> [[Korazim]]<ref name=Khalidi539/>
+|-
+! [[Bethlehem of Galilee|Beit Lahm]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|1 April 1948|format=dmy}} || 429 || 7,526 ||  ||  ||  || {{#invoke:Coordinates|coord|32|44|12|N|35|11|29|E|display=inline}} || 
+|-
+! [[Sajad]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|1 June 1948|format=dmy}} || 429 || 2,795 || [[Operation An-Far|An-Far]] ||  ||  || {{#invoke:Coordinates|coord|31|47|01|N|34|53|34|E|type:city_region:PS|display=inline}} || Israeli military zone
+|-
+! [[Khirbat Iribbin|Iribbin]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 418 || 11,463 || [[Operation Hiram|Hiram]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|04|50|N|35|13|41|E|type:city_region:PS|display=inline}} || [[Adamit]],<ref name=Khalidi1718>Khalidi, 1992, pp. 17-18</ref> [[Goren]]<ref name=Khalidi1718/>
+|-
+! [[Dallata]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|10 May 1948|format=dmy}} || 418 || 9,074 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|01|19|N|35|29|56|E|type:city_region:PS|display=inline}} || [[Dalton, Israel|Dalton]]<ref>Khalidi, 1992, p. 443</ref>
+|-
+! [[Al-Malkiyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|28 May 1948|format=dmy}} || 418 || 7,328 || [[Operation Yiftach|Yiftach]] ||  ||  || {{#invoke:Coordinates|coord|33|06|19|N|35|30|23|E|type:city_region:PS|display=inline}} || [[Malkia|Malkiya]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #135, established 1949.</ref><ref name="khalidi471">Khalidi, 1992, p. 471</ref>
+|-
+! [[Kafr 'Inan]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|1 February 1949|format=dmy}} || 418 || 5,827 || [[Operation Hiram|Hiram]] || Expulsion<ref name=Mxv/> || Some houses  || {{#invoke:Coordinates|coord|32|55|23|N|35|25|07|E|type:city_region:PS|display=inline}} || [[Kfar Hananya]]
+|-
+! [[al-Jaladiyya]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|8 July 1948|format=dmy}} || 418 || 4,329 ||  ||  || No trace  || {{#invoke:Coordinates|coord|31|41|55|N|34|44|59|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Muwaylih]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|31 December 1947|format=dmy}} || 418 || 3,342 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|07|28|N|34|55|23|E|type:city_region:PS|display=inline}} || [[Neve Yarak]]
+|-
+! [[Kirad al-Baqqara]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|22 April 1948|format=dmy}} || 418 || 2,262 || [[Operation Yiftach|Yiftach]] ||  || Some walls  || {{#invoke:Coordinates|coord|33|01|07|N|35|36|04|E|type:city_region:PS|display=inline}} || [[Gadot, Israel|Gadot]] and [[Mishmar ha-Yarden]]
+|-
+! [[al-Mansura, Safad|al-Mansura]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|25 May 1948|format=dmy}} || 418 || 1,544 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|12|59|N|35|38|26|E|type:city_region:PS|display=inline}} || [[She'ar Yashuv]]<ref name=Khalidi474>Khalidi, 1992, p. 474</ref>
+|-
+! [[al-Majdal, Tiberias|al-Majdal]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|22 April 1948|format=dmy}} || 418 || 103 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|49|28|N|35|31|00|E|type:city_region:PS|display=inline}} || [[Migdal, Israel]]
+|-
+! [[al-Muftakhira]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|16 May 1948|format=dmy}} || 406 || 9,215 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|09|25|N|35|38|35|E|type:city_region:PS|display=inline}} || [[Shamir, Israel]]
+|-
+! [[al-Zahiriyya al-Tahta]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|10 May 1948|format=dmy}} || 406 || 6,773 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|57|47|N|35|29|12|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Kirad al-Ghannama]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|22 April 1948|format=dmy}} || 406 || 3,975 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|01|05|N|35|37|02|E|type:city_region:PS|display=inline}} || [[Ayyelet ha-Shahar]] and [[Gadot, Israel|Gadot]]
+|-
+! [[Artuf]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|18 July 1948|format=dmy}} || 406 || 403 ||  ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|31|46|03|N|35|00|05|E|type:city_region:PS|display=inline}} || [[Naham]]<ref name=Khalidi269>Khalidi, 1992, p. 269</ref>
+|-
+! [[Kafr Lam]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|16 July 1948|format=dmy}} || 394 || 6,838 ||  ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|32|38|15|N|34|56|04|E|type:city_region:PS|display=inline}} || [[HaBonim, Israel|HaBonim]],<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #121</ref> [[Ein Ayala]]<ref name=Khalidi170>Khalidi, 1992, p. 170</ref>
+|-
+! [[Tulayl]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|28 April 1948|format=dmy}} || 394 || 5,324 || [[Operation Yiftach|Yiftach]] ||  || Some houses  || {{#invoke:Coordinates|coord|33|03|03|N|35|37|12|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Sar'a]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|18 July 1948|format=dmy}} || 394 || 4,967 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|31|46|41|N|34|59|10|E|type:city_region:PS|display=inline}} || [[Tarum]]<ref name=Khalidi314>Khalidi, 1992, p. 314</ref>
+|-
+! [[Khirbat Al-Dumun|al-Dumun]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|30 April 1948|format=dmy}} || 394 || 2,797 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|43|58|N|35|01|20|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Zayta, Hebron|Zayta]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|17 July 1948|format=dmy}} || 383 || 10,490 || [[Operation An-Far|An-Far]] ||  || No trace  || {{#invoke:Coordinates|coord|31|38|25|N|34|49|25|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Jilya]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|9 July 1948|format=dmy}} || 383 || 10,347 ||  ||  ||  || {{#invoke:Coordinates|coord|31|46|06|N|34|51|52|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Tabgha|al-Tabigha]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|4 May 1948|format=dmy}} || 383 || 5,389 || [[Operation Matateh|Matateh]] || Massacre || Some walls  || {{#invoke:Coordinates|coord|32|52|20|N|35|33|00|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Farwana]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|11 May 1948|format=dmy}} || 383 || 4,996 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|27|47|N|35|29|37|E|type:city_region:PS|display=inline}} || [[Rehov|Rechov]]<ref name=Khalidi47>Khalidi, 1992, p. 47</ref> [[Chawwat Eden]]<ref name=Khalidi47/>
+|-
+! [[Abil al-Qamh]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|10 May 1948|format=dmy}} || 383 || 4,615 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|15|34|N|35|34|51|E|type:city_region:PS|display=inline}} || [[Yuval]]
+|-
+! [[Barqusya]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|9 July 1948|format=dmy}} || 383 || 3,216 || [[Operation An-Far|An-Far]] || Massacre || Rubble  || {{#invoke:Coordinates|coord|31|40|46|N|34|49|24|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Ruways]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 383 || 1,163 || [[Operation Dekel|Dekel]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|51|50|N|35|10|41|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Nuqayb]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|15 May 1948|format=dmy}} || 371 || 13,010 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|47|57|N|35|38|25|E|type:city_region:PS|display=inline}} || [[Ein Gev]]
+|-
+! [[Nimrin]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|16 July 1948|format=dmy}} || 371 || 12,019 || [[Operation Dekel|Dekel]] ||  ||  || {{#invoke:Coordinates|coord|32|48|15|N|35|25|24|E|type:city_region:PS|display=inline}} || Achuzzat Naftali, IDF ammunition depot
+|-
+! [[Wadi Qabbani]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|1 March 1948|format=dmy}} || 371 || 9,812 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|21|44|N|34|55|08|E|type:city_region:PS|display=inline}} || [[HaOgen]]<ref name=Khalidi566>Khalidi, 1992, p. 566</ref>
+|-
+! [[Fara, Safad|Fara]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 371 || 7,229 || [[Operation Hiram|Hiram]] ||  || Some houses  || {{#invoke:Coordinates|coord|33|03|57|N|35|27|29|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Dayr Ayyub]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|6 March 1948|format=dmy}} || 371 || 6,028 || various ||  || Some walls  || {{#invoke:Coordinates|coord|31|49|38|N|35|01|06.45|E|type:city_region:PS|display=inline}} || [[Canada Park]]
+|-
+! [[al-Sammu'i]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 360 || 15,135 || [[Operation Yiftach|Yiftach]] ||  || Some walls  || {{#invoke:Coordinates|coord|32|57|29|N|35|27|11|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Dirbashiyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || 360 || 2,883 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|05|20|N|35|38|49|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Arab al-Fuqara]] 
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|10 April 1948|format=dmy}} || 360 || 2,714 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|27|08|N|34|54|21|E|type:city_region:PS|display=inline}} || [[Hadera]]<ref name=Khalidi144>Khalidi, 1992, p. 144</ref>
+|-
+! [[Kawkab al-Hawa]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|16 May 1948|format=dmy}} || 348 || 9,949 || [[Operation Gideon|Gideon]] ||  || No trace  || {{#invoke:Coordinates|coord|32|35|43|N|35|31|12|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Khirbat Bayt Far|Bayt Far]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|7 April 1948|format=dmy}} || 348 || 5,604 || [[Operation Nachshon|Nachshon]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|48|03|N|34|54|57|E|type:city_region:PS|display=inline}} || [[Tal Shahar]]<ref name=Khalidi364>Khalidi, 1992, p. 364</ref><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #34, October 1948</ref>
+|-
+! [[Biyar 'Adas]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|12 April 1948|format=dmy}} || 348 || 5,492 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|09|27|N|34|55|15|E|type:city_region:PS|display=inline}} || [[Adanim]],<ref name=Khalidi239>Khalidi, 1992, p. 239</ref> [[Elishama, Israel|Elishama]]<ref name=Khalidi239/>
+|-
+! [[al-Tall, Acre|al-Tall]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|21 May 1948|format=dmy}} || 348 ||  ||  || Military assault<ref name=Mxv/> || Rubble  || {{#invoke:Coordinates|coord|33|00|31|N|35|08|19|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Meiron]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|10 May 1948|format=dmy}} || 336 || 14,114 || [[Operation Yiftach|Yiftach]] ||  || Some walls  || {{#invoke:Coordinates|coord|32|58|56|N|35|26|17|E|type:city_region:PS|display=inline}} || [[Meron, Israel|Meron]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR17 xvii], settlement #159</ref>
+|-
+! [[al-Samra]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|21 April 1948|format=dmy}} || 336 || 12,563 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|43|23|N|35|37|02|E|type:city_region:PS|display=inline}} || [[HaOn]]<ref name=Khalidi540>Khalidi, 1992, p. 540</ref><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #143</ref>
+|-
+! [[Burayka]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|5 May 1948|format=dmy}} || 336 || 11,434 || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] ||  || Inaccessible || {{#invoke:Coordinates|coord|32|33|29|N|34|58|40|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Sarafand]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|16 July 1948|format=dmy}} || 336 || 5,409 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|38|48|N|34|56|08|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Khubbayza]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 336 || 4,854 || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|33|22|N|35|03|56|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Hamma, Tiberias|al-Hamma]] 
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|20 July 1949|format=dmy}} || 336 || 1,692 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|41|10|N|35|39|51|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Daliyat al-Rawha']]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|1 March 1948|format=dmy}} || 325 || 10,008 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|35|28|N|35|04|41|E|type:city_region:PS|display=inline}} || [[Ramot Menashe]]?<ref name="Morris#4">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR20 xx], settlement #4</ref> [[Dalia, Israel|Dalia]]<ref name=Khalidi158>Khalidi, 1992, p. 158</ref>
+|-
+! [[Khulda]] 
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|6 April 1948|format=dmy}} || 325 || 9,461 || [[Operation Nachshon|Nachshon]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|49|10|N|34|54|14|E|type:city_region:PS|display=inline}} || [[Mishmar David]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #37</ref>
+|-
+! [[Kasla, Jerusalem|Kasla]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|17 July 1948|format=dmy}} || 325 || 8,004 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|31|46|52|N|35|03|04|E|type:city_region:PS|display=inline}} || [[Ramat Raziel]],<ref name=Khalidi299>Khalidi, 1992, p. 299</ref> [[Ksalon]]<ref name=Khalidi299/>
+|-
+! [[Shahma]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|14 May 1948|format=dmy}} || 325 || 6,875 ||  ||  ||  || {{#invoke:Coordinates|coord|31|49|26|N|34|48|40|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Khiyam al-Walid]] 
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || 325 || 4,215 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|08|39|N|35|39|14|E|type:city_region:PS|display=inline}} || [[Lehavot HaBashan]]<ref name="Khalidi"/>
+|-
+! [[Al-Mazar, Jenin|al-Mazar]]
+| [[Jenin Subdistrict, Mandatory Palestine|Jenin]] 
+| || {{Date table sorting|30 May 1948|format=dmy}} || 313 || 14,501 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|31|28|N|35|21|33|E|type:city_region:PS|display=inline}} || [[Prazon]], [[Meitav, Israel|Meitav]], and [[Gan Ner]]
+|-
+! [[Khirbat al-'Umur|al-'Umur]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|21 October 1948|format=dmy}} || 313 || 4,163 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|31|47|37|N|35|05|56|E|type:city_region:PS|display=inline}} || [[Giv'at Ye'arim]]<ref name=Khalidi321>Khalidi, 1992, p. 321</ref>
+|-
+! [[al-Manshiyya, Tulkarm|al-Manshiyya]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|15 April 1948|format=dmy}} || 302 || 16,770 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|26|57|N|34|59|57|E|type:city_region:PS|display=inline}} || [[Ein ha-Horesh]],<ref name=Khalidi557>Khalidi, 1992, p. 557</ref> [[Giv'at Chayirn]],<ref name=Khalidi557/> and [[Ahituv]]<ref name=Khalidi557/>
+|-
+! [[Alonei Abba|Umm al ‘Amad]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|1 April 1948|format=dmy}} || 302 || 9,225 ||  ||  ||  || {{#invoke:Coordinates|coord|32|43|46|N|35|10|18|E|display=inline}} || 
+|-
+! [[al-Bira, Baysan|al-Bira]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|16 May 1948|format=dmy}} || 302 || 6,866 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|36|29|N|35|30|14|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Umm 'Ajra]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|31 May 1948|format=dmy}} || 302 || 6,443 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|27|56|N|35|31|21|E|type:city_region:PS|display=inline}} || Shif’a<ref name=Khalidi64>Khalidi, 1992, p. 64</ref>
+|-
+! [[Bayt Thul]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|1 April 1948|format=dmy}} || 302 || 4,629 || [[Operation Nachshon|Nachshon]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|49|21|N|35|04|26|E|type:city_region:PS|display=inline}} || [[Nataf]],<ref name=Khalidi280>Khalidi, 1992, p. 280</ref> [[Neve Ilan]]<ref>Close by, but on land traditionally belonging to [[Abu Ghosh]], according to Khalidi, 1992, p. 290</ref>
+|-
+! [[al-Qabu]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|22 October 1948|format=dmy}} || 302 || 3,806 || [[Operation Ha-Har|Ha-Har]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|43|40|N|35|07|10|E|type:city_region:PS|display=inline}} || [[Mevo Beitar]]
+|-
+! [['Akbara]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|9 May 1948|format=dmy}} || 302 || 3,224 || [[Operation Yiftach|Yiftach]] ||  || Some houses  || {{#invoke:Coordinates|coord|32|56|22|N|35|29|58|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Khunayzir, Palestine|al-Khunayzir]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|20 May 1948|format=dmy}} || 302 || 3,107 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|25|17|N|35|31|20|E|type:city_region:PS|display=inline}} || [[Tirat Zvi]]<ref name=Khalidi54>Khalidi, 1992, p. 54</ref>
+|-
+! [[Khan al-Duwayr]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 May 1948|format=dmy}} || 302 || 2,163 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|14|22|N|35|40|19|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Islin]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|18 July 1948|format=dmy}} || 302 || 2,159 || [[Operation Danny|Danny]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|47|05|N|35|00|23|E|type:city_region:PS|display=inline}} || [[Eshtaol]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR19 xix], settlement #78, 1949</ref>
+|-
+! [[al-'Ulmaniyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|20 April 1948|format=dmy}} || 302 || 1,169 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|04|24|N|35|35|20|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Jabbul]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|18 May 1948|format=dmy}} || 290 || 15,127 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|34|01|N|35|30|35|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Samiriyya]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|27 May 1948|format=dmy}} || 290 || 3,873 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|26|15|N|35|29|14|E|type:city_region:PS|display=inline}} || [[Sdei Trumot]]<ref name=Khalidi59>Khalidi, 1992, p. 59</ref>
+|-
+! [[Harrawi]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|25 May 1948|format=dmy}} || 290 || 3,726 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|5|27|N|35|33|28|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Biriyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|2 May 1948|format=dmy}} || 278 || 5,579 || [[Operation Matateh|Matateh]]/[[Operation Yiftach|Yiftach]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|58|47|N|35|29|52|E|type:city_region:PS|display=inline}} || [[Birya]]
+|-
+! [[Bayt Naqquba]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|1 April 1948|format=dmy}} || 278 || 2,979 || [[Operation Nachshon|Nachshon]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|48|16|N|35|07|25|E|type:city_region:PS|display=inline}} || [[Beit Nekofa]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #80, 1949</ref>
+|-
+! [[Qaddita]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|11 May 1948|format=dmy}} || 278 || 2,441 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|00|20|N|35|28|01|E|type:city_region:PS|display=inline}} || [[Kadita]]
+|-
+! [[al-Rihaniyya]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|30 April 1948|format=dmy}} || 278 || 1,930 || [[Battle of Haifa (1948)|Bi’ur Hametz]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|37|12|N|35|05|13|E|type:city_region:PS|display=inline}} || [[Ramat HaShofet]]<ref name=Khalidi185/> [[Ein HaEmek]]<ref name=Khalidi185/>
+|-
+! [[Wadi Ara, Haifa|Wadi Ara]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| [[File:Arab house at Kibbutz Barkai 01.JPG |100px|frameless|alt=Photo of the village or town]] || {{Date table sorting|27 February 1948|format=dmy}} || 267 || 9,795 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|28|31|N|35|01|55|E|type:city_region:PS|display=inline}} || [[Ein Iron]], [[Barkai]]<ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #126, 1949</ref>
+|-
+! [[al-Ashrafiyya]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 267 || 6,711 || [[Operation Gideon|Gideon]] ||  || No trace  || {{#invoke:Coordinates|coord|32|28|12|N|35|28|17|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Lazzaza]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|21 May 1948|format=dmy}} || 267 || 1,586 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|12|21|N|35|36|42|E|type:city_region:PS|display=inline}} || [[Beit Hillel]]
+|-
+! [[al-Hamidiyya]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 255 || 10,902 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|32|39|N|35|30|56|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Dayr al-Shaykh]] 
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|21 October 1948|format=dmy}} || 255 || 6,781 || [[Operation Ha-Har|Ha-Har]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|44|56|N|35|04|02|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Ghuraba, Safad|Ghuraba]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|28 May 1948|format=dmy}} || 255 || 3,453 || [[Operation Yiftach|Yiftach]] ||  || Some walls  || {{#invoke:Coordinates|coord|33|07|11|N|35|38|45|E|type:city_region:PS|display=inline}} || [[Gonen]]<ref name=Khalidi452>Khalidi, 1992, p. 452</ref>
+|-
+! [[Yaquq]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || 244 || 8,507 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|53|5|N|35|28|44|E|type:city_region:PS|display=inline}} || [[Hukok]]<ref>Khalidi, 1992, p. 547</ref>
+|-
+! [[Al-Mazar, Haifa|al-Mazar]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 244 || 7,976 ||  || Atrocity || Rubble  || {{#invoke:Coordinates|coord|32|40|56|N|34|57|52|E|type:city_region:PS|display=inline}} || [[Ein Carmel]]
+|-
+! [[Khirbat Zalafa]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|15 April 1948|format=dmy}} || 244 || 7,713 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|24|9|N|34|56|44|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Saydun]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|6 April 1948|format=dmy}} || 244 || 7,487 || [[Operation Nachshon|Nachshon]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|50|28|N|34|54|17|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Bayt Susin]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|30 May 1948|format=dmy}} || 244 || 6,481 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|31|48|22|N|34|58|55|E|type:city_region:PS|display=inline}} || [[Ta'oz]]
+|-
+! [[Yubla]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|16 May 1948|format=dmy}} || 244 || 5,165 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|34|33|N|35|28|10|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Bayt Shanna]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 244 || 3,617 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|31|52|39|N|34|59|13|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Mukhayzin]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|20 April 1948|format=dmy}} || 232 || 12,548 || [[Operation Nachshon|Nachshon]] ||  || No trace  || {{#invoke:Coordinates|coord|31|48|12|N|34|48|40|E|type:city_region:PS|display=inline}} || [[Chafetz Chayyim]],<ref name=Khalidi398>Khalidi, 1992, p. 398</ref> [[Revadim]],<ref name=Khalidi398/> [[Yad Binyamin]],<ref name=Khalidi398/> [[Beyt Chilqiyya]]<ref name=Khalidi398/>
+|-
+! [[Mansurat al-Khayt]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|18 January 1948|format=dmy}} || 232 || 6,735 ||  || Massacre || Rubble  || {{#invoke:Coordinates|coord|32|58|15|N|35|36|58|E|type:city_region:PS|display=inline}} || [[Kfar Hanassi]]?<ref name="Morris#13">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR20 xx], settlement #13</ref> However, Khalidi writes that it is on the land of Tuba<ref name=Khalidi475>Khalidi, 1992, p. 475</ref>
+|-
+! [[al-Shawka al-Tahta]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|14 May 1948|format=dmy}} || 232 || 2,132 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|14|19|N|35|38|12|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Arab al-Samniyya]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 232 || 1,872 || [[Operation Hiram|Hiram]] || Massacre || Some houses  || {{#invoke:Coordinates|coord|33|02|48|N|35|10|50|E|type:city_region:PS|display=inline}} || [[Ya'ara]]<ref name=Khalidi6>Khalidi, 1992, p. 6</ref>
+|-
+! [[Khirbat al-Mansura|al-Mansura]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|28 April 1948|format=dmy}} || 223 ||  || [[Battle of Haifa (1948)|Bi’ur Hametz]] ||  || No trace  || {{#invoke:Coordinates|coord|32|40|28|N|35|05|59|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Latrun|al-Latrun]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| [[File:Latrun-Monastery.jpg |100px|frameless|alt=Photo of the village or town]]|| {{Date table sorting|10 August 1948|format=dmy}} || 220 || 8,376 || [[Operation Danny|Danny]]/others ||  || No trace  || {{#invoke:Coordinates|coord|31|50|08|N|34|58|49|E|display=inline}} || 
+|-
+! [[Ra'na]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|22 October 1948|format=dmy}} || 220 || 6,925 || [[Operation Yoav|Yoav]] ||  || No trace  || {{#invoke:Coordinates|coord|31|39|54|N|34|52|37|E|type:city_region:PS|display=inline}} || [[Gal On]]
+|-
+! [[Danna, Baysan|Danna]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|28 May 1948|format=dmy}} || 220 || 6,614 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|36|47|N|35|28|28|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Khayma]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|9 July 1948|format=dmy}} || 220 || 5,150 || [[Operation An-Far|An-Far]] ||  || No trace  || {{#invoke:Coordinates|coord|31|45|41|N|34|49|39|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Jarash, Jerusalem|Jarash]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|21 October 1948|format=dmy}} || 220 || 3,518 || [[Operation Ha-Har|Ha-Har]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|43|47|N|35|00|58|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Ijlil al-Shamaliyya]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|3 April 1948|format=dmy}} || 220 || 2,450 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|09|36|N|34|48|42|E|type:city_region:PS|display=inline}} || [[Glil Yam]]<ref name=Khalidi243>Khalidi, 1992, p. 243</ref>
+|-
+! [[Khirbat al-Buwayra|al-Buwayra]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|15 July 1948|format=dmy}} || 220 || 1,150 || [[Operation Danny|Danny]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|52|27|N|35|00|52|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Jarisha]]
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || 220 || 555 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|5|43|N|34|48|28|E|type:city_region:PS|display=inline}} || [[Tel Aviv]],<ref name=Mannp246>Mann, 2006, p. 246</ref> [[Ramat Gan]]
+|-
+! [[Wa'arat al-Sarris]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|16 April 1948|format=dmy}} || 220 ||  ||  ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|32|48|50|N|35|07|08|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Bil'in, Gaza|Bil'in]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|8 July 1948|format=dmy}} || 209 || 8,036 || [[Operation An-Far|An-Far]] || Massacre || Rubble  || {{#invoke:Coordinates|coord|31|41|20|N|34|49|11|E|type:city_region:PS|display=inline}} || [[Qedma]]<ref name=Khalidi91>Khalidi, 1992, p. 91</ref>
+|-
+! [[Jubb Yusuf]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|4 May 1948|format=dmy}} || 197 || 11,325 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|32|55|09.19|N|35|32|12.63|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Zab'a]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 197 || 3,968 || [[Operation Gideon|Gideon]] ||  || No trace  || {{#invoke:Coordinates|coord|32|33|15|N|35|32|55|E|type:city_region:PS|display=inline}} || [[Beyt Yosef]]<ref name=Khalidi67>Khalidi, 1992, p. 67</ref> Doshen<ref name=Khalidi67/>
+|-
+! [[al-Shuna]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 April 1948|format=dmy}} || 197 || 3,660 || [[Operation Yiftach|Yiftach]] ||  || Some houses  || {{#invoke:Coordinates|coord|32|54|30|N|35|29|13|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Kharruba]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|12 July 1948|format=dmy}} || 197 || 3,374 || [[Operation Danny|Danny]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|54|44|N|34|57|38|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Mirr]] 
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|1 February 1948|format=dmy}} || 197 || 51 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|06|43|N|34|54|57|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Zuq al-Fawqani]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|21 May 1948|format=dmy}} || 186 || 1,832 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|14|37|N|35|35|30|E|type:city_region:PS|display=inline}} || [[Yuval]]
+|-
+! [[al-Tira, Baysan|al-Tira]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|15 April 1948|format=dmy}} || 174 || 10,207 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|38|52|N|35|27|26|E|type:city_region:PS|display=inline}} || [[Gazit]]<ref name="Morris#25">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR21 xxi], settlement #25</ref><ref name=Khalidi63>Khalidi, 1992, p. 63</ref>
+|-
+! '[[Château Pèlerin|Atlit]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|15 May 1948|format=dmy}} || 174 || 9,083 ||  ||  ||  || {{#invoke:Coordinates|coord|32|41|14|N|34|56|18|E|display=inline}} || 
+|-
+! [[al-Khisas, Gaza|al-Khisas]]
+| [[Gaza Subdistrict, Mandatory Palestine|Gaza]] 
+| || {{Date table sorting|4 November 1948|format=dmy}} || 174 || 6,269 || [[Operation Yoav|Yoav]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|38|53|N|34|33|40|E|type:city_region:PS|display=inline}} || [[Ashkelon]]<ref name=Khalidi123>Khalidi, 1992, p. 123</ref>
+|-
+! [[Arab al-'Arida]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|20 May 1948|format=dmy}} || 174 || 2,280 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|26|28|N|35|30|52|E|type:city_region:PS|display=inline}} || [[Sde Eliyahu]]<ref name=Khalidi41>Khalidi, 1992, p. 41</ref>
+|-
+! [[Raml Zayta]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|15 March 1948|format=dmy}} || 162 || 14,837 ||  ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|32|26|6|N|34|56|12|E|type:city_region:PS|display=inline}} || [[Sde Yitzhak]],<ref name=Khalidi561>Khalidi, 1992, p. 561</ref> [[Chadera]]<ref name=Khalidi561/>
+|-
+! [[Khirbat Umm Burj|Umm Burj]]
+| [[Hebron Subdistrict, Mandatory Palestine|Hebron]] 
+| || {{Date table sorting|28 October 1948|format=dmy}} || 162 || 13,083 || [[Operation Yoav|Yoav]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|38|12|N|34|58|11|E|type:city_region:PS|display=inline}} || [[Nehusha]]<ref name=Khalidi224>Khalidi, 1992, p. 224</ref>
+|-
+! [[Ammuqa]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|24 May 1948|format=dmy}} || 162 || 2,574 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|00|22|N|35|31|13|E|type:city_region:PS|display=inline}} || [[Amuka, Israel|Amuka]]<ref name=Khalidi434>Khalidi, 1992, p. 434</ref>
+|-
+! [[al-Sanbariyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || 151 || 2,532 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|14|05|N|35|37|07|E|type:city_region:PS|display=inline}} || [[Ma'yan Barukh]]<ref name=Khalidi494>Khalidi, 1992, p. 494</ref> and [[Dafna]]<ref name=Khalidi494/>
+|-
+! [[Khirbat Sa'sa']]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|28 April 1948|format=dmy}} || 151 ||  ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|46|27|N|35|07|49|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Manshiyya, Safad|al-Manshiyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|24 May 1948|format=dmy}} || 140 ||  || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|13|32|N|35|36|24|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Kabara, Haifa|Kabara]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|30 April 1948|format=dmy}} || 139 || 9,831 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|32|56|N|34|55|14|E|type:city_region:PS|display=inline}} || [[Ma'ayan Tzvi]],<ref name=Khalidi168>Khalidi, 1992, p. 168</ref> [[Ma'agan Michael]],<ref name=Khalidi168/><ref>Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR22 xxii], settlement #128</ref> [[Beit Hanania]]<ref name=Khalidi168/>
+|-
+! [[Tall al-Shawk]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 139 || 3,685 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|29|49|N|35|27|43|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Butaymat]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || 128 || 8,557 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|33|12|N|35|5|38|E|type:city_region:PS|display=inline}} || [[Gal'ed]]<ref name=Khalidi157>Khalidi, 1992, p. 157</ref> Former: [[Regavim]]<ref name="Morris#15">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR20 xx], settlement #15, July, 1948. Moved to the land of [[Qannir]] in 1949.</ref>
+|-
+! [[al-Fatur]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || 128 || 729 || [[Operation Gideon|Gideon]] ||  || No trace  || {{#invoke:Coordinates|coord|32|23|55|N|35|31|36|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Dirdara]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 April 1948|format=dmy}} || 116 || 6,361 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|03|05|N|35|38|24|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Masil al-Jizl]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|31 May 1948|format=dmy}} || 116 || 5,873 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|27|15|N|35|33|26|E|type:city_region:PS|display=inline}} || [[Kfar Ruppin]]<ref name=Khalidi56>Khalidi, 1992, p. 56</ref>
+|-
+! [[Shilta]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|18 July 1948|format=dmy}} || 116 || 5,380 || [[Operation Danny|Danny]] ||  || No trace  || {{#invoke:Coordinates|coord|31|55|04|N|35|01|14|E|type:city_region:PS|display=inline}} || [[Shilat]],<ref name=Khalidi415>Khalidi, 1992, p. 415</ref> [[Kfar Ruth]]<ref name=Khalidi415/>
+|-
+! [[al-Wayziyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || 116 || 3,826 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|0|4|N|35|34|37|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Khirbat al-Duhayriyya|al-Duhayriyya]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 116 || 1,341 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|31|56|46|N|34|56|03|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Mansura, Ramle|al-Mansura]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|20 April 1948|format=dmy}} || 104 || 2,328 || [[Operation Barak|Barak]] ||  || No trace  || {{#invoke:Coordinates|coord|31|50|16|N|34|51|26|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Al-Qastal, Jerusalem|al-Qastal]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|3 April 1948|format=dmy}} || 104 || 1,446 ||  ||  || Rubble  || {{#invoke:Coordinates|coord|31|47|44|N|35|8|39|E|type:city_region:PS|display=inline}} || [[Mevaseret Zion]]<ref name=Khalidi311>Khalidi, 1992, p. 311</ref> [[Castel National Park]]
+|-
+! [[Ayn al-Mansi]]
+| [[Jenin Subdistrict, Mandatory Palestine|Jenin]] 
+| || {{Date table sorting|12 April 1948|format=dmy}} || 104 || 1,295 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|35|36|N|35|10|38|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Nasir ad-Din, Tiberias|Nasir al-Din]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|12 April 1948|format=dmy}} || 104 ||  ||  || Massacre || No trace  || {{#invoke:Coordinates|coord|32|46|43|N|35|31|24|E|type:city_region:PS|display=inline}} || [[Tiberias]]
+|-
+! [[Marus, Safad|Marus]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|26 May 1948|format=dmy}} || 93 || 3,183 || [[Operation Hiram|Hiram]] || Atrocity || Rubble  || {{#invoke:Coordinates|coord|33|01|43.38|N|35|31|41.61|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Nabi Yusha']]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|16 May 1948|format=dmy}} || 81 || 3,617 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|06|46|N|35|33|22|E|type:city_region:PS|display=inline}} || [[Ramot Naftali]]
+|-
+! [[Sabalan, Safad|Sabalan]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 81 || 1,798 || [[Operation Hiram|Hiram]] ||  || Some houses  || {{#invoke:Coordinates|coord|33|0|42|N|35|20|29|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Bayt Umm al-Mays]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|21 October 1948|format=dmy}} || 81 || 1,013 || [[Operation Ha-Har|Ha-Har]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|46|52|N|35|04|55|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Jalama, Tulkarm|al-Jalama]] 
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|1 March 1948|format=dmy}} || 81 ||  ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|23|32|N|35|00|35|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Dayr al-Hawa]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|19 October 1948|format=dmy}} || 70 || 5,907 || [[Operation Ha-Har|Ha-Har]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|45|05|N|35|02|14|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Ghabbatiyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 October 1948|format=dmy}} || 70 || 2,933 || [[Operation Hiram|Hiram]] ||  || Some walls  || {{#invoke:Coordinates|coord|33|00|53|N|35|22|33|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Sufla]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|19 October 1948|format=dmy}} || 70 || 2,061 || [[Operation Ha-Har|Ha-Har]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|44|5|N|35|2|28|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Umm Kalkha]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|7 April 1948|format=dmy}} || 70 || 1,405 || [[Operation Nachshon|Nachshon]] ||  || No trace  || {{#invoke:Coordinates|coord|31|48|51|N|34|51|57|E|type:city_region:PS|display=inline}} || [[Yesodot]]<ref name="Morris#14">Morris, 2004, p. [https://books.google.com/books?id=uM_kFX6edX8C&pg=PR20 xx], settlement #14</ref><ref name=Khalidi419>Khalidi, 1992, p. 419</ref>
+|-
+! [[Dayr Abu Salama]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|13 July 1948|format=dmy}} || 70 || 1,195 || [[Operation Danny|Danny]] ||  || Rubble  || {{#invoke:Coordinates|coord|31|56|57|N|34|57|25|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Aqqur]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|13 July 1948|format=dmy}} || 46 || 5,522 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|31|45|30|N|35|04|56|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Kunayyisa]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|10 July 1948|format=dmy}} || 46 || 3,872 || [[Operation Danny|Danny]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|53|18|N|34|57|27|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Nitaf]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|15 April 1948|format=dmy}} || 46 || 1,401 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|31|50|13|N|35|03|55|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al Zuwaira]] PS
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|25 November 1948|format=dmy}} || 46 ||  || [[Operation Uvda|Uvda]] ||  ||  ||  || 
+|-
+! [[Al-Imara]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|13 May 1948|format=dmy}} || 46 ||  ||  ||  || No trace  || {{#invoke:Coordinates|coord|31|18|11|N|34|31|14|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Jammama]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|22 May 1948|format=dmy}} || 46 ||  ||  ||  || Some walls  || {{#invoke:Coordinates|coord|31|29|55|N|34|41|10|E|type:city_region:PS|display=inline}} || [[Ruhama]]<ref name=Khalidi74>Khalidi, 1992, p. 74</ref>
+|-
+! [[Al-Khalasa]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| [[File:Khalasa well.jpg |100px|frameless|alt=Photo of the village or town]] || {{Date table sorting|17 November 1948|format=dmy}} || 46 ||  || [[Operation Yoav|Yoav]] ||  || Some walls  || {{#invoke:Coordinates|coord|31|5|50|N|34|39|9|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Asluj]] PS
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|26 December 1948|format=dmy}} || 46 ||  || [[Operation Yoav|Yoav]] ||  ||  ||  || 
+|-
+! [[Auja al-Hafir]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|27 December 1948|format=dmy}} || 46 ||  || [[Operation Yoav|Yoav]] ||  ||  || {{#invoke:Coordinates|coord|30|52|56|N|34|23|38|E|type:city_region:PS|display=inline}} || [[Nitzana, Israel|Nessana]]
+|-
+! [[Ghamr]] PS
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|5 March 1949|format=dmy}} || 46 ||  || [[Operation Uvda|Uvda]] ||  ||  ||  || 
+|-
+! [[Kurnub]] PS
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|23 November 1948|format=dmy}} || 46 ||  || [[Operation Uvda|Uvda]] ||  ||  || {{#invoke:Coordinates|coord|31.025|35.064|display=inline}} || 
+|-
+! [[Um Rashrash]]
+| [[Beersheba Subdistrict, Mandatory Palestine|Beersheba]] 
+| || {{Date table sorting|10 March 1949|format=dmy}} || 46 ||  || [[Operation Uvda|Uvda]] ||  ||  ||  || 
+|-
+! [[Baysamun]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|25 May 1948|format=dmy}} || 23 || 2,102 || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|5|51|N|35|34|46|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Yarda, Safad]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|1 April 1948|format=dmy}} || 23 || 1,368 || [[Operation Yiftach|Yiftach]] ||  || Some walls  || {{#invoke:Coordinates|coord|33|0|27|N|35|35|38|E|type:city_region:PS|display=inline}} || [[Ayyelet ha-Shahar]]<ref name=Khalidi504>Khalidi, 1992, p. 504</ref> and [[Mishmar ha-Yarden]]<ref name=Khalidi504/>
+|-
+! [[Fardisya]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|1 April 1948|format=dmy}} || 23 || 1,092 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|16|41|N|35|00|47|E|type:city_region:PS|display=inline}} || [[Sha'ar Efraim]]<ref name=Khalidi552>Khalidi, 1992, p. 552</ref>
+|-
+! [[Khirbat Ism Allah|Ism Allah]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|17 July 1948|format=dmy}} || 23 || 568 || [[Operation Danny|Danny]] ||  || 1 or 2 Jewish families || {{#invoke:Coordinates|coord|31|46|59|N|34|57|19|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Dayr 'Amr]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|17 July 1948|format=dmy}} || 12 || 3,072 || [[Operation Danny|Danny]] ||  || 3 or more Jewish families || {{#invoke:Coordinates|coord|31|46|37|N|35|05|48|E|type:city_region:PS|display=inline}} || [[Eitanim]]<ref name=Khalidi284>Khalidi, 1992, p. 284</ref>
+|-
+! [[Abu Kabir]] 
+| [[Jaffa Subdistrict, Mandatory Palestine|Jaffa]] 
+| || {{Date table sorting|26 April 1948|format=dmy}} || incl. || incl. ||  ||  ||  ||  || [[Tel Aviv]]
+|-
+! [[al Manara, Haifa|al-Manara]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|1 March 1948|format=dmy}} || incl. || incl. ||  ||  || Rubble  ||  || 
+|-
+! [[al-'Urayfiyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|1 April 1948|format=dmy}} || incl. || incl. || [[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|06|38|N|35|38|53|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Ghubayya al-Fawqa]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|8 April 1948|format=dmy}} || incl. || incl. || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|36|5|N|35|9|5|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Ghubayya al-Tahta]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|8 April 1948|format=dmy}} || incl. || incl. || [[Battle of Mishmar HaEmek|Mishmar HaEmek]] ||  || No trace  || {{#invoke:Coordinates|coord|32|36|27|N|35|8|38|E|type:city_region:PS|display=inline}} || [[Midrakh Oz]]<ref name=Khalidi161>Khalidi, 1992, p. 161</ref>
+|-
+! [[al-Hamra']]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || incl. || incl. || [[Operation Yiftach|Yiftach]] ||  || Some walls  || {{#invoke:Coordinates|coord|33|09|11|N|35|38|51|E|type:city_region:PS|display=inline}} || 
+|-
+! [[al-Husayniyya, Safad|al-Husayniyya]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|21 April 1948|format=dmy}} || incl. || incl. || [[Operation Yiftach|Yiftach]] || Massacre || Some walls  || {{#invoke:Coordinates|coord|33|02|23|N|35|34|58|E|type:city_region:PS|display=inline}} ||
+|-
+! [[al-Manshiyya, Tiberias|al-Manshiyya]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|3 March 1948|format=dmy}} || incl. || incl. ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|41|33|N|35|33|29|E|type:city_region:PS|display=inline}} || [[Beit Zera]]<ref name=Khalidi533/>
+|-
+! [[al-Mansura, Acre|al-Mansura]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|1 November 1948|format=dmy}} || incl. || incl. || [[Operation Hiram|Hiram]] || Expulsion<ref name=Mxv/> || No trace  || {{#invoke:Coordinates|coord|33|03|50|N|35|20|05|E|type:city_region:PS|display=inline}} || [[Netu'a]],<ref name=Khalidi24>Khalidi, 1992, p. 24</ref> [[Mattat]],<ref name=Khalidi24/> [[Abirim]],<ref name=Khalidi24/> [[Elkosh]]<ref name=Khalidi24/> and [[Biranit]]<ref name=Khalidi24/>
+|-
+! [[Al-Nabi Rubin, Acre|al-Nabi Rubin]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|1 November 1948|format=dmy}} || incl. || incl. ||  ||  || Rubble  || {{#invoke:Coordinates|coord|33|04|49|N|35|17|29|E|type:city_region:PS|display=inline}} || [[Shomera]], [[Even Menachem]], [[Zar'it]], [[Shtula]]
+|-
+! [[Arab al Zarra'a]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|20 May 1948|format=dmy}} || incl. || incl. ||  ||  ||  ||  || 
+|-
+! [[Arab al-Shamalina]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|4 May 1948|format=dmy}} || incl. || incl. || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|54|13|N|35|36|08|E|type:city_region:PS|display=inline}} || [[Almagor]]<ref name=Khalidi435>Khalidi, 1992, p. 435</ref>
+|-
+! [[Arab al-Zubayd]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|20 April 1948|format=dmy}} || incl. || incl. || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|33|4|44|N|35|34|03|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Barrat Qisarya]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|15 May 1948|format=dmy}} || incl. || incl. ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|30|34|N|34|55|00|E|type:city_region:PS|display=inline}} || [[Or Akiva]]<ref>Khalidi, 1992, pp. 154-155</ref>
+|-
+! [[Bayyarat Hannun]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|31 March 1948|format=dmy}} || incl. || incl. ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|17|33|N|34|51|42|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Eilabun]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|29 October 1948|format=dmy}} || incl. || incl. || [[Operation Hiram|Hiram]] || Eilabun massacre ||  || {{#invoke:Coordinates|coord|32|50|18|N|35|24|03|E|region:IL|format=dms|display=inline}} || 
+|-
+! [[Hamaam, Israel|Wadi Hamam]]
+| [[Tiberias Subdistrict, Mandatory Palestine|Tiberias]] 
+| || {{Date table sorting|22 April 1948|format=dmy}} || incl. || incl. ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|49|41.8|N|35|29|32.13|E|display=inline}} || 
+|-
+! [[Khirbat al-Jawfa|al-Jawfa]]
+| [[Jenin Subdistrict, Mandatory Palestine|Jenin]] 
+| || {{Date table sorting|12 May 1948|format=dmy}} || incl. || incl. ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|29|26|N|35|26|01|E|type:city_region:PS|display=inline}} || [[Ma'ale Gilboa]]<ref name=Khalidi333>Khalidi, 1992, p. 333</ref>
+|-
+! [[Khirbat Al-Kasayir|al-Kasayir]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|16 April 1948|format=dmy}} || incl. || incl. ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|47|36|N|35|08|19|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Khirbat al-Majdal|al-Majdal]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|1 March 1948|format=dmy}} || incl. || incl. ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|23|39|N|34|56|15|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Khirbat Al-Manara]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|21 May 1948|format=dmy}} || incl. || incl. ||  ||  || Rubble  || {{#invoke:Coordinates|coord|32|38|44|N|34|57|52|E|type:city_region:PS|display=inline}} || [[Ofer]]<ref name=Khalidi176>Khalidi, 1992, p. 176</ref> [[Kerem Maharal]]<ref name=Khalidi176/>
+|-
+! [[Khirbat al-Sawamir|al-Sawamir]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|22 May 1948|format=dmy}} || incl. || incl. ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|37|43|N|34|57|30|E|type:city_region:PS|display=inline}} || [[Ofer]]<ref name=Khalidi191>Khalidi, 1992, p. 191</ref>
+|-
+! [[Khirbat al-Shuna]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|15 March 1948|format=dmy}} || incl. || incl. ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|32|05|N|34|56|51|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Khirbat al-Tannur|al-Tannur]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|21 October 1948|format=dmy}} || incl. || incl. || [[Operation Ha-Har|Ha-Har]] ||  || Some houses  || {{#invoke:Coordinates|coord|31|42|50|N|35|02|50|E|type:city_region:PS|display=inline}} || [[Mata, Israel|Mata]]<ref name="Khalidi"/>
+|-
+! [[Khirbat Al-Taqa|al-Taqa]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|15 May 1948|format=dmy}} || incl. || incl. || [[Operation Gideon|Gideon]] ||  || No trace  || {{#invoke:Coordinates|coord|32|36|42|N|35|32|14|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Khirbat Karraza]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|4 May 1948|format=dmy}} || incl. || incl. ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|54|40|N|35|33|46|E|type:city_region:PS|display=inline}} || [[Chorazin]] and [[Amnun|Amnon]]
+|-
+! [[Ras Ali|Khirbat Ras ‘Ali]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|1 April 1948|format=dmy}} || incl. || incl. ||  ||  ||  || {{#invoke:Coordinates|coord|32|46|20|N|35|09|17|E|display=inline}} || 
+|-
+! [[Khirbat Zawiya|al-Zawiya]]
+| [[Beisan Subdistrict, Mandatory Palestine|Beisan]] 
+| || {{Date table sorting|16 May 1948|format=dmy}} || incl. || incl. ||  ||  ||  || {{#invoke:Coordinates|coord|32|35|50|N|35|32|26|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Madahil]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|30 April 1948|format=dmy}} || incl. || incl. || [[Operation Matateh|Matateh]]/[[Operation Yiftach|Yiftach]] ||  || No trace  || {{#invoke:Coordinates|coord|33|12|18|N|35|38|30|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Majd al-Krum]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|29 October 1948|format=dmy}} || incl. || incl. || [[Operation Hiram|Hiram]] || Massacre ||  || {{#invoke:Coordinates|coord|32|55|17|N|35|15|25|E|region:IL|format=dms|display=inline}} || 
+|-
+! [[Sheikh Badr, Jerusalem|Sheikh Badr]]
+| [[Jerusalem Subdistrict, Mandatory Palestine|Jerusalem]] 
+| || {{Date table sorting|28 April 1948|format=dmy}} || incl. || incl. ||  ||  ||  || {{#invoke:Coordinates|coord|31|46|20.1|N|35|11|50.04|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Suruh]]
+| [[Acre Subdistrict, Mandatory Palestine|Acre]] 
+| || {{Date table sorting|1 November 1948|format=dmy}} || incl. || incl. ||  || Expulsion<ref name=Mxv/> || Rubble  || {{#invoke:Coordinates|coord|33|05|06|N|35|17|35|E|type:city_region:PS|display=inline}} || [[Shomera]],<ref name=Khalidi32>Khalidi, 1992, p. 32</ref> [[Even Menachem]],<ref name=Khalidi32/> [[Kefar Rosenwald]],<ref name=Khalidi32/> [[Shtula]]<ref name=Khalidi32/>
+|-
+! [[Jish]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|29 October 1948|format=dmy}} || incl. || 12,430 || [[Operation Hiram|Hiram]] || Massacre ||  || {{#invoke:Coordinates|coord|33|1|19|N|35|26|47|E|region:IL|format=dms|display=inline}} || 
+|-
+! [[Khirbat al-Zababida|al-Zabadida]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|15 May 1948|format=dmy}} || incl. || 10,879 ||  ||  || Some houses  || {{#invoke:Coordinates|coord|32|15|11|N|34|50|14|E|type:city_region:PS|display=inline}} || [[Yakum]],<ref name=Khalidi567>Khalidi, 1992, p. 567</ref> [[Ga'ash]]<ref name=Khalidi567/>
+|-
+! [[Arab al Subeih]]
+| [[Nazareth Subdistrict, Mandatory Palestine|Nazareth]] 
+| || {{Date table sorting|19 April 1948|format=dmy}} || incl. || 8,686 ||  ||  ||  ||  || 
+|-
+! [[al-Jalama, Haifa|al-Jalama]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|1 May 1948|format=dmy}} || incl. || 7,713 || || || Inaccessible || {{#invoke:Coordinates|coord|32|43|24|N|35|05|19|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Tabsur]]
+| [[Tulkarm Subdistrict, Mandatory Palestine|Tulkarm]] 
+| || {{Date table sorting|3 April 1948|format=dmy}} || incl. || 5,328 ||  ||  || No trace  || {{#invoke:Coordinates|coord|32|11|36|N|34|52|38|E|type:city_region:PS|display=inline}} || [[Ra'anana]]<ref name=Khalidi562>Khalidi. 1992, p. 562</ref> and [[Batzra]]<ref name=Khalidi562/>
+|-
+! [[Khirbat Al-Burj|al-Burj]]
+| [[Haifa Subdistrict, Mandatory Palestine|Haifa]] 
+| || {{Date table sorting|15 February 1948|format=dmy}} || incl. || 5,291 ||  ||  || Some walls  || {{#invoke:Coordinates|coord|32|30|41|N|34|56|34|E|type:city_region:PS|display=inline}} || [[Binyamina]]
+|-
+! [[Khirbat Zakariyya]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|12 July 1948|format=dmy}} || incl. || 4,538 ||  ||  || No trace  || {{#invoke:Coordinates|coord|31|56|16|N|34|58|12|E|type:city_region:PS|display=inline}} || 
+|-
+! [[Jindas]]
+| [[Ramle Subdistrict, Mandatory Palestine|Ramle]] 
+| || {{Date table sorting|12 July 1948|format=dmy}} || incl. || 4,448 ||  ||  ||  ||  || 
+|-
+! [[Khirbat al-Muntar|al-Muntar]]
+| [[Safad Subdistrict, Mandatory Palestine|Safad]] 
+| || {{Date table sorting|20 July 1949|format=dmy}} || incl. || 52 || [[Operation Yiftach|Yiftach]] ||  || Rubble  || {{#invoke:Coordinates|coord|32|59|21|N|35|34|13|E|type:city_region:PS|display=inline}} || 
+|-
+! Total
+| - 
+| || - || 804,517 || 17,131,675 || - ||  ||  ||  || 
+|}
+
+==Other villages (not in table above)==
+
+===Acre Subdistrict===
+* [[Sha'ab, Israel|Sha'ab]]<ref>Morris, 2004, pp. 423, 514, 536</ref>
+
+===Haifa Subdistrict===
+* [[Caesarea Maritima|Qisarya]]
+
+===Jerusalem Subdistrict===
+*[[Romema]]
+
+==See also==
+* [[Nakba]]
+* [[Causes of the 1948 Palestinian exodus]]
+* [[Transfer Committee]]
+* [[Plan Dalet]]
+* [[Palestine refugee camps]]
+* [[1948 Palestinian exodus from Lydda and Ramle]]
+* [[List of villages depopulated during the Arab–Israeli conflict]]
+* [[Jewish exodus from Arab and Muslim countries]]
+* [[Syrian towns and villages depopulated in the Arab–Israeli conflict]]
+* [[Killings and massacres during the 1948 Palestine war]]
+* [[List of battles and operations in the 1948 Palestine war]]
+* [[List of ghost towns by country]]
+
+==Notes==
+{{Nakba}}
+{{reflist|40em}}
+
+==References==
+* {{cite book|ref=none|author=Noga Kadman|title=Erased from Space and Consciousness: Israel and the Depopulated Palestinian Villages of 1948|url=https://books.google.com/books?id=FIdNCgAAQBAJ&pg=PA251|date=7 September 2015|publisher=Indiana University Press|isbn=978-0-253-01682-9}}
+* Ghazi Falah (1996) The 1948 Israeli-Palestinian War and its Aftermath: The Transformation and De-Signification of Palestine's Cultural Landscape, Annals of the Association of American Geographers, 86:2, 256–285, DOI: 10.1111/j.1467-8306.1996.tb01753.x
+* {{cite journal|first=Salman|last=Abu Sitta|author-link=Salman Abu Sitta |url=https://www.academia.edu/14941926|title= Map and Grab|journal=Journal of Palestine Studies |volume=XXXV |issue=2 |date=2006 |pages=101–102|issn=0377-919X}}
+* {{cite book|first=Salman|last=Abu Sitta|author-link=Salman Abu Sitta |url=https://www.plands.org/en/maps-atlases/atlases/the-atlas-of-palestine/pdfs/atlas-part-1.pdf | title = Atlas of Palestine |volume=I |issue=2 |year=2010 |pages=108–115|publisher=Palestine Land Society}}
+* {{cite book|last=Morris|first=Benny|author-link=Benny Morris|title=1948: A History of the First Arab-Israeli War|url=https://books.google.com/books?id=J5jtAAAAMAAJ|year=2008|publisher=Yale University Press|isbn=978-0-300-12696-9}} See in particular pp. xiv–xviii, where Morris lists 389 Palestinian villages depopulated by massacres, expulsions, military assault, or flight.
+* Morris, Benny. ''1948: The First Arab–Israeli War''. Yale University Press, 2008.
+* {{cite book|author-link=Walid Khalidi|first=Walid|last=Khalidi|title=[[All That Remains: The Palestinian Villages Occupied and Depopulated by Israel in 1948]] <!--|url=https://books.google.com/books?id=_By7AAAAIAAJ--> |year=1992|publisher=[[Institute for Palestine Studies]]|isbn=978-0-88728-224-9}}
+* [[Ari Shavit|Shavit, Ari]]. [http://www.deiryassin.org/bennymorris.html Deir Yasian: Survival of the Fittest], interview with Benny Morris, ''Haaretz'', January 9, 2004.
+* Davis, Rochelle A. (2011). Palestinian Village Histories: Geographies of the Displaced. Stanford University Press, Stanford, California. {{ISBN|978-0-8047-7312-6}}.
+*{{cite book|title=A Place in History: Modernism, Tel Aviv, and the Creation of Jewish Urban Space|first=Barbara E.|last=Mann|publisher=Stanford University Press|year=2006|isbn=978-0-8047-5019-6}}
+
+==External links==
+* [http://www.palestineremembered.com/ Palestine Remembered]
+* [http://www.deiryassin.org/ Deir Yassin Remembered]
+* {{Deprecated archive|url=https://archive.today/20150925094605/http://inakba.org/|title=iNakba is a mobile app enabling users to locate, learn and contribute information about Palestinian localities destroyed in 1948|sec=el}}
+
+{{Palestinian Arab villages depopulated during the 1948 Palestine War}}
+{{Nakbaend}}
+{{whole Gaza Strip}}
+{{Arab-Israeli Conflict}}
+{{Israeli-Palestinian Conflict}}{{Palestine topics}}
+
+{{DEFAULTSORT:Towns and villages depopulated during the 1947-1949 Palestine war}}
+[[Category:Forcibly depopulated communities of the Israeli–Palestinian conflict|*]]
+[[Category:Former populated places in Palestine]]
+[[Category:Israeli–Palestinian conflict-related lists]]
+[[Category:Palestinian diaspora]]
+[[Category:Lists of populated places in Palestine]]
+[[Category:Military operations of the Israeli–Palestinian conflict]]
+[[Category:1948 Palestinian expulsion and flight]]
+[[Category:1947 in Mandatory Palestine]]
+[[Category:1948 in Mandatory Palestine]]
+[[Category:1948 in Israel]]
+[[Category:1948 in Palestine]]
+[[Category:1949 in Israel]]
+[[Category:1949 in Palestine]]
+[[Category:1947-related lists]]
+[[Category:1948-related lists]]
+[[Category:1949-related lists]]

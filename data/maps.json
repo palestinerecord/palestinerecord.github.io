@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "title": "Governorate-level data",
+    "note": "Curated by hand from the published sources named against each series, because neither is derivable from report-final.md. Every governorate is keyed by the name it carries in the OCHA Common Operational Dataset, which is the boundary set the geometry uses and the one the UN agencies themselves report against. Where a body does not publish a figure for a governorate, the governorate is left out of the series and drawn as unreported rather than given a value.",
+    "geometry": "OCHA Common Operational Dataset, State of Palestine — Subnational Administrative Boundaries, CC BY-IGO"
+  },
+
+  "gaza_ipc": {
+    "title": "Gaza, by governorate, on the IPC scale",
+    "lede": "The Integrated Food Security Phase Classification is the standard the UN system uses to declare a famine, and it classifies by area. Its three published rounds since the famine declaration are drawn here on the same five governorates. These are the areas civilians were ordered into: the evacuation orders sent the population of the north and of Rafah into Deir al-Balah, Khan Younis and al-Mawasi, and those are the governorates the Famine projection then covered.",
+    "source": "IPC Famine Review Committee and IPC Global Initiative, Gaza Strip analyses of 22 August 2025, 19 December 2025 and 2026",
+    "url": "https://www.ipcinfo.org/ipc-country-analysis/en/?country=PSE",
+    "scale": [
+      { "phase": 3, "label": "Phase 3 · Crisis", "colour": "#e08a2e" },
+      { "phase": 4, "label": "Phase 4 · Emergency", "colour": "#c0392b" },
+      { "phase": 5, "label": "Phase 5 · Famine", "colour": "#8a1a1c" }
+    ],
+    "unreported": { "label": "Not classified", "colour": "#39414f" },
+    "rounds": [
+      {
+        "id": "2025-09",
+        "label": "16 Aug – 30 Sep 2025",
+        "title": "Famine, confirmed and projected to expand",
+        "published": "22 August 2025",
+        "sub": "Famine (Phase 5) was confirmed in Gaza Governorate on 22 August 2025 — the first famine ever confirmed in the Middle East — and projected to expand to Deir al-Balah and Khan Younis by the end of September. 641,000 people, nearly a third of the population, were projected into Catastrophe; 1.14 million, 58 per cent, into Emergency.",
+        "areas": {
+          "Gaza": { "phase": 5, "note": "Famine confirmed on 22 August 2025 with reasonable evidence: all three thresholds — extreme food deprivation, acute malnutrition and starvation deaths — breached." },
+          "Deir Al-Balah": { "phase": 5, "note": "Projected to enter Famine by 30 September 2025." },
+          "Khan Younis": { "phase": 5, "note": "Projected to enter Famine by 30 September 2025." }
+        },
+        "unreported": {
+          "North Gaza": "Conditions estimated to be as severe as, or worse than, Gaza Governorate, but the data available did not allow a classification.",
+          "Rafah": "Not analysed: the evidence indicated the governorate was largely depopulated."
+        }
+      },
+      {
+        "id": "2025-11",
+        "label": "16 Oct – 30 Nov 2025",
+        "title": "After the ceasefire: famine pushed back, emergency everywhere",
+        "published": "19 December 2025",
+        "sub": "With the ceasefire in force and aid access improved, no area was classified in Famine. The whole of the analysed Strip — four governorates — was classified in Emergency. About 1.6 million people, 77 per cent of the population analysed, were still in Crisis or worse, including over 100,000 in Catastrophe.",
+        "areas": {
+          "North Gaza": { "phase": 4, "note": "Classified for the first time since the famine declaration." },
+          "Gaza": { "phase": 4, "note": "Down from Famine. Acute malnutrition still at Critical, IPC AMN Phase 4." },
+          "Deir Al-Balah": { "phase": 4, "note": "Acute malnutrition at Serious, IPC AMN Phase 3." },
+          "Khan Younis": { "phase": 4, "note": "Acute malnutrition at Serious, IPC AMN Phase 3." }
+        },
+        "unreported": {
+          "Rafah": "Not analysed: lack of data, and indications that the governorate remains largely depopulated."
+        }
+      },
+      {
+        "id": "2026-06",
+        "label": "16 Apr – 30 Jun 2026",
+        "title": "All five governorates in Crisis",
+        "published": "2026 analysis",
+        "sub": "Large-scale assistance since the ceasefire moved every governorate down to Crisis, and Rafah was analysed again. This is not recovery: 1.2 million people, 59 per cent of the population, were still in Crisis or worse, 212,000 of them in Emergency, and the projection to 31 December 2026 has that rising to 1.4 million, 67 per cent.",
+        "areas": {
+          "North Gaza": { "phase": 3, "note": "Crisis." },
+          "Gaza": { "phase": 3, "note": "Crisis." },
+          "Deir Al-Balah": { "phase": 3, "note": "Crisis." },
+          "Khan Younis": { "phase": 3, "note": "Crisis." },
+          "Rafah": { "phase": 3, "note": "Analysed again for the first time since 2025." }
+        },
+        "unreported": {}
+      }
+    ],
+    "notes": [
+      "The Ministry of Health does not publish the Gaza death toll by governorate, and no body publishes a governorate breakdown of it, so the deaths are not mapped here. The evacuation-order polygons OCHA issues are likewise not held in this repository, and no substitute for them has been drawn.",
+      "IPC area classifications describe the condition of an area as a whole. A governorate in Phase 3 contains households in Phase 4 and Phase 5; the area phase is the floor of the worst conditions inside it, not the ceiling."
+    ]
+  },
+
+  "west_bank": {
+    "title": "The West Bank, by governorate",
+    "lede": "OCHA records settler attacks and displacement by governorate. Al Jazeera's July 2026 analysis of that record published the three highest governorates for each. The rest are recorded by OCHA but were not published governorate by governorate, and are drawn here as unreported rather than as zero.",
+    "source": "OCHA, via Al Jazeera, \"Mapping Israeli settler violence in the West Bank\", 27 July 2026",
+    "url": "https://www.aljazeera.com/news/2026/7/27/mapping-israeli-settler-violence-in-the-west-bank",
+    "unreported": { "label": "Not published separately", "colour": "#39414f" },
+    "layers": [
+      {
+        "id": "attacks",
+        "label": "Settler attacks",
+        "title": "Israeli settler attacks, 1 January 2025 – 30 June 2026",
+        "unit": "attacks",
+        "total": 3033,
+        "sub": "3,033 attacks in eighteen months. Ramallah and el-Bireh recorded 881 — the highest number of settler attacks ever documented for that governorate over a comparable period.",
+        "colour": "#d2534c",
+        "areas": {
+          "Ramallah": { "value": 881, "name": "Ramallah and el-Bireh", "note": "The highest number of settler attacks ever documented for the governorate over a comparable period." },
+          "Nablus": { "value": 660, "name": "Nablus", "note": "Second highest." },
+          "Hebron": { "value": 497, "name": "Hebron", "note": "Third highest." }
+        }
+      },
+      {
+        "id": "displacement",
+        "label": "People displaced",
+        "title": "Palestinians displaced, since 1 January 2025",
+        "unit": "people displaced",
+        "sub": "Displacement by settler violence, demolition and military operation, as OCHA records them together. At least 1,988 Palestinians were displaced in the first four months of 2026 alone — twenty per cent more than in the whole of 2025.",
+        "colour": "#d9a441",
+        "areas": {
+          "Ramallah": { "value": 1205, "name": "Ramallah and el-Bireh", "note": "Highest of the published governorates." },
+          "Jericho": { "value": 861, "name": "Jericho and al-Aghwar", "note": "The Jordan Valley, where herding communities have been displaced wholesale." },
+          "Tubas": { "value": 619, "name": "Tubas", "note": "Northern Jordan Valley." }
+        }
+      }
+    ],
+    "annual": {
+      "title": "Settler attacks recorded per year",
+      "note": "2026 covers the first four months only: 761 attacks, an average of 190 a month against 153 a month in 2025, a 24 per cent increase.",
+      "years": [
+        { "year": "2023", "value": 1291, "partial": false },
+        { "year": "2024", "value": 1449, "partial": false },
+        { "year": "2025", "value": 1835, "partial": false },
+        { "year": "2026", "value": 761, "partial": true, "note": "First four months only" }
+      ]
+    },
+    "iron_wall": {
+      "title": "Operation Iron Wall: the three camps",
+      "source": "OHCHR, 4 September 2026",
+      "sub": "Launched 21 January 2025. The UN Human Rights Office found in September 2026 that Israeli forces forcibly displaced the entire population of these camps and continue to prevent their return — displacement it described as large-scale, long-term and systematic, raising concerns of the crime against humanity of forcible transfer.",
+      "displaced": 33000,
+      "killed": 102,
+      "killed_children": 21,
+      "killed_share": 46,
+      "camps": [
+        { "camp": "Jenin refugee camp", "governorate": "Jenin", "damaged_pct": 52 },
+        { "camp": "Nur Shams refugee camp", "governorate": "Tulkarm", "damaged_pct": 48 },
+        { "camp": "Tulkarem refugee camp", "governorate": "Tulkarm", "damaged_pct": 36 }
+      ],
+      "note": "Share of structures destroyed or damaged by October 2025. Displaced Palestinians told OHCHR that Israeli officers said there would be \"no more refugee camps\" and that they should \"all go to Jordan\"."
+    },
+    "notes": [
+      "The 1,114 Palestinians killed in the West Bank since October 2023 are not mapped by governorate: neither OCHA nor the Ministry of Health publishes that breakdown, and no estimate of it has been substituted here.",
+      "OCHA's settler-incident count excludes harassment, trespass and intimidation where no casualty or property damage results, so every figure on this map is a floor."
+    ]
+  }
+}
