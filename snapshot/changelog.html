@@ -6,14 +6,42 @@
 <meta name="description" content="What changed in the record and when: each figure refreshed, each finding added, in the words of the report itself.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=32" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=32">
+<!-- Index everything, and let the large share cards and the full snippet
+     through: this record is only useful if the figure a reader searched for is
+     the thing they are shown. -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<!-- Everything here is served from this origin except the charting and
+     animation libraries, which come from one pinned CDN with integrity hashes,
+     and the live casualty series. Nothing is posted anywhere and there is no
+     tracker to allow, so the work this policy does is the source allowlist:
+     script can only come from here or from jsdelivr, whatever else gets onto
+     the page. Declared in a meta tag rather than a header because GitHub Pages
+     serves no headers of our choosing.
+
+     'unsafe-eval' is here for one reason: echarts-gl compiles its GLSL shaders
+     by evaluating the preprocessor expressions with `new Function`, and without
+     it the 3-D chart of the Gaza dead fails with "Invalid expression" and
+     leaves an empty container. 'unsafe-inline' is needed for the theme script
+     that has to run before first paint. Neither widens the set of origins
+     script may be fetched from, which is the part that matters here. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
+<link rel="icon" href="../assets/favicon.svg?v=33" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=33">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
 .snapshot-note a { color: #d9a441; }
 .chart-missing { margin: 0; padding: 18px 20px; border: 1px dashed rgba(255,255,255,.16);
-  border-radius: 12px; color: #7d879c; font-size: 13.5px; }</style>
+  border-radius: 12px; color: #7d879c; font-size: 13.5px; }
+.snapshot-links { max-width: 1280px; margin: 48px auto 0; padding: 24px 20px;
+  border-top: 1px solid rgba(255,255,255,.12); }
+.snapshot-links h2 { font-size: 15px; letter-spacing: .04em; text-transform: uppercase;
+  color: #7d879c; margin: 0 0 14px; }
+.snapshot-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.snapshot-links a { color: #d9a441; text-decoration: none; }
+.snapshot-links a:hover { text-decoration: underline; }
+.snapshot-links p { margin: 4px 0 0; color: #7d879c; font-size: 13px; line-height: 1.55; }</style>
 <link rel="canonical" href="https://palestinerecord.github.io/snapshot/changelog.html">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="alternate" type="application/atom+xml" title="The Documented Record — revisions" href="feed.xml">
@@ -31,12 +59,23 @@
 <meta name="twitter:title" content="Changelog — every revision, dated · The Documented Record">
 <meta name="twitter:description" content="What changed in the record and when: each figure refreshed, each finding added, in the words of the report itself.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/changelog.png">
-<link rel="stylesheet" href="../css/style.css?v=32">
+<link rel="preload" href="../css/style.css?v=33" as="style">
+<link rel="stylesheet" href="../css/style.css?v=33">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
 
-
+<!-- The libraries and the local scripts are all deferred: none of them paints
+     the first screen, and a synchronous script in the head blocks the parser
+     until it has been fetched, parsed and run. Document order is preserved, so
+     ECharts and GSAP are still in place before charts.js and app.js run.
+     echarts-gl is not here at all — charts.js injects it, with the same
+     integrity hash, only if a reader opens one of the two 3-D charts. -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<!-- The first screen is painted from this one file; the request should be in
+     flight while the parser is still in the head. -->
+<link rel="preload" href="../data/headline.json" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
 
 
 
@@ -45,8 +84,70 @@
      reproduces in full; the dataset describes the JSON under data/, which is a public
      API in all but name. Both dateModified values are stamped by prerender.py from
      data/timeseries.json, so neither can drift from the data actually shipped. -->
-
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://palestinerecord.github.io/#report",
+  "headline": "The Documented Record — Israel and the Occupied Territories, 1917–2026",
+  "alternativeHeadline": "A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026)",
+  "description": "A source-anchored survey of state conduct in Israel and the occupied Palestinian territories, applying identical evidentiary and legal standards to every actor. Every figure carries its source.",
+  "author": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "publisher": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "inLanguage": "en-GB",
+  "url": "https://palestinerecord.github.io/",
+  "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
+  "image": "https://palestinerecord.github.io/assets/share-card.png",
+  "wordCount": 99501,
+  "dateModified": "2026-09-12",
+  "temporalCoverage": "1917/2026",
+  "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
+  "about": [
+    { "@type": "Thing", "name": "Israeli–Palestinian conflict" },
+    { "@type": "Thing", "name": "International humanitarian law" },
+    { "@type": "Thing", "name": "Occupied Palestinian territories" }
+  ],
+  "citation": "South Africa v. Israel (Application of the Convention on the Prevention and Punishment of the Crime of Genocide in the Gaza Strip), International Court of Justice, Order of 26 January 2024"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://palestinerecord.github.io/#dataset",
+  "name": "The Documented Record — casualty, land and conduct series, 1948–2026",
+  "description": "The machine-readable base of the dashboard: daily and monthly Gaza casualty series since October 2023, the long death toll from 1948, West Bank killings, demolitions and detention, land transfer and settlement figures, the 1948 village depopulations, documented statements of intent, and the recorded position of every state. Each figure carries the source it was taken from.",
+  "url": "https://palestinerecord.github.io/#/data",
+  "creator": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "inLanguage": "en-GB",
+  "dateModified": "2026-09-12",
+  "temporalCoverage": "1948/2026",
+  "spatialCoverage": { "@type": "Place", "name": "Israel and the occupied Palestinian territories" },
+  "keywords": ["Gaza casualties", "West Bank", "settlements", "demolitions", "administrative detention", "Nakba", "arms transfers", "recognition of Palestine"],
+  "isBasedOn": [
+    { "@type": "Dataset", "name": "Tech For Palestine open datasets (Gaza Ministry of Health, OCHA, UN)", "url": "https://data.techforpalestine.org/" },
+    { "@type": "Dataset", "name": "OCHA State of Palestine subnational administrative boundaries (Common Operational Dataset)", "url": "https://data.humdata.org/dataset/cod-ab-pse" }
+  ],
+  "variableMeasured": [
+    { "@type": "PropertyValue", "name": "Cumulative Palestinians killed in Gaza, by reporting day" },
+    { "@type": "PropertyValue", "name": "Children killed in Gaza, by reporting month" },
+    { "@type": "PropertyValue", "name": "Palestinians and Israelis killed, by period since 1948" },
+    { "@type": "PropertyValue", "name": "Palestinian structures demolished, by year" },
+    { "@type": "PropertyValue", "name": "Palestinians held in administrative detention, by snapshot" },
+    { "@type": "PropertyValue", "name": "Villages depopulated in 1947–1950, by month, sub-district and recorded cause" },
+    { "@type": "PropertyValue", "name": "States recognising Palestine, by date of recognition" }
+  ],
+  "distribution": [
+    { "@type": "DataDownload", "name": "The manifest: every published file, described and dated", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/index.json" },
+    { "@type": "DataDownload", "name": "Daily and monthly casualty series", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/timeseries.json" },
+    { "@type": "DataDownload", "name": "Curated headline figures, each with its source", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/figures.json" },
+    { "@type": "DataDownload", "name": "The long record, 1948–2026", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/long-record.json" },
+    { "@type": "DataDownload", "name": "Documented statements of intent", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/statements.json" },
+    { "@type": "DataDownload", "name": "Villages depopulated 1947–1950", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/nakba.json" },
+    { "@type": "DataDownload", "name": "The recorded position of every state", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/world-positions.json" }
+  ]
+}
+</script>
 </head>
 <body data-view="changelog" style="">
 
@@ -59,7 +160,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=33" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -86,7 +187,7 @@
       <section class="section">
         <div class="section-head">
       <div class="eyebrow">Changelog</div>
-      <h2>50 dated revisions to the record</h2>
+      <h2>51 dated revisions to the record</h2>
       <p>Every change to the source report, in the words of the report itself. Figures move because the bodies that count them publish again; findings are added as courts and commissions make them. Nothing is removed — the log says what was added and when.</p>
     </div>
         <p class="small muted"><em>This appendix records, in chronological order, every dated update made to this document since the 8 May 2026 enhanced edition. Each entry states what was added, corrected, or reorganised, and the section(s) affected. It is a working log rather than part of the evidentiary record itself; the evidentiary content described in each entry is carried in the Part or section it references.</em></p>
@@ -244,6 +345,9 @@
           </div><div class="log-entry">
             <div class="log-when">11 September 2026, second pass</div>
             <div class="log-what"><p><em>New <strong>§2.4 ("The Legal Machinery of Transfer: The Absentees' Property Law and Its Successor Statutes")</strong> added to Part II, with the former §2.4 ("The Continuing Nakba") renumbered §2.5. The new subsection documents the statutory route by which the depopulation recorded at §2.2–2.3 was converted into permanent title: the Emergency Regulations on Property of Absentees of 2 December 1948; the Absentees' Property Law, 5710-1950 (Knesset, 14 March 1950), retroactive to 29 November 1947, still in force in 2026 because the 1948 state of emergency has never been lifted, and defining "absentee" by mere physical presence in Lebanon, Egypt, Syria, Saudi Arabia, Trans-Jordan, Iraq, Yemen or non-Israeli-held Palestine; the resulting category of "present absentees" (nifkadim nokhahim), Israeli citizens whose property is held on the fiction of their absence; the Custodian of Absentee Property under the Minister of Finance; the Development Authority (Transfer of Property) Law, 5710-1950 (passed 31 July 1950, effective 9 August 1950), which the UN Conciliation Commission for Palestine described with the Custodian's statute as "the two shutters of a legal diptych," and which restricted onward sale to the State, the Jewish National Fund, an institution for the settlement of landless Arabs, or a local authority, with a JNF right of first refusal; the scale of transfer (JNF tranches of approximately 1 million dunams in January 1949 and 1.27 million in October 1950, totalling ~2.4 million dunams and more than trebling JNF holdings against 1941, taking the JNF to ~2.5 million dunams or ~13% of pre-1967 Israel, at least 70% of it confiscated; more than 4.5 million dunams classified as absentee land by 1954); the Land Acquisition (Validation of Acts and Compensation) Law, 5713-1953 (enacted 10 March 1953), which conferred clean title retroactively on a written certificate of the Minister of Finance that is unreviewable in court under rulings of 1954 and 1981, with no hearing and no notification, taking 1.2–1.3 million dunams from 349 towns and villages plus the built-up areas of some 68 villages; the al-Lajun case (Jabareen v. State of Israel, CA 4067/07; ~34,000 dunams expropriated by notice of Finance Minister Levi Eshkol on 15 November 1953 for "settlement needs," on which a forest was planted); the UNCCP valuation exercise (John Berncastle, A/AC.25/W/63, 1 May 1951) and its finding that the value of abandoned Arab property "constituted a debt by the Government of Israel to the refugees," never settled; the post-1967 application of the statute to East Jerusalem property owned by West Bank residents and the June 2004 two-minister ministerial "clarification" of the Custodian's Article 19 powers; and the Israeli Supreme Court's judgment of 15 April 2015 in Custodian of Absentees' Property v. Daqaq Nuha (CA 2250/06, with HCJ 5931/06), in which seven justices under President Asher Grunis upheld the law's application to occupied East Jerusalem while confining it prospectively to the "rarest of rare cases," Grunis noting that West Bank settlers fall within the literal definition of "absentee" and have never once been treated as such, an asymmetry he called "absurd."</em></p></div>
+          </div><div class="log-entry">
+            <div class="log-when">12 September 2026, second pass</div>
+            <div class="log-what"><p><em>The Preamble was rewritten to replace the claim that this document is "a neutral academic survey" with the more precise and more demanding claim that it is <strong>impartial but not neutral</strong>, and to state why. New Preamble subsections: <strong>"Impartial, not neutral"</strong>, distinguishing impartiality as a rule of procedure from neutrality as a position about outcome, and grounding the distinction in the formal usage of humanitarian law (the Geneva Conventions' description of the ICRC as "an impartial humanitarian body" against the Movement's own Statutes describing it as neutral; the ICRC Fundamental Principles' separate definitions of the two; the ICRC's 1992 doctrinal revision recording that public denunciation of IHL violations is not a breach of neutrality); the moral authority for the position, quoted verbatim and sourced (Elie Wiesel, Nobel Peace Prize acceptance speech, Oslo, 10 December 1986, with the textual variant between the Nobel Foundation and Elie Wiesel Foundation transcripts noted; Desmond Tutu, foreword to Robert McAfee Brown, </em>Unexpected News<em>, 1984, and </em>The Words of Desmond Tutu<em>, 1989; Martin Luther King Jr., </em>Letter from Birmingham Jail<em>, April 1963, and Riverside Church, 4 April 1967; Howard Zinn, </em>You Can't Be Neutral on a Moving Train<em>, Beacon Press, 1994); an express refusal to use the "hottest places in hell" line on the ground that it is misattributed to Dante, with the actual text of </em>Inferno<em> Canto III and the documented drift of the attribution; and the empirical and normative case against false balance (Boykoff and Boykoff, "Balance as bias," </em>Global Environmental Change<em> 14(2), 2004, pp. 125-136, and Jay Rosen's "View from Nowhere," PressThink, November 2010). <strong>"The test of symmetry, and three objections answered"</strong> added, pointing the reader to Parts XVIII and XIX as the testable evidence of symmetry and answering directly the three objections most often made to this record's composition: that the volume of quoted ministerial statements reads as prosecutorial (answered on the </em>dolus specialis<em> requirement of Article II of the Genocide Convention and on Robert H. Jackson's captured-documents method at Nuremberg, 21 November 1945); that the roster of bodies finding genocide is an argument from authority (conceded in part, with the evidentiary work located in Part VI and the roster's narrower function - independent convergence across differing published methodologies - stated explicitly, alongside the contrary record); and that the cultural and celebrity material is not forensic (conceded in full). <strong>"What would falsify this record"</strong> added, setting out the four specific conditions under which the record's findings would fail and pointing to this revision log as evidence that the correction mechanism runs. Consequential edits: the table-of-contents entry for the Preamble updated; §15.12 given an explicit evidentiary-status note recording that it is a record of public reaction carrying no weight in any legal conclusion; and the standfirst to Part XVIII rewritten from "a genuinely neutral legal survey" to the impartiality framing, stating that where the evidence in that Part cuts against conclusions reached elsewhere it is recorded rather than omitted.</em></p></div>
           </div>
         </div>
       </section>
@@ -265,18 +369,18 @@
           </a>
         </div>
       </section>
-    </div></main>
+    </div><nav class="snapshot-links" aria-label="Other sections"><h2>Every other section, without JavaScript</h2><ul><li><a href="overview.html">The Documented Record — Israel and the Occupied Territories, 1917–2026</a></li><li><a href="tour.html">Start here — the case in eight steps</a></li><li><a href="data-gaza.html">Gaza — the toll since 7 October 2023</a></li><li><a href="data-asymmetry.html">The asymmetry — Palestinians and Israelis killed</a></li><li><a href="data-since-1948.html">Since 1948 — seventy-eight years of the toll</a></li><li><a href="data-complicity.html">Complicity — who supplies the war</a></li><li><a href="data-land.html">The land — six per cent to seventy-eight</a></li><li><a href="data-west-bank.html">The West Bank — before and after October 2023</a></li><li><a href="data-wars.html">Wars and 7 October — seventy-five years of operations</a></li><li><a href="data-world.html">The world — recognition, embargoes and vetoes</a></li><li><a href="data-tables.html">Source tables — every table in the report</a></li><li><a href="timeline.html">Timeline — a dated chronology, 1917–2026</a></li><li><a href="evidence.html">Evidence — the complete report</a></li><li><a href="rebuttals.html">Rebuttals — every defence, answered</a></li><li><a href="statements.html">Statements — the documented record of intent</a></li><li><a href="legal.html">Legal — the findings and the instruments they rest on</a></li><li><a href="sources.html">Sources — what the record rests on</a></li><li><a href="method.html">Method — impartial, not neutral</a></li><li><a href="api.html">Open data — the record as files</a></li></ul></nav></main>
 
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=33" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">99,501 words · 34 parts · 131 sections · 13 tables · 215 chronology entries · 85 documented statements · 106 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
     <!-- A record meant to be used in an argument has to be citable in one.
          Filled in by app.js with the route on screen and the date of the data
          it is showing, so a citation copied from here names the version the
@@ -297,7 +401,8 @@
       </div>
     </details>
     <p class="footer-links">
-      <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../index.html#/method">Method</a> · <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="snapshot/">Text-only versions</a> ·
       <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a> ·
       <a href="feed.xml">Feed</a>
     </p>

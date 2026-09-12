@@ -10,21 +10,27 @@
    "suffix": "+",
    "note": "identified killed, Oct 2023 – Sept 2026",
    "source": "Gaza MoH / OCHA",
-   "ref": "§6.3"
+   "ref": "§6.3",
+   "live": true,
+   "series": "killed.total"
   },
   {
    "label": "Children killed in Gaza",
    "value": 20179,
    "note": "~27% of all identified fatalities",
    "source": "Gaza MoH / UN COI",
-   "ref": "§6.3"
+   "ref": "§6.3",
+   "live": true,
+   "series": "killed.children"
   },
   {
    "label": "Injured in Gaza",
    "value": 174682,
    "note": "cumulative recorded injuries",
    "source": "Gaza MoH",
-   "ref": "§6.3"
+   "ref": "§6.3",
+   "live": true,
+   "series": "injured.total"
   },
   {
    "label": "Displaced in Gaza",
@@ -38,14 +44,16 @@
    "value": 1114,
    "note": "including 238 children, since Oct 2023",
    "source": "OCHA",
-   "ref": "§9.2"
+   "ref": "§9.2",
+   "live": true
   },
   {
    "label": "Settler attacks recorded",
    "value": 4554,
    "note": "West Bank, since Oct 2023",
    "source": "OCHA",
-   "ref": "§9.2"
+   "ref": "§9.2",
+   "live": true
   },
   {
    "label": "Settlers in occupied territory",
@@ -173,17 +181,23 @@
    {
     "label": "Children",
     "value": 20179,
-    "source": "Gaza MoH / UN COI"
+    "source": "Gaza MoH / UN COI",
+    "live": true,
+    "series": "killed.children"
    },
    {
     "label": "Women",
     "value": 12500,
-    "source": "Gaza MoH"
+    "source": "Gaza MoH",
+    "live": true,
+    "series": "killed.women"
    },
    {
     "label": "Medical personnel",
     "value": 1701,
-    "source": "WHO / Gaza MoH"
+    "source": "WHO / Gaza MoH",
+    "live": true,
+    "series": "killed.medical"
    },
    {
     "label": "Aid workers",
@@ -198,7 +212,9 @@
    {
     "label": "Journalists",
     "value": 262,
-    "source": "Gaza MoH / CPJ"
+    "source": "Gaza MoH / CPJ",
+    "live": true,
+    "series": "killed.press"
    },
    {
     "label": "Civil defence",
@@ -361,7 +377,8 @@
     "label": "Expropriated under the 1953 Land Acquisition Law",
     "value": 1250000,
     "unit": "dunams",
-    "note": "consensus range 1.2–1.3 million"
+    "note": "consensus range 1.2–1.3 million",
+    "approx": true
    },
    {
     "label": "Towns and villages stripped under the 1953 law",

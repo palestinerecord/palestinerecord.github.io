@@ -359,27 +359,32 @@
         "label": "2002–03",
         "value": 1000,
         "suffix": "+",
-        "note": "The Second Intifada peak, at the height of Operation Defensive Shield."
+        "note": "The Second Intifada peak, at the height of Operation Defensive Shield.",
+        "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
       },
       {
         "label": "2005–07",
         "value": 765,
-        "note": "Monthly average across the three years, declining year on year thereafter."
+        "note": "Monthly average across the three years, declining year on year thereafter.",
+        "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
       },
       {
         "label": "Dec 2018",
         "value": 482,
-        "note": "Including nine members of the Palestinian Legislative Council — elected legislators held without charge."
+        "note": "Including nine members of the Palestinian Legislative Council — elected legislators held without charge.",
+        "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
       },
       {
         "label": "Sep 2023",
         "value": 1320,
-        "note": "Immediately before the war, against a total prisoner population above 5,250 including about 40 women and 180 children."
+        "note": "Immediately before the war, against a total prisoner population above 5,250 including about 40 women and 180 children.",
+        "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
       },
       {
         "label": "Oct 2025",
         "value": 3198,
-        "note": "Against a total of more than 11,100 Palestinian political prisoners, the highest since the Second Intifada began, and excluding those held in army-run military camps."
+        "note": "Against a total of more than 11,100 Palestinian political prisoners, the highest since the Second Intifada began, and excluding those held in army-run military camps.",
+        "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
       }
     ],
     "legal": [
@@ -464,13 +469,15 @@
           "label": "Foreign Military Financing, annual",
           "value": 3.3,
           "unit": "$bn",
-          "note": "Under the 2016 Memorandum of Understanding: $38 billion over ten years, FY2019 to FY2028, of which $33 billion is Foreign Military Financing."
+          "note": "Under the 2016 Memorandum of Understanding: $38 billion over ten years, FY2019 to FY2028, of which $33 billion is Foreign Military Financing.",
+          "source": "Congressional Research Service, U.S. Foreign Aid to Israel (RL33222)"
         },
         {
           "label": "Missile defence, annual",
           "value": 0.5,
           "unit": "$bn",
-          "note": "The remaining $5 billion of the same Memorandum, for Iron Dome, David's Sling and Arrow."
+          "note": "The remaining $5 billion of the same Memorandum, for Iron Dome, David's Sling and Arrow.",
+          "source": "Congressional Research Service, U.S. Foreign Aid to Israel (RL33222)"
         },
         {
           "label": "Emergency supplemental, FY2024",
@@ -637,18 +644,21 @@
       {
         "label": "United States vetoes of draft resolutions on Israel and Palestine",
         "value": 49,
-        "note": "Since the first on 10 September 1972, document S/10784, on a draft concerning Israeli attacks in Lebanon and Syria. Counts vary between 45 and 53 depending on whether blocked presidential statements and unpublished drafts are included."
+        "note": "Since the first on 10 September 1972, document S/10784, on a draft concerning Israeli attacks in Lebanon and Syria. Counts vary between 45 and 53 depending on whether blocked presidential statements and unpublished drafts are included.",
+        "source": "United Nations Dag Hammarskjöld Library, Security Council Veto List"
       },
       {
         "label": "Share of all United States vetoes ever cast",
         "value": 55,
         "unit": "%",
-        "note": "More than half of every veto the United States has cast since 1945 has concerned Israel."
+        "note": "More than half of every veto the United States has cast since 1945 has concerned Israel.",
+        "source": "United Nations Dag Hammarskjöld Library, Security Council Veto List"
       },
       {
         "label": "Vetoes since 7 October 2023",
         "value": 7,
-        "note": "Six of them on drafts calling for a ceasefire or humanitarian access, and one on Palestinian membership of the United Nations."
+        "note": "Six of them on drafts calling for a ceasefire or humanitarian access, and one on Palestinian membership of the United Nations.",
+        "source": "United Nations Dag Hammarskjöld Library, Security Council Veto List"
       }
     ],
     "war": [
@@ -801,14 +811,17 @@
         "segments": [
           {
             "name": "Jewish-owned land",
-            "value": 6
+            "value": 6,
+            "source": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946"
           },
           {
             "name": "Palestinian and state land",
-            "value": 94
+            "value": 94,
+            "source": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946"
           }
         ],
-        "note": "The Survey of Palestine prepared for the Anglo-American Committee of Inquiry recorded Jewish landholding at roughly 6 to 7 per cent of the total land area of Mandatory Palestine. Jews were about one third of the population."
+        "note": "The Survey of Palestine prepared for the Anglo-American Committee of Inquiry recorded Jewish landholding at roughly 6 to 7 per cent of the total land area of Mandatory Palestine. Jews were about one third of the population.",
+        "source": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946"
       },
       {
         "label": "1947",
@@ -816,18 +829,22 @@
         "segments": [
           {
             "name": "Allotted to the Jewish state",
-            "value": 56
+            "value": 56,
+            "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
           },
           {
             "name": "Allotted to the Arab state",
-            "value": 43
+            "value": 43,
+            "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
           },
           {
             "name": "Jerusalem, international",
-            "value": 1
+            "value": 1,
+            "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
           }
         ],
-        "note": "General Assembly Resolution 181 allotted about 56 per cent of the territory to a Jewish state whose population was about a third of the whole and which owned about 6 per cent of the land."
+        "note": "General Assembly Resolution 181 allotted about 56 per cent of the territory to a Jewish state whose population was about a third of the whole and which owned about 6 per cent of the land.",
+        "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
       },
       {
         "label": "1949",
@@ -835,18 +852,22 @@
         "segments": [
           {
             "name": "Israel",
-            "value": 78
+            "value": 78,
+            "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
           },
           {
             "name": "West Bank, under Jordan",
-            "value": 21
+            "value": 21,
+            "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
           },
           {
             "name": "Gaza, under Egypt",
-            "value": 1
+            "value": 1,
+            "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
           }
         ],
-        "note": "Israel held about 78 per cent — some 22 per cent more than the partition plan had allotted — and more than 700,000 Palestinians had been displaced from it."
+        "note": "Israel held about 78 per cent — some 22 per cent more than the partition plan had allotted — and more than 700,000 Palestinians had been displaced from it.",
+        "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
       },
       {
         "label": "1967",
@@ -854,10 +875,12 @@
         "segments": [
           {
             "name": "Under Israeli control",
-            "value": 100
+            "value": 100,
+            "source": "United Nations Security Council Resolution 242 (1967)"
           }
         ],
-        "note": "The remaining 22 per cent came under military occupation, where it has remained for fifty-nine years. East Jerusalem was annexed in 1980 and the Golan in 1981; both annexations were declared null and void by the Security Council."
+        "note": "The remaining 22 per cent came under military occupation, where it has remained for fifty-nine years. East Jerusalem was annexed in 1980 and the Golan in 1981; both annexations were declared null and void by the Security Council.",
+        "source": "United Nations Security Council Resolution 242 (1967)"
       },
       {
         "label": "Today",
@@ -865,26 +888,32 @@
         "segments": [
           {
             "name": "Israel, pre-1967 lines",
-            "value": 78
+            "value": 78,
+            "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
           },
           {
             "name": "Area C, full Israeli control",
-            "value": 12.6
+            "value": 12.6,
+            "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
           },
           {
             "name": "Area B, Israeli security control",
-            "value": 4.6
+            "value": 4.6,
+            "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
           },
           {
             "name": "Area A, Palestinian control",
-            "value": 3.8
+            "value": 3.8,
+            "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
           },
           {
             "name": "Gaza",
-            "value": 1
+            "value": 1,
+            "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
           }
         ],
-        "note": "The Oslo II Interim Agreement of September 1995 divided the West Bank into Areas A, B and C as a five-year arrangement pending final status talks. Thirty-one years later the division stands."
+        "note": "The Oslo II Interim Agreement of September 1995 divided the West Bank into Areas A, B and C as a five-year arrangement pending final status talks. Thirty-one years later the division stands.",
+        "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
       }
     ],
     "areas": [
@@ -892,19 +921,22 @@
         "label": "Area A",
         "value": 18,
         "control": "Palestinian Authority civil and security control",
-        "note": "About 18 per cent of the West Bank, containing the major Palestinian cities. The Israeli army enters it at will."
+        "note": "About 18 per cent of the West Bank, containing the major Palestinian cities. The Israeli army enters it at will.",
+        "source": "B'Tselem; United Nations OCHA, Area C figures"
       },
       {
         "label": "Area B",
         "value": 22,
         "control": "Palestinian civil control, Israeli security control",
-        "note": "About 22 per cent, containing most Palestinian villages. No building permits are issued by the Palestinian Authority for state land."
+        "note": "About 22 per cent, containing most Palestinian villages. No building permits are issued by the Palestinian Authority for state land.",
+        "source": "B'Tselem; United Nations OCHA, Area C figures"
       },
       {
         "label": "Area C",
         "value": 60,
         "control": "Full Israeli civil and security control",
-        "note": "About 60 per cent of the West Bank, containing all the settlements, the Jordan Valley, the water aquifers and almost all the agricultural land and open space. Palestinian building permits in Area C are refused in the large majority of applications."
+        "note": "About 60 per cent of the West Bank, containing all the settlements, the Jordan Valley, the water aquifers and almost all the agricultural land and open space. Palestinian building permits in Area C are refused in the large majority of applications.",
+        "source": "B'Tselem; United Nations OCHA, Area C figures"
       }
     ],
     "settlements": [
@@ -912,13 +944,15 @@
         "label": "Settlement built-up area, share of the West Bank",
         "value": 2,
         "unit": "%",
-        "note": "The footprint of the houses themselves."
+        "note": "The footprint of the houses themselves.",
+        "source": "B'Tselem, settlement statistics"
       },
       {
         "label": "Land under settlement regional council jurisdiction",
         "value": 40,
         "unit": "%",
-        "note": "The area from which Palestinians are excluded is twenty times the built-up area."
+        "note": "The area from which Palestinians are excluded is twenty times the built-up area.",
+        "source": "B'Tselem, settlement statistics"
       },
       {
         "label": "Land declared Israeli state land in 2024",

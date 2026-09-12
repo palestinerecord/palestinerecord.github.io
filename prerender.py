@@ -197,6 +197,15 @@ SNAPSHOT_CSS = """
 .snapshot-note a { color: #d9a441; }
 .chart-missing { margin: 0; padding: 18px 20px; border: 1px dashed rgba(255,255,255,.16);
   border-radius: 12px; color: #7d879c; font-size: 13.5px; }
+.snapshot-links { max-width: 1280px; margin: 48px auto 0; padding: 24px 20px;
+  border-top: 1px solid rgba(255,255,255,.12); }
+.snapshot-links h2 { font-size: 15px; letter-spacing: .04em; text-transform: uppercase;
+  color: #7d879c; margin: 0 0 14px; }
+.snapshot-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.snapshot-links a { color: #d9a441; text-decoration: none; }
+.snapshot-links a:hover { text-decoration: underline; }
+.snapshot-links p { margin: 4px 0 0; color: #7d879c; font-size: 13px; line-height: 1.55; }
 """
 
 
@@ -214,7 +223,10 @@ def clean(html, snapshot_url, route_url, generated, depth_prefix='../'):
     if 'id="boot"' in html:
         raise SystemExit('prerender: the loading screen was still up — raise --budget')
 
-    html = re.sub(r'<script\b[^>]*>.*?</script>', '', html, flags=re.S | re.I)
+    # Every script goes, except the structured data: a JSON-LD block is not
+    # executable, and it is the one thing in the head a crawler reads closely.
+    html = re.sub(r'<script\b(?![^>]*application/ld\+json)[^>]*>.*?</script>', '',
+                  html, flags=re.S | re.I)
     html = re.sub(r'<canvas\b[^>]*>.*?</canvas>', '', html, flags=re.S | re.I)
     html = re.sub(r'<button\b[^>]*>.*?</button>', '', html, flags=re.S | re.I)
     html = html.replace('<div id="scene-veil" aria-hidden="true"></div>', '')
@@ -250,7 +262,97 @@ def clean(html, snapshot_url, route_url, generated, depth_prefix='../'):
             'The charts, maps, filters and search are in the '
             '<a href="%s">interactive version of this page</a>.</div>' % (in_prose(generated), route_url))
     html = re.sub(r'(<main id="app"[^>]*>)', r'\1' + note, html, count=1)
+
     return html
+
+
+def link_snapshots(titles, routes):
+    """Give every snapshot a crawlable link to every other one.
+
+    A crawler reaches a snapshot only through a link. The site's own navigation
+    is hash-routed and therefore invisible to one, so without this pass each
+    snapshot is an orphan discoverable through the sitemap alone, and a sitemap
+    is a hint rather than a path. Run after every page is written, because the
+    link text is each page's own title.
+    """
+    labels = [(slug, (titles.get(slug, ('', ''))[0] or slug).split(' \u00b7 ')[0])
+              for slug, _ in routes]
+    for slug, _ in routes:
+        path = SNAPSHOT_DIR / ('%s.html' % slug)
+        if not path.exists():
+            continue
+        items = ''.join(
+            '<li><a href="%s.html">%s</a></li>' % (other, saxutils.escape(label))
+            for other, label in labels if other != slug)
+        nav = ('<nav class="snapshot-links" aria-label="Other sections">'
+               '<h2>Every other section, without JavaScript</h2>'
+               '<ul>%s</ul></nav>' % items)
+        html = path.read_text(encoding='utf-8')
+        html = re.sub(r'<nav class="snapshot-links".*?</nav>', '', html, flags=re.S)
+        path.write_text(html.replace('</main>', nav + '</main>', 1), encoding='utf-8')
+    return len(labels)
+
+
+def faq_json_ld(html, page_url):
+    """A FAQPage block for the rebuttals snapshot.
+
+    Each rebuttal is literally a claim and its answer, which is the shape
+    schema.org describes, and the one that lets a search engine show the answer
+    to somebody who typed the claim in rather than the site name.
+    """
+    pairs = []
+    for block in re.findall(r'<details class="rebuttal".*?</details>', html, re.S):
+        q = re.search(r'<span class="rebuttal-claim">(.*?)</span>', block, re.S)
+        a = re.search(r'<div class="rebuttal-answer">(.*?)</div>\s*(?:<div|</div>)', block, re.S)
+        if not q or not a:
+            continue
+        question = plain(q.group(1)).strip().strip('\u201c\u201d"')
+        # Block tags carry the word break in HTML, so stripping them without
+        # putting one back runs "Refutation:" into the sentence after it.
+        answer = re.sub(r'\s+', ' ', plain(re.sub(r'</(p|li|h[1-6]|div|tr|td|th)>', ' ', a.group(1)))).strip()
+        if question and answer:
+            pairs.append({'@type': 'Question', 'name': question,
+                          'acceptedAnswer': {'@type': 'Answer', 'text': answer[:1200]}})
+    if not pairs:
+        return html
+    block = json.dumps({'@context': 'https://schema.org', '@type': 'FAQPage',
+                        'url': page_url, 'mainEntity': pairs}, ensure_ascii=False)
+    return html.replace('</head>',
+                        '<script type="application/ld+json">%s</script>\n</head>' % block, 1)
+
+
+def snapshot_index(titles, routes, base, generated):
+    """One crawlable page listing every snapshot, linked from the site footer."""
+    items = ''.join(
+        '<li><a href="%s.html">%s</a><p>%s</p></li>'
+        % (slug, saxutils.escape(titles.get(slug, ('', ''))[0].split(' \u00b7 ')[0] or slug),
+           saxutils.escape(titles.get(slug, ('', ''))[1]))
+        for slug, _ in routes)
+    return """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every section, without JavaScript \u00b7 The Documented Record</title>
+<meta name="description" content="Static, text-only snapshots of every section of The Documented Record, readable and linkable without JavaScript.">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<link rel="canonical" href="%ssnapshot/">
+<link rel="stylesheet" href="../css/style.css">
+<style>%s</style>
+</head>
+<body>
+<main id="app">
+<div class="snapshot-note"><strong>Text-only versions</strong>, generated on %s. Each page below is the
+same content as the interactive record with the charts, filters and search removed. The
+<a href="../index.html">full record is here</a>.</div>
+<nav class="snapshot-links" aria-label="Every section">
+<h2>Every section of the record</h2>
+<ul>%s</ul>
+</nav>
+</main>
+</body>
+</html>
+""" % (base, SNAPSHOT_CSS.strip(), in_prose(generated), items)
 
 
 # ---------------------------------------------------------------- cards
@@ -459,13 +561,24 @@ def feed(base, generated):
 
 
 def stamp_json_ld(generated):
-    """Keep the structured data's dateModified honest without hand-editing."""
+    """Keep the structured data honest without hand-editing it.
+
+    dateModified and wordCount are the two fields that go stale silently: a
+    search engine reads them, a reader never does, so nothing here would show
+    that the article claims a length the report stopped having.
+    """
     path = ROOT / 'index.html'
     html = path.read_text(encoding='utf-8')
     new, n = re.subn(r'"dateModified": "\d{4}-\d{2}-\d{2}"',
                      '"dateModified": "%s"' % generated, html)
     if n != 2:
         raise SystemExit('prerender: expected 2 dateModified fields in index.html, found %d' % n)
+    report = json.loads((ROOT / 'data' / 'report.json').read_text(encoding='utf-8'))
+    words = (report.get('stats') or {}).get('words')
+    if words:
+        new, w = re.subn(r'"wordCount": \d+', '"wordCount": %d' % int(words), new)
+        if w != 1:
+            raise SystemExit('prerender: expected 1 wordCount field in index.html, found %d' % w)
     if new != html:
         path.write_text(new, encoding='utf-8')
     return n
@@ -513,12 +626,21 @@ def main():
                     raise SystemExit('prerender: %s produced an empty DOM' % slug)
                 snapshot_url = '%ssnapshot/%s.html' % (base, slug)
                 out = clean(html, snapshot_url, base + route, generated)
+                # A rebuttal is a claim and its answer, which is the shape
+                # schema.org's FAQPage describes, and the one that lets a search
+                # engine answer the claim rather than merely name the site.
+                if slug == 'rebuttals':
+                    out = faq_json_ld(out, snapshot_url)
                 (SNAPSHOT_DIR / ('%s.html' % slug)).write_text(out, encoding='utf-8')
                 titles[slug] = (head_of(out, r'<title>(.*?)</title>'),
                                 head_of(out, r'<meta name="description" content="([^"]*)"'))
                 print('  %-16s %6d bytes  %s' % (slug, len(out), titles[slug][0][:58]))
         finally:
             httpd.shutdown()
+        print('  cross-links:     %d snapshots linked to one another' % link_snapshots(titles, routes))
+        (SNAPSHOT_DIR / 'index.html').write_text(
+            snapshot_index(titles, routes, base, generated), encoding='utf-8')
+        print('  snapshot/index.html written')
 
     if not args.no_cards:
         for slug, route in routes:
@@ -540,7 +662,8 @@ def main():
                         base.replace('https://', '').rstrip('/') + '/' + route)
             print('  card %-16s %5.1f KB' % (slug, size / 1024))
 
-    urls = [(base, 1.0)] + [('%ssnapshot/%s.html' % (base, slug), 0.8) for slug, _ in routes]
+    urls = ([(base, 1.0), ('%ssnapshot/' % base, 0.6)]
+            + [('%ssnapshot/%s.html' % (base, slug), 0.8) for slug, _ in routes])
     n = sitemap(base, urls, generated)
     print('sitemap.xml: %d URLs' % n)
     print('feed.xml: %d revisions' % feed(base, generated))

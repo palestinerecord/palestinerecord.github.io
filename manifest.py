@@ -44,6 +44,26 @@ DESCRIPTIONS = {
         'report-final.md — A Forensic Academic Survey of State Conduct, Alleged Violations '
         'of International Law, and the Documented Record (1917–2026).',
     ),
+    'chronology.json': (
+        'The chronology of recorded crimes',
+        'Appendix B of the report: every dated crime and massacre in the record, split out '
+        'of report.json so the Timeline can be read without loading the full report.',
+        'report-final.md, Appendix B.',
+    ),
+    'report-meta.json': (
+        'The report, described',
+        'The title, the counts (words, parts, sections, tables) and the full bibliography '
+        'of report-final.md, without the text — what a page needs to quote the report '
+        'accurately when it is not reproducing it.',
+        'Derived from report-final.md by build.py.',
+    ),
+    'headline.json': (
+        'The first screen',
+        'The eight headline figures, the current ratio and the counts, in one small file '
+        'so the record can state what it establishes before the rest of the data arrives.',
+        'A subset of figures.json, timeseries.json and report-meta.json; each figure keeps '
+        'its own source field.',
+    ),
     'timeseries.json': (
         'Daily and monthly casualty series',
         'Killed and injured in Gaza and the West Bank, day by day and aggregated by month, '
@@ -219,6 +239,58 @@ def build():
     }
 
 
+HEADLINE = DATA / 'headline.json'
+
+
+def headline():
+    """The eight figures on the first screen, in a file small enough to paint from.
+
+    The overview used to wait for every dataset before it could put a number on
+    screen. This file is about two kilobytes: it is fetched on its own, before
+    anything else, so the record states what it establishes within a second and
+    fills in behind that.
+    """
+    figures = json.loads((DATA / 'figures.json').read_text(encoding='utf-8'))
+    series = json.loads((DATA / 'timeseries.json').read_text(encoding='utf-8'))
+    meta = json.loads((DATA / 'report-meta.json').read_text(encoding='utf-8'))
+    long_record = json.loads((DATA / 'long-record.json').read_text(encoding='utf-8'))
+    chronology = json.loads((DATA / 'chronology.json').read_text(encoding='utf-8'))
+    extra = json.loads((DATA / 'timeline-extra.json').read_text(encoding='utf-8'))
+    sources = json.loads((DATA / 'sources.json').read_text(encoding='utf-8'))
+
+    periods = long_record['asymmetry']['periods']
+    now = periods[-1]
+    timeline_count = chronology['meta']['count'] + len(extra['items'])
+
+    return {
+        'meta': {
+            'generated': datetime.date.today().isoformat(),
+            'data_to': series['meta']['last_month'],
+            'last_daily_update': series['meta'].get('last_daily_update'),
+            'note': 'The first screen, in one small file. Every figure here is repeated, '
+                    'with its full note and source, in figures.json.',
+        },
+        'title': meta['title'],
+        'headline': figures['headline'],
+        'ratio': {
+            'palestinian': now['palestinian'],
+            'israeli': now['israeli'],
+            'value': round(10 * now['palestinian'] / now['israeli']) / 10,
+            'label': now.get('label', ''),
+        },
+        'counts': {
+            'words': meta['stats']['words'],
+            'parts': meta['stats']['parts'],
+            'sections': meta['stats']['sections'],
+            'tables': meta['stats']['tables'],
+            'timeline': timeline_count,
+            'sources': sum(len(g['items']) for g in sources['groups']),
+            'bibliography': meta['bibliography_count'],
+            'statements': meta['statement_count'],
+        },
+    }
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument('--check', action='store_true',
@@ -238,6 +310,9 @@ def main():
         return 0
 
     OUT.write_text(text, encoding='utf-8')
+    head = json.dumps(headline(), ensure_ascii=False, separators=(',', ':')) + '\n'
+    HEADLINE.write_text(head, encoding='utf-8')
+    print('manifest: wrote %s — %d bytes' % (HEADLINE.relative_to(HERE), len(head)))
     print('manifest: wrote %s — %d datasets, %s bytes'
           % (OUT.relative_to(HERE), len(manifest['datasets']),
              format(manifest['total_bytes'], ',')))

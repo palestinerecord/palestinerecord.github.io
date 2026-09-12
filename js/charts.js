@@ -3743,14 +3743,51 @@ const Charts = (function () {
   const NO_WEBGL = 'This chart needs WebGL, which this browser has disabled.';
   const NO_GEOMETRY = 'The map geometry could not be loaded, so this map cannot be drawn.';
 
+  /* ECharts-GL is 166 KB and draws two charts on this site. Loading it from
+     the page head made every route pay for them, so it is injected here the
+     first time one of those two is actually on screen — with the same SRI hash
+     the head used to carry, so the integrity guarantee is unchanged. */
+  const GL_CHARTS = ['deaths-3d', 'infra-3d'];
+  const GL_SRC = 'https://cdn.jsdelivr.net/npm/echarts-gl@2.0.9/dist/echarts-gl.min.js';
+  const GL_SRI = 'sha384-f4gAUkb5Y6LE9n50CbiH1hCBCw7021OeJu0ZrgRpgW6G1CZjPR8cu33e8rCFLqCl';
+  let glPromise = null;
+
+  function ensureGL() {
+    if (window.echarts && echarts.graphicGL) return Promise.resolve();
+    if (!glPromise) {
+      glPromise = new Promise((resolve, reject) => {
+        const tag = document.createElement('script');
+        tag.src = GL_SRC;
+        tag.integrity = GL_SRI;
+        tag.crossOrigin = 'anonymous';
+        tag.referrerPolicy = 'no-referrer';
+        tag.onload = resolve;
+        tag.onerror = () => { glPromise = null; reject(new Error('echarts-gl did not load')); };
+        document.head.appendChild(tag);
+      });
+    }
+    return glPromise;
+  }
+
   function init(root, payload) {
     data = payload;
     readTheme();
     root.querySelectorAll('[data-chart]').forEach((el) => {
       const name = el.getAttribute('data-chart');
       if (!R[name]) return;
-      // A single bad chart (e.g. no WebGL for the 3D ones) must not stop the page.
-      let chart;
+      if (GL_CHARTS.indexOf(name) >= 0 && !(window.echarts && echarts.graphicGL)) {
+        ensureGL()
+          .then(() => { if (el.isConnected) build(el, name); })
+          .catch((err) => failed(el, null, name, err, NO_WEBGL));
+        return;
+      }
+      build(el, name);
+    });
+  }
+
+  function build(el, name) {
+    // A single bad chart (e.g. no WebGL for the 3D ones) must not stop the page.
+    let chart;
       try {
         chart = echarts.init(el, null, { renderer: 'canvas' });
         const option = R[name]();
@@ -3780,7 +3817,6 @@ const Charts = (function () {
         });
       }, { threshold: 0.06 });
       io.observe(el);
-    });
   }
 
   function dispose() {

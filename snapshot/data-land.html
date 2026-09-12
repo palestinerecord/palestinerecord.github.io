@@ -6,14 +6,42 @@
 <meta name="description" content="Where the land went, from the 1947 partition to the settlements of 2026, with the villages depopulated in 1948 mapped one by one.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=32" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=32">
+<!-- Index everything, and let the large share cards and the full snippet
+     through: this record is only useful if the figure a reader searched for is
+     the thing they are shown. -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<!-- Everything here is served from this origin except the charting and
+     animation libraries, which come from one pinned CDN with integrity hashes,
+     and the live casualty series. Nothing is posted anywhere and there is no
+     tracker to allow, so the work this policy does is the source allowlist:
+     script can only come from here or from jsdelivr, whatever else gets onto
+     the page. Declared in a meta tag rather than a header because GitHub Pages
+     serves no headers of our choosing.
+
+     'unsafe-eval' is here for one reason: echarts-gl compiles its GLSL shaders
+     by evaluating the preprocessor expressions with `new Function`, and without
+     it the 3-D chart of the Gaza dead fails with "Invalid expression" and
+     leaves an empty container. 'unsafe-inline' is needed for the theme script
+     that has to run before first paint. Neither widens the set of origins
+     script may be fetched from, which is the part that matters here. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
+<link rel="icon" href="../assets/favicon.svg?v=33" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=33">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
 .snapshot-note a { color: #d9a441; }
 .chart-missing { margin: 0; padding: 18px 20px; border: 1px dashed rgba(255,255,255,.16);
-  border-radius: 12px; color: #7d879c; font-size: 13.5px; }</style>
+  border-radius: 12px; color: #7d879c; font-size: 13.5px; }
+.snapshot-links { max-width: 1280px; margin: 48px auto 0; padding: 24px 20px;
+  border-top: 1px solid rgba(255,255,255,.12); }
+.snapshot-links h2 { font-size: 15px; letter-spacing: .04em; text-transform: uppercase;
+  color: #7d879c; margin: 0 0 14px; }
+.snapshot-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.snapshot-links a { color: #d9a441; text-decoration: none; }
+.snapshot-links a:hover { text-decoration: underline; }
+.snapshot-links p { margin: 4px 0 0; color: #7d879c; font-size: 13px; line-height: 1.55; }</style>
 <link rel="canonical" href="https://palestinerecord.github.io/snapshot/data-land.html">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="alternate" type="application/atom+xml" title="The Documented Record — revisions" href="feed.xml">
@@ -31,12 +59,23 @@
 <meta name="twitter:title" content="The land — six per cent to seventy-eight · The Documented Record">
 <meta name="twitter:description" content="Where the land went, from the 1947 partition to the settlements of 2026, with the villages depopulated in 1948 mapped one by one.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/data-land.png">
-<link rel="stylesheet" href="../css/style.css?v=32">
+<link rel="preload" href="../css/style.css?v=33" as="style">
+<link rel="stylesheet" href="../css/style.css?v=33">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
 
-
+<!-- The libraries and the local scripts are all deferred: none of them paints
+     the first screen, and a synchronous script in the head blocks the parser
+     until it has been fetched, parsed and run. Document order is preserved, so
+     ECharts and GSAP are still in place before charts.js and app.js run.
+     echarts-gl is not here at all — charts.js injects it, with the same
+     integrity hash, only if a reader opens one of the two 3-D charts. -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<!-- The first screen is painted from this one file; the request should be in
+     flight while the parser is still in the head. -->
+<link rel="preload" href="../data/headline.json" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
 
 
 
@@ -45,8 +84,70 @@
      reproduces in full; the dataset describes the JSON under data/, which is a public
      API in all but name. Both dateModified values are stamped by prerender.py from
      data/timeseries.json, so neither can drift from the data actually shipped. -->
-
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://palestinerecord.github.io/#report",
+  "headline": "The Documented Record — Israel and the Occupied Territories, 1917–2026",
+  "alternativeHeadline": "A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026)",
+  "description": "A source-anchored survey of state conduct in Israel and the occupied Palestinian territories, applying identical evidentiary and legal standards to every actor. Every figure carries its source.",
+  "author": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "publisher": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "inLanguage": "en-GB",
+  "url": "https://palestinerecord.github.io/",
+  "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
+  "image": "https://palestinerecord.github.io/assets/share-card.png",
+  "wordCount": 99501,
+  "dateModified": "2026-09-12",
+  "temporalCoverage": "1917/2026",
+  "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
+  "about": [
+    { "@type": "Thing", "name": "Israeli–Palestinian conflict" },
+    { "@type": "Thing", "name": "International humanitarian law" },
+    { "@type": "Thing", "name": "Occupied Palestinian territories" }
+  ],
+  "citation": "South Africa v. Israel (Application of the Convention on the Prevention and Punishment of the Crime of Genocide in the Gaza Strip), International Court of Justice, Order of 26 January 2024"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://palestinerecord.github.io/#dataset",
+  "name": "The Documented Record — casualty, land and conduct series, 1948–2026",
+  "description": "The machine-readable base of the dashboard: daily and monthly Gaza casualty series since October 2023, the long death toll from 1948, West Bank killings, demolitions and detention, land transfer and settlement figures, the 1948 village depopulations, documented statements of intent, and the recorded position of every state. Each figure carries the source it was taken from.",
+  "url": "https://palestinerecord.github.io/#/data",
+  "creator": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "inLanguage": "en-GB",
+  "dateModified": "2026-09-12",
+  "temporalCoverage": "1948/2026",
+  "spatialCoverage": { "@type": "Place", "name": "Israel and the occupied Palestinian territories" },
+  "keywords": ["Gaza casualties", "West Bank", "settlements", "demolitions", "administrative detention", "Nakba", "arms transfers", "recognition of Palestine"],
+  "isBasedOn": [
+    { "@type": "Dataset", "name": "Tech For Palestine open datasets (Gaza Ministry of Health, OCHA, UN)", "url": "https://data.techforpalestine.org/" },
+    { "@type": "Dataset", "name": "OCHA State of Palestine subnational administrative boundaries (Common Operational Dataset)", "url": "https://data.humdata.org/dataset/cod-ab-pse" }
+  ],
+  "variableMeasured": [
+    { "@type": "PropertyValue", "name": "Cumulative Palestinians killed in Gaza, by reporting day" },
+    { "@type": "PropertyValue", "name": "Children killed in Gaza, by reporting month" },
+    { "@type": "PropertyValue", "name": "Palestinians and Israelis killed, by period since 1948" },
+    { "@type": "PropertyValue", "name": "Palestinian structures demolished, by year" },
+    { "@type": "PropertyValue", "name": "Palestinians held in administrative detention, by snapshot" },
+    { "@type": "PropertyValue", "name": "Villages depopulated in 1947–1950, by month, sub-district and recorded cause" },
+    { "@type": "PropertyValue", "name": "States recognising Palestine, by date of recognition" }
+  ],
+  "distribution": [
+    { "@type": "DataDownload", "name": "The manifest: every published file, described and dated", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/index.json" },
+    { "@type": "DataDownload", "name": "Daily and monthly casualty series", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/timeseries.json" },
+    { "@type": "DataDownload", "name": "Curated headline figures, each with its source", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/figures.json" },
+    { "@type": "DataDownload", "name": "The long record, 1948–2026", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/long-record.json" },
+    { "@type": "DataDownload", "name": "Documented statements of intent", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/statements.json" },
+    { "@type": "DataDownload", "name": "Villages depopulated 1947–1950", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/nakba.json" },
+    { "@type": "DataDownload", "name": "The recorded position of every state", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/world-positions.json" }
+  ]
+}
+</script>
 </head>
 <body data-view="data" style="">
 
@@ -59,7 +160,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=33" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -143,9 +244,9 @@
     </div>
           <div class="card">
             <h3 style="font-size:18px;margin-bottom:14px">Areas A, B and C</h3>
-            <div class="table-wrap"><table><tbody>
+            <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table><tbody>
               <tr><td><strong>Area A</strong> — 18% of the West Bank<br><span class="small muted">Palestinian Authority civil and security control</span><br><span class="small">About 18 per cent of the West Bank, containing the major Palestinian cities. The Israeli army enters it at will.</span></td></tr><tr><td><strong>Area B</strong> — 22% of the West Bank<br><span class="small muted">Palestinian civil control, Israeli security control</span><br><span class="small">About 22 per cent, containing most Palestinian villages. No building permits are issued by the Palestinian Authority for state land.</span></td></tr><tr><td><strong>Area C</strong> — 60% of the West Bank<br><span class="small muted">Full Israeli civil and security control</span><br><span class="small">About 60 per cent of the West Bank, containing all the settlements, the Jordan Valley, the water aquifers and almost all the agricultural land and open space. Palestinian building permits in Area C are refused in the large majority of applications.</span></td></tr>
-            </tbody></table></div>
+            </tbody></table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
           </div>
         </div>
         <div class="grid c3" style="margin-top:22px">
@@ -153,13 +254,13 @@
       <div class="val" data-count="2">2%</div>
       <div class="lbl">Settlement built-up area, share of the West Bank</div>
       <div class="note">The footprint of the houses themselves.</div>
-      <div class="src">B’Tselem; OCHA</div>
+      <div class="src">B'Tselem, settlement statistics</div>
       
     </div><div class="stat red" data-tone="red">
       <div class="val" data-count="40">40%</div>
       <div class="lbl">Land under settlement regional council jurisdiction</div>
       <div class="note">The area from which Palestinians are excluded is twenty times the built-up area.</div>
-      <div class="src">B’Tselem; OCHA</div>
+      <div class="src">B'Tselem, settlement statistics</div>
       
     </div><div class="stat red" data-tone="red">
       <div class="val" data-count="23.7">23.7<span class="suffix"> km²</span></div>
@@ -170,7 +271,7 @@
     </div>
         </div>
         <div class="card" style="margin-top:20px;padding:0;overflow:hidden">
-          <div class="table-wrap"><table>
+          <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table>
             <thead><tr><th>Date</th><th>Who held what</th><th>What happened</th></tr></thead>
             <tbody><tr>
               <td><strong>1946</strong><br><span class="small muted">Under the Mandate</span></td>
@@ -193,7 +294,7 @@
               <td>Israel, pre-1967 lines <strong>78%</strong><br>Area C, full Israeli control <strong>12.6%</strong><br>Area B, Israeli security control <strong>4.6%</strong><br>Area A, Palestinian control <strong>3.8%</strong><br>Gaza <strong>1%</strong></td>
               <td><span class="small">The Oslo II Interim Agreement of September 1995 divided the West Bank into Areas A, B and C as a five-year arrangement pending final status talks. Thirty-one years later the division stands.</span></td>
             </tr></tbody>
-          </table></div>
+          </table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
         </div>
         <ul style="margin-top:18px"><li class="lvl0">The percentages are of Mandatory Palestine as a whole — about 26,320 square kilometres — so that the five rows are comparable. The West Bank is about 21 per cent of that total and Gaza about 1 per cent.</li><li class="lvl0">Area A, the only territory under full Palestinian control, is about 18 per cent of the West Bank, which is about 3.8 per cent of Mandatory Palestine. It is not contiguous: it is 165 separate enclaves.</li><li class="lvl0">The International Court of Justice held on 19 July 2024 that Israel's continued presence in the occupied Palestinian territory is unlawful and must end as rapidly as possible, and that the settlement policy, the annexation of territory and the associated regime violate Article 49(6) of the Fourth Geneva Convention and the prohibition on the acquisition of territory by force.</li></ul>
       </section>
@@ -223,9 +324,9 @@
     </div>
           <div class="card">
             <h3 style="font-size:18px;margin-bottom:14px">The figures in full</h3>
-            <div class="table-wrap"><table><tbody>
+            <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table><tbody>
               <tr><td>Palestinians expelled or forced to flee<br><span class="small muted">over half the Arab population</span></td><td style="text-align:right"><strong>750,000</strong></td></tr><tr><td>Palestinian villages destroyed</td><td style="text-align:right"><strong>530</strong></td></tr><tr><td>Towns and cities depopulated</td><td style="text-align:right"><strong>11</strong></td></tr><tr><td>Documented massacres</td><td style="text-align:right"><strong>30+</strong></td></tr><tr><td>Percentage of historic Palestine seized</td><td style="text-align:right"><strong>78%</strong></td></tr><tr><td>Registered refugee descendants today<br><span class="small muted">UNRWA registered</span></td><td style="text-align:right"><strong>6,000,000+</strong></td></tr><tr><td>Years the right of return has been blocked<br><span class="small muted">UNGA 194 (1948) — 2026</span></td><td style="text-align:right"><strong>78</strong></td></tr>
-            </tbody></table></div>
+            </tbody></table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
           </div>
         </div>
       </section>
@@ -336,9 +437,9 @@
     </div>
           <div class="card">
             <h3 style="font-size:18px;margin-bottom:14px">The four statutes</h3>
-            <div class="table-wrap"><table><tbody>
+            <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table><tbody>
               <tr><td><strong>Emergency Regulations on Property of Absentees</strong><br><span class="small muted">2 December 1948</span><br><span class="small">Promulgated while the expulsions were still in progress. Vests the property of anyone classed 'absent' in a state Custodian.</span></td></tr><tr><td><strong>Absentees' Property Law, 5710-1950</strong><br><span class="small muted">14 March 1950</span><br><span class="small">Converts the emergency regulations into permanent statute. Retroactive to 29 November 1947, before the war. Defines 'absentee' by mere physical presence in Lebanon, Egypt, Syria, Saudi Arabia, Trans-Jordan, Iraq, Yemen or non-Israeli-held Palestine. Still in force in 2026: the 1948 state of emergency has never been lifted.</span></td></tr><tr><td><strong>Development Authority (Transfer of Property) Law, 5710-1950</strong><br><span class="small muted">9 August 1950</span><br><span class="small">Supplies the disposal power the Custodian lacked. Onward sale restricted to the State, the Jewish National Fund, an institution for the settlement of landless Arabs, or a local authority, with a JNF right of first refusal. The UNCCP called the two statutes 'the two shutters of a legal diptych'.</span></td></tr><tr><td><strong>Land Acquisition (Validation of Acts and Compensation) Law, 5713-1953</strong><br><span class="small muted">10 March 1953</span><br><span class="small">Confers clean title retroactively, validating takings that were unlawful when carried out, on a written certificate of the Minister of Finance that no court may review (rulings of 1954 and 1981). No hearing before confiscation, no notification after. Reaches the property of Israeli citizens.</span></td></tr>
-            </tbody></table></div>
+            </tbody></table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
           </div>
         </div>
         <div class="grid wide-left" style="margin-top:20px">
@@ -428,18 +529,18 @@
       <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/data/land&chart=settlement-detail">open it in the live record</a>.</p>
       <div class="chart-table" hidden=""></div>
     </div></div>
-      </section></div></main>
+      </section></div><nav class="snapshot-links" aria-label="Other sections"><h2>Every other section, without JavaScript</h2><ul><li><a href="overview.html">The Documented Record — Israel and the Occupied Territories, 1917–2026</a></li><li><a href="tour.html">Start here — the case in eight steps</a></li><li><a href="data-gaza.html">Gaza — the toll since 7 October 2023</a></li><li><a href="data-asymmetry.html">The asymmetry — Palestinians and Israelis killed</a></li><li><a href="data-since-1948.html">Since 1948 — seventy-eight years of the toll</a></li><li><a href="data-complicity.html">Complicity — who supplies the war</a></li><li><a href="data-west-bank.html">The West Bank — before and after October 2023</a></li><li><a href="data-wars.html">Wars and 7 October — seventy-five years of operations</a></li><li><a href="data-world.html">The world — recognition, embargoes and vetoes</a></li><li><a href="data-tables.html">Source tables — every table in the report</a></li><li><a href="timeline.html">Timeline — a dated chronology, 1917–2026</a></li><li><a href="evidence.html">Evidence — the complete report</a></li><li><a href="rebuttals.html">Rebuttals — every defence, answered</a></li><li><a href="statements.html">Statements — the documented record of intent</a></li><li><a href="legal.html">Legal — the findings and the instruments they rest on</a></li><li><a href="sources.html">Sources — what the record rests on</a></li><li><a href="method.html">Method — impartial, not neutral</a></li><li><a href="api.html">Open data — the record as files</a></li><li><a href="changelog.html">Changelog — every revision, dated</a></li></ul></nav></main>
 
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=33" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">99,501 words · 34 parts · 131 sections · 13 tables · 215 chronology entries · 85 documented statements · 106 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
     <!-- A record meant to be used in an argument has to be citable in one.
          Filled in by app.js with the route on screen and the date of the data
          it is showing, so a citation copied from here names the version the
@@ -460,7 +561,8 @@
       </div>
     </details>
     <p class="footer-links">
-      <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../index.html#/method">Method</a> · <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="snapshot/">Text-only versions</a> ·
       <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a> ·
       <a href="feed.xml">Feed</a>
     </p>

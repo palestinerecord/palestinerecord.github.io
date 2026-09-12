@@ -7,8 +7,27 @@
 <meta name="description" content="An interactive forensic survey of state conduct, alleged violations of international law, and the documented record (1917–2026).">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="assets/favicon.svg?v=32" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/flag-palestine.svg?v=32">
+<!-- Index everything, and let the large share cards and the full snippet
+     through: this record is only useful if the figure a reader searched for is
+     the thing they are shown. -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<!-- Everything here is served from this origin except the charting and
+     animation libraries, which come from one pinned CDN with integrity hashes,
+     and the live casualty series. Nothing is posted anywhere and there is no
+     tracker to allow, so the work this policy does is the source allowlist:
+     script can only come from here or from jsdelivr, whatever else gets onto
+     the page. Declared in a meta tag rather than a header because GitHub Pages
+     serves no headers of our choosing.
+
+     'unsafe-eval' is here for one reason: echarts-gl compiles its GLSL shaders
+     by evaluating the preprocessor expressions with `new Function`, and without
+     it the 3-D chart of the Gaza dead fails with "Invalid expression" and
+     leaves an empty container. 'unsafe-inline' is needed for the theme script
+     that has to run before first paint. Neither widens the set of origins
+     script may be fetched from, which is the part that matters here. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
+<link rel="icon" href="assets/favicon.svg?v=33" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/flag-palestine.svg?v=33">
 <link rel="canonical" href="https://palestinerecord.github.io/">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="alternate" type="application/atom+xml" title="The Documented Record — revisions" href="feed.xml">
@@ -26,7 +45,8 @@
 <meta name="twitter:title" content="The Documented Record — Israel and the Occupied Territories, 1917–2026">
 <meta name="twitter:description" content="Every figure carries its source. A forensic survey of state conduct, alleged violations of international law, and the documented record — 1917 to 2026.">
 <meta name="twitter:image" content="assets/share-card.png">
-<link rel="stylesheet" href="css/style.css?v=32">
+<link rel="preload" href="css/style.css?v=33" as="style">
+<link rel="stylesheet" href="css/style.css?v=33">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -40,10 +60,20 @@
   } catch (err) { /* storage blocked; the dark default stands */ }
 })();
 </script>
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js" integrity="sha384-Mx5lkUEQPM1pOJCwFtUICyX45KNojXbkWdYhkKUKsbv391mavbfoAmONbzkgYPzR" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts-gl@2.0.9/dist/echarts-gl.min.js" integrity="sha384-f4gAUkb5Y6LE9n50CbiH1hCBCw7021OeJu0ZrgRpgW6G1CZjPR8cu33e8rCFLqCl" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- The libraries and the local scripts are all deferred: none of them paints
+     the first screen, and a synchronous script in the head blocks the parser
+     until it has been fetched, parsed and run. Document order is preserved, so
+     ECharts and GSAP are still in place before charts.js and app.js run.
+     echarts-gl is not here at all — charts.js injects it, with the same
+     integrity hash, only if a reader opens one of the two 3-D charts. -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<!-- The first screen is painted from this one file; the request should be in
+     flight while the parser is still in the head. -->
+<link rel="preload" href="data/headline.json" as="fetch" type="application/json" crossorigin fetchpriority="high">
+<script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js" integrity="sha384-Mx5lkUEQPM1pOJCwFtUICyX45KNojXbkWdYhkKUKsbv391mavbfoAmONbzkgYPzR" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="importmap">
 {
   "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" },
@@ -68,7 +98,7 @@
   "url": "https://palestinerecord.github.io/",
   "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
   "image": "https://palestinerecord.github.io/assets/share-card.png",
-  "wordCount": 94098,
+  "wordCount": 99501,
   "dateModified": "2026-09-12",
   "temporalCoverage": "1917/2026",
   "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
@@ -128,7 +158,7 @@
 
 <div id="boot">
   <div class="boot-inner">
-    <img class="flag-ps boot-flag" src="assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
+    <img class="flag-ps boot-flag" src="assets/flag-palestine.svg?v=33" alt="Flag of Palestine" fetchpriority="high">
     <div class="boot-mark">FORENSIC RECORD</div>
     <div class="boot-bar"><span></span></div>
     <div class="boot-status">Loading documented record…</div>
@@ -141,7 +171,7 @@
 
 <header class="topbar">
   <a class="brand" href="#/overview">
-    <img class="brand-mark flag-ps" src="assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="assets/flag-palestine.svg?v=33" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -175,7 +205,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
+      <img class="flag-ps" src="assets/flag-palestine.svg?v=33" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
@@ -196,7 +226,8 @@
       </div>
     </details>
     <p class="footer-links">
-      <a href="#/api">Open data</a> · <a href="#/changelog">Changelog</a> ·
+      <a href="#/method">Method</a> · <a href="#/api">Open data</a> · <a href="#/changelog">Changelog</a> ·
+      <a href="snapshot/">Text-only versions</a> ·
       <a href="data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a> ·
       <a href="feed.xml">Feed</a>
     </p>
@@ -211,15 +242,29 @@
   </div>
 </div>
 
-<script src="js/charts.js?v=32"></script>
-<script src="js/share.js?v=32"></script>
-<script src="js/views.js?v=32"></script>
-<script src="js/app.js?v=32"></script>
+<script defer src="js/charts.js?v=33"></script>
+<script defer src="js/share.js?v=33"></script>
+<script defer src="js/views.js?v=33"></script>
+<script defer src="js/app.js?v=33"></script>
 <!-- Loaded dynamically so ?prerender=1 never builds the 24,000-point WebGL field:
      prerender.py dumps the text of a route, and software WebGL would spend the
      whole budget on a scene no snapshot can contain. -->
 <script type="module">
-  if (!/(^|[?&])prerender=1(&|$)/.test(location.search)) import('./js/scene.js?v=32');
+  /* Three.js and its 24,000-point field are the most expensive thing on the
+     page and decorate the background of one route. They are therefore loaded
+     after the window load event, so they never compete with the record itself
+     for bandwidth, and not at all on a metered or 2G connection. Reduced
+     motion is not a reason to skip it: the field is one point per documented
+     death, which is content, and scene.js already stops rotating it. */
+  (function () {
+    if (/(^|[?&])prerender=1(&|$)/.test(location.search)) return;
+    const conn = navigator.connection || {};
+    if (conn.saveData) return;
+    if (/(^|-)2g$/.test(conn.effectiveType || '')) return;
+    const go = () => import('./js/scene.js?v=33');
+    if (document.readyState === 'complete') setTimeout(go, 200);
+    else addEventListener('load', () => setTimeout(go, 200), { once: true });
+  })();
 </script>
 <!-- The offline worker. Registered after load so it never competes with the
      record for the network, and never during a prerender pass. ?nosw=1 is the

@@ -3,8 +3,8 @@
   "description": "Every dataset behind the charts at palestinerecord.github.io, as plain JSON over HTTPS, with no login and no key.",
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
-  "generated": "2026-09-12",
-  "total_bytes": 3591443,
+  "generated": "2026-09-13",
+  "total_bytes": 3671070,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -18,6 +18,19 @@
         "events"
       ],
       "updated": "2026-09-12"
+    },
+    {
+      "path": "data/chronology.json",
+      "title": "The chronology of recorded crimes",
+      "description": "Appendix B of the report: every dated crime and massacre in the record, split out of report.json so the Timeline can be read without loading the full report.",
+      "source": "report-final.md, Appendix B.",
+      "bytes": 20191,
+      "records": 141,
+      "fields": [
+        "meta",
+        "entries"
+      ],
+      "updated": "2026-09-13"
     },
     {
       "path": "data/conduct-record.json",
@@ -62,7 +75,7 @@
       "title": "The curated statistics",
       "description": "The headline figures and the topic groups behind them — each with its label, its value, the note that qualifies it, and the report section it came from.",
       "source": "Each record carries its own source field.",
-      "bytes": 33487,
+      "bytes": 33880,
       "records": null,
       "fields": [
         "meta",
@@ -77,6 +90,22 @@
         "infrastructure_report",
         "recognition",
         "opinion"
+      ],
+      "updated": "2026-09-13"
+    },
+    {
+      "path": "data/headline.json",
+      "title": "The first screen",
+      "description": "The eight headline figures, the current ratio and the counts, in one small file so the record can state what it establishes before the rest of the data arrives.",
+      "source": "A subset of figures.json, timeseries.json and report-meta.json; each figure keeps its own source field.",
+      "bytes": 1718,
+      "records": null,
+      "fields": [
+        "meta",
+        "title",
+        "headline",
+        "ratio",
+        "counts"
       ],
       "updated": "2026-09-12"
     },
@@ -116,7 +145,7 @@
       "title": "The long record, 1917–2026",
       "description": "Dispossession, detention, demolition, recognition and complicity across the whole period, as series rather than as single figures.",
       "source": "Each record carries its own source field.",
-      "bytes": 52765,
+      "bytes": 55947,
       "records": null,
       "fields": [
         "meta",
@@ -131,7 +160,7 @@
         "recognition",
         "land"
       ],
-      "updated": "2026-09-12"
+      "updated": "2026-09-13"
     },
     {
       "path": "data/maps.json",
@@ -191,11 +220,29 @@
       "updated": "2026-09-12"
     },
     {
+      "path": "data/report-meta.json",
+      "title": "The report, described",
+      "description": "The title, the counts (words, parts, sections, tables) and the full bibliography of report-final.md, without the text — what a page needs to quote the report accurately when it is not reproducing it.",
+      "source": "Derived from report-final.md by build.py.",
+      "bytes": 30686,
+      "records": null,
+      "fields": [
+        "title",
+        "stats",
+        "bibliography_count",
+        "bibliography",
+        "statement_count",
+        "timeline_count",
+        "parts"
+      ],
+      "updated": "2026-09-13"
+    },
+    {
       "path": "data/report.json",
       "title": "The source report, parsed",
       "description": "Every part, section, paragraph, list, table, chronology entry and bibliography entry of report-final.md, converted losslessly by build.py and checked by verify.py. This is the whole document as structured data.",
       "source": "report-final.md — A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026).",
-      "bytes": 881108,
+      "bytes": 899799,
       "records": null,
       "fields": [
         "title",
@@ -206,20 +253,20 @@
         "bibliography",
         "tables"
       ],
-      "updated": "2026-09-12"
+      "updated": "2026-09-13"
     },
     {
       "path": "data/sources.json",
       "title": "The linked source library",
       "description": "The evidentiary base grouped by kind: courts and tribunals, UN bodies, human rights organisations, open datasets, academic work, Israeli sources, journalism and archives.",
       "source": "Each entry links to the publisher.",
-      "bytes": 42400,
+      "bytes": 47166,
       "records": null,
       "fields": [
         "meta",
         "groups"
       ],
-      "updated": "2026-09-12"
+      "updated": "2026-09-13"
     },
     {
       "path": "data/statements.json",

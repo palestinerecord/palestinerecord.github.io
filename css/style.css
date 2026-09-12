@@ -476,6 +476,8 @@ main { position: relative; z-index: 2; }
   background: transparent; border: 1px solid var(--line); border-radius: 7px;
   color: var(--muted); padding: 3px 8px; cursor: pointer;
   transition: opacity .2s, color .2s, border-color .2s;
+  /* WCAG 2.2 target size (minimum) is 24x24 CSS pixels; the text alone is 22. */
+  min-height: 24px; min-width: 24px;
 }
 .share-card:hover { color: var(--text); border-color: var(--line-hi); }
 .stat .share-card { position: absolute; top: 10px; right: 10px; opacity: 0; }
@@ -550,6 +552,25 @@ main { position: relative; z-index: 2; }
   overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius);
   background: rgba(255, 255, 255, .02);
 }
+/* A table wider than its card scrolls sideways, which is right, but nothing on
+   screen says so: the last column is simply cut off. The fade is painted on the
+   wrapper's right edge and removed once the scroll reaches the end (app.js sets
+   data-scrolled), and a one-line note states it for anyone who cannot see the
+   fade at all. */
+.table-scroll { position: relative; }
+.table-scroll::after {
+  content: ''; position: absolute; top: 1px; right: 1px; bottom: 1px; width: 46px;
+  pointer-events: none; border-radius: 0 var(--radius) var(--radius) 0;
+  background: linear-gradient(to right, rgba(10, 14, 23, 0), var(--bg-2));
+  opacity: 1; transition: opacity .2s;
+}
+.table-scroll[data-scrolled="end"]::after { opacity: 0; }
+.table-scroll[data-overflow="no"]::after { display: none; }
+.table-note {
+  font-family: var(--mono); font-size: 11px; color: var(--muted);
+  letter-spacing: .04em; margin: 6px 0 0;
+}
+.table-scroll[data-overflow="no"] + .table-note { display: none; }
 table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 thead th {
   position: sticky; top: 0; z-index: 1;
@@ -708,6 +729,22 @@ tbody td strong { color: var(--text); }
   font-size: clamp(22px, 2.7vw, 30px); padding-bottom: 14px; margin-bottom: 22px;
   border-bottom: 1px solid var(--line);
 }
+/* The Evidence route lays out 131 sections, the Timeline 215 entries and the
+   Statements route 41 cards, and the browser styles and lays out every one of
+   them before it paints the first. `content-visibility: auto` skips the work
+   for anything off screen; `contain-intrinsic-size` supplies a placeholder
+   height so the scrollbar does not jump as each one is reached. The values are
+   rough averages — being wrong costs a small scroll correction, being absent
+   costs the whole layout up front.
+
+   Print is excluded: printing reads the whole document at once, and a skipped
+   section prints blank. */
+@media screen {
+  .ev-section { content-visibility: auto; contain-intrinsic-size: auto 420px; }
+  .tl-item { content-visibility: auto; contain-intrinsic-size: auto 110px; }
+  .st-card { content-visibility: auto; contain-intrinsic-size: auto 340px; }
+}
+
 .ev-section { margin: 34px 0; scroll-margin-top: calc(var(--topbar-h) + 20px); }
 .ev-section > h3 { font-size: 19px; color: var(--accent); margin-bottom: 14px; }
 .ev-body p { color: var(--text-2); margin: 0 0 15px; }
@@ -720,6 +757,13 @@ tbody td strong { color: var(--text); }
 .ev-body hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
 .ev-body .table-wrap { margin: 0 0 20px; }
 .ev-body mark { background: rgba(217, 164, 65, .28); color: var(--text); border-radius: 3px; padding: 0 2px; }
+
+/* ---------- Method ---------- */
+
+.method-falsify { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 14px; }
+.method-falsify li { color: var(--text-2); line-height: 1.62; }
+.method-falsify li b { color: var(--text); }
+.method-grid-note { color: var(--muted); }
 
 /* ---------- Statements ---------- */
 
@@ -836,12 +880,43 @@ tbody td strong { color: var(--text); }
 .search-hit .crumb { font-size: 11px; color: var(--accent); letter-spacing: .05em; margin-bottom: 4px; }
 .search-hit .snip { font-size: 13.5px; line-height: 1.55; }
 .search-hit mark { background: rgba(217, 164, 65, .3); color: var(--text); border-radius: 3px; }
+/* The index now covers statements, legal findings, charts, chronology entries,
+   scorecard rows and sources as well as the report, so the results are grouped
+   by what was found and the matching title is shown above the snippet. */
+.search-group {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 14px 16px 6px; border-top: 1px solid var(--line);
+  margin-top: 6px;
+}
+.search-results > .search-group:first-child { border-top: 0; margin-top: 0; padding-top: 6px; }
+.hit-title { font-size: 14.5px; color: var(--text); margin-bottom: 3px; font-weight: 500; }
+/* The arrow-key cursor. Distinct from :hover so a reader driving the list from
+   the keyboard can see where they are while the pointer sits somewhere else. */
+.search-hit.cursor {
+  background: var(--panel-hi); border-color: var(--accent);
+  outline: 2px solid var(--accent-soft); outline-offset: -2px;
+}
+/* Where a search result landed. Held for a moment so the reader can see which
+   of two hundred paragraphs was the one they asked for. */
+@keyframes search-target-flash {
+  0%, 60% { background: var(--accent-soft); box-shadow: 0 0 0 6px var(--accent-soft); }
+  100% { background: transparent; box-shadow: 0 0 0 6px transparent; }
+}
+.search-target { animation: search-target-flash 2.2s ease-out 1; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) {
+  .search-target { animation: none; background: var(--accent-soft); border-radius: 6px; }
+}
 
 /* ---------- Footer ---------- */
 
 .footer { position: relative; z-index: 2; border-top: 1px solid var(--line); padding: 40px 0; margin-top: 40px; background: var(--bg-2); }
 .footer-inner { max-width: var(--wrap); margin: 0 auto; padding: 0 26px; }
 .footer p { font-size: 13px; color: var(--text-2); margin: 0 0 8px; max-width: 90ch; }
+/* A link inside a block of text cannot be marked by colour alone: at the
+   contrast this theme uses, a reader with a colour-vision deficiency cannot
+   tell it from the sentence around it. */
+.footer p a { text-decoration: underline; text-underline-offset: 2px; }
 .footer-links { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .footer-links a { color: var(--muted); }
 .footer-links a:hover { color: var(--accent); }
@@ -1242,6 +1317,11 @@ body[data-view="embed"] #app { padding: 0; }
   #scene, #scene-veil, #boot, .search-overlay, .nav-toggle, .search-open,
   .scroll-hint, .chart-tools, .subnav, .freshness,
   .theme-toggle, .skip-link, .footer-links, .footer-flag { display: none !important; }
+  /* On paper the whole table is there, so neither the fade nor the note that
+     explains the sideways scroll means anything. */
+  .table-note { display: none !important; }
+  .table-scroll::after { display: none !important; }
+  .table-scroll, .table-wrap { overflow: visible !important; }
   .topbar { position: static; border-bottom: 1px solid #d6dae2; height: auto; padding: 10px 0; }
   .card, .stat { background: #fff !important; border: 1px solid #d6dae2; box-shadow: none; break-inside: avoid; }
   .card::before { display: none; }

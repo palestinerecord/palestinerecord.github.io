@@ -6,14 +6,42 @@
 <meta name="description" content="Arms transfers, trade, Security Council vetoes, and the companies named in the UN database of businesses operating in the settlements.">
 <meta name="theme-color" content="#0b0f17">
 <meta name="author" content="Dr. Usman Kayani">
-<link rel="icon" href="../assets/favicon.svg?v=32" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=32">
+<!-- Index everything, and let the large share cards and the full snippet
+     through: this record is only useful if the figure a reader searched for is
+     the thing they are shown. -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<!-- Everything here is served from this origin except the charting and
+     animation libraries, which come from one pinned CDN with integrity hashes,
+     and the live casualty series. Nothing is posted anywhere and there is no
+     tracker to allow, so the work this policy does is the source allowlist:
+     script can only come from here or from jsdelivr, whatever else gets onto
+     the page. Declared in a meta tag rather than a header because GitHub Pages
+     serves no headers of our choosing.
+
+     'unsafe-eval' is here for one reason: echarts-gl compiles its GLSL shaders
+     by evaluating the preprocessor expressions with `new Function`, and without
+     it the 3-D chart of the Gaza dead fails with "Invalid expression" and
+     leaves an empty container. 'unsafe-inline' is needed for the theme script
+     that has to run before first paint. Neither widens the set of origins
+     script may be fetched from, which is the part that matters here. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
+<link rel="icon" href="../assets/favicon.svg?v=33" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=33">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
 .snapshot-note a { color: #d9a441; }
 .chart-missing { margin: 0; padding: 18px 20px; border: 1px dashed rgba(255,255,255,.16);
-  border-radius: 12px; color: #7d879c; font-size: 13.5px; }</style>
+  border-radius: 12px; color: #7d879c; font-size: 13.5px; }
+.snapshot-links { max-width: 1280px; margin: 48px auto 0; padding: 24px 20px;
+  border-top: 1px solid rgba(255,255,255,.12); }
+.snapshot-links h2 { font-size: 15px; letter-spacing: .04em; text-transform: uppercase;
+  color: #7d879c; margin: 0 0 14px; }
+.snapshot-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.snapshot-links a { color: #d9a441; text-decoration: none; }
+.snapshot-links a:hover { text-decoration: underline; }
+.snapshot-links p { margin: 4px 0 0; color: #7d879c; font-size: 13px; line-height: 1.55; }</style>
 <link rel="canonical" href="https://palestinerecord.github.io/snapshot/data-complicity.html">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="alternate" type="application/atom+xml" title="The Documented Record — revisions" href="feed.xml">
@@ -31,12 +59,23 @@
 <meta name="twitter:title" content="Complicity — who supplies the war · The Documented Record">
 <meta name="twitter:description" content="Arms transfers, trade, Security Council vetoes, and the companies named in the UN database of businesses operating in the settlements.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/data-complicity.png">
-<link rel="stylesheet" href="../css/style.css?v=32">
+<link rel="preload" href="../css/style.css?v=33" as="style">
+<link rel="stylesheet" href="../css/style.css?v=33">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
 
-
+<!-- The libraries and the local scripts are all deferred: none of them paints
+     the first screen, and a synchronous script in the head blocks the parser
+     until it has been fetched, parsed and run. Document order is preserved, so
+     ECharts and GSAP are still in place before charts.js and app.js run.
+     echarts-gl is not here at all — charts.js injects it, with the same
+     integrity hash, only if a reader opens one of the two 3-D charts. -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<!-- The first screen is painted from this one file; the request should be in
+     flight while the parser is still in the head. -->
+<link rel="preload" href="../data/headline.json" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
 
 
 
@@ -45,8 +84,70 @@
      reproduces in full; the dataset describes the JSON under data/, which is a public
      API in all but name. Both dateModified values are stamped by prerender.py from
      data/timeseries.json, so neither can drift from the data actually shipped. -->
-
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://palestinerecord.github.io/#report",
+  "headline": "The Documented Record — Israel and the Occupied Territories, 1917–2026",
+  "alternativeHeadline": "A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026)",
+  "description": "A source-anchored survey of state conduct in Israel and the occupied Palestinian territories, applying identical evidentiary and legal standards to every actor. Every figure carries its source.",
+  "author": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "publisher": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "inLanguage": "en-GB",
+  "url": "https://palestinerecord.github.io/",
+  "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
+  "image": "https://palestinerecord.github.io/assets/share-card.png",
+  "wordCount": 99501,
+  "dateModified": "2026-09-12",
+  "temporalCoverage": "1917/2026",
+  "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
+  "about": [
+    { "@type": "Thing", "name": "Israeli–Palestinian conflict" },
+    { "@type": "Thing", "name": "International humanitarian law" },
+    { "@type": "Thing", "name": "Occupied Palestinian territories" }
+  ],
+  "citation": "South Africa v. Israel (Application of the Convention on the Prevention and Punishment of the Crime of Genocide in the Gaza Strip), International Court of Justice, Order of 26 January 2024"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://palestinerecord.github.io/#dataset",
+  "name": "The Documented Record — casualty, land and conduct series, 1948–2026",
+  "description": "The machine-readable base of the dashboard: daily and monthly Gaza casualty series since October 2023, the long death toll from 1948, West Bank killings, demolitions and detention, land transfer and settlement figures, the 1948 village depopulations, documented statements of intent, and the recorded position of every state. Each figure carries the source it was taken from.",
+  "url": "https://palestinerecord.github.io/#/data",
+  "creator": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "inLanguage": "en-GB",
+  "dateModified": "2026-09-12",
+  "temporalCoverage": "1948/2026",
+  "spatialCoverage": { "@type": "Place", "name": "Israel and the occupied Palestinian territories" },
+  "keywords": ["Gaza casualties", "West Bank", "settlements", "demolitions", "administrative detention", "Nakba", "arms transfers", "recognition of Palestine"],
+  "isBasedOn": [
+    { "@type": "Dataset", "name": "Tech For Palestine open datasets (Gaza Ministry of Health, OCHA, UN)", "url": "https://data.techforpalestine.org/" },
+    { "@type": "Dataset", "name": "OCHA State of Palestine subnational administrative boundaries (Common Operational Dataset)", "url": "https://data.humdata.org/dataset/cod-ab-pse" }
+  ],
+  "variableMeasured": [
+    { "@type": "PropertyValue", "name": "Cumulative Palestinians killed in Gaza, by reporting day" },
+    { "@type": "PropertyValue", "name": "Children killed in Gaza, by reporting month" },
+    { "@type": "PropertyValue", "name": "Palestinians and Israelis killed, by period since 1948" },
+    { "@type": "PropertyValue", "name": "Palestinian structures demolished, by year" },
+    { "@type": "PropertyValue", "name": "Palestinians held in administrative detention, by snapshot" },
+    { "@type": "PropertyValue", "name": "Villages depopulated in 1947–1950, by month, sub-district and recorded cause" },
+    { "@type": "PropertyValue", "name": "States recognising Palestine, by date of recognition" }
+  ],
+  "distribution": [
+    { "@type": "DataDownload", "name": "The manifest: every published file, described and dated", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/index.json" },
+    { "@type": "DataDownload", "name": "Daily and monthly casualty series", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/timeseries.json" },
+    { "@type": "DataDownload", "name": "Curated headline figures, each with its source", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/figures.json" },
+    { "@type": "DataDownload", "name": "The long record, 1948–2026", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/long-record.json" },
+    { "@type": "DataDownload", "name": "Documented statements of intent", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/statements.json" },
+    { "@type": "DataDownload", "name": "Villages depopulated 1947–1950", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/nakba.json" },
+    { "@type": "DataDownload", "name": "The recorded position of every state", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/world-positions.json" }
+  ]
+}
+</script>
 </head>
 <body data-view="data" style="">
 
@@ -59,7 +160,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=33" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -109,9 +210,9 @@
     </div>
           <div class="card">
             <h3 style="font-size:18px;margin-bottom:14px">The three suppliers</h3>
-            <div class="table-wrap"><table><tbody>
+            <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table><tbody>
               <tr><td><strong>United States</strong> — 66%<br><span class="small">Two thirds of Israel's major conventional arms imports. The relationship is not commercial in the ordinary sense: most of it is paid for with United States grant money, under the Foreign Military Financing programme, and spent back in the United States defence industry.</span></td></tr><tr><td><strong>Germany</strong> — 33%<br><span class="small">One third — the second largest supplier, and the largest in Europe. Germany approved roughly €326 million in arms exports to Israel in 2023, about ten times the 2022 figure. Berlin announced a partial suspension in August 2025 and lifted it in November 2025.</span></td></tr><tr><td><strong>Italy</strong> — 0.6%<br><span class="small">Italy suspended new export licences in October 2023 but continued deliveries under contracts signed before that date.</span></td></tr>
-            </tbody></table></div>
+            </tbody></table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
             <p class="chart-note" style="margin-top:14px">SIPRI measures deliveries of major conventional weapons, not components, spare parts or ammunition. The F-35 programme in particular is supplied through a global parts pool to which several states contribute without any bilateral licence appearing in their own figures — the mechanism the United Kingdom relied on when it suspended some direct licences in September 2024.</p>
           </div>
         </div>
@@ -207,7 +308,7 @@
         </div>
         <div class="card" style="margin-top:20px">
           <h3 style="font-size:18px;margin-bottom:14px">What the €800 million bought</h3>
-          <div class="table-wrap"><table><tbody>
+          <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table><tbody>
             <tr>
               <td style="white-space:nowrap"><strong>~66%</strong></td>
               <td>INS Drakon, a Dolphin II-class submarine built by ThyssenKrupp Marine Systems<br><span class="small">Roughly two-thirds of the approved value. The vessel departed Kiel in early September 2026 for the region.</span></td>
@@ -218,7 +319,7 @@
               <td style="white-space:nowrap"><strong>~14%</strong></td>
               <td>Small arms, ammunition, explosives and drones<br><span class="small">The remainder.</span></td>
             </tr>
-          </tbody></table></div>
+          </tbody></table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
           <p class="chart-note" style="margin-top:14px">German Federal Ministry for Economic Affairs and Energy, answer to a parliamentary inquiry by the Left Party, September 2026; reported by Der Spiegel via Anadolu Agency, and Globes</p>
         </div>
         <ul style="margin-top:18px"><li class="lvl0">The fourfold surge in the six months after the embargo was lifted shows the embargo functioned as a pause, not a reversal: German supply resumed at a higher rate than at any point before it was imposed.</li><li class="lvl0">The Left Party, whose parliamentary question produced the figures, accused Berlin of "unlimited double standards".</li><li class="lvl0">Nicaragua's case against Germany for complicity in genocide, filed at the ICJ in April 2024, was still pending when the 2026 approvals were disclosed.</li></ul>
@@ -274,9 +375,9 @@
     </div>
           <div class="card">
             <h3 style="font-size:18px;margin-bottom:14px">What the suspension left untouched</h3>
-            <div class="table-wrap"><table><tbody>
+            <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table><tbody>
               <tr><td><strong>15%</strong> — Share of every F-35 built globally that is made by BAE Systems in the UK<br><span class="small">The aircraft used against Gaza and Beirut. The component exemption survived a legal challenge: in June 2025 the High Court dismissed the case brought by Al-Haq and the Global Legal Action Network, accepting that UK parts enter a multilateral collaborative pool rather than being sold directly to Israel.</span></td></tr><tr><td><strong>600+</strong> — RAF surveillance missions flown over Gaza<br><span class="small">Flown from Cyprus, with intelligence shared with Israel.</span></td></tr><tr><td><strong>60</strong> — UK aircraft flown to Israel in the months after 7 October 2023<br><span class="small">Matt Kennard for Declassified UK, May 2024.</span></td></tr><tr><td><strong>10+</strong> — Military flights from RAF bases to Israel in the first six weeks of the Burnham premiership<br><span class="small">Eight Stratotankers from RAF Mildenhall between 24 July and 26 August 2026; an A400M Atlas from RAF Akrotiri into Tel Aviv on 26 August 2026; a US C-17 from RAF Lakenheath on 11 August 2026. Novara Media, 3 September 2026.</span></td></tr>
-            </tbody></table></div>
+            </tbody></table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
           </div>
         </div>
         <ul style="margin-top:18px"><li class="lvl0">Foreign Secretary Ed Miliband added a "double lock" on 8 September 2026 — a commitment to refuse future licence applications that materially contribute to the occupation — without extending the suspension to the F-35 exemption.</li><li class="lvl0">Nearly three years into the war, the UK had still not moved to a full two-way arms embargo, the demand made since 2024 by the TUC, the Green Party, Humza Yousaf and the Palestinian Youth Movement Britain.</li><li class="lvl0">In July 2025, while sitting in the cabinet licensing these exports, then-Health Secretary Wes Streeting wrote privately to Peter Mandelson that Israel was "committing war crimes before our eyes". He was appointed Defence Secretary on 20 July 2026.</li></ul>
@@ -305,7 +406,7 @@
       <div class="chart-table" hidden=""></div>
     </div>
         <div class="card" style="margin-top:20px;padding:0;overflow:hidden">
-          <div class="table-wrap"><table>
+          <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table>
             <thead><tr><th>State</th><th>Status</th><th>Date</th><th>Measure</th></tr></thead>
             <tbody><tr>
               <td><strong>Turkey</strong></td>
@@ -363,7 +464,7 @@
               <td>—</td>
               <td><span class="small">No restriction. Two thirds of supply, and the veto that has blocked every binding Security Council measure.</span></td>
             </tr></tbody>
-          </table></div>
+          </table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
         </div>
         <ul style="margin-top:18px"><li class="lvl0">The legal position is not in doubt. Common Article 1 of the Geneva Conventions obliges every High Contracting Party to ensure respect for the Conventions; the Arms Trade Treaty, Article 6(3), prohibits any transfer where the state knows the arms would be used in war crimes; and the International Court of Justice's advisory opinion of 19 July 2024 held that all states are under an obligation not to render aid or assistance in maintaining the unlawful occupation.</li><li class="lvl0">On 20 June 2025 the United Nations Special Rapporteur on the occupied Palestinian territory published a report naming the corporate entities she found to be sustaining it, and recommending that states and companies sever those ties.</li></ul>
       </section>
@@ -398,7 +499,7 @@
           </div>
         </div>
         <div class="card" style="margin-top:20px;padding:0;overflow:hidden">
-          <div class="table-wrap"><table>
+          <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table>
             <thead><tr><th>Institution</th><th>Date</th><th>Action</th></tr></thead>
             <tbody><tr>
               <td><strong>Norges Bank Investment Management</strong></td><td>August 2025</td>
@@ -419,7 +520,7 @@
               <td><strong>Ireland, Occupied Territories Bill</strong></td><td>2024–2025</td>
               <td><span class="small">Legislation to ban trade in goods and services originating in the settlements, revived after the International Court of Justice advisory opinion of July 2024.</span></td>
             </tr></tbody>
-          </table></div>
+          </table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
         </div>
         <ul style="margin-top:18px"><li class="lvl0">Divestment is not a boycott of a people. It is the withdrawal of investment from named commercial activity in territory an international court has held to be unlawfully occupied.</li><li class="lvl0">The precedent is exact and recent: the same instruments — disclosure, listing, divestment, procurement bans — were used against apartheid South Africa, and the states that used them are in many cases the same states that now decline to.</li></ul>
       </section>
@@ -468,7 +569,7 @@
     </div>
         </div>
         <div class="card" style="margin-top:20px;padding:0;overflow:hidden">
-          <div class="table-wrap"><table>
+          <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table>
             <thead><tr><th>Date</th><th>Draft resolution</th><th>For</th><th>Abstained</th><th>Against</th></tr></thead>
             <tbody><tr>
               <td><strong>18 Oct 2023</strong></td>
@@ -506,13 +607,13 @@
               <td><strong>14</strong></td><td>0</td>
               <td><strong style="color:#d2534c">1 — United States</strong></td>
             </tr></tbody>
-          </table></div>
+          </table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
         </div>
         <div class="card" style="margin-top:20px">
           <h3 style="font-size:18px;margin-bottom:14px">Before the war</h3>
-          <div class="table-wrap"><table><tbody>
+          <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table><tbody>
             <tr><td style="white-space:nowrap"><strong>10 Sep 1972</strong></td><td><span class="small">The first. Document S/10784, on Israeli attacks in Lebanon and Syria.</span></td></tr><tr><td style="white-space:nowrap"><strong>18 Feb 2011</strong></td><td><span class="small">A draft declaring the settlements illegal — a position the United States itself held — vetoed 14 to 1.</span></td></tr><tr><td style="white-space:nowrap"><strong>18 Dec 2017</strong></td><td><span class="small">A draft on the status of Jerusalem, vetoed 14 to 1.</span></td></tr><tr><td style="white-space:nowrap"><strong>10 May 2024</strong></td><td><span class="small">Not a veto. Blocked at the Council, the membership question went to the General Assembly, which voted 143 to 9 with 25 abstentions to upgrade Palestine's rights and to ask the Council to reconsider. The Council did not.</span></td></tr>
-          </tbody></table></div>
+          </tbody></table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
         </div>
         <ul style="margin-top:18px"><li class="lvl0">The pattern is the point. In every vote since November 2024 the tally has been fourteen to one: every other member of the Security Council, including every other permanent member and every American ally on the Council, voted for a ceasefire.</li><li class="lvl0">General Assembly resolutions on the same question have passed repeatedly by margins above 120 votes. They are not binding. That is the design the veto protects.</li></ul>
       </section>
@@ -561,7 +662,7 @@
     </div>
         </div>
         <div class="card" style="margin-top:20px;padding:0;overflow:hidden">
-          <div class="table-wrap"><table>
+          <div class="table-scroll" data-overflow="no" data-scrolled="end"><div class="table-wrap" data-overflow-bound="1" data-overflow-observed="1"><table>
             <thead><tr><th>Year</th><th>Milestone</th><th>States recognising</th><th>What happened</th></tr></thead>
             <tbody><tr>
               <td><strong>1988</strong></td><td>Declaration of Independence, Algiers</td>
@@ -582,22 +683,22 @@
               <td><strong>2025</strong></td><td>The United Kingdom, Canada, Australia, France and others</td>
               <td><strong>157</strong></td><td><span class="small">In two days, 21 and 22 September 2025, eleven further states recognised, including four G7 members.</span></td>
             </tr></tbody>
-          </table></div>
+          </table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p>
         </div>
         <p class="chart-note" style="margin-top:16px">Among the thirty-six: the United States, Germany, Italy, Japan, South Korea, the Netherlands, Austria, Greece, Switzerland, Croatia, Lithuania, Latvia, Estonia, North Macedonia, Panama, Cameroon, Eritrea, and a group of Pacific microstates — Fiji, Kiribati, the Marshall Islands, Micronesia, Nauru, Palau, Samoa, Tonga and Tuvalu — whose votes at the General Assembly are reliably aligned with Washington.</p>
         <ul style="margin-top:18px"><li class="lvl0">Recognition is a legal act with consequences: it establishes the recognising state's position that Palestine satisfies the criteria of statehood, and it opens treaty relations, diplomatic representation and standing before international bodies.</li><li class="lvl0">It is also the measure on which the gap between governments and their populations is widest. The states that continue to withhold recognition are, with few exceptions, the states that continue to supply the weapons.</li></ul>
-      </section></div></main>
+      </section></div><nav class="snapshot-links" aria-label="Other sections"><h2>Every other section, without JavaScript</h2><ul><li><a href="overview.html">The Documented Record — Israel and the Occupied Territories, 1917–2026</a></li><li><a href="tour.html">Start here — the case in eight steps</a></li><li><a href="data-gaza.html">Gaza — the toll since 7 October 2023</a></li><li><a href="data-asymmetry.html">The asymmetry — Palestinians and Israelis killed</a></li><li><a href="data-since-1948.html">Since 1948 — seventy-eight years of the toll</a></li><li><a href="data-land.html">The land — six per cent to seventy-eight</a></li><li><a href="data-west-bank.html">The West Bank — before and after October 2023</a></li><li><a href="data-wars.html">Wars and 7 October — seventy-five years of operations</a></li><li><a href="data-world.html">The world — recognition, embargoes and vetoes</a></li><li><a href="data-tables.html">Source tables — every table in the report</a></li><li><a href="timeline.html">Timeline — a dated chronology, 1917–2026</a></li><li><a href="evidence.html">Evidence — the complete report</a></li><li><a href="rebuttals.html">Rebuttals — every defence, answered</a></li><li><a href="statements.html">Statements — the documented record of intent</a></li><li><a href="legal.html">Legal — the findings and the instruments they rest on</a></li><li><a href="sources.html">Sources — what the record rests on</a></li><li><a href="method.html">Method — impartial, not neutral</a></li><li><a href="api.html">Open data — the record as files</a></li><li><a href="changelog.html">Changelog — every revision, dated</a></li></ul></nav></main>
 
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=33" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
       evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
       in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">96,839 words · 34 parts · 128 sections · 13 tables · 215 chronology entries · 85 documented statements · 104 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">99,501 words · 34 parts · 131 sections · 13 tables · 215 chronology entries · 85 documented statements · 106 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
     <!-- A record meant to be used in an argument has to be citable in one.
          Filled in by app.js with the route on screen and the date of the data
          it is showing, so a citation copied from here names the version the
@@ -618,7 +719,8 @@
       </div>
     </details>
     <p class="footer-links">
-      <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../index.html#/method">Method</a> · <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="snapshot/">Text-only versions</a> ·
       <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a> ·
       <a href="feed.xml">Feed</a>
     </p>

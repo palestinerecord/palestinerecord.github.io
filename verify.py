@@ -7,7 +7,26 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-SOURCE = ROOT.parent / "report-final.md"
+
+# The report lives in the private `hb` repository; the dashboard lives in the
+# published site repository, and `hb` reaches it through a symlink. Resolving
+# this file therefore lands in the site repository, where the report is not, so
+# look for the report rather than assuming it is one level up. REPORT_SOURCE
+# overrides, for a checkout somewhere else entirely.
+def _find_source():
+    import os
+    override = os.environ.get('REPORT_SOURCE')
+    if override:
+        return Path(override)
+    for base in (ROOT, *ROOT.parents):
+        for candidate in (base / 'report-final.md',
+                          base / 'reports' / 'israel-palestine' / 'report-final.md'):
+            if candidate.exists():
+                return candidate
+    raise SystemExit('report-final.md not found; set REPORT_SOURCE')
+
+
+SOURCE = _find_source()
 DATA = ROOT / "data" / "report.json"
 
 

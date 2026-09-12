@@ -47,9 +47,25 @@ import urllib.error
 import urllib.request
 
 HERE = pathlib.Path(__file__).resolve().parent
-ROOT = HERE.parents[2]                      # /Users/drrobot/Desktop/hb
+# `hb` holds the report; the site is a separate repository checked out beneath
+# it. Whichever of the two this file is run from, both paths have to resolve,
+# so find `hb` by looking for what only it contains rather than by counting
+# parents — the dashboard folder inside `hb` is a symlink to the clone, and a
+# resolved symlink lands three levels away from where the unresolved one does.
+def _find_root(start):
+    for candidate in (start, *start.parents):
+        if (candidate / 'reports' / 'israel-palestine' / 'report-final.md').exists():
+            return candidate
+    return start.parents[2]
+
+
+ROOT = _find_root(HERE)                     # /Users/drrobot/Desktop/hb
 TOKEN_FILE = ROOT / 'github-token'
 DEPLOY = ROOT / '.deploy' / 'palestinerecord.github.io'
+# One tree, not two. The dashboard used to live in `hb` and be mirrored into
+# the clone, which meant the older copy could silently overwrite the newer one;
+# the clone is now the only working copy and `hb` reaches it through a symlink.
+IN_PLACE = HERE == DEPLOY.resolve()
 
 OWNER = 'palestinerecord'
 REPO = 'palestinerecord.github.io'
@@ -63,9 +79,10 @@ AUTHOR = 'palestinerecord <328386359+palestinerecord@users.noreply.github.com>'
 # rsync mirrors the folder exactly, so anything that is not part of the site
 # has to be named here or it is published.
 EXCLUDES = ('.git/', '__pycache__/', '.DS_Store', 'data/raw/', '*.pyc',
-            # Working notes, not part of the record: this one was live at the
-            # site root until it was named here.
-            'dashboard_ideas.md')
+            # Working notes and local tooling, not part of the record. The
+            # notes were live at the site root until they were named here, so
+            # the rule is a pattern now rather than one filename at a time.
+            'dashboard_*.md', '.code-review-graph/')
 
 # Fetched after the Pages build to prove the deployment is the one just pushed.
 LIVE_CHECKS = ('/', '/data/figures.json', '/data/report.json', '/js/charts.js',
@@ -314,7 +331,27 @@ def mirror():
 
     `--delete` is what makes the live site a mirror rather than an accumulation:
     without it, a file renamed locally stays served under its old name forever.
+
+    When this script is already running inside the clone there is nothing to
+    mirror: the working copy and the published copy are the same tree, which is
+    the arrangement that removed the whole class of "the older copy overwrote
+    the newer one" failure. The uncommitted changes are the changes to publish.
     """
+    if IN_PLACE:
+        changed = run(['git', 'status', '--porcelain'], cwd=DEPLOY)
+        lines = [line for line in changed.splitlines() if line.strip()]
+        say('publishing in place: %d paths differ from the published site' % len(lines))
+        return lines
+
+    # Two trees. Refuse to mirror over a clone that has moved on its own since
+    # the last run, because rsync --delete would take the newer work with it.
+    stamp = DEPLOY / '.git' / 'last-publish-head'
+    head = run(['git', 'rev-parse', 'HEAD'], cwd=DEPLOY)
+    if stamp.exists() and stamp.read_text().strip() != head:
+        raise Stop('the site clone has commits this folder did not publish '
+                   '(%s, last published %s). Mirroring would delete them. '
+                   'Reconcile the two trees first.' % (head[:8], stamp.read_text().strip()[:8]))
+
     args = ['rsync', '-a', '--delete']
     for pattern in EXCLUDES:
         args += ['--exclude', pattern]
@@ -355,6 +392,10 @@ def push():
         env['GIT_ASKPASS'] = str(helper)
         out = run(['git', 'push', '--quiet', REMOTE, 'HEAD:main'], cwd=DEPLOY, env=env)
     say('pushed to %s/%s' % (OWNER, REPO))
+    # What this run published, so a later mirroring run can tell whether the
+    # clone has moved since. Inside .git/, so it is never itself published.
+    (DEPLOY / '.git' / 'last-publish-head').write_text(
+        run(['git', 'rev-parse', 'HEAD'], cwd=DEPLOY) + '\n')
     return out
 
 

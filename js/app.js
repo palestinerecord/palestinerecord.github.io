@@ -16,11 +16,15 @@ const App = (function () {
   let D = null;
   let searchIndex = null;
   const triggers = [];
+  /* Set when the overview has been painted from headline.json alone, and
+     cleared by the first full render, which must not animate a hero and a set
+     of figures the reader is already looking at. */
+  let earlyPainted = false;
 
   if (window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
   const VIEWS = ['overview', 'tour', 'data', 'timeline', 'evidence', 'rebuttals', 'statements', 'legal',
-    'sources', 'api', 'changelog', 'embed'];
+    'sources', 'method', 'api', 'changelog', 'embed'];
 
   /* index.html?prerender=1 renders the text and nothing else: no charts, no
      scroll reveals, no counting numbers, no WebGL scene. prerender.py uses it
@@ -31,13 +35,17 @@ const App = (function () {
 
   /* ---------- loading ---------- */
 
-  /* Fourteen files, fetched together rather than one after another: the boot
-     time is then the slowest single file, not the sum of all fourteen. The map
+  /* Fifteen files, fetched together rather than one after another: the boot
+     time is then the slowest single file, not the sum of all fifteen. The map
      geometry is not among them — charts.js fetches that only if a map is
-     actually drawn. */
+     actually drawn — and neither is report.json, the largest file on the site,
+     which only the five routes in REPORT_ROUTES read and which is fetched on
+     the first of them (see ensureReport). What the other routes need of it is
+     in report-meta.json (the counts) and chronology.json (Appendix B). */
   async function load() {
     const files = [
-      ['report', 'data/report.json'],
+      ['rmeta', 'data/report-meta.json'],
+      ['chronology', 'data/chronology.json'],
       ['ts', 'data/timeseries.json'],
       ['fig', 'data/figures.json'],
       ['statements', 'data/statements.json'],
@@ -68,9 +76,82 @@ const App = (function () {
     }));
     const D = {};
     parts.forEach(([key, json]) => { D[key] = json; });
-    D.timeline = mergeTimeline(D.report.timeline, D.extra);
+    D.timeline = mergeTimeline(D.chronology.entries, D.extra);
     D.manifest = await manifest;
     return D;
+  }
+
+  /* ---------- the full report, on demand ---------- */
+
+  /* The routes that reproduce the report itself, rather than quoting figures
+     drawn from it. Everything else renders without report.json. */
+  const REPORT_ROUTES = ['evidence', 'rebuttals', 'legal', 'changelog'];
+
+  let reportPromise = null;
+
+  /* Promise-cached, the same pattern charts.js uses for map geometry: the
+     second route to ask for the report waits on the first route's fetch rather
+     than starting another one. */
+  function ensureReport() {
+    if (D && D.report) return Promise.resolve(D.report);
+    if (!reportPromise) {
+      reportPromise = fetch('data/report.json')
+        .then((r) => { if (!r.ok) throw new Error(`data/report.json — HTTP ${r.status}`); return r.json(); })
+        .then((json) => {
+          D.report = json;
+          if (Views.setData) Views.setData(D);
+          return json;
+        })
+        .catch((err) => { reportPromise = null; throw err; });
+    }
+    return reportPromise;
+  }
+
+  /* `#/data/tables` reads report.tables, and the search index reads every
+     paragraph of it, so both go through ensureReport as well. */
+  function routeNeedsReport(name, sub) {
+    return REPORT_ROUTES.indexOf(name) >= 0 || (name === 'data' && sub === 'tables');
+  }
+
+  /* ---------- the first screen ---------- */
+
+  /* data/headline.json is under two kilobytes and carries the eight headline
+     figures and the counts the hero quotes. Painting the overview from it ends
+     the loading screen as soon as that one small file lands, rather than after
+     the fifteen files the rest of the record needs. The full render follows and
+     replaces it with the same markup plus the charts.
+
+     Only the overview, and only a real visit: the prerenderer wants the
+     finished route, and any other route would be painted and then thrown away. */
+  async function earlyPaint() {
+    if (STATIC) return false;
+    // An in-page anchor is not a route, and currentRoute() reads it as the
+    // overview; rendering the overview under it would be thrown away at once.
+    if (location.hash && location.hash.indexOf('#/') !== 0) return false;
+    if (currentRoute().name !== 'overview') return false;
+    try {
+      const res = await fetch('data/headline.json');
+      if (!res.ok) return false;
+      const h = await res.json();
+      if (!boot.isConnected) return false;
+      document.body.setAttribute('data-view', 'overview');
+      app.innerHTML = Views.earlyOverview(h);
+      earlyPainted = true;
+      dismissBoot();
+      return true;
+    } catch (err) {
+      console.error('early paint', err);
+      return false;
+    }
+  }
+
+  let bootGone = false;
+
+  function dismissBoot() {
+    if (bootGone) return;
+    bootGone = true;
+    boot.classList.add('done');
+    setTimeout(() => boot.remove(), 600);
   }
 
   /* ---------- the names on the loading screen ---------- */
@@ -168,8 +249,11 @@ const App = (function () {
         if (el) el.scrollIntoView({ behavior: rendered ? 'smooth' : 'auto', block: 'start' });
       };
       if (rendered) { scroll(); return; }
-      render(id.indexOf('legal-') === 0 ? 'legal' : 'evidence');
-      requestAnimationFrame(scroll);
+      const owner = id.indexOf('legal-') === 0 ? 'legal' : 'evidence';
+      render(owner);
+      // Both owners reproduce the report, so the anchor may not exist until
+      // report.json has arrived and the view has rendered a second time.
+      ensureReport().then(() => requestAnimationFrame(scroll)).catch(() => {});
       return;
     }
 
@@ -217,6 +301,23 @@ const App = (function () {
     document.body.setAttribute('data-view', name);
     try { setHead(name, sub); } catch (err) { console.error('head', err); }
 
+    // The four routes that reproduce the report wait for it here rather than
+    // making every other route wait for it at boot. One line on screen while
+    // it arrives; the render then runs again with the report in hand.
+    if (routeNeedsReport(name, sub) && !(D && D.report)) {
+      app.innerHTML = '<div class="section"><div class="card" style="padding:26px">'
+        + '<p class="chart-note">Loading the full report…</p></div></div>';
+      ensureReport().then(() => {
+        const now = currentRoute();
+        if (now.name === name && (now.sub || '') === (sub || '')) render(name, sub);
+      }).catch((err) => {
+        app.innerHTML = '<div class="section"><div class="card" style="padding:26px">'
+          + `<p class="chart-note">Could not load the report: ${Views.esc(err.message)}</p></div></div>`;
+        console.error(err);
+      });
+      return;
+    }
+
     Charts.dispose();
     while (triggers.length) triggers.pop().kill();
 
@@ -227,10 +328,13 @@ const App = (function () {
     nav.classList.remove('open');
 
     // Chrome, motion and behaviour are all optional extras — the content is not.
+    const settled = earlyPainted;
+    earlyPainted = false;
     if (!STATIC) {
       try { Charts.init(app, D); } catch (err) { console.error('charts', err); }
-      try { reveal(); countUp(); } catch (err) { console.error('motion', err); }
+      try { reveal(settled); countUp(settled); } catch (err) { console.error('motion', err); }
     }
+    try { tableOverflow(); } catch (err) { console.error('tables', err); }
     try { behaviours[name] && behaviours[name](); } catch (err) { console.error('behaviour', name, err); }
     if (window.Scene && !STATIC) Scene.setView(name);
     try { scrollToChart(); } catch (err) { console.error('deep link', err); }
@@ -241,11 +345,13 @@ const App = (function () {
 
   /* ---------- shared motion ---------- */
 
-  function reveal() {
+  /* `settled` marks the render that replaces the early overview: its hero and
+     its figures are already on screen and must not animate in a second time. */
+  function reveal(settled) {
     if (!window.gsap || !window.ScrollTrigger) return;
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const hero = app.querySelectorAll('[data-hero-title], [data-hero-lede], [data-hero-meta], [data-hero-cta]');
+    const hero = settled ? [] : app.querySelectorAll('[data-hero-title], [data-hero-lede], [data-hero-meta], [data-hero-cta]');
     if (hero.length) {
       gsap.from(hero, { y: 26, opacity: 0, duration: 0.9, stagger: 0.09, ease: 'power3.out' });
     }
@@ -263,7 +369,7 @@ const App = (function () {
   }
 
   // Count the headline numbers up when they scroll into view.
-  function countUp() {
+  function countUp(settled) {
     const nodes = app.querySelectorAll('.val[data-count]');
     if (!nodes.length) return;
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -294,7 +400,15 @@ const App = (function () {
         requestAnimationFrame(step);
       });
     }, { threshold: 0.4 });
-    nodes.forEach((n) => io.observe(n));
+    nodes.forEach((n) => {
+      if (settled) {
+        // Already read, already on screen: counting it up from zero now would
+        // replace a correct figure with a wrong one for a second.
+        const r = n.getBoundingClientRect();
+        if (r.bottom > 0 && r.top < innerHeight) return;
+      }
+      io.observe(n);
+    });
   }
 
   /* ---------- freshness and return visits ---------- */
@@ -404,6 +518,46 @@ const App = (function () {
   /* One delegated handler for every chart card on every route: copy a deep
      link to the chart, export it as a captioned PNG or as CSV, or read the
      plotted numbers as an HTML table. */
+  /* ---------- tables that are wider than the page ---------- */
+
+  /* A source table at 390 px is 567 px wide. `.table-wrap` scrolls it, which is
+     the right behaviour, but nothing on screen says a column is missing. Wrap
+     each one, fade its right edge while there is more to the right, and state
+     it in a line of text for a reader who cannot see the fade. Done here rather
+     than in the templates because six different places emit a `.table-wrap`,
+     including the chart table tool, which inserts one after the render. */
+  function tableOverflow(root) {
+    (root || app).querySelectorAll('.table-wrap').forEach((wrap) => {
+      let shell = wrap.parentElement;
+      if (!shell || !shell.classList.contains('table-scroll')) {
+        shell = document.createElement('div');
+        shell.className = 'table-scroll';
+        wrap.parentNode.insertBefore(shell, wrap);
+        shell.appendChild(wrap);
+        const note = document.createElement('p');
+        note.className = 'table-note';
+        note.textContent = 'This table is wider than the screen — scroll it sideways to see the rest.';
+        shell.parentNode.insertBefore(note, shell.nextSibling);
+      }
+      const update = () => {
+        const over = wrap.scrollWidth - wrap.clientWidth;
+        shell.dataset.overflow = over > 2 ? 'yes' : 'no';
+        shell.dataset.scrolled = wrap.scrollLeft >= over - 2 ? 'end' : 'more';
+      };
+      if (!wrap.dataset.overflowBound) {
+        wrap.addEventListener('scroll', update, { passive: true });
+        wrap.dataset.overflowBound = '1';
+      }
+      update();
+      // The first measurement runs before web fonts have settled, which changes
+      // every column width; re-measure when the element next resizes.
+      if (window.ResizeObserver && !wrap.dataset.overflowObserved) {
+        new ResizeObserver(update).observe(wrap);
+        wrap.dataset.overflowObserved = '1';
+      }
+    });
+  }
+
   function chartTools() {
     app.addEventListener('click', (e) => {
       const btn = e.target.closest && e.target.closest('.chart-tool');
@@ -481,6 +635,7 @@ const App = (function () {
       <tbody>${t.rows.map((r) => `<tr>${r.map((c) => `<td>${Views.esc(c)}</td>`).join('')}</tr>`).join('')}</tbody>
     </table></div>`;
     box.hidden = false;
+    try { tableOverflow(box); } catch (err) { console.error('tables', err); }
     return true;
   }
 
@@ -975,26 +1130,110 @@ const App = (function () {
 
   /* ---------- search ---------- */
 
+  /* Everything the record holds, not only the report's prose. A reader
+     searching "Gallant" wants the statements he made, the determinations that
+     name him and the charts that plot the conduct, not only the paragraphs
+     that mention him — so statements, chronology entries, legal
+     determinations, linked sources, the duty-to-prevent scorecard and every
+     chart title are indexed alongside the report, grouped by kind in the
+     results, with a title match ranked above a match in the body. */
+
+  const KINDS = [
+    ['report', 'The report'],
+    ['statement', 'Statements'],
+    ['legal', 'Legal determinations'],
+    ['chart', 'Charts'],
+    ['timeline', 'Chronology'],
+    ['scorecard', 'Duty to prevent'],
+    ['source', 'Sources'],
+  ];
+
   function buildIndex() {
     const out = [];
-    const push = (crumb, anchor, text) => {
-      const clean = text.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
-      if (clean.length > 2) out.push({ crumb, anchor, text: clean, lower: clean.toLowerCase() });
+    const clean = (text) => String(text == null ? '' : text)
+      .replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+
+    // `title` is what the hit is called; `text` is what it says. Both are
+    // searched; a match in the title sorts first.
+    const push = (kind, crumb, title, text, route, anchor, url) => {
+      const t = clean(title);
+      const b = clean(text);
+      if (t.length < 2 && b.length < 3) return;
+      out.push({
+        kind, crumb, title: t, text: b, route, anchor: anchor || '', url: url || '',
+        lower: (t + ' ' + b).toLowerCase(), titleLower: t.toLowerCase(),
+      });
     };
-    const walk = (crumb, anchor, blocks) => blocks.forEach((b) => {
-      if (b.type === 'paragraph' || b.type === 'subheading') push(crumb, anchor, b.html);
-      else if (b.type === 'list') b.items.forEach((i) => push(crumb, anchor, i.html));
-      else if (b.type === 'table') b.rows.forEach((r) => push(crumb, anchor, r.join(' — ')));
+
+    // The report, when it has been loaded. Every other kind is indexed from
+    // files that are always present, so search works before report.json lands.
+    if (D.report) {
+      const walk = (crumb, anchor, blocks) => blocks.forEach((b) => {
+        if (b.type === 'paragraph' || b.type === 'subheading') push('report', crumb, crumb, b.html, 'evidence', anchor);
+        else if (b.type === 'list') b.items.forEach((i) => push('report', crumb, crumb, i.html, 'evidence', anchor));
+        else if (b.type === 'table') b.rows.forEach((r) => push('report', crumb, crumb, r.join(' — '), 'evidence', anchor));
+      });
+      D.report.parts.forEach((p) => {
+        push('report', p.title, p.title, '', 'evidence', 'part-' + p.id);
+        walk(p.title, 'part-' + p.id, p.blocks);
+        p.sections.forEach((s) => {
+          const crumb = p.title + ' › ' + s.title;
+          push('report', crumb, s.title, '', 'evidence', 'sec-' + s.id);
+          walk(crumb, 'sec-' + s.id, s.blocks);
+        });
+      });
+    }
+
+    D.statements.items.forEach((x, i) => {
+      push('statement', `${x.speaker} · ${x.date}`, `${x.speaker} — ${x.role}`,
+        `“${x.quote}” ${x.context} ${x.significance} ${x.source} ${x.tier}`,
+        'statements', 'st-' + i);
     });
-    D.report.parts.forEach((p) => {
-      push(p.title, 'part-' + p.id, p.title);
-      walk(p.title, 'part-' + p.id, p.blocks);
-      p.sections.forEach((s) => {
-        push(p.title + ' › ' + s.title, 'sec-' + s.id, s.title);
-        walk(p.title + ' › ' + s.title, 'sec-' + s.id, s.blocks);
+
+    D.timeline.forEach((e, i) => {
+      push('timeline', e.date, e.event, e.note || '', 'timeline', 'tl-' + i);
+    });
+
+    (D.legal.determinations || []).forEach((d) => {
+      const name = d.body || d.institution || d.name || '';
+      push('legal', [name, d.date].filter(Boolean).join(' · '), name,
+        [d.finding, d.note, d.terms, d.title, d.source].filter(Boolean).join(' '),
+        'legal', '');
+    });
+
+    // The scorecard is built in views.js from world-positions.json rather than
+    // held as a file, so it is indexed through the same function that draws it.
+    try {
+      Views.scorecardRows().forEach((r) => {
+        push('scorecard', 'Duty to prevent · ' + r.name, r.name,
+          [r.recognises ? 'recognises Palestine ' + r.recognises : 'does not recognise Palestine',
+            r.arms ? 'arms transfers ' + r.arms : '', r.icj ? 'ICJ ' + r.icj : '',
+            (r.measures || []).map((m) => m.label).join(' '),
+            r.recogniseNote, r.armsNote, r.shareNote].filter(Boolean).join(' '),
+          'legal', 'scorecard');
+      });
+    } catch (err) { console.error('scorecard index', err); }
+
+    D.sources.groups.forEach((g) => {
+      g.items.forEach((item) => {
+        push('source', [item.org, item.date].filter(Boolean).join(' · '), item.title,
+          [item.note, item.org].filter(Boolean).join(' '), 'sources', '', item.url);
       });
     });
+
+    try {
+      const charts = Views.charts();
+      Object.keys(charts).forEach((name) => {
+        const c = charts[name];
+        // `#/data/gaza&chart=gaza-monthly` is the app's own deep-link form.
+        push('chart', 'Chart · ' + c.source, c.title, [c.note, c.name].filter(Boolean).join(' '),
+          c.route.replace(/^#\//, ''), '', '');
+        out[out.length - 1].chart = c.name;
+        out[out.length - 1].href = c.route + '&chart=' + c.name;
+      });
+    } catch (err) { console.error('chart index', err); }
+
     return out;
   }
 
@@ -1004,61 +1243,150 @@ const App = (function () {
     const meta = document.getElementById('search-meta');
     const results = document.getElementById('search-results');
 
+    let cursor = -1;
+
+    const rebuild = () => { searchIndex = buildIndex(); };
+
     const open = () => {
-      if (!searchIndex) searchIndex = buildIndex();
+      if (!searchIndex) rebuild();
       overlay.hidden = false;
       document.body.classList.add('locked');
       input.focus();
       input.select();
-      meta.textContent = `Searching ${searchIndex.length.toLocaleString('en-GB')} passages from the full report.`;
+      describe();
+      // The report is the largest part of the index and arrives on demand;
+      // pull it in on the first search and re-index when it lands.
+      if (!D.report) ensureReport().then(() => { rebuild(); describe(); run(); }).catch(() => {});
     };
     const close = () => { overlay.hidden = true; document.body.classList.remove('locked'); };
 
+    const describe = () => {
+      if (input.value.trim().length >= 2) return;
+      meta.textContent = `Searching ${searchIndex.length.toLocaleString('en-GB')} entries — `
+        + `the report, statements, the chronology, legal determinations, sources and every chart.`;
+    };
+
     document.getElementById('search-open').addEventListener('click', open);
     overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+
+    const move = (delta) => {
+      const hits = results.querySelectorAll('.search-hit');
+      if (!hits.length) return;
+      cursor = (cursor + delta + hits.length) % hits.length;
+      hits.forEach((h, i) => h.classList.toggle('cursor', i === cursor));
+      hits[cursor].scrollIntoView({ block: 'nearest' });
+      hits[cursor].focus({ preventScroll: true });
+    };
 
     document.addEventListener('keydown', (e) => {
       const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
       if (e.key === '/' && !typing) { e.preventDefault(); open(); }
       if ((e.key === 'k' || e.key === 'K') && (e.metaKey || e.ctrlKey)) { e.preventDefault(); open(); }
-      if (e.key === 'Escape' && !overlay.hidden) close();
+      if (overlay.hidden) return;
+      if (e.key === 'Escape') { close(); return; }
+      // Arrow keys walk the results from the box without leaving it; Enter
+      // follows the one under the cursor.
+      if (e.key === 'ArrowDown') { e.preventDefault(); move(1); }
+      if (e.key === 'ArrowUp') { e.preventDefault(); move(-1); }
+      if (e.key === 'Enter' && cursor >= 0) {
+        const hit = results.querySelectorAll('.search-hit')[cursor];
+        if (hit) { e.preventDefault(); hit.click(); }
+      }
     });
 
-    let timer = null;
-    input.addEventListener('input', () => {
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        const term = input.value.trim().toLowerCase();
-        if (term.length < 2) {
-          results.innerHTML = '';
-          meta.textContent = 'Type at least two characters.';
+    /* A hit is a route, an optional anchor and an optional chart. Going to it
+       may mean rendering a different route first, and the route it renders may
+       be one that waits on report.json, so the scroll retries until the anchor
+       exists rather than assuming it does. */
+    const go = (hit) => {
+      close();
+      const target = hit.chart ? `#/${hit.route}&chart=${hit.chart}` : `#/${hit.route}`;
+      const current = currentRoute();
+      const same = current.name === hit.route.split('/')[0]
+        && (current.sub || '') === (hit.route.split('/')[1] || '');
+      if (!same || hit.chart) location.hash = target;
+      if (!hit.anchor) return;
+      let tries = 0;
+      const tick = () => {
+        const el = document.getElementById(hit.anchor);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          el.classList.add('search-target');
+          setTimeout(() => el.classList.remove('search-target'), 2600);
           return;
         }
-        const hits = [];
-        for (let i = 0; i < searchIndex.length && hits.length < 60; i++) {
-          if (searchIndex[i].lower.indexOf(term) >= 0) hits.push(searchIndex[i]);
-        }
-        meta.textContent = `${hits.length}${hits.length === 60 ? '+' : ''} passages matching “${input.value.trim()}”`;
-        results.innerHTML = hits.map((h) => {
-          const at = h.lower.indexOf(term);
-          const from = Math.max(0, at - 90);
-          const snippet = (from > 0 ? '…' : '') + h.text.slice(from, at + term.length + 150) + '…';
-          return `<a class="search-hit" href="#/evidence?${encodeURIComponent(h.anchor)}">
-            <div class="crumb">${Views.esc(h.crumb)}</div>
-            <div class="snip">${highlight(snippet, term)}</div>
-          </a>`;
-        }).join('') || '<div class="chart-note" style="padding:18px">No passage matches that term.</div>';
+        if (tries++ < 40) setTimeout(tick, 80);
+      };
+      setTimeout(tick, 60);
+    };
 
-        results.querySelectorAll('.search-hit').forEach((a) => a.addEventListener('click', () => {
-          close();
-          // Same-route deep link: the hashchange may not fire, so scroll manually.
-          setTimeout(() => {
-            const id = decodeURIComponent(a.getAttribute('href').split('?')[1]);
-            const el = document.getElementById(id);
-            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 120);
-        }));
-      }, 110);
+    let timer = null;
+    let lastHits = [];
+
+    function run() {
+      const term = input.value.trim().toLowerCase();
+      cursor = -1;
+      if (term.length < 2) {
+        results.innerHTML = '';
+        describe();
+        return;
+      }
+      const hits = [];
+      for (let i = 0; i < searchIndex.length; i++) {
+        const entry = searchIndex[i];
+        const inTitle = entry.titleLower.indexOf(term) >= 0;
+        if (!inTitle && entry.lower.indexOf(term) < 0) continue;
+        hits.push({ entry, inTitle });
+        if (hits.length >= 400) break;
+      }
+      // Title matches first, then the order the kinds are listed in, then the
+      // order the entries were indexed in — which is the order they appear on
+      // the page. No relevance score beyond that: the record is not a corpus
+      // to be ranked, and a stable order is easier to check.
+      const rank = (h) => (h.inTitle ? 0 : 1) * 100 + KINDS.findIndex((k) => k[0] === h.entry.kind);
+      hits.sort((a, b) => rank(a) - rank(b));
+      const shown = hits.slice(0, 80);
+      lastHits = shown.map((h) => h.entry);
+
+      const counts = {};
+      hits.forEach((h) => { counts[h.entry.kind] = (counts[h.entry.kind] || 0) + 1; });
+      const summary = KINDS.filter((k) => counts[k[0]])
+        .map((k) => `${counts[k[0]]} ${k[1].toLowerCase()}`).join(' · ');
+      meta.textContent = `${hits.length}${hits.length >= 400 ? '+' : ''} matches for “${input.value.trim()}”`
+        + (summary ? ` — ${summary}` : '')
+        + (D.report ? '' : ' — the full report is still loading');
+
+      let lastKind = null;
+      results.innerHTML = shown.map((h, i) => {
+        const e = h.entry;
+        const at = e.lower.indexOf(term);
+        const body = e.text || e.title;
+        const bodyAt = body.toLowerCase().indexOf(term);
+        const from = Math.max(0, (bodyAt < 0 ? 0 : bodyAt) - 90);
+        const snippet = (from > 0 ? '…' : '') + body.slice(from, from + 240) + (body.length > from + 240 ? '…' : '');
+        const heading = e.kind === lastKind ? ''
+          : `<div class="search-group">${Views.esc((KINDS.find((k) => k[0] === e.kind) || [, e.kind])[1])}</div>`;
+        lastKind = e.kind;
+        const href = e.url || (e.chart ? `#/${e.route}&chart=${e.chart}` : `#/${e.route}`);
+        const external = e.kind === 'source' && e.url;
+        return heading + `<a class="search-hit" data-i="${i}" href="${Views.esc(href)}"
+            ${external ? 'target="_blank" rel="noopener"' : ''}>
+          <div class="crumb">${Views.esc(e.crumb)}${external ? ' ↗' : ''}</div>
+          <div class="hit-title">${highlight(e.title, term)}</div>
+          ${snippet && snippet !== e.title ? `<div class="snip">${highlight(snippet, term)}</div>` : ''}
+        </a>`;
+      }).join('') || '<div class="chart-note" style="padding:18px">Nothing in the record matches that term.</div>';
+
+      results.querySelectorAll('.search-hit').forEach((a) => {
+        const hit = lastHits[Number(a.dataset.i)];
+        if (hit && hit.url) return;   // a source link leaves the site; let it
+        a.addEventListener('click', (e) => { e.preventDefault(); go(hit); });
+      });
+    }
+
+    input.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(run, 110);
     });
   }
 
@@ -1066,22 +1394,33 @@ const App = (function () {
 
   async function start() {
     bootNames();
+    // Both start now: the early paint needs one small file, the rest of the
+    // record needs fifteen, and neither should wait on the other.
+    const full = load();
+    full.catch(() => {});  // handled below; this only stops an unhandled rejection
+    await earlyPaint();
     try {
-      D = await load();
+      D = await full;
     } catch (err) {
-      bootStatus.innerHTML = `Could not load data: ${Views.esc(err.message)}<br><span style="opacity:.6">Serve this folder over HTTP, e.g. <code>python3 -m http.server</code>.</span>`;
+      const message = `Could not load data: ${Views.esc(err.message)}<br><span style="opacity:.6">Serve this folder over HTTP, e.g. <code>python3 -m http.server</code>.</span>`;
+      if (bootGone) {
+        app.insertAdjacentHTML('afterbegin',
+          `<div class="section wrap"><div class="card" style="padding:22px"><p class="chart-note">${message}</p></div></div>`);
+      } else {
+        bootStatus.innerHTML = message;
+      }
       console.error(err);
       return;
     }
 
     Views.setData(D);
 
-    const s = D.report.stats;
+    const s = D.rmeta.stats;
     document.getElementById('footer-stats').innerHTML =
       `${Views.fmt(s.words)} words · ${s.parts} parts · ${s.sections} sections · ${s.tables} tables · ` +
       `${D.timeline.length} chronology entries · ${D.statements.items.length} documented statements · ` +
       `${D.sources.groups.reduce((n, g) => n + g.items.length, 0)} linked sources · ` +
-      `${D.report.bibliography.length} bibliography entries. Casualty time-series: ` +
+      `${D.rmeta.bibliography_count} bibliography entries. Casualty time-series: ` +
       `<a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> ` +
       `(public domain), ${D.ts.meta.first_month} – ${D.ts.meta.last_month}.`;
 
@@ -1099,8 +1438,7 @@ const App = (function () {
     sinceLastVisit();
     route();
 
-    boot.classList.add('done');
-    setTimeout(() => boot.remove(), 600);
+    dismissBoot();
   }
 
   return { start, get data() { return D; } };

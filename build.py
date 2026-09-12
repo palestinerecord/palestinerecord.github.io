@@ -10,7 +10,26 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-SOURCE = ROOT.parent / "report-final.md"
+
+# The report lives in the private `hb` repository; the dashboard lives in the
+# published site repository, and `hb` reaches it through a symlink. Resolving
+# this file therefore lands in the site repository, where the report is not, so
+# look for the report rather than assuming it is one level up. REPORT_SOURCE
+# overrides, for a checkout somewhere else entirely.
+def _find_source():
+    import os
+    override = os.environ.get('REPORT_SOURCE')
+    if override:
+        return Path(override)
+    for base in (ROOT, *ROOT.parents):
+        for candidate in (base / 'report-final.md',
+                          base / 'reports' / 'israel-palestine' / 'report-final.md'):
+            if candidate.exists():
+                return candidate
+    raise SystemExit('report-final.md not found; set REPORT_SOURCE')
+
+
+SOURCE = _find_source()
 OUT = ROOT / "data"
 
 INLINE_LINK = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
@@ -275,11 +294,43 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "report.json").write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
+    # report.json is the largest file on the site and only five routes read it.
+    # Two small files carry what the rest need, so the first screen does not
+    # wait on 880 KB of JSON it will not use: the chronology (Appendix B, which
+    # the Timeline merges with timeline-extra.json) and the counts the Overview,
+    # Sources and Open-data routes quote.
+    chronology = {
+        "meta": {
+            "source": "report-final.md, Appendix B",
+            "note": "The chronology of recorded crimes and massacres, split out of "
+                    "report.json so the Timeline can be read without loading the full report.",
+            "count": len(doc["timeline"]),
+        },
+        "entries": doc["timeline"],
+    }
+    (OUT / "chronology.json").write_text(
+        json.dumps(chronology, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+    meta = {
+        "title": doc["title"],
+        "stats": doc["stats"],
+        "bibliography_count": len(doc["bibliography"]),
+        # 25 KB, and the Sources route is the one that reads it: carrying it here
+        # keeps that route off report.json entirely.
+        "bibliography": doc["bibliography"],
+        "statement_count": len(doc["statements"]),
+        "timeline_count": len(doc["timeline"]),
+        "parts": [{"id": p["id"], "title": p["title"]} for p in doc["parts"]],
+    }
+    (OUT / "report-meta.json").write_text(
+        json.dumps(meta, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
     s = doc["stats"]
     print(f"parts={s['parts']} sections={s['sections']} tables={s['tables']} words={s['words']:,}")
     print(f"timeline={len(doc['timeline'])} statements={len(doc['statements'])} "
           f"bibliography={len(doc['bibliography'])}")
-    print(f"wrote {(OUT / 'report.json').stat().st_size / 1024:.0f} KB")
+    for name in ("report.json", "chronology.json", "report-meta.json"):
+        print(f"wrote {name} {(OUT / name).stat().st_size / 1024:.0f} KB")
 
 
 if __name__ == "__main__":

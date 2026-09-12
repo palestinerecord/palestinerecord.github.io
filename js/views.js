@@ -24,6 +24,15 @@ const Views = (function () {
     return fmt(n);
   };
 
+  /* A speaker's name, reduced to something that can sit in a URL. Used by the
+     statement anchors and by `#/statements/<slug>`, the one-speaker view. */
+  const speakerSlug = (name) => String(name || '')
+    .toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/\(.*?\)/g, ' ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
   /* ---------- shared fragments ---------- */
 
   function head(eyebrow, title, lede) {
@@ -51,13 +60,13 @@ const Views = (function () {
           ${/* charts.js declares Charts with const, which binds in the script
                scope and not on window, so this must test the bare name. */
             typeof Charts !== 'undefined' && Charts.hasEvents && Charts.hasEvents(name)
-            ? `<button class="chart-tool" data-tool="events" title="Mark the dated events on this series" aria-label="Show dated events on this chart" aria-pressed="false">events</button>`
+            ? `<button class="chart-tool" data-tool="events" title="Mark the dated events on this series" aria-label="events — mark the dated events on this chart" aria-pressed="false">events</button>`
             : ''}
-          <button class="chart-tool" data-tool="link" title="Copy a link to this chart" aria-label="Copy a link to this chart">link</button>
-          <button class="chart-tool" data-tool="png" title="Download a captioned PNG" aria-label="Download this chart as a PNG">png</button>
-          <button class="chart-tool" data-tool="csv" title="Download the plotted data" aria-label="Download this chart's data as CSV">csv</button>
-          <button class="chart-tool" data-tool="embed" title="Copy an iframe that shows this chart on another site" aria-label="Copy an embed code for this chart">embed</button>
-          <button class="chart-tool" data-tool="table" title="Read the numbers as a table" aria-label="Show this chart as a table" aria-expanded="false">table</button>
+          <button class="chart-tool" data-tool="link" title="Copy a link to this chart" aria-label="link — copy a link to this chart">link</button>
+          <button class="chart-tool" data-tool="png" title="Download a captioned PNG" aria-label="png — download a captioned image of this chart">png</button>
+          <button class="chart-tool" data-tool="csv" title="Download the plotted data" aria-label="csv — download the plotted data">csv</button>
+          <button class="chart-tool" data-tool="embed" title="Copy an iframe that shows this chart on another site" aria-label="embed — copy an iframe for this chart">embed</button>
+          <button class="chart-tool" data-tool="table" title="Read the numbers as a table" aria-label="table — read the numbers as a table" aria-expanded="false">table</button>
         </div>
       </div>
       <div class="chart ${cls || ''}" data-chart="${name}" role="img" aria-label="${esc(title)}"></div>
@@ -75,7 +84,7 @@ const Views = (function () {
       ${s.note ? `<div class="note">${esc(s.note)}</div>` : ''}
       ${s.source ? `<div class="src">${esc(s.source)}${s.ref ? ' · ' + esc(s.ref) : ''}</div>` : ''}
       <button class="share-card" data-share="figure" title="Save this figure as a shareable card"
-        aria-label="Save this figure as a shareable image">card</button>
+        aria-label="card — save this figure as an image">card</button>
     </div>`;
   }
 
@@ -103,7 +112,7 @@ const Views = (function () {
   /* ---------- overview ---------- */
 
   function overview() {
-    const s = D.report.stats;
+    const s = D.rmeta.stats;
     const h = D.fig.headline;
     const meta = D.ts.meta;
 
@@ -111,11 +120,11 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=32" alt="Flag of Palestine">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=33" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
-          <p class="hero-lede" data-hero-lede>${esc(D.report.title)}. Every heading, paragraph, table and citation of the
+          <p class="hero-lede" data-hero-lede>${esc(D.rmeta.title)}. Every heading, paragraph, table and citation of the
             source report, rendered as an interactive archive — with daily casualty data plotted month by month
             across Gaza and the West Bank.</p>
           <div class="hero-meta" data-hero-meta>
@@ -123,7 +132,7 @@ const Views = (function () {
             <span><b>${s.parts}</b> parts · <b>${s.sections}</b> sections</span>
             <span><b>${s.tables}</b> tables</span>
             <span><b>${D.timeline.length}</b> chronology entries</span>
-            <span><b>${D.report.bibliography.length}</b> sources</span>
+            <span><b>${D.rmeta.bibliography_count}</b> sources</span>
             <span>Data to <b>${esc(meta.last_month)}</b></span>
           </div>
           <div class="hero-cta" data-hero-cta>
@@ -202,12 +211,59 @@ const Views = (function () {
             ['#/evidence', 'Evidence', 'The complete report — all ' + s.parts + ' parts and ' + s.sections + ' sections, reproduced without omission.'],
             ['#/statements', 'Statements', D.statements.items.length + ' statements across ' + D.statements.categories.length + ' evidentiary categories, from 1891 to 2026, quoted verbatim with speaker, role, date, source and legal significance.'],
             ['#/legal', 'Legal', 'The findings: ICJ, ICC, the UN Commission of Inquiry, and the instruments each finding rests on.'],
-            ['#/sources', 'Sources', D.sources.groups.reduce((n, g) => n + g.items.length, 0) + ' linked primary sources — courts, UN bodies, NGOs, datasets and archives — plus the report\'s ' + D.report.bibliography.length + ' bibliography entries.'],
+            ['#/sources', 'Sources', D.sources.groups.reduce((n, g) => n + g.items.length, 0) + ' linked primary sources — courts, UN bodies, NGOs, datasets and archives — plus the report\'s ' + D.rmeta.bibliography_count + ' bibliography entries.'],
           ].map(([href, title, note]) => `<a class="card lift" href="${href}" style="text-decoration:none">
             <h3 style="font-size:19px;margin-bottom:8px">${title}</h3>
             <p class="small muted" style="margin:0">${note}</p>
           </a>`).join('')}
         </div>
+      </section>
+    </div>`;
+  }
+
+  /* The overview, drawn from headline.json alone.
+
+     headline.json is about two kilobytes and is fetched before anything else,
+     so the record can state what it establishes while the rest of the data is
+     still in flight. The markup is the real hero and the real stat cards, not a
+     placeholder: when the full data lands the route re-renders over it with the
+     charts and the sections that need them. */
+  function earlyOverview(h) {
+    const c = h.counts;
+    return `<div class="view" data-early="1">
+      <section class="hero wrap">
+        <div class="hero-inner">
+          <div class="hero-flag">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=33" alt="Flag of Palestine" fetchpriority="high">
+            <span>Palestine</span>
+          </div>
+          <h1 data-hero-title>The Documented<span>Record</span></h1>
+          <p class="hero-lede" data-hero-lede>${esc(h.title)}. Every heading, paragraph, table and citation of the
+            source report, rendered as an interactive archive — with daily casualty data plotted month by month
+            across Gaza and the West Bank.</p>
+          <div class="hero-meta" data-hero-meta>
+            <span><b>${fmt(c.words)}</b> words</span>
+            <span><b>${c.parts}</b> parts · <b>${c.sections}</b> sections</span>
+            <span><b>${c.tables}</b> tables</span>
+            <span><b>${c.timeline}</b> chronology entries</span>
+            <span><b>${c.bibliography}</b> sources</span>
+            <span>Data to <b>${esc(h.meta.data_to)}</b></span>
+          </div>
+          <div class="hero-cta" data-hero-cta>
+            <a class="btn primary" href="#/tour/1">Start here</a>
+            <a class="btn" href="#/data">Explore the data</a>
+            <a class="btn" href="#/evidence">Read the full record</a>
+            <a class="btn" href="#/rebuttals">Answer the arguments</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('The headline figures', 'What the record establishes', 'Figures as recorded in the report and corroborated by the Tech For Palestine open datasets compiled from Gaza Ministry of Health, OCHA and UN reporting.')}
+        <div class="grid c4">
+          ${h.headline.map((x, i) => statCard(x, ['red', 'amber', 'red', '', 'red', 'amber', '', 'blue'][i] || '')).join('')}
+        </div>
+        <p class="chart-note" style="margin-top:18px">The charts and the rest of the record are still loading.</p>
       </section>
     </div>`;
   }
@@ -1218,7 +1274,7 @@ const Views = (function () {
     const a = D.long.asymmetry;
     const now = a.periods[a.periods.length - 1];
     return `      <section class="section">
-        ${head('Source tables', `All ${D.report.stats.tables} tables from the report`, 'Reproduced exactly as they appear in the source document, with the part and section each belongs to.')}
+        ${head('Source tables', `All ${D.rmeta.stats.tables} tables from the report`, 'Reproduced exactly as they appear in the source document, with the part and section each belongs to.')}
         ${D.report.tables.map((t, i) => `<div class="card" style="padding:20px;margin-bottom:18px">
           <div class="chart-head" style="margin-bottom:14px">
             <div><h3 style="font-size:16px">${esc(t.section || t.part)}</h3>
@@ -1270,7 +1326,7 @@ const Views = (function () {
           <span class="small muted" id="tl-count"></span>
         </div>
         <div class="tl" id="tl-list">
-          ${t.map((e, i) => `<div class="tl-item ${era(e.year)} tl-${e.kind}" data-year="${e.year || ''}" data-i="${i}">
+          ${t.map((e, i) => `<div class="tl-item ${era(e.year)} tl-${e.kind}" id="tl-${i}" data-year="${e.year || ''}" data-i="${i}">
             <div class="tl-date">${esc(e.date)}</div>
             <div class="tl-text">${esc(e.event)}</div>
             ${e.note ? `<div class="tl-note">${esc(e.note)}</div>` : ''}
@@ -1303,7 +1359,7 @@ const Views = (function () {
 
     return `<div class="view wrap">
       <section class="section">
-        ${head('Evidence', 'The complete report', `All ${D.report.stats.parts} parts, ${D.report.stats.sections} sections, ${D.report.stats.tables} tables and ${fmt(D.report.stats.words)} words of <code>report-final.md</code>, reproduced without omission. Every heading, paragraph, list and table in the source document appears below.`)}
+        ${head('Evidence', 'The complete report', `All ${D.rmeta.stats.parts} parts, ${D.rmeta.stats.sections} sections, ${D.rmeta.stats.tables} tables and ${fmt(D.rmeta.stats.words)} words of <code>report-final.md</code>, reproduced without omission. Every heading, paragraph, list and table in the source document appears below.`)}
         <div class="ev-layout">
           <aside class="ev-toc">
             <input class="ev-toc-search" id="toc-search" type="search" placeholder="Filter sections…" autocomplete="off">
@@ -1467,12 +1523,12 @@ const Views = (function () {
         <i style="background:${esc(c.colour)}"></i>${esc(c.label)}<span>${countOf(c.id)}</span>
       </button>`)).join('');
 
-    const card = (x, i) => `<article class="card quote-card st-card lift" data-i="${i}" data-cat="${esc(x.cat.join(' '))}">
+    const card = (x, i) => `<article class="card quote-card st-card lift" id="st-${i}" data-i="${i}" data-speaker="${esc(speakerSlug(x.speaker))}" data-cat="${esc(x.cat.join(' '))}">
       <div class="st-top">
         <span class="st-tier">${esc(x.tier)}</span>
         <span class="st-date">${esc(x.date)}</span>
         <button class="share-card" data-share="statement" title="Save this statement as a shareable card"
-          aria-label="Save this statement as a shareable image">card</button>
+          aria-label="card — save this statement as an image">card</button>
       </div>
       <blockquote>“${esc(x.quote)}”</blockquote>
       <div class="who">${esc(x.speaker)}</div>
@@ -1771,7 +1827,7 @@ const Views = (function () {
   function sourcesView() {
     const L = D.sources;
     const total = L.groups.reduce((n, g) => n + g.items.length, 0);
-    const b = D.report.bibliography;
+    const b = D.rmeta.bibliography;
 
     // The report's own bibliography, grouped as the source document groups it.
     const bib = [];
@@ -2046,7 +2102,13 @@ const Views = (function () {
       }
     };
     // A view that throws takes its own charts out of the index and nothing else.
-    const safely = (fn, route) => { try { scan(fn(), route); } catch (err) { console.error('index', route, err); } };
+    // Evidence, Legal, Rebuttals and the Tables chapter render from report.json,
+    // which arrives on demand, so an index built before it lands is incomplete —
+    // and an incomplete index must not be the one that gets cached.
+    let complete = true;
+    const safely = (fn, route) => {
+      try { scan(fn(), route); } catch (err) { complete = false; console.error('index', route, err); }
+    };
     DATA_CHAPTERS.forEach((c) => safely(() => dataView(c.id), `#/data/${c.id}`));
     safely(overview, '#/overview');
     safely(timelineView, '#/timeline');
@@ -2055,7 +2117,7 @@ const Views = (function () {
     safely(legalView, '#/legal');
     safely(sourcesView, '#/sources');
     tourSteps().forEach((s, i) => safely(() => tourView(String(i + 1)), `#/tour/${i + 1}`));
-    CHART_INDEX = index;
+    if (complete) CHART_INDEX = index;
     return index;
   }
 
@@ -2116,7 +2178,7 @@ const Views = (function () {
               value: Math.round(((D.manifest && D.manifest.total_bytes) || 0) / 104857.6) / 10,
               unit: ' MB', label: 'Of published data', note: 'the complete set, uncompressed, over plain HTTPS',
             },
-            { value: D.report.bibliography.length, label: 'Sources behind it', note: 'courts, UN bodies, NGOs, datasets and academic work' },
+            { value: D.rmeta.bibliography_count, label: 'Sources behind it', note: 'courts, UN bodies, NGOs, datasets and academic work' },
           ].map((x, i) => statCard(x, ['', 'blue', '', 'amber'][i])).join('')}
         </div>
       </section>
@@ -2303,6 +2365,11 @@ const Views = (function () {
       desc: 'What changed in the record and when: each figure refreshed, each finding added, in the words '
         + 'of the report itself.',
     },
+    method: {
+      title: 'Method — impartial, not neutral',
+      desc: 'The standard of proof this record runs on, the distinction between impartiality and '
+        + 'neutrality, three objections answered, and the conditions under which these findings would fail.',
+    },
     embed: {
       title: 'Embedded chart',
       desc: 'A single chart from the documented record, with its caption and its source.',
@@ -2376,6 +2443,145 @@ const Views = (function () {
     };
   }
 
+  /* ---------- method ---------- */
+
+  /* The Preamble of the report, carried onto the site as a route of its own.
+     The claim being made here is narrow and it is the one most often
+     misstated, so it is published where a reader can reach it without first
+     opening a hundred-thousand-word document: the method is impartial, the
+     conclusions are not neutral, and the difference between those two words is
+     the whole of it. Everything on this page is reproduced from the Preamble
+     to report-final.md, which remains the source of record. */
+  function methodView() {
+    const quotes = [
+      ['Elie Wiesel', 'Auschwitz survivor, Nobel Peace Prize acceptance speech, Oslo City Hall, 10 December 1986',
+        'We must always take sides. Neutrality helps the oppressor, never the victim. Silence encourages the tormentor, never the tormented.',
+        'The Nobel Foundation\u2019s archival text is used here; the transcript published by the Elie Wiesel Foundation renders the first sentence without \u201calways\u201d.'],
+      ['Archbishop Desmond Tutu', 'Foreword to Robert McAfee Brown, Unexpected News: Reading the Bible with Third World Eyes, 1984',
+        'If you are neutral in situations of injustice, you have chosen the side of the oppressor. If an elephant has its foot on the tail of a mouse and you say that you are neutral, the mouse will not appreciate your neutrality.',
+        'And in The Words of Desmond Tutu, 1989: \u201cTo be neutral in a situation of injustice is to have chosen sides already. It is to support the status quo.\u201d'],
+      ['Martin Luther King Jr.', 'Letter from Birmingham Jail, April 1963',
+        'the white moderate, who is more devoted to \u201corder\u201d than to justice; who prefers a negative peace which is the absence of tension to a positive peace which is the presence of justice',
+        'And at Riverside Church, New York, 4 April 1967: \u201cThere comes a time when silence becomes betrayal.\u201d'],
+      ['Howard Zinn', 'You Can\u2019t Be Neutral on a Moving Train, Beacon Press, 1994',
+        'Events are already moving in certain deadly directions, and to be neutral means to accept that.', ''],
+    ];
+    const objections = [
+      ['\u201cThe volume of quoted ministerial statements reads as prosecutorial, not analytical.\u201d',
+        'Article II of the Genocide Convention requires proof of an intent to destroy a protected group in whole or in part \u2014 the <i>dolus specialis</i> \u2014 and tribunals have consistently treated that specific-intent element as the hardest to establish, provable either by the perpetrator\u2019s own statements or by inference from a pattern of conduct. A record of a genocide allegation that omitted the statements of the officials directing the conduct would not be more analytical; it would have omitted the element the charge turns on. The statements are drawn overwhelmingly from the accused party\u2019s own public record \u2014 the Knesset plenum, Israeli broadcast media, ministerial accounts, recorded briefings \u2014 which is the method Robert H. Jackson set out at Nuremberg on 21 November 1945: <q>We will not ask you to convict these men on the testimony of their foes. There is no count in the Indictment that cannot be proved by books and records.</q>',
+        'See <a href="#/statements">Statements</a> and \u00a76.2.'],
+      ['\u201cListing who has called it genocide is an argument from authority.\u201d',
+        'In part, yes, and the objection is conceded to that extent. A roster of institutions does not by itself establish a fact, and the finding does not rest on one. The evidentiary work is done in Part VI, from the conduct, the casualty record, the destruction of the means of life and the statements of intent. The roster does a narrower job: it establishes that the determination has been reached independently, by bodies with published and materially different methodologies, and therefore cannot be attributed to the bias of any single institution. The same Part records what cuts against \u2014 the ICJ has made no merits finding, its 26 January 2024 order established a plausible risk and nothing more, its merits judgment is not expected before 2028, and the states and analysts rejecting the characterisation are named rather than omitted.',
+        'See <a href="#/legal">Legal</a>.'],
+      ['\u201cThe cultural and celebrity material is not forensic.\u201d',
+        'Correct, and it is labelled accordingly. \u00a715.12 records public and professional reaction to the war. It is not evidence of state conduct and it carries no weight in any legal conclusion. It is retained because the direction and scale of public response is itself a documented fact about the period, and because the parties themselves repeatedly make it an issue. Nothing in Parts I\u2013XIV or XVI\u2013XVIII depends on it.',
+        ''],
+    ];
+    const falsify = [
+      ['A load-bearing figure shown to be wrong',
+        'from a source of equal or better standing. Casualty figures, settlement counts, detention numbers and destruction totals are attributed to the body that recorded them, with the date of the record, precisely so that a superseding figure can be identified and substituted.'],
+      ['A quotation shown to be fabricated, mistranslated or materially decontextualised.',
+        'Every statement carries a named speaker, a role, a date and a source; where a widely circulated paraphrase differs from the sourced verbatim wording, both are recorded and the difference is stated; a weakly sourced item carries that caveat inline rather than being quietly retained.'],
+      ['A finding withdrawn or reversed by the body that issued it.',
+        'The findings relied on here are institutional, not anonymous, and each is therefore capable of being retracted by an identifiable author.'],
+      ['The ICJ\u2019s merits judgment in South Africa v. Israel,',
+        'which is the one authority that could displace rather than merely dispute the central legal characterisation, and which this record expressly does not pre-empt.'],
+    ];
+    return `<div class="view">
+      <section class="section wrap">
+        ${head('Method', 'Impartial, not neutral', 'The two words are routinely used as synonyms. They are not synonyms, and the difference between them is the whole of the method this record runs on.')}
+        <div class="grid c2">
+          <div class="card" style="padding:26px">
+            <h3>Impartiality is a rule about procedure</h3>
+            <p>The same evidentiary and legal standards are applied to every actor; sources are admitted or excluded on the same grounds regardless of whom they implicate; no finding is softened or sharpened according to which party it damages.</p>
+          </div>
+          <div class="card" style="padding:26px">
+            <h3>Neutrality is a position about outcome</h3>
+            <p>A commitment to arriving nowhere in particular, or to arriving at a place equidistant between the parties. A record can be impartial in method and, having applied that method, reach conclusions that fall overwhelmingly on one side.</p>
+          </div>
+        </div>
+        <p class="chart-note" style="margin-top:18px">Where the underlying conduct is asymmetric, that is precisely what an impartial method will produce. Symmetry of process does not entail symmetry of result, and a document that manufactured the second in order to look like it had the first would have abandoned the first.</p>
+      </section>
+
+      <section class="section wrap">
+        ${head('Precedent', 'The distinction is formal, not rhetorical', 'It is drawn in humanitarian law itself.')}
+        <div class="card" style="padding:26px">
+          <p>The Geneva Conventions describe the ICRC as <q>an impartial humanitarian body</q>, while the Movement\u2019s own Statutes describe it as a neutral institution \u2014 two different words doing two different jobs in the same body of law. The ICRC\u2019s Fundamental Principles define <b>neutrality</b> as not taking sides in hostilities or engaging <q>in controversies of a political, racial, religious or ideological nature</q>, and define <b>impartiality</b> separately, as a rule of non-discrimination and of allocation in proportion to need. In 1992 the ICRC revised its doctrine to record expressly that <b>public denunciation of violations of international humanitarian law by a party to a conflict is not a breach of neutrality</b>.</p>
+          <p class="src">ICRC, The Fundamental Principles of the International Red Cross and Red Crescent Movement; Geneva Conventions I\u2013IV; International Review of the Red Cross, \u201cNeutrality and Impartiality\u201d.</p>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('The record', 'Why neutrality is not available here', 'Neutrality between a party carrying out a documented campaign of destruction and the population subject to it is not an absence of a position. It is a position, and a consequential one.')}
+        <div class="grid c2">
+          ${quotes.map(([who, where, quote, note]) => `<figure class="card quote-card">
+            <blockquote>${esc(quote)}</blockquote>
+            <figcaption>
+              <div class="who">${esc(who)}</div>
+              <div class="role">${esc(where)}</div>
+              ${note ? `<div class="full">${esc(note)}</div>` : ''}
+            </figcaption>
+          </figure>`).join('')}
+        </div>
+        <div class="card" style="padding:26px;margin-top:18px">
+          <h3>One line this record refuses to use</h3>
+          <p>\u201cThe hottest places in hell are reserved for those who in a period of moral crisis maintain their neutrality\u201d is attributed to Dante and is <b>not in Dante</b>. No such line appears in the <i>Commedia</i>; Dante\u2019s uncommitted souls are placed in the vestibule <i>before</i> Hell, not in its depths, and its depths are ice rather than fire (<i>Inferno</i>, Canto III). The attribution drifted into its modern form through a chain traceable from Theodore Roosevelt in 1915 to a 1944 aphorism collection, and was popularised by John F. Kennedy. A record that asks to be checked line by line cannot use a quotation it knows to be misattributed, however well it serves the argument.</p>
+          <p class="src">Quote Investigator, 14 January 2015; JFK Presidential Library.</p>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('Balance', 'Why false balance is a distortion, and not a neutral one', 'That even-handed presentation of asymmetric evidence misinforms the reader is an empirical finding, not an assertion.')}
+        <div class="card" style="padding:26px">
+          <p>Boykoff and Boykoff examined United States prestige-press coverage of anthropogenic climate change from 1988 to 2002 \u2014 a random sample of <b>636</b> articles drawn from a population of <b>3,543</b> \u2014 and found that <b>52.65 per cent</b> gave \u201cbalanced\u201d coverage of a question on which the scientific evidence was not balanced, producing what they termed a \u201cfailed discursive translation\u201d between the scientific record and public understanding. The norm of balance, applied to an unbalanced record, functioned as a bias.</p>
+          <p class="src">Boykoff and Boykoff, \u201cBalance as bias: global warming and the US prestige press\u201d, Global Environmental Change 14(2), July 2004, pp. 125\u2013136.</p>
+          <p style="margin-top:14px">The normative counterpart is Jay Rosen\u2019s account of the <b>View from Nowhere</b> \u2014 <q>a bid for trust that advertises the viewlessness of the news producer</q>. Rosen\u2019s objection is the one this page concedes: the authority of viewlessness is unearned, whereas real authority <q>starts with reporting</q>.</p>
+          <p class="src">Jay Rosen, \u201cThe View from Nowhere: Questions and Answers\u201d, PressThink, November 2010; the phrase originates with the philosopher Thomas Nagel.</p>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('The test', 'Symmetry, tested rather than asserted', 'Impartiality is a claim that can be checked, and the check is whether the same rules were applied to the party this record finds against and to the party it does not.')}
+        <div class="card" style="padding:26px">
+          <p><b>Part XVIII</b> applies the identical evidentiary and legal standards to Hamas\u2019s conduct on and after 7 October 2023, finds war crimes, names them and sources them. It also records material that cuts the other way where the evidence supports it \u2014 the Hannibal Directive and Israeli fire causing Israeli deaths, prior intelligence knowledge, and atrocity claims that did not survive verification in <i>either</i> direction, including claims made against Hamas that were later withdrawn. <b>Part XIX</b> sets out counter-evidence and the limits of what this record can establish, including Egypt\u2019s role in the blockade, the Palestinian Authority\u2019s own conduct, contested casualty methodology and the human-shields question.</p>
+          <p>A document engineered to reach a predetermined conclusion would not contain Parts XVIII and XIX. The reader is invited to test the claim of symmetry against them rather than against this paragraph.</p>
+          <p style="margin-top:14px"><a class="btn" href="#part-xviii---hamass-october-7-2023-war-crimes-the-documented-record-and-legal-fr">Read Part XVIII</a> <a class="btn" href="#part-xix---complexity-counter-evidence-and-analytical-limitations">Read Part XIX</a></p>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('Objections', 'Three objections, answered directly', 'These are made often enough about the composition of this record that they are answered rather than left standing.')}
+        <div class="rebuttal-list">
+          ${objections.map(([claim, answer, link], i) => `<details class="rebuttal" id="objection-${i + 1}"${i === 0 ? ' open' : ''}>
+            <summary>
+              <span class="rebuttal-n">${String(i + 1).padStart(2, '0')}</span>
+              <span class="rebuttal-claim">${esc(claim)}</span>
+              <span class="rebuttal-cue" aria-hidden="true">Answer</span>
+            </summary>
+            <div class="rebuttal-body">
+              <div class="rebuttal-answer"><p>${answer}</p>${link ? `<p class="note small">${link}</p>` : ''}</div>
+            </div>
+          </details>`).join('')}
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('Falsification', 'What would falsify this record', 'A record that cannot in principle be shown to be wrong is not a forensic document. This one can be, in these specific ways, and the reader is invited to attempt them.')}
+        <ol class="method-falsify">
+          ${falsify.map(([claim, rest]) => `<li><b>${esc(claim)}</b> ${esc(rest)}</li>`).join('')}
+        </ol>
+        <p class="chart-note" style="margin-top:18px">This is not a hypothetical commitment. The <a href="#/changelog">revision history</a> publishes corrections made against this record\u2019s own earlier editions \u2014 a mis-computed casualty ratio, an impossible journalist-toll comparison, a duplicated village entry, out-of-sequence subsections, and load-bearing claims found to be thinly sourced and either given full sourcing or retained with an explicit caveat. Errors found in a record that publishes its corrections are evidence that the method is running; errors found in a record that does not publish them are discovered by its opponents.</p>
+      </section>
+
+      <section class="section wrap">
+        ${head('Privacy', 'What this site does with you', 'Nothing.')}
+        <div class="card" style="padding:26px">
+          <p><b>This site does not track you.</b> There are no analytics, no cookies, no advertising, no third-party beacons and no accounts. Nothing you read here is logged by this site or shared with anyone. The only requests that leave this origin are for the charting library on a public CDN and, on the data pages, the open Tech For Palestine datasets. Every dataset behind every chart is published at <a href="#/api">open data</a> under no login and no key.</p>
+        </div>
+      </section>
+    </div>`;
+  }
+
   /* ---------- api ---------- */
 
   const routes = {
@@ -2383,6 +2589,7 @@ const Views = (function () {
     evidence: evidenceView, rebuttals: rebuttalsView,
     statements: statementsView, legal: legalView, sources: sourcesView,
     tour: tourView, api: apiView, changelog: changelogView, embed: embedView,
+    method: methodView,
   };
 
   return {
@@ -2390,7 +2597,10 @@ const Views = (function () {
     render(name, sub) { return (routes[name] || overview)(sub); },
     has(name) { return !!routes[name]; },
     dataChapters: DATA_CHAPTERS,
+    earlyOverview,
     charts: chartIndex,
+    scorecardRows,
+    speakerSlug,
     origin: SITE_ORIGIN,
     meta,
     blocksHTML, esc, fmt,

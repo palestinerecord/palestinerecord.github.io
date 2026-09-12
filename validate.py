@@ -42,7 +42,28 @@ import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
 DATA = HERE / 'data'
-MARKDOWN = HERE.parent / 'report-final.md'
+
+
+def _find_markdown():
+    """The report lives in the private `hb` repository; this site is its own
+    repository, reached from `hb` through a symlink. Resolving this file
+    therefore lands in the site repository, where report-final.md is not, so
+    look for it rather than assuming it is one level up. Returning a path that
+    does not exist would silently turn off every check that reads it.
+    """
+    import os
+    override = os.environ.get('REPORT_SOURCE')
+    if override:
+        return pathlib.Path(override)
+    for base in (HERE, *HERE.parents):
+        for candidate in (base / 'report-final.md',
+                          base / 'reports' / 'israel-palestine' / 'report-final.md'):
+            if candidate.exists():
+                return candidate
+    return HERE.parent / 'report-final.md'
+
+
+MARKDOWN = _find_markdown()
 TODAY = dt.date.today()
 
 FAILURES = []
@@ -251,25 +272,46 @@ def check_timeseries(files):
                 note('%s: monthly sum %s against cumulative %s' % (territory, f'{total:,}', f'{final:,}'))
 
 
+def _series_value(summary, path):
+    """Read a dotted path out of the timeseries summary, or None if absent."""
+    node = summary
+    for key in path.split('.'):
+        if not isinstance(node, dict) or key not in node:
+            return None
+        node = node[key]
+    return node if isinstance(node, (int, float)) else None
+
+
 def check_headline_agreement(files):
-    """The curated headline figures and the live series are two copies of one count."""
+    """The curated live figures and the live series are two copies of one count."""
     figures, ts = files.get('figures'), files.get('timeseries')
     if not figures or not ts:
         return
-    live = {
-        'Palestinians killed in Gaza': ts['summary']['killed']['total'],
-        'Children killed in Gaza': ts['summary']['killed']['children'],
-        'Named and identified dead': ts['summary']['killedInGazaListCount'],
-    }
-    for item in figures.get('headline', []):
-        expected = live.get(item.get('label'))
-        if expected is None or not isinstance(item.get('value'), (int, float)):
+    summary = ts.get('summary', {})
+    checked = unbacked = 0
+    for where, node, _ in walk(figures, 'figures'):
+        if not node.get('live') or not isinstance(node.get('value'), (int, float)):
             continue
-        if int(item['value']) != int(expected):
+        label = node.get('label') or where
+        path = node.get('series')
+        if not path:
+            # A live figure the daily feed does not publish - the West Bank toll
+            # and the settler-attack count come straight from OCHA's own tables.
+            unbacked += 1
+            continue
+        expected = _series_value(summary, path)
+        if expected is None:
+            fail('agreement', '"%s" names series %r, which timeseries.json does not hold'
+                 % (label, path))
+            continue
+        checked += 1
+        if int(node['value']) != int(expected):
             fail('agreement', '"%s" is %s in figures.json but %s in the live series'
-                 % (item['label'], f"{item['value']:,}", f'{int(expected):,}'))
+                 % (label, f"{node['value']:,}", f'{int(expected):,}'))
         else:
-            note('agreement: %s = %s in both' % (item['label'], f"{item['value']:,}"))
+            note('agreement: %s = %s in both' % (label, f"{node['value']:,}"))
+    note('agreement: %d live figures checked against the series, %d carried from OCHA directly'
+         % (checked, unbacked))
 
 
 def check_declared_totals(files):
@@ -441,17 +483,18 @@ def check_sources(files):
                 fail('sources', 'an entry in group %r has no title' % group.get('id'))
             url = item.get('url', '')
             if not url:
-                # A book or a founding text has no url and needs none, provided
-                # the entry still says who published it and when.
-                if item.get('org') and item.get('date'):
-                    warn('sources', '%r is cited in print, with no url' % item.get('title', '?')[:60])
-                else:
-                    fail('sources', '%r has neither a url nor a publisher and date'
-                         % item.get('title', '?')[:60])
+                # Every entry in the library is something a reader can go and
+                # check. A print citation with no url is a claim the reader has
+                # to take on trust, which is the one thing this record does not
+                # ask of anybody: a library record or a digitised text is always
+                # findable, so the entry is incomplete until one is named.
+                fail('sources', '%r has no url' % item.get('title', '?')[:60])
             elif not url.startswith('https://'):
                 warn('sources', '%r is not https' % item.get('title', '?')[:60])
-            if url in seen and seen[url] != item.get('title'):
-                warn('sources', 'two different titles share one url: %s' % url[:80])
+            if url and url in seen and seen[url] != item.get('title'):
+                # The CSV export, the deep links and this check all key on the
+                # url, so one url cannot stand for two different resources.
+                fail('sources', 'two different titles share one url: %s' % url[:80])
             seen[url] = item.get('title')
     note('sources: %d entries across %d groups' % (total, len(blob.get('groups', []))))
 
@@ -486,25 +529,49 @@ def check_staleness(files):
             dt.datetime.fromtimestamp(built.stat().st_mtime).strftime('%d %b %H:%M')))
 
 
+def _spellings(value):
+    """Every way the report might reasonably write a number.
+
+    The prose rounds large figures - 1,900,000 is written "1.9 million" and
+    2,400,000 sometimes "2.4m" - so a literal search alone reports phrasing as
+    if it were disagreement.
+    """
+    value = int(value)
+    out = [str(value), f'{value:,}']
+    for unit, word in ((1_000_000, 'million'), (1_000, 'thousand')):
+        if value >= unit and value % (unit // 100) == 0:
+            short = ('%g' % (value / unit))
+            out += ['%s %s' % (short, word), '%s%s' % (short, word[0])]
+    return out
+
+
 def check_figures_against_markdown(files):
-    """Warn where a curated figure cannot be found verbatim in the report."""
+    """Warn where a curated figure cannot be found in the report at all.
+
+    Live figures are skipped: the report is a dated document and the dashboard
+    is not, so a live figure that matched the markdown would mean the feed had
+    stopped. check_headline_agreement checks those against timeseries.json.
+    """
     if not MARKDOWN.exists():
         return
     text = MARKDOWN.read_text()
     plain = text.replace(',', '')
-    checked = found = 0
+    checked = found = skipped = 0
     for where, node, _ in walk(files.get('figures', {}), 'figures'):
         value = node.get('value')
         if not isinstance(value, (int, float)) or isinstance(value, bool) or abs(value) < 100:
             continue
+        if node.get('live') or node.get('approx'):
+            skipped += 1
+            continue
         checked += 1
-        needle = str(int(value))
-        if needle in plain or f'{int(value):,}' in text:
+        if any(s in plain or s in text for s in _spellings(value)):
             found += 1
         else:
-            warn('markdown', '%s = %s is not stated verbatim in report-final.md'
+            warn('markdown', '%s = %s is not stated in report-final.md'
                  % (node.get('label') or where, f'{int(value):,}'))
-    note('figures against markdown: %d of %d located verbatim' % (found, checked))
+    note('figures against markdown: %d of %d located, %d live or rounded and skipped'
+         % (found, checked, skipped))
 
 
 # ------------------------------------------------------------ the wiring
