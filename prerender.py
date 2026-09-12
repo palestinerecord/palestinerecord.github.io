@@ -233,6 +233,16 @@ def clean(html, snapshot_url, route_url, generated, depth_prefix='../'):
     # the CI runner renders light, and every build then rewrites all twenty
     # files. Stripping it hands the choice back to the reader's browser.
     html = re.sub(r'(<html\b[^>]*?)\s+data-theme="[^"]*"', r'\1', html, flags=re.I)
+
+    # The same argument applies to the table scroll bookkeeping app.js writes.
+    # data-overflow and data-scrolled record a measurement of the viewport the
+    # page was rendered in, and the two attributes ending in -bound and
+    # -observed record only that a listener was attached. None of it means
+    # anything in a page with no script, and a table that measures as
+    # overflowing here can measure as fitting on the runner, so leaving them in
+    # makes the snapshots differ from build to build for no reason.
+    html = re.sub(r'\s+data-(overflow|scrolled|overflow-bound|overflow-observed)="[^"]*"',
+                  '', html)
     html = re.sub(r'<canvas\b[^>]*>.*?</canvas>', '', html, flags=re.S | re.I)
     html = re.sub(r'<button\b[^>]*>.*?</button>', '', html, flags=re.S | re.I)
     html = html.replace('<div id="scene-veil" aria-hidden="true"></div>', '')
