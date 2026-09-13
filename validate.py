@@ -687,6 +687,79 @@ def check_canonical(host='palestinerecord.github.io'):
 # ----------------------------------------------------------------- report
 
 
+def check_children(files):
+    """The children's record must add up, and every figure must name its source.
+
+    Three things are asserted. Every window total is the sum of the year rows
+    that belong to it, so a figure quoted on the page cannot drift away from
+    the rows underneath it. The headline total and the ratio are the sum and
+    the quotient of those windows and of nothing else, so a partial figure
+    cannot leak into the comparison. And every row that states a number names
+    the body that recorded it, which is the same standard the rest of the data
+    is held to.
+    """
+    blob = files.get('children')
+    if not blob:
+        fail('children', 'data/children.json is missing')
+        return
+
+    windows = {w['id']: w for w in blob['windows']}
+    for wid, window in windows.items():
+        rows = [r for r in blob['years'] if r['window'] == wid]
+        if not rows:
+            fail('children', 'window %s has no year rows' % wid)
+            continue
+        for side in ('palestinian', 'israeli'):
+            total = sum(r[side] or 0 for r in rows)
+            if total != window[side]:
+                fail('children', 'window %s states %s %s but its year rows sum to %s'
+                     % (wid, window[side], side, total))
+        if window['israeli'] and round(window['palestinian'] / window['israeli'], 1) != window['ratio']:
+            fail('children', 'window %s states a ratio of %s that is not its own quotient'
+                 % (wid, window['ratio']))
+
+    counted = blob['counted']
+    for side in ('palestinian', 'israeli'):
+        total = sum(w[side] for w in blob['windows'])
+        if total != counted[side]:
+            fail('children', 'the headline states %s %s children against a window sum of %s'
+                 % (counted[side], side, total))
+    ratio = round(counted['palestinian'] / counted['israeli'], 1)
+    if ratio != counted['ratio']:
+        fail('children', 'the headline ratio %s is not the quotient %s' % (counted['ratio'], ratio))
+    share = round(100.0 * counted['palestinian'] / (counted['palestinian'] + counted['israeli']), 1)
+    if share != counted['share']:
+        fail('children', 'the headline share %s is not the computed %s' % (counted['share'], share))
+
+    # A partial row states one side or one territory. Nothing may be counted
+    # from it, which is enforced by the window sums above: partial rows carry
+    # the window id `uncounted`, which no window totals.
+    for row in blob['years']:
+        if row['basis'] != 'none' and (row['palestinian'] is not None or row['israeli'] is not None):
+            if not (row.get('source') or row.get('israeli_source')):
+                fail('children', 'the %s row states a figure with no source' % row['year'])
+        if row['basis'] == 'partial' and row['window'] != 'uncounted':
+            fail('children', 'the %s row is partial but sits inside a counted window' % row['year'])
+    for era in blob['eras']:
+        if not era.get('source'):
+            fail('children', 'the era %s names no source' % era['id'])
+
+    ages = blob['ages']
+    if sum(ages['values']) != ages['total']:
+        fail('children', 'the age histogram totals %s against a sum of %s'
+             % (ages['total'], sum(ages['values'])))
+    demographics = (files.get('timeseries') or {}).get('demographics') or {}
+    if demographics.get('child_ages') and demographics['child_ages'] != ages['values']:
+        fail('children', 'the age histogram has drifted from timeseries.json demographics.child_ages')
+
+    counted_years = [r for r in blob['years'] if r['basis'] == 'counted']
+    note('children: %d years counted, %d partial, %d with no figure; %s Palestinian to %s Israeli, %s:1'
+         % (len(counted_years),
+            len([r for r in blob['years'] if r['basis'] == 'partial']),
+            len([r for r in blob['years'] if r['basis'] == 'none']),
+            counted['palestinian'], counted['israeli'], counted['ratio']))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument('--quiet', action='store_true', help='print only failures and the verdict')
@@ -700,6 +773,7 @@ def main():
         check_references(files)
         check_attribution(files)
         check_timeseries(files)
+        check_children(files)
         check_headline_agreement(files)
         check_declared_totals(files)
         check_recognition_count(files)

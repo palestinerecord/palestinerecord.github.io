@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The children — every child the record can count · The Documented Record</title>
+<meta name="description" content="A unit chart of the children killed on both sides, period by period, one figure drawn per child, with the years no one counted left as gaps and every figure carrying its source.">
+<meta name="theme-color" content="#0b0f17">
+<meta name="author" content="Dr. Usman Kayani">
+<!-- Index everything, and let the large share cards and the full snippet
+     through: this record is only useful if the figure a reader searched for is
+     the thing they are shown. -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<!-- Ownership proof for Google Search Console, which reports what people
+     searched for to reach this record and which pages Google could not read.
+     It is a token, not a tracker: it sends nothing, runs nothing, and is
+     inert to anyone who is not Google verifying the property. The same proof
+     is also served as the file google8cbf6aea08d3b76d.html at the root.
+     Removing either one un-verifies the property, so both stay. -->
+<meta name="google-site-verification" content="40JF9wP9oaaFDPt9eTuIqBsedf1rn15n1tfVJXyRlJQ">
+<!-- Everything here is served from this origin except the charting and
+     animation libraries, which come from one pinned CDN with integrity hashes,
+     and the live casualty series. Nothing is posted anywhere and there is no
+     tracker to allow, so the work this policy does is the source allowlist:
+     script can only come from here or from jsdelivr, whatever else gets onto
+     the page. Declared in a meta tag rather than a header because GitHub Pages
+     serves no headers of our choosing.
+
+     'unsafe-eval' is here for one reason: echarts-gl compiles its GLSL shaders
+     by evaluating the preprocessor expressions with `new Function`, and without
+     it the 3-D chart of the Gaza dead fails with "Invalid expression" and
+     leaves an empty container. 'unsafe-inline' is needed for the theme script
+     that has to run before first paint. Neither widens the set of origins
+     script may be fetched from, which is the part that matters here. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
+<link rel="icon" href="../assets/favicon.svg?v=35" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=35">
+<style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
+  border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
+  border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
+.snapshot-note a { color: #d9a441; }
+.chart-missing { margin: 0; padding: 18px 20px; border: 1px dashed rgba(255,255,255,.16);
+  border-radius: 12px; color: #7d879c; font-size: 13.5px; }
+.snapshot-links { max-width: 1280px; margin: 48px auto 0; padding: 24px 20px;
+  border-top: 1px solid rgba(255,255,255,.12); }
+.snapshot-links h2 { font-size: 15px; letter-spacing: .04em; text-transform: uppercase;
+  color: #7d879c; margin: 0 0 14px; }
+.snapshot-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.snapshot-links a { color: #d9a441; text-decoration: none; }
+.snapshot-links a:hover { text-decoration: underline; }
+.snapshot-links p { margin: 4px 0 0; color: #7d879c; font-size: 13px; line-height: 1.55; }</style>
+<link rel="canonical" href="https://palestinerecord.github.io/snapshot/children.html">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="The Documented Record — revisions" href="feed.xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://palestinerecord.github.io/snapshot/children.html">
+<meta property="og:site_name" content="The Documented Record">
+<meta property="og:title" content="The children — every child the record can count · The Documented Record">
+<meta property="og:description" content="A unit chart of the children killed on both sides, period by period, one figure drawn per child, with the years no one counted left as gaps and every figure carrying its source.">
+<meta property="og:image" content="https://palestinerecord.github.io/assets/og/children.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The children — every child the record can count · The Documented Record — a card carrying the title of this section of the record.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The children — every child the record can count · The Documented Record">
+<meta name="twitter:description" content="A unit chart of the children killed on both sides, period by period, one figure drawn per child, with the years no one counted left as gaps and every figure carrying its source.">
+<meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/children.png">
+<link rel="preload" href="../css/style.css?v=35" as="style">
+<link rel="stylesheet" href="../css/style.css?v=35">
+<!-- Before the stylesheet paints anything: a reader who chose the light theme
+     should not be shown the dark one first. Inline and synchronous by
+     necessity; a deferred script runs too late to prevent the flash. -->
+
+<!-- The libraries and the local scripts are all deferred: none of them paints
+     the first screen, and a synchronous script in the head blocks the parser
+     until it has been fetched, parsed and run. Document order is preserved, so
+     ECharts and GSAP are still in place before charts.js and app.js run.
+     echarts-gl is not here at all — charts.js injects it, with the same
+     integrity hash, only if a reader opens one of the two 3-D charts. -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<!-- The first screen is painted from this one file; the request should be in
+     flight while the parser is still in the head. -->
+<link rel="preload" href="../data/headline.json" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
+
+
+
+
+<!-- Structured data. The article describes report-final.md, which the Evidence route
+     reproduces in full; the dataset describes the JSON under data/, which is a public
+     API in all but name. Both dateModified values are stamped by prerender.py from
+     data/timeseries.json, so neither can drift from the data actually shipped. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://palestinerecord.github.io/#report",
+  "headline": "The Documented Record — Israel and the Occupied Territories, 1917–2026",
+  "alternativeHeadline": "A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026)",
+  "description": "A source-anchored survey of state conduct in Israel and the occupied Palestinian territories, applying identical evidentiary and legal standards to every actor. Every figure carries its source.",
+  "author": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "publisher": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "inLanguage": "en-GB",
+  "url": "https://palestinerecord.github.io/",
+  "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
+  "image": "https://palestinerecord.github.io/assets/share-card.png",
+  "wordCount": 99501,
+  "dateModified": "2026-09-13",
+  "temporalCoverage": "1917/2026",
+  "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
+  "about": [
+    { "@type": "Thing", "name": "Israeli–Palestinian conflict" },
+    { "@type": "Thing", "name": "International humanitarian law" },
+    { "@type": "Thing", "name": "Occupied Palestinian territories" }
+  ],
+  "citation": "South Africa v. Israel (Application of the Convention on the Prevention and Punishment of the Crime of Genocide in the Gaza Strip), International Court of Justice, Order of 26 January 2024"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://palestinerecord.github.io/#dataset",
+  "name": "The Documented Record — casualty, land and conduct series, 1948–2026",
+  "description": "The machine-readable base of the dashboard: daily and monthly Gaza casualty series since October 2023, the long death toll from 1948, West Bank killings, demolitions and detention, land transfer and settlement figures, the 1948 village depopulations, documented statements of intent, and the recorded position of every state. Each figure carries the source it was taken from.",
+  "url": "https://palestinerecord.github.io/#/data",
+  "creator": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "inLanguage": "en-GB",
+  "dateModified": "2026-09-13",
+  "temporalCoverage": "1948/2026",
+  "spatialCoverage": { "@type": "Place", "name": "Israel and the occupied Palestinian territories" },
+  "keywords": ["Gaza casualties", "West Bank", "settlements", "demolitions", "administrative detention", "Nakba", "arms transfers", "recognition of Palestine"],
+  "isBasedOn": [
+    { "@type": "Dataset", "name": "Tech For Palestine open datasets (Gaza Ministry of Health, OCHA, UN)", "url": "https://data.techforpalestine.org/" },
+    { "@type": "Dataset", "name": "OCHA State of Palestine subnational administrative boundaries (Common Operational Dataset)", "url": "https://data.humdata.org/dataset/cod-ab-pse" }
+  ],
+  "variableMeasured": [
+    { "@type": "PropertyValue", "name": "Cumulative Palestinians killed in Gaza, by reporting day" },
+    { "@type": "PropertyValue", "name": "Children killed in Gaza, by reporting month" },
+    { "@type": "PropertyValue", "name": "Palestinians and Israelis killed, by period since 1948" },
+    { "@type": "PropertyValue", "name": "Palestinian structures demolished, by year" },
+    { "@type": "PropertyValue", "name": "Palestinians held in administrative detention, by snapshot" },
+    { "@type": "PropertyValue", "name": "Villages depopulated in 1947–1950, by month, sub-district and recorded cause" },
+    { "@type": "PropertyValue", "name": "States recognising Palestine, by date of recognition" }
+  ],
+  "distribution": [
+    { "@type": "DataDownload", "name": "The manifest: every published file, described and dated", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/index.json" },
+    { "@type": "DataDownload", "name": "Daily and monthly casualty series", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/timeseries.json" },
+    { "@type": "DataDownload", "name": "Curated headline figures, each with its source", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/figures.json" },
+    { "@type": "DataDownload", "name": "The long record, 1948–2026", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/long-record.json" },
+    { "@type": "DataDownload", "name": "Documented statements of intent", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/statements.json" },
+    { "@type": "DataDownload", "name": "Villages depopulated 1947–1950", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/nakba.json" },
+    { "@type": "DataDownload", "name": "The recorded position of every state", "encodingFormat": "application/json", "contentUrl": "https://palestinerecord.github.io/data/world-positions.json" }
+  ]
+}
+</script>
+</head>
+<body data-view="children" style="">
+
+<a class="skip-link" href="#app">Skip to the record</a>
+
+
+
+
+
+
+<header class="topbar">
+  <a class="brand" href="../index.html#/overview">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=35" alt="Flag of Palestine">
+    <span class="brand-text">
+      <strong>The Documented Record</strong>
+      <em>Israel &amp; the Occupied Territories · 1917–2026</em>
+    </span>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="../index.html#/overview" data-view="overview">Overview</a>
+    <a href="../index.html#/tour/1" data-view="tour">Start here</a>
+    <a href="../index.html#/data" data-view="data">Data</a> <a href="../index.html#/children" data-view="children" class="active">Children</a>
+    <a href="../index.html#/timeline" data-view="timeline">Timeline</a>
+    <a href="../index.html#/evidence" data-view="evidence">Evidence</a>
+    <a href="../index.html#/rebuttals" data-view="rebuttals">Rebuttals</a>
+    <a href="../index.html#/statements" data-view="statements">Statements</a>
+    <a href="../index.html#/legal" data-view="legal">Legal</a>
+    <a href="../index.html#/sources" data-view="sources">Sources</a>
+  </nav>
+  <div class="freshness" id="freshness" title="Casualty time-series last updated 10 September 2026 (3 days ago). Report and curated figures compiled 13 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>10 September 2026</b></span></div>
+  
+  
+  
+</header>
+
+<main id="app" tabindex="-1"><div class="snapshot-note"><strong>This is a static snapshot</strong>, generated on 13 September 2026 so that this section of the record can be read, linked and indexed without JavaScript. The charts, maps, filters and search are in the <a href="https://palestinerecord.github.io/#/children">interactive version of this page</a>.</div><div class="view">
+      <svg class="picto-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+        <symbol id="fig-child" viewBox="0 0 10 22">
+          <circle cx="5" cy="3.3" r="3.05"></circle>
+          <path d="M5 7.1c2.55 0 4.15 1.6 4.15 4.05v4.35H7.55l-.5 6.4H2.95l-.5-6.4H.85v-4.35C.85 8.7 2.45 7.1 5 7.1Z"></path>
+        </symbol>
+      </defs></svg>
+
+      <section class="section wrap">
+        <div class="section-head">
+      <div class="eyebrow">Children</div>
+      <h2>The children’s record, 1948 to the present</h2>
+      <p>Across every period this record can count from a single source that counted both sides on one methodology, <b>22,237</b> Palestinian children and <b>185</b> Israeli children were killed. That is <b>120.2 to 1</b>.</p>
+    </div>
+        <div class="grid c4">
+          <div class="stat red"><div class="val">22,237</div><div class="lbl">Palestinian children killed</div></div>
+          <div class="stat blue"><div class="val">185</div><div class="lbl">Israeli children killed</div></div>
+          <div class="stat"><div class="val">120.2:1</div><div class="lbl">Palestinian children per Israeli child</div></div>
+          <div class="stat"><div class="val">99.2%</div><div class="lbl">Of the children killed, the share who were Palestinian</div></div>
+        </div>
+        <p class="chart-note" style="margin-top:16px">The sum of the three fully counted windows and of nothing else. The uncounted years would add to both sides; they are not estimated here, and the total is therefore a floor, not the whole record.</p>
+      </section>
+
+      <section class="section wrap">
+        <div class="section-head">
+      <div class="eyebrow">The argument</div>
+      <h2>Why does this matter?</h2>
+      
+    </div>
+        <div class="card" style="padding:26px">
+          <p>Because a child is not a combatant, cannot be one, and is the one category of person about whom the two sides of this argument agree. Every other figure in this record can be met with a claim about who was fighting whom. This one cannot.</p>
+          <p>And because the ratio settles the question the rhetoric is built to avoid. When <b>99.2 per cent</b> of the children killed are killed by one party, the question of who is defending whom has an answer, and it is not the answer that party gives. <b>You cannot claim to be defending a child while killing 120 others.</b></p>
+          <p class="chart-note">That formulation is not this record’s. It is the argument countingthekids.org has made since 2012, from its own count of the years 2000 to 2014, where the ratio ran at about eleven to one. This record does not reproduce their figure; it computes its own, from its own sourced series, and the second-Intifada window below — <b>11.8 to 1</b> — is where that earlier claim can be checked.</p>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        <div class="section-head">
+      <div class="eyebrow">The war</div>
+      <h2>7 October 2023 – 10 September 2026</h2>
+      <p>One figure for every hundred children. Count them.</p>
+    </div>
+        <div class="picto">
+      <p class="picto-key">One figure is 100 children.</p>
+      <div class="picto-side">
+        <div class="picto-lab"><b class="ps">20,417</b> <span>Palestinian children killed</span></div>
+        <div class="picto-grid ps" role="img" aria-label="20,417 Palestinian children killed, drawn as 204 figures">
+          <svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg>
+        </div>
+        
+      </div>
+      <div class="picto-side">
+        <div class="picto-lab"><b class="il">38</b> <span>Israeli children killed</span></div>
+        <div class="picto-grid il" role="img" aria-label="38 Israeli children killed, drawn as 1 figure">
+          <svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg>
+        </div>
+        <p class="picto-short">Fewer than 100. Drawn as one figure so the row is visible at all; to scale it would be 0.38 of a figure.</p>
+      </div>
+    </div>
+        <div class="card" style="padding:22px 24px;margin-top:18px">
+          <p>20,417 Palestinian children in 2.9 years: a child every <b>1.3 hours</b>, without a pause, for three years.</p>
+          <p class="chart-note">The Palestinian figure is Gaza plus the West Bank from the same daily series the rest of this site plots. The Israeli figure is the children killed on 7 October 2023. B’Tselem does not publish a separate count of Israeli children killed after that day; the small number since is inside its 151 for 2000–2025, listed under the gaps below. The comparison is therefore stated against the larger of the two published 7 October figures and still errs against this record’s own argument.</p>
+          <p class="src">Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.</p>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        <div class="section-head">
+      <div class="eyebrow">Before this war</div>
+      <h2>The two windows a single source counted on both sides</h2>
+      <p>The asymmetry is not a product of this war. It is what the record showed in every period anyone counted.</p>
+    </div>
+        <div class="grid c2">
+          <div class="card" style="padding:22px 24px">
+            <h3>The first Intifada and the Oslo years</h3>
+            <p class="chart-note" style="margin:4px 0 14px">9 December 1987 – 28 September 2000 — <b>16.9 to 1</b></p>
+            <div class="picto">
+      <p class="picto-key">One figure is 1 child.</p>
+      <div class="picto-side">
+        <div class="picto-lab"><b class="ps">304</b> <span>Palestinian children</span></div>
+        <div class="picto-grid ps" role="img" aria-label="304 Palestinian children, drawn as 304 figures">
+          <svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg>
+        </div>
+        
+      </div>
+      <div class="picto-side">
+        <div class="picto-lab"><b class="il">18</b> <span>Israeli children</span></div>
+        <div class="picto-grid il" role="img" aria-label="18 Israeli children, drawn as 18 figures">
+          <svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg>
+        </div>
+        
+      </div>
+    </div>
+            <p class="src">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</p>
+          </div>
+          <div class="card" style="padding:22px 24px">
+            <h3>The second Intifada years</h3>
+            <p class="chart-note" style="margin:4px 0 14px">29 September 2000 – 31 December 2012 — <b>11.8 to 1</b></p>
+            <div class="picto">
+      <p class="picto-key">One figure is 10 children.</p>
+      <div class="picto-side">
+        <div class="picto-lab"><b class="ps">1,516</b> <span>Palestinian children</span></div>
+        <div class="picto-grid ps" role="img" aria-label="1,516 Palestinian children, drawn as 152 figures">
+          <svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg>
+        </div>
+        
+      </div>
+      <div class="picto-side">
+        <div class="picto-lab"><b class="il">129</b> <span>Israeli children</span></div>
+        <div class="picto-grid il" role="img" aria-label="129 Israeli children, drawn as 13 figures">
+          <svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg><svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg>
+        </div>
+        
+      </div>
+    </div>
+            <p class="src">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</p>
+          </div>
+        </div>
+        <div class="grid c2" style="margin-top:18px">
+          <div class="card" style="padding:22px 24px"><p class="chart-note">B’Tselem counted both sides on one methodology and published the table year by year. Its cut-off is under 17, not under 18, so the Palestinian figure is a floor. Palestinian minors killed inside Israel in this period are not broken out by age in the source and are therefore not included.</p></div>
+          <div class="card" style="padding:22px 24px"><p class="chart-note">Remember These Children names every child on both sides, under 18. Its own stated header totals for 2000–2014 are 131 Israeli and 1,587 Palestinian, while its year blocks sum to 131 and 1,653 — a discrepancy of 66 in the source itself, which is recorded here rather than resolved. The window used here stops at the end of 2012 because the 2013 block is missing from the compilation and the 2014 block was left incomplete when it stopped being updated on 22 July 2014.</p></div>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        <div class="section-head">
+      <div class="eyebrow">Year by year</div>
+      <h2>Every year the record can count</h2>
+      <p>Two scales, because the counts differ by three orders of magnitude and one axis would render the earlier years as nothing. Red is Palestinian children, blue Israeli children.</p>
+    </div>
+        <div class="grid c2">
+          <div class="card" style="padding:22px 24px 24px">
+      <h3>1987 to 2012</h3>
+      <p class="chart-note" style="margin:6px 0 16px">B’Tselem to 28 September 2000, then Remember These Children. The two use different cut-offs — under 17 and under 18 — and the join is marked here rather than smoothed.</p>
+      <div class="yrbars">
+        <div class="yrbar">
+          <span class="yrbar-lab">1987</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:1.69%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">5</b> <b class="il">0</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1988</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:16.95%"></span><span class="yrbar-fill il" style="width:1.02%"></span></span>
+          <span class="yrbar-val"><b class="ps">50</b> <b class="il">3</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1989</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:28.14%"></span><span class="yrbar-fill il" style="width:0.60%"></span></span>
+          <span class="yrbar-val"><b class="ps">83</b> <b class="il">1</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1990</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:8.47%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">25</b> <b class="il">0</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1991</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:9.15%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">27</b> <b class="il">0</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1992</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:7.80%"></span><span class="yrbar-fill il" style="width:0.60%"></span></span>
+          <span class="yrbar-val"><b class="ps">23</b> <b class="il">1</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1993</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:13.90%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">41</b> <b class="il">0</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1994</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:8.14%"></span><span class="yrbar-fill il" style="width:0.68%"></span></span>
+          <span class="yrbar-val"><b class="ps">24</b> <b class="il">2</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1995</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:1.69%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">5</b> <b class="il">0</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1996</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:3.73%"></span><span class="yrbar-fill il" style="width:2.71%"></span></span>
+          <span class="yrbar-val"><b class="ps">11</b> <b class="il">8</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1997</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:1.69%"></span><span class="yrbar-fill il" style="width:1.02%"></span></span>
+          <span class="yrbar-val"><b class="ps">5</b> <b class="il">3</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1998</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:1.02%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">3</b> <b class="il">0</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">1999</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:0.00%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">0</b> <b class="il">0</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2000</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:31.53%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">93</b> <b class="il">0</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2001</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:34.92%"></span><span class="yrbar-fill il" style="width:12.20%"></span></span>
+          <span class="yrbar-val"><b class="ps">103</b> <b class="il">36</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2002</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:68.14%"></span><span class="yrbar-fill il" style="width:15.25%"></span></span>
+          <span class="yrbar-val"><b class="ps">201</b> <b class="il">45</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2003</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:47.80%"></span><span class="yrbar-fill il" style="width:7.12%"></span></span>
+          <span class="yrbar-val"><b class="ps">141</b> <b class="il">21</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2004</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:63.73%"></span><span class="yrbar-fill il" style="width:2.71%"></span></span>
+          <span class="yrbar-val"><b class="ps">188</b> <b class="il">8</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2005</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:18.98%"></span><span class="yrbar-fill il" style="width:2.03%"></span></span>
+          <span class="yrbar-val"><b class="ps">56</b> <b class="il">6</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2006</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:47.12%"></span><span class="yrbar-fill il" style="width:0.68%"></span></span>
+          <span class="yrbar-val"><b class="ps">139</b> <b class="il">2</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2007</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:23.05%"></span><span class="yrbar-fill il" style="width:0.60%"></span></span>
+          <span class="yrbar-val"><b class="ps">68</b> <b class="il">1</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2008</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:54.24%"></span><span class="yrbar-fill il" style="width:1.36%"></span></span>
+          <span class="yrbar-val"><b class="ps">160</b> <b class="il">4</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2009</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:100.00%"></span><span class="yrbar-fill il" style="width:0.60%"></span></span>
+          <span class="yrbar-val"><b class="ps">295</b> <b class="il">1</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2010</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:5.08%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">15</b> <b class="il">0</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2011</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:5.08%"></span><span class="yrbar-fill il" style="width:1.69%"></span></span>
+          <span class="yrbar-val"><b class="ps">15</b> <b class="il">5</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2012</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:14.92%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">44</b> <b class="il">0</b></span>
+        </div>
+      </div>
+      <p class="src">B’Tselem; Remember These Children.</p>
+    </div>
+          <div class="card" style="padding:22px 24px 24px">
+      <h3>2023 to 2026</h3>
+      <p class="chart-note" style="margin:6px 0 16px">2023 begins on 7 October. The Israeli figure is the children killed on that day; no separate annual count is published for the years after it.</p>
+      <div class="yrbars">
+        <div class="yrbar">
+          <span class="yrbar-lab">2023</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:100.00%"></span><span class="yrbar-fill il" style="width:0.60%"></span></span>
+          <span class="yrbar-val"><b class="ps">9,179</b> <b class="il">38</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2024</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:95.94%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">8,806</b> <b class="il">0</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2025</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:26.26%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">2,410</b> <b class="il">0</b></span>
+        </div><div class="yrbar">
+          <span class="yrbar-lab">2026</span>
+          <span class="yrbar-track"><span class="yrbar-fill ps" style="width:0.60%"></span><span class="yrbar-fill il" style="width:0.00%"></span></span>
+          <span class="yrbar-val"><b class="ps">22</b> <b class="il">0</b></span>
+        </div>
+      </div>
+      <p class="src">Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.</p>
+    </div>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        <div class="section-head">
+      <div class="eyebrow">Ages</div>
+      <h2>Children on the named list of the dead, by age</h2>
+      <p>One bar for each year of age from 0 to 17, from the 72,835 named records the Gaza Ministry of Health publishes with a date of birth. There is no age at which the count falls away.</p>
+    </div>
+        <div class="card" style="padding:22px 24px 24px">
+          <div class="agebars">
+            <div class="agebar" title="Age 0: 1,072">
+                <span class="agebar-track"><span class="agebar-fill" style="height:66.7%"></span></span>
+                <span class="agebar-val">1,072</span>
+                <span class="agebar-lab">0</span>
+              </div><div class="agebar" title="Age 1: 1,052">
+                <span class="agebar-track"><span class="agebar-fill" style="height:65.4%"></span></span>
+                <span class="agebar-val">1,052</span>
+                <span class="agebar-lab">1</span>
+              </div><div class="agebar" title="Age 2: 1,113">
+                <span class="agebar-track"><span class="agebar-fill" style="height:69.2%"></span></span>
+                <span class="agebar-val">1,113</span>
+                <span class="agebar-lab">2</span>
+              </div><div class="agebar" title="Age 3: 1,045">
+                <span class="agebar-track"><span class="agebar-fill" style="height:65.0%"></span></span>
+                <span class="agebar-val">1,045</span>
+                <span class="agebar-lab">3</span>
+              </div><div class="agebar" title="Age 4: 1,011">
+                <span class="agebar-track"><span class="agebar-fill" style="height:62.9%"></span></span>
+                <span class="agebar-val">1,011</span>
+                <span class="agebar-lab">4</span>
+              </div><div class="agebar" title="Age 5: 1,116">
+                <span class="agebar-track"><span class="agebar-fill" style="height:69.4%"></span></span>
+                <span class="agebar-val">1,116</span>
+                <span class="agebar-lab">5</span>
+              </div><div class="agebar" title="Age 6: 1,077">
+                <span class="agebar-track"><span class="agebar-fill" style="height:67.0%"></span></span>
+                <span class="agebar-val">1,077</span>
+                <span class="agebar-lab">6</span>
+              </div><div class="agebar" title="Age 7: 1,140">
+                <span class="agebar-track"><span class="agebar-fill" style="height:70.9%"></span></span>
+                <span class="agebar-val">1,140</span>
+                <span class="agebar-lab">7</span>
+              </div><div class="agebar" title="Age 8: 1,064">
+                <span class="agebar-track"><span class="agebar-fill" style="height:66.2%"></span></span>
+                <span class="agebar-val">1,064</span>
+                <span class="agebar-lab">8</span>
+              </div><div class="agebar" title="Age 9: 1,088">
+                <span class="agebar-track"><span class="agebar-fill" style="height:67.7%"></span></span>
+                <span class="agebar-val">1,088</span>
+                <span class="agebar-lab">9</span>
+              </div><div class="agebar" title="Age 10: 1,085">
+                <span class="agebar-track"><span class="agebar-fill" style="height:67.5%"></span></span>
+                <span class="agebar-val">1,085</span>
+                <span class="agebar-lab">10</span>
+              </div><div class="agebar" title="Age 11: 1,150">
+                <span class="agebar-track"><span class="agebar-fill" style="height:71.5%"></span></span>
+                <span class="agebar-val">1,150</span>
+                <span class="agebar-lab">11</span>
+              </div><div class="agebar" title="Age 12: 1,218">
+                <span class="agebar-track"><span class="agebar-fill" style="height:75.7%"></span></span>
+                <span class="agebar-val">1,218</span>
+                <span class="agebar-lab">12</span>
+              </div><div class="agebar" title="Age 13: 1,329">
+                <span class="agebar-track"><span class="agebar-fill" style="height:82.6%"></span></span>
+                <span class="agebar-val">1,329</span>
+                <span class="agebar-lab">13</span>
+              </div><div class="agebar" title="Age 14: 1,453">
+                <span class="agebar-track"><span class="agebar-fill" style="height:90.4%"></span></span>
+                <span class="agebar-val">1,453</span>
+                <span class="agebar-lab">14</span>
+              </div><div class="agebar" title="Age 15: 1,425">
+                <span class="agebar-track"><span class="agebar-fill" style="height:88.6%"></span></span>
+                <span class="agebar-val">1,425</span>
+                <span class="agebar-lab">15</span>
+              </div><div class="agebar" title="Age 16: 1,591">
+                <span class="agebar-track"><span class="agebar-fill" style="height:98.9%"></span></span>
+                <span class="agebar-val">1,591</span>
+                <span class="agebar-lab">16</span>
+              </div><div class="agebar" title="Age 17: 1,608">
+                <span class="agebar-track"><span class="agebar-fill" style="height:100.0%"></span></span>
+                <span class="agebar-val">1,608</span>
+                <span class="agebar-lab">17</span>
+              </div>
+          </div>
+          <p class="chart-note" style="margin-top:14px">21,637 children in total, spread almost evenly across every year of childhood. The bars do not fall away at the ages a combatant would be found, because these were not combatants.</p>
+          <p class="src">Gaza Ministry of Health named list, via the Tech For Palestine open datasets.</p>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        <div class="section-head">
+      <div class="eyebrow">Beyond the killing</div>
+      <h2>What the war did to the children it did not kill</h2>
+      
+    </div>
+        <div class="grid c3">
+          <div class="card" style="padding:20px 22px">
+            <div class="val" style="font-family:var(--serif);font-size:30px;color:var(--red);line-height:1.1">44,143</div>
+            <h3 style="margin-top:6px">Children injured</h3>
+            <p class="chart-note" style="margin-top:6px">Between 7 October 2023 and 7 October 2025, against 20,179 killed over the same two years.</p>
+            <p class="src">UN Independent International Commission of Inquiry, report on the targeting of children, 23 June 2026.</p>
+          </div><div class="card" style="padding:20px 22px">
+            <div class="val" style="font-family:var(--serif);font-size:30px;color:var(--red);line-height:1.1">21,000</div>
+            <h3 style="margin-top:6px">Children left with a permanent disability</h3>
+            <p class="chart-note" style="margin-top:6px">Amputations, spinal injuries, blindness and deafness among them.</p>
+            <p class="src">UN Committee on the Rights of Persons with Disabilities, cited by Save the Children, 6 September 2025.</p>
+          </div><div class="card" style="padding:20px 22px">
+            <div class="val" style="font-family:var(--serif);font-size:30px;color:var(--red);line-height:1.1">1,009</div>
+            <h3 style="margin-top:6px">Children killed before their first birthday</h3>
+            <p class="chart-note" style="margin-top:6px">About 450 of them were born after the war began and killed before it ended.</p>
+            <p class="src">Save the Children, 6 September 2025.</p>
+          </div><div class="card" style="padding:20px 22px">
+            <div class="val" style="font-family:var(--serif);font-size:30px;color:var(--red);line-height:1.1">157</div>
+            <h3 style="margin-top:6px">Children who starved to death</h3>
+            <p class="chart-note" style="margin-top:6px">Deaths attributed to malnutrition and starvation in children, in a territory where famine was declared on 22 August 2025.</p>
+            <p class="src">Gaza Ministry of Health, via the Tech For Palestine open datasets.</p>
+          </div><div class="card" style="padding:20px 22px">
+            <div class="val" style="font-family:var(--serif);font-size:30px;color:var(--red);line-height:1.1">132,000</div>
+            <h3 style="margin-top:6px">Under-fives at risk of death from acute malnutrition</h3>
+            <p class="chart-note" style="margin-top:6px">A projection made when famine was declared, not a count of deaths.</p>
+            <p class="src">IPC and UNICEF, cited by Save the Children, 6 September 2025.</p>
+          </div><div class="card" style="padding:20px 22px">
+            <div class="val" style="font-family:var(--serif);font-size:30px;color:var(--red);line-height:1.1">97%</div>
+            <h3 style="margin-top:6px">Share of Gaza’s schools damaged or destroyed</h3>
+            <p class="chart-note" style="margin-top:6px">94 per cent of hospitals were damaged or destroyed over the same period.</p>
+            <p class="src">Save the Children, 6 September 2025.</p>
+          </div><div class="card" style="padding:20px 22px">
+            <div class="val" style="font-family:var(--serif);font-size:30px;color:var(--red);line-height:1.1">21,637</div>
+            <h3 style="margin-top:6px">Children on the named list of the dead</h3>
+            <p class="chart-note" style="margin-top:6px">Of 72,835 people named with an identity number, date of birth and sex. Children are 29.7 per cent of the named dead.</p>
+            <p class="src">Gaza Ministry of Health named list, via the Tech For Palestine open datasets.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        <div class="section-head">
+      <div class="eyebrow">The long record</div>
+      <h2>Nineteen forty-eight to the present, period by period</h2>
+      <p>Including the periods no one counted. A blank cell is a gap in the documentation, not a period in which no child died.</p>
+    </div>
+        <div class="card" style="padding:0;overflow:hidden"><div class="table-scroll"><div class="table-wrap"><table class="ch-table">
+          <thead><tr><th class="col-period">Period</th><th class="col-span">Span</th><th>Palestinian children</th><th>Israeli children</th><th class="col-note">Basis</th></tr></thead>
+          <tbody><tr>
+            <td><b>The Nakba and the years after it</b><br><span class="small muted">Around 15,000 Palestinians were killed in 1947–49 and 456 towns and villages were emptied, 49 of them with a recorded massacre. Children are named one by one in the survivor testimony from Deir Yassin, al-Dawayima, Tantura and the rest, but no body produced a cumulative count of them, and none is invented here.</span></td>
+            <td class="small">1947–1966</td>
+            <td class="num"><span class="muted">not counted</span></td>
+            <td class="num"><span class="muted">not counted</span></td>
+            <td class="small">no figure published<br><span class="small muted">No published source disaggregates children for this period.</span></td>
+          </tr><tr>
+            <td><b>From the occupation to the first Intifada</b><br><span class="small muted">B’Tselem was founded in 1989 and its own tables begin on 9 December 1987; the Palestinian and international documentation of the two decades before that was not kept in a form that yields an annual count of children. The period is left empty rather than estimated.</span></td>
+            <td class="small">1967–1987</td>
+            <td class="num"><span class="muted">not counted</span></td>
+            <td class="num"><span class="muted">not counted</span></td>
+            <td class="small">no figure published<br><span class="small muted">No published source covers this period systematically.</span></td>
+          </tr><tr>
+            <td><b>The first Intifada and the Oslo years</b><br><span class="small muted">B’Tselem counted both sides on one methodology and published the table year by year. Its cut-off is under 17, not under 18, so the Palestinian figure is a floor. Palestinian minors killed inside Israel in this period are not broken out by age in the source and are therefore not included.</span></td>
+            <td class="small">9 December 1987 – 28 September 2000</td>
+            <td class="num">304</td>
+            <td class="num">18</td>
+            <td class="small">counted<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>The second Intifada years</b><br><span class="small muted">Remember These Children names every child on both sides, under 18. Its own stated header totals for 2000–2014 are 131 Israeli and 1,587 Palestinian, while its year blocks sum to 131 and 1,653 — a discrepancy of 66 in the source itself, which is recorded here rather than resolved. The window used here stops at the end of 2012 because the 2013 block is missing from the compilation and the 2014 block was left incomplete when it stopped being updated on 22 July 2014.</span></td>
+            <td class="small">29 September 2000 – 31 December 2012</td>
+            <td class="num">1,516</td>
+            <td class="num">129</td>
+            <td class="small">counted<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>The years between</b><br><span class="small muted">No single source counted both sides across this decade on one methodology, so no total is stated for it. What is published: OCHA recorded 551 Palestinian children killed in 2014 alone; B’Tselem recorded 1,317 Palestinian minors killed by Israeli security forces in the decade to 26 September 2010, and 124 Israeli minors killed by Palestinians over the same decade; DCIP recorded 32 in 2016, 56 in 2018, 86 in 2021, 78 in 2022 and 121 in the West Bank in 2023. The year rows below carry these as partial figures, and nothing in this page’s arithmetic depends on them.</span></td>
+            <td class="small">2013 – 6 October 2023</td>
+            <td class="num"><span class="muted">not counted</span></td>
+            <td class="num"><span class="muted">not counted</span></td>
+            <td class="small">partial<br><span class="small muted">Defence for Children International – Palestine; OCHA; B’Tselem.</span></td>
+          </tr><tr>
+            <td><b>The war</b><br><span class="small muted">The Palestinian figure is Gaza plus the West Bank from the same daily series the rest of this site plots. The Israeli figure is the children killed on 7 October 2023. B’Tselem does not publish a separate count of Israeli children killed after that day; the small number since is inside its 151 for 2000–2025, listed under the gaps below. The comparison is therefore stated against the larger of the two published 7 October figures and still errs against this record’s own argument.</span></td>
+            <td class="small">7 October 2023 – 10 September 2026</td>
+            <td class="num">20,417</td>
+            <td class="num">38</td>
+            <td class="small">counted<br><span class="small muted">Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.</span></td>
+          </tr></tbody>
+        </table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p></div>
+      </section>
+
+      <section class="section wrap">
+        <div class="section-head">
+      <div class="eyebrow">Every year</div>
+      <h2>The full year table, including the years with no figure</h2>
+      <p>Rows marked partial cover one side only, or one territory only. No total on this page is computed from them.</p>
+    </div>
+        <div class="card" style="padding:0;overflow:hidden"><div class="table-scroll"><div class="table-wrap"><table class="ch-table">
+          <thead><tr><th class="col-year">Year</th><th>Palestinian children</th><th>Israeli children</th><th>Basis</th><th class="col-note">Source and note</th></tr></thead>
+          <tbody><tr>
+            <td><b>1987</b><br><span class="small muted">from 9 December 1987</span></td>
+            <td class="num">5</td>
+            <td class="num">0</td>
+            <td class="small">counted</td>
+            <td class="small">5 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1988</b><br><span class="small muted">1988</span></td>
+            <td class="num">50</td>
+            <td class="num">3</td>
+            <td class="small">counted</td>
+            <td class="small">48 killed by Israeli security forces and 2 by Israeli civilians in the Occupied Territories; 3 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1989</b><br><span class="small muted">1989</span></td>
+            <td class="num">83</td>
+            <td class="num">1</td>
+            <td class="small">counted</td>
+            <td class="small">78 killed by Israeli security forces and 5 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 1 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1990</b><br><span class="small muted">1990</span></td>
+            <td class="num">25</td>
+            <td class="num">0</td>
+            <td class="small">counted</td>
+            <td class="small">23 killed by Israeli security forces and 2 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1991</b><br><span class="small muted">1991</span></td>
+            <td class="num">27</td>
+            <td class="num">0</td>
+            <td class="small">counted</td>
+            <td class="small">24 killed by Israeli security forces and 3 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1992</b><br><span class="small muted">1992</span></td>
+            <td class="num">23</td>
+            <td class="num">1</td>
+            <td class="small">counted</td>
+            <td class="small">23 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 1 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1993</b><br><span class="small muted">1993</span></td>
+            <td class="num">41</td>
+            <td class="num">0</td>
+            <td class="small">counted</td>
+            <td class="small">40 killed by Israeli security forces and 1 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1994</b><br><span class="small muted">1994</span></td>
+            <td class="num">24</td>
+            <td class="num">2</td>
+            <td class="small">counted</td>
+            <td class="small">16 killed by Israeli security forces and 8 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 2 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1995</b><br><span class="small muted">1995</span></td>
+            <td class="num">5</td>
+            <td class="num">0</td>
+            <td class="small">counted</td>
+            <td class="small">4 killed by Israeli security forces and 1 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1996</b><br><span class="small muted">1996</span></td>
+            <td class="num">11</td>
+            <td class="num">8</td>
+            <td class="small">counted</td>
+            <td class="small">10 killed by Israeli security forces and 1 by Israeli civilians in the Occupied Territories; 1 Israeli minors killed by Palestinians in the Occupied Territories and 7 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1997</b><br><span class="small muted">1997</span></td>
+            <td class="num">5</td>
+            <td class="num">3</td>
+            <td class="small">counted</td>
+            <td class="small">5 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 3 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1998</b><br><span class="small muted">1998</span></td>
+            <td class="num">3</td>
+            <td class="num">0</td>
+            <td class="small">counted</td>
+            <td class="small">3 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>1999</b><br><span class="small muted">1999</span></td>
+            <td class="num">0</td>
+            <td class="num">0</td>
+            <td class="small">counted</td>
+            <td class="small">0 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>2000</b><br><span class="small muted">to 28 September 2000</span></td>
+            <td class="num">2</td>
+            <td class="num">0</td>
+            <td class="small">counted</td>
+            <td class="small">2 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel.<br><span class="small muted">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).</span></td>
+          </tr><tr>
+            <td><b>2000</b><br><span class="small muted">from 29 September 2000</span></td>
+            <td class="num">91</td>
+            <td class="num">0</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2001</b><br><span class="small muted">2001</span></td>
+            <td class="num">103</td>
+            <td class="num">36</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2002</b><br><span class="small muted">2002</span></td>
+            <td class="num">201</td>
+            <td class="num">45</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2003</b><br><span class="small muted">2003</span></td>
+            <td class="num">141</td>
+            <td class="num">21</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2004</b><br><span class="small muted">2004</span></td>
+            <td class="num">188</td>
+            <td class="num">8</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2005</b><br><span class="small muted">2005</span></td>
+            <td class="num">56</td>
+            <td class="num">6</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2006</b><br><span class="small muted">2006</span></td>
+            <td class="num">139</td>
+            <td class="num">2</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2007</b><br><span class="small muted">2007</span></td>
+            <td class="num">68</td>
+            <td class="num">1</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2008</b><br><span class="small muted">2008</span></td>
+            <td class="num">160</td>
+            <td class="num">4</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2009</b><br><span class="small muted">2009</span></td>
+            <td class="num">295</td>
+            <td class="num">1</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2010</b><br><span class="small muted">2010</span></td>
+            <td class="num">15</td>
+            <td class="num">0</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2011</b><br><span class="small muted">2011</span></td>
+            <td class="num">15</td>
+            <td class="num">5</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr>
+            <td><b>2012</b><br><span class="small muted">2012</span></td>
+            <td class="num">44</td>
+            <td class="num">0</td>
+            <td class="small">counted</td>
+            <td class="small">Named children under 18, compiled one death at a time from both sides.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr class="row-partial">
+            <td><b>2013</b><br><span class="small muted">2013</span></td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">no figure published</td>
+            <td class="small">The compilation carries no 2013 block at all: it runs 2012, then 2014. Nothing is substituted for it here.<br><span class="small muted">Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.</span></td>
+          </tr><tr class="row-partial">
+            <td><b>2014</b><br><span class="small muted">2014</span></td>
+            <td class="num">551</td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">partial</td>
+            <td class="small">OCHA recorded 551 Palestinian children killed in 2014, the great majority during the fifty days of Operation Protective Edge, of whom Defence for Children International – Palestine independently verified 547 in Gaza. The Remember These Children compilation stopped on 22 July 2014, three weeks into that operation, and so records only 137 for the year; its figure is not used. No comparable single-source Israeli figure for 2014 is published here.<br><span class="small muted">OCHA; Defence for Children International – Palestine.</span></td>
+          </tr><tr class="row-partial">
+            <td><b>2015</b><br><span class="small muted">2015</span></td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">no figure published</td>
+            <td class="small">No single-source annual figure for either side is published here.</td>
+          </tr><tr class="row-partial">
+            <td><b>2016</b><br><span class="small muted">2016</span></td>
+            <td class="num">32</td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">partial</td>
+            <td class="small">Defence for Children International – Palestine recorded 32 Palestinian children killed in the occupied West Bank including East Jerusalem, the highest in a decade at that point. Gaza is not included in that figure.<br><span class="small muted">Defence for Children International – Palestine.</span></td>
+          </tr><tr class="row-partial">
+            <td><b>2017</b><br><span class="small muted">2017</span></td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">no figure published</td>
+            <td class="small">No single-source annual figure for either side is published here.</td>
+          </tr><tr class="row-partial">
+            <td><b>2018</b><br><span class="small muted">2018</span></td>
+            <td class="num">56</td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">partial</td>
+            <td class="small">Defence for Children International – Palestine recorded 56 Palestinian children killed across the occupied territory, 45 of them in Gaza from 30 March during the Great March of Return.<br><span class="small muted">Defence for Children International – Palestine.</span></td>
+          </tr><tr class="row-partial">
+            <td><b>2019</b><br><span class="small muted">2019</span></td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">no figure published</td>
+            <td class="small">No single-source annual figure for either side is published here.</td>
+          </tr><tr class="row-partial">
+            <td><b>2020</b><br><span class="small muted">2020</span></td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">no figure published</td>
+            <td class="small">No single-source annual figure for either side is published here.</td>
+          </tr><tr class="row-partial">
+            <td><b>2021</b><br><span class="small muted">2021</span></td>
+            <td class="num">86</td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">partial</td>
+            <td class="small">Defence for Children International – Palestine recorded 86 Palestinian children killed, the deadliest year for Palestinian children since 2014.<br><span class="small muted">Defence for Children International – Palestine.</span></td>
+          </tr><tr class="row-partial">
+            <td><b>2022</b><br><span class="small muted">2022</span></td>
+            <td class="num">78</td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">partial</td>
+            <td class="small">Defence for Children International – Palestine recorded 78 Palestinian children killed across the occupied territory. OCHA, counting only the West Bank and only on its own verification standard, recorded 36 — the figure this site carries in its West Bank baseline.<br><span class="small muted">Defence for Children International – Palestine; OCHA.</span></td>
+          </tr><tr>
+            <td><b>2023</b><br><span class="small muted">from 7 October 2023</span></td>
+            <td class="num">9,179</td>
+            <td class="num">38</td>
+            <td class="small">counted</td>
+            <td class="small">Gaza 9100 and the West Bank 79, both from 7 October. OCHA separately recorded 42 Palestinian children killed in the West Bank between 1 January and 6 October 2023, before the war; adding those gives 121 for the West Bank in 2023, which is also the figure Defence for Children International – Palestine documented independently. OCHA’s own published annual West Bank total is 81. The pre-October deaths are not added to the figure plotted here, which begins on 7 October.<br><span class="small muted">Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.</span><br><span class="small muted">Israel National Council for the Child, on the children killed on 7 October 2023; Israel’s social security records give 36.</span></td>
+          </tr><tr>
+            <td><b>2024</b><br><span class="small muted">2024</span></td>
+            <td class="num">8,806</td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">counted</td>
+            <td class="small">Gaza 8718 and the West Bank 88.<br><span class="small muted">Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.</span></td>
+          </tr><tr>
+            <td><b>2025</b><br><span class="small muted">2025</span></td>
+            <td class="num">2,410</td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">counted</td>
+            <td class="small">Gaza 2361 and the West Bank 49.<br><span class="small muted">Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.</span></td>
+          </tr><tr>
+            <td><b>2026</b><br><span class="small muted">to 10 September 2026</span></td>
+            <td class="num">22</td>
+            <td class="num"><span class="muted">—</span></td>
+            <td class="small">counted</td>
+            <td class="small">Gaza 0 and the West Bank 22, to the last daily report received.<br><span class="small muted">Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.</span></td>
+          </tr></tbody>
+        </table></div></div><p class="table-note">This table is wider than the screen — scroll it sideways to see the rest.</p></div>
+      </section>
+
+      <section class="section wrap">
+        <div class="section-head">
+      <div class="eyebrow">What is missing</div>
+      <h2>The gaps, stated</h2>
+      <p>A record that filled these in would be easier to read and would not be a record.</p>
+    </div>
+        <div class="grid c2">
+          <div class="card" style="padding:20px 22px">
+            <h3>1947–1966</h3>
+            <p class="chart-note" style="margin-top:6px">No count of children exists for the Nakba or the years after it.</p>
+            <p class="src">—</p>
+          </div><div class="card" style="padding:20px 22px">
+            <h3>1967–1987</h3>
+            <p class="chart-note" style="margin-top:6px">No systematic count of children exists for the first twenty years of the occupation.</p>
+            <p class="src">—</p>
+          </div><div class="card" style="padding:20px 22px">
+            <h3>2013</h3>
+            <p class="chart-note" style="margin-top:6px">The Remember These Children compilation has no 2013 block; it runs 2012, then 2014.</p>
+            <p class="src">Remember These Children.</p>
+          </div><div class="card" style="padding:20px 22px">
+            <h3>2015, 2017, 2019, 2020</h3>
+            <p class="chart-note" style="margin-top:6px">No annual figure counting both sides on one methodology is published here. DCIP recorded at least 159 Palestinian children killed across 2015–2019 as a five-year total.</p>
+            <p class="src">Defence for Children International – Palestine.</p>
+          </div><div class="card" style="padding:20px 22px">
+            <h3>Israeli children, 2013 – 6 October 2023</h3>
+            <p class="chart-note" style="margin-top:6px">B’Tselem records 151 Israeli children under 18 killed by Palestinians between September 2000 and 31 July 2025, excluding 7 October 2023, but does not publish it cut by year. Subtracting the 129 counted here to the end of 2012 leaves about 22 across the twelve and a half years after it, which is not attributed to individual years.</p>
+            <p class="src">B’Tselem.</p>
+          </div><div class="card" style="padding:20px 22px">
+            <h3>Israeli children after 7 October 2023</h3>
+            <p class="chart-note" style="margin-top:6px">Included inside the B’Tselem figure above and not published separately. The war window therefore counts 38 on the Israeli side, and the ratio it states would survive that figure being several times larger.</p>
+            <p class="src">B’Tselem.</p>
+          </div>
+        </div>
+        <div class="card" style="padding:24px;margin-top:18px">
+          <h3>How this page counts</h3>
+          <p>Three windows are counted in full. Each is taken from a single source that counted both sides on one methodology, so the ratio inside a window is a comparison the source itself supports. Periods no source counted are published as gaps. Figures that cover only one side, or only one territory, are marked partial and no total depends on them.</p>
+          <p><b>Definition.</b> A child is a person under 18, except in the B’Tselem window, where the published table is cut at under 17 and the Palestinian figure is therefore a floor.</p>
+          <p class="src">B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000). · Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014. · Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages. · Defence for Children International – Palestine. · OCHA, occupied Palestinian territory casualties database. · Israel National Council for the Child; Israel National Insurance Institute. · Save the Children, Gaza: 20,000 children killed in 23 months of war, 6 September 2025. · UN Independent International Commission of Inquiry on the OPT, 23 June 2026.</p>
+          <p class="chart-note">The whole file is published as <a href="../data/children.json">data/children.json</a>, under no login and no key. Every figure above is read from it; nothing on this page is typed by hand. See <a href="../index.html#/api">open data</a>.</p>
+        </div>
+      </section>
+    </div><nav class="snapshot-links" aria-label="Other sections"><h2>Every other section, without JavaScript</h2><ul><li><a href="overview.html">The Documented Record — Israel and the Occupied Territories, 1917–2026</a></li><li><a href="tour.html">Start here — the case in eight steps</a></li><li><a href="data-gaza.html">Gaza — the toll since 7 October 2023</a></li><li><a href="data-asymmetry.html">The asymmetry — Palestinians and Israelis killed</a></li><li><a href="data-since-1948.html">Since 1948 — seventy-eight years of the toll</a></li><li><a href="data-complicity.html">Complicity — who supplies the war</a></li><li><a href="data-land.html">The land — six per cent to seventy-eight</a></li><li><a href="data-west-bank.html">The West Bank — before and after October 2023</a></li><li><a href="data-wars.html">Wars and 7 October — seventy-five years of operations</a></li><li><a href="data-world.html">The world — recognition, embargoes and vetoes</a></li><li><a href="data-tables.html">Source tables — every table in the report</a></li><li><a href="timeline.html">Timeline — a dated chronology, 1917–2026</a></li><li><a href="evidence.html">Evidence — the complete report</a></li><li><a href="rebuttals.html">Rebuttals — every defence, answered</a></li><li><a href="statements.html">Statements — the documented record of intent</a></li><li><a href="legal.html">Legal — the findings and the instruments they rest on</a></li><li><a href="sources.html">Sources — what the record rests on</a></li><li><a href="method.html">Method — impartial, not neutral</a></li><li><a href="api.html">Open data — the record as files</a></li><li><a href="changelog.html">Changelog — every revision, dated</a></li></ul></nav></main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-flag">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=35" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <span class="flag-rule"></span>
+    </div>
+    <p><strong>Source document:</strong> <code>report-final.md</code> — a forensic academic survey applying identical
+      evidentiary standards to all actors. Every heading, paragraph, list and table in the source report is reproduced
+      in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
+    <p class="muted" id="footer-stats">99,501 words · 34 parts · 131 sections · 13 tables · 215 chronology entries · 85 documented statements · 106 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <!-- A record meant to be used in an argument has to be citable in one.
+         Filled in by app.js with the route on screen and the date of the data
+         it is showing, so a citation copied from here names the version the
+         reader actually read. -->
+    <details class="cite" id="cite">
+      <summary>Cite this record</summary>
+      <div class="cite-body">
+        <p class="small muted" id="cite-note">This is a living document. The figures below were compiled on 13 September 2026; the casualty series runs to 10 September 2026. Cite the date you read it, not only the year.</p>
+        <div class="cite-row" data-style="apa"><b>APA</b><code id="cite-apa">Kayani, U. (2026). The Documented Record — Israel and the Occupied Territories, 1917–2026 (The children section) [Data set and report]. Retrieved 13 September 2026, from https://palestinerecord.github.io/#/children</code></div>
+        <div class="cite-row" data-style="harvard"><b>Harvard</b><code id="cite-harvard">Kayani, U. (2026) The Documented Record — Israel and the Occupied Territories, 1917–2026 (The children section). Available at: https://palestinerecord.github.io/#/children (Accessed: 13 September 2026).</code></div>
+        <div class="cite-row" data-style="bibtex"><b>BibTeX</b><code id="cite-bibtex">@misc{palestinerecord2026,
+  author       = {Kayani, Usman},
+  title        = {{The Documented Record: Israel and the Occupied Territories, 1917--2026}, The children section},
+  year         = {2026},
+  howpublished = {\url{https://palestinerecord.github.io/#/children}},
+  note         = {Data compiled 13 September 2026; accessed 13 September 2026}
+}</code></div>
+      </div>
+    </details>
+    <p class="footer-links">
+      <a href="../index.html#/method">Method</a> · <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="snapshot/">Text-only versions</a> ·
+      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a> ·
+      <a href="feed.xml">Feed</a>
+    </p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+<!-- Loaded dynamically so ?prerender=1 never builds the 24,000-point WebGL field:
+     prerender.py dumps the text of a route, and software WebGL would spend the
+     whole budget on a scene no snapshot can contain. -->
+
+<!-- The offline worker. Registered after load so it never competes with the
+     record for the network, and never during a prerender pass. ?nosw=1 is the
+     way out: it unregisters the worker and empties its caches, so a bad
+     deployment of sw.js can be undone from the address bar. -->
+
+
+
+</body></html>

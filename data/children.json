@@ -1,0 +1,641 @@
+{
+ "meta": {
+  "title": "The children’s record, 1948 to the present",
+  "generated": "2026-09-13",
+  "data_through": "2026-09-10",
+  "data_through_prose": "10 September 2026",
+  "definition": "A child is a person under 18, except in the B’Tselem window, where the published table is cut at under 17 and the Palestinian figure is therefore a floor.",
+  "method": "Three windows are counted in full. Each is taken from a single source that counted both sides on one methodology, so the ratio inside a window is a comparison the source itself supports. Periods no source counted are published as gaps. Figures that cover only one side, or only one territory, are marked partial and no total depends on them.",
+  "sources": [
+   "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.",
+   "Defence for Children International – Palestine.",
+   "OCHA, occupied Palestinian territory casualties database.",
+   "Israel National Council for the Child; Israel National Insurance Institute.",
+   "Save the Children, Gaza: 20,000 children killed in 23 months of war, 6 September 2025.",
+   "UN Independent International Commission of Inquiry on the OPT, 23 June 2026."
+  ]
+ },
+ "counted": {
+  "palestinian": 22237,
+  "israeli": 185,
+  "ratio": 120.2,
+  "share": 99.2,
+  "span": "the three windows below, together 9 December 1987 – 10 September 2026",
+  "note": "The sum of the three fully counted windows and of nothing else. The uncounted years would add to both sides; they are not estimated here, and the total is therefore a floor, not the whole record."
+ },
+ "windows": [
+  {
+   "id": "intifada-1",
+   "label": "The first Intifada and the Oslo years",
+   "span": "9 December 1987 – 28 September 2000",
+   "palestinian": 304,
+   "israeli": 18,
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "B’Tselem counted both sides on one methodology and published the table year by year. Its cut-off is under 17, not under 18, so the Palestinian figure is a floor. Palestinian minors killed inside Israel in this period are not broken out by age in the source and are therefore not included.",
+   "ratio": 16.9,
+   "share": 94.4
+  },
+  {
+   "id": "intifada-2",
+   "label": "The second Intifada years",
+   "span": "29 September 2000 – 31 December 2012",
+   "palestinian": 1516,
+   "israeli": 129,
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Remember These Children names every child on both sides, under 18. Its own stated header totals for 2000–2014 are 131 Israeli and 1,587 Palestinian, while its year blocks sum to 131 and 1,653 — a discrepancy of 66 in the source itself, which is recorded here rather than resolved. The window used here stops at the end of 2012 because the 2013 block is missing from the compilation and the 2014 block was left incomplete when it stopped being updated on 22 July 2014.",
+   "ratio": 11.8,
+   "share": 92.2
+  },
+  {
+   "id": "war",
+   "label": "The war",
+   "span": "7 October 2023 – 10 September 2026",
+   "palestinian": 20417,
+   "israeli": 38,
+   "source": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.",
+   "note": "The Palestinian figure is Gaza plus the West Bank from the same daily series the rest of this site plots. The Israeli figure is the children killed on 7 October 2023. B’Tselem does not publish a separate count of Israeli children killed after that day; the small number since is inside its 151 for 2000–2025, listed under the gaps below. The comparison is therefore stated against the larger of the two published 7 October figures and still errs against this record’s own argument.",
+   "ratio": 537.3,
+   "share": 99.8
+  }
+ ],
+ "eras": [
+  {
+   "id": "nakba",
+   "label": "The Nakba and the years after it",
+   "span": "1947–1966",
+   "palestinian": null,
+   "israeli": null,
+   "basis": "none",
+   "source": "No published source disaggregates children for this period.",
+   "note": "Around 15,000 Palestinians were killed in 1947–49 and 456 towns and villages were emptied, 49 of them with a recorded massacre. Children are named one by one in the survivor testimony from Deir Yassin, al-Dawayima, Tantura and the rest, but no body produced a cumulative count of them, and none is invented here."
+  },
+  {
+   "id": "occupation",
+   "label": "From the occupation to the first Intifada",
+   "span": "1967–1987",
+   "palestinian": null,
+   "israeli": null,
+   "basis": "none",
+   "source": "No published source covers this period systematically.",
+   "note": "B’Tselem was founded in 1989 and its own tables begin on 9 December 1987; the Palestinian and international documentation of the two decades before that was not kept in a form that yields an annual count of children. The period is left empty rather than estimated."
+  },
+  {
+   "id": "intifada-1",
+   "label": "The first Intifada and the Oslo years",
+   "span": "9 December 1987 – 28 September 2000",
+   "palestinian": 304,
+   "israeli": 18,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "B’Tselem counted both sides on one methodology and published the table year by year. Its cut-off is under 17, not under 18, so the Palestinian figure is a floor. Palestinian minors killed inside Israel in this period are not broken out by age in the source and are therefore not included."
+  },
+  {
+   "id": "intifada-2",
+   "label": "The second Intifada years",
+   "span": "29 September 2000 – 31 December 2012",
+   "palestinian": 1516,
+   "israeli": 129,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Remember These Children names every child on both sides, under 18. Its own stated header totals for 2000–2014 are 131 Israeli and 1,587 Palestinian, while its year blocks sum to 131 and 1,653 — a discrepancy of 66 in the source itself, which is recorded here rather than resolved. The window used here stops at the end of 2012 because the 2013 block is missing from the compilation and the 2014 block was left incomplete when it stopped being updated on 22 July 2014."
+  },
+  {
+   "id": "between",
+   "label": "The years between",
+   "span": "2013 – 6 October 2023",
+   "palestinian": null,
+   "israeli": null,
+   "basis": "partial",
+   "source": "Defence for Children International – Palestine; OCHA; B’Tselem.",
+   "note": "No single source counted both sides across this decade on one methodology, so no total is stated for it. What is published: OCHA recorded 551 Palestinian children killed in 2014 alone; B’Tselem recorded 1,317 Palestinian minors killed by Israeli security forces in the decade to 26 September 2010, and 124 Israeli minors killed by Palestinians over the same decade; DCIP recorded 32 in 2016, 56 in 2018, 86 in 2021, 78 in 2022 and 121 in the West Bank in 2023. The year rows below carry these as partial figures, and nothing in this page’s arithmetic depends on them."
+  },
+  {
+   "id": "war",
+   "label": "The war",
+   "span": "7 October 2023 – 10 September 2026",
+   "palestinian": 20417,
+   "israeli": 38,
+   "basis": "counted",
+   "source": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.",
+   "note": "The Palestinian figure is Gaza plus the West Bank from the same daily series the rest of this site plots. The Israeli figure is the children killed on 7 October 2023. B’Tselem does not publish a separate count of Israeli children killed after that day; the small number since is inside its 151 for 2000–2025, listed under the gaps below. The comparison is therefore stated against the larger of the two published 7 October figures and still errs against this record’s own argument."
+  }
+ ],
+ "years": [
+  {
+   "year": 1987,
+   "label": "from 9 December 1987",
+   "window": "intifada-1",
+   "palestinian": 5,
+   "israeli": 0,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "5 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel."
+  },
+  {
+   "year": 1988,
+   "label": "1988",
+   "window": "intifada-1",
+   "palestinian": 50,
+   "israeli": 3,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "48 killed by Israeli security forces and 2 by Israeli civilians in the Occupied Territories; 3 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel."
+  },
+  {
+   "year": 1989,
+   "label": "1989",
+   "window": "intifada-1",
+   "palestinian": 83,
+   "israeli": 1,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "78 killed by Israeli security forces and 5 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 1 inside Israel."
+  },
+  {
+   "year": 1990,
+   "label": "1990",
+   "window": "intifada-1",
+   "palestinian": 25,
+   "israeli": 0,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "23 killed by Israeli security forces and 2 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel."
+  },
+  {
+   "year": 1991,
+   "label": "1991",
+   "window": "intifada-1",
+   "palestinian": 27,
+   "israeli": 0,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "24 killed by Israeli security forces and 3 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel."
+  },
+  {
+   "year": 1992,
+   "label": "1992",
+   "window": "intifada-1",
+   "palestinian": 23,
+   "israeli": 1,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "23 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 1 inside Israel."
+  },
+  {
+   "year": 1993,
+   "label": "1993",
+   "window": "intifada-1",
+   "palestinian": 41,
+   "israeli": 0,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "40 killed by Israeli security forces and 1 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel."
+  },
+  {
+   "year": 1994,
+   "label": "1994",
+   "window": "intifada-1",
+   "palestinian": 24,
+   "israeli": 2,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "16 killed by Israeli security forces and 8 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 2 inside Israel."
+  },
+  {
+   "year": 1995,
+   "label": "1995",
+   "window": "intifada-1",
+   "palestinian": 5,
+   "israeli": 0,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "4 killed by Israeli security forces and 1 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel."
+  },
+  {
+   "year": 1996,
+   "label": "1996",
+   "window": "intifada-1",
+   "palestinian": 11,
+   "israeli": 8,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "10 killed by Israeli security forces and 1 by Israeli civilians in the Occupied Territories; 1 Israeli minors killed by Palestinians in the Occupied Territories and 7 inside Israel."
+  },
+  {
+   "year": 1997,
+   "label": "1997",
+   "window": "intifada-1",
+   "palestinian": 5,
+   "israeli": 3,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "5 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 3 inside Israel."
+  },
+  {
+   "year": 1998,
+   "label": "1998",
+   "window": "intifada-1",
+   "palestinian": 3,
+   "israeli": 0,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "3 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel."
+  },
+  {
+   "year": 1999,
+   "label": "1999",
+   "window": "intifada-1",
+   "palestinian": 0,
+   "israeli": 0,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "0 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel."
+  },
+  {
+   "year": 2000,
+   "label": "to 28 September 2000",
+   "window": "intifada-1",
+   "palestinian": 2,
+   "israeli": 0,
+   "basis": "counted",
+   "source": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000).",
+   "note": "2 killed by Israeli security forces and 0 by Israeli civilians in the Occupied Territories; 0 Israeli minors killed by Palestinians in the Occupied Territories and 0 inside Israel."
+  },
+  {
+   "year": 2000,
+   "label": "from 29 September 2000",
+   "window": "intifada-2",
+   "palestinian": 91,
+   "israeli": 0,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2001,
+   "label": "2001",
+   "window": "intifada-2",
+   "palestinian": 103,
+   "israeli": 36,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2002,
+   "label": "2002",
+   "window": "intifada-2",
+   "palestinian": 201,
+   "israeli": 45,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2003,
+   "label": "2003",
+   "window": "intifada-2",
+   "palestinian": 141,
+   "israeli": 21,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2004,
+   "label": "2004",
+   "window": "intifada-2",
+   "palestinian": 188,
+   "israeli": 8,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2005,
+   "label": "2005",
+   "window": "intifada-2",
+   "palestinian": 56,
+   "israeli": 6,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2006,
+   "label": "2006",
+   "window": "intifada-2",
+   "palestinian": 139,
+   "israeli": 2,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2007,
+   "label": "2007",
+   "window": "intifada-2",
+   "palestinian": 68,
+   "israeli": 1,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2008,
+   "label": "2008",
+   "window": "intifada-2",
+   "palestinian": 160,
+   "israeli": 4,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2009,
+   "label": "2009",
+   "window": "intifada-2",
+   "palestinian": 295,
+   "israeli": 1,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2010,
+   "label": "2010",
+   "window": "intifada-2",
+   "palestinian": 15,
+   "israeli": 0,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2011,
+   "label": "2011",
+   "window": "intifada-2",
+   "palestinian": 15,
+   "israeli": 5,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2012,
+   "label": "2012",
+   "window": "intifada-2",
+   "palestinian": 44,
+   "israeli": 0,
+   "basis": "counted",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "Named children under 18, compiled one death at a time from both sides."
+  },
+  {
+   "year": 2013,
+   "label": "2013",
+   "window": "uncounted",
+   "palestinian": null,
+   "israeli": null,
+   "basis": "none",
+   "source": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014.",
+   "note": "The compilation carries no 2013 block at all: it runs 2012, then 2014. Nothing is substituted for it here."
+  },
+  {
+   "year": 2014,
+   "label": "2014",
+   "window": "uncounted",
+   "palestinian": 551,
+   "israeli": null,
+   "basis": "partial",
+   "source": "OCHA; Defence for Children International – Palestine.",
+   "note": "OCHA recorded 551 Palestinian children killed in 2014, the great majority during the fifty days of Operation Protective Edge, of whom Defence for Children International – Palestine independently verified 547 in Gaza. The Remember These Children compilation stopped on 22 July 2014, three weeks into that operation, and so records only 137 for the year; its figure is not used. No comparable single-source Israeli figure for 2014 is published here."
+  },
+  {
+   "year": 2015,
+   "label": "2015",
+   "window": "uncounted",
+   "palestinian": null,
+   "israeli": null,
+   "basis": "none",
+   "source": "",
+   "note": "No single-source annual figure for either side is published here."
+  },
+  {
+   "year": 2016,
+   "label": "2016",
+   "window": "uncounted",
+   "palestinian": 32,
+   "israeli": null,
+   "basis": "partial",
+   "source": "Defence for Children International – Palestine.",
+   "note": "Defence for Children International – Palestine recorded 32 Palestinian children killed in the occupied West Bank including East Jerusalem, the highest in a decade at that point. Gaza is not included in that figure."
+  },
+  {
+   "year": 2017,
+   "label": "2017",
+   "window": "uncounted",
+   "palestinian": null,
+   "israeli": null,
+   "basis": "none",
+   "source": "",
+   "note": "No single-source annual figure for either side is published here."
+  },
+  {
+   "year": 2018,
+   "label": "2018",
+   "window": "uncounted",
+   "palestinian": 56,
+   "israeli": null,
+   "basis": "partial",
+   "source": "Defence for Children International – Palestine.",
+   "note": "Defence for Children International – Palestine recorded 56 Palestinian children killed across the occupied territory, 45 of them in Gaza from 30 March during the Great March of Return."
+  },
+  {
+   "year": 2019,
+   "label": "2019",
+   "window": "uncounted",
+   "palestinian": null,
+   "israeli": null,
+   "basis": "none",
+   "source": "",
+   "note": "No single-source annual figure for either side is published here."
+  },
+  {
+   "year": 2020,
+   "label": "2020",
+   "window": "uncounted",
+   "palestinian": null,
+   "israeli": null,
+   "basis": "none",
+   "source": "",
+   "note": "No single-source annual figure for either side is published here."
+  },
+  {
+   "year": 2021,
+   "label": "2021",
+   "window": "uncounted",
+   "palestinian": 86,
+   "israeli": null,
+   "basis": "partial",
+   "source": "Defence for Children International – Palestine.",
+   "note": "Defence for Children International – Palestine recorded 86 Palestinian children killed, the deadliest year for Palestinian children since 2014."
+  },
+  {
+   "year": 2022,
+   "label": "2022",
+   "window": "uncounted",
+   "palestinian": 78,
+   "israeli": null,
+   "basis": "partial",
+   "source": "Defence for Children International – Palestine; OCHA.",
+   "note": "Defence for Children International – Palestine recorded 78 Palestinian children killed across the occupied territory. OCHA, counting only the West Bank and only on its own verification standard, recorded 36 — the figure this site carries in its West Bank baseline."
+  },
+  {
+   "year": 2023,
+   "label": "from 7 October 2023",
+   "window": "war",
+   "palestinian": 9179,
+   "israeli": 38,
+   "basis": "counted",
+   "source": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.",
+   "note": "Gaza 9100 and the West Bank 79, both from 7 October. OCHA separately recorded 42 Palestinian children killed in the West Bank between 1 January and 6 October 2023, before the war; adding those gives 121 for the West Bank in 2023, which is also the figure Defence for Children International – Palestine documented independently. OCHA’s own published annual West Bank total is 81. The pre-October deaths are not added to the figure plotted here, which begins on 7 October.",
+   "israeli_source": "Israel National Council for the Child, on the children killed on 7 October 2023; Israel’s social security records give 36."
+  },
+  {
+   "year": 2024,
+   "label": "2024",
+   "window": "war",
+   "palestinian": 8806,
+   "israeli": null,
+   "basis": "counted",
+   "source": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.",
+   "note": "Gaza 8718 and the West Bank 88."
+  },
+  {
+   "year": 2025,
+   "label": "2025",
+   "window": "war",
+   "palestinian": 2410,
+   "israeli": null,
+   "basis": "counted",
+   "source": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.",
+   "note": "Gaza 2361 and the West Bank 49."
+  },
+  {
+   "year": 2026,
+   "label": "to 10 September 2026",
+   "window": "war",
+   "palestinian": 22,
+   "israeli": null,
+   "basis": "counted",
+   "source": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages.",
+   "note": "Gaza 0 and the West Bank 22, to the last daily report received."
+  }
+ ],
+ "gaps": [
+  {
+   "label": "1947–1966",
+   "what": "No count of children exists for the Nakba or the years after it.",
+   "source": "—"
+  },
+  {
+   "label": "1967–1987",
+   "what": "No systematic count of children exists for the first twenty years of the occupation.",
+   "source": "—"
+  },
+  {
+   "label": "2013",
+   "what": "The Remember These Children compilation has no 2013 block; it runs 2012, then 2014.",
+   "source": "Remember These Children."
+  },
+  {
+   "label": "2015, 2017, 2019, 2020",
+   "what": "No annual figure counting both sides on one methodology is published here. DCIP recorded at least 159 Palestinian children killed across 2015–2019 as a five-year total.",
+   "source": "Defence for Children International – Palestine."
+  },
+  {
+   "label": "Israeli children, 2013 – 6 October 2023",
+   "what": "B’Tselem records 151 Israeli children under 18 killed by Palestinians between September 2000 and 31 July 2025, excluding 7 October 2023, but does not publish it cut by year. Subtracting the 129 counted here to the end of 2012 leaves about 22 across the twelve and a half years after it, which is not attributed to individual years.",
+   "source": "B’Tselem."
+  },
+  {
+   "label": "Israeli children after 7 October 2023",
+   "what": "Included inside the B’Tselem figure above and not published separately. The war window therefore counts 38 on the Israeli side, and the ratio it states would survive that figure being several times larger.",
+   "source": "B’Tselem."
+  }
+ ],
+ "ages": {
+  "label": "Children on the named list of the dead, by age",
+  "note": "One bar for each year of age from 0 to 17, from the 72,835 named records the Gaza Ministry of Health publishes with a date of birth. There is no age at which the count falls away.",
+  "source": "Gaza Ministry of Health named list, via the Tech For Palestine open datasets.",
+  "values": [
+   1072,
+   1052,
+   1113,
+   1045,
+   1011,
+   1116,
+   1077,
+   1140,
+   1064,
+   1088,
+   1085,
+   1150,
+   1218,
+   1329,
+   1453,
+   1425,
+   1591,
+   1608
+  ],
+  "total": 21637
+ },
+ "beyond": [
+  {
+   "label": "Children injured",
+   "value": 44143,
+   "note": "Between 7 October 2023 and 7 October 2025, against 20,179 killed over the same two years.",
+   "source": "UN Independent International Commission of Inquiry, report on the targeting of children, 23 June 2026."
+  },
+  {
+   "label": "Children left with a permanent disability",
+   "value": 21000,
+   "note": "Amputations, spinal injuries, blindness and deafness among them.",
+   "source": "UN Committee on the Rights of Persons with Disabilities, cited by Save the Children, 6 September 2025."
+  },
+  {
+   "label": "Children killed before their first birthday",
+   "value": 1009,
+   "note": "About 450 of them were born after the war began and killed before it ended.",
+   "source": "Save the Children, 6 September 2025."
+  },
+  {
+   "label": "Children who starved to death",
+   "value": 157,
+   "note": "Deaths attributed to malnutrition and starvation in children, in a territory where famine was declared on 22 August 2025.",
+   "source": "Gaza Ministry of Health, via the Tech For Palestine open datasets."
+  },
+  {
+   "label": "Under-fives at risk of death from acute malnutrition",
+   "value": 132000,
+   "note": "A projection made when famine was declared, not a count of deaths.",
+   "source": "IPC and UNICEF, cited by Save the Children, 6 September 2025."
+  },
+  {
+   "label": "Share of Gaza’s schools damaged or destroyed",
+   "value": 97,
+   "unit": "%",
+   "note": "94 per cent of hospitals were damaged or destroyed over the same period.",
+   "source": "Save the Children, 6 September 2025."
+  },
+  {
+   "label": "Children on the named list of the dead",
+   "value": 21637,
+   "note": "Of 72,835 people named with an identity number, date of birth and sex. Children are 29.7 per cent of the named dead.",
+   "source": "Gaza Ministry of Health named list, via the Tech For Palestine open datasets."
+  }
+ ]
+}

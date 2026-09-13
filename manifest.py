@@ -89,6 +89,16 @@ DESCRIPTIONS = {
         'organisations, open datasets, academic work, Israeli sources, journalism and archives.',
         'Each entry links to the publisher.',
     ),
+    'children.json': (
+        'The children\u2019s record, 1948 to the present',
+        'Every child this record can count, on both sides, period by period and year by year: '
+        'three windows counted in full from a single source that counted both sides on one '
+        'methodology, the partial figures that cover only one side or one territory marked as '
+        'such, and the periods nobody counted published as gaps rather than estimated.',
+        'B\u2019Tselem, Remember These Children, Defence for Children International \u2013 Palestine, '
+        'OCHA, the Gaza Ministry of Health via Tech For Palestine, and the Israel National '
+        'Council for the Child; each row names the one that recorded it.',
+    ),
     'history.json': (
         'The pre-October-2023 baseline and the undercount',
         'West Bank annual tolls and settler violence rates before October 2023, together with '

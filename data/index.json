@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-13",
-  "total_bytes": 3671070,
+  "total_bytes": 3700398,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -18,6 +18,25 @@
         "events"
       ],
       "updated": "2026-09-12"
+    },
+    {
+      "path": "data/children.json",
+      "title": "The children’s record, 1948 to the present",
+      "description": "Every child this record can count, on both sides, period by period and year by year: three windows counted in full from a single source that counted both sides on one methodology, the partial figures that cover only one side or one territory marked as such, and the periods nobody counted published as gaps rather than estimated.",
+      "source": "B’Tselem, Remember These Children, Defence for Children International – Palestine, OCHA, the Gaza Ministry of Health via Tech For Palestine, and the Israel National Council for the Child; each row names the one that recorded it.",
+      "bytes": 29192,
+      "records": null,
+      "fields": [
+        "meta",
+        "counted",
+        "windows",
+        "eras",
+        "years",
+        "gaps",
+        "ages",
+        "beyond"
+      ],
+      "updated": "2026-09-13"
     },
     {
       "path": "data/chronology.json",
@@ -98,7 +117,7 @@
       "title": "The first screen",
       "description": "The eight headline figures, the current ratio and the counts, in one small file so the record can state what it establishes before the rest of the data arrives.",
       "source": "A subset of figures.json, timeseries.json and report-meta.json; each figure keeps its own source field.",
-      "bytes": 1718,
+      "bytes": 1854,
       "records": null,
       "fields": [
         "meta",
@@ -107,7 +126,7 @@
         "ratio",
         "counts"
       ],
-      "updated": "2026-09-12"
+      "updated": "2026-09-13"
     },
     {
       "path": "data/history.json",
@@ -204,7 +223,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-12"
+      "updated": "2026-09-13"
     },
     {
       "path": "data/names.json",
@@ -217,7 +236,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-12"
+      "updated": "2026-09-13"
     },
     {
       "path": "data/report-meta.json",
@@ -312,7 +331,7 @@
         "press_killed_count",
         "demographics"
       ],
-      "updated": "2026-09-12"
+      "updated": "2026-09-13"
     },
     {
       "path": "data/war-record.json",

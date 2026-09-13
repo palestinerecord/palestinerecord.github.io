@@ -120,7 +120,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=34" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=35" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -234,7 +234,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=34" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=35" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2365,6 +2365,11 @@ const Views = (function () {
       desc: 'What changed in the record and when: each figure refreshed, each finding added, in the words '
         + 'of the report itself.',
     },
+    children: {
+      title: 'The children — every child the record can count',
+      desc: 'A unit chart of the children killed on both sides, period by period, one figure drawn '
+        + 'per child, with the years no one counted left as gaps and every figure carrying its source.',
+    },
     method: {
       title: 'Method — impartial, not neutral',
       desc: 'The standard of proof this record runs on, the distinction between impartiality and '
@@ -2577,6 +2582,218 @@ const Views = (function () {
     </div>`;
   }
 
+  /* ---------- children ---------- */
+
+  /* A unit chart, in the tradition Isotype set and countingthekids.org carried
+     into this conflict: one figure drawn for every N children, the two sides
+     laid out on the same grid, so the ratio is something a reader counts
+     rather than something this record asserts. The unit differs from window to
+     window because the counts differ by three orders of magnitude, and it is
+     printed on every block; a row whose count is smaller than one unit still
+     draws one figure, and says so, because a row drawn as nothing would read
+     as a claim that nobody died. */
+  function pictogram(pal, isr, unit, palLabel, isrLabel) {
+    const row = (n, side, label) => {
+      const drawn = Math.max(1, Math.round(n / unit));
+      const short = n < unit;
+      return `<div class="picto-side">
+        <div class="picto-lab"><b class="${side}">${fmt(n)}</b> <span>${esc(label)}</span></div>
+        <div class="picto-grid ${side}" role="img" aria-label="${fmt(n)} ${esc(label)}, drawn as ${fmt(drawn)} ${drawn === 1 ? 'figure' : 'figures'}">
+          ${Array(drawn).fill(`<svg class="picto-fig" aria-hidden="true" focusable="false"><use href="#fig-child"></use></svg>`).join('')}
+        </div>
+        ${short ? `<p class="picto-short">Fewer than ${fmt(unit)}. Drawn as one figure so the row is visible at all; to scale it would be ${(n / unit).toFixed(2)} of a figure.</p>` : ''}
+      </div>`;
+    };
+    return `<div class="picto">
+      <p class="picto-key">One figure is ${fmt(unit)} ${unit === 1 ? 'child' : 'children'}.</p>
+      ${row(pal, 'ps', palLabel)}
+      ${row(isr, 'il', isrLabel)}
+    </div>`;
+  }
+
+  /* Bars drawn in the document rather than on a canvas. A canvas cannot be
+     read by a screen reader, quoted, or checked against the file it came from,
+     and the static snapshots this site publishes carry no script at all, so a
+     charted version of this page would be blank in exactly the copy a search
+     engine and a text browser read. */
+  function yearBars(rows, title, note, source) {
+    const top = Math.max.apply(null, rows.map((r) => Math.max(r.palestinian || 0, r.israeli || 0)));
+    const bar = (n, side) => {
+      const width = top ? Math.max(n ? 0.6 : 0, 100 * (n || 0) / top) : 0;
+      return `<span class="yrbar-fill ${side}" style="width:${width.toFixed(2)}%"></span>`;
+    };
+    return `<div class="card" style="padding:22px 24px 24px">
+      <h3>${esc(title)}</h3>
+      <p class="chart-note" style="margin:6px 0 16px">${note}</p>
+      <div class="yrbars">
+        ${rows.map((r) => `<div class="yrbar">
+          <span class="yrbar-lab">${esc(String(r.year))}</span>
+          <span class="yrbar-track">${bar(r.palestinian, 'ps')}${bar(r.israeli, 'il')}</span>
+          <span class="yrbar-val"><b class="ps">${fmt(r.palestinian || 0)}</b> <b class="il">${fmt(r.israeli || 0)}</b></span>
+        </div>`).join('')}
+      </div>
+      <p class="src">${esc(source)}</p>
+    </div>`;
+  }
+
+  function childrenView() {
+    const C = D.children;
+    if (!C) return `<div class="view"><section class="section wrap">${head('Children', 'The children’s record', 'data/children.json did not load.')}</section></div>`;
+    const win = {};
+    C.windows.forEach((w) => { win[w.id] = w; });
+    const counted = C.counted;
+    const yearsIn = (id) => C.years.filter((r) => r.window === id);
+    const basisWord = { counted: 'counted', partial: 'partial', none: 'no figure published' };
+
+    return `<div class="view">
+      <svg class="picto-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+        <symbol id="fig-child" viewBox="0 0 10 22">
+          <circle cx="5" cy="3.3" r="3.05"/>
+          <path d="M5 7.1c2.55 0 4.15 1.6 4.15 4.05v4.35H7.55l-.5 6.4H2.95l-.5-6.4H.85v-4.35C.85 8.7 2.45 7.1 5 7.1Z"/>
+        </symbol>
+      </defs></svg>
+
+      <section class="section wrap">
+        ${head('Children', 'The children’s record, 1948 to the present',
+          'Across every period this record can count from a single source that counted both sides on one methodology, <b>' + fmt(counted.palestinian) + '</b> Palestinian children and <b>' + fmt(counted.israeli) + '</b> Israeli children were killed. That is <b>' + counted.ratio + ' to 1</b>.')}
+        <div class="grid c4">
+          <div class="stat red"><div class="val">${fmt(counted.palestinian)}</div><div class="lbl">Palestinian children killed</div></div>
+          <div class="stat blue"><div class="val">${fmt(counted.israeli)}</div><div class="lbl">Israeli children killed</div></div>
+          <div class="stat"><div class="val">${counted.ratio}:1</div><div class="lbl">Palestinian children per Israeli child</div></div>
+          <div class="stat"><div class="val">${counted.share}%</div><div class="lbl">Of the children killed, the share who were Palestinian</div></div>
+        </div>
+        <p class="chart-note" style="margin-top:16px">${esc(counted.note)}</p>
+      </section>
+
+      <section class="section wrap">
+        ${head('The argument', 'Why does this matter?', '')}
+        <div class="card" style="padding:26px">
+          <p>Because a child is not a combatant, cannot be one, and is the one category of person about whom the two sides of this argument agree. Every other figure in this record can be met with a claim about who was fighting whom. This one cannot.</p>
+          <p>And because the ratio settles the question the rhetoric is built to avoid. When <b>${counted.share} per cent</b> of the children killed are killed by one party, the question of who is defending whom has an answer, and it is not the answer that party gives. <b>You cannot claim to be defending a child while killing ${Math.round(counted.ratio)} others.</b></p>
+          <p class="chart-note">That formulation is not this record’s. It is the argument countingthekids.org has made since 2012, from its own count of the years 2000 to 2014, where the ratio ran at about eleven to one. This record does not reproduce their figure; it computes its own, from its own sourced series, and the second-Intifada window below — <b>${win['intifada-2'].ratio} to 1</b> — is where that earlier claim can be checked.</p>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('The war', win.war.span, 'One figure for every hundred children. Count them.')}
+        ${pictogram(win.war.palestinian, win.war.israeli, 100, 'Palestinian children killed', 'Israeli children killed')}
+        <div class="card" style="padding:22px 24px;margin-top:18px">
+          <p>${fmt(win.war.palestinian)} Palestinian children in ${(function () { const a = new Date(2023, 9, 7), b = new Date(C.meta.data_through); return Math.round(10 * (b - a) / 864e5 / 365.25) / 10; })()} years: a child every <b>${(function () { const a = new Date(2023, 9, 7), b = new Date(C.meta.data_through); return Math.round(10 * 24 * (b - a) / 864e5 / win.war.palestinian) / 10; })()} hours</b>, without a pause, for three years.</p>
+          <p class="chart-note">${esc(win.war.note)}</p>
+          <p class="src">${esc(win.war.source)}</p>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('Before this war', 'The two windows a single source counted on both sides', 'The asymmetry is not a product of this war. It is what the record showed in every period anyone counted.')}
+        <div class="grid c2">
+          <div class="card" style="padding:22px 24px">
+            <h3>${esc(win['intifada-1'].label)}</h3>
+            <p class="chart-note" style="margin:4px 0 14px">${esc(win['intifada-1'].span)} — <b>${win['intifada-1'].ratio} to 1</b></p>
+            ${pictogram(win['intifada-1'].palestinian, win['intifada-1'].israeli, 1, 'Palestinian children', 'Israeli children')}
+            <p class="src">${esc(win['intifada-1'].source)}</p>
+          </div>
+          <div class="card" style="padding:22px 24px">
+            <h3>${esc(win['intifada-2'].label)}</h3>
+            <p class="chart-note" style="margin:4px 0 14px">${esc(win['intifada-2'].span)} — <b>${win['intifada-2'].ratio} to 1</b></p>
+            ${pictogram(win['intifada-2'].palestinian, win['intifada-2'].israeli, 10, 'Palestinian children', 'Israeli children')}
+            <p class="src">${esc(win['intifada-2'].source)}</p>
+          </div>
+        </div>
+        <div class="grid c2" style="margin-top:18px">
+          <div class="card" style="padding:22px 24px"><p class="chart-note">${esc(win['intifada-1'].note)}</p></div>
+          <div class="card" style="padding:22px 24px"><p class="chart-note">${esc(win['intifada-2'].note)}</p></div>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('Year by year', 'Every year the record can count', 'Two scales, because the counts differ by three orders of magnitude and one axis would render the earlier years as nothing. Red is Palestinian children, blue Israeli children.')}
+        <div class="grid c2">
+          ${yearBars(yearsIn('intifada-1').concat(yearsIn('intifada-2')).reduce((a, r) => { const p = a[a.length - 1]; if (p && p.year === r.year) { p.palestinian += r.palestinian; p.israeli += r.israeli; return a; } return a.concat([{ year: r.year, palestinian: r.palestinian, israeli: r.israeli }]); }, []),
+            '1987 to 2012', 'B’Tselem to 28 September 2000, then Remember These Children. The two use different cut-offs — under 17 and under 18 — and the join is marked here rather than smoothed.', 'B’Tselem; Remember These Children.')}
+          ${yearBars(yearsIn('war').map((r) => ({ year: r.year, palestinian: r.palestinian, israeli: r.israeli || 0 })),
+            '2023 to ' + C.meta.data_through.slice(0, 4), '2023 begins on 7 October. The Israeli figure is the children killed on that day; no separate annual count is published for the years after it.', C.meta.sources[2])}
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('Ages', esc(C.ages.label), C.ages.note)}
+        <div class="card" style="padding:22px 24px 24px">
+          <div class="agebars">
+            ${(function () {
+              const top = Math.max.apply(null, C.ages.values);
+              return C.ages.values.map((v, i) => `<div class="agebar" title="Age ${i}: ${fmt(v)}">
+                <span class="agebar-track"><span class="agebar-fill" style="height:${(100 * v / top).toFixed(1)}%"></span></span>
+                <span class="agebar-val">${fmt(v)}</span>
+                <span class="agebar-lab">${i}</span>
+              </div>`).join('');
+            })()}
+          </div>
+          <p class="chart-note" style="margin-top:14px">${fmt(C.ages.total)} children in total, spread almost evenly across every year of childhood. The bars do not fall away at the ages a combatant would be found, because these were not combatants.</p>
+          <p class="src">${esc(C.ages.source)}</p>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('Beyond the killing', 'What the war did to the children it did not kill', '')}
+        <div class="grid c3">
+          ${C.beyond.map((b) => `<div class="card" style="padding:20px 22px">
+            <div class="val" style="font-family:var(--serif);font-size:30px;color:var(--red);line-height:1.1">${fmt(b.value)}${b.unit ? esc(b.unit) : ''}</div>
+            <h3 style="margin-top:6px">${esc(b.label)}</h3>
+            <p class="chart-note" style="margin-top:6px">${esc(b.note)}</p>
+            <p class="src">${esc(b.source)}</p>
+          </div>`).join('')}
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('The long record', 'Nineteen forty-eight to the present, period by period', 'Including the periods no one counted. A blank cell is a gap in the documentation, not a period in which no child died.')}
+        <div class="card" style="padding:0;overflow:hidden"><div class="table-wrap"><table class="ch-table">
+          <thead><tr><th class="col-period">Period</th><th class="col-span">Span</th><th>Palestinian children</th><th>Israeli children</th><th class="col-note">Basis</th></tr></thead>
+          <tbody>${C.eras.map((e) => `<tr>
+            <td><b>${esc(e.label)}</b><br><span class="small muted">${esc(e.note)}</span></td>
+            <td class="small">${esc(e.span)}</td>
+            <td class="num">${e.palestinian == null ? '<span class="muted">not counted</span>' : fmt(e.palestinian)}</td>
+            <td class="num">${e.israeli == null ? '<span class="muted">not counted</span>' : fmt(e.israeli)}</td>
+            <td class="small">${esc(basisWord[e.basis] || e.basis)}<br><span class="small muted">${esc(e.source)}</span></td>
+          </tr>`).join('')}</tbody>
+        </table></div></div>
+      </section>
+
+      <section class="section wrap">
+        ${head('Every year', 'The full year table, including the years with no figure', 'Rows marked partial cover one side only, or one territory only. No total on this page is computed from them.')}
+        <div class="card" style="padding:0;overflow:hidden"><div class="table-wrap"><table class="ch-table">
+          <thead><tr><th class="col-year">Year</th><th>Palestinian children</th><th>Israeli children</th><th>Basis</th><th class="col-note">Source and note</th></tr></thead>
+          <tbody>${C.years.map((r) => `<tr${r.basis === 'counted' ? '' : ' class="row-partial"'}>
+            <td><b>${esc(String(r.year))}</b><br><span class="small muted">${esc(r.label)}</span></td>
+            <td class="num">${r.palestinian == null ? '<span class="muted">—</span>' : fmt(r.palestinian)}</td>
+            <td class="num">${r.israeli == null ? '<span class="muted">—</span>' : fmt(r.israeli)}</td>
+            <td class="small">${esc(basisWord[r.basis] || r.basis)}</td>
+            <td class="small">${esc(r.note)}${r.source ? `<br><span class="small muted">${esc(r.source)}</span>` : ''}${r.israeli_source ? `<br><span class="small muted">${esc(r.israeli_source)}</span>` : ''}</td>
+          </tr>`).join('')}</tbody>
+        </table></div></div>
+      </section>
+
+      <section class="section wrap">
+        ${head('What is missing', 'The gaps, stated', 'A record that filled these in would be easier to read and would not be a record.')}
+        <div class="grid c2">
+          ${C.gaps.map((g) => `<div class="card" style="padding:20px 22px">
+            <h3>${esc(g.label)}</h3>
+            <p class="chart-note" style="margin-top:6px">${esc(g.what)}</p>
+            <p class="src">${esc(g.source)}</p>
+          </div>`).join('')}
+        </div>
+        <div class="card" style="padding:24px;margin-top:18px">
+          <h3>How this page counts</h3>
+          <p>${esc(C.meta.method)}</p>
+          <p><b>Definition.</b> ${esc(C.meta.definition)}</p>
+          <p class="src">${C.meta.sources.map(esc).join(' · ')}</p>
+          <p class="chart-note">The whole file is published as <a href="data/children.json">data/children.json</a>, under no login and no key. Every figure above is read from it; nothing on this page is typed by hand. See <a href="#/api">open data</a>.</p>
+        </div>
+      </section>
+    </div>`;
+  }
+
   /* ---------- api ---------- */
 
   const routes = {
@@ -2584,7 +2801,7 @@ const Views = (function () {
     evidence: evidenceView, rebuttals: rebuttalsView,
     statements: statementsView, legal: legalView, sources: sourcesView,
     tour: tourView, api: apiView, changelog: changelogView, embed: embedView,
-    method: methodView,
+    method: methodView, children: childrenView,
   };
 
   return {

@@ -23,7 +23,7 @@ const App = (function () {
 
   if (window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
-  const VIEWS = ['overview', 'tour', 'data', 'timeline', 'evidence', 'rebuttals', 'statements', 'legal',
+  const VIEWS = ['overview', 'tour', 'data', 'children', 'timeline', 'evidence', 'rebuttals', 'statements', 'legal',
     'sources', 'method', 'api', 'changelog', 'embed'];
 
   /* index.html?prerender=1 renders the text and nothing else: no charts, no
@@ -51,6 +51,7 @@ const App = (function () {
       ['statements', 'data/statements.json'],
       ['sources', 'data/sources.json'],
       ['history', 'data/history.json'],
+      ['children', 'data/children.json'],
       ['extra', 'data/timeline-extra.json'],
       ['legal', 'data/legal.json'],
       ['long', 'data/long-record.json'],

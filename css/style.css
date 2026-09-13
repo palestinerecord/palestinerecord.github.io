@@ -1357,3 +1357,75 @@ body[data-view="embed"] #app { padding: 0; }
   .cite-row { grid-template-columns: 74px 1fr; }
   .cite-row code { color: #333944; }
 }
+
+
+/* ---------- The children's record: unit charts drawn in the document ----------
+
+   Every mark on the Children route is an element, not a canvas. A canvas is
+   invisible to a screen reader, cannot be quoted, and disappears entirely from
+   the static snapshots, which carry no script — which is to say it would be
+   missing from exactly the copy a search engine and a text browser read. The
+   figures below therefore cost a few hundred DOM nodes and are worth it. */
+
+.picto-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.picto { display: flex; flex-direction: column; gap: 18px; }
+.picto-key {
+  font-size: 12.5px; color: var(--muted); letter-spacing: .02em; margin: 0;
+}
+.picto-side { display: flex; flex-direction: column; gap: 8px; }
+.picto-lab { font-size: 13.5px; color: var(--text-2); }
+.picto-lab b { font-family: var(--serif); font-size: 22px; letter-spacing: -0.01em; margin-right: 6px; }
+.picto-lab b.ps, .yrbar-val b.ps { color: var(--red); }
+.picto-lab b.il, .yrbar-val b.il { color: var(--blue); }
+.picto-grid { display: flex; flex-wrap: wrap; gap: 3px 3px; align-items: flex-end; }
+.picto-grid.ps { color: var(--red); }
+.picto-grid.il { color: var(--blue); }
+.picto-fig { width: 9px; height: 20px; flex: 0 0 auto; fill: currentColor; }
+.picto-short { font-size: 12px; color: var(--muted); margin: 0; line-height: 1.5; }
+
+/* Year bars. Two rows of colour per year on one track, so the reader compares
+   lengths rather than reading a legend back into a stack. */
+.yrbars { display: flex; flex-direction: column; gap: 7px; }
+.yrbar { display: grid; grid-template-columns: 58px 1fr auto; align-items: center; gap: 10px; }
+.yrbar-lab { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.yrbar-track { display: flex; flex-direction: column; gap: 2px; }
+.yrbar-fill { display: block; height: 7px; border-radius: 0 2px 2px 0; min-width: 0; }
+.yrbar-fill.ps { background: var(--red); }
+.yrbar-fill.il { background: var(--blue); }
+.yrbar-val { font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.yrbar-val b { font-weight: 600; }
+.yrbar-val b + b { margin-left: 8px; }
+
+/* One column per year of age, 0 to 17. */
+.agebars { display: grid; grid-template-columns: repeat(18, 1fr); gap: 4px; align-items: end; }
+.agebar { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; }
+.agebar-track { display: flex; align-items: flex-end; height: 130px; width: 100%; }
+.agebar-fill { display: block; width: 100%; background: var(--red); border-radius: 2px 2px 0 0; }
+.agebar-val { font-size: 10px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.agebar-lab { font-size: 11px; color: var(--text-2); font-variant-numeric: tabular-nums; }
+
+/* A partial row states one side, or one territory, and no total on the page is
+   computed from it. It is dimmed so that it cannot be misread as a counted one. */
+tr.row-partial td { opacity: .72; }
+
+@media (max-width: 640px) {
+  .picto-fig { width: 8px; height: 17px; }
+  .picto-grid { gap: 2px; }
+  .yrbar { grid-template-columns: 46px 1fr; row-gap: 3px; }
+  .yrbar-val { grid-column: 2; justify-self: start; }
+  .agebars { gap: 2px; }
+  .agebar-val { display: none; }
+  .agebar-lab { font-size: 9px; }
+  .agebar-track { height: 96px; }
+}
+
+/* The two tables on this page carry a sentence of prose in their last column.
+   Left to the automatic layout, a narrow screen gives that column forty pixels
+   and every row becomes a tower of one-word lines, so the table is held to a
+   readable width and scrolled sideways instead, which is what the table wrapper
+   and its edge fade already announce. */
+.ch-table { min-width: 700px; }
+.ch-table .col-period { min-width: 250px; }
+.ch-table .col-span { min-width: 165px; }
+.ch-table .col-year { min-width: 150px; }
+.ch-table .col-note { min-width: 350px; }
