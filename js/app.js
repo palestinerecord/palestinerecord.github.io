@@ -1152,11 +1152,16 @@ const App = (function () {
     const pos = document.getElementById('day-pos');
     const dateInput = document.getElementById('day-date');
     const play = document.getElementById('day-play');
+    const speed = document.getElementById('day-speed');
     const copy = document.getElementById('day-copy');
 
-    // 1,070 days in a hundred seconds: fast enough to be a film, slow enough
-    // that a date and a headline can be read as they go past.
-    const STEP_MS = 90;
+    // How long each day stays on screen. The panels carry a date, a toll and
+    // often a sentence someone said, and a pace that outruns the reading of
+    // them turns the record into a flicker. The default holds a day for four
+    // tenths of a second; the control beside the button offers half that and
+    // twice it, because what is being read changes what is enough.
+    const STEP_MS = 420;
+    const stepMs = () => Number(speed && speed.value) || STEP_MS;
     let i = Math.max(0, Math.min(dates.length - 1, Number(range.value) || 0));
     let timer = null;
     let settle = null;
@@ -1165,7 +1170,7 @@ const App = (function () {
        them. The scroll reveals were measured against the first day drawn, so
        without this the cards further down the page keep waiting for a scroll
        position the document no longer reaches, and never appear. The refresh is
-       debounced because autoplay redraws eleven times a second. */
+       debounced because autoplay redraws a few times a second. */
     function remeasure() {
       if (!window.ScrollTrigger) return;
       if (settle) clearTimeout(settle);
@@ -1194,16 +1199,18 @@ const App = (function () {
       if (play) { play.textContent = 'play'; play.setAttribute('aria-pressed', 'false'); }
     }
 
+    function tick() {
+      // The route may have been left while the timer was running; the panels
+      // are then detached and the interval is the only thing still holding on.
+      if (!panels.isConnected) { stop(); return; }
+      if (i >= dates.length - 1) { stop(); return; }
+      show(i + 1);
+    }
+
     function start() {
       if (i >= dates.length - 1) i = 0;
       if (play) { play.textContent = 'pause'; play.setAttribute('aria-pressed', 'true'); }
-      timer = setInterval(() => {
-        // The route may have been left while the timer was running; the panels
-        // are then detached and the interval is the only thing still holding on.
-        if (!panels.isConnected) { stop(); return; }
-        if (i >= dates.length - 1) { stop(); return; }
-        show(i + 1);
-      }, STEP_MS);
+      timer = setInterval(tick, stepMs());
     }
 
     range.addEventListener('input', () => { stop(); show(Number(range.value)); });
@@ -1222,6 +1229,15 @@ const App = (function () {
       });
     }
     if (play) play.addEventListener('click', () => (timer ? stop() : start()));
+    // Changing the speed while it is running should be heard immediately rather
+    // than at the end of the current pass, so the interval is rebuilt in place.
+    if (speed) {
+      speed.addEventListener('change', () => {
+        if (!timer) return;
+        clearInterval(timer);
+        timer = setInterval(tick, stepMs());
+      });
+    }
     if (copy) {
       copy.addEventListener('click', () => {
         const url = location.origin + location.pathname + '#/day/' + dates[i];

@@ -1469,6 +1469,12 @@ tr.row-partial td { opacity: .72; }
 }
 .day-controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .day-controls-2 { gap: 10px; }
+.day-speed {
+  background: var(--panel); border: 1px solid var(--line); color: var(--text);
+  padding: 7px 11px; border-radius: 10px; font: inherit; font-size: 12.5px; cursor: pointer;
+}
+.day-speed:hover { border-color: var(--line-hi); }
+.day-speed:focus { outline: none; border-color: var(--accent); }
 #day-range {
   flex: 1 1 220px; min-width: 0; height: 22px; margin: 0;
   background: transparent; -webkit-appearance: none; appearance: none; cursor: pointer;

@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=37" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=38" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=37" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=38" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -3175,6 +3175,12 @@ const Views = (function () {
             <label class="small muted" for="day-date">Go to</label>
             <input type="date" id="day-date" value="${iso}" min="${d.first}" max="${d.last}">
             <button class="chart-tool" id="day-play" aria-pressed="false" title="Run the whole war, day by day">play</button>
+            <select id="day-speed" class="day-speed" title="How fast play walks the days"
+              aria-label="Playing speed">
+              <option value="900">slow</option>
+              <option value="420" selected>steady</option>
+              <option value="180">fast</option>
+            </select>
             <button class="chart-tool" id="day-copy" title="Copy a link to this day">link</button>
             <span class="small muted" id="day-pos">${esc(longDay(iso))}</span>
           </div>
