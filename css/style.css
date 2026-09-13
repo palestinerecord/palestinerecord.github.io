@@ -1469,12 +1469,40 @@ tr.row-partial td { opacity: .72; }
 }
 .day-controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .day-controls-2 { gap: 10px; }
-.day-speed {
-  background: var(--panel); border: 1px solid var(--line); color: var(--text);
-  padding: 7px 11px; border-radius: 10px; font: inherit; font-size: 12.5px; cursor: pointer;
+/* The play button is a glyph, and which glyph it is carries the state: the
+   triangle while it is stopped, the two bars while it is running. */
+.day-play {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; padding: 0; border-radius: 50%;
 }
-.day-speed:hover { border-color: var(--line-hi); }
-.day-speed:focus { outline: none; border-color: var(--accent); }
+.day-icon { width: 11px; height: 13px; fill: currentColor; display: block; }
+.day-icon-pause { display: none; }
+.day-play[aria-pressed="true"] .day-icon-play { display: none; }
+.day-play[aria-pressed="true"] .day-icon-pause { display: block; }
+
+/* Days a second, so that dragging right is faster. Deliberately narrower and
+   quieter than the day slider above it: that one is the record, this one is
+   only the pace it is read at. */
+.day-speed {
+  width: 96px; flex: 0 0 auto; height: 20px; margin: 0;
+  background: transparent; -webkit-appearance: none; appearance: none; cursor: pointer;
+}
+.day-speed::-webkit-slider-runnable-track {
+  height: 4px; border-radius: 2px; background: var(--line-hi); border: 1px solid var(--line);
+}
+.day-speed::-moz-range-track {
+  height: 4px; border-radius: 2px; background: var(--line-hi); border: 1px solid var(--line);
+}
+.day-speed::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; margin-top: -5px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--text); border: 2px solid var(--accent); box-shadow: var(--shadow-1);
+}
+.day-speed::-moz-range-thumb {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--text); border: 2px solid var(--accent); box-shadow: var(--shadow-1);
+}
+#day-speed-note { font-family: var(--mono); white-space: nowrap; }
 #day-range {
   flex: 1 1 220px; min-width: 0; height: 22px; margin: 0;
   background: transparent; -webkit-appearance: none; appearance: none; cursor: pointer;

@@ -1157,11 +1157,12 @@ const App = (function () {
 
     // How long each day stays on screen. The panels carry a date, a toll and
     // often a sentence someone said, and a pace that outruns the reading of
-    // them turns the record into a flicker. The default holds a day for four
-    // tenths of a second; the control beside the button offers half that and
-    // twice it, because what is being read changes what is enough.
-    const STEP_MS = 420;
-    const stepMs = () => Number(speed && speed.value) || STEP_MS;
+    // them turns the record into a flicker. The slider is in days a second
+    // rather than milliseconds a day, so that dragging it right speeds the
+    // playing up, which is the only way round a reader would expect it.
+    const DAYS_PER_SECOND = 2;
+    const rate = () => Number(speed && speed.value) || DAYS_PER_SECOND;
+    const stepMs = () => Math.round(1000 / rate());
     let i = Math.max(0, Math.min(dates.length - 1, Number(range.value) || 0));
     let timer = null;
     let settle = null;
@@ -1193,10 +1194,13 @@ const App = (function () {
       if (!quiet) history.replaceState(null, '', '#/day/' + iso);
     }
 
+    // The button is an icon, so the state it is in has to be said rather than
+    // drawn: aria-pressed swaps the glyph in CSS, the label says which action
+    // the button would take next.
     function stop() {
       if (timer) clearInterval(timer);
       timer = null;
-      if (play) { play.textContent = 'play'; play.setAttribute('aria-pressed', 'false'); }
+      if (play) { play.setAttribute('aria-pressed', 'false'); play.setAttribute('aria-label', 'play'); }
     }
 
     function tick() {
@@ -1209,7 +1213,7 @@ const App = (function () {
 
     function start() {
       if (i >= dates.length - 1) i = 0;
-      if (play) { play.textContent = 'pause'; play.setAttribute('aria-pressed', 'true'); }
+      if (play) { play.setAttribute('aria-pressed', 'true'); play.setAttribute('aria-label', 'pause'); }
       timer = setInterval(tick, stepMs());
     }
 
@@ -1229,10 +1233,16 @@ const App = (function () {
       });
     }
     if (play) play.addEventListener('click', () => (timer ? stop() : start()));
-    // Changing the speed while it is running should be heard immediately rather
+    // Moving the slider while it is running should be felt immediately rather
     // than at the end of the current pass, so the interval is rebuilt in place.
+    // `input` rather than `change`, because a slider that only answers on
+    // release cannot be tuned against what is on screen.
     if (speed) {
-      speed.addEventListener('change', () => {
+      const note = document.getElementById('day-speed-note');
+      speed.addEventListener('input', () => {
+        const said = rate() === 1 ? 'a day a second' : rate() + ' days a second';
+        speed.setAttribute('aria-valuetext', said);
+        if (note) note.textContent = said;
         if (!timer) return;
         clearInterval(timer);
         timer = setInterval(tick, stepMs());

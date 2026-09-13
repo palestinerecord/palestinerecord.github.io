@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=38" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=39" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=38" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=39" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -3174,13 +3174,17 @@ const Views = (function () {
           <div class="day-controls day-controls-2">
             <label class="small muted" for="day-date">Go to</label>
             <input type="date" id="day-date" value="${iso}" min="${d.first}" max="${d.last}">
-            <button class="chart-tool" id="day-play" aria-pressed="false" title="Run the whole war, day by day">play</button>
-            <select id="day-speed" class="day-speed" title="How fast play walks the days"
-              aria-label="Playing speed">
-              <option value="900">slow</option>
-              <option value="420" selected>steady</option>
-              <option value="180">fast</option>
-            </select>
+            <button class="chart-tool day-play" id="day-play" aria-pressed="false"
+              title="Run the whole war, day by day" aria-label="play">
+              <svg class="day-icon day-icon-play" viewBox="0 0 12 14" aria-hidden="true" focusable="false">
+                <path d="M1.5 1.2 10.8 7l-9.3 5.8z"/></svg>
+              <svg class="day-icon day-icon-pause" viewBox="0 0 12 14" aria-hidden="true" focusable="false">
+                <path d="M1.6 1.4h3.1v11.2H1.6zM7.3 1.4h3.1v11.2H7.3z"/></svg>
+            </button>
+            <input type="range" id="day-speed" class="day-speed" min="1" max="10" step="1" value="2"
+              title="How many days play walks in a second"
+              aria-label="Playing speed" aria-valuetext="2 days a second">
+            <span class="small muted" id="day-speed-note">2 days a second</span>
             <button class="chart-tool" id="day-copy" title="Copy a link to this day">link</button>
             <span class="small muted" id="day-pos">${esc(longDay(iso))}</span>
           </div>
