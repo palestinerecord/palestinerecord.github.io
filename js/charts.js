@@ -33,6 +33,10 @@ const Charts = (function () {
     ink(alpha) { return 'rgba(' + C.inkRGB + ',' + alpha + ')'; },
   };
 
+  /* The day the ceasefire came into force. Several charts divide their axis on
+     it, so it is written once. */
+  const CEASEFIRE = '2025-10-11';
+
   /* Re-read the palette and repaint the shared option base. Called before
      every build, so switching theme and re-rendering is all it takes. */
   function readTheme() {
@@ -172,7 +176,7 @@ const Charts = (function () {
   const seriesMarks = (name, axis, kind) => {
     const items = [];
     const on = !!eventsOn[name];
-    const cf = kind === 'day' ? axis.findIndex((d) => d >= '2025-10-11') : axis.indexOf('2025-10');
+    const cf = kind === 'day' ? axis.findIndex((d) => d >= CEASEFIRE) : axis.indexOf(CEASEFIRE.slice(0, 7));
     if (cf >= 0) {
       items.push({
         xAxis: cf, name: 'Ceasefire', detail: 'In force from 11 October 2025.',
@@ -428,6 +432,52 @@ const Charts = (function () {
           itemStyle: { color: hexToRgba(C.red, 0.5) }, markLine: dayMarks() },
         { name: '7-day mean', type: 'line', data: mean, smooth: 0.3, showSymbol: false, sampling: 'lttb',
           lineStyle: { color: C.amber, width: 2.2 }, itemStyle: { color: C.amber } },
+      ],
+    });
+  };
+
+  /* The killing after the ceasefire of 11 October 2025, on its own axis.
+     Drawn against the war's own mean rather than against zero, because the
+     question the chart answers is not whether the killing stopped — it did
+     not — but what a ceasefire changed about its rate. */
+  R['ceasefire-daily'] = () => {
+    const d = data.ts.daily.gaza;
+    const at = d.dates.findIndex((x) => x >= CEASEFIRE);
+    if (at < 1) return null;
+    const added = (i) => Math.max(0, d.killed[i] - d.killed[i - 1]);
+    const before = d.killed.slice(1, at).reduce((a, _, i) => a + added(i + 1), 0) / Math.max(1, at - 1);
+    const dates = d.dates.slice(at);
+    const daily = dates.map((_, i) => added(at + i));
+    const mean = daily.map((_, i) => {
+      const window = daily.slice(Math.max(0, i - 6), i + 1);
+      return +(window.reduce((a, b) => a + b, 0) / window.length).toFixed(1);
+    });
+    return Object.assign({}, base, {
+      grid: { left: 52, right: 20, top: 40, bottom: 52 },
+      legend: Object.assign({}, base.legend, { data: ['Reported that day', '7-day mean'] }),
+      tooltip: Object.assign({}, base.tooltip, {
+        trigger: 'axis',
+        formatter: (p) => `<b>${dayLabel(dates[p[0].dataIndex])}</b><br>`
+          + p.map((x) => `${x.marker} ${x.seriesName}: <b>${fmt(x.value)}</b>`).join('<br>'),
+      }),
+      xAxis: axisX({ data: dates.map(dayLabel), axisLabel: { color: C.muted, fontSize: 10 } }),
+      yAxis: axisY({ name: 'killed per day', nameTextStyle: { color: C.muted, fontSize: 11 } }),
+      series: [
+        { name: 'Reported that day', type: 'bar', data: daily, barMaxWidth: 7, large: true,
+          itemStyle: { color: hexToRgba(C.red, 0.55) },
+          markLine: {
+            silent: true, symbol: 'none',
+            data: [{
+              yAxis: +before.toFixed(1), name: 'Daily mean before the ceasefire',
+              lineStyle: { color: C.amber, type: 'dashed', width: 1.4 },
+              label: {
+                formatter: 'Mean before the ceasefire: ' + before.toFixed(0) + ' a day',
+                color: C.amber, fontSize: 10.5, position: 'insideEndTop',
+              },
+            }],
+          } },
+        { name: '7-day mean', type: 'line', data: mean, smooth: 0.3, showSymbol: false,
+          lineStyle: { color: C.blue, width: 2.2 }, itemStyle: { color: C.blue } },
       ],
     });
   };

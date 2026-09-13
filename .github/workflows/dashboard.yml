@@ -111,7 +111,26 @@ jobs:
           fi
           python3 prerender.py --chrome "$CHROME" --no-cards | tee "$RUNNER_TEMP/prerender.log"
 
+      # validate.py checks the data and prerender.py writes the snapshots, and
+      # neither can tell whether a chart drew. A chart that throws leaves its
+      # container empty rather than stopping the page, so this opens every route
+      # in the browser and fails the run if a container has no canvas in it, if
+      # anything fell back to the failure plate, or if the page logged an error.
+      # A run that stops here has published nothing: the commit is the step
+      # after this one.
+      - name: Render every route
+        if: steps.diff.outputs.changed == 'true' || github.event_name != 'schedule'
+        run: |
+          set -o pipefail
+          CHROME="$(command -v google-chrome || command -v chromium-browser || true)"
+          if [ -z "$CHROME" ]; then
+            echo 'No Chrome on the runner; the routes cannot be rendered.' >&2
+            exit 1
+          fi
+          python3 render_check.py --chrome "$CHROME" | tee "$RUNNER_TEMP/render.log"
+
       - name: Commit the refreshed data and static layer
+        id: commit
         if: steps.diff.outputs.changed == 'true' || steps.static.outcome == 'success'
         # A push made with GITHUB_TOKEN does not itself start a workflow run, so
         # this commit cannot loop back into this workflow. Pages picks it up and
@@ -141,6 +160,22 @@ jobs:
           echo 'Could not push after three attempts.' >&2
           exit 1
 
+      # An independent timestamp of each published version. The record argues
+      # from dated evidence, so the site itself should be datable by someone who
+      # does not trust this repository. Best effort: the archive throttles and
+      # times out, and a missed snapshot is not a reason to fail a data refresh.
+      - name: Ask the Internet Archive to keep a copy
+        if: steps.commit.outcome == 'success' && github.ref == 'refs/heads/main'
+        continue-on-error: true
+        run: |
+          base='https://palestinerecord.github.io'
+          for path in '/' '/snapshot/overview.html' '/snapshot/index.html' '/sitemap.xml' '/feed.xml'; do
+            code="$(curl -s -o /dev/null -w '%{http_code}' -m 120 \
+              "https://web.archive.org/save/${base}${path}" || echo 000)"
+            echo "archive ${path}: ${code}"
+            sleep 6
+          done
+
       - name: Write the run summary
         if: always()
         run: |
@@ -149,7 +184,7 @@ jobs:
             echo
             echo "Data changed: **${{ steps.diff.outputs.changed || 'unknown' }}**"
             echo
-            for log in fetch validate prerender; do
+            for log in fetch validate prerender render; do
               if [ -f "$RUNNER_TEMP/$log.log" ]; then
                 echo "### $log"
                 echo '```'

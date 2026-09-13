@@ -916,6 +916,16 @@ const App = (function () {
     showReturning();
   };
 
+  /* On a phone the chapter bar is one row that scrolls sideways, so the chapter
+     being read can be off its left edge when the route opens. Bring it into the
+     bar without scrolling the page itself. */
+  behaviours.data = function () {
+    const bar = document.querySelector('.subnav');
+    const active = bar && bar.querySelector('a.active');
+    if (!active || bar.scrollWidth <= bar.clientWidth) return;
+    bar.scrollLeft = active.offsetLeft - (bar.clientWidth - active.offsetWidth) / 2;
+  };
+
   behaviours.timeline = function () {
     const input = document.getElementById('tl-search');
     const select = document.getElementById('tl-era');

@@ -22,7 +22,7 @@ Layered separation, following the `web3d-integration-patterns` skill: each libra
 | Charts | ECharts + echarts-gl, each on its own canvas | `js/charts.js` |
 | Markup and overlay | Plain DOM strings | `js/views.js`, `css/style.css` |
 
-Libraries load from CDN as UMD scripts (echarts 5.5.1, echarts-gl 2.0.9, gsap 3.12.5 and its ScrollTrigger plugin), each pinned with a subresource-integrity hash and `crossorigin="anonymous"`. Three 0.160.0 is the exception: it loads as an ES module through an importmap, which SRI does not cover.
+Libraries load from CDN as UMD scripts (echarts 5.5.1, echarts-gl 2.0.9, gsap 3.12.5 and its ScrollTrigger plugin), each pinned with a subresource-integrity hash and `crossorigin="anonymous"`. Three 0.160.0 loads as an ES module through an import map, which carries its own `integrity` map for the same file, so every third-party byte on the site is pinned by hash. Browsers that do not yet honour import-map integrity fall back to the pinned version without the check.
 
 ### Routing
 
@@ -207,7 +207,14 @@ The hand-curated files are not regenerated and must be edited directly when the 
 
 ## Verifying
 
-Render each route in headless Chrome and count what actually built. A chart that fails leaves its container empty rather than throwing, so the counts are the only honest check:
+```bash
+python3 render_check.py                       # every route, in a real browser
+python3 render_check.py --only day data-gaza  # one or two of them
+```
+
+`render_check.py` is the check to run, and the nightly workflow runs it before it commits anything. It reads the route list from `js/app.js` and `js/views.js` the way `prerender.py` does, serves the folder on a free port, opens each route in headless Chrome, and fails the run on any route where a chart container has no canvas inside it, where a chart fell back to its failure plate, or where the page itself logged an error. Chrome's own complaints about display links and sandbox policy are not the page and are filtered out; only lines the renderer tags `CONSOLE` are treated as the site talking.
+
+The loop below is the same check written out by hand, kept because it explains what the script is doing and why each flag is there:
 
 ```bash
 for r in overview timeline evidence rebuttals statements legal sources api changelog \

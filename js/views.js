@@ -109,6 +109,67 @@ const Views = (function () {
     }).join('');
   }
 
+  /* ---------- since the ceasefire ---------- */
+
+  const CEASEFIRE = '2025-10-11';
+
+  /* What the register did after the ceasefire, read off the daily series. This
+     is not the same quantity as the count of people killed since 10 October
+     2025: the register moves when an identification is completed, so it also
+     carries bodies recovered from the rubble long after the strike. Both are
+     shown, and the difference between them is stated rather than smoothed. */
+  function sinceCeasefire() {
+    const d = D.ts.daily.gaza;
+    const at = d.dates.findIndex((x) => x >= CEASEFIRE);
+    if (at < 1 || at >= d.dates.length - 1) return null;
+    const last = d.dates.length - 1;
+    const days = last - at + 1;
+    const added = Math.max(0, d.killed[last] - d.killed[at - 1]);
+    const before = (d.killed[at - 1] - d.killed[0]) / Math.max(1, at - 1);
+    return {
+      days, added, before, from: d.dates[at], to: d.dates[last],
+      perDay: added / days,
+      share: d.killed[last] ? (100 * added / d.killed[last]) : 0,
+    };
+  }
+
+  /* The same block on the overview and in the Gaza chapter, because the belief
+     that the war ended in October 2025 is the single most common thing a reader
+     arrives with. The killed, injured, child and violation counts are the
+     Ministry's, UNICEF's and Genocide Watch's, carried in the conduct record;
+     only the register series and the rates are computed here. */
+  function ceasefireSection(cls) {
+    const c = sinceCeasefire();
+    const r = D.conduct.ceasefire;
+    if (!c || !r) return '';
+    const one = (x) => Math.round(x * 10) / 10;
+    const tone = ['red', 'amber', 'red', ''];
+    return `<section class="section ${cls === undefined ? 'wrap' : cls}">
+      ${head('Since the ceasefire', 'What stopped and what did not',
+        `${esc(r.lede)} In the ${fmt(c.days)} days since, the Ministry of Health has recorded
+         <b>${fmt(r.figures[0].value)}</b> Palestinians killed under a ceasefire — and its register of the identified
+         dead has risen by ${fmt(c.added)}, which is ${one(c.share)} per cent of the whole toll of the war, as bodies
+         are recovered and identifications completed. The register is growing at ${one(c.perDay)} a day against
+         ${one(c.before)} a day before the ceasefire; the killings the Ministry counts in the period work out at about
+         ${one(r.figures[0].value / c.days)} a day. On either measure the killing slowed sharply. On neither did it
+         stop.`)}
+      <div class="grid c4">
+        ${r.figures.map((f, i) => statCard({
+          label: f.label, value: f.value, suffix: f.floor ? '+' : '',
+          note: f.note, source: f.source, ref: f.ref,
+        }, tone[i])).join('')}
+      </div>
+      ${chartCard('ceasefire-daily', 'Added to the register each day since the ceasefire',
+        'Each bar is the figure the Ministry published that day, which includes bodies recovered from the rubble. '
+        + 'The dashed line is the daily mean of the two years before the ceasefire, on the same scale.',
+        'Tech For Palestine (Gaza Ministry of Health daily series)', 'tall')}
+      <p class="chart-note">${esc(r.notes[0])}</p>
+      <p class="chart-note" style="margin-top:10px">${esc(r.notes[1])} Sections 6.7 to 6.10 of the report set out the
+        conduct of this period in full: the strikes that continued, the closure of every crossing on 6 June 2026, and
+        the talks that ran alongside both.</p>
+    </section>`;
+  }
+
   /* ---------- overview ---------- */
 
   function overview() {
@@ -120,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=36" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=37" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -189,6 +250,8 @@ const Views = (function () {
         </div>
       </section>
 
+      ${ceasefireSection()}
+
       <section class="section wrap">
         ${head('Place and period', 'Deaths by month, category and territory', 'A three-dimensional reading of the same record: each bar is one month, in one category, in one territory. Drag to rotate.')}
         ${chartCard('deaths-3d', 'Killings by month, category and territory', 'Gaza and the West Bank on a shared 36-month axis.', 'Tech For Palestine', 'xtall')}
@@ -234,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=36" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=37" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -331,6 +394,8 @@ const Views = (function () {
           ${chartCard('daily-rate', 'Deaths added to the register each day', 'Bars are the figure reported that day; the amber line is the trailing seven-day mean. Reporting gaps appear as clusters, not as pauses in the killing.', 'Tech For Palestine', 'tall')}
         </div>
       </section>
+
+      ${ceasefireSection('')}
 
       ${D.ts.demographics ? `<section class="section">
         ${head('Who the dead are', 'Age and sex of the identified dead',
@@ -1286,9 +1351,25 @@ const Views = (function () {
       </section>`;
   };
 
+  /* A chapter ends at the footer, which tells a reader who has just read
+     twenty charts that there is nothing after them. These two links say what
+     is, in the order the chapters are meant to be read. */
+  function chapterEnd(id) {
+    const at = DATA_CHAPTERS.findIndex((c) => c.id === id);
+    const prev = DATA_CHAPTERS[at - 1];
+    const next = DATA_CHAPTERS[at + 1];
+    if (!prev && !next) return '';
+    return `<nav class="chapter-end" aria-label="Data chapters">
+      ${prev ? `<a class="card lift" href="#/data/${prev.id}" rel="prev">
+        <span class="small muted">← Previous chapter</span><strong>${esc(prev.label)}</strong></a>` : '<span></span>'}
+      ${next ? `<a class="card lift" href="#/data/${next.id}" rel="next">
+        <span class="small muted">Next chapter →</span><strong>${esc(next.label)}</strong></a>` : '<span></span>'}
+    </nav>`;
+  }
+
   function dataView(chapter) {
     const id = DATA_BODY[chapter] ? chapter : DATA_CHAPTERS[0].id;
-    return `<div class="view wrap">${dataNav(id)}${DATA_BODY[id]()}</div>`;
+    return `<div class="view wrap">${dataNav(id)}${DATA_BODY[id]()}${chapterEnd(id)}</div>`;
   }
 
   /* ---------- timeline ---------- */

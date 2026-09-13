@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-13",
-  "total_bytes": 3704351,
+  "total_bytes": 3706747,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -56,12 +56,13 @@
       "title": "Conduct of the war",
       "description": "Aid, hospitals, schools, heritage, journalists, medics and what remains functioning, measured against the obligations each engages.",
       "source": "WHO, UNRWA, UNESCO, OCHA, CPJ and Physicians for Human Rights.",
-      "bytes": 45279,
+      "bytes": 47675,
       "records": null,
       "fields": [
         "meta",
         "aid",
         "hunger",
+        "ceasefire",
         "targeting",
         "shields",
         "hannibal",
@@ -69,8 +70,7 @@
         "remains",
         "children",
         "custody",
-        "nuclear",
-        "media"
+        "nuclear"
       ],
       "updated": "2026-09-13"
     },

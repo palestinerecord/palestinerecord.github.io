@@ -324,6 +324,16 @@ main { position: relative; z-index: 2; }
 .subnav a:hover { border-color: var(--line-hi); color: var(--text); text-decoration: none; }
 .subnav a.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
 
+/* The foot of each Data chapter. A reader who has just come down twenty charts
+   should not have to go back up to the sub-nav to find the next argument. */
+.chapter-end {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  margin: 10px 0 46px;
+}
+.chapter-end a { display: flex; flex-direction: column; gap: 6px; text-decoration: none; }
+.chapter-end a[rel="next"] { text-align: right; align-items: flex-end; }
+.chapter-end strong { font-size: 18px; color: var(--text); }
+
 /* ---------- Hero ---------- */
 
 .hero {
@@ -968,6 +978,17 @@ tbody td strong { color: var(--text); }
   /* The chapter bar bleeds to the page edge, so its negative margin has to
      track .wrap's padding at every breakpoint or it pushes the page sideways. */
   .subnav { margin: 0 -16px 6px; padding: 12px 16px; }
+  /* Nine chapters wrapped to three rows took a fifth of a phone screen and
+     stayed there, because the bar is sticky. One row that scrolls sideways
+     costs one, and app.js scrolls the active chapter into view. */
+  .subnav {
+    flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity;
+  }
+  .subnav::-webkit-scrollbar { display: none; }
+  .subnav a { scroll-snap-align: center; }
+  .chapter-end { grid-template-columns: 1fr; }
+  .chapter-end a[rel="next"] { text-align: left; align-items: flex-start; }
   .grid.c2, .grid.c3, .grid.c4 { grid-template-columns: 1fr; }
   .wrap { padding: 0 16px; }
   .section { padding: 50px 0; }
@@ -1281,6 +1302,9 @@ body[data-view="embed"] #app { padding: 0; }
   /* A 24px pill is not a tap target. */
   .chart-tool { min-height: 34px; padding: 6px 12px; }
   .chart-tools { gap: 6px; }
+  .chip { min-height: 34px; padding: 7px 13px; }
+  .chip.static { min-height: 0; }
+  .subnav a { padding: 9px 14px; }
 
   .stat { padding: 16px 15px; }
   .stat .val { font-size: 30px; }

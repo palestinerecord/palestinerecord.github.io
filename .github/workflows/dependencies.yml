@@ -1,0 +1,95 @@
+name: Dependencies — check the pinned libraries
+
+# Every third-party script on this site is pinned to an exact version and
+# carries an integrity hash, which is what stops a compromised CDN from
+# rewriting the charts under a reader. The cost of that is that a fixed pin
+# never updates itself, including when the fix is a security one.
+#
+# This workflow does not update anything. Once a month it asks jsDelivr what
+# the current version of each pinned library is, and opens an issue when one
+# has moved. Bumping a pin means fetching the new file, computing a new
+# integrity hash and rendering every route again, which is a person's decision
+# and not a robot's.
+
+on:
+  schedule:
+    # 06:40 UTC on the first of the month.
+    - cron: '40 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: dependencies
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: Compare the pins against jsDelivr
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read the pins and ask jsDelivr
+        id: check
+        run: |
+          python3 - <<'PY' | tee "$RUNNER_TEMP/deps.md"
+          import json, re, urllib.request
+
+          # The script tags and the import map are in index.html; ECharts-GL is
+          # injected by charts.js only when a 3D chart needs it, so both files
+          # have to be read or that pin would never be checked.
+          source = (open('index.html', encoding='utf-8').read()
+                    + open('js/charts.js', encoding='utf-8').read())
+          pins = sorted(set(re.findall(
+              r'https://cdn\.jsdelivr\.net/npm/([a-z0-9@._-]+)@([0-9][0-9a-z.+-]*)', source)))
+
+          stale = []
+          for name, pinned in pins:
+              url = 'https://data.jsdelivr.com/v1/packages/npm/%s' % name
+              try:
+                  with urllib.request.urlopen(url, timeout=30) as r:
+                      latest = json.load(r)['tags']['latest']
+              except Exception as err:
+                  print('- could not check `%s`: %s' % (name, err))
+                  continue
+              mark = 'current' if latest == pinned else '**%s available**' % latest
+              print('- `%s` pinned at `%s` — %s' % (name, pinned, mark))
+              if latest != pinned:
+                  stale.append('%s %s -> %s' % (name, pinned, latest))
+
+          with open('stale.txt', 'w') as f:
+              f.write('\n'.join(stale))
+          PY
+          if [ -s stale.txt ]; then
+            echo 'stale=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'stale=false' >> "$GITHUB_OUTPUT"
+          fi
+          cat "$RUNNER_TEMP/deps.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open an issue naming what has moved
+        if: steps.check.outputs.stale == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo 'A pinned front-end library has a newer release on jsDelivr.'
+            echo
+            cat "$RUNNER_TEMP/deps.md"
+            echo
+            echo 'Updating a pin means, in order: change the version in the URL,'
+            echo 'recompute the integrity hash'
+            echo '(`curl -s <url> | openssl dgst -sha384 -binary | openssl base64 -A`),'
+            echo 'bump the cache-bust, run `python3 validate.py` and'
+            echo '`python3 render_check.py`, and read the release notes for anything'
+            echo 'that changes chart behaviour. None of that is done automatically.'
+          } > body.md
+          gh issue create \
+            --title "Pinned libraries have newer releases ($(date -u '+%B %Y'))" \
+            --body-file body.md \
+            --label dependencies || gh issue create \
+            --title "Pinned libraries have newer releases ($(date -u '+%B %Y'))" \
+            --body-file body.md

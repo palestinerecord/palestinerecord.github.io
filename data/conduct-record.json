@@ -186,6 +186,50 @@
     ]
   },
 
+  "ceasefire": {
+    "title": "Since the ceasefire",
+    "lede": "A ceasefire announced on 29 September 2025 entered into force on 10 October 2025. It ended the phase of the war that was killing tens of thousands a year. It did not end the killing, and it did not end the siege: on 6 June 2026 every crossing was closed again.",
+    "ref": "§6.7",
+    "source": "Gaza Ministry of Health / WAFA, 5 September 2026; UNICEF, June 2026; Genocide Watch / Al Jazeera; OCHA",
+    "start": "2025-10-11",
+    "figures": [
+      {
+        "label": "Killed since the ceasefire",
+        "value": 1344,
+        "note": "Palestinians killed between 10 October 2025 and 5 September 2026, a period in which a ceasefire was formally in force",
+        "source": "Gaza Ministry of Health / WAFA, 5 September 2026",
+        "ref": "§6.7"
+      },
+      {
+        "label": "Children killed since the ceasefire",
+        "value": 265,
+        "note": "and over 400 injured; UNICEF puts the rate at roughly a child a day",
+        "source": "UNICEF, June 2026",
+        "ref": "§6.7",
+        "floor": true
+      },
+      {
+        "label": "Injured since the ceasefire",
+        "value": 4464,
+        "note": "wounded in the same period, alongside 815 bodies recovered from the rubble",
+        "source": "Gaza Ministry of Health / WAFA, 5 September 2026",
+        "ref": "§6.7"
+      },
+      {
+        "label": "Recorded ceasefire violations",
+        "value": 2400,
+        "note": "airstrikes, artillery, shelling and direct shootings, 10 October 2025 to 14 April 2026",
+        "source": "Genocide Watch / Al Jazeera",
+        "ref": "§6.7",
+        "floor": true
+      }
+    ],
+    "notes": [
+      "The register and the count of killings since the ceasefire are two different figures. The register moves when an identification is completed, so it carries bodies recovered from the rubble months after the strike that killed them, and it rises faster than the number of people killed in the period. The chart plots the register; the figures above are the Ministry's and UNICEF's counts of what was done after 10 October 2025.",
+      "Israel expanded its territorial control inside Gaza from the 53 per cent envisaged under the agreement to about 70 per cent of the Strip by July 2026, by moving the Yellow Line westward. OCHA records about 200 Palestinians killed near those shifting lines."
+    ]
+  },
+
   "targeting": {
     "title": "The AI targeting systems",
     "lede": "Three systems, disclosed by the Israeli intelligence officers who operated them: one that lists people, one that lists buildings, and one that waits until the person is inside his own house.",
