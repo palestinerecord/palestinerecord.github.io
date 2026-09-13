@@ -141,6 +141,7 @@ jobs:
           git add data/ snapshot/ sitemap.xml feed.xml index.html
           if git diff --cached --quiet; then
             echo 'Nothing staged; the rebuild was byte-identical.'
+            echo 'pushed=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "Refresh dashboard data ($(date -u '+%d %B %Y'))"
@@ -152,6 +153,7 @@ jobs:
           # the commit made above.
           for attempt in 1 2 3; do
             if git push; then
+              echo 'pushed=true' >> "$GITHUB_OUTPUT"
               exit 0
             fi
             echo "Push rejected; rebasing onto the branch tip (attempt $attempt)."
@@ -165,7 +167,7 @@ jobs:
       # does not trust this repository. Best effort: the archive throttles and
       # times out, and a missed snapshot is not a reason to fail a data refresh.
       - name: Ask the Internet Archive to keep a copy
-        if: steps.commit.outcome == 'success' && github.ref == 'refs/heads/main'
+        if: steps.commit.outputs.pushed == 'true' && github.ref == 'refs/heads/main'
         continue-on-error: true
         run: |
           base='https://palestinerecord.github.io'
@@ -175,6 +177,31 @@ jobs:
             echo "archive ${path}: ${code}"
             sleep 6
           done
+
+      # IndexNow tells the search engines that carry it (Bing, Yandex, Seznam,
+      # Naver) which pages changed, instead of waiting for a crawl that may be
+      # weeks away. The key is the file of the same name at the site root; a
+      # submission is only accepted while that file is served and matches.
+      # Google does not participate, which is what the sitemap is for.
+      - name: Tell IndexNow which pages changed
+        if: steps.commit.outputs.pushed == 'true' && github.ref == 'refs/heads/main'
+        continue-on-error: true
+        run: |
+          python3 - <<'PY' > indexnow.json
+          import json, re, pathlib
+          key = next(p.stem for p in pathlib.Path('.').glob('*.txt')
+                     if re.fullmatch(r'[0-9a-f]{8,128}', p.stem))
+          urls = re.findall(r'<loc>([^<]+)</loc>', pathlib.Path('sitemap.xml').read_text())
+          print(json.dumps({'host': 'palestinerecord.github.io',
+                            'key': key,
+                            'keyLocation': 'https://palestinerecord.github.io/%s.txt' % key,
+                            'urlList': urls}))
+          PY
+          code="$(curl -s -o /dev/null -w '%{http_code}' -m 60 \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data @indexnow.json 'https://api.indexnow.org/IndexNow' || echo 000)"
+          rm -f indexnow.json
+          echo "indexnow: ${code}"
 
       - name: Write the run summary
         if: always()
