@@ -2,7 +2,7 @@
   "meta": {
     "title": "Source Library",
     "description": "The evidentiary base of the record: courts, UN bodies, human rights organisations, peer-reviewed research, open datasets, declassified archives and the Israeli press. Sources are grouped by the weight they carry, not by convenience. Every claim in the report is anchored to a source of one of these classes.",
-    "compiled": "2026-09-12",
+    "compiled": "2026-09-14",
     "note": "Where a link is given it points to the authoritative publisher, not to an aggregator. Where no link is given the source is a print or archival record cited in the report's bibliography."
   },
   "groups": [
@@ -569,7 +569,7 @@
           "org": "Haaretz",
           "date": "continuous",
           "url": "https://www.haaretz.com/",
-          "note": "Including the human-shields investigation (13 August 2024), the leaked Maj. Gen. Bluth briefing (4 May 2026), the Geocartography/Penn State polling (March 2025), and Ehud Olmert's ethnic-cleansing columns (June 2026)."
+          "note": "Including the human-shields investigation (13 August 2024), the leaked Maj. Gen. Bluth briefing (4 May 2026), the Geocartography/Penn State polling (March 2025), and Ehud Olmert's ethnic-cleansing columns (June 2026). Includes the magazine feature of 9 September 2026 carrying an Israeli Air Force drone operator's account of fire directed at rescue vehicles and at medical personnel sheltering behind ambulances (§14.1B)."
         },
         {
           "title": "+972 Magazine",
@@ -667,7 +667,7 @@
           "org": "Middle East Eye",
           "date": "continuous",
           "url": "https://www.middleeasteye.net/",
-          "note": "Source for several Knesset-floor statements, including the Waldiger exchange of 13 May 2025."
+          "note": "Source for several Knesset-floor statements, including the Waldiger exchange of 13 May 2025, and for the Israeli government document of 8 September 2019 recording UK Lawyers for Israel's request to the Justice Ministry for assistance (§13.9)."
         },
         {
           "title": "Wire reporting",
@@ -675,6 +675,20 @@
           "date": "continuous",
           "url": "https://www.reuters.com/world/middle-east/",
           "note": "Used for cross-corroboration: this record requires at least two independent sources for every new statistic."
+        },
+        {
+          "title": "Reporting on UK politics and the Middle East",
+          "org": "The Telegraph",
+          "date": "continuous",
+          "url": "https://www.telegraph.co.uk/world-news/middle-east/",
+          "note": "Source of the report of 13 September 2026 that UK Lawyers for Israel had written to Home Secretary Shabana Mahmood urging the proscription of Médecins Sans Frontières under the Terrorism Act 2000 (§13.9)."
+        },
+        {
+          "title": "Reporting on the Arab world and Palestine",
+          "org": "The New Arab",
+          "date": "continuous",
+          "url": "https://www.newarab.com/",
+          "note": "Carried Médecins Sans Frontières' response to the proscription demand verbatim, together with the reaction of former British Army general Charlie Herbert (§13.9)."
         }
       ]
     },

@@ -2,7 +2,7 @@
  "meta": {
   "title": "Contextual chronology",
   "description": "Events that fill the gaps between the entries in the report's own chronology (Appendix B). Appendix B records major crimes and massacres; these entries record the legal, political and institutional steps between them — the mandates, laws, plans, rulings and admissions that make the pattern legible. They are marked as context so the report's chronology remains distinguishable.",
-  "compiled": "2026-09-12"
+  "compiled": "2026-09-14"
  },
  "items": [
   {
@@ -522,6 +522,13 @@
    "sort": "2026-09-11",
    "event": "J50 Declaration: fifty-nine Jewish organisations across forty countries declare anti-Zionism antisemitic",
    "note": "Issued in Jerusalem on the eve of Rosh Hashanah 5787 by seven global and regional bodies and fifty-two national and community bodies, reaffirming the IHRA working definition without reproducing either of its two limiting clauses. Two signatories, the Board of Deputies of British Jews and the Jewish Leadership Council, are subject to the judgment delivered five weeks earlier."
+  },
+  {
+   "date": "13 Sep 2026",
+   "year": 2026,
+   "sort": "2026-09-13",
+   "event": "UK Lawyers for Israel asks the Home Secretary to proscribe Médecins Sans Frontières under the Terrorism Act 2000",
+   "note": "The letter to Shabana Mahmood rests on two named individuals, one claimed posthumously by Palestinian Islamic Jihad and one named on an Israeli allegation; proscription would make membership of or support for MSF an offence carrying up to fourteen years, on the precedent of Palestine Action in July 2025. MSF: \"We would never knowingly employ people engaging in military activity.\""
   }
  ]
 }
