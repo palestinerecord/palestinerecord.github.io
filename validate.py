@@ -577,6 +577,103 @@ def check_figures_against_markdown(files):
 # ------------------------------------------------------------ the wiring
 
 
+def check_day(files):
+    """The day route joins five files on one date, so the dates have to hold.
+
+    The aid phases are the only data written for that route, and they are what
+    a reader sees when they ask what was crossing on a given day. They must run
+    in order, never overlap, leave no hole inside the war, name the section of
+    the report each comes from, and never state a daily figure larger than the
+    requirement they are measured against. The route itself must also be wired:
+    a view that is not in VIEWS is unreachable, and one with no metadata has no
+    title and no card when it is shared.
+    """
+    conduct = files.get('conduct-record')
+    series = files.get('timeseries')
+    if not conduct or not series:
+        fail('day', 'conduct-record.json or timeseries.json is missing')
+        return
+
+    aid = conduct.get('aid') or {}
+    phases = aid.get('phases') or []
+    if not phases:
+        fail('day', 'the aid record carries no dated phases, so the day route has nothing to show')
+        return
+
+    required = (aid.get('baseline') or {}).get('value')
+    dates = series['daily']['gaza']['dates']
+    first, last = dates[0], dates[-1]
+    markdown = MARKDOWN.read_text() if MARKDOWN.exists() else ''
+
+    previous = None
+    for phase in phases:
+        start, end = phase.get('from'), phase.get('to')
+        if not start:
+            fail('day', 'an aid phase has no start date')
+            continue
+        if end and end < start:
+            fail('day', 'the aid phase %s ends on %s, before it begins' % (phase.get('label'), end))
+        if previous and start <= previous:
+            fail('day', 'the aid phase beginning %s overlaps the one before it' % start)
+        if previous and start > _next_day(previous):
+            fail('day', 'no aid phase covers the days between %s and %s'
+                 % (previous, start))
+        previous = end
+        for field in ('label', 'detail', 'source', 'ref'):
+            if not phase.get(field):
+                fail('day', 'the aid phase beginning %s states no %s' % (start, field))
+        value = phase.get('value')
+        if value is not None:
+            if not isinstance(value, (int, float)) or value < 0:
+                fail('day', 'the aid phase beginning %s states a daily figure of %r' % (start, value))
+            elif required and value > required:
+                fail('day', 'the aid phase beginning %s states %s trucks a day against a requirement of %s'
+                     % (start, value, required))
+        ref = str(phase.get('ref') or '')
+        if markdown and ref and not _ref_in_markdown(ref, markdown):
+            warn('day', 'the aid phase beginning %s cites %s, which is not in the report' % (start, ref))
+
+    if phases[0]['from'] > first:
+        note('day: the aid phases begin on %s, after the series begins on %s; those days show no regime'
+             % (phases[0]['from'], first))
+    if phases[-1].get('to') is not None and phases[-1]['to'] < last:
+        fail('day', 'the last aid phase ends on %s while the series runs to %s'
+             % (phases[-1]['to'], last))
+
+    app = (HERE / 'js' / 'app.js').read_text()
+    views = (HERE / 'js' / 'views.js').read_text()
+    declared = re.search(r'const VIEWS = \[(.*?)\]', app, re.S)
+    if not declared or "'day'" not in declared.group(1):
+        fail('day', 'the day route is not in the VIEWS list, so nothing can reach it')
+    if not re.search(r'^\s+day: \{', views, re.M):
+        fail('day', 'the day route has no metadata, so its title and its card are the default ones')
+    if 'behaviours.day' not in app:
+        fail('day', 'the day route has no behaviour, so the scrubber does nothing')
+
+    note('day: %d aid phases, %s to %s' % (len(phases), phases[0]['from'], phases[-1].get('to') or 'open'))
+
+
+def _ref_in_markdown(ref, markdown):
+    """A phase cites either a numbered section or a lettered appendix of the report.
+
+    The citation is written the way a reader would write it, with a section sign
+    or an abbreviation, while the report writes its own headings as plain
+    numbers and the word Appendix, so the two are compared on the part that
+    matters: the number or the letter.
+    """
+    section = re.search(r'(\d+\.\d+)', ref)
+    if section:
+        return bool(re.search(r'^#+ .*\b%s\b' % re.escape(section.group(1)), markdown, re.M))
+    appendix = re.search(r'App(?:endix)?\.?\s*([A-Z])\b', ref)
+    if appendix:
+        return bool(re.search(r'^#+ .*Appendix %s\b' % appendix.group(1), markdown, re.M | re.I))
+    return ref in markdown
+
+
+def _next_day(iso):
+    return (dt.date.fromisoformat(iso) + dt.timedelta(days=1)).isoformat()
+
+
 def check_chart_wiring():
     """A chapter that names a chart the registry does not hold renders an empty card."""
     charts = (HERE / 'js' / 'charts.js').read_text()
@@ -774,6 +871,7 @@ def main():
         check_attribution(files)
         check_timeseries(files)
         check_children(files)
+        check_day(files)
         check_headline_agreement(files)
         check_declared_totals(files)
         check_recognition_count(files)

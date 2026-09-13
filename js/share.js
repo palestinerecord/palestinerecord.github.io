@@ -234,6 +234,89 @@ const Share = (function () {
     return el;
   }
 
+  /* A day: the date, the toll it added and the toll it stood at, and — where
+     the record has them — the words spoken that day and the finding standing
+     over it. Separately those are three facts; on one date they are the
+     argument, which is the whole reason the day route exists. */
+  function day(item, shape) {
+    const { el, ctx, w, h } = canvas(shape || 'square');
+    const pad = 84;
+    const x = pad;
+    const width = w - pad * 2;
+    const footTop = h - pad - 78;
+
+    plate(ctx, w, h, pad);
+    masthead(ctx, x, pad + 18, width);
+
+    let y = pad + 140;
+    ctx.fillStyle = INK.accent;
+    ctx.font = `600 19px ${MONO}`;
+    ctx.fillText(String(item.date || '').toUpperCase(), x, y);
+
+    y += 76;
+    ctx.fillStyle = INK.red;
+    ctx.font = `600 72px ${SERIF}`;
+    ctx.fillText(String(item.killed || ''), x, y);
+
+    y += 30;
+    ctx.fillStyle = INK.text;
+    ctx.font = `600 21px ${SANS}`;
+    y = draw(ctx, wrap(ctx, item.killedLabel || '', width).slice(0, 2), x, y, 21, 1.4);
+
+    if (item.total) {
+      ctx.fillStyle = INK.text2;
+      ctx.font = `19px ${SANS}`;
+      y = draw(ctx, wrap(ctx, item.total, width).slice(0, 2), x, y + 8, 19, 1.45);
+    }
+
+    y += 20;
+    ctx.strokeStyle = INK.line;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x + width, y);
+    ctx.stroke();
+    y += 32;
+
+    // The finding is one short line; the quotation takes whatever is left.
+    const rulingRoom = item.ruling ? 132 : 0;
+
+    if (item.quote) {
+      const quote = fitted(ctx, '“' + item.quote + '”', {
+        family: SERIF, style: '600', max: 38, min: 17, leading: 1.32,
+        width, height: Math.max(90, footTop - y - rulingRoom - 78),
+      });
+      ctx.fillStyle = INK.text;
+      ctx.font = `600 ${quote.size}px ${SERIF}`;
+      y = draw(ctx, quote.lines, x, y + quote.size, quote.size, 1.32) + 18;
+
+      ctx.fillStyle = INK.text;
+      ctx.font = `600 19px ${SANS}`;
+      ctx.fillText(item.speaker || '', x, y);
+      y += 23;
+      ctx.fillStyle = INK.muted;
+      ctx.font = `16px ${SANS}`;
+      y = draw(ctx, wrap(ctx, item.role || '', width).slice(0, 2), x, y, 16, 1.4) + 24;
+    }
+
+    if (item.ruling) {
+      ctx.fillStyle = INK.accent;
+      ctx.font = `600 13px ${MONO}`;
+      ctx.fillText('ALREADY ORDERED, AND IN FORCE', x, y);
+      y += 26;
+      const ruling = fitted(ctx, item.ruling, {
+        family: SANS, style: '600', max: 21, min: 14, leading: 1.42,
+        width, height: Math.max(48, footTop - y - 24),
+      });
+      ctx.fillStyle = INK.text;
+      ctx.font = `600 ${ruling.size}px ${SANS}`;
+      draw(ctx, ruling.lines, x, y + ruling.size, ruling.size, 1.42);
+    }
+
+    footer(ctx, x, footTop, width, item.source, item.url);
+    return el;
+  }
+
   /* ---------- output ---------- */
 
   function save(el, name) {
@@ -254,6 +337,7 @@ const Share = (function () {
   return {
     statement(item, shape) { return save(statement(item, shape), 'record-' + (item.speaker || 'statement')); },
     figure(item, shape) { return save(figure(item, shape), 'record-' + (item.label || 'figure')); },
-    canvasFor: { statement, figure },
+    day(item, shape) { return save(day(item, shape), 'record-' + (item.date || 'day')); },
+    canvasFor: { statement, figure, day },
   };
 })();

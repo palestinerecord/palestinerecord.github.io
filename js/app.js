@@ -23,8 +23,8 @@ const App = (function () {
 
   if (window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
-  const VIEWS = ['overview', 'tour', 'data', 'children', 'timeline', 'evidence', 'rebuttals', 'statements', 'legal',
-    'sources', 'method', 'api', 'changelog', 'embed'];
+  const VIEWS = ['overview', 'tour', 'data', 'children', 'day', 'timeline', 'evidence', 'rebuttals', 'statements',
+    'legal', 'sources', 'method', 'api', 'changelog', 'embed'];
 
   /* index.html?prerender=1 renders the text and nothing else: no charts, no
      scroll reveals, no counting numbers, no WebGL scene. prerender.py uses it
@@ -677,6 +677,35 @@ const App = (function () {
         return;
       }
 
+      /* A day card carries the three things the day route exists to put on one
+         date: the toll, the words, and the order already standing. Each is read
+         out of the panel on screen, so the card cannot say anything the page
+         does not. */
+      if (kind === 'day') {
+        const sheet = btn.closest('.day-sheet');
+        if (!sheet) return;
+        const quote = sheet.querySelector('.st-card');
+        const ruling = sheet.querySelector('.day-ruling');
+        const stats = Array.prototype.slice.call(sheet.querySelectorAll('.stat'));
+        const source = [
+          quote ? text(quote, '.st-src') : '',
+          'Daily series: Gaza Ministry of Health via OCHA and Tech For Palestine.',
+        ].filter(Boolean).join(' ');
+        flash(Share.day({
+          date: text(sheet, '.day-date'),
+          killed: stats[0] ? text(stats[0], '.val') : '',
+          killedLabel: stats[0] ? text(stats[0], '.lbl') : '',
+          total: stats[1] ? text(stats[1], '.val') + ' ' + text(stats[1], '.lbl') : '',
+          quote: quote ? text(quote, 'blockquote').replace(/^[\u201c"]|[\u201d"]$/g, '') : '',
+          speaker: quote ? text(quote, '.who') : '',
+          role: quote ? text(quote, '.role') : '',
+          ruling: ruling ? text(ruling, '.day-title') + ' \u2014 ' + text(ruling, '.day-finding') : '',
+          source,
+          url: location.href,
+        }) ? 'saved' : 'failed');
+        return;
+      }
+
       const box = btn.closest('.stat');
       if (!box) return;
       flash(Share.figure({
@@ -1094,6 +1123,110 @@ const App = (function () {
     }));
     input.addEventListener('input', apply);
     apply();
+  };
+
+  /* ---------- said and done ---------- */
+
+  /* One piece of state — the index of the day on screen — and five ways to move
+     it: the slider, the two step buttons, the date field, a click on the chart,
+     and the play button that walks the whole war. Every move redraws the panels
+     from the maps views.js bucketed once, and rewrites the address with
+     replaceState, which changes the link without firing hashchange and so
+     without re-rendering the route underneath it. */
+  behaviours.day = function () {
+    const panels = document.getElementById('day-panels');
+    const range = document.getElementById('day-range');
+    if (!panels || !range) return;
+
+    const dates = D.ts.daily.gaza.dates;
+    const pos = document.getElementById('day-pos');
+    const dateInput = document.getElementById('day-date');
+    const play = document.getElementById('day-play');
+    const copy = document.getElementById('day-copy');
+
+    // 1,070 days in a hundred seconds: fast enough to be a film, slow enough
+    // that a date and a headline can be read as they go past.
+    const STEP_MS = 90;
+    let i = Math.max(0, Math.min(dates.length - 1, Number(range.value) || 0));
+    let timer = null;
+    let settle = null;
+
+    /* Each day changes the height of the panels, which moves everything below
+       them. The scroll reveals were measured against the first day drawn, so
+       without this the cards further down the page keep waiting for a scroll
+       position the document no longer reaches, and never appear. The refresh is
+       debounced because autoplay redraws eleven times a second. */
+    function remeasure() {
+      if (!window.ScrollTrigger) return;
+      if (settle) clearTimeout(settle);
+      settle = setTimeout(() => {
+        settle = null;
+        if (panels.isConnected) ScrollTrigger.refresh();
+      }, 160);
+    }
+
+    function show(next, quiet) {
+      i = Math.max(0, Math.min(dates.length - 1, next));
+      const iso = dates[i];
+      range.value = String(i);
+      range.setAttribute('aria-valuetext', Views.dayLabel(iso));
+      if (dateInput && dateInput.value !== iso) dateInput.value = iso;
+      if (pos) pos.textContent = Views.dayLabel(iso);
+      panels.innerHTML = Views.dayPanels(iso);
+      try { Charts.setDay(iso); } catch (err) { console.error('day cursor', err); }
+      remeasure();
+      if (!quiet) history.replaceState(null, '', '#/day/' + iso);
+    }
+
+    function stop() {
+      if (timer) clearInterval(timer);
+      timer = null;
+      if (play) { play.textContent = 'play'; play.setAttribute('aria-pressed', 'false'); }
+    }
+
+    function start() {
+      if (i >= dates.length - 1) i = 0;
+      if (play) { play.textContent = 'pause'; play.setAttribute('aria-pressed', 'true'); }
+      timer = setInterval(() => {
+        // The route may have been left while the timer was running; the panels
+        // are then detached and the interval is the only thing still holding on.
+        if (!panels.isConnected) { stop(); return; }
+        if (i >= dates.length - 1) { stop(); return; }
+        show(i + 1);
+      }, STEP_MS);
+    }
+
+    range.addEventListener('input', () => { stop(); show(Number(range.value)); });
+    const prev = document.getElementById('day-prev');
+    const next = document.getElementById('day-next');
+    if (prev) prev.addEventListener('click', () => { stop(); show(i - 1); });
+    if (next) next.addEventListener('click', () => { stop(); show(i + 1); });
+    if (dateInput) {
+      dateInput.addEventListener('change', () => {
+        const asked = dateInput.value;
+        if (!asked) return;
+        stop();
+        let at = dates.indexOf(asked);
+        if (at < 0) at = dates.findIndex((x) => x >= asked);
+        show(at < 0 ? dates.length - 1 : at);
+      });
+    }
+    if (play) play.addEventListener('click', () => (timer ? stop() : start()));
+    if (copy) {
+      copy.addEventListener('click', () => {
+        const url = location.origin + location.pathname + '#/day/' + dates[i];
+        const was = copy.textContent;
+        const flash = (t) => { copy.textContent = t; setTimeout(() => { copy.textContent = was; }, 1400); };
+        if (navigator.clipboard) navigator.clipboard.writeText(url).then(() => flash('copied'), () => flash('press \u2318C'));
+        else flash(url);
+      });
+    }
+
+    try { Charts.onDayPick((iso) => { stop(); show(dates.indexOf(iso)); }); } catch (err) { console.error('day pick', err); }
+
+    // Draw the cursor where the route opened, without rewriting the address:
+    // a deep link that has just been followed should stay exactly as it was.
+    show(i, true);
   };
 
   behaviours.sources = function () {

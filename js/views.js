@@ -120,7 +120,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=35" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=36" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -234,7 +234,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=35" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=36" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2370,6 +2370,11 @@ const Views = (function () {
       desc: 'A unit chart of the children killed on both sides, period by period, one figure drawn '
         + 'per child, with the years no one counted left as gaps and every figure carrying its source.',
     },
+    day: {
+      title: 'Said and done — the war, one day at a time',
+      desc: 'One scrubbable axis of days. Pick any day of the war and read the toll it added, what was said that '
+        + 'day, what had been ordered, what was happening, and what was allowed across the crossings.',
+    },
     method: {
       title: 'Method — impartial, not neutral',
       desc: 'The standard of proof this record runs on, the distinction between impartiality and '
@@ -2794,6 +2799,326 @@ const Views = (function () {
     </div>`;
   }
 
+  /* ---------- said and done ---------- */
+
+  /* The record is normally read subject by subject: the toll in one place, the
+     statements in another, the rulings in a third. Special intent is not shown
+     that way. Under Article II of the Genocide Convention the intent and the
+     act have to be contemporaneous, which means the only honest way to display
+     the question is on a single axis of days: what was said on the day the
+     killing was done, and what had already been ordered while it went on.
+
+     So this route holds one day at a time. Nothing on it is new. Every item is
+     the same item the rest of the site carries — the daily series, the
+     statements, the determinations, the dated events, the chronology and the
+     aid record — joined on the one field they have in common. */
+
+  const DAY_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'];
+  const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  const longDay = (iso) => `${+iso.slice(8, 10)} ${DAY_MONTHS[+iso.slice(5, 7) - 1]} ${iso.slice(0, 4)}`;
+  const longMonth = (iso) => `${DAY_MONTHS[+iso.slice(5, 7) - 1]} ${iso.slice(0, 4)}`;
+  const weekdayOf = (iso) => WEEKDAYS[new Date(iso + 'T00:00:00Z').getUTCDay()];
+  const pad2 = (n) => (n < 10 ? '0' : '') + n;
+
+  /* statements.json and legal.json state the date as the source stated it, so
+     the precision has to be read off that prose and not off the sort key, which
+     always looks like a day even where the source gave only a month. Three
+     outcomes: a day the source named, a month it named, or neither — and an
+     entry the record dates only to a year, or to a span of years, is left off
+     this axis altogether rather than pinned to a day nobody claimed. */
+  const DAY_PROSE = /^(?:c\.\s*)?\d{1,2}\s*(?:[–—-]\s*\d{1,2}\s*)?\s*[A-Za-z]/;
+  const MONTH_PROSE = /\b(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)/i;
+
+  function datePrecision(prose) {
+    const s = String(prose || '').trim();
+    if (!MONTH_PROSE.test(s)) return 'none';
+    return DAY_PROSE.test(s) ? 'day' : 'month';
+  }
+
+  /* Everything pinned to its date, once, at first render. The panels are then
+     redrawn from these maps on every step of the scrubber, which is what makes
+     the autoplay affordable. */
+  let dayCache = null;
+
+  function dayData() {
+    if (dayCache) return dayCache;
+    const dates = D.ts.daily.gaza.dates;
+    const first = dates[0];
+    const last = dates[dates.length - 1];
+    const at = {};
+    dates.forEach((iso, i) => { at[iso] = i; });
+
+    const push = (into, key, value) => { (into[key] || (into[key] = [])).push(value); };
+    const said = { day: {}, month: {} };
+    const ordered = { day: {}, month: {} };
+    const happened = { day: {}, month: {} };
+    let unpinned = 0;
+
+    (D.statements.items || []).forEach((x) => {
+      if (!x.sort || x.sort < first || x.sort > last) return;
+      const p = datePrecision(x.date);
+      if (p === 'none') { unpinned++; return; }
+      if (p === 'day') push(said.day, x.sort, x);
+      else push(said.month, x.sort.slice(0, 7), x);
+    });
+
+    (D.legal.determinations || []).forEach((x) => {
+      if (!x.sort || x.sort < first || x.sort > last) return;
+      const p = datePrecision(x.date);
+      if (p === 'none') return;
+      if (p === 'day') push(ordered.day, x.sort, x);
+      else push(ordered.month, x.sort.slice(0, 7), x);
+    });
+
+    ((D.events && D.events.events) || []).forEach((e) => {
+      if (e.date < first || e.date > last) return;
+      push(happened.day, e.date, {
+        when: longDay(e.date), title: e.label, detail: e.detail, tone: e.tone, ref: e.ref, marked: true,
+      });
+    });
+
+    /* The chronology dates itself in prose — "2 Mar 2025", "Nov 2023",
+       "Sept–Nov 2024" — and app.js has already reduced each entry to the
+       YYYYMMDD key it could parse. A zero day means the source gave a month
+       and no more; a zero month means a year and no more, and that entry
+       cannot go on a day axis at all. */
+    (D.timeline || []).forEach((e) => {
+      const key = e.key || 0;
+      const year = Math.floor(key / 10000);
+      const month = Math.floor(key / 100) % 100;
+      const day = key % 100;
+      if (!month || year < 2023) return;
+      const iso = day ? `${year}-${pad2(month)}-${pad2(day)}` : `${year}-${pad2(month)}`;
+      if (iso.slice(0, 7) < first.slice(0, 7) || iso.slice(0, 7) > last.slice(0, 7)) return;
+      const item = {
+        when: e.date, title: e.event, detail: e.note || '', tone: e.kind === 'context' ? 'muted' : 'red',
+        ref: e.kind === 'context' ? 'Chronology' : 'Appendix B', marked: false,
+      };
+      if (day) push(happened.day, iso, item);
+      else push(happened.month, iso, item);
+    });
+
+    dayCache = {
+      dates, at, first, last, said, ordered, happened, unpinned,
+      phases: (D.conduct && D.conduct.aid && D.conduct.aid.phases) || [],
+      required: (D.conduct && D.conduct.aid && D.conduct.aid.baseline && D.conduct.aid.baseline.value) || 500,
+    };
+    return dayCache;
+  }
+
+  /* The daily series are cumulative totals as reported, so a day's own figure
+     is the step between one report and the next. */
+  function dayToll(i) {
+    const g = D.ts.daily.gaza;
+    const w = D.ts.daily.west_bank;
+    const step = (s) => (i === 0 ? s[0] : Math.max(0, s[i] - s[i - 1]));
+    return {
+      killed: step(g.killed), injured: step(g.injured), children: step(g.children),
+      women: step(g.women), aidSeekers: step(g.aid_seekers),
+      wbKilled: step(w.killed), wbChildren: step(w.children), attacks: step(w.settler_attacks),
+      total: g.killed[i], totalChildren: g.children[i], totalWomen: g.women[i],
+      totalAidSeekers: g.aid_seekers[i], wbTotal: w.killed[i],
+      share: g.killed[i] ? Math.round(1000 * g.children[i] / g.killed[i]) / 10 : 0,
+      number: i + 1,
+    };
+  }
+
+  const aidPhaseOn = (iso) => dayData().phases.find((p) => iso >= p.from && (!p.to || iso <= p.to)) || null;
+
+  /* The day the route opens on: the one asked for, if the record covers it,
+     and otherwise the last day the record has. A date outside the series is
+     answered with the nearest day inside it rather than with an error, because
+     a link that lands on nothing teaches the reader nothing. */
+  function dayFor(sub) {
+    const d = dayData();
+    const asked = /^\d{4}-\d{2}-\d{2}$/.test(String(sub || '')) ? sub : '';
+    if (!asked) return d.last;
+    if (d.at[asked] != null) return asked;
+    if (asked < d.first) return d.first;
+    if (asked > d.last) return d.last;
+    // A gap in the reporting: take the first day on or after the one asked for.
+    return d.dates.find((x) => x >= asked) || d.last;
+  }
+
+  /* ---- the panels ---- */
+
+  function dayStatement(x, approximate) {
+    return `<article class="quote-card st-card day-item">
+      <div class="st-top">
+        <span class="st-tier">${esc(x.tier || 'Statement')}</span>
+        <span class="st-date">${esc(x.date)}${approximate ? ' — month only' : ''}</span>
+        <button class="share-card" data-share="statement" title="Save this statement as a shareable card"
+          aria-label="card — save this statement as an image">card</button>
+      </div>
+      <blockquote>“${esc(x.quote)}”</blockquote>
+      <div class="who">${esc(x.speaker)}</div>
+      <div class="role">${esc(x.role)}</div>
+      <p class="st-src">${esc(x.source)}</p>
+    </article>`;
+  }
+
+  function dayRuling(x, approximate) {
+    return `<div class="day-item day-ruling">
+      <div class="day-when">${esc(x.date)}${approximate ? ' — month only' : ''}</div>
+      <p class="day-title">${esc(x.body)}</p>
+      <p class="day-finding">${esc(x.finding)}</p>
+      ${x.note ? `<p class="small muted">${esc(x.note)}</p>` : ''}
+      <p class="src">${esc(x.ref || '')} — <a href="#/legal">the findings in full</a></p>
+    </div>`;
+  }
+
+  function dayEvent(x, approximate) {
+    return `<div class="day-item day-event tone-${esc(x.tone || 'muted')}">
+      <div class="day-when">${esc(x.when)}${approximate ? ' — month only' : ''}</div>
+      <p class="day-title">${esc(x.title)}</p>
+      ${x.detail ? `<p class="small muted">${esc(x.detail)}</p>` : ''}
+      <p class="src">${esc(x.ref || '')}</p>
+    </div>`;
+  }
+
+  const dayEmpty = (what) => `<p class="chart-note day-none">${esc(what)}</p>`;
+
+  function dayPanel(title, exact, approx, render, emptyText, monthLabel) {
+    const body = exact.map((x) => render(x, false)).join('')
+      + (approx.length
+        ? `<p class="day-approx">${esc(monthLabel)}</p>` + approx.map((x) => render(x, true)).join('')
+        : '');
+    return `<div class="card day-panel">
+      <h3>${esc(title)}</h3>
+      ${body || dayEmpty(emptyText)}
+    </div>`;
+  }
+
+  function dayAidPanel(iso) {
+    const d = dayData();
+    const phase = aidPhaseOn(iso);
+    if (!phase) {
+      return `<div class="card day-panel">
+        <h3>What was crossing</h3>
+        ${dayEmpty('This record dates no aid regime to this day.')}
+      </div>`;
+    }
+    const shown = phase.display || (phase.value == null ? null : fmt(phase.value));
+    const pct = phase.value == null ? null : Math.min(100, Math.round(100 * phase.value / d.required));
+    return `<div class="card day-panel day-aid">
+      <h3>What was crossing</h3>
+      <p class="day-title">${esc(phase.label)}</p>
+      ${shown == null
+        ? `<p class="day-aid-none">No daily figure is published for this period.</p>`
+        : `<div class="day-aid-val"><b>${esc(shown)}</b> <span>trucks a day, against ${fmt(d.required)} required</span></div>
+           <div class="day-aid-bar"><span style="width:${pct}%"></span></div>`}
+      <p class="small muted">${esc(phase.detail)}</p>
+      <p class="src">${esc(phase.source)} — ${esc(phase.ref)}</p>
+    </div>`;
+  }
+
+  /* Everything below the chart, rebuilt whenever the day changes. app.js
+     replaces the contents of #day-panels with this string and nothing else. */
+  function dayPanels(iso) {
+    const d = dayData();
+    const i = d.at[iso];
+    const t = dayToll(i);
+    const month = iso.slice(0, 7);
+    const said = d.said.day[iso] || [];
+    const saidMonth = d.said.month[month] || [];
+    const ordered = d.ordered.day[iso] || [];
+    const orderedMonth = d.ordered.month[month] || [];
+    const happened = d.happened.day[iso] || [];
+    const happenedMonth = d.happened.month[month] || [];
+
+    return `<section class="section wrap day-sheet">
+      <div class="day-head">
+        <div>
+          <div class="eyebrow">Day ${fmt(t.number)} of ${fmt(d.dates.length)}</div>
+          <h2 class="day-date">${esc(weekdayOf(iso))}, ${esc(longDay(iso))}</h2>
+        </div>
+        <button class="share-card" data-share="day" title="Save this day as a shareable card"
+          aria-label="card — save this day as an image">card</button>
+      </div>
+
+      <div class="grid c4">
+        <div class="stat red"><div class="val">${fmt(t.killed)}</div><div class="lbl">Added to the reported Gaza toll that day</div></div>
+        <div class="stat"><div class="val">${fmt(t.total)}</div><div class="lbl">Gaza dead reported by that day</div></div>
+        <div class="stat"><div class="val">${fmt(t.totalChildren)}</div><div class="lbl">Children among them — ${t.share}% of the toll</div></div>
+        <div class="stat blue"><div class="val">${fmt(t.wbTotal)}</div><div class="lbl">West Bank dead reported by that day</div></div>
+      </div>
+      <p class="chart-note day-toll-note">${t.killed === 0
+        ? 'No new figure was published for Gaza on this day. A step of zero is a gap in the reporting, not a day on which nobody was killed.'
+        : `Also that day: <b>${fmt(t.children)}</b> children, <b>${fmt(t.women)}</b> women and <b>${fmt(t.aidSeekers)}</b> people killed while seeking aid were added to the reported totals, along with <b>${fmt(t.injured)}</b> injured. In the West Bank, <b>${fmt(t.wbKilled)}</b> killed and <b>${fmt(t.attacks)}</b> settler attack${t.attacks === 1 ? '' : 's'}.${
+          t.children === 0 && t.women === 0 && t.aidSeekers === 0
+            ? ' The breakdown by category is published less often than the headline total, so a zero in those three records a day with no new breakdown, not a day on which no child or woman was killed.'
+            : ''}`}</p>
+
+      <div class="grid c2 day-panels-grid">
+        ${dayPanel('What was said', said, saidMonth, dayStatement,
+          'No statement in this record is dated to this day.',
+          'And said this month, where the source gave a month and no day:')}
+        ${dayPanel('What was ordered', ordered, orderedMonth, dayRuling,
+          'No court, commission or inquiry recorded a finding on this day.',
+          'And found this month, where the source gave a month and no day:')}
+        ${dayPanel('What was happening', happened, happenedMonth, dayEvent,
+          'Nothing in the chronology is dated to this day.',
+          'And this month, where the chronology gives a month and no day:')}
+        ${dayAidPanel(iso)}
+      </div>
+    </section>`;
+  }
+
+  function dayView(sub) {
+    if (!D.ts || !D.ts.daily || !D.ts.daily.gaza) {
+      return `<div class="view"><section class="section wrap">${head('Said and done', 'One day at a time', 'The daily series did not load.')}</section></div>`;
+    }
+    const d = dayData();
+    const iso = dayFor(sub);
+    const i = d.at[iso];
+
+    return `<div class="view">
+      <section class="section wrap">
+        ${head('Said and done', 'The war, one day at a time',
+          'Special intent is not proved by a quotation and it is not proved by a body count. It is proved by the two of them '
+          + 'standing on the same date. This page puts them there: pick any day between 7 October 2023 and '
+          + esc(longDay(d.last)) + ', and it reports what the toll did that day, what was said, what had been ordered, what '
+          + 'was happening and what was being allowed across the crossings. Nothing here is new. It is the record the rest of '
+          + 'this site already holds, joined on the one field every part of it shares.')}
+
+        <div class="card day-bar">
+          <div class="day-controls">
+            <button class="chart-tool" id="day-prev" title="The day before" aria-label="the day before">◀ back</button>
+            <input type="range" id="day-range" min="0" max="${d.dates.length - 1}" step="1" value="${i}"
+              aria-label="Day of the war" aria-valuetext="${esc(longDay(iso))}">
+            <button class="chart-tool" id="day-next" title="The day after" aria-label="the day after">on ▶</button>
+          </div>
+          <div class="day-controls day-controls-2">
+            <label class="small muted" for="day-date">Go to</label>
+            <input type="date" id="day-date" value="${iso}" min="${d.first}" max="${d.last}">
+            <button class="chart-tool" id="day-play" aria-pressed="false" title="Run the whole war, day by day">play</button>
+            <button class="chart-tool" id="day-copy" title="Copy a link to this day">link</button>
+            <span class="small muted" id="day-pos">${esc(longDay(iso))}</span>
+          </div>
+        </div>
+
+        ${chartCard('day-spine', 'The spine — Gaza deaths added to the reported toll, day by day',
+          'The upright line is the day this page is standing on. Click anywhere on the chart to move it. '
+          + 'Switch on <b>events</b> to mark the dated turning points against the same axis.',
+          '§6.1, Appendix B')}
+      </section>
+
+      <div id="day-panels">${dayPanels(iso)}</div>
+
+      <section class="section wrap">
+        ${head('How to read it', 'What this page can and cannot pin to a day', '')}
+        <div class="card" style="padding:24px 26px">
+          <p>The daily figures are the totals as they were reported, so a day's own number is the step between one report and the next. On <b>${fmt(d.dates.filter((x, n) => (n === 0 ? false : D.ts.daily.gaza.killed[n] === D.ts.daily.gaza.killed[n - 1])).length)}</b> of the ${fmt(d.dates.length)} days on this axis that step is zero, which records a day on which no new figure was published, not a day on which nobody was killed.</p>
+          <p>Statements and findings are placed on the date their own source gives them. Where the source named a day, the entry sits on that day. Where it named only a month, the entry is shown under the month and labelled as such, so that nothing on this page asserts a precision the record does not have. ${d.unpinned ? `<b>${fmt(d.unpinned)}</b> statements in the record are dated to a year or a span of years and cannot be placed on a day at all; they are on the <a href="#/statements">statements page</a> and are not shown here.` : ''}</p>
+          <p>The aid record works the same way. A phase states a daily figure only where the report publishes one for that span; elsewhere the page says no figure is published, which is not the same as saying the crossings were open. Every phase names the section of the report it comes from.</p>
+          <p class="src">Daily series: ${esc(D.ts.meta.source)}. Statements: §6.2 and Appendix C. Findings: Part VI and Part XV. Chronology: Appendix B and the contextual chronology. Aid: §6.3 and §6.8.</p>
+        </div>
+      </section>
+    </div>`;
+  }
+
   /* ---------- api ---------- */
 
   const routes = {
@@ -2801,7 +3126,7 @@ const Views = (function () {
     evidence: evidenceView, rebuttals: rebuttalsView,
     statements: statementsView, legal: legalView, sources: sourcesView,
     tour: tourView, api: apiView, changelog: changelogView, embed: embedView,
-    method: methodView, children: childrenView,
+    method: methodView, children: childrenView, day: dayView,
   };
 
   return {
@@ -2813,6 +3138,8 @@ const Views = (function () {
     charts: chartIndex,
     scorecardRows,
     speakerSlug,
+    dayPanels,
+    dayLabel: longDay,
     origin: SITE_ORIGIN,
     meta,
     blocksHTML, esc, fmt,

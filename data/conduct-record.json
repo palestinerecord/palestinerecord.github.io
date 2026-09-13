@@ -17,6 +17,66 @@
       "label": "Required each day",
       "note": "The figure the UN uses as the minimum daily requirement for Gaza's population, and the throughput before October 2023."
     },
+
+    "phases_note": "The same aid record, laid out against the dates it was decided on, so that any single day of the war can be asked what was crossing into Gaza while it happened. A phase states a daily figure only where the report publishes one for that span; elsewhere 'value' is null, which records that this dashboard has no dated daily count for the period, not that the crossings were open. Every phase names the section of report-final.md it comes from.",
+    "phases": [
+      {
+        "from": "2023-10-09",
+        "to": "2025-03-01",
+        "label": "Complete siege, then intermittent entry",
+        "value": null,
+        "detail": "Defence Minister Yoav Gallant ordered a complete siege on 9 October 2023 — 'no electricity, no food, no fuel, everything is closed' — and Economy Minister Israel Katz confirmed on 12 October that no fuel truck would enter until the Israeli captives were returned. Entry after that was intermittent and conditional. This record publishes no dated daily truck count for the period.",
+        "ref": "§6.2",
+        "source": "Yoav Gallant, 9 October 2023; Israel Katz, 12 October 2023 (report-final.md §6.2, Appendix C)"
+      },
+      {
+        "from": "2025-03-02",
+        "to": "2025-10-10",
+        "label": "Total blockade",
+        "value": 0,
+        "detail": "Israel imposed a total blockade of all humanitarian aid on 2 March 2025. It lasted months, and on 22 August 2025 the IPC formally declared famine in the Gaza Governorate — the first formal famine declaration in the Middle East since the IPC system was established. The report dates the first relief in access to the ceasefire of October 2025.",
+        "ref": "§6.3",
+        "source": "report-final.md §6.3; IPC, 22 August 2025"
+      },
+      {
+        "from": "2025-10-11",
+        "to": "2026-01-31",
+        "label": "Ceasefire: a limited improvement in access",
+        "value": null,
+        "detail": "The ceasefire took effect on 11 October 2025 and access improved, but only in part: even after it, 77 per cent of Gaza's population still faced acute food insecurity. This record publishes no dated daily truck count for these months.",
+        "ref": "§6.3",
+        "source": "report-final.md §6.3 (J Street / UN data, April 2026)"
+      },
+      {
+        "from": "2026-02-01",
+        "to": "2026-03-31",
+        "label": "Restrictions reimposed",
+        "value": null,
+        "detail": "In February 2026 Israel reimposed aid restrictions on Gaza, citing tensions with Iran, in breach of the ceasefire.",
+        "ref": "Appendix B",
+        "source": "report-final.md, Appendix B (February 2026)"
+      },
+      {
+        "from": "2026-04-01",
+        "to": "2026-06-05",
+        "label": "80 to 120 trucks a day, against 500 required",
+        "value": 100,
+        "display": "80–120",
+        "detail": "An average of 80 to 120 trucks a day entered Gaza, against the 500 required, of which only 10 to 15 carried medical supplies for a health system with 86 per cent of its essential needs unmet. Human Rights Watch, reporting on 19 May 2026, found that 35 per cent of the expected aid trucks were actually allowed to cross.",
+        "ref": "§6.3",
+        "source": "WHO; Palestinian Ministry of Health in Gaza, May 2026; Human Rights Watch, 19 May 2026"
+      },
+      {
+        "from": "2026-06-06",
+        "to": null,
+        "label": "All crossings closed",
+        "value": 0,
+        "detail": "On 6 June 2026 Israel closed every entry point into Gaza, Rafah and Kerem Shalom included, 'until further notice', in stated retaliation for Iranian missile strikes on Israel. As of July 2026 all crossings remained closed for cargo. The report characterises this as collective punishment under Article 33 of the Fourth Geneva Convention.",
+        "ref": "§6.8",
+        "source": "report-final.md §6.8 (Times of Israel; Siasat; The New Arab, 6–8 June 2026; UN News, July 2026)"
+      }
+    ],
+
     "items": [
       {
         "label": "Required each day",

@@ -135,6 +135,7 @@ const Charts = (function () {
     'recovery-lag': 'month',
     'daily-toll': 'day',
     'daily-rate': 'day',
+    'day-spine': 'day',
   };
 
   /* Which charts currently have the layer switched on. Keyed by chart name, so
@@ -352,6 +353,111 @@ const Charts = (function () {
       ],
     });
   };
+
+  /* ---- the day route's spine ----
+
+     The same per-day deltas as the daily rate chart, carrying one extra mark:
+     the day the reader is standing on. Everything else on that route — the
+     toll, the statements, the rulings, the aid regime — is pinned to the day
+     this line marks, so the line is the page's cursor and not decoration. It
+     is kept in a module variable rather than passed in, because the registry
+     builds every chart from a nullary function. */
+  let dayCursor = null;
+
+  /* The cursor is merged into the markLine the series already carries, because
+     a series has only one. Rebuilding the whole option on every step of the
+     scrubber would redraw a 1,070-point bar chart several times a second; a
+     partial setOption on this one object does not. */
+  const dayMarks = () => {
+    const dates = data.ts.daily.gaza.dates;
+    const existing = seriesMarks('day-spine', dates, 'day').markLine;
+    const mark = existing
+      ? Object.assign({}, existing, { data: existing.data.slice() })
+      : { symbol: 'none', animation: false, emphasis: { disabled: true }, data: [] };
+    const i = dayCursor == null ? -1 : dates.indexOf(dayCursor);
+    if (i >= 0) {
+      mark.data = mark.data.concat([{
+        xAxis: i,
+        name: dayLabel(dayCursor),
+        detail: 'The day this page is standing on.',
+        lineStyle: { color: C.text, width: 2, type: 'solid' },
+        label: {
+          /* The backing is read from the theme: a fixed dark chip carries
+             near-black text on the light theme and reads as a solid block. */
+          formatter: dayLabel(dayCursor), color: C.text, fontSize: 11,
+          position: 'insideEndTop', distance: 5,
+          backgroundColor: C.plate, borderColor: C.ink(0.14), borderWidth: 1,
+          padding: [3, 5], borderRadius: 3,
+        },
+      }]);
+    }
+    return mark;
+  };
+
+  R['day-spine'] = () => {
+    const d = data.ts.daily.gaza;
+    const labels = d.dates.map(dayLabel);
+    const newDaily = d.killed.map((v, i) => (i === 0 ? v : Math.max(0, v - d.killed[i - 1])));
+    const mean = newDaily.map((_, i) => {
+      const window = newDaily.slice(Math.max(0, i - 6), i + 1);
+      return +(window.reduce((a, b) => a + b, 0) / window.length).toFixed(1);
+    });
+    return Object.assign({}, base, {
+      grid: { left: 52, right: 20, top: 40, bottom: 74 },
+      legend: Object.assign({}, base.legend, { data: ['Reported that day', '7-day mean'] }),
+      tooltip: Object.assign({}, base.tooltip, {
+        trigger: 'axis',
+        axisPointer: { type: 'line' },
+        formatter: (p) => `<b>${dayLabel(d.dates[p[0].dataIndex])}</b><br>`
+          + p.map((x) => `${x.marker} ${x.seriesName}: <b>${fmt(x.value)}</b>`).join('<br>')
+          + '<br><span style="opacity:.7;font-size:11px">Click to stand on this day.</span>',
+      }),
+      dataZoom: [
+        { type: 'inside', throttle: 60 },
+        {
+          type: 'slider', height: 20, bottom: 12,
+          borderColor: C.ink(.12), backgroundColor: C.ink(.03),
+          fillerColor: hexToRgba(C.amber, 0.1), handleStyle: { color: C.amber },
+          textStyle: { color: C.muted, fontSize: 10 },
+        },
+      ],
+      xAxis: axisX({ data: labels, axisLabel: { color: C.muted, fontSize: 10 } }),
+      yAxis: axisY({ name: 'killed per day', nameTextStyle: { color: C.muted, fontSize: 11 } }),
+      series: [
+        { name: 'Reported that day', type: 'bar', data: newDaily, barMaxWidth: 6, large: true,
+          itemStyle: { color: hexToRgba(C.red, 0.5) }, markLine: dayMarks() },
+        { name: '7-day mean', type: 'line', data: mean, smooth: 0.3, showSymbol: false, sampling: 'lttb',
+          lineStyle: { color: C.amber, width: 2.2 }, itemStyle: { color: C.amber } },
+      ],
+    });
+  };
+
+  /* Move the cursor. Returns the date it settled on, or null when the spine is
+     not on screen, so the caller can tell a no-op from a move. */
+  function setDay(iso) {
+    dayCursor = iso;
+    const chart = built['day-spine'];
+    if (!chart) return null;
+    chart.setOption({ series: [{ markLine: dayMarks() }] });
+    return iso;
+  }
+
+  /* A click anywhere inside the plot picks the day under the pointer, which is
+     how a reader who can see the spike expects to reach it. The handler is on
+     the renderer rather than on the series, because the bars are one pixel wide
+     and nobody can hit one. */
+  function onDayPick(fn) {
+    const chart = built['day-spine'];
+    if (!chart || !data) return false;
+    const dates = data.ts.daily.gaza.dates;
+    chart.getZr().on('click', (e) => {
+      const point = [e.offsetX, e.offsetY];
+      if (!chart.containPixel({ gridIndex: 0 }, point)) return;
+      const i = Math.round(chart.convertFromPixel({ seriesIndex: 0 }, point)[0]);
+      if (dates[i]) fn(dates[i]);
+    });
+    return true;
+  }
 
   /* Age and sex of the identified dead — the named list, not an estimate */
   R['age-pyramid'] = () => {
@@ -3958,5 +4064,6 @@ const Charts = (function () {
     init, dispose, fmt, colours: C, table, csv, png,
     has: (n) => !!R[n], names: () => Object.keys(R),
     hasEvents: (n) => !!EVENTED[n], eventsOn: (n) => !!eventsOn[n], toggleEvents,
+    setDay, onDayPick,
   };
 })();

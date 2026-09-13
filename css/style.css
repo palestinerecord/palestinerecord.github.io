@@ -1429,3 +1429,115 @@ tr.row-partial td { opacity: .72; }
 .ch-table .col-span { min-width: 165px; }
 .ch-table .col-year { min-width: 150px; }
 .ch-table .col-note { min-width: 350px; }
+
+/* ---------- Said and done: the day route ---------- */
+
+/* The controls sit above the spine and drive it. They are a range input, two
+   step buttons and a date field rather than a custom widget, because a native
+   range answers the arrow keys, announces its value to a screen reader and
+   works before any script has run — none of which a div with a drag handler
+   does. */
+.day-bar {
+  padding: 16px 22px; display: flex; flex-direction: column; gap: 12px;
+  margin: 26px 0 18px;
+  position: sticky; top: var(--topbar-h); z-index: 12;
+  background: var(--bar-2); backdrop-filter: blur(14px);
+}
+.day-controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.day-controls-2 { gap: 10px; }
+#day-range {
+  flex: 1 1 220px; min-width: 0; height: 22px; margin: 0;
+  background: transparent; -webkit-appearance: none; appearance: none; cursor: pointer;
+}
+#day-range::-webkit-slider-runnable-track {
+  height: 6px; border-radius: 3px;
+  background: linear-gradient(90deg, var(--red-soft), rgba(210, 83, 76, .45));
+  border: 1px solid var(--line);
+}
+#day-range::-moz-range-track {
+  height: 6px; border-radius: 3px;
+  background: linear-gradient(90deg, var(--red-soft), rgba(210, 83, 76, .45));
+  border: 1px solid var(--line);
+}
+#day-range::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; margin-top: -7px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--text); border: 2px solid var(--red); box-shadow: var(--shadow-1);
+}
+#day-range::-moz-range-thumb {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--text); border: 2px solid var(--red);
+}
+#day-range:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 3px; }
+#day-date {
+  background: var(--panel); border: 1px solid var(--line); color: var(--text);
+  padding: 7px 10px; border-radius: 8px; font: inherit; font-size: 13px;
+  font-family: var(--mono); color-scheme: dark;
+}
+#day-date:focus { outline: none; border-color: var(--accent); }
+#day-pos { font-family: var(--mono); margin-left: auto; white-space: nowrap; }
+
+/* The panels are read against the scrubber, so they sit closer to it than the
+   site's usual section rhythm allows. */
+.day-sheet { padding: 40px 0 56px; }
+.day-head { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
+.day-head .share-card { margin-left: auto; flex: 0 0 auto; }
+.day-date { font-size: clamp(24px, 3.4vw, 38px); margin: 4px 0 0; }
+.day-toll-note { margin-top: 14px; }
+
+.day-panels-grid { margin-top: 26px; align-items: start; }
+.day-panel { padding: 22px 24px; }
+.day-panel > h3 {
+  font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 16px; font-family: var(--sans);
+}
+.day-none { margin: 0; }
+.day-approx {
+  font-size: 11.5px; color: var(--muted); font-family: var(--mono);
+  margin: 18px 0 12px; padding-top: 14px; border-top: 1px solid var(--line);
+}
+
+/* Items inside a panel are already inside a card, so they carry the rule and
+   the spacing of a list entry rather than a second border and a second shadow. */
+.day-item + .day-item { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+/* Statements on their own route are skipped until they scroll into view; in a
+   day panel that would reserve a card's worth of empty space for an entry the
+   page has already drawn, so the skipping is turned off here. */
+.day-panel .quote-card { padding: 0; background: none; border: 0; box-shadow: none;
+  content-visibility: visible; contain-intrinsic-size: none; }
+.day-panel .quote-card blockquote { font-size: 15.5px; margin-bottom: 12px; }
+.day-panel .st-top { margin-bottom: 10px; }
+.day-panel .st-src { margin: 10px 0 0; font-size: 12px; color: var(--muted); font-style: italic; }
+
+.day-when { font-family: var(--mono); font-size: 11.5px; color: var(--muted); margin-bottom: 6px; }
+.day-title { font-size: 15px; color: var(--text); font-weight: 600; margin: 0 0 6px; }
+.day-finding { font-size: 14px; color: var(--text-2); margin: 0 0 8px; }
+.day-event { border-left: 2px solid var(--line); padding-left: 14px; }
+.day-event.tone-red { border-left-color: var(--red); }
+.day-event.tone-blue { border-left-color: var(--blue); }
+.day-event.tone-amber { border-left-color: var(--accent); }
+.day-event.tone-violet { border-left-color: var(--violet); }
+.day-event.tone-muted { border-left-color: var(--line-hi); }
+.day-item.day-event + .day-item.day-event { border-top: 0; padding-top: 0; margin-top: 14px; }
+
+.day-aid-val { font-size: 15px; color: var(--text-2); margin: 4px 0 10px; }
+.day-aid-val b { font-family: var(--serif); font-size: 30px; color: var(--red); margin-right: 8px; }
+.day-aid-bar {
+  height: 8px; border-radius: 4px; background: var(--panel-hi);
+  border: 1px solid var(--line); overflow: hidden; margin-bottom: 14px;
+}
+.day-aid-bar span { display: block; height: 100%; background: var(--red); }
+.day-aid-none { font-size: 14px; color: var(--muted); margin: 4px 0 12px; }
+
+/* A narrow screen reads the four panels as one column, and the controls wrap
+   onto three rows rather than shrinking the slider to a thumb's width. */
+@media (max-width: 700px) {
+  /* A small screen cannot spare 180px of a 844px viewport to a control that
+     is only touched between readings, so the bar scrolls away here. */
+  .day-bar { padding: 16px; position: static; }
+  .day-controls { gap: 9px; }
+  #day-range { flex-basis: 100%; order: -1; }
+  #day-pos { margin-left: 0; flex-basis: 100%; }
+  .day-panel { padding: 18px 18px 20px; }
+  .day-head .share-card { align-self: center; }
+}
