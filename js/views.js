@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=51" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=52" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=51" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=52" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -1627,7 +1627,7 @@ const Views = (function () {
 
     return `<div class="view wrap">
       <section class="section">
-        ${head('Statements', `${items.length} statements on the record of intent`, esc(S.meta.description) + ' Statements by serving officials carry particular evidentiary weight in the assessment of intent: they are admissions, not allegations. Contested attributions are marked as contested and are not relied on.')}
+        ${head('Statements', `${items.length} statements on the record of intent`, esc(S.meta.description) + ' They carry particular evidentiary weight in the assessment of intent. Contested attributions are marked as contested and are not relied on.')}
         <div class="grid c4">
           ${[
             { value: items.length, label: 'Statements catalogued here', note: 'each with speaker, role, date, verbatim quotation, context, source and legal significance' },
