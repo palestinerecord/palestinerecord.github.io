@@ -679,7 +679,8 @@ def main():
             print('  card %-16s %5.1f KB' % (slug, size / 1024))
 
     urls = ([(base, 1.0), ('%ssnapshot/' % base, 0.6)]
-            + [('%ssnapshot/%s.html' % (base, slug), 0.8) for slug, _ in routes])
+            + [('%ssnapshot/%s.html' % (base, slug), 0.8) for slug, _ in routes]
+            + [('%slicence.html' % base, 0.3)])
     n = sitemap(base, urls, generated)
     print('sitemap.xml: %d URLs' % n)
     print('feed.xml: %d revisions' % feed(base, generated))

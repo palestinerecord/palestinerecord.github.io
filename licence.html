@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of re-use — The Documented Record</title>
+<meta name="description" content="The terms on which the compilation may be re-used, and the licences of the datasets it is built from.">
+<meta name="theme-color" content="#0b0f17">
+<link rel="canonical" href="https://palestinerecord.github.io/licence.html">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<!-- The licence a machine can read. The JSON-LD dataset node in index.html
+     points its `license` field here, because Google's dataset parser takes a
+     URL or a plain string and silently ignores a nested object. Kept
+     independent of the stylesheet and of the application, like 404.html: the
+     terms have to be readable even when the dashboard is not. -->
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0; min-height: 100vh; background: #05070c; color: #e9edf6;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex; justify-content: center; padding: 40px 32px 64px;
+  }
+  .plate { max-width: 720px; width: 100%; }
+  .flag { width: 54px; height: 36px; display: block; margin-bottom: 22px; border: 1px solid rgba(255,255,255,0.14); }
+  .mark { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #98a2b6; margin-bottom: 10px; }
+  h1 { font-size: clamp(26px, 5vw, 34px); font-weight: 600; margin: 0 0 18px;
+       font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+  h2 { font-size: 18px; font-weight: 600; margin: 30px 0 10px;
+       font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+  p { color: #b9c2d4; margin: 0 0 16px; }
+  a { color: #e9edf6; }
+  ul { color: #b9c2d4; padding-left: 20px; margin: 0 0 16px; }
+  li { margin-bottom: 10px; }
+  code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+         font-size: 0.92em; color: #d9a441; word-break: break-all; }
+  .foot { border-top: 1px solid rgba(255,255,255,0.09); margin-top: 32px; padding-top: 16px; font-size: 13px; color: #98a2b6; }
+</style>
+</head>
+<body>
+<main class="plate">
+  <img class="flag" src="/assets/flag-palestine.svg" alt="Flag of Palestine">
+  <p class="mark">The Documented Record</p>
+  <h1>Terms of re-use</h1>
+
+  <p>Two separate things are published here, and they carry different terms: the compilation, which
+     is the work of assembling, describing and cross-checking the record, and the figures themselves,
+     which were recorded by other bodies and are not ours to licence.</p>
+
+  <h2>The compilation</h2>
+  <p>The compilation — the selection and arrangement of the record, the written survey, the derived
+     JSON under <code>/data/</code> and the charts drawn from it — may be copied, quoted, redistributed
+     and built upon, for any purpose including a commercial one, with attribution to
+     <em>The Documented Record</em> (<code>https://palestinerecord.github.io/</code>). No permission
+     needs to be sought and none will be refused.</p>
+
+  <h2>The underlying figures</h2>
+  <p>Every record names the body that recorded it, and that body's own terms govern the figure itself.
+     Where a figure is disputed, the dispute is published alongside it rather than resolved silently.
+     The two external datasets the site is built on are:</p>
+  <ul>
+    <li><strong>Tech For Palestine open datasets</strong> — daily and cumulative casualty series compiled
+        from Gaza Ministry of Health, OCHA and UN reporting. Released into the public domain under
+        <a href="https://unlicense.org/">the Unlicense</a>.</li>
+    <li><strong>OCHA State of Palestine subnational administrative boundaries</strong> — the Common
+        Operational Dataset used to draw governorate and territory geography, published by the United
+        Nations Office for the Coordination of Humanitarian Affairs under
+        <a href="http://creativecommons.org/licenses/by/3.0/igo/legalcode">CC BY 3.0 IGO</a>.</li>
+  </ul>
+
+  <h2>Citation</h2>
+  <p>A citation in APA, Harvard and BibTeX form, naming the route and the date of the data on screen,
+     is generated in the footer of every page of the record.</p>
+
+  <p class="foot"><a href="/">The record</a> · <a href="/#/api">Open data and the manifest</a> ·
+     <a href="/#/method">Method</a> · <a href="/data/index.json">data/index.json</a></p>
+</main>
+</body>
+</html>
