@@ -104,6 +104,12 @@
       "label": "Formal findings",
       "colour": "#c0c6d4",
       "blurb": "The determinations of courts, UN bodies and genocide-prevention institutions on the statements catalogued here."
+    },
+    {
+      "id": "jewish-opposition",
+      "label": "Jewish opposition to Zionism",
+      "colour": "#8f7fd0",
+      "blurb": "Religious, scholarly, organisational and public statements by Jewish individuals and bodies rejecting political Zionism or the conduct of the Israeli state. These bear on the conflation examined in Part XXI — whether opposition to Zionism is by its nature antisemitic — and on nothing else; no legal characterisation in the report depends on them. Part XXIII sets out the survey evidence on how small a minority these positions are among Jews today."
     }
   ],
   "items": [
@@ -135,6 +141,21 @@
       "context": "Der Judenstaat, the founding pamphlet of political Zionism, published one year before the First Zionist Congress.",
       "source": "Theodor Herzl, Der Judenstaat, 1896.",
       "significance": "The explicit civilisational-colonial vocabulary common to European settlement projects of the period, in the movement's founding text."
+    },
+    {
+      "speaker": "Central Conference of American Rabbis",
+      "role": "The rabbinic body of American Reform Judaism, then the largest Jewish denomination in the United States",
+      "date": "1897",
+      "sort": "1897-08-31",
+      "cat": [
+        "historic",
+        "jewish-opposition"
+      ],
+      "tier": "Religious body",
+      "quote": "We totally disapprove of any attempt for the establishment of a Jewish state. Such attempts show a misunderstanding of Israel’s mission.",
+      "context": "A unanimous declaration issued in response to the First Zionist Congress, convened by Theodor Herzl at Basel on 29–31 August 1897. The Union of American Hebrew Congregations resolved in parallel: “We are unalterably opposed to political Zionism. The Jews are not a nation, but a religious community… America is our Zion.” In Germany the rabbinic protest known as the Protestrabbiner was published in July 1897, urging Jews to abstain from the Congress.",
+      "source": "Central Conference of American Rabbis, 1897; American Jewish Archives; Posen Library. Report §23.2.",
+      "significance": "Institutional Jewish rejection of political Zionism at the moment of the movement’s founding, by the dominant American Jewish denomination of the day. It bears only on the claim that anti-Zionism and antisemitism are the same position."
     },
     {
       "speaker": "Vladimir Jabotinsky",
@@ -179,6 +200,21 @@
       "context": "Statement to a Jewish Agency Executive meeting. On 29 October 1936, 21 members of the Jewish Agency Executive had endorsed a proposal to transfer displaced Arab farmers to Transjordan.",
       "source": "Jewish Agency Executive minutes, 1938; Institute for Palestine Studies.",
       "significance": "Transfer articulated by the movement's chief settlement planner as a collective, village-scale programme rather than individual relocation — the distinction that separates migration from ethnic cleansing."
+    },
+    {
+      "speaker": "American Council for Judaism",
+      "role": "Founded by thirty-six Reform rabbis; Rabbi Louis Wolsey, chair; Rabbi Elmer Berger, executive director; Lessing Rosenwald, president",
+      "date": "December 1942",
+      "sort": "1942-12-07",
+      "cat": [
+        "historic",
+        "jewish-opposition"
+      ],
+      "tier": "Religious body",
+      "quote": "[Judaism is] a religion of universal values, not a nationality; Palestine should become a democratic state in which all citizens hold equal political rights irrespective of religion.",
+      "context": "Constituted after a meeting at Atlantic City on 1 June 1942 opposing the CCAR resolution of February 1942 supporting a Jewish army in Palestine, which the dissenting rabbis regarded as a breach of the movement’s stated neutrality of 1935. The organisation was named at a meeting in New York on 7 December 1942. The position lost: the Reform movement had already reversed itself in the Columbus Platform of 1937, and the Council was marginalised after 1948.",
+      "source": "Thomas A. Kolsky, Jews Against Zionism: The American Council for Judaism, 1942–1948 (Temple University Press, 1990); Jewish Virtual Library. Report §23.2.",
+      "significance": "The programme is summarised rather than quoted verbatim from a single document. Recorded as the last organised institutional expression of classical Reform anti-Zionism before the establishment of the state."
     },
     {
       "speaker": "Albert Einstein, Hannah Arendt, Sidney Hook and others",
@@ -717,6 +753,21 @@
       "significance": "Cited by the Commission of Inquiry as part of the evidentiary basis for its finding that Netanyahu personally engaged in direct and public incitement to commit genocide."
     },
     {
+      "speaker": "Masha Gessen",
+      "role": "Staff writer, The New Yorker; descendant of Holocaust survivors",
+      "date": "9 December 2023",
+      "sort": "2023-12-09",
+      "cat": [
+        "dissent",
+        "jewish-opposition"
+      ],
+      "tier": "Jewish writer",
+      "quote": "For the last seventeen years, Gaza has been a hyperdensely populated, impoverished, walled-in compound where only a small fraction of the population had the right to leave for even a short amount of time — in other words, a ghetto.",
+      "context": "From the essay “In the Shadow of the Holocaust”. The Heinrich Böll Foundation, in agreement with the Bremen Senate, withdrew from awarding Gessen the Hannah Arendt Prize for Political Thought on the basis of the essay; the prize was conferred in a reduced ceremony on 15 December 2023.",
+      "source": "The New Yorker, 9 December 2023; Jewish Telegraphic Agency; Democracy Now!, 15 December 2023. Report §23.3.",
+      "significance": "An instance of the pattern recorded in Part XXI: a comparison drawn by a Jewish writer descended from Holocaust survivors, treated as disqualifying by an institution charged with honouring Hannah Arendt."
+    },
+    {
       "speaker": "Law for Palestine",
       "role": "Legal research organisation, Europe",
       "date": "4 January 2024 (continuously updated)",
@@ -747,6 +798,21 @@
       "significance": "The Court ordered Israel to punish incitement — an order that presupposes incitement was occurring. Under Bosnia v. Serbia (2007) the duty to prevent genocide binds every state party from the moment it learns of a serious risk; this order is that trigger date. The UN Commission of Inquiry found in September 2025 that Israeli authorities had failed to take action against Herzog, Netanyahu and Gallant — that is, that the order was not complied with."
     },
     {
+      "speaker": "Jonathan Glazer",
+      "role": "Director, The Zone of Interest; accepting the Academy Award for Best International Feature",
+      "date": "10 March 2024",
+      "sort": "2024-03-10",
+      "cat": [
+        "dissent",
+        "jewish-opposition"
+      ],
+      "tier": "Jewish public figure",
+      "quote": "Right now we stand here as men who refute their Jewishness and the Holocaust being hijacked by an occupation, which has led to conflict for so many innocent people — whether the victims of October the 7th in Israel or the ongoing attack on Gaza.",
+      "context": "More than a thousand Jewish figures in the film industry signed an open letter denouncing the speech; more than 150 others, among them Joaquin Phoenix, Joel Coen, Nan Goldin, Tom Stoppard and Elliott Gould, signed a letter in support. Both letters are recorded, because the division rather than either letter is the documented fact.",
+      "source": "The Hollywood Reporter; Variety; Times of Israel, March–April 2024. Report §23.4.",
+      "significance": "Contested within the community it came from. It is recorded for the narrow proposition that the objection to the invocation of the Holocaust in defence of the conduct is itself made by Jews."
+    },
+    {
       "speaker": "Francesca Albanese",
       "role": "UN Special Rapporteur on the situation of human rights in the Palestinian territories occupied since 1967",
       "date": "March 2024",
@@ -762,6 +828,21 @@
       "significance": "The first UN mandate-holder report to reach the genocide threshold, eighteen months before the Commission of Inquiry. Special Rapporteur on the right to food Michael Fakhri reached the same conclusion on starvation grounds in February 2025."
     },
     {
+      "speaker": "Naomi Klein",
+      "role": "Writer; Professor of Climate Justice, University of British Columbia",
+      "date": "23 April 2024",
+      "sort": "2024-04-23",
+      "cat": [
+        "dissent",
+        "jewish-opposition"
+      ],
+      "tier": "Jewish writer",
+      "quote": "Too many of our people are worshipping a false idol once again… That false idol is called Zionism. [It] has taken the idea of the promised land and turned it into a deed of sale for a militaristic ethnostate… [it] has betrayed every Jewish value, including the value we place on questioning.",
+      "context": "Delivered at the “Seder in the Streets to Stop Arming Israel” at Grand Army Plaza, Brooklyn, organised by Jewish Voice for Peace on the second night of Passover. Published by The Guardian on 24 April 2024 as “We need an exodus from Zionism”.",
+      "source": "The Guardian, 24 April 2024. Report §23.4.",
+      "significance": "A theological rather than political rejection, framed from inside the Passover liturgy — the argument that Zionism betrays Judaism rather than expressing it."
+    },
+    {
       "speaker": "Al-Haq Forensic Architecture Investigation Unit",
       "role": "Palestinian human rights organisation, Ramallah",
       "date": "2024–2026 (continuously updated)",
@@ -775,6 +856,21 @@
       "context": "Thematically indexed by incitement and intent, forced displacement, and collective punishment.",
       "source": "Al-Haq FAI Unit, alhaq.org/FAI-Unit/26257.html.",
       "significance": "The largest structured public register of the statement record; twice the size of the Law for Palestine database and independently compiled."
+    },
+    {
+      "speaker": "Gabor Maté",
+      "role": "Physician and author; infant survivor of the Budapest ghetto",
+      "date": "2024",
+      "sort": "2024-06-01",
+      "cat": [
+        "dissent",
+        "jewish-opposition"
+      ],
+      "tier": "Holocaust survivor",
+      "quote": "What Israel is doing in Gaza is energetically almost identical to what the Nazis did.",
+      "context": "Given in an interview with the journalist Ahmed Shihab-Eldin. The comparison rests on this interview; it is recorded as his testimony, not as a finding of the report, and no legal characterisation in Part VI depends on it. Maté has repeated the substance in interviews with The Real News Network and Al Jazeera (Centre Stage, 26 June 2025).",
+      "source": "Interview with Ahmed Shihab-Eldin, 2024; The Real News Network; Al Jazeera, 26 June 2025. Report §23.3.",
+      "significance": "Single-sourced to one interview and flagged as such. Its weight is that of a survivor’s testimony about what the comparison is for, not of a legal or historical finding."
     },
     {
       "speaker": "International Court of Justice",
@@ -998,6 +1094,22 @@
       "significance": "A majority regarding the law of armed conflict itself as the obstacle. This is the societal counterpart to the ministerial statements: the constraint, not the killing, is what is resented."
     },
     {
+      "speaker": "Avi Shlaim",
+      "role": "Emeritus Professor of International Relations, University of Oxford; Israeli historian and former Israeli soldier; Fellow of the British Academy",
+      "date": "July 2025",
+      "sort": "2025-07-01",
+      "cat": [
+        "genocide",
+        "apartheid",
+        "jewish-opposition"
+      ],
+      "tier": "Israeli historian",
+      "quote": "Israel refuses to allow humanitarian aid to civilians and uses starvation as a weapon of war. If that’s not genocide, I don’t know what is.",
+      "context": "Shlaim served in the Israeli army in the mid-1960s and describes his position as having changed through archival research. He has also said: “I now think there is no longer a meaningful distinction between Israel proper and Israel in the West Bank. It’s apartheid and Jewish supremacy.” His collection Genocide in Gaza: Israel’s Long War on Palestine was published by Irish Pages Press in 2024.",
+      "source": "Jacobin, July 2025; Journal of Holy Land and Palestine Studies, 2025–2026; Avi Shlaim, Genocide in Gaza (Irish Pages Press, 2024). Report §23.3.",
+      "significance": "An Israeli historian of the New Historians school, decorated by the British Academy, applying both the apartheid and the genocide characterisations on the basis of the archival and documentary record."
+    },
+    {
       "speaker": "Israel Katz",
       "role": "Minister of Defence",
       "date": "7 July 2025",
@@ -1132,6 +1244,21 @@
       "significance": "A demographic formula stated as policy: the maximum land with the minimum number of the protected group on it. This is the definition of ethnic cleansing expressed as a planning principle, attached to a specific territorial percentage."
     },
     {
+      "speaker": "Hannah Einbinder",
+      "role": "Actor; accepting the Primetime Emmy for Outstanding Supporting Actress in a Comedy Series",
+      "date": "14 September 2025",
+      "sort": "2025-09-14",
+      "cat": [
+        "dissent",
+        "jewish-opposition"
+      ],
+      "tier": "Jewish public figure",
+      "quote": "It is my obligation as a Jewish person to distinguish Jews from the state of Israel. Our religion and our culture is really separate to this sort of ethnonationalist state.",
+      "context": "Said backstage, after closing her acceptance speech with “free Palestine”. The remark drew immediate criticism from Jewish communal organisations, which is recorded here as part of the same fact.",
+      "source": "The Hollywood Reporter; Deadline; NBC News, September 2025. Report §23.4.",
+      "significance": "States the distinction the IHRA examples are most often used to deny — between Jews as a people and the state — made by a Jewish speaker about her own obligations."
+    },
+    {
       "speaker": "Itamar Ben-Gvir",
       "role": "National Security Minister",
       "date": "September 2025",
@@ -1176,6 +1303,21 @@
       "context": "Response to the recognition of Palestine by the United Kingdom, Canada and Australia.",
       "source": "Times of Israel; Arab News, September 2025.",
       "significance": "Denial of the group's existence stated as government position, in direct response to the international community's affirmation of it."
+    },
+    {
+      "speaker": "Jewish Federations of North America / Burson",
+      "role": "Survey of more than 1,800 Jewish respondents, fielded March 2025",
+      "date": "February 2026",
+      "sort": "2026-02-05",
+      "cat": [
+        "jewish-opposition",
+        "society"
+      ],
+      "tier": "Polling",
+      "quote": "Approximately one third of American Jews identify as Zionist and 7 per cent as anti-Zionist, rising to 14 per cent among those aged 18–34, while nearly nine in ten support Israel’s existence as a Jewish and democratic state and 71 per cent report feeling emotionally attached to Israel.",
+      "context": "The counterweight to the record in Part XXIII. A Washington Post survey of 815 American Jews fielded 2–9 September 2025 (margin of error 4.7 points) found that nearly 40 per cent say Israel has committed genocide in Gaza, that 48 per cent disapprove of its military conduct against 46 per cent who approve, and that 68 per cent hold Hamas more to blame than Israel for civilian deaths.",
+      "source": "Jewish Federations of North America / Burson, published February 2026 (Jewish Insider; JTA; Times of Israel); The Washington Post, September 2025. Report §23.5.",
+      "significance": "Establishes the scale honestly: anti-Zionism is a small minority position among American Jews, criticism of the conduct is not, and the label has lost majority adherence even among supporters of the state."
     },
     {
       "speaker": "Bezalel Smotrich",
