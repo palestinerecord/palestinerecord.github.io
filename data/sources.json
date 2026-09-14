@@ -1,1067 +1,1102 @@
 {
-  "meta": {
-    "title": "Source Library",
-    "description": "The evidentiary base of the record: courts, UN bodies, human rights organisations, peer-reviewed research, open datasets, declassified archives and the Israeli press. Sources are grouped by the weight they carry, not by convenience. Every claim in the report is anchored to a source of one of these classes.",
-    "compiled": "2026-09-14",
-    "note": "Where a link is given it points to the authoritative publisher, not to an aggregator. Where no link is given the source is a print or archival record cited in the report's bibliography."
-  },
-  "groups": [
+ "meta": {
+  "title": "Source Library",
+  "description": "The evidentiary base of the record: courts, UN bodies, human rights organisations, peer-reviewed research, open datasets, declassified archives and the Israeli press. Sources are grouped by the weight they carry, not by convenience. Every claim in the report is anchored to a source of one of these classes.",
+  "compiled": "2026-09-14",
+  "note": "Where a link is given it points to the authoritative publisher, not to an aggregator. Where no link is given the source is a print or archival record cited in the report's bibliography."
+ },
+ "groups": [
+  {
+   "id": "courts",
+   "label": "Courts and tribunals",
+   "blurb": "Judgments, orders and advisory opinions. The highest evidentiary class in this record: findings of fact and law by the bodies competent to make them. Domestic judgments are listed here only where a question raised in this record has actually been litigated to judgment in a national court.",
+   "items": [
     {
-      "id": "courts",
-      "label": "Courts and tribunals",
-      "blurb": "Judgments, orders and advisory opinions. The highest evidentiary class in this record: findings of fact and law by the bodies competent to make them. Domestic judgments are listed here only where a question raised in this record has actually been litigated to judgment in a national court.",
-      "items": [
-        {
-          "title": "Legal Consequences of the Construction of a Wall in the Occupied Palestinian Territory",
-          "org": "International Court of Justice",
-          "date": "9 July 2004",
-          "url": "https://www.icj-cij.org/case/131",
-          "note": "Advisory Opinion. Held the wall and the settlement enterprise contrary to international law and affirmed the applicability of the Fourth Geneva Convention to the occupied territory."
-        },
-        {
-          "title": "Application of the Genocide Convention (South Africa v. Israel) — Order on Provisional Measures",
-          "org": "International Court of Justice",
-          "date": "26 January 2024",
-          "url": "https://www.icj-cij.org/case/192",
-          "note": "Found it plausible that the acts complained of fall within the Genocide Convention; ordered Israel to prevent and punish direct and public incitement to genocide. Measures strengthened 28 March and 24 May 2024."
-        },
-        {
-          "title": "Legal Consequences arising from the Policies and Practices of Israel in the Occupied Palestinian Territory, including East Jerusalem",
-          "org": "International Court of Justice",
-          "date": "19 July 2024",
-          "url": "https://www.icj-cij.org/case/186",
-          "note": "Advisory Opinion. The occupation is unlawful and must end as rapidly as possible; settlements must be dismantled; reparations paid. Paragraph 229 found a breach of Article 3 CERD (racial segregation and apartheid)."
-        },
-        {
-          "title": "Arrest warrants against Benjamin Netanyahu and Yoav Gallant",
-          "org": "International Criminal Court, Pre-Trial Chamber I",
-          "date": "21 November 2024",
-          "url": "https://www.icc-cpi.int/news/situation-state-palestine-icc-pre-trial-chamber-i-rejects-israels-challenges-jurisdiction-and",
-          "note": "Reasonable grounds to believe both bear responsibility for the war crime of starvation as a method of warfare and crimes against humanity of murder, persecution and other inhumane acts. A warrant was also issued against Hamas commander Mohammed Deif."
-        },
-        {
-          "title": "Situation in the State of Palestine",
-          "org": "International Criminal Court, Office of the Prosecutor",
-          "date": "2021–",
-          "url": "https://www.icc-cpi.int/palestine",
-          "note": "The open investigation covering conduct in the West Bank, East Jerusalem and Gaza since 13 June 2014."
-        },
-        {
-          "title": "Bosnia and Herzegovina v. Serbia and Montenegro",
-          "org": "International Court of Justice",
-          "date": "26 February 2007",
-          "url": "https://www.icj-cij.org/case/91",
-          "note": "The only ICJ ruling directly on the duty to prevent genocide. The obligation arises the moment a state learns of a serious risk, not once genocide is proven; it is a duty of conduct, and it is irrelevant whether full effort would have succeeded."
-        },
-        {
-          "title": "Prosecutor v. Akayesu (ICTR-96-4-T)",
-          "org": "International Criminal Tribunal for Rwanda",
-          "date": "2 September 1998",
-          "url": "https://unictr.irmct.org/en/cases/ictr-96-4",
-          "note": "The foundational jurisprudence on inferring genocidal intent from a pattern of conduct and from dehumanising speech."
-        },
-        {
-          "title": "University of Bristol v Dr David Miller [2026] EAT 84",
-          "org": "Employment Appeal Tribunal (England and Wales)",
-          "date": "4 August 2026",
-          "url": "https://www.gov.uk/employment-appeal-tribunal-decisions",
-          "note": "Appeal EA-2024-000324-RS. Lord Fairley KC, with Nick Aziz and Dr Gillian Smith MBE. Eight of nine grounds rejected; anti-Zionist belief in the formulation advanced held a protected philosophical belief, dismissal held direct discrimination. Compensation reduced by 50 per cent for contributory conduct."
-        }
-      ]
+     "title": "Legal Consequences of the Construction of a Wall in the Occupied Palestinian Territory",
+     "org": "International Court of Justice",
+     "date": "9 July 2004",
+     "url": "https://www.icj-cij.org/case/131",
+     "note": "Advisory Opinion. Held the wall and the settlement enterprise contrary to international law and affirmed the applicability of the Fourth Geneva Convention to the occupied territory."
     },
     {
-      "id": "un",
-      "label": "United Nations bodies",
-      "blurb": "Commissions of inquiry, treaty bodies, special procedures and operational agencies. Mandated, methodologically documented, and published under institutional accountability.",
-      "items": [
-        {
-          "title": "Report of the Independent International Commission of Inquiry on the OPT (A/HRC/60/CRP.3)",
-          "org": "UN Human Rights Council",
-          "date": "16 September 2025",
-          "url": "https://www.ohchr.org/en/press-releases/2025/09/israel-has-committed-genocide-gaza-strip-un-commission-finds",
-          "note": "The first UN body to find that Israel has committed genocide in Gaza, and that Herzog, Netanyahu and Gallant incited it. Chair: Navi Pillay."
-        },
-        {
-          "title": "Report of the Independent International Commission of Inquiry on the OPT",
-          "org": "UN Human Rights Council",
-          "date": "23 June 2026",
-          "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-israel/index",
-          "note": "Second affirmative genocide finding, on the deliberate targeting of children. Chair: Srinivasan Muralidhar."
-        },
-        {
-          "title": "Anatomy of a Genocide (A/HRC/55/73)",
-          "org": "UN Special Rapporteur on the OPT, Francesca Albanese",
-          "date": "March 2024",
-          "url": "https://www.ohchr.org/en/special-procedures/sr-palestine",
-          "note": "The first UN mandate-holder report to conclude that the threshold indicating genocide had been met."
-        },
-        {
-          "title": "Report on starvation and the right to food in Gaza",
-          "org": "UN Special Rapporteur on the Right to Food, Michael Fakhri",
-          "date": "February 2025",
-          "url": "https://www.ohchr.org/en/special-procedures/sr-food",
-          "note": "Concluded that Israel was committing genocide by starvation."
-        },
-        {
-          "title": "Forcible displacement in the northern West Bank refugee camps",
-          "org": "UN Human Rights Office (OHCHR)",
-          "date": "4 September 2026",
-          "url": "https://www.ohchr.org/en/countries/palestine",
-          "note": "Found the displacement of 33,000+ Palestinians from Jenin, Nur Shams and Tulkarem during Operation Iron Wall to be large-scale, long-term and systematic, raising concerns of the crime against humanity of forcible transfer."
-        },
-        {
-          "title": "Report of the Special Committee to Investigate Israeli Practices",
-          "org": "United Nations General Assembly",
-          "date": "November 2024",
-          "url": "https://www.un.org/unispal/",
-          "note": "Found Israel's warfare methods in Gaza consistent with genocide, including the use of starvation as a weapon."
-        },
-        {
-          "title": "Humanitarian situation updates, occupied Palestinian territory",
-          "org": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
-          "date": "continuous",
-          "url": "https://www.ochaopt.org/",
-          "note": "The operational casualty, displacement and access record. OCHA's verified fatality database covers 2008–2023; the post-October-2023 figures appear in situation updates pending full verification."
-        },
-        {
-          "title": "Integrated Food Security Phase Classification — Gaza analyses",
-          "org": "IPC Famine Review Committee",
-          "date": "2024–2026",
-          "url": "https://www.ipcinfo.org/",
-          "note": "The authoritative famine classification, including the confirmation of Famine (IPC Phase 5) conditions in Gaza governorates."
-        },
-        {
-          "title": "Health system attacks and casualty reporting, oPt",
-          "org": "World Health Organization",
-          "date": "continuous",
-          "url": "https://www.emro.who.int/opt/",
-          "note": "The Surveillance System for Attacks on Health Care (SSA) record, and WHO's independent assessment of Ministry of Health casualty data."
-        },
-        {
-          "title": "Situation reports, occupied Palestinian territory",
-          "org": "UNRWA",
-          "date": "continuous",
-          "url": "https://www.unrwa.org/resources/reports",
-          "note": "Displacement, shelter and staff-casualty data, and the record of the funding and legislative campaign against the agency."
-        },
-        {
-          "title": "Damage assessments, Gaza Strip",
-          "org": "UNOSAT (UN Satellite Centre)",
-          "date": "2023–2026",
-          "url": "https://unosat.org/products/",
-          "note": "Satellite-derived building damage assessments — the independent physical corroboration of the destruction figures."
-        },
-        {
-          "title": "Child casualty and grave-violations reporting",
-          "org": "UNICEF",
-          "date": "continuous",
-          "url": "https://www.unicef.org/press-releases",
-          "note": "Including the Secretary-General's annual Children and Armed Conflict report, which listed Israeli forces for grave violations against children in June 2024."
-        },
-        {
-          "title": "Report of the UN Fact-Finding Mission on the Gaza Conflict (the Goldstone Report, A/HRC/12/48)",
-          "org": "UN Human Rights Council",
-          "date": "25 September 2009",
-          "url": "https://www.un.org/unispal/document/auto-insert-208430/",
-          "note": "Documented the Dahiya Doctrine of deliberate disproportionality as policy rather than error."
-        },
-        {
-          "title": "Database of business enterprises involved in activities relating to Israeli settlements in the occupied Palestinian territory",
-          "org": "UN Human Rights Office (OHCHR), mandated by HRC resolution 31/36",
-          "date": "first published February 2020; updated June 2023 and July 2025",
-          "url": "https://www.ohchr.org/en/hr-bodies/hrc/regular-sessions/session43/database-hrc-31-36",
-          "note": "The only United Nations register of named companies with settlement-linked operations. The listing grew from 112 enterprises in 2020 to 158 in July 2025. It records listed activity, not a legal finding against any company."
-        },
-        {
-          "title": "Resolution 181 (II): Future Government of Palestine (the Partition Plan)",
-          "org": "United Nations General Assembly",
-          "date": "29 November 1947",
-          "url": "https://www.un.org/unispal/document/auto-insert-185393/",
-          "note": "The territorial allocation against which every later land figure is measured: 56 per cent of Mandatory Palestine to a Jewish state, 43 per cent to an Arab state, Jerusalem under international administration."
-        },
-        {
-          "title": "“The essence of childhood has been destroyed”: Israel's deliberate targeting of Palestinian children in the Occupied Palestinian Territory since 7 October 2023",
-          "org": "UN Independent International Commission of Inquiry on the OPT",
-          "date": "23 June 2026",
-          "url": "https://www.un.org/unispal/document/coi-report-23jun26/",
-          "note": "Report A/HRC/62/CRP.2. Found the deliberate targeting of Palestinian children amounting to genocide and atrocity crimes in Gaza and war crimes in the West Bank, covering 7 October 2023 to 31 March 2026: at least 20,179 children killed and 44,143 injured."
-        },
-        {
-          "title": "Israel's discriminatory death penalty law marks grave human rights retrogression, UN anti-racism committee warns",
-          "org": "UN Committee on the Elimination of Racial Discrimination / OHCHR",
-          "date": "1 May 2026 (statement dated 29 April 2026)",
-          "url": "https://www.ohchr.org/en/press-releases/2026/05/israels-discriminatory-death-penalty-law-marks-grave-human-rights",
-          "note": "Finds the Death Penalty for Terrorists Law racially discriminatory and an instance of segregation, applying de facto to Palestinians only, and calls on all States parties to ensure their resources are not used to enforce discriminatory policies."
-        },
-        {
-          "title": "Israel's death penalty law constitutes discriminatory regime of capital punishment: UN experts",
-          "org": "OHCHR special procedures",
-          "date": "2 April 2026",
-          "url": "https://www.ohchr.org/en/press-releases/2026/04/israels-death-penalty-law-constitutes-discriminatory-regime-capital",
-          "note": "Special Rapporteur on torture Alice Jill Edwards and others on hanging, the 90-day execution deadline and the prohibition on mandatory death sentences under the ICCPR."
-        }
-      ]
+     "title": "Application of the Genocide Convention (South Africa v. Israel) — Order on Provisional Measures",
+     "org": "International Court of Justice",
+     "date": "26 January 2024",
+     "url": "https://www.icj-cij.org/case/192",
+     "note": "Found it plausible that the acts complained of fall within the Genocide Convention; ordered Israel to prevent and punish direct and public incitement to genocide. Measures strengthened 28 March and 24 May 2024."
     },
     {
-      "id": "ngo",
-      "label": "Human rights organisations",
-      "blurb": "Investigations with documented methodology by the organisations with the longest field presence. Israeli and Palestinian organisations are listed alongside the international ones because their findings converge.",
-      "items": [
-        {
-          "title": "A Threshold Crossed: Israeli Authorities and the Crimes of Apartheid and Persecution",
-          "org": "Human Rights Watch",
-          "date": "27 April 2021",
-          "url": "https://www.hrw.org/report/2021/04/27/threshold-crossed",
-          "note": "The first apartheid finding by a major international organisation."
-        },
-        {
-          "title": "Extermination and Acts of Genocide: Israel Deliberately Depriving Palestinians in Gaza of Water",
-          "org": "Human Rights Watch",
-          "date": "December 2024",
-          "url": "https://www.hrw.org/report/2024/12/19/extermination-and-acts-genocide",
-          "note": "The genocide determination on water deprivation grounds."
-        },
-        {
-          "title": "Israel's Apartheid Against Palestinians: Cruel System of Domination and Crime Against Humanity",
-          "org": "Amnesty International",
-          "date": "1 February 2022",
-          "url": "https://www.amnesty.org/en/documents/mde15/5141/2022/en/",
-          "note": "278 pages compiled over four years."
-        },
-        {
-          "title": "'You Feel Like You Are Subhuman': Israel's Genocide Against Palestinians in Gaza",
-          "org": "Amnesty International",
-          "date": "5 December 2024",
-          "url": "https://www.amnesty.org/en/documents/mde15/8668/2024/en/",
-          "note": "Amnesty's affirmative genocide determination."
-        },
-        {
-          "title": "Erasing Anything Palestinian",
-          "org": "Amnesty International",
-          "date": "June 2026",
-          "url": "https://www.amnesty.org/en/latest/research/",
-          "note": "Found a state-led campaign of ethnic cleansing in the West Bank and named Netanyahu, Ben-Gvir, Katz, Smotrich and Strock."
-        },
-        {
-          "title": "This is Apartheid: A Regime of Jewish Supremacy from the Jordan River to the Mediterranean Sea",
-          "org": "B'Tselem",
-          "date": "12 January 2021",
-          "url": "https://www.btselem.org/publications/fulltext/202101_this_is_apartheid",
-          "note": "The Israeli organisation's apartheid finding, covering all territory under Israeli control."
-        },
-        {
-          "title": "Our Genocide",
-          "org": "B'Tselem",
-          "date": "July 2025",
-          "url": "https://www.btselem.org/publications",
-          "note": "B'Tselem's genocide determination, published simultaneously with Physicians for Human Rights Israel's."
-        },
-        {
-          "title": "Statistics on Palestinians and Israelis killed",
-          "org": "B'Tselem",
-          "date": "2000–",
-          "url": "https://www.btselem.org/statistics",
-          "note": "The longest continuous independently maintained fatality database for the occupied territories, with per-person records."
-        },
-        {
-          "title": "Genocide in Gaza — the destruction of the health system",
-          "org": "Physicians for Human Rights Israel",
-          "date": "July 2025",
-          "url": "https://www.phr.org.il/en/",
-          "note": "The medical profession's genocide finding, from inside Israeli civil society."
-        },
-        {
-          "title": "The Perimeter: Soldiers' testimonies from the Gaza Buffer Zone 2023–2024",
-          "org": "Breaking the Silence",
-          "date": "April 2025",
-          "url": "https://www.breakingthesilence.org.il/inside/wp-content/uploads/2025/04/Perimeter_English-2.pdf",
-          "note": "Dozens of IDF testimonies documenting the razing of roughly 16% of the Gaza Strip to create a kill zone at least a kilometre deep."
-        },
-        {
-          "title": "Law enforcement on Israeli civilians in the West Bank — data sheets",
-          "org": "Yesh Din",
-          "date": "2005–",
-          "url": "https://www.yesh-din.org/en/data-sheet-law-enforcement-on-israeli-civilians-in-the-west-bank-settler-violence-2005-2025/",
-          "note": "Two decades of Israeli police file outcomes: over 93% of settler-violence investigations closed without indictment."
-        },
-        {
-          "title": "Legal analyses and submissions on the occupation, apartheid and genocide",
-          "org": "Al-Haq",
-          "date": "continuous",
-          "url": "https://www.alhaq.org/",
-          "note": "The oldest Palestinian human rights organisation (founded 1979), an ICJ and ICC intervenor."
-        },
-        {
-          "title": "Field documentation and casualty investigations, Gaza",
-          "org": "Al Mezan Center for Human Rights",
-          "date": "continuous",
-          "url": "https://www.mezan.org/en",
-          "note": "Gaza-based field documentation of individual incidents."
-        },
-        {
-          "title": "Casualty and detention documentation",
-          "org": "Palestinian Centre for Human Rights (PCHR)",
-          "date": "continuous",
-          "url": "https://pchrgaza.org/en/",
-          "note": "Weekly documented reporting from Gaza since 1995."
-        },
-        {
-          "title": "Child fatality and detention monitoring",
-          "org": "Defence for Children International – Palestine",
-          "date": "continuous",
-          "url": "https://www.dci-palestine.org/",
-          "note": "The specialist record on child killings, arrest and military detention."
-        },
-        {
-          "title": "Verified statement and incident documentation",
-          "org": "Euro-Mediterranean Human Rights Monitor",
-          "date": "continuous",
-          "url": "https://euromedmonitor.org/",
-          "note": "Independent verification and cataloguing of the most probative ministerial and military statements."
-        },
-        {
-          "title": "Field reporting from Gaza's hospitals",
-          "org": "Médecins Sans Frontières",
-          "date": "continuous",
-          "url": "https://www.msf.org/palestine",
-          "note": "MSF has independently described the conduct in Gaza as genocide."
-        },
-        {
-          "title": "Reports on Gaza and the occupied territory",
-          "org": "Oxfam International",
-          "date": "continuous",
-          "url": "https://www.oxfam.org/en/countries/occupied-palestinian-territory-and-israel",
-          "note": "Including the water and aid-access analyses underpinning the starvation findings."
-        },
-        {
-          "title": "Reports on settlement expansion",
-          "org": "Peace Now (Settlement Watch)",
-          "date": "continuous",
-          "url": "https://peacenow.org.il/en/settlements-watch",
-          "note": "The Israeli monitoring project on settlement construction, outposts and land seizure."
-        },
-        {
-          "title": "Statistics on Palestinian political prisoners and administrative detention",
-          "org": "Addameer Prisoner Support and Human Rights Association",
-          "date": "1992–",
-          "url": "https://www.addameer.org/statistics",
-          "note": "The cumulative record of detention under Israeli military order: more than 800,000 Palestinians detained since 1967, roughly 20% of the population of the occupied territory."
-        },
-        {
-          "title": "Statistics on house demolitions in the occupied territories",
-          "org": "Israeli Committee Against House Demolitions (ICAHD)",
-          "date": "February 2019",
-          "url": "https://icahd.org/get-the-facts/",
-          "note": "Compiled from the Israeli Ministry of Interior, the Jerusalem Municipality, the Civil Administration, OCHA and field work: roughly 52,000 homes demolished in the Nakba and more than 55,000 structures in the occupied territory since 1967."
-        },
-        {
-          "title": "Home demolitions in East Jerusalem, 1967–2018",
-          "org": "Land Research Center",
-          "date": "March 2018",
-          "url": "https://www.aljazeera.com/news/2018/03/lrc-israel-demolished-5000-homes-jerusalem-180314130519139.html",
-          "note": "5,000 homes demolished since 1967, of which 1,706 between 2000 and 2017, displacing 9,422 people including 5,443 children."
-        },
-        {
-          "title": "Exclusion and observation decisions, Government Pension Fund Global",
-          "org": "Norges Bank Investment Management, on the advice of the Council on Ethics",
-          "date": "decisions of 2024–2025",
-          "url": "https://www.nbim.no/en/responsible-investment/ethical-exclusions/",
-          "note": "The world's largest sovereign wealth fund, and the most closely watched single test of the settlement-business listings. Source for the divestment record, alongside KLP, PFZW and AkademikerPension."
-        },
-        {
-          "title": "Corporate involvement in the occupation — company database",
-          "org": "Who Profits Research Center",
-          "date": "updated continuously",
-          "url": "https://www.whoprofits.org/companies/",
-          "note": "Independent Israeli research centre documenting the commercial infrastructure of the occupation, settlement industry and control of the Palestinian population. Predates and feeds the OHCHR database."
-        },
-        {
-          "title": "Israel Passes Mandatory Death Penalty for Palestinians Convicted of Terrorism",
-          "org": "Death Penalty Information Center",
-          "date": "April 2026",
-          "url": "https://deathpenaltyinfo.org/israel-passes-mandatory-death-penalty-for-palestinians-convicted-of-terrorism-flouting-international-law-and-drawing-widespread-condemnation",
-          "note": "Provisions, the 96 per cent military-court conviction rate recorded by B'Tselem, and the reactions of the Council of Europe, Human Rights Watch and the US State Department."
-        },
-        {
-          "title": "Genocide Watch Gaza Report, July 2026",
-          "org": "Genocide Watch",
-          "date": "July 2026",
-          "url": "https://www.genocidewatch.com/single-post/genocide-watch-gaza-report-july-2026",
-          "note": "Places Gaza simultaneously at Stages 8 (persecution), 9 (extermination) and 10 (denial) of Gregory Stanton's ten-stage model, and addresses Hamas's attacks on Israeli civilians in the same report."
-        }
-      ]
+     "title": "Legal Consequences arising from the Policies and Practices of Israel in the Occupied Palestinian Territory, including East Jerusalem",
+     "org": "International Court of Justice",
+     "date": "19 July 2024",
+     "url": "https://www.icj-cij.org/case/186",
+     "note": "Advisory Opinion. The occupation is unlawful and must end as rapidly as possible; settlements must be dismantled; reparations paid. Paragraph 229 found a breach of Article 3 CERD (racial segregation and apartheid)."
     },
     {
-      "id": "databases",
-      "label": "Statement and incitement databases",
-      "blurb": "Structured, continuously updated registers of the statement record. Both compile from publicly available primary sources and leave the legal determination to the courts.",
-      "items": [
-        {
-          "title": "Database with 500+ Instances of Israeli Incitement to Genocide",
-          "org": "Law for Palestine",
-          "date": "4 January 2024, continuously updated",
-          "url": "https://law4palestine.org/law-for-palestine-releases-database-with-500-instances-of-israeli-incitement-to-genocide-continuously-updated/",
-          "note": "Categorised by genocidal intent, forced displacement and collective punishment; much of the evidence originates from the President, Prime Minister, Knesset members, military personnel and law enforcement."
-        },
-        {
-          "title": "A Registry of Israeli Genocidal Statements on Gaza",
-          "org": "Al-Haq Forensic Architecture Investigation Unit",
-          "date": "continuously updated",
-          "url": "https://www.alhaq.org/FAI-Unit/26257.html",
-          "note": "Over 1,000 documented instances of incitement and genocidal intent since 7 October 2023."
-        },
-        {
-          "title": "Red Flag Alerts and statements on incitement",
-          "org": "Lemkin Institute for Genocide Prevention",
-          "date": "2023–2026",
-          "url": "https://www.lemkininstitute.com/",
-          "note": "Including the Red Flag Alert on Israel in Lebanon (March 2026) and the statement on Ben-Gvir's incitement (1 September 2026)."
-        },
-        {
-          "title": "Ten Stages of Genocide assessments — Gaza",
-          "org": "Genocide Watch",
-          "date": "July 2026",
-          "url": "https://www.genocidewatch.com/",
-          "note": "Assessed Gaza at Stages 8 (Persecution), 9 (Extermination) and 10 (Denial) simultaneously."
-        },
-        {
-          "title": "Statements by Israeli Officials, Soldiers and Civil Society on Genocide",
-          "org": "Al-Haq",
-          "date": "January 2024",
-          "url": "https://www.alhaq.org/cached_uploads/download/2024/01/10/official-translation-of-statements-informal-translations-final-list-1704917626.pdf",
-          "note": "Compilation of official and informal translations, each with the Hebrew original and a link to the recording or post it was taken from. Assembled as the genocide case was filed at the International Court of Justice."
-        }
-      ]
+     "title": "Arrest warrants against Benjamin Netanyahu and Yoav Gallant",
+     "org": "International Criminal Court, Pre-Trial Chamber I",
+     "date": "21 November 2024",
+     "url": "https://www.icc-cpi.int/news/situation-state-palestine-icc-pre-trial-chamber-i-rejects-israels-challenges-jurisdiction-and",
+     "note": "Reasonable grounds to believe both bear responsibility for the war crime of starvation as a method of warfare and crimes against humanity of murder, persecution and other inhumane acts. A warrant was also issued against Hamas commander Mohammed Deif."
     },
     {
-      "id": "data",
-      "label": "Open datasets",
-      "blurb": "Machine-readable series used to build the charts in this dashboard. Where a series is aggregated or interpolated, the chart note says so.",
-      "items": [
-        {
-          "title": "Palestine Datasets — daily casualties, named martyrs, press casualties, infrastructure damage",
-          "org": "Tech For Palestine",
-          "date": "October 2023 –",
-          "url": "https://data.techforpalestine.org/",
-          "note": "Public-domain aggregation of Gaza Ministry of Health, Government Media Office and West Bank figures. The source of the monthly and cumulative series on the Data view."
-        },
-        {
-          "title": "palestine-datasets (source repository)",
-          "org": "Tech For Palestine",
-          "date": "continuous",
-          "url": "https://github.com/TechForPalestine/palestine-datasets",
-          "note": "Build pipeline, schemas and caveats on completeness for the datasets above."
-        },
-        {
-          "title": "Data on casualties",
-          "org": "UN OCHA occupied Palestinian territory",
-          "date": "2008 –",
-          "url": "https://www.ochaopt.org/data/casualties",
-          "note": "The verified fatality database covering 2008 onward. Published through an interactive dashboard rather than a public API, so pre-2023 annual figures in this record are cited individually."
-        },
-        {
-          "title": "Fatalities database",
-          "org": "B'Tselem",
-          "date": "2000 –",
-          "url": "https://statistics.btselem.org/en/all-fatalities/by-date-of-incident",
-          "note": "Per-person records with date, location, age, and the circumstances of each killing."
-        },
-        {
-          "title": "Israel–Palestine conflict event data",
-          "org": "ACLED (Armed Conflict Location & Event Data Project)",
-          "date": "continuous",
-          "url": "https://acleddata.com/",
-          "note": "Geolocated event-level data used for cross-checking incident counts and locations."
-        },
-        {
-          "title": "Civilian harm assessments, Israel and Palestine",
-          "org": "Airwars",
-          "date": "2023 –",
-          "url": "https://airwars.org/conflict/israel-and-gaza-2023/",
-          "note": "Incident-by-incident open-source assessment of civilian harm from specific strikes."
-        },
-        {
-          "title": "Journalist casualty database",
-          "org": "Committee to Protect Journalists",
-          "date": "continuous",
-          "url": "https://cpj.org/data/",
-          "note": "The independent count of journalists and media workers killed."
-        },
-        {
-          "title": "Gaza damage proxy maps",
-          "org": "Corey Scher (CUNY) and Jamon Van Den Hoek (Oregon State University)",
-          "date": "2023 –",
-          "url": "https://github.com/oballinger/gaza-damage",
-          "note": "Synthetic-aperture-radar damage proxy mapping, the independent academic corroboration of UNOSAT's assessments."
-        },
-        {
-          "title": "Palestinians killed since 1948 — World Refugee Day statistical release",
-          "org": "Palestinian Central Bureau of Statistics (PCBS)",
-          "date": "June 2024",
-          "url": "https://www.pcbs.gov.ps/site/lang__en/881/default.aspx",
-          "note": "The only cumulative figure published by the Palestinian statistical authority: 136,000 Palestinians killed since 1948. The period-by-period basis has not been published."
-        },
-        {
-          "title": "Arms Transfers Database and Trends in International Arms Transfers, 2024",
-          "org": "Stockholm International Peace Research Institute (SIPRI)",
-          "date": "March 2025",
-          "url": "https://www.sipri.org/databases/armstransfers",
-          "note": "The standard open register of state-to-state major-weapons transfers. Source for the supplier shares used in the complicity ledger: 66 per cent of Israeli major arms imports in 2020–2024 from the United States and 33 per cent from Germany."
-        },
-        {
-          "title": "Security Council — Veto List (Quick Links)",
-          "org": "Dag Hammarskjöld Library, United Nations",
-          "date": "updated continuously",
-          "url": "https://research.un.org/en/docs/sc/quick",
-          "note": "The complete record of vetoes cast in the Security Council since 1946, by member and by draft resolution. Source for the veto wall: 49 United States vetoes of draft resolutions concerning Israel and Palestine, the largest single-subject block in the Council's history."
-        }
-      ]
+     "title": "Situation in the State of Palestine",
+     "org": "International Criminal Court, Office of the Prosecutor",
+     "date": "2021–",
+     "url": "https://www.icc-cpi.int/palestine",
+     "note": "The open investigation covering conduct in the West Bank, East Jerusalem and Gaza since 13 June 2014."
     },
     {
-      "id": "academic",
-      "label": "Peer-reviewed research",
-      "blurb": "Published, methodologically transparent research — principally on mortality estimation, where the difference between recorded and actual death tolls is the central empirical question.",
-      "items": [
-        {
-          "title": "Traumatic injury mortality in the Gaza Strip from Oct 7, 2023, to June 30, 2024: a capture–recapture analysis",
-          "org": "The Lancet",
-          "date": "10 January 2025",
-          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)02678-3/fulltext",
-          "note": "Estimated the Ministry of Health count under-reported traumatic-injury deaths by approximately 41% over the period studied."
-        },
-        {
-          "title": "Gaza Mortality Survey",
-          "org": "Published mortality survey research",
-          "date": "2025",
-          "url": "https://www.thelancet.com/",
-          "note": "Household-survey estimate of roughly 75,200 violent deaths plus 16,300 non-violent excess deaths, implying an undercount of about 35% and some 12,200 missing."
-        },
-        {
-          "title": "Estimates of Gaza mortality and life expectancy",
-          "org": "Max Planck Institute for Demographic Research (MPIDR)",
-          "date": "2025",
-          "url": "https://www.demogr.mpg.de/en/",
-          "note": "Independent demographic reconstruction of the death toll and of the collapse in life expectancy."
-        },
-        {
-          "title": "Costs of War Project — Gaza",
-          "org": "Watson Institute, Brown University",
-          "date": "2024–",
-          "url": "https://watson.brown.edu/costsofwar/",
-          "note": "Source of the widely cited 186,000 figure, which applies an indirect-to-direct death multiplier; it is a projection of total war-attributable mortality, not a body count, and is presented as such in this record."
-        },
-        {
-          "title": "Bad News From Israel and More Bad News From Israel",
-          "org": "Glasgow University Media Group (Greg Philo and Mike Berry)",
-          "date": "2004; 2011",
-          "url": "https://www.glasgowmediagroup.org/",
-          "note": "The foundational audience and content studies on Western media coverage of the conflict."
-        },
-        {
-          "title": "The Hundred Years' War on Palestine",
-          "org": "Rashid Khalidi (Metropolitan Books)",
-          "date": "2020",
-          "url": "https://us.macmillan.com/books/9781627798556/thehundredyearswaronpalestine",
-          "note": "Documents the Zionist movement's own institutional use of the vocabulary of colonisation."
-        },
-        {
-          "title": "The Ethnic Cleansing of Palestine",
-          "org": "Ilan Pappé (Oneworld)",
-          "date": "2006",
-          "url": "https://oneworld-publications.com/",
-          "note": "Archive-based account of Plan Dalet and the 1948 expulsions."
-        },
-        {
-          "title": "The Birth of the Palestinian Refugee Problem Revisited",
-          "org": "Benny Morris (Cambridge University Press)",
-          "date": "2004",
-          "url": "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/",
-          "note": "The most detailed documentary reconstruction of the 1948 expulsions, by a historian who rejects the ethnic-cleansing framing — cited here for the facts, not the interpretation."
-        },
-        {
-          "title": "Zionism in the Age of the Dictators",
-          "org": "Lenni Brenner (Croom Helm)",
-          "date": "1983",
-          "url": "https://search.worldcat.org/search?q=Zionism+in+the+Age+of+the+Dictators+Brenner",
-          "note": "Source for the Haavara Agreement and Kareski affair material, corroborated against Institute for Palestine Studies and German Foreign Ministry archive records."
-        },
-        {
-          "title": "U.S. Foreign Aid to Israel (RL33222) and successive In Focus briefs",
-          "org": "Congressional Research Service, Library of Congress",
-          "date": "updated through 2026",
-          "url": "https://www.congress.gov/crs-product/RL33222",
-          "note": "Congress's own non-partisan accounting of cumulative and annual United States assistance to Israel: $150bn cumulative as of February 2022, $158.7bn as of March 2023, and the current figure of roughly $174bn in nominal terms."
-        },
-        {
-          "title": "United States Spending on Israel's Military Operations and Related U.S. Operations in the Region",
-          "org": "Costs of War Project, Watson Institute, Brown University",
-          "date": "October 2024",
-          "url": "https://watson.brown.edu/costsofwar/papers/2024/USSpendingIsraelGaza",
-          "note": "Independent costing of the first year of the war: $17.9bn in direct military assistance to Israel plus $4.86bn in related United States regional operations, and $317.9bn cumulative since 1959 once adjusted for inflation."
-        },
-        {
-          "title": "Jews Against Zionism: The American Council for Judaism, 1942–1948",
-          "org": "Thomas A. Kolsky, Temple University Press",
-          "date": "1990",
-          "url": "https://www.jstor.org/stable/j.ctt14bsxdg",
-          "note": "The standard scholarly history of organised American Jewish opposition to the establishment of a Jewish state. Cited at §23.2."
-        },
-        {
-          "title": "Genocide in Gaza: Israel’s Long War on Palestine",
-          "org": "Avi Shlaim, Irish Pages Press",
-          "date": "2024",
-          "url": "https://irishpages.org/",
-          "note": "Essays written between 2009 and 2024 by the Oxford emeritus professor and former Israeli soldier, applying both the apartheid and the genocide characterisations. Cited at §23.3."
-        },
-        {
-          "title": "Israeli state terrorism: knowledge, power and the “public secret”",
-          "org": "Richard Jackson, Critical Studies on Terrorism",
-          "date": "26 May 2026",
-          "url": "https://www.tandfonline.com/doi/full/10.1080/17539153.2026.2674405",
-          "note": "Argues that Israeli state terrorism is extensively documented yet unacknowledged in terrorism and security studies, including critical terrorism studies itself."
-        },
-        {
-          "title": "Why we need to talk about 'state terrorism' by Israel in Gaza",
-          "org": "Richard Jackson and Mandy Turner, Security in Context",
-          "date": "22 December 2023",
-          "url": "https://www.securityincontext.org/posts/why-we-need-to-talk-about-state-terrorism-by-israel-in-gaza",
-          "note": "Applies the audience-directed definition of terrorism to the Gaza campaign and argues the label is withheld selectively from Western states and their allies."
-        },
-        {
-          "title": "The Ghosts of State Terror: Knowledge, Politics and Terrorism Studies",
-          "org": "Richard Jackson, Critical Studies on Terrorism 1(3)",
-          "date": "2008",
-          "url": "https://www.aber.ac.uk/en/media/departmental/interpol/csrv/ghost-of-state-terror-richard-5.pdf",
-          "note": "The standard account of why terrorism studies defines terrorism in actor-based terms that exclude states, and the case against doing so."
-        },
-        {
-          "title": "State Terrorism in the Social Sciences: Theories, Methods and Concepts",
-          "org": "Ruth Blakeley, in Jackson, Murphy and Poynting (eds), Contemporary State Terrorism",
-          "date": "2010",
-          "url": "https://kar.kent.ac.uk/id/document/25367",
-          "note": "The four-element definition of state terrorism relied on at Part XXIV: a deliberate act or threat of violence by state agents, against victims, directed at a wider audience, for political ends."
-        },
-        {
-          "title": "Anonymous Soldiers: The Struggle for Israel, 1917-1947",
-          "org": "Bruce Hoffman (Alfred A. Knopf)",
-          "date": "2015",
-          "url": "https://www.penguinrandomhouse.com/books/205730/anonymous-soldiers-by-bruce-hoffman/",
-          "note": "The standard history of the Irgun and Lehi campaigns, built on the British archives opened in the 2000s, by the terrorism scholar whose work is foundational to the field. Records that the groups “were called terrorists by the Jews in Palestine, by the British, and by the press”. Endorsed by Benny Morris as “the best comprehensive study of the Jewish extremists' terror/guerrilla campaign against the British in Palestine”."
-        },
-        {
-          "title": "The Growing Rift between Holocaust Scholars over Israel/Palestine",
-          "org": "Journal of Genocide Research",
-          "date": "2024",
-          "url": "https://www.tandfonline.com/doi/full/10.1080/14623528.2024.2448061",
-          "note": "Analysis of the split within Holocaust studies over Gaza, tracing it to competing positions on the uniqueness of the Holocaust. Cited at §24.2A for the dissenting position stated in its own terms."
-        }
-      ]
+     "title": "Bosnia and Herzegovina v. Serbia and Montenegro",
+     "org": "International Court of Justice",
+     "date": "26 February 2007",
+     "url": "https://www.icj-cij.org/case/91",
+     "note": "The only ICJ ruling directly on the duty to prevent genocide. The obligation arises the moment a state learns of a serious risk, not once genocide is proven; it is a duty of conduct, and it is irrelevant whether full effort would have succeeded."
     },
     {
-      "id": "israeli",
-      "label": "Israeli sources",
-      "blurb": "Israeli journalism, official statements and leaked internal material. Under this record's evidentiary rule, admissions by the state and its press carry the greatest weight against the state.",
-      "items": [
-        {
-          "title": "Investigative reporting on Gaza and the West Bank",
-          "org": "Haaretz",
-          "date": "continuous",
-          "url": "https://www.haaretz.com/",
-          "note": "Including the human-shields investigation (13 August 2024), the leaked Maj. Gen. Bluth briefing (4 May 2026), the Geocartography/Penn State polling (March 2025), and Ehud Olmert's ethnic-cleansing columns (June 2026). Includes the magazine feature of 9 September 2026 carrying an Israeli Air Force drone operator's account of fire directed at rescue vehicles and at medical personnel sheltering behind ambulances (§14.1B)."
-        },
-        {
-          "title": "+972 Magazine",
-          "org": "+972 Magazine (Israeli–Palestinian)",
-          "date": "continuous",
-          "url": "https://www.972mag.com/",
-          "note": "Including the 'Lavender' and 'Where's Daddy?' investigations into AI-assisted targeting, sourced to serving Israeli intelligence officers."
-        },
-        {
-          "title": "Local Call (Sicha Mekomit)",
-          "org": "Local Call",
-          "date": "continuous",
-          "url": "https://www.mekomit.co.il/",
-          "note": "The Hebrew-language partner publication to +972, and the route by which several investigations first appeared in Hebrew."
-        },
-        {
-          "title": "Liveblog and daily reporting",
-          "org": "The Times of Israel",
-          "date": "continuous",
-          "url": "https://www.timesofisrael.com/",
-          "note": "The most complete English-language record of ministerial statements, Knesset proceedings and IDF announcements."
-        },
-        {
-          "title": "Broadcast investigations and leaks",
-          "org": "Channel 12 (N12), Israel",
-          "date": "continuous",
-          "url": "https://www.mako.co.il/news",
-          "note": "Publisher of the leaked Haliva briefing recording (August 2025) and the police command-room footage from 7 October (February 2026)."
-        },
-        {
-          "title": "Ynet / Yedioth Ahronoth",
-          "org": "Ynet",
-          "date": "continuous",
-          "url": "https://www.ynetnews.com/",
-          "note": "Including the Katz depopulation remarks at the Ynet conference (September 2026) and the 1983 Eitan interview."
-        },
-        {
-          "title": "Knesset records and Ethics Committee decisions",
-          "org": "The Knesset",
-          "date": "continuous",
-          "url": "https://main.knesset.gov.il/EN/Pages/default.aspx",
-          "note": "Including the February 2025 Ethics Committee ruling that calling Palestinians 'subhumans' and calling to 'kill all adult men' did not violate Knesset ethical standards."
-        },
-        {
-          "title": "Official statements and orders",
-          "org": "Israeli Ministry of Defence and the IDF Spokesperson's Unit",
-          "date": "continuous",
-          "url": "https://www.idf.il/en/",
-          "note": "The primary record for the siege orders of October 2023 and subsequent operational announcements."
-        },
-        {
-          "title": "Prosecution of soldiers for offences against Palestinians — data sheets",
-          "org": "Yesh Din — Volunteers for Human Rights",
-          "date": "2003–",
-          "url": "https://www.yesh-din.org/en/data-sheet-law-enforcement-against-israeli-soldiers-suspected-of-harming-palestinians-and-their-property-figures-for-2018-2022/",
-          "note": "The military-justice funnel, from Israeli military records: 2,427 complaints between 2016 and 2024 produced 552 investigations (22.7%) and 23 indictments (0.9%). Yesh Din puts the probability of prosecution for killing a Palestinian at 0.4%."
-        },
-        {
-          "title": "Attacks on Christians in Israel and East Jerusalem: Annual Report 2025",
-          "org": "Rossing Center for Education and Dialogue",
-          "date": "30 March 2026",
-          "url": "https://rossingcenter.org/wp-content/uploads/2026/03/Harrasment-Christians-report-ENG-2025-WEB.pdf",
-          "note": "Third annual report of the Israeli organisation's Jerusalem Center for Jewish-Christian Relations. 155 documented incidents in 2025 against 111 in 2024 and 89 in 2023, with 61 physical assaults and 52 attacks on church property."
-        }
-      ]
+     "title": "Prosecutor v. Akayesu (ICTR-96-4-T)",
+     "org": "International Criminal Tribunal for Rwanda",
+     "date": "2 September 1998",
+     "url": "https://unictr.irmct.org/en/cases/ictr-96-4",
+     "note": "The foundational jurisprudence on inferring genocidal intent from a pattern of conduct and from dehumanising speech."
     },
     {
-      "id": "journalism",
-      "label": "Investigative journalism",
-      "blurb": "International investigations that established facts not otherwise in the public record.",
-      "items": [
-        {
-          "title": "Reporting on Gaza, the occupation and UK complicity",
-          "org": "The Guardian",
-          "date": "continuous",
-          "url": "https://www.theguardian.com/world/palestinian-territories",
-          "note": "Including the joint investigations with +972 and Local Call on AI-assisted targeting and the secret systems reporting, and the interview of 13 July 2025 in which Ehud Olmert called the planned Rafah “humanitarian city” a concentration camp (§6.3A)."
-        },
-        {
-          "title": "Investigations into UK military support",
-          "org": "Declassified UK",
-          "date": "continuous",
-          "url": "https://www.declassifieduk.org/",
-          "note": "Source, with Action on Armed Violence, of the record of 600+ RAF surveillance flights over Gaza (December 2023 – October 2025)."
-        },
-        {
-          "title": "Reporting on arms transfers and civilian harm",
-          "org": "Action on Armed Violence",
-          "date": "continuous",
-          "url": "https://aoav.org.uk/",
-          "note": "Including the call for UK sanctions on Moshe Feiglin over the May 2025 remarks on Gaza's children."
-        },
-        {
-          "title": "Daily coverage and verification",
-          "org": "Al Jazeera",
-          "date": "continuous",
-          "url": "https://www.aljazeera.com/where/palestine/",
-          "note": "The most continuous on-the-ground reporting from Gaza; its Sanad verification unit is cited throughout the record."
-        },
-        {
-          "title": "Middle East Eye",
-          "org": "Middle East Eye",
-          "date": "continuous",
-          "url": "https://www.middleeasteye.net/",
-          "note": "Source for several Knesset-floor statements, including the Waldiger exchange of 13 May 2025, and for the Israeli government document of 8 September 2019 recording UK Lawyers for Israel's request to the Justice Ministry for assistance (§13.9)."
-        },
-        {
-          "title": "Wire reporting",
-          "org": "Reuters and Associated Press",
-          "date": "continuous",
-          "url": "https://www.reuters.com/world/middle-east/",
-          "note": "Used for cross-corroboration: this record requires at least two independent sources for every new statistic."
-        },
-        {
-          "title": "Reporting on UK politics and the Middle East",
-          "org": "The Telegraph",
-          "date": "continuous",
-          "url": "https://www.telegraph.co.uk/world-news/middle-east/",
-          "note": "Source of the report of 13 September 2026 that UK Lawyers for Israel had written to Home Secretary Shabana Mahmood urging the proscription of Médecins Sans Frontières under the Terrorism Act 2000 (§13.9)."
-        },
-        {
-          "title": "Reporting on the Arab world and Palestine",
-          "org": "The New Arab",
-          "date": "continuous",
-          "url": "https://www.newarab.com/",
-          "note": "Carried Médecins Sans Frontières' response to the proscription demand verbatim, together with the reaction of former British Army general Charlie Herbert (§13.9)."
-        },
-        {
-          "title": "Mehdi Unfiltered and reporting on Gaza",
-          "org": "Zeteo",
-          "date": "continuous",
-          "url": "https://zeteo.com/",
-          "note": "Source of the debate of 9 September 2026 between Peter Beinart and Joel Rubin, moderated by Mehdi Hasan, on where criticism of Israel ends and antisemitism begins (§21.8)."
-        },
-        {
-          "title": "In the Shadow of the Holocaust",
-          "org": "The New Yorker (Masha Gessen)",
-          "date": "9 December 2023",
-          "url": "https://www.newyorker.com/news/the-weekend-essay/in-the-shadow-of-the-holocaust",
-          "note": "The essay describing Gaza as a ghetto, on which the Heinrich Böll Foundation withdrew from awarding the Hannah Arendt Prize. Cited at §23.3."
-        },
-        {
-          "title": "We need an exodus from Zionism",
-          "org": "The Guardian (Naomi Klein)",
-          "date": "24 April 2024",
-          "url": "https://www.theguardian.com/commentisfree/2024/apr/24/zionism-seder-new-york-protest-palestine",
-          "note": "The full text of the Passover address at the Jewish Voice for Peace “Seder in the Streets”, Brooklyn, 23 April 2024. Cited at §23.4."
-        },
-        {
-          "title": "Israeli minister threatens to revoke filmmakers' citizenship over Gaza film",
-          "org": "Al Jazeera",
-          "date": "14 September 2026",
-          "url": "https://www.aljazeera.com/news/2026/9/14/israeli-minister-threatens-to-revoke-filmmakers-citizenship-over-gaza-film",
-          "note": "Culture Minister Miki Zohar and National Security Minister Itamar Ben-Gvir on the directors of NAZA after its Venice Special Jury Prize, with the legal position on citizenship revocation."
-        },
-        {
-          "title": "IDF rejects testimonies in Israeli-made documentary about AI-powered killing in Gaza",
-          "org": "The Times of Israel",
-          "date": "11 September 2026",
-          "url": "https://www.timesofisrael.com/idf-rejects-testimonies-in-israeli-made-documentary-about-ai-powered-killing-in-gaza/",
-          "note": "The IDF Spokesperson's Unit's rebuttal in full: the testimonies are anonymous and unverifiable, they include claims of strategy beyond junior soldiers' knowledge, and strike decisions are made by human personnel only."
-        },
-        {
-          "title": "Transcript: Secretary of State Marco Rubio on Face the Nation with Margaret Brennan",
-          "org": "CBS News",
-          "date": "5 October 2025",
-          "url": "https://www.cbsnews.com/news/marco-rubio-secretary-of-state-face-the-nation-transcript-10-05-2025/",
-          "note": "The United States' own gloss on Point 19 of the twenty-point plan: statehood only through a negotiated deal with Israel, no recognition now, \"we are far from that\", and the closing note that Trump still opposes West Bank annexation."
-        },
-        {
-          "title": "Read Trump's 20-point proposal to end the war in Gaza",
-          "org": "PBS NewsHour",
-          "date": "29 September 2025",
-          "url": "https://www.pbs.org/newshour/politics/read-trumps-20-point-proposal-to-end-the-war-in-gaza",
-          "note": "Full text of the plan endorsed by UN Security Council Resolution 2803, including Point 19 on a credible pathway to Palestinian self-determination and statehood and Point 20 on a political horizon."
-        },
-        {
-          "title": "US sanctions 'Hilltop Youth', treating extreme settler activists as an organized group",
-          "org": "The Times of Israel / US Department of the Treasury (OFAC), Executive Order 14115",
-          "date": "October 2024",
-          "url": "https://www.timesofisrael.com/us-sanctions-hilltop-youth-treating-extreme-settler-activists-as-organized-group/",
-          "note": "The designation describes a campaign of killings, arson, assault and intimidation intended to drive Palestinian communities out of the West Bank. Executive Order 14115 was revoked on 20 January 2025 and the designations lifted by OFAC on 24 January 2025."
-        },
-        {
-          "title": "Leading Israeli Scholar Avi Shlaim: Israel Committing “State Terror” in Gaza Attack",
-          "org": "Democracy Now!",
-          "date": "14 January 2009",
-          "url": "https://www.democracynow.org/2009/1/14/leading_israeli_scholar_avi_shlaim_israel",
-          "note": "Shlaim defines terror as “the use of violence against civilians for political purposes” and applies the definition to Hamas and to Israel in the same answer. The symmetry is his own method, and it is the method applied at Part XVIII and Part XXIV."
-        },
-        {
-          "title": "Supreme Court rejects appeal by Israeli killer of Palestinian family in arson attack",
-          "org": "The Times of Israel",
-          "date": "2022",
-          "url": "https://www.timesofisrael.com/supreme-court-rejects-appeal-by-israeli-killer-of-palestinian-family-in-arson-attack/",
-          "note": "Reports the dismissal of Amiram Ben-Uliel's appeal against conviction for the Duma arson of 31 July 2015, an offence classified by the Lod District Court as a terrorist act."
-        },
-        {
-          "title": "Bigoted Harassment of Christians in Jerusalem Increased in 2025",
-          "org": "Jerusalem Story",
-          "date": "5 April 2026",
-          "url": "https://www.jerusalemstory.com/en/article/bigoted-harassment-christians-jerusalem-increased-2025",
-          "note": "Sets the Rossing Center 2025 figures alongside the Religious Freedom Data Center's independent count of 181 incidents, 109 of them spitting, with 43 in the Armenian Quarter."
-        },
-        {
-          "title": "Report shows rise in attacks on Christians in Israel, but a willingness to tackle issue",
-          "org": "The Times of Israel",
-          "date": "27 March 2025",
-          "url": "https://www.timesofisrael.com/report-shows-rise-in-attacks-on-christians-in-israel-but-a-willingness-to-tackle-issue/",
-          "note": "The 2024 Rossing Center report and its accompanying survey, including the emigration figures and Hana Bendcowsky's remarks on reporting and on police practice."
-        },
-        {
-          "title": "Macklemore Dropped From Ed Sheeran Tour After Onstage ‘Free Palestine’ Statements",
-          "org": "Rolling Stone",
-          "date": "14 September 2026",
-          "url": "https://www.rollingstone.com/music/music-news/macklemore-dropped-ed-sheeran-tour-pro-palestine-statements-1235625967/",
-          "note": "Jon Blistein. Carries Messina Touring Group's exclusive statement and names the seven stadiums reported as refusing to host the tour with Macklemore on the bill."
-        },
-        {
-          "title": "Statement on removal from The Loop tour",
-          "org": "Macklemore (public statement)",
-          "date": "14 September 2026",
-          "url": "https://www.facebook.com/macklemore",
-          "note": "Twelve-panel statement published on the artist's own accounts. Sets out his account of the removal, including conversations he attributes to Ed Sheeran, and argues that there is no neutral position between the oppressor and the oppressed. The passages describing private conversations are his assertions and are recorded as such."
-        }
-      ]
-    },
-    {
-      "id": "archives",
-      "label": "Declassified and primary archives",
-      "blurb": "Contemporaneous documents rather than later accounts of them.",
-      "items": [
-        {
-          "title": "Ben-Gurion diaries and the 1937 Ben-Gurion letter",
-          "org": "Ben-Gurion Archives, Sde Boker",
-          "date": "1937–1948",
-          "url": "https://bengurionarchive.bgu.ac.il/",
-          "note": "Primary source for the transfer material of 1937, including the diary entry of 12 July 1937."
-        },
-        {
-          "title": "Jewish Agency Executive minutes",
-          "org": "Central Zionist Archives, Jerusalem",
-          "date": "1936–1948",
-          "url": "https://www.zionistarchives.org.il/en/",
-          "note": "Including the 29 October 1936 transfer proposal and Arthur Ruppin's 1938 remarks on the transfer of entire villages."
-        },
-        {
-          "title": "Mandate-era files on Zionist paramilitary organisations",
-          "org": "The National Archives, Kew (British MI5 and Colonial Office)",
-          "date": "1937–1948",
-          "url": "https://www.nationalarchives.gov.uk/",
-          "note": "The British designation of the Irgun and Lehi as terrorist organisations, and the contemporaneous assessments."
-        },
-        {
-          "title": "Haavara Agreement records",
-          "org": "German Foreign Ministry political archive",
-          "date": "1933–1939",
-          "url": "https://www.auswaertiges-amt.de/en/aamt/politisches-archiv",
-          "note": "The documentary record of the transfer agreement and associated correspondence."
-        },
-        {
-          "title": "Israel State Archives",
-          "org": "Israel State Archives",
-          "date": "1948–",
-          "url": "https://www.archives.gov.il/en/",
-          "note": "Declassified cabinet protocols, including the 1970 protocols on self-determination for the West Bank population."
-        },
-        {
-          "title": "Der Judenstaat (The Jewish State)",
-          "org": "Theodor Herzl",
-          "date": "February 1896",
-          "url": "https://www.gutenberg.org/ebooks/25282",
-          "note": "The founding pamphlet of political Zionism, in the 1946 American Zionist Emergency Council English text. The German original is Project Gutenberg ebook 28865."
-        },
-        {
-          "title": "'The Iron Wall (We and the Arabs)'",
-          "org": "Vladimir Jabotinsky",
-          "date": "4 November 1923",
-          "url": "https://www.jewishvirtuallibrary.org/quot-the-iron-wall-quot",
-          "note": "The statement that Zionist settlement could proceed only behind a wall of force the Arab population could not break, written by the founder of Revisionist Zionism."
-        },
-        {
-          "title": "'Truth from Eretz Yisrael'",
-          "org": "Ahad Ha'am (Asher Ginsberg)",
-          "date": "1891",
-          "url": "https://en.wikipedia.org/wiki/Truth_from_Eretz_Yisrael",
-          "note": "The early Zionist thinker's account of how the existing Arab population was being treated by the first settlers, published after his visit of 1891."
-        },
-        {
-          "title": "J50 Declaration on Zionism and Antisemitism",
-          "org": "J50 Forum, published by the European Jewish Congress",
-          "date": "11 September 2026",
-          "url": "https://eurojewcong.org/wp-content/uploads/2026/09/J50-Declaration-of-Zionism-and-Antisemitism-rev-1.pdf",
-          "note": "Primary text and full signatory list: seven global and regional organisations and fifty-two national and community organisations across forty countries. Reaffirms the IHRA working definition and declares anti-Zionism, as defined in the operative paragraph, antisemitic. Creates no legal obligation."
-        },
-        {
-          "title": "The Pittsburgh Platform (1885) and the rabbinic response to the First Zionist Congress (1897)",
-          "org": "American Jewish Archives",
-          "date": "1885–1897",
-          "url": "https://www.americanjewisharchives.org/snapshots/the-pittsburgh-platform-defining-american-reform-judaism-1885/",
-          "note": "The founding statement of American Reform Judaism and the CCAR and UAHC resolutions opposing the establishment of a Jewish state. Cited at §1.0 and §23.2."
-        },
-        {
-          "title": "Document: Shamir on Terrorism (1943)",
-          "org": "MERIP (Middle East Research and Information Project)",
-          "date": "May 1988",
-          "url": "https://www.merip.org/1988/05/shamir-on-terrorism-1943/",
-          "note": "Translation of the article “Terror” from the Lehi journal HeHazit, summer 1943, attributed to Yitzhak Yezernitzky (later Prime Minister Yitzhak Shamir). Translations of the passage vary and some sources attribute the article to the journal without naming an author."
-        }
-      ]
-    },
-    {
-      "id": "legal",
-      "label": "Legal instruments",
-      "blurb": "The treaty and statutory texts against which the conduct in this record is assessed.",
-      "items": [
-        {
-          "title": "Convention on the Prevention and Punishment of the Crime of Genocide",
-          "org": "United Nations",
-          "date": "9 December 1948",
-          "url": "https://www.un.org/en/genocideprevention/documents/atrocity-crimes/Doc.1_Convention%20on%20the%20Prevention%20and%20Punishment%20of%20the%20Crime%20of%20Genocide.pdf",
-          "note": "Article II (acts and specific intent); Article III(c) (direct and public incitement)."
-        },
-        {
-          "title": "Geneva Convention (IV) relative to the Protection of Civilian Persons in Time of War",
-          "org": "International Committee of the Red Cross",
-          "date": "12 August 1949",
-          "url": "https://ihl-databases.icrc.org/en/ihl-treaties/gciv-1949",
-          "note": "Article 33 (collective punishment); Article 49 (deportation, forcible transfer, and transfer of the occupier's own population into occupied territory)."
-        },
-        {
-          "title": "Rome Statute of the International Criminal Court",
-          "org": "International Criminal Court",
-          "date": "17 July 1998",
-          "url": "https://www.icc-cpi.int/sites/default/files/RS-Eng.pdf",
-          "note": "Article 7 (crimes against humanity, including apartheid and forcible transfer); Article 8 (war crimes, including starvation as a method of warfare)."
-        },
-        {
-          "title": "International Convention on the Suppression and Punishment of the Crime of Apartheid",
-          "org": "United Nations",
-          "date": "30 November 1973",
-          "url": "https://legal.un.org/avl/ha/cspca/cspca.html",
-          "note": "The standalone definition of apartheid as a crime against humanity, independent of the South African case."
-        },
-        {
-          "title": "International Convention on the Elimination of All Forms of Racial Discrimination (CERD)",
-          "org": "United Nations",
-          "date": "21 December 1965",
-          "url": "https://www.ohchr.org/en/instruments-mechanisms/instruments/international-convention-elimination-all-forms-racial",
-          "note": "Article 3, on racial segregation and apartheid — the provision the ICJ found Israel to have breached on 19 July 2024."
-        },
-        {
-          "title": "Basic Law: Israel — the Nation State of the Jewish People",
-          "org": "The Knesset",
-          "date": "19 July 2018",
-          "url": "https://main.knesset.gov.il/EN/activity/documents/BasicLawsPDF/BasicLawNationState.pdf",
-          "note": "Cited by B'Tselem and Adalah as constitutional confirmation that the distinction between Jews and non-Jews is treated as fundamental."
-        },
-        {
-          "title": "Israeli–Palestinian Interim Agreement on the West Bank and the Gaza Strip (Oslo II), Annex I",
-          "org": "Signed at Washington, D.C.; deposited with the United Nations",
-          "date": "28 September 1995",
-          "url": "https://www.un.org/unispal/document/auto-insert-185434/",
-          "note": "The instrument that created Areas A, B and C as a five-year interim arrangement. Thirty-one years on, Area C — 60 per cent of the West Bank, holding every settlement, the Jordan Valley and the aquifers — remains under full Israeli control."
-        },
-        {
-          "title": "Absentees' Property Law, 5710–1950; Development Authority (Transfer of Property) Law, 5710–1950; Land Acquisition (Validation of Acts and Compensation) Law, 5713–1953",
-          "org": "The Knesset",
-          "date": "1950–1953",
-          "url": "https://main.knesset.gov.il/EN/activity/Pages/BasicLaws.aspx",
-          "note": "The statutory machinery by which property left by Palestinian refugees was vested in the Custodian of Absentee Property and transferred onward to the state. Applied in East Jerusalem after 1967 and upheld, with restrictions, by the Israeli Supreme Court in 2015."
-        },
-        {
-          "title": "Equality Act 2010",
-          "org": "Parliament of the United Kingdom",
-          "date": "8 April 2010",
-          "url": "https://www.legislation.gov.uk/ukpga/2010/15/contents",
-          "note": "Section 10 (religion or belief as a protected characteristic); section 13 (direct discrimination). The provisions under which an anti-Zionist belief was held protected in Miller."
-        },
-        {
-          "title": "Administrative Appeal 8277/17, Zayoud v. Minister of the Interior",
-          "org": "Supreme Court of Israel",
-          "date": "21 July 2022",
-          "url": "https://www.adalah.org/en/content/view/10661",
-          "note": "An expanded seven-justice panel upheld the constitutionality of Article 11(b)(2) of the Citizenship Law, 5712-1952, which allows a court for administrative affairs to revoke citizenship for a breach of loyalty on the Interior Minister's application, even where the result is statelessness. The qualifying acts are enumerated as terrorism, treason or serious espionage, and the acquisition of status in a hostile state."
-        },
-        {
-          "title": "R (Huda Ammori) v Secretary of State for the Home Department [2026] EWHC 292 (Admin)",
-          "org": "Divisional Court of the King's Bench Division, England and Wales",
-          "date": "13 February 2026",
-          "url": "https://www.judiciary.uk/wp-content/uploads/2026/02/R-Ammori-v-SSHD-OPEN-Judgment-final.pdf",
-          "note": "Proscription of Palestine Action held to be outside the Home Secretary's own policy and a disproportionate interference with Articles 10 and 11 ECHR; reversed by the Court of Appeal, [2026] EWCA Civ 1721, 15 June 2026, with permission to appeal granted by the Supreme Court in July 2026."
-        }
-      ]
+     "title": "University of Bristol v Dr David Miller [2026] EAT 84",
+     "org": "Employment Appeal Tribunal (England and Wales)",
+     "date": "4 August 2026",
+     "url": "https://www.gov.uk/employment-appeal-tribunal-decisions",
+     "note": "Appeal EA-2024-000324-RS. Lord Fairley KC, with Nick Aziz and Dr Gillian Smith MBE. Eight of nine grounds rejected; anti-Zionist belief in the formulation advanced held a protected philosophical belief, dismissal held direct discrimination. Compensation reduced by 50 per cent for contributory conduct."
     }
-  ]
+   ]
+  },
+  {
+   "id": "un",
+   "label": "United Nations bodies",
+   "blurb": "Commissions of inquiry, treaty bodies, special procedures and operational agencies. Mandated, methodologically documented, and published under institutional accountability.",
+   "items": [
+    {
+     "title": "Report of the Independent International Commission of Inquiry on the OPT (A/HRC/60/CRP.3)",
+     "org": "UN Human Rights Council",
+     "date": "16 September 2025",
+     "url": "https://www.ohchr.org/en/press-releases/2025/09/israel-has-committed-genocide-gaza-strip-un-commission-finds",
+     "note": "The first UN body to find that Israel has committed genocide in Gaza, and that Herzog, Netanyahu and Gallant incited it. Chair: Navi Pillay."
+    },
+    {
+     "title": "Report of the Independent International Commission of Inquiry on the OPT",
+     "org": "UN Human Rights Council",
+     "date": "23 June 2026",
+     "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-israel/index",
+     "note": "Second affirmative genocide finding, on the deliberate targeting of children. Chair: Srinivasan Muralidhar."
+    },
+    {
+     "title": "Anatomy of a Genocide (A/HRC/55/73)",
+     "org": "UN Special Rapporteur on the OPT, Francesca Albanese",
+     "date": "March 2024",
+     "url": "https://www.ohchr.org/en/special-procedures/sr-palestine",
+     "note": "The first UN mandate-holder report to conclude that the threshold indicating genocide had been met."
+    },
+    {
+     "title": "Report on starvation and the right to food in Gaza",
+     "org": "UN Special Rapporteur on the Right to Food, Michael Fakhri",
+     "date": "February 2025",
+     "url": "https://www.ohchr.org/en/special-procedures/sr-food",
+     "note": "Concluded that Israel was committing genocide by starvation."
+    },
+    {
+     "title": "Forcible displacement in the northern West Bank refugee camps",
+     "org": "UN Human Rights Office (OHCHR)",
+     "date": "4 September 2026",
+     "url": "https://www.ohchr.org/en/countries/palestine",
+     "note": "Found the displacement of 33,000+ Palestinians from Jenin, Nur Shams and Tulkarem during Operation Iron Wall to be large-scale, long-term and systematic, raising concerns of the crime against humanity of forcible transfer."
+    },
+    {
+     "title": "Report of the Special Committee to Investigate Israeli Practices",
+     "org": "United Nations General Assembly",
+     "date": "November 2024",
+     "url": "https://www.un.org/unispal/",
+     "note": "Found Israel's warfare methods in Gaza consistent with genocide, including the use of starvation as a weapon."
+    },
+    {
+     "title": "Humanitarian situation updates, occupied Palestinian territory",
+     "org": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+     "date": "continuous",
+     "url": "https://www.ochaopt.org/",
+     "note": "The operational casualty, displacement and access record. OCHA's verified fatality database covers 2008–2023; the post-October-2023 figures appear in situation updates pending full verification."
+    },
+    {
+     "title": "Integrated Food Security Phase Classification — Gaza analyses",
+     "org": "IPC Famine Review Committee",
+     "date": "2024–2026",
+     "url": "https://www.ipcinfo.org/",
+     "note": "The authoritative famine classification, including the confirmation of Famine (IPC Phase 5) conditions in Gaza governorates."
+    },
+    {
+     "title": "Health system attacks and casualty reporting, oPt",
+     "org": "World Health Organization",
+     "date": "continuous",
+     "url": "https://www.emro.who.int/opt/",
+     "note": "The Surveillance System for Attacks on Health Care (SSA) record, and WHO's independent assessment of Ministry of Health casualty data."
+    },
+    {
+     "title": "Situation reports, occupied Palestinian territory",
+     "org": "UNRWA",
+     "date": "continuous",
+     "url": "https://www.unrwa.org/resources/reports",
+     "note": "Displacement, shelter and staff-casualty data, and the record of the funding and legislative campaign against the agency."
+    },
+    {
+     "title": "Damage assessments, Gaza Strip",
+     "org": "UNOSAT (UN Satellite Centre)",
+     "date": "2023–2026",
+     "url": "https://unosat.org/products/",
+     "note": "Satellite-derived building damage assessments — the independent physical corroboration of the destruction figures."
+    },
+    {
+     "title": "Child casualty and grave-violations reporting",
+     "org": "UNICEF",
+     "date": "continuous",
+     "url": "https://www.unicef.org/press-releases",
+     "note": "Including the Secretary-General's annual Children and Armed Conflict report, which listed Israeli forces for grave violations against children in June 2024."
+    },
+    {
+     "title": "Report of the UN Fact-Finding Mission on the Gaza Conflict (the Goldstone Report, A/HRC/12/48)",
+     "org": "UN Human Rights Council",
+     "date": "25 September 2009",
+     "url": "https://www.un.org/unispal/document/auto-insert-208430/",
+     "note": "Documented the Dahiya Doctrine of deliberate disproportionality as policy rather than error."
+    },
+    {
+     "title": "Database of business enterprises involved in activities relating to Israeli settlements in the occupied Palestinian territory",
+     "org": "UN Human Rights Office (OHCHR), mandated by HRC resolution 31/36",
+     "date": "first published February 2020; updated June 2023 and July 2025",
+     "url": "https://www.ohchr.org/en/hr-bodies/hrc/regular-sessions/session43/database-hrc-31-36",
+     "note": "The only United Nations register of named companies with settlement-linked operations. The listing grew from 112 enterprises in 2020 to 158 in July 2025. It records listed activity, not a legal finding against any company."
+    },
+    {
+     "title": "Resolution 181 (II): Future Government of Palestine (the Partition Plan)",
+     "org": "United Nations General Assembly",
+     "date": "29 November 1947",
+     "url": "https://www.un.org/unispal/document/auto-insert-185393/",
+     "note": "The territorial allocation against which every later land figure is measured: 56 per cent of Mandatory Palestine to a Jewish state, 43 per cent to an Arab state, Jerusalem under international administration."
+    },
+    {
+     "title": "“The essence of childhood has been destroyed”: Israel's deliberate targeting of Palestinian children in the Occupied Palestinian Territory since 7 October 2023",
+     "org": "UN Independent International Commission of Inquiry on the OPT",
+     "date": "23 June 2026",
+     "url": "https://www.un.org/unispal/document/coi-report-23jun26/",
+     "note": "Report A/HRC/62/CRP.2. Found the deliberate targeting of Palestinian children amounting to genocide and atrocity crimes in Gaza and war crimes in the West Bank, covering 7 October 2023 to 31 March 2026: at least 20,179 children killed and 44,143 injured."
+    },
+    {
+     "title": "Israel's discriminatory death penalty law marks grave human rights retrogression, UN anti-racism committee warns",
+     "org": "UN Committee on the Elimination of Racial Discrimination / OHCHR",
+     "date": "1 May 2026 (statement dated 29 April 2026)",
+     "url": "https://www.ohchr.org/en/press-releases/2026/05/israels-discriminatory-death-penalty-law-marks-grave-human-rights",
+     "note": "Finds the Death Penalty for Terrorists Law racially discriminatory and an instance of segregation, applying de facto to Palestinians only, and calls on all States parties to ensure their resources are not used to enforce discriminatory policies."
+    },
+    {
+     "title": "Israel's death penalty law constitutes discriminatory regime of capital punishment: UN experts",
+     "org": "OHCHR special procedures",
+     "date": "2 April 2026",
+     "url": "https://www.ohchr.org/en/press-releases/2026/04/israels-death-penalty-law-constitutes-discriminatory-regime-capital",
+     "note": "Special Rapporteur on torture Alice Jill Edwards and others on hanging, the 90-day execution deadline and the prohibition on mandatory death sentences under the ICCPR."
+    }
+   ]
+  },
+  {
+   "id": "ngo",
+   "label": "Human rights organisations",
+   "blurb": "Investigations with documented methodology by the organisations with the longest field presence. Israeli and Palestinian organisations are listed alongside the international ones because their findings converge.",
+   "items": [
+    {
+     "title": "A Threshold Crossed: Israeli Authorities and the Crimes of Apartheid and Persecution",
+     "org": "Human Rights Watch",
+     "date": "27 April 2021",
+     "url": "https://www.hrw.org/report/2021/04/27/threshold-crossed",
+     "note": "The first apartheid finding by a major international organisation."
+    },
+    {
+     "title": "Extermination and Acts of Genocide: Israel Deliberately Depriving Palestinians in Gaza of Water",
+     "org": "Human Rights Watch",
+     "date": "December 2024",
+     "url": "https://www.hrw.org/report/2024/12/19/extermination-and-acts-genocide",
+     "note": "The genocide determination on water deprivation grounds."
+    },
+    {
+     "title": "Israel's Apartheid Against Palestinians: Cruel System of Domination and Crime Against Humanity",
+     "org": "Amnesty International",
+     "date": "1 February 2022",
+     "url": "https://www.amnesty.org/en/documents/mde15/5141/2022/en/",
+     "note": "278 pages compiled over four years."
+    },
+    {
+     "title": "'You Feel Like You Are Subhuman': Israel's Genocide Against Palestinians in Gaza",
+     "org": "Amnesty International",
+     "date": "5 December 2024",
+     "url": "https://www.amnesty.org/en/documents/mde15/8668/2024/en/",
+     "note": "Amnesty's affirmative genocide determination."
+    },
+    {
+     "title": "Erasing Anything Palestinian",
+     "org": "Amnesty International",
+     "date": "June 2026",
+     "url": "https://www.amnesty.org/en/latest/research/",
+     "note": "Found a state-led campaign of ethnic cleansing in the West Bank and named Netanyahu, Ben-Gvir, Katz, Smotrich and Strock."
+    },
+    {
+     "title": "This is Apartheid: A Regime of Jewish Supremacy from the Jordan River to the Mediterranean Sea",
+     "org": "B'Tselem",
+     "date": "12 January 2021",
+     "url": "https://www.btselem.org/publications/fulltext/202101_this_is_apartheid",
+     "note": "The Israeli organisation's apartheid finding, covering all territory under Israeli control."
+    },
+    {
+     "title": "Our Genocide",
+     "org": "B'Tselem",
+     "date": "July 2025",
+     "url": "https://www.btselem.org/publications",
+     "note": "B'Tselem's genocide determination, published simultaneously with Physicians for Human Rights Israel's."
+    },
+    {
+     "title": "Statistics on Palestinians and Israelis killed",
+     "org": "B'Tselem",
+     "date": "2000–",
+     "url": "https://www.btselem.org/statistics",
+     "note": "The longest continuous independently maintained fatality database for the occupied territories, with per-person records."
+    },
+    {
+     "title": "Genocide in Gaza — the destruction of the health system",
+     "org": "Physicians for Human Rights Israel",
+     "date": "July 2025",
+     "url": "https://www.phr.org.il/en/",
+     "note": "The medical profession's genocide finding, from inside Israeli civil society."
+    },
+    {
+     "title": "The Perimeter: Soldiers' testimonies from the Gaza Buffer Zone 2023–2024",
+     "org": "Breaking the Silence",
+     "date": "April 2025",
+     "url": "https://www.breakingthesilence.org.il/inside/wp-content/uploads/2025/04/Perimeter_English-2.pdf",
+     "note": "Dozens of IDF testimonies documenting the razing of roughly 16% of the Gaza Strip to create a kill zone at least a kilometre deep."
+    },
+    {
+     "title": "Law enforcement on Israeli civilians in the West Bank — data sheets",
+     "org": "Yesh Din",
+     "date": "2005–",
+     "url": "https://www.yesh-din.org/en/data-sheet-law-enforcement-on-israeli-civilians-in-the-west-bank-settler-violence-2005-2025/",
+     "note": "Two decades of Israeli police file outcomes: over 93% of settler-violence investigations closed without indictment."
+    },
+    {
+     "title": "Legal analyses and submissions on the occupation, apartheid and genocide",
+     "org": "Al-Haq",
+     "date": "continuous",
+     "url": "https://www.alhaq.org/",
+     "note": "The oldest Palestinian human rights organisation (founded 1979), an ICJ and ICC intervenor."
+    },
+    {
+     "title": "Field documentation and casualty investigations, Gaza",
+     "org": "Al Mezan Center for Human Rights",
+     "date": "continuous",
+     "url": "https://www.mezan.org/en",
+     "note": "Gaza-based field documentation of individual incidents."
+    },
+    {
+     "title": "Casualty and detention documentation",
+     "org": "Palestinian Centre for Human Rights (PCHR)",
+     "date": "continuous",
+     "url": "https://pchrgaza.org/en/",
+     "note": "Weekly documented reporting from Gaza since 1995."
+    },
+    {
+     "title": "Child fatality and detention monitoring",
+     "org": "Defence for Children International – Palestine",
+     "date": "continuous",
+     "url": "https://www.dci-palestine.org/",
+     "note": "The specialist record on child killings, arrest and military detention."
+    },
+    {
+     "title": "Verified statement and incident documentation",
+     "org": "Euro-Mediterranean Human Rights Monitor",
+     "date": "continuous",
+     "url": "https://euromedmonitor.org/",
+     "note": "Independent verification and cataloguing of the most probative ministerial and military statements."
+    },
+    {
+     "title": "Field reporting from Gaza's hospitals",
+     "org": "Médecins Sans Frontières",
+     "date": "continuous",
+     "url": "https://www.msf.org/palestine",
+     "note": "MSF has independently described the conduct in Gaza as genocide."
+    },
+    {
+     "title": "Reports on Gaza and the occupied territory",
+     "org": "Oxfam International",
+     "date": "continuous",
+     "url": "https://www.oxfam.org/en/countries/occupied-palestinian-territory-and-israel",
+     "note": "Including the water and aid-access analyses underpinning the starvation findings."
+    },
+    {
+     "title": "Reports on settlement expansion",
+     "org": "Peace Now (Settlement Watch)",
+     "date": "continuous",
+     "url": "https://peacenow.org.il/en/settlements-watch",
+     "note": "The Israeli monitoring project on settlement construction, outposts and land seizure."
+    },
+    {
+     "title": "Statistics on Palestinian political prisoners and administrative detention",
+     "org": "Addameer Prisoner Support and Human Rights Association",
+     "date": "1992–",
+     "url": "https://www.addameer.org/statistics",
+     "note": "The cumulative record of detention under Israeli military order: more than 800,000 Palestinians detained since 1967, roughly 20% of the population of the occupied territory."
+    },
+    {
+     "title": "Statistics on house demolitions in the occupied territories",
+     "org": "Israeli Committee Against House Demolitions (ICAHD)",
+     "date": "February 2019",
+     "url": "https://icahd.org/get-the-facts/",
+     "note": "Compiled from the Israeli Ministry of Interior, the Jerusalem Municipality, the Civil Administration, OCHA and field work: roughly 52,000 homes demolished in the Nakba and more than 55,000 structures in the occupied territory since 1967."
+    },
+    {
+     "title": "Home demolitions in East Jerusalem, 1967–2018",
+     "org": "Land Research Center",
+     "date": "March 2018",
+     "url": "https://www.aljazeera.com/news/2018/03/lrc-israel-demolished-5000-homes-jerusalem-180314130519139.html",
+     "note": "5,000 homes demolished since 1967, of which 1,706 between 2000 and 2017, displacing 9,422 people including 5,443 children."
+    },
+    {
+     "title": "Exclusion and observation decisions, Government Pension Fund Global",
+     "org": "Norges Bank Investment Management, on the advice of the Council on Ethics",
+     "date": "decisions of 2024–2025",
+     "url": "https://www.nbim.no/en/responsible-investment/ethical-exclusions/",
+     "note": "The world's largest sovereign wealth fund, and the most closely watched single test of the settlement-business listings. Source for the divestment record, alongside KLP, PFZW and AkademikerPension."
+    },
+    {
+     "title": "Corporate involvement in the occupation — company database",
+     "org": "Who Profits Research Center",
+     "date": "updated continuously",
+     "url": "https://www.whoprofits.org/companies/",
+     "note": "Independent Israeli research centre documenting the commercial infrastructure of the occupation, settlement industry and control of the Palestinian population. Predates and feeds the OHCHR database."
+    },
+    {
+     "title": "Israel Passes Mandatory Death Penalty for Palestinians Convicted of Terrorism",
+     "org": "Death Penalty Information Center",
+     "date": "April 2026",
+     "url": "https://deathpenaltyinfo.org/israel-passes-mandatory-death-penalty-for-palestinians-convicted-of-terrorism-flouting-international-law-and-drawing-widespread-condemnation",
+     "note": "Provisions, the 96 per cent military-court conviction rate recorded by B'Tselem, and the reactions of the Council of Europe, Human Rights Watch and the US State Department."
+    },
+    {
+     "title": "Genocide Watch Gaza Report, July 2026",
+     "org": "Genocide Watch",
+     "date": "July 2026",
+     "url": "https://www.genocidewatch.com/single-post/genocide-watch-gaza-report-july-2026",
+     "note": "Places Gaza simultaneously at Stages 8 (persecution), 9 (extermination) and 10 (denial) of Gregory Stanton's ten-stage model, and addresses Hamas's attacks on Israeli civilians in the same report."
+    },
+    {
+     "title": "CPJ, partners file emergency motion to Israeli Supreme Court seeking independent media access to Gaza",
+     "org": "Committee to Protect Journalists",
+     "date": "13 April 2026",
+     "url": "https://cpj.org/2026/04/cpj-partners-file-emergency-motion-to-israeli-supreme-court-seeking-independent-media-access-to-gaza/",
+     "note": "Filed with the Foreign Press Association, Reporters Without Borders and the Union of Journalists in Israel. Records the ban on independent international press access to Gaza at more than 900 days."
+    },
+    {
+     "title": "RSF appeals to Israeli Supreme Court against the media blackout imposed on Gaza",
+     "org": "Reporters Without Borders",
+     "date": "2024-2026",
+     "url": "https://rsf.org/en/rsf-appeals-israeli-supreme-court-against-media-blackout-imposed-gaza",
+     "note": "The petition record on foreign press access, including the seven deferrals granted to the state in the petition's first year."
+    },
+    {
+     "title": "US Sanctions ICC President Tomoko Akane",
+     "org": "Human Rights Watch",
+     "date": "19 August 2026",
+     "url": "https://www.hrw.org/news/2026/08/19/us-sanctions-icc-president-tomoko-akane",
+     "note": "Records the 18 August 2026 designations of the Court's President and a senior trial lawyer, bringing the total to nine of eighteen judges, both Deputy Prosecutors and the former Prosecutor."
+    }
+   ]
+  },
+  {
+   "id": "databases",
+   "label": "Statement and incitement databases",
+   "blurb": "Structured, continuously updated registers of the statement record. Both compile from publicly available primary sources and leave the legal determination to the courts.",
+   "items": [
+    {
+     "title": "Database with 500+ Instances of Israeli Incitement to Genocide",
+     "org": "Law for Palestine",
+     "date": "4 January 2024, continuously updated",
+     "url": "https://law4palestine.org/law-for-palestine-releases-database-with-500-instances-of-israeli-incitement-to-genocide-continuously-updated/",
+     "note": "Categorised by genocidal intent, forced displacement and collective punishment; much of the evidence originates from the President, Prime Minister, Knesset members, military personnel and law enforcement."
+    },
+    {
+     "title": "A Registry of Israeli Genocidal Statements on Gaza",
+     "org": "Al-Haq Forensic Architecture Investigation Unit",
+     "date": "continuously updated",
+     "url": "https://www.alhaq.org/FAI-Unit/26257.html",
+     "note": "Over 1,000 documented instances of incitement and genocidal intent since 7 October 2023."
+    },
+    {
+     "title": "Red Flag Alerts and statements on incitement",
+     "org": "Lemkin Institute for Genocide Prevention",
+     "date": "2023–2026",
+     "url": "https://www.lemkininstitute.com/",
+     "note": "Including the Red Flag Alert on Israel in Lebanon (March 2026) and the statement on Ben-Gvir's incitement (1 September 2026)."
+    },
+    {
+     "title": "Ten Stages of Genocide assessments — Gaza",
+     "org": "Genocide Watch",
+     "date": "July 2026",
+     "url": "https://www.genocidewatch.com/",
+     "note": "Assessed Gaza at Stages 8 (Persecution), 9 (Extermination) and 10 (Denial) simultaneously."
+    },
+    {
+     "title": "Statements by Israeli Officials, Soldiers and Civil Society on Genocide",
+     "org": "Al-Haq",
+     "date": "January 2024",
+     "url": "https://www.alhaq.org/cached_uploads/download/2024/01/10/official-translation-of-statements-informal-translations-final-list-1704917626.pdf",
+     "note": "Compilation of official and informal translations, each with the Hebrew original and a link to the recording or post it was taken from. Assembled as the genocide case was filed at the International Court of Justice."
+    }
+   ]
+  },
+  {
+   "id": "data",
+   "label": "Open datasets",
+   "blurb": "Machine-readable series used to build the charts in this dashboard. Where a series is aggregated or interpolated, the chart note says so.",
+   "items": [
+    {
+     "title": "Palestine Datasets — daily casualties, named martyrs, press casualties, infrastructure damage",
+     "org": "Tech For Palestine",
+     "date": "October 2023 –",
+     "url": "https://data.techforpalestine.org/",
+     "note": "Public-domain aggregation of Gaza Ministry of Health, Government Media Office and West Bank figures. The source of the monthly and cumulative series on the Data view."
+    },
+    {
+     "title": "palestine-datasets (source repository)",
+     "org": "Tech For Palestine",
+     "date": "continuous",
+     "url": "https://github.com/TechForPalestine/palestine-datasets",
+     "note": "Build pipeline, schemas and caveats on completeness for the datasets above."
+    },
+    {
+     "title": "Data on casualties",
+     "org": "UN OCHA occupied Palestinian territory",
+     "date": "2008 –",
+     "url": "https://www.ochaopt.org/data/casualties",
+     "note": "The verified fatality database covering 2008 onward. Published through an interactive dashboard rather than a public API, so pre-2023 annual figures in this record are cited individually."
+    },
+    {
+     "title": "Fatalities database",
+     "org": "B'Tselem",
+     "date": "2000 –",
+     "url": "https://statistics.btselem.org/en/all-fatalities/by-date-of-incident",
+     "note": "Per-person records with date, location, age, and the circumstances of each killing."
+    },
+    {
+     "title": "Israel–Palestine conflict event data",
+     "org": "ACLED (Armed Conflict Location & Event Data Project)",
+     "date": "continuous",
+     "url": "https://acleddata.com/",
+     "note": "Geolocated event-level data used for cross-checking incident counts and locations."
+    },
+    {
+     "title": "Civilian harm assessments, Israel and Palestine",
+     "org": "Airwars",
+     "date": "2023 –",
+     "url": "https://airwars.org/conflict/israel-and-gaza-2023/",
+     "note": "Incident-by-incident open-source assessment of civilian harm from specific strikes."
+    },
+    {
+     "title": "Journalist casualty database",
+     "org": "Committee to Protect Journalists",
+     "date": "continuous",
+     "url": "https://cpj.org/data/",
+     "note": "The independent count of journalists and media workers killed."
+    },
+    {
+     "title": "Gaza damage proxy maps",
+     "org": "Corey Scher (CUNY) and Jamon Van Den Hoek (Oregon State University)",
+     "date": "2023 –",
+     "url": "https://github.com/oballinger/gaza-damage",
+     "note": "Synthetic-aperture-radar damage proxy mapping, the independent academic corroboration of UNOSAT's assessments."
+    },
+    {
+     "title": "Palestinians killed since 1948 — World Refugee Day statistical release",
+     "org": "Palestinian Central Bureau of Statistics (PCBS)",
+     "date": "June 2024",
+     "url": "https://www.pcbs.gov.ps/site/lang__en/881/default.aspx",
+     "note": "The only cumulative figure published by the Palestinian statistical authority: 136,000 Palestinians killed since 1948. The period-by-period basis has not been published."
+    },
+    {
+     "title": "Arms Transfers Database and Trends in International Arms Transfers, 2024",
+     "org": "Stockholm International Peace Research Institute (SIPRI)",
+     "date": "March 2025",
+     "url": "https://www.sipri.org/databases/armstransfers",
+     "note": "The standard open register of state-to-state major-weapons transfers. Source for the supplier shares used in the complicity ledger: 66 per cent of Israeli major arms imports in 2020–2024 from the United States and 33 per cent from Germany."
+    },
+    {
+     "title": "Security Council — Veto List (Quick Links)",
+     "org": "Dag Hammarskjöld Library, United Nations",
+     "date": "updated continuously",
+     "url": "https://research.un.org/en/docs/sc/quick",
+     "note": "The complete record of vetoes cast in the Security Council since 1946, by member and by draft resolution. Source for the veto wall: 49 United States vetoes of draft resolutions concerning Israel and Palestine, the largest single-subject block in the Council's history."
+    }
+   ]
+  },
+  {
+   "id": "academic",
+   "label": "Peer-reviewed research",
+   "blurb": "Published, methodologically transparent research — principally on mortality estimation, where the difference between recorded and actual death tolls is the central empirical question.",
+   "items": [
+    {
+     "title": "Traumatic injury mortality in the Gaza Strip from Oct 7, 2023, to June 30, 2024: a capture–recapture analysis",
+     "org": "The Lancet",
+     "date": "10 January 2025",
+     "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)02678-3/fulltext",
+     "note": "Estimated the Ministry of Health count under-reported traumatic-injury deaths by approximately 41% over the period studied."
+    },
+    {
+     "title": "Gaza Mortality Survey",
+     "org": "Published mortality survey research",
+     "date": "2025",
+     "url": "https://www.thelancet.com/",
+     "note": "Household-survey estimate of roughly 75,200 violent deaths plus 16,300 non-violent excess deaths, implying an undercount of about 35% and some 12,200 missing."
+    },
+    {
+     "title": "Estimates of Gaza mortality and life expectancy",
+     "org": "Max Planck Institute for Demographic Research (MPIDR)",
+     "date": "2025",
+     "url": "https://www.demogr.mpg.de/en/",
+     "note": "Independent demographic reconstruction of the death toll and of the collapse in life expectancy."
+    },
+    {
+     "title": "Costs of War Project — Gaza",
+     "org": "Watson Institute, Brown University",
+     "date": "2024–",
+     "url": "https://watson.brown.edu/costsofwar/",
+     "note": "Source of the widely cited 186,000 figure, which applies an indirect-to-direct death multiplier; it is a projection of total war-attributable mortality, not a body count, and is presented as such in this record."
+    },
+    {
+     "title": "Bad News From Israel and More Bad News From Israel",
+     "org": "Glasgow University Media Group (Greg Philo and Mike Berry)",
+     "date": "2004; 2011",
+     "url": "https://www.glasgowmediagroup.org/",
+     "note": "The foundational audience and content studies on Western media coverage of the conflict."
+    },
+    {
+     "title": "The Hundred Years' War on Palestine",
+     "org": "Rashid Khalidi (Metropolitan Books)",
+     "date": "2020",
+     "url": "https://us.macmillan.com/books/9781627798556/thehundredyearswaronpalestine",
+     "note": "Documents the Zionist movement's own institutional use of the vocabulary of colonisation."
+    },
+    {
+     "title": "The Ethnic Cleansing of Palestine",
+     "org": "Ilan Pappé (Oneworld)",
+     "date": "2006",
+     "url": "https://oneworld-publications.com/",
+     "note": "Archive-based account of Plan Dalet and the 1948 expulsions."
+    },
+    {
+     "title": "The Birth of the Palestinian Refugee Problem Revisited",
+     "org": "Benny Morris (Cambridge University Press)",
+     "date": "2004",
+     "url": "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/",
+     "note": "The most detailed documentary reconstruction of the 1948 expulsions, by a historian who rejects the ethnic-cleansing framing — cited here for the facts, not the interpretation."
+    },
+    {
+     "title": "Zionism in the Age of the Dictators",
+     "org": "Lenni Brenner (Croom Helm)",
+     "date": "1983",
+     "url": "https://search.worldcat.org/search?q=Zionism+in+the+Age+of+the+Dictators+Brenner",
+     "note": "Source for the Haavara Agreement and Kareski affair material, corroborated against Institute for Palestine Studies and German Foreign Ministry archive records."
+    },
+    {
+     "title": "U.S. Foreign Aid to Israel (RL33222) and successive In Focus briefs",
+     "org": "Congressional Research Service, Library of Congress",
+     "date": "updated through 2026",
+     "url": "https://www.congress.gov/crs-product/RL33222",
+     "note": "Congress's own non-partisan accounting of cumulative and annual United States assistance to Israel: $150bn cumulative as of February 2022, $158.7bn as of March 2023, and the current figure of roughly $174bn in nominal terms."
+    },
+    {
+     "title": "United States Spending on Israel's Military Operations and Related U.S. Operations in the Region",
+     "org": "Costs of War Project, Watson Institute, Brown University",
+     "date": "October 2024",
+     "url": "https://watson.brown.edu/costsofwar/papers/2024/USSpendingIsraelGaza",
+     "note": "Independent costing of the first year of the war: $17.9bn in direct military assistance to Israel plus $4.86bn in related United States regional operations, and $317.9bn cumulative since 1959 once adjusted for inflation."
+    },
+    {
+     "title": "Jews Against Zionism: The American Council for Judaism, 1942–1948",
+     "org": "Thomas A. Kolsky, Temple University Press",
+     "date": "1990",
+     "url": "https://www.jstor.org/stable/j.ctt14bsxdg",
+     "note": "The standard scholarly history of organised American Jewish opposition to the establishment of a Jewish state. Cited at §23.2."
+    },
+    {
+     "title": "Genocide in Gaza: Israel’s Long War on Palestine",
+     "org": "Avi Shlaim, Irish Pages Press",
+     "date": "2024",
+     "url": "https://irishpages.org/",
+     "note": "Essays written between 2009 and 2024 by the Oxford emeritus professor and former Israeli soldier, applying both the apartheid and the genocide characterisations. Cited at §23.3."
+    },
+    {
+     "title": "Israeli state terrorism: knowledge, power and the “public secret”",
+     "org": "Richard Jackson, Critical Studies on Terrorism",
+     "date": "26 May 2026",
+     "url": "https://www.tandfonline.com/doi/full/10.1080/17539153.2026.2674405",
+     "note": "Argues that Israeli state terrorism is extensively documented yet unacknowledged in terrorism and security studies, including critical terrorism studies itself."
+    },
+    {
+     "title": "Why we need to talk about 'state terrorism' by Israel in Gaza",
+     "org": "Richard Jackson and Mandy Turner, Security in Context",
+     "date": "22 December 2023",
+     "url": "https://www.securityincontext.org/posts/why-we-need-to-talk-about-state-terrorism-by-israel-in-gaza",
+     "note": "Applies the audience-directed definition of terrorism to the Gaza campaign and argues the label is withheld selectively from Western states and their allies."
+    },
+    {
+     "title": "The Ghosts of State Terror: Knowledge, Politics and Terrorism Studies",
+     "org": "Richard Jackson, Critical Studies on Terrorism 1(3)",
+     "date": "2008",
+     "url": "https://www.aber.ac.uk/en/media/departmental/interpol/csrv/ghost-of-state-terror-richard-5.pdf",
+     "note": "The standard account of why terrorism studies defines terrorism in actor-based terms that exclude states, and the case against doing so."
+    },
+    {
+     "title": "State Terrorism in the Social Sciences: Theories, Methods and Concepts",
+     "org": "Ruth Blakeley, in Jackson, Murphy and Poynting (eds), Contemporary State Terrorism",
+     "date": "2010",
+     "url": "https://kar.kent.ac.uk/id/document/25367",
+     "note": "The four-element definition of state terrorism relied on at Part XXIV: a deliberate act or threat of violence by state agents, against victims, directed at a wider audience, for political ends."
+    },
+    {
+     "title": "Anonymous Soldiers: The Struggle for Israel, 1917-1947",
+     "org": "Bruce Hoffman (Alfred A. Knopf)",
+     "date": "2015",
+     "url": "https://www.penguinrandomhouse.com/books/205730/anonymous-soldiers-by-bruce-hoffman/",
+     "note": "The standard history of the Irgun and Lehi campaigns, built on the British archives opened in the 2000s, by the terrorism scholar whose work is foundational to the field. Records that the groups “were called terrorists by the Jews in Palestine, by the British, and by the press”. Endorsed by Benny Morris as “the best comprehensive study of the Jewish extremists' terror/guerrilla campaign against the British in Palestine”."
+    },
+    {
+     "title": "The Growing Rift between Holocaust Scholars over Israel/Palestine",
+     "org": "Journal of Genocide Research",
+     "date": "2024",
+     "url": "https://www.tandfonline.com/doi/full/10.1080/14623528.2024.2448061",
+     "note": "Analysis of the split within Holocaust studies over Gaza, tracing it to competing positions on the uniqueness of the Holocaust. Cited at §24.2A for the dissenting position stated in its own terms."
+    }
+   ]
+  },
+  {
+   "id": "israeli",
+   "label": "Israeli sources",
+   "blurb": "Israeli journalism, official statements and leaked internal material. Under this record's evidentiary rule, admissions by the state and its press carry the greatest weight against the state.",
+   "items": [
+    {
+     "title": "Investigative reporting on Gaza and the West Bank",
+     "org": "Haaretz",
+     "date": "continuous",
+     "url": "https://www.haaretz.com/",
+     "note": "Including the human-shields investigation (13 August 2024), the leaked Maj. Gen. Bluth briefing (4 May 2026), the Geocartography/Penn State polling (March 2025), and Ehud Olmert's ethnic-cleansing columns (June 2026). Includes the magazine feature of 9 September 2026 carrying an Israeli Air Force drone operator's account of fire directed at rescue vehicles and at medical personnel sheltering behind ambulances (§14.1B)."
+    },
+    {
+     "title": "+972 Magazine",
+     "org": "+972 Magazine (Israeli–Palestinian)",
+     "date": "continuous",
+     "url": "https://www.972mag.com/",
+     "note": "Including the 'Lavender' and 'Where's Daddy?' investigations into AI-assisted targeting, sourced to serving Israeli intelligence officers."
+    },
+    {
+     "title": "Local Call (Sicha Mekomit)",
+     "org": "Local Call",
+     "date": "continuous",
+     "url": "https://www.mekomit.co.il/",
+     "note": "The Hebrew-language partner publication to +972, and the route by which several investigations first appeared in Hebrew."
+    },
+    {
+     "title": "Liveblog and daily reporting",
+     "org": "The Times of Israel",
+     "date": "continuous",
+     "url": "https://www.timesofisrael.com/",
+     "note": "The most complete English-language record of ministerial statements, Knesset proceedings and IDF announcements."
+    },
+    {
+     "title": "Broadcast investigations and leaks",
+     "org": "Channel 12 (N12), Israel",
+     "date": "continuous",
+     "url": "https://www.mako.co.il/news",
+     "note": "Publisher of the leaked Haliva briefing recording (August 2025) and the police command-room footage from 7 October (February 2026)."
+    },
+    {
+     "title": "Ynet / Yedioth Ahronoth",
+     "org": "Ynet",
+     "date": "continuous",
+     "url": "https://www.ynetnews.com/",
+     "note": "Including the Katz depopulation remarks at the Ynet conference (September 2026) and the 1983 Eitan interview."
+    },
+    {
+     "title": "Knesset records and Ethics Committee decisions",
+     "org": "The Knesset",
+     "date": "continuous",
+     "url": "https://main.knesset.gov.il/EN/Pages/default.aspx",
+     "note": "Including the February 2025 Ethics Committee ruling that calling Palestinians 'subhumans' and calling to 'kill all adult men' did not violate Knesset ethical standards."
+    },
+    {
+     "title": "Official statements and orders",
+     "org": "Israeli Ministry of Defence and the IDF Spokesperson's Unit",
+     "date": "continuous",
+     "url": "https://www.idf.il/en/",
+     "note": "The primary record for the siege orders of October 2023 and subsequent operational announcements."
+    },
+    {
+     "title": "Prosecution of soldiers for offences against Palestinians — data sheets",
+     "org": "Yesh Din — Volunteers for Human Rights",
+     "date": "2003–",
+     "url": "https://www.yesh-din.org/en/data-sheet-law-enforcement-against-israeli-soldiers-suspected-of-harming-palestinians-and-their-property-figures-for-2018-2022/",
+     "note": "The military-justice funnel, from Israeli military records: 2,427 complaints between 2016 and 2024 produced 552 investigations (22.7%) and 23 indictments (0.9%). Yesh Din puts the probability of prosecution for killing a Palestinian at 0.4%."
+    },
+    {
+     "title": "Attacks on Christians in Israel and East Jerusalem: Annual Report 2025",
+     "org": "Rossing Center for Education and Dialogue",
+     "date": "30 March 2026",
+     "url": "https://rossingcenter.org/wp-content/uploads/2026/03/Harrasment-Christians-report-ENG-2025-WEB.pdf",
+     "note": "Third annual report of the Israeli organisation's Jerusalem Center for Jewish-Christian Relations. 155 documented incidents in 2025 against 111 in 2024 and 89 in 2023, with 61 physical assaults and 52 attacks on church property."
+    }
+   ]
+  },
+  {
+   "id": "journalism",
+   "label": "Investigative journalism",
+   "blurb": "International investigations that established facts not otherwise in the public record.",
+   "items": [
+    {
+     "title": "Reporting on Gaza, the occupation and UK complicity",
+     "org": "The Guardian",
+     "date": "continuous",
+     "url": "https://www.theguardian.com/world/palestinian-territories",
+     "note": "Including the joint investigations with +972 and Local Call on AI-assisted targeting and the secret systems reporting, and the interview of 13 July 2025 in which Ehud Olmert called the planned Rafah “humanitarian city” a concentration camp (§6.3A)."
+    },
+    {
+     "title": "Investigations into UK military support",
+     "org": "Declassified UK",
+     "date": "continuous",
+     "url": "https://www.declassifieduk.org/",
+     "note": "Source, with Action on Armed Violence, of the record of 600+ RAF surveillance flights over Gaza (December 2023 – October 2025)."
+    },
+    {
+     "title": "Reporting on arms transfers and civilian harm",
+     "org": "Action on Armed Violence",
+     "date": "continuous",
+     "url": "https://aoav.org.uk/",
+     "note": "Including the call for UK sanctions on Moshe Feiglin over the May 2025 remarks on Gaza's children."
+    },
+    {
+     "title": "Daily coverage and verification",
+     "org": "Al Jazeera",
+     "date": "continuous",
+     "url": "https://www.aljazeera.com/where/palestine/",
+     "note": "The most continuous on-the-ground reporting from Gaza; its Sanad verification unit is cited throughout the record."
+    },
+    {
+     "title": "Middle East Eye",
+     "org": "Middle East Eye",
+     "date": "continuous",
+     "url": "https://www.middleeasteye.net/",
+     "note": "Source for several Knesset-floor statements, including the Waldiger exchange of 13 May 2025, and for the Israeli government document of 8 September 2019 recording UK Lawyers for Israel's request to the Justice Ministry for assistance (§13.9)."
+    },
+    {
+     "title": "Wire reporting",
+     "org": "Reuters and Associated Press",
+     "date": "continuous",
+     "url": "https://www.reuters.com/world/middle-east/",
+     "note": "Used for cross-corroboration: this record requires at least two independent sources for every new statistic."
+    },
+    {
+     "title": "Reporting on UK politics and the Middle East",
+     "org": "The Telegraph",
+     "date": "continuous",
+     "url": "https://www.telegraph.co.uk/world-news/middle-east/",
+     "note": "Source of the report of 13 September 2026 that UK Lawyers for Israel had written to Home Secretary Shabana Mahmood urging the proscription of Médecins Sans Frontières under the Terrorism Act 2000 (§13.9)."
+    },
+    {
+     "title": "Reporting on the Arab world and Palestine",
+     "org": "The New Arab",
+     "date": "continuous",
+     "url": "https://www.newarab.com/",
+     "note": "Carried Médecins Sans Frontières' response to the proscription demand verbatim, together with the reaction of former British Army general Charlie Herbert (§13.9)."
+    },
+    {
+     "title": "Mehdi Unfiltered and reporting on Gaza",
+     "org": "Zeteo",
+     "date": "continuous",
+     "url": "https://zeteo.com/",
+     "note": "Source of the debate of 9 September 2026 between Peter Beinart and Joel Rubin, moderated by Mehdi Hasan, on where criticism of Israel ends and antisemitism begins (§21.8)."
+    },
+    {
+     "title": "In the Shadow of the Holocaust",
+     "org": "The New Yorker (Masha Gessen)",
+     "date": "9 December 2023",
+     "url": "https://www.newyorker.com/news/the-weekend-essay/in-the-shadow-of-the-holocaust",
+     "note": "The essay describing Gaza as a ghetto, on which the Heinrich Böll Foundation withdrew from awarding the Hannah Arendt Prize. Cited at §23.3."
+    },
+    {
+     "title": "We need an exodus from Zionism",
+     "org": "The Guardian (Naomi Klein)",
+     "date": "24 April 2024",
+     "url": "https://www.theguardian.com/commentisfree/2024/apr/24/zionism-seder-new-york-protest-palestine",
+     "note": "The full text of the Passover address at the Jewish Voice for Peace “Seder in the Streets”, Brooklyn, 23 April 2024. Cited at §23.4."
+    },
+    {
+     "title": "Israeli minister threatens to revoke filmmakers' citizenship over Gaza film",
+     "org": "Al Jazeera",
+     "date": "14 September 2026",
+     "url": "https://www.aljazeera.com/news/2026/9/14/israeli-minister-threatens-to-revoke-filmmakers-citizenship-over-gaza-film",
+     "note": "Culture Minister Miki Zohar and National Security Minister Itamar Ben-Gvir on the directors of NAZA after its Venice Special Jury Prize, with the legal position on citizenship revocation."
+    },
+    {
+     "title": "IDF rejects testimonies in Israeli-made documentary about AI-powered killing in Gaza",
+     "org": "The Times of Israel",
+     "date": "11 September 2026",
+     "url": "https://www.timesofisrael.com/idf-rejects-testimonies-in-israeli-made-documentary-about-ai-powered-killing-in-gaza/",
+     "note": "The IDF Spokesperson's Unit's rebuttal in full: the testimonies are anonymous and unverifiable, they include claims of strategy beyond junior soldiers' knowledge, and strike decisions are made by human personnel only."
+    },
+    {
+     "title": "Transcript: Secretary of State Marco Rubio on Face the Nation with Margaret Brennan",
+     "org": "CBS News",
+     "date": "5 October 2025",
+     "url": "https://www.cbsnews.com/news/marco-rubio-secretary-of-state-face-the-nation-transcript-10-05-2025/",
+     "note": "The United States' own gloss on Point 19 of the twenty-point plan: statehood only through a negotiated deal with Israel, no recognition now, \"we are far from that\", and the closing note that Trump still opposes West Bank annexation."
+    },
+    {
+     "title": "Read Trump's 20-point proposal to end the war in Gaza",
+     "org": "PBS NewsHour",
+     "date": "29 September 2025",
+     "url": "https://www.pbs.org/newshour/politics/read-trumps-20-point-proposal-to-end-the-war-in-gaza",
+     "note": "Full text of the plan endorsed by UN Security Council Resolution 2803, including Point 19 on a credible pathway to Palestinian self-determination and statehood and Point 20 on a political horizon."
+    },
+    {
+     "title": "US sanctions 'Hilltop Youth', treating extreme settler activists as an organized group",
+     "org": "The Times of Israel / US Department of the Treasury (OFAC), Executive Order 14115",
+     "date": "October 2024",
+     "url": "https://www.timesofisrael.com/us-sanctions-hilltop-youth-treating-extreme-settler-activists-as-organized-group/",
+     "note": "The designation describes a campaign of killings, arson, assault and intimidation intended to drive Palestinian communities out of the West Bank. Executive Order 14115 was revoked on 20 January 2025 and the designations lifted by OFAC on 24 January 2025."
+    },
+    {
+     "title": "Leading Israeli Scholar Avi Shlaim: Israel Committing “State Terror” in Gaza Attack",
+     "org": "Democracy Now!",
+     "date": "14 January 2009",
+     "url": "https://www.democracynow.org/2009/1/14/leading_israeli_scholar_avi_shlaim_israel",
+     "note": "Shlaim defines terror as “the use of violence against civilians for political purposes” and applies the definition to Hamas and to Israel in the same answer. The symmetry is his own method, and it is the method applied at Part XVIII and Part XXIV."
+    },
+    {
+     "title": "Supreme Court rejects appeal by Israeli killer of Palestinian family in arson attack",
+     "org": "The Times of Israel",
+     "date": "2022",
+     "url": "https://www.timesofisrael.com/supreme-court-rejects-appeal-by-israeli-killer-of-palestinian-family-in-arson-attack/",
+     "note": "Reports the dismissal of Amiram Ben-Uliel's appeal against conviction for the Duma arson of 31 July 2015, an offence classified by the Lod District Court as a terrorist act."
+    },
+    {
+     "title": "Bigoted Harassment of Christians in Jerusalem Increased in 2025",
+     "org": "Jerusalem Story",
+     "date": "5 April 2026",
+     "url": "https://www.jerusalemstory.com/en/article/bigoted-harassment-christians-jerusalem-increased-2025",
+     "note": "Sets the Rossing Center 2025 figures alongside the Religious Freedom Data Center's independent count of 181 incidents, 109 of them spitting, with 43 in the Armenian Quarter."
+    },
+    {
+     "title": "Report shows rise in attacks on Christians in Israel, but a willingness to tackle issue",
+     "org": "The Times of Israel",
+     "date": "27 March 2025",
+     "url": "https://www.timesofisrael.com/report-shows-rise-in-attacks-on-christians-in-israel-but-a-willingness-to-tackle-issue/",
+     "note": "The 2024 Rossing Center report and its accompanying survey, including the emigration figures and Hana Bendcowsky's remarks on reporting and on police practice."
+    },
+    {
+     "title": "Macklemore Dropped From Ed Sheeran Tour After Onstage ‘Free Palestine’ Statements",
+     "org": "Rolling Stone",
+     "date": "14 September 2026",
+     "url": "https://www.rollingstone.com/music/music-news/macklemore-dropped-ed-sheeran-tour-pro-palestine-statements-1235625967/",
+     "note": "Jon Blistein. Carries Messina Touring Group's exclusive statement and names the seven stadiums reported as refusing to host the tour with Macklemore on the bill."
+    },
+    {
+     "title": "Statement on removal from The Loop tour",
+     "org": "Macklemore (public statement)",
+     "date": "14 September 2026",
+     "url": "https://www.facebook.com/macklemore",
+     "note": "Twelve-panel statement published on the artist's own accounts. Sets out his account of the removal, including conversations he attributes to Ed Sheeran, and argues that there is no neutral position between the oppressor and the oppressed. The passages describing private conversations are his assertions and are recorded as such."
+    }
+   ]
+  },
+  {
+   "id": "archives",
+   "label": "Declassified and primary archives",
+   "blurb": "Contemporaneous documents rather than later accounts of them.",
+   "items": [
+    {
+     "title": "Ben-Gurion diaries and the 1937 Ben-Gurion letter",
+     "org": "Ben-Gurion Archives, Sde Boker",
+     "date": "1937–1948",
+     "url": "https://bengurionarchive.bgu.ac.il/",
+     "note": "Primary source for the transfer material of 1937, including the diary entry of 12 July 1937."
+    },
+    {
+     "title": "Jewish Agency Executive minutes",
+     "org": "Central Zionist Archives, Jerusalem",
+     "date": "1936–1948",
+     "url": "https://www.zionistarchives.org.il/en/",
+     "note": "Including the 29 October 1936 transfer proposal and Arthur Ruppin's 1938 remarks on the transfer of entire villages."
+    },
+    {
+     "title": "Mandate-era files on Zionist paramilitary organisations",
+     "org": "The National Archives, Kew (British MI5 and Colonial Office)",
+     "date": "1937–1948",
+     "url": "https://www.nationalarchives.gov.uk/",
+     "note": "The British designation of the Irgun and Lehi as terrorist organisations, and the contemporaneous assessments."
+    },
+    {
+     "title": "Haavara Agreement records",
+     "org": "German Foreign Ministry political archive",
+     "date": "1933–1939",
+     "url": "https://www.auswaertiges-amt.de/en/aamt/politisches-archiv",
+     "note": "The documentary record of the transfer agreement and associated correspondence."
+    },
+    {
+     "title": "Israel State Archives",
+     "org": "Israel State Archives",
+     "date": "1948–",
+     "url": "https://www.archives.gov.il/en/",
+     "note": "Declassified cabinet protocols, including the 1970 protocols on self-determination for the West Bank population."
+    },
+    {
+     "title": "Der Judenstaat (The Jewish State)",
+     "org": "Theodor Herzl",
+     "date": "February 1896",
+     "url": "https://www.gutenberg.org/ebooks/25282",
+     "note": "The founding pamphlet of political Zionism, in the 1946 American Zionist Emergency Council English text. The German original is Project Gutenberg ebook 28865."
+    },
+    {
+     "title": "'The Iron Wall (We and the Arabs)'",
+     "org": "Vladimir Jabotinsky",
+     "date": "4 November 1923",
+     "url": "https://www.jewishvirtuallibrary.org/quot-the-iron-wall-quot",
+     "note": "The statement that Zionist settlement could proceed only behind a wall of force the Arab population could not break, written by the founder of Revisionist Zionism."
+    },
+    {
+     "title": "'Truth from Eretz Yisrael'",
+     "org": "Ahad Ha'am (Asher Ginsberg)",
+     "date": "1891",
+     "url": "https://en.wikipedia.org/wiki/Truth_from_Eretz_Yisrael",
+     "note": "The early Zionist thinker's account of how the existing Arab population was being treated by the first settlers, published after his visit of 1891."
+    },
+    {
+     "title": "J50 Declaration on Zionism and Antisemitism",
+     "org": "J50 Forum, published by the European Jewish Congress",
+     "date": "11 September 2026",
+     "url": "https://eurojewcong.org/wp-content/uploads/2026/09/J50-Declaration-of-Zionism-and-Antisemitism-rev-1.pdf",
+     "note": "Primary text and full signatory list: seven global and regional organisations and fifty-two national and community organisations across forty countries. Reaffirms the IHRA working definition and declares anti-Zionism, as defined in the operative paragraph, antisemitic. Creates no legal obligation."
+    },
+    {
+     "title": "The Pittsburgh Platform (1885) and the rabbinic response to the First Zionist Congress (1897)",
+     "org": "American Jewish Archives",
+     "date": "1885–1897",
+     "url": "https://www.americanjewisharchives.org/snapshots/the-pittsburgh-platform-defining-american-reform-judaism-1885/",
+     "note": "The founding statement of American Reform Judaism and the CCAR and UAHC resolutions opposing the establishment of a Jewish state. Cited at §1.0 and §23.2."
+    },
+    {
+     "title": "Document: Shamir on Terrorism (1943)",
+     "org": "MERIP (Middle East Research and Information Project)",
+     "date": "May 1988",
+     "url": "https://www.merip.org/1988/05/shamir-on-terrorism-1943/",
+     "note": "Translation of the article “Terror” from the Lehi journal HeHazit, summer 1943, attributed to Yitzhak Yezernitzky (later Prime Minister Yitzhak Shamir). Translations of the passage vary and some sources attribute the article to the journal without naming an author."
+    }
+   ]
+  },
+  {
+   "id": "legal",
+   "label": "Legal instruments",
+   "blurb": "The treaty and statutory texts against which the conduct in this record is assessed.",
+   "items": [
+    {
+     "title": "Convention on the Prevention and Punishment of the Crime of Genocide",
+     "org": "United Nations",
+     "date": "9 December 1948",
+     "url": "https://www.un.org/en/genocideprevention/documents/atrocity-crimes/Doc.1_Convention%20on%20the%20Prevention%20and%20Punishment%20of%20the%20Crime%20of%20Genocide.pdf",
+     "note": "Article II (acts and specific intent); Article III(c) (direct and public incitement)."
+    },
+    {
+     "title": "Geneva Convention (IV) relative to the Protection of Civilian Persons in Time of War",
+     "org": "International Committee of the Red Cross",
+     "date": "12 August 1949",
+     "url": "https://ihl-databases.icrc.org/en/ihl-treaties/gciv-1949",
+     "note": "Article 33 (collective punishment); Article 49 (deportation, forcible transfer, and transfer of the occupier's own population into occupied territory)."
+    },
+    {
+     "title": "Rome Statute of the International Criminal Court",
+     "org": "International Criminal Court",
+     "date": "17 July 1998",
+     "url": "https://www.icc-cpi.int/sites/default/files/RS-Eng.pdf",
+     "note": "Article 7 (crimes against humanity, including apartheid and forcible transfer); Article 8 (war crimes, including starvation as a method of warfare)."
+    },
+    {
+     "title": "International Convention on the Suppression and Punishment of the Crime of Apartheid",
+     "org": "United Nations",
+     "date": "30 November 1973",
+     "url": "https://legal.un.org/avl/ha/cspca/cspca.html",
+     "note": "The standalone definition of apartheid as a crime against humanity, independent of the South African case."
+    },
+    {
+     "title": "International Convention on the Elimination of All Forms of Racial Discrimination (CERD)",
+     "org": "United Nations",
+     "date": "21 December 1965",
+     "url": "https://www.ohchr.org/en/instruments-mechanisms/instruments/international-convention-elimination-all-forms-racial",
+     "note": "Article 3, on racial segregation and apartheid — the provision the ICJ found Israel to have breached on 19 July 2024."
+    },
+    {
+     "title": "Basic Law: Israel — the Nation State of the Jewish People",
+     "org": "The Knesset",
+     "date": "19 July 2018",
+     "url": "https://main.knesset.gov.il/EN/activity/documents/BasicLawsPDF/BasicLawNationState.pdf",
+     "note": "Cited by B'Tselem and Adalah as constitutional confirmation that the distinction between Jews and non-Jews is treated as fundamental."
+    },
+    {
+     "title": "Israeli–Palestinian Interim Agreement on the West Bank and the Gaza Strip (Oslo II), Annex I",
+     "org": "Signed at Washington, D.C.; deposited with the United Nations",
+     "date": "28 September 1995",
+     "url": "https://www.un.org/unispal/document/auto-insert-185434/",
+     "note": "The instrument that created Areas A, B and C as a five-year interim arrangement. Thirty-one years on, Area C — 60 per cent of the West Bank, holding every settlement, the Jordan Valley and the aquifers — remains under full Israeli control."
+    },
+    {
+     "title": "Absentees' Property Law, 5710–1950; Development Authority (Transfer of Property) Law, 5710–1950; Land Acquisition (Validation of Acts and Compensation) Law, 5713–1953",
+     "org": "The Knesset",
+     "date": "1950–1953",
+     "url": "https://main.knesset.gov.il/EN/activity/Pages/BasicLaws.aspx",
+     "note": "The statutory machinery by which property left by Palestinian refugees was vested in the Custodian of Absentee Property and transferred onward to the state. Applied in East Jerusalem after 1967 and upheld, with restrictions, by the Israeli Supreme Court in 2015."
+    },
+    {
+     "title": "Equality Act 2010",
+     "org": "Parliament of the United Kingdom",
+     "date": "8 April 2010",
+     "url": "https://www.legislation.gov.uk/ukpga/2010/15/contents",
+     "note": "Section 10 (religion or belief as a protected characteristic); section 13 (direct discrimination). The provisions under which an anti-Zionist belief was held protected in Miller."
+    },
+    {
+     "title": "Administrative Appeal 8277/17, Zayoud v. Minister of the Interior",
+     "org": "Supreme Court of Israel",
+     "date": "21 July 2022",
+     "url": "https://www.adalah.org/en/content/view/10661",
+     "note": "An expanded seven-justice panel upheld the constitutionality of Article 11(b)(2) of the Citizenship Law, 5712-1952, which allows a court for administrative affairs to revoke citizenship for a breach of loyalty on the Interior Minister's application, even where the result is statelessness. The qualifying acts are enumerated as terrorism, treason or serious espionage, and the acquisition of status in a hostile state."
+    },
+    {
+     "title": "R (Huda Ammori) v Secretary of State for the Home Department [2026] EWHC 292 (Admin)",
+     "org": "Divisional Court of the King's Bench Division, England and Wales",
+     "date": "13 February 2026",
+     "url": "https://www.judiciary.uk/wp-content/uploads/2026/02/R-Ammori-v-SSHD-OPEN-Judgment-final.pdf",
+     "note": "Proscription of Palestine Action held to be outside the Home Secretary's own policy and a disproportionate interference with Articles 10 and 11 ECHR; reversed by the Court of Appeal, [2026] EWCA Civ 1721, 15 June 2026, with permission to appeal granted by the Supreme Court in July 2026."
+    },
+    {
+     "title": "Executive Order 14203, \"Imposing Sanctions on the International Criminal Court\"",
+     "org": "President of the United States",
+     "date": "6 February 2025",
+     "url": "https://www.federalregister.gov/documents/2025/02/13/2025-02931/imposing-sanctions-on-the-international-criminal-court",
+     "note": "The instrument under which the Prosecutor, nine judges, both Deputy Prosecutors, Special Rapporteur Francesca Albanese and three Palestinian human rights organisations have been designated."
+    },
+    {
+     "title": "The ICC strongly rejects new US sanctions designations",
+     "org": "International Criminal Court",
+     "date": "18 August 2026",
+     "url": "https://www.icc-cpi.int/news/icc-strongly-rejects-new-us-sanctions-designations",
+     "note": "The Court's own response, describing the measures as a flagrant attack against the independence of an impartial judicial institution."
+    }
+   ]
+  }
+ ]
 }
