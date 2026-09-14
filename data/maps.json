@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Governorate-level data",
-    "note": "Curated by hand from the published sources named against each series, because neither is derivable from report-final.md. Every governorate is keyed by the name it carries in the OCHA Common Operational Dataset, which is the boundary set the geometry uses and the one the UN agencies themselves report against. Where a body does not publish a figure for a governorate, the governorate is left out of the series and drawn as unreported rather than given a value.",
+    "note": "Curated by hand from the published sources named against each series, because neither is derivable from the report. Every governorate is keyed by the name it carries in the OCHA Common Operational Dataset, which is the boundary set the geometry uses and the one the UN agencies themselves report against. Where a body does not publish a figure for a governorate, the governorate is left out of the series and drawn as unreported rather than given a value.",
     "geometry": "OCHA Common Operational Dataset, State of Palestine — Subnational Administrative Boundaries, CC BY-IGO"
   },
 

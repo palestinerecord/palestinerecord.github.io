@@ -4,20 +4,20 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-14",
-  "total_bytes": 3721043,
+  "total_bytes": 3746659,
   "datasets": [
     {
       "path": "data/chart-events.json",
       "title": "Dated events for the series",
       "description": "The events marked on the time series — ceasefires, offensives, crossings closed and reopened — so a change in a line can be read against what happened.",
       "source": "OCHA situation reports and contemporaneous reporting.",
-      "bytes": 4760,
+      "bytes": 4750,
       "records": null,
       "fields": [
         "meta",
         "events"
       ],
-      "updated": "2026-09-12"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/children.json",
@@ -42,9 +42,9 @@
       "path": "data/chronology.json",
       "title": "The chronology of recorded crimes",
       "description": "Appendix B of the report: every dated crime and massacre in the record, split out of report.json so the Timeline can be read without loading the full report.",
-      "source": "report-final.md, Appendix B.",
-      "bytes": 20191,
-      "records": 141,
+      "source": "The report, Appendix B.",
+      "bytes": 20305,
+      "records": 142,
       "fields": [
         "meta",
         "entries"
@@ -56,7 +56,7 @@
       "title": "Conduct of the war",
       "description": "Aid, hospitals, schools, heritage, journalists, medics and what remains functioning, measured against the obligations each engages.",
       "source": "WHO, UNRWA, UNESCO, OCHA, CPJ and Physicians for Human Rights.",
-      "bytes": 47675,
+      "bytes": 47644,
       "records": null,
       "fields": [
         "meta",
@@ -72,14 +72,14 @@
         "custody",
         "nuclear"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/elements.json",
       "title": "The elements of the legal tests",
       "description": "The elements of genocide, apartheid and the grave breaches, each set against the evidence advanced for it and the body that made the finding.",
       "source": "Genocide Convention, Apartheid Convention, Rome Statute, Fourth Geneva Convention.",
-      "bytes": 31865,
+      "bytes": 31860,
       "records": null,
       "fields": [
         "meta",
@@ -87,14 +87,14 @@
         "instruments",
         "scorecard"
       ],
-      "updated": "2026-09-12"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/figures.json",
       "title": "The curated statistics",
       "description": "The headline figures and the topic groups behind them — each with its label, its value, the note that qualifies it, and the report section it came from.",
       "source": "Each record carries its own source field.",
-      "bytes": 33880,
+      "bytes": 33914,
       "records": null,
       "fields": [
         "meta",
@@ -110,14 +110,14 @@
         "recognition",
         "opinion"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/headline.json",
       "title": "The first screen",
       "description": "The eight headline figures, the current ratio and the counts, in one small file so the record can state what it establishes before the rest of the data arrives.",
       "source": "A subset of figures.json, timeseries.json and report-meta.json; each figure keeps its own source field.",
-      "bytes": 1854,
+      "bytes": 1855,
       "records": null,
       "fields": [
         "meta",
@@ -126,7 +126,7 @@
         "ratio",
         "counts"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/history.json",
@@ -186,14 +186,14 @@
       "title": "Map geometry",
       "description": "The boundaries, governorates and place points the maps are drawn from, joined to the data by name with the aliases resolved.",
       "source": "Public-domain and openly licensed boundary data.",
-      "bytes": 10015,
+      "bytes": 10010,
       "records": null,
       "fields": [
         "meta",
         "gaza_ipc",
         "west_bank"
       ],
-      "updated": "2026-09-12"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/nakba.json",
@@ -223,7 +223,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/names.json",
@@ -236,13 +236,13 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/report-meta.json",
       "title": "The report, described",
-      "description": "The title, the counts (words, parts, sections, tables) and the full bibliography of report-final.md, without the text — what a page needs to quote the report accurately when it is not reproducing it.",
-      "source": "Derived from report-final.md by build.py.",
+      "description": "The title, the counts (words, parts, sections, tables) and the full bibliography of the report, without the text — what a page needs to quote the report accurately when it is not reproducing it.",
+      "source": "Derived from the report by build.py.",
       "bytes": 30687,
       "records": null,
       "fields": [
@@ -259,9 +259,9 @@
     {
       "path": "data/report.json",
       "title": "The source report, parsed",
-      "description": "Every part, section, paragraph, list, table, chronology entry and bibliography entry of report-final.md, converted losslessly by build.py and checked by verify.py. This is the whole document as structured data.",
-      "source": "report-final.md — A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026).",
-      "bytes": 912297,
+      "description": "Every part, section, paragraph, list, table, chronology entry and bibliography entry of the report, converted losslessly by build.py and checked by verify.py. This is the whole document as structured data.",
+      "source": "The report — A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026).",
+      "bytes": 929326,
       "records": null,
       "fields": [
         "title",
@@ -279,7 +279,7 @@
       "title": "The linked source library",
       "description": "The evidentiary base grouped by kind: courts and tribunals, UN bodies, human rights organisations, open datasets, academic work, Israeli sources, journalism and archives.",
       "source": "Each entry links to the publisher.",
-      "bytes": 48358,
+      "bytes": 48865,
       "records": null,
       "fields": [
         "meta",
@@ -292,22 +292,22 @@
       "title": "Documented statements of intent",
       "description": "Statements by named officials with speaker, role, date, the verbatim quotation, its context, its evidentiary categories, its tier and its legal significance. Contested attributions are marked contested.",
       "source": "Primary reporting as cited per record; §6.2 and Appendix C of the report.",
-      "bytes": 92278,
-      "records": 85,
+      "bytes": 98756,
+      "records": 90,
       "fields": [
         "meta",
         "categories",
         "items"
       ],
-      "updated": "2026-09-11"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/timeline-extra.json",
       "title": "The contextual chronology",
       "description": "The legal and political steps between the massacres recorded in Appendix B — mandates, partitions, laws, plans, rulings, resolutions and admissions.",
       "source": "Primary documents as cited per entry.",
-      "bytes": 27080,
-      "records": 75,
+      "bytes": 28589,
+      "records": 78,
       "fields": [
         "meta",
         "items"
@@ -331,14 +331,14 @@
         "press_killed_count",
         "demographics"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/war-record.json",
       "title": "The wars and 7 October",
       "description": "Each Gaza campaign, what it was called, what it killed, and what the inquiries into it found — alongside the documented record of 7 October 2023.",
       "source": "UN Commission of Inquiry, OCHA, B'Tselem and Israeli state inquiries.",
-      "bytes": 23304,
+      "bytes": 23299,
       "records": null,
       "fields": [
         "meta",
@@ -346,7 +346,7 @@
         "lebanon",
         "regional"
       ],
-      "updated": "2026-09-12"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/world-positions.json",

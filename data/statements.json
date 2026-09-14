@@ -2,7 +2,7 @@
   "meta": {
     "title": "The Record of Intent",
     "description": "A curated register of statements bearing on intent: genocide, ethnic cleansing, apartheid, annexation, starvation and war crimes. Every entry is verbatim, attributed to a named speaker with role and date, and carries the source and a note on evidentiary significance. Statements by serving officials are admissions, not allegations.",
-    "compiled": "2026-09-11",
+    "compiled": "2026-09-14",
     "primary_databases": [
       {
         "name": "Law for Palestine — Database of Israeli Incitement to Genocide",
@@ -998,6 +998,51 @@
       "significance": "A majority regarding the law of armed conflict itself as the obstacle. This is the societal counterpart to the ministerial statements: the constraint, not the killing, is what is resented."
     },
     {
+      "speaker": "Israel Katz",
+      "role": "Minister of Defence",
+      "date": "7 July 2025",
+      "sort": "2025-07-07",
+      "cat": [
+        "cleansing",
+        "warcrimes"
+      ],
+      "tier": "Cabinet",
+      "quote": "[The military is to prepare a] humanitarian city [on the ruins of Rafah; an initial 600,000 displaced Palestinians from al-Mawasi would enter within 60 days of a ceasefire, and eventually the whole population of Gaza. Those admitted] would not be allowed to leave.",
+      "context": "A briefing to Israeli reporters on 7 July 2025. Entry was to be conditional on individual security screening, the perimeter sealed by the military, and departure permitted only by emigration from Gaza, which Katz said in the same briefing he intended to advance. Rafah was demolished in preparation: satellite imagery analysed by Al Jazeera showed destroyed buildings rising from about 15,800 on 4 April 2025 to about 28,600 on 4 July 2025.",
+      "source": "Briefing to Israeli reporters, 7 July 2025; The Guardian; The Times of Israel; Al Jazeera satellite analysis, 13 July 2025. Report §6.3A.",
+      "significance": "A ministerial plan to concentrate a protected population in a closed zone from which departure is barred save by leaving the territory engages Article 49 of the Fourth Geneva Convention and Articles 7(1)(d) and 7(1)(e) of the Rome Statute. It was stopped from inside: the military's own lawyers advised it would be unlawful, sixteen Israeli law academics called any order to advance it manifestly illegal, and the Chief of the General Staff declined to adopt it."
+    },
+    {
+      "speaker": "Ehud Olmert",
+      "role": "Prime Minister of Israel, 2006–2009",
+      "date": "13 July 2025",
+      "sort": "2025-07-13",
+      "cat": [
+        "cleansing",
+        "dissent"
+      ],
+      "tier": "Former head of government",
+      "quote": "It is a concentration camp. I am sorry. … If they will be deported into the new 'humanitarian city', then you can say that this is part of an ethnic cleansing.",
+      "context": "Interview with The Guardian, published 13 July 2025, on Israel Katz's plan for a sealed zone at Rafah. Olmert was precise about the limits of his own claim: he did not regard the campaign as then conducted as ethnic cleansing, because temporary evacuation away from hostilities is lawful and people had returned to areas where operations had ended. It was the sealed city that would mark the escalation, and the stated humanitarian purpose that he called “not credible”. The Prime Minister's Office replied by calling him “a convicted felon disgracing Israel on CNN”.",
+      "source": "The Guardian, 13 July 2025; CNN, 14 July 2025; The Times of Israel. Report §6.3A, §21.8.",
+      "significance": "A former Israeli prime minister applying the term whose use of Israel is treated, under the IHRA definition's illustration on Nazi comparisons, as the paradigm case of antisemitism. A description does not change its character according to who utters it."
+    },
+    {
+      "speaker": "Yair Lapid",
+      "role": "Leader of the Opposition; Prime Minister of Israel, 2022",
+      "date": "13 July 2025",
+      "sort": "2025-07-13",
+      "cat": [
+        "cleansing",
+        "dissent"
+      ],
+      "tier": "Former head of government",
+      "quote": "I don't prefer to describe a humanitarian city as a concentration camp, but if exiting it is prohibited, then it is a concentration camp.",
+      "context": "Israeli Army Radio, the same day as Olmert's interview, on the same plan.",
+      "source": "Israeli Army Radio, 13 July 2025; The Times of Israel. Report §6.3A, §21.8.",
+      "significance": "The conditional form is the point: the sitting leader of the Israeli opposition accepted the characterisation on the plan's own stated terms, the bar on leaving being the plan's defining feature."
+    },
+    {
       "speaker": "Physicians for Human Rights Israel",
       "role": "Israeli medical human rights organisation",
       "date": "July 2025",
@@ -1012,6 +1057,21 @@
       "context": "Report published in the same month as B'Tselem's “Our Genocide” — the first time two Israeli human rights organisations reached the genocide determination simultaneously.",
       "source": "Physicians for Human Rights Israel, July 2025; B'Tselem, “Our Genocide”, July 2025.",
       "significance": "The genocide finding reached from inside Israeli civil society by the profession best placed to assess the destruction of a health system. Weighted heavily in this record because it cannot be attributed to hostility to Israel's existence."
+    },
+    {
+      "speaker": "Lieutenant General Eyal Zamir",
+      "role": "Chief of the General Staff, Israel Defense Forces",
+      "date": "July 2025",
+      "sort": "2025-07-20",
+      "cat": [
+        "cleansing",
+        "dissent"
+      ],
+      "tier": "Military",
+      "quote": "[The army] does not impose forced population expulsions inside or outside the Gaza Strip.",
+      "context": "A statement by the Chief of the General Staff's office to Israel's High Court of Justice, after Zamir declined to adopt the Rafah plan on the ground that it formed no part of the military's operational plan. The Wall Street Journal reported that military lawyers had advised him the plan would be unlawful if civilians were coerced into the zone and prevented from leaving.",
+      "source": "Israel's High Court of Justice, July 2025; The Wall Street Journal; The Times of Israel. Report §6.3A.",
+      "significance": "A statement against the plan by the officer who would have had to execute it, and the operative reason it was shelved. It also fixes the legal standard the Israeli military applied to itself in court, against which the conduct documented elsewhere in this record is to be measured."
     },
     {
       "speaker": "aChord Center, Hebrew University of Jerusalem",
@@ -1354,6 +1414,20 @@
       "context": "Statement on settler attacks at the West Bank village of Turmus Ayya. Huckabee has repeatedly and publicly used the terms “Israeli terrorists” and “horrific acts of terror” of settlement-related violence during 2026, including at Qusra.",
       "source": "Times of Israel; wire coverage, 5 September 2026.",
       "significance": "An admission from the government most closely allied with Israel, and from an ambassador with a long record of support for the settlement enterprise, that settler violence meets the definition of terrorism."
+    },
+    {
+      "speaker": "Peter Beinart",
+      "role": "Editor-at-large, Jewish Currents; author of Being Jewish After the Destruction of Gaza",
+      "date": "9 September 2026",
+      "sort": "2026-09-09",
+      "cat": [
+        "dissent"
+      ],
+      "tier": "Jewish writer",
+      "quote": "There's a very legitimate debate about whether you can support a state like that and still have progressive [values].",
+      "context": "A filmed debate published by Zeteo on 9 September 2026 in the Mehdi Unfiltered series, moderated by Mehdi Hasan, against Joel Rubin, a former Obama State Department official and Jewish outreach director of Bernie Sanders's 2020 campaign, who put the opposing case: “Anti-Zionists are clearly hostile to the idea that the state of Israel should exist”, and that for Jews worldwide this crosses a line. Beinart's distinction, in his book, is between the land and the state: “states are not created in the image of God, human beings are. States are merely instruments”.",
+      "source": "Zeteo, “Are Democrats Turning Against Israel – or Jews?”, 9 September 2026. Report §21.8.",
+      "significance": "Recorded with the opposing case stated alongside it. The boundary between criticism of Israel and antisemitism is contested within the community the boundary is drawn to protect, by people who are not outside observers."
     },
     {
       "speaker": "Ehud Olmert",

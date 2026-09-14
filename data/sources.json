@@ -639,7 +639,7 @@
           "org": "The Guardian",
           "date": "continuous",
           "url": "https://www.theguardian.com/world/palestinian-territories",
-          "note": "Including the joint investigations with +972 and Local Call on AI-assisted targeting and the secret systems reporting."
+          "note": "Including the joint investigations with +972 and Local Call on AI-assisted targeting and the secret systems reporting, and the interview of 13 July 2025 in which Ehud Olmert called the planned Rafah “humanitarian city” a concentration camp (§6.3A)."
         },
         {
           "title": "Investigations into UK military support",
@@ -689,6 +689,13 @@
           "date": "continuous",
           "url": "https://www.newarab.com/",
           "note": "Carried Médecins Sans Frontières' response to the proscription demand verbatim, together with the reaction of former British Army general Charlie Herbert (§13.9)."
+        },
+        {
+          "title": "Mehdi Unfiltered and reporting on Gaza",
+          "org": "Zeteo",
+          "date": "continuous",
+          "url": "https://zeteo.com/",
+          "note": "Source of the debate of 9 September 2026 between Peter Beinart and Joel Rubin, moderated by Mehdi Hasan, on where criticism of Israel ends and antisemitism begins (§21.8)."
         }
       ]
     },

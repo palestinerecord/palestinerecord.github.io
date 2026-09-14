@@ -2,8 +2,8 @@
   "meta": {
     "title": "Dated events for annotation of the Gaza time series",
     "built": "2026-09-12",
-    "note": "Each entry is a single dated event that the charts draw as a vertical marker on the Gaza monthly and daily series. Nothing is annotated that report-final.md does not date: the Gaza Humanitarian Foundation has no founding date in the record, so it carries no marker, and the Lebanon escalations are not here because the Lebanese toll is held by episode rather than as a dated series.",
-    "method": "Every date below appears verbatim in report-final.md. 'short' is the label drawn on the chart and is kept to two lines; 'label' and 'detail' are the tooltip. The 11 October 2025 ceasefire is deliberately absent: it is drawn on every monthly series already, by its own marker, whether or not the event layer is switched on."
+    "note": "Each entry is a single dated event that the charts draw as a vertical marker on the Gaza monthly and daily series. Nothing is annotated that the report does not date: the Gaza Humanitarian Foundation has no founding date in the record, so it carries no marker, and the Lebanon escalations are not here because the Lebanese toll is held by episode rather than as a dated series.",
+    "method": "Every date below appears verbatim in the report. 'short' is the label drawn on the chart and is kept to two lines; 'label' and 'detail' are the tooltip. The 11 October 2025 ceasefire is deliberately absent: it is drawn on every monthly series already, by its own marker, whether or not the event layer is switched on."
   },
   "events": [
     {

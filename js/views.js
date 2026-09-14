@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=40" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=41" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=40" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=41" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -1440,7 +1440,7 @@ const Views = (function () {
 
     return `<div class="view wrap">
       <section class="section">
-        ${head('Evidence', 'The complete report', `All ${D.rmeta.stats.parts} parts, ${D.rmeta.stats.sections} sections, ${D.rmeta.stats.tables} tables and ${fmt(D.rmeta.stats.words)} words of <code>report-final.md</code>, reproduced without omission. Every heading, paragraph, list and table in the source document appears below.`)}
+        ${head('Evidence', 'The complete report', `All ${D.rmeta.stats.parts} parts, ${D.rmeta.stats.sections} sections, ${D.rmeta.stats.tables} tables and ${fmt(D.rmeta.stats.words)} words of the report, reproduced without omission. Every heading, paragraph, list and table in the source document appears below.`)}
         <div class="ev-layout">
           <aside class="ev-toc">
             <input class="ev-toc-search" id="toc-search" type="search" placeholder="Filter sections…" autocomplete="off">
@@ -1582,7 +1582,7 @@ const Views = (function () {
         <div class="rebuttal-list">${body}</div>
         <p class="chart-note" style="margin-top:26px;max-width:760px">
           Nothing on this page is a paraphrase. Each answer is the corresponding section of
-          <code>report-final.md</code> as it stands, and the link beside it opens the same text inside the
+          the report as it stands, and the link beside it opens the same text inside the
           full report with everything around it.
         </p>
       </section>
@@ -1963,7 +1963,7 @@ const Views = (function () {
       </section>
 
       <section class="section">
-        ${head('Bibliography', `The report's own bibliography, ${b.length} entries`, 'Reproduced from <code>report-final.md</code> exactly as it appears there, grouped by its own categories.')}
+        ${head('Bibliography', `The report's own bibliography, ${b.length} entries`, 'Reproduced from the report exactly as it appears there, grouped by its own categories.')}
         <details class="bib">
           <summary>Show the full bibliography</summary>
           <div id="bib-list">
@@ -1980,7 +1980,7 @@ const Views = (function () {
         <div class="grid c3">
           <div class="card">
             <h3 style="font-size:17px;margin-bottom:10px">No gaps</h3>
-            <p class="small muted"><code>build.py</code> parses <code>report-final.md</code> into structured JSON, emitting every
+            <p class="small muted"><code>build.py</code> parses the report into structured JSON, emitting every
             heading, paragraph, list item and table. <code>verify.py</code> then reconciles every non-blank line of the source
             against the output; it currently reports zero missing fragments. The Evidence section renders that JSON in full,
             so what you read there is the report itself, not a summary of it.</p>

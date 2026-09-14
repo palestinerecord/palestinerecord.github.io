@@ -301,7 +301,7 @@ def main():
     # Sources and Open-data routes quote.
     chronology = {
         "meta": {
-            "source": "report-final.md, Appendix B",
+            "source": "The report, Appendix B",
             "note": "The chronology of recorded crimes and massacres, split out of "
                     "report.json so the Timeline can be read without loading the full report.",
             "count": len(doc["timeline"]),

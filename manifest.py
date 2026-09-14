@@ -39,23 +39,23 @@ DESCRIPTIONS = {
     'report.json': (
         'The source report, parsed',
         'Every part, section, paragraph, list, table, chronology entry and bibliography '
-        'entry of report-final.md, converted losslessly by build.py and checked by '
+        'entry of the report, converted losslessly by build.py and checked by '
         'verify.py. This is the whole document as structured data.',
-        'report-final.md — A Forensic Academic Survey of State Conduct, Alleged Violations '
+        'The report — A Forensic Academic Survey of State Conduct, Alleged Violations '
         'of International Law, and the Documented Record (1917–2026).',
     ),
     'chronology.json': (
         'The chronology of recorded crimes',
         'Appendix B of the report: every dated crime and massacre in the record, split out '
         'of report.json so the Timeline can be read without loading the full report.',
-        'report-final.md, Appendix B.',
+        'The report, Appendix B.',
     ),
     'report-meta.json': (
         'The report, described',
         'The title, the counts (words, parts, sections, tables) and the full bibliography '
-        'of report-final.md, without the text — what a page needs to quote the report '
+        'of the report, without the text — what a page needs to quote the report '
         'accurately when it is not reproducing it.',
-        'Derived from report-final.md by build.py.',
+        'Derived from the report by build.py.',
     ),
     'headline.json': (
         'The first screen',
