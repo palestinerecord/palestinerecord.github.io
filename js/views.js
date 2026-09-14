@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=66" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=67" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=66" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=67" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -1510,6 +1510,30 @@ const Views = (function () {
       ['dispossession', 'An evacuation order that is never followed by a return is a transfer, and forcible transfer is a war crime whether or not a warning preceded it.'],
       ['daily-rate', 'The daily toll across the whole war, including the months in which evacuation orders were in force.'],
     ],
+    12: [
+      ['aid-seekers', 'The distribution model the diversion claim was used to justify, measured by what happened to the people who walked to it.'],
+      ['aid-trucks', 'And the volume that crossed. The argument is about who receives the aid; the series is about whether it enters at all.'],
+    ],
+    13: [
+      ['hunger-risk', 'The IPC classifies against fixed thresholds on household surveys, child screening and mortality data. This is the population it placed in each phase.'],
+      ['famine-deaths', 'Recorded deaths from starvation and malnutrition. A denial that produces no alternative dataset and no access is not a rebuttal of the finding.'],
+    ],
+    14: [
+      ['protected', 'Journalists are civilians under Additional Protocol I, Article 79, and remain so unless and for such time as they take a direct part in hostilities.'],
+      ['media-attribution', 'The same coverage that carries the accusation. Who is named as the cause of a death is itself a measurable editorial choice.'],
+    ],
+    15: [
+      ['settlements', 'What the territorial claim looks like when a state holds the territory and acts on it, rather than when a protester chants about it.'],
+      ['land-areas', 'The territory west of the Jordan as it is actually administered, thirty-one years after the interim agreement that was to be five.'],
+    ],
+    16: [
+      ['un-vetoes', 'Seven drafts on this conflict blocked by a single vote since October 2023. Whatever this record is, it is not enforcement without fear or favour.'],
+      ['findings-class', 'And the bodies that reached the findings, by class of institution. They applied the instruments they apply everywhere else.'],
+    ],
+    17: [
+      ['detention', 'Administrative detention without charge, military courts, and children tried in them. This is the law that governs the Palestinians who cannot vote for it.'],
+      ['dispossession', 'The structure the franchise inside the Green Line does not reach: displacement and demolition across the territory under one authority.'],
+    ],
   };
 
   /* The charts this route borrows keep the title and source their own cards
@@ -1542,6 +1566,12 @@ const Views = (function () {
       'daily-toll': ['Cumulative deaths, every reporting day', 'Tech For Palestine', ''],
       'dispossession': ['People displaced and structures demolished, 1948–2026', 'UN; UNRWA; ICAHD; Land Research Center', 'Log scale. '],
       'daily-rate': ['Deaths added to the register each day', 'Tech For Palestine', ''],
+      'aid-seekers': ['Casualties among people seeking aid', 'Gaza MoH / OCHA', 'Bars: killed that month. Lines: cumulative, on the right-hand axis. '],
+      'aid-trucks': [D.conduct.aid.title, D.conduct.aid.ref, 'The zero bar is the total blockade imposed on 2 March 2025. '],
+      'hunger-risk': [D.conduct.hunger.title, D.conduct.hunger.ref, ''],
+      'famine-deaths': ['Deaths from starvation and malnutrition', 'Gaza MoH', 'Cumulative, stepped at each reporting date; the amber line is the child share. '],
+      'media-attribution': ['Palestinian casualties reported without naming Israel', D.conduct.media.ref, ''],
+      'settlements': ['Settlements approved: Oslo era vs current coalition', f.settlements.ref, ''],
     };
     const m = META[name];
     return m ? chartCard(name, m[0], esc(m[2] + note), m[1], 'tall') : '';

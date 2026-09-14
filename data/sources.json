@@ -2,7 +2,7 @@
  "meta": {
   "title": "Source Library",
   "description": "The evidentiary base of the record: courts, UN bodies, human rights organisations, peer-reviewed research, open datasets, declassified archives and the Israeli press. Sources are grouped by the weight they carry, not by convenience. Every claim in the report is anchored to a source of one of these classes.",
-  "compiled": "2026-09-14",
+  "compiled": "2026-09-15",
   "note": "Where a link is given it points to the authoritative publisher, not to an aggregator. Where no link is given the source is a print or archival record cited in the report's bibliography."
  },
  "groups": [
@@ -66,6 +66,13 @@
      "date": "4 August 2026",
      "url": "https://www.gov.uk/employment-appeal-tribunal-decisions",
      "note": "Appeal EA-2024-000324-RS. Lord Fairley KC, with Nick Aziz and Dr Gillian Smith MBE. Eight of nine grounds rejected; anti-Zionist belief in the formulation advanced held a protected philosophical belief, dismissal held direct discrimination. Compensation reduced by 50 per cent for contributory conduct."
+    },
+    {
+     "title": "HCJ 5555/18, Hasson v. Knesset (petitions against Basic Law: Israel — the Nation State of the Jewish People)",
+     "org": "Supreme Court of Israel, sitting as the High Court of Justice",
+     "date": "8 July 2021",
+     "url": "https://supremedecisions.court.gov.il/",
+     "note": "An extended bench of eleven justices rejected fifteen petitions by ten to one, President Esther Hayut holding that the Basic Law does not negate the state's democratic character. The sole dissent was that of Justice George Karra, the court's only Arab justice."
     }
    ]
   },
@@ -199,6 +206,13 @@
      "date": "2 April 2026",
      "url": "https://www.ohchr.org/en/press-releases/2026/04/israels-death-penalty-law-constitutes-discriminatory-regime-capital",
      "note": "Special Rapporteur on torture Alice Jill Edwards and others on hanging, the 90-day execution deadline and the prohibition on mandatory death sentences under the ICCPR."
+    },
+    {
+     "title": "IPC Famine Review Committee: famine classification for Gaza Governorate",
+     "org": "Integrated Food Security Phase Classification",
+     "date": "22 August 2025",
+     "url": "https://www.ipcinfo.org/ipcinfo-website/countries-in-focus-archive/issue-134/en/",
+     "note": "Confirms famine (Phase 5) in Gaza Governorate as of 15 August 2025 — the first classification of famine in the Middle East and the first outside Africa. Records over 500,000 people in Phase 5, 1.07 million (54 per cent) in Phase 4 and 396,000 in Phase 3, projects the famine to Deir al-Balah and Khan Younis by the end of September 2025, and leaves northern Gaza unclassified for lack of access. Confirmed the same day by the World Health Organization."
     }
    ]
   },
@@ -430,6 +444,13 @@
      "date": "23 October 2018",
      "url": "https://www.hrw.org/report/2018/10/23/two-authorities-one-way-zero-dissent/arbitrary-arrest-and-torture-under",
      "note": "Two-year investigation across 86 cases and 147 interviews finding that torture practised by both the Palestinian Authority and Hamas may amount to a crime against humanity (§18.10)."
+    },
+    {
+     "title": "Israeli strike on a media tent outside al-Shifa Hospital kills Anas al-Sharif and five other journalists",
+     "org": "Committee to Protect Journalists",
+     "date": "August 2025",
+     "url": "https://cpj.org/",
+     "note": "Records the strike of 10 August 2025 and the six men killed, the Israeli military's assertion that al-Sharif headed a Hamas cell, the absence of any case offered for the other five, and CPJ's own warning of July 2025 that al-Sharif was the subject of a smear campaign. CPJ's database records more than 190 journalists and media workers killed since October 2023."
     }
    ]
   },
@@ -472,6 +493,13 @@
      "date": "January 2024",
      "url": "https://www.alhaq.org/cached_uploads/download/2024/01/10/official-translation-of-statements-informal-translations-final-list-1704917626.pdf",
      "note": "Compilation of official and informal translations, each with the Hebrew original and a link to the recording or post it was taken from. Assembled as the genocide case was filed at the International Court of Justice."
+    },
+    {
+     "title": "Discriminatory Laws in Israel — database",
+     "org": "Adalah — The Legal Center for Arab Minority Rights in Israel",
+     "date": "updated continuously",
+     "url": "https://www.adalah.org/en/law/index",
+     "note": "Catalogues more than 65 Israeli laws that discriminate directly or indirectly against Palestinian citizens of Israel and Palestinians in the occupied territory, each with its statutory text and a note on its effect."
     }
    ]
   },
@@ -1088,6 +1116,20 @@
      "date": "2020-09-21",
      "url": "https://www.nbcnews.com/news/us-news/solicitation-charges-against-patriots-owner-robert-kraft-likely-dropped-n1240696",
      "note": "The Florida Attorney General's office declines further review, citing feared “broader, negative implications” for law enforcement investigations; charges against Kraft and about twenty other defendants collapse."
+    },
+    {
+     "title": "USAID analysis found no evidence of massive Hamas theft of Gaza aid",
+     "org": "Reuters",
+     "date": "25 July 2025",
+     "url": "https://www.reuters.com/world/middle-east/usaid-analysis-found-no-evidence-massive-hamas-theft-gaza-aid-2025-07-25/",
+     "note": "Reports an internal analysis by USAID's humanitarian bureau, completed in late June 2025, which examined 156 incidents of theft or loss of United States-funded supplies reported by partners between October 2023 and May 2025 and found no report alleging that Hamas had benefited. The analysis records that it could not assess whether recipients had been vetted, so it establishes the absence of evidence of systematic diversion rather than its impossibility. Corroborated by CNN, NBC News and CBC."
+    },
+    {
+     "title": "Cumulative casualties among people seeking aid at Gaza Humanitarian Foundation sites and along convoy routes",
+     "org": "The New Humanitarian",
+     "date": "15 September 2025",
+     "url": "https://www.thenewhumanitarian.org/",
+     "note": "Puts the cumulative toll at at least 2,957 killed and 19,866 wounded, above the OHCHR running count of more than 2,146 killed as of 4 September 2025, which OHCHR describes as a minimum drawn from verifiable reports."
     }
    ]
   },
@@ -1186,6 +1228,13 @@
      "date": "2026-09-14",
      "url": "https://www.thekraftgroup.com/kraftphilanthropy/israel/",
      "note": "The donor's own published account of its regional giving: $20m to American Football in Israel since 1999 and the Kraft Family Sports Campus in Jerusalem, more than $1.2m to MassChallenge Israel, and a $1m founding gift to Our Generation Speaks, the Brandeis University fellowship for Israeli and Palestinian founders."
+    },
+    {
+     "title": "Likud party platform, 1977 — contemporaneous translation",
+     "org": "United States Central Intelligence Agency, FOIA Electronic Reading Room (translating Ma'ariv)",
+     "date": "May 1977",
+     "url": "https://www.cia.gov/readingroom/",
+     "note": "Renders the founding platform's territorial clause as “Israel sovereignty alone will prevail between the sea and the Jordan River”. The 1999 platform's rejection of a Palestinian state west of the Jordan has never been rescinded."
     }
    ]
   },

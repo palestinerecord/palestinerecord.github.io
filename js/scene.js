@@ -53,16 +53,16 @@ const colours = new Float32Array(COUNT * 3);
 const sizes = new Float32Array(COUNT);
 const phases = new Float32Array(COUNT);
 
-const adult = new THREE.Color(0x7b2f2c);
-const adultHot = new THREE.Color(0xd2534c);
-const child = new THREE.Color(0xd9a441);
+const adult = new THREE.Color(0xa0453f);
+const adultHot = new THREE.Color(0xe4675d);
+const child = new THREE.Color(0xf2bd5a);
 
 for (let i = 0; i < COUNT; i++) {
   // Flattened disc — reads as ground strewn with points rather than a nebula.
-  const r = Math.pow(Math.random(), 0.62) * 46;
+  const r = Math.pow(Math.random(), 0.52) * 62;
   const a = Math.random() * Math.PI * 2;
   positions[i * 3] = Math.cos(a) * r;
-  positions[i * 3 + 1] = (Math.random() - 0.5) * 9 * (1 - r / 70);
+  positions[i * 3 + 1] = (Math.random() - 0.5) * 13 * (1 - r / 90);
   positions[i * 3 + 2] = Math.sin(a) * r * 0.72;
 
   const isChild = i < CHILD_COUNT;
@@ -71,7 +71,7 @@ for (let i = 0; i < COUNT; i++) {
   colours[i * 3 + 1] = c.g;
   colours[i * 3 + 2] = c.b;
 
-  sizes[i] = isChild ? 1.5 + Math.random() * 1.1 : 0.9 + Math.random() * 0.9;
+  sizes[i] = isChild ? 1.7 + Math.random() * 1.2 : 1.05 + Math.random() * 1.0;
   phases[i] = Math.random() * Math.PI * 2;
 }
 
@@ -103,8 +103,8 @@ const material = new THREE.ShaderMaterial({
       p.y += sin(uTime * 0.32 + phase) * 0.45;
       vec4 mv = modelViewMatrix * vec4(p, 1.0);
       float dist = -mv.z;
-      gl_PointSize = size * uPixelRatio * (170.0 / dist);
-      vAlpha = smoothstep(150.0, 16.0, dist) * (0.5 + 0.5 * sin(uTime * 0.7 + phase));
+      gl_PointSize = min(size * uPixelRatio * (205.0 / dist), 7.5 * uPixelRatio);
+      vAlpha = smoothstep(125.0, 20.0, dist) * (0.74 + 0.26 * sin(uTime * 0.7 + phase));
       gl_Position = projectionMatrix * mv;
     }
   `,
@@ -114,8 +114,11 @@ const material = new THREE.ShaderMaterial({
     void main() {
       float d = length(gl_PointCoord - vec2(0.5));
       if (d > 0.5) discard;
-      float falloff = smoothstep(0.5, 0.05, d);
-      gl_FragColor = vec4(vColour, falloff * vAlpha * 0.85);
+      // Halo plus core. The halo alone renders as a smudge at this density; the
+      // core is what gives each point an edge the eye can resolve.
+      float halo = smoothstep(0.5, 0.08, d);
+      float core = smoothstep(0.26, 0.0, d);
+      gl_FragColor = vec4(vColour * (1.0 + core * 0.7), (halo * 0.3 + core * 0.95) * vAlpha);
     }
   `,
 });
