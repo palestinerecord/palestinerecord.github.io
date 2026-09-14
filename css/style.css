@@ -1151,35 +1151,47 @@ tbody td strong { color: var(--text); }
 
 /* The toggle is a fourth control in a bar that was already close to full, and
    its 38px was enough at laptop widths to push the last nav links onto a
-   second row. The bar now sheds width in three steps, in order of how much
-   each part carries: the pill's label first (the date still reads on its
-   own), then the nav's padding and the strapline, then the search word. */
-@media (max-width: 1500px) {
+   second row. The bar sheds width in three steps, in order of how much each
+   part carries: the pill's label first (the date still reads on its own),
+   then the nav's padding and the strapline, then the search word and the
+   pill itself.
+
+   The numbers are measured, not chosen. With eleven links the bar needs
+   1,740px at full size, 1,541px once the label is gone, 1,400px once the
+   strapline and the padding go, and 1,200px once the pill and the search
+   word have gone; each breakpoint sits just above the width its own step
+   needs. They were set for nine links, and the two added since (Children,
+   Day by day) pushed the requirement past them — which is why the pill was
+   running off the right edge between 1,500 and 1,740px. Any link added here
+   moves all four numbers: measure the bar again rather than guessing. */
+@media (max-width: 1760px) {
   .topbar { gap: 14px; }
   .nav a { padding: 8px 10px; font-size: 13px; }
   .fresh-label { display: none; }
 }
-@media (max-width: 1400px) {
+@media (max-width: 1560px) {
   .topbar { gap: 10px; padding: 0 18px; }
   .nav a { padding: 8px 7px; }
   .brand-text em { display: none; }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1420px) {
   .search-open span { display: none; }
   .search-icon { display: block; }
   .search-open { padding: 7px 10px; }
   /* The date is the widest thing in the bar that is not a link, so it goes
      before the links do. The series is still dated in the footer, to the
-     month rather than the day. */
+     month rather than the day, and on the overview's hero line to the day. */
   .freshness { display: none; }
 }
 
-/* Below this the nine links no longer fit beside the brand and the controls,
-   so they become a menu. This is the bar's breakpoint, not the page's: the
-   grids stay two and three columns down to 860px. The number is what the
-   parts measure, not a round figure: brand and nine links and two buttons
-   come to about 1,020px, and the bar is given a little over that. */
-@media (max-width: 1080px) {
+/* Below this the links no longer fit beside the brand and the controls, so
+   they become a menu. This is the bar's breakpoint, not the page's: the grids
+   stay two and three columns down to 860px. The number is what the parts
+   measure, not a round figure: brand, eleven links, the theme toggle and the
+   search glyph come to 1,200px with the padding, and the bar is given a
+   little over that. It was 1,080px when there were nine links, which left
+   the last two hanging off the edge between 1,080 and 1,200. */
+@media (max-width: 1220px) {
   /* The nav is out of flow once it is a menu, so its margin-left:auto no
      longer pushes anything: the first remaining control takes over. */
   .theme-toggle { margin-left: auto; }

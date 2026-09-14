@@ -6,11 +6,32 @@
  },
  "items": [
   {
+   "date": "14 Jul 1915",
+   "year": 1915,
+   "sort": "1915-07-14",
+   "event": "The Hussein–McMahon correspondence opens",
+   "note": "Ten letters between Sharif Hussein of Mecca and the British High Commissioner in Egypt, Sir Henry McMahon, running to March 1916, in which Britain undertook to support Arab independence in return for a revolt against the Ottomans. Whether Palestine was inside or outside the promised area has been disputed ever since; Britain's own 1939 committee of inquiry could not agree, and the correspondence was made to sit alongside two later commitments that contradicted it."
+  },
+  {
+   "date": "16 May 1916",
+   "year": 1916,
+   "sort": "1916-05-16",
+   "event": "The Sykes–Picot Agreement divides the Ottoman Arab provinces",
+   "note": "A secret Anglo-French understanding, concluded with Russian assent, allotting spheres of control and placing most of Palestine under an undefined international administration. It was signed while the Hussein–McMahon undertakings were still live, and was published by the Bolsheviks in November 1917, days after the Balfour Declaration."
+  },
+  {
    "date": "3 Jan 1919",
    "year": 1919,
    "sort": "1919-01-03",
    "event": "Faisal–Weizmann Agreement signed, conditional on Arab independence",
    "note": "Faisal's handwritten reservation made the agreement void if Arab independence was not granted. It was not, and the agreement lapsed; it is nonetheless still cited as Arab consent."
+  },
+  {
+   "date": "28 Jun 1919",
+   "year": 1919,
+   "sort": "1919-06-28",
+   "event": "Article 22 of the League Covenant creates the mandate system",
+   "note": "The Covenant described mandated peoples as communities whose existence as independent nations could be provisionally recognised, and the mandatory as holding a sacred trust of civilisation until they could stand alone. Palestine was classed as a Class A mandate, the category nearest to independence — the legal premise against which the Mandate's administration is measured."
   },
   {
    "date": "28 Aug 1919",
@@ -32,6 +53,13 @@
    "sort": "1920-04-19",
    "event": "San Remo conference assigns Britain the Mandate for Palestine, incorporating the Balfour Declaration",
    "note": "A commitment made by one people to a second people over the land of a third was converted into an instrument of international law."
+  },
+  {
+   "date": "Dec 1920",
+   "year": 1920,
+   "sort": "1920-12-06",
+   "event": "The Histadrut is founded, with Hebrew labour as policy",
+   "note": "The General Federation of Jewish Labour organised the Yishuv's economy around the exclusive employment of Jewish workers and the exclusive purchase of Jewish produce. It was a labour policy in form and a separation policy in effect, and the campaigns it ran against Arab labour on Jewish-owned land are documented in its own records."
   },
   {
    "date": "1–7 May 1921",
@@ -60,6 +88,13 @@
    "sort": "1923-11-01",
    "event": "Jabotinsky publishes 'The Iron Wall'",
    "note": "Argues that Zionist colonisation can proceed only behind an iron wall of force that the native population cannot break, because no people ever consents to its own displacement. Cited in the report as an accurate description of what followed."
+  },
+  {
+   "date": "1 Aug 1925",
+   "year": 1925,
+   "sort": "1925-08-01",
+   "event": "The Palestinian Citizenship Order comes into force",
+   "note": "The Order created a Palestinian citizenship for the inhabitants of the Mandate, held by Arabs and Jews alike. It governed until 14 May 1948 and was repealed by Israel's Nationality Law of 1952, which replaced it with a status the refugees of 1948 could not meet the conditions for."
   },
   {
    "date": "1925",
@@ -128,15 +163,22 @@
    "date": "1938",
    "year": 1938,
    "sort": "1938-06-01",
-   "event": "Special Night Squads formed under Orde Wingate with Haganah members",
-   "note": "British-trained joint units used in the suppression of the revolt. Moshe Dayan and Yigal Allon served in them; the methods were carried into 1948."
+   "event": "Neturei Karta founded in Jerusalem in rejection of Zionism on religious grounds",
+   "note": "Rabbis Amram Blau and Aharon Katzenelbogen broke from the Jerusalem branch of Agudath Israel over its accommodation with the Zionist institutions of the Yishuv. The doctrinal basis is the Three Oaths of Ketubot 111a. A fringe group then and now, numbering in the hundreds to low thousands, and disowned across the Haredi world, including by Satmar (§23.1)."
   },
   {
    "date": "1938",
    "year": 1938,
    "sort": "1938-06-01",
-   "event": "Neturei Karta founded in Jerusalem in rejection of Zionism on religious grounds",
-   "note": "Rabbis Amram Blau and Aharon Katzenelbogen broke from the Jerusalem branch of Agudath Israel over its accommodation with the Zionist institutions of the Yishuv. The doctrinal basis is the Three Oaths of Ketubot 111a. A fringe group then and now, numbering in the hundreds to low thousands, and disowned across the Haredi world, including by Satmar (§23.1)."
+   "event": "Special Night Squads formed under Orde Wingate with Haganah members",
+   "note": "British-trained joint units used in the suppression of the revolt. Moshe Dayan and Yigal Allon served in them; the methods were carried into 1948."
+  },
+  {
+   "date": "7 Feb – 17 Mar 1939",
+   "year": 1939,
+   "sort": "1939-02-07",
+   "event": "The St James's Palace Conference meets in separate rooms",
+   "note": "Britain convened the Arab and Zionist delegations at St James's Palace to settle Palestine's future; the Arab Higher Committee refused to sit with the Zionist delegation, so Colonial Secretary Malcolm MacDonald held parallel talks and two official photographs were taken. Both sides rejected the British proposals of 15 March, and Britain then imposed its own policy in the White Paper of May 1939."
   },
   {
    "date": "17 May 1939",
@@ -174,6 +216,13 @@
    "note": "Administrative detention, house demolition, closure and deportation powers. Denounced at the time by Jewish jurists in Palestine as Nazi-like; retained by Israel after 1948 and still applied in the occupied territory today."
   },
   {
+   "date": "31 Aug 1947",
+   "year": 1947,
+   "sort": "1947-08-31",
+   "event": "UNSCOP reports, and its majority recommends partition",
+   "note": "The UN Special Committee on Palestine divided: a majority proposed partition with economic union, a minority a federal binational state. Neither plan was put to the population it concerned. The majority plan became the basis of Resolution 181 three months later."
+  },
+  {
    "date": "29 Nov 1947",
    "year": 1947,
    "sort": "1947-11-29",
@@ -202,11 +251,25 @@
    "note": "Resolved that refugees wishing to return to their homes and live at peace with their neighbours should be permitted to do so at the earliest practicable date. Reaffirmed by the General Assembly annually since."
   },
   {
+   "date": "24 Feb – 20 Jul 1949",
+   "year": 1949,
+   "sort": "1949-02-24",
+   "event": "The armistice agreements draw the Green Line",
+   "note": "Separate agreements with Egypt (24 February), Lebanon (23 March), Jordan (3 April) and Syria (20 July) fixed the ceasefire lines that became the 1967 borders. Each agreement stated in terms that the line was not a political or territorial boundary and was without prejudice to a final settlement."
+  },
+  {
    "date": "11 May 1949",
    "year": 1949,
    "sort": "1949-05-11",
    "event": "Israel admitted to the United Nations",
    "note": "Resolution 273 recalls Israel's undertakings to implement Resolutions 181 and 194. Neither was implemented."
+  },
+  {
+   "date": "12 May 1949",
+   "year": 1949,
+   "sort": "1949-05-12",
+   "event": "Israel signs the Lausanne Protocol, and is admitted to the UN the next day",
+   "note": "The protocol accepted the 1947 partition map as the working basis for talks and the return of refugees as a subject for them. Israel was admitted to the United Nations on 11 May 1949 on an undertaking to implement Resolutions 181 and 194; the Lausanne talks then produced nothing, and neither undertaking was carried out."
   },
   {
    "date": "14 Mar 1950",
@@ -216,11 +279,32 @@
    "note": "The legal mechanism by which the land and homes of the displaced were expropriated, including from 'present absentees' who remained inside Israel."
   },
   {
+   "date": "24 Apr 1950",
+   "year": 1950,
+   "sort": "1950-04-24",
+   "event": "Jordan annexes the West Bank",
+   "note": "The Jordanian parliament formally united the two banks and extended Jordanian nationality to the Palestinians under its control. Only Britain and Pakistan recognised the annexation; the Arab League treated the territory as a trust. The measure was undone in law only in 1988."
+  },
+  {
+   "date": "1 May 1950",
+   "year": 1950,
+   "sort": "1950-05-01",
+   "event": "UNRWA begins operations",
+   "note": "Established by General Assembly Resolution 302 (IV) in December 1949, the agency started work with about 750,000 registered refugees. It was created as a temporary body pending a political settlement, and its mandate has been renewed ever since, which is the plainest measure of how little the settlement has advanced."
+  },
+  {
    "date": "5 Jul 1950",
    "year": 1950,
    "sort": "1950-07-05",
    "event": "Law of Return grants every Jew worldwide the right to immigrate",
    "note": "Read with the Absentees' Property Law and the 1952 Citizenship Law, it is the pairing that B'Tselem and Amnesty cite as the foundation of the demographic regime."
+  },
+  {
+   "date": "14 Jul 1952",
+   "year": 1952,
+   "sort": "1952-07-14",
+   "event": "The Nationality Law comes into force and repeals Palestinian citizenship",
+   "note": "Passed by the Knesset on 1 April 1952 and in force from 14 July, the law made every Jew an Israeli national on immigration under the Law of Return, while a former Palestinian citizen acquired nationality only by proving registration on 1 March 1952 and continuous presence since the establishment of the state. Refugees who had fled or been expelled could satisfy neither condition, and the law repealed the Palestinian citizenship they had held since 1925."
   },
   {
    "date": "1953",
@@ -230,11 +314,39 @@
    "note": "Completed the transfer of expropriated property; by the mid-1950s the state and the Jewish National Fund controlled the great majority of the land."
   },
   {
+   "date": "1954",
+   "year": 1954,
+   "sort": "1954-08-16",
+   "event": "The Prevention of Infiltration Law criminalises refugee return",
+   "note": "The statute made unauthorised entry by a person who had been in Palestine before 1948 a criminal offence punishable by imprisonment and deportation, and applied to the refugees attempting to return to their own villages. It converted the physical prevention of return into a permanent legal regime."
+  },
+  {
+   "date": "29 Oct 1956",
+   "year": 1956,
+   "sort": "1956-10-29",
+   "event": "Israel invades Sinai in concert with Britain and France",
+   "note": "The Suez war was preceded by the secret Protocol of Sèvres, in which the three governments agreed the Israeli attack would supply the pretext for an Anglo-French intervention. Israel withdrew from Sinai and Gaza in March 1957 under American and Soviet pressure, having held Gaza for four months."
+  },
+  {
    "date": "1948–1966",
    "year": 1958,
    "sort": "1958-01-01",
    "event": "Military government over Palestinian citizens of Israel",
    "note": "Eighteen years of permits, curfews, closed areas and administrative detention applied to citizens on the basis of nationality. Abolished in November 1966, five months before the occupation of the West Bank and Gaza began."
+  },
+  {
+   "date": "25 Jul 1960",
+   "year": 1960,
+   "sort": "1960-07-25",
+   "event": "Basic Law: Israel Lands bars the sale of state and JNF land",
+   "note": "The Basic Law prohibits transferring ownership of land held by the state, the Development Authority or the Jewish National Fund — together about 93 per cent of the territory of Israel. Read with the JNF's own constitution, under which its land is held for the Jewish people, it is the instrument that converted the expropriations of 1948–1953 into a permanent tenure regime."
+  },
+  {
+   "date": "28 May 1964",
+   "year": 1964,
+   "sort": "1964-05-28",
+   "event": "The PLO is founded in Jerusalem",
+   "note": "The first Palestinian National Council convened in East Jerusalem, then under Jordanian rule, and adopted the Palestinian National Charter. The organisation was created under Arab League auspices and was taken over by the guerrilla factions after 1967, with Yasser Arafat elected chairman in 1969."
   },
   {
    "date": "23 Oct 1965",
@@ -244,11 +356,32 @@
    "note": "EA 1/65 Yeredor. The Court upheld the exclusion of a list drawn from the banned al-Ard movement, although the Basic Law: The Knesset then contained no provision permitting it, on the reasoning that a purpose denying the state's existence is an unlawful purpose. The first judicial limit on the political rights of Palestinian citizens; Justice Haim Cohn dissented."
   },
   {
+   "date": "10–11 Jun 1967",
+   "year": 1967,
+   "sort": "1967-06-10",
+   "event": "The Moroccan Quarter of Jerusalem is demolished",
+   "note": "Within days of the city's capture, 135 houses were bulldozed and about 650 residents expelled to clear the plaza in front of the Western Wall. Two mosques and a zawiya were destroyed. The demolition preceded any decision on the status of the territory and set the pattern for the administrative annexation of East Jerusalem that followed on 28 June."
+  },
+  {
    "date": "Jul 1967",
    "year": 1967,
    "sort": "1967-07-01",
    "event": "Allon Plan sets the template for settlement of the occupied territory",
    "note": "Proposed retaining the Jordan Valley and a chain of settlements; the geography of Area C follows it closely."
+  },
+  {
+   "date": "27 Aug 1967",
+   "year": 1967,
+   "sort": "1967-08-27",
+   "event": "Military Order 101 criminalises assembly, procession and publication",
+   "note": "The order made a gathering of ten or more persons on a political matter a criminal offence without a permit from the military commander, along with printing, displaying or distributing material of political significance. It remains in force, and is the instrument under which Palestinian protest in the West Bank has been prosecuted for more than fifty years."
+  },
+  {
+   "date": "1 Sep 1967",
+   "year": 1967,
+   "sort": "1967-09-01",
+   "event": "The Khartoum summit answers with the three noes",
+   "note": "The Arab League summit resolved on no peace with Israel, no recognition and no negotiations, while also resolving to seek withdrawal by political means. The resolution is cited as proof that no partner existed; the same document's commitment to a political rather than military course is usually left out of the citation."
   },
   {
    "date": "Sep 1967",
@@ -272,6 +405,13 @@
    "note": "The cornerstone of every subsequent negotiation, and the provision the ICJ relied on in its 2024 advisory opinion."
   },
   {
+   "date": "21 May 1968",
+   "year": 1968,
+   "sort": "1968-05-21",
+   "event": "Security Council Resolution 252 declares the measures in Jerusalem invalid",
+   "note": "The Council held that all legislative and administrative measures taken by Israel to change the status of Jerusalem, including expropriation of land and property, are invalid and cannot change that status, and called on Israel to rescind them. It was the first of a line of resolutions saying the same thing, none of which was complied with."
+  },
+  {
    "date": "21 Aug 1969",
    "year": 1969,
    "sort": "1969-08-21",
@@ -293,11 +433,46 @@
    "note": "Ended the post-1967 assumption that the territorial status quo was costless; it did not alter the status of the occupied territory."
   },
   {
+   "date": "Feb 1974",
+   "year": 1974,
+   "sort": "1974-02-01",
+   "event": "Gush Emunim is founded to settle the occupied territory",
+   "note": "The movement organised the settlement of the West Bank as a religious obligation, beginning with repeated unauthorised attempts at Sebastia near Nablus. Successive governments treated its faits accomplis as facts to be regularised rather than offences to be removed, and its outposts became the template for the process still running."
+  },
+  {
+   "date": "25–28 Oct 1974",
+   "year": 1974,
+   "sort": "1974-10-25",
+   "event": "The Rabat summit names the PLO the sole legitimate representative",
+   "note": "The Arab League summit recognised the PLO as the sole legitimate representative of the Palestinian people, ending Jordan's claim to negotiate for the West Bank. It is the decision that made the PLO the address for any settlement, and the reason the 1988 Jordanian disengagement followed."
+  },
+  {
+   "date": "22 Nov 1974",
+   "year": 1974,
+   "sort": "1974-11-22",
+   "event": "General Assembly Resolution 3236 affirms the right to self-determination and return",
+   "note": "The Assembly reaffirmed the inalienable rights of the Palestinian people to self-determination, national independence and sovereignty, and the right of the displaced to return to their homes and property, and granted the PLO observer status. Arafat had addressed the Assembly on 13 November."
+  },
+  {
+   "date": "10 Nov 1975",
+   "year": 1975,
+   "sort": "1975-11-10",
+   "event": "General Assembly Resolution 3379 equates Zionism with racism",
+   "note": "Adopted by 72 votes to 35 with 32 abstentions, and revoked on 16 December 1991 by Resolution 46/86 as the price of Israel's participation in the Madrid conference. The episode is recorded here because both the adoption and the revocation are regularly cited without the other."
+  },
+  {
    "date": "30 Mar 1976",
    "year": 1976,
    "sort": "1976-03-30",
    "event": "Land Day: six Palestinian citizens of Israel killed protesting land expropriation in the Galilee",
    "note": "The first general strike by Palestinian citizens of Israel, and the event that marked their emergence as a political community within the state."
+  },
+  {
+   "date": "Sep 1976",
+   "year": 1976,
+   "sort": "1976-09-07",
+   "event": "The Koenig Memorandum is leaked",
+   "note": "Written in April 1976 by Yisrael Koenig, the Interior Ministry's district commissioner for the north, the memorandum proposed measures to dilute the Arab population of the Galilee: expanding Jewish settlement, restricting Arab employment and study, and weakening Rakah. Its publication in Al HaMishmar confirmed that demographic management was departmental policy rather than inference."
   },
   {
    "date": "1977–1978",
@@ -307,11 +482,25 @@
    "note": "The World Zionist Organisation plan stated the aim of settling between and around Palestinian population centres so as to make a contiguous Palestinian territory impossible."
   },
   {
+   "date": "22 Mar 1979",
+   "year": 1979,
+   "sort": "1979-03-22",
+   "event": "Security Council Resolution 446 calls the settlements a violation of the Fourth Geneva Convention",
+   "note": "The Council determined that Israel's settlement policy in the territories occupied since 1967 has no legal validity and constitutes a serious obstruction to peace, and established a commission to examine the situation. The United States abstained; the resolution passed 12–0."
+  },
+  {
    "date": "26 Mar 1979",
    "year": 1979,
    "sort": "1979-03-26",
    "event": "Egypt–Israel peace treaty",
    "note": "Removed the strongest Arab military constraint on Israeli action in the occupied territory; the autonomy talks on the Palestinians led nowhere."
+  },
+  {
+   "date": "22 Oct 1979",
+   "year": 1979,
+   "sort": "1979-10-22",
+   "event": "The Elon Moreh judgment bars requisition of private land for settlement",
+   "note": "In Dweikat v. Government of Israel (HCJ 390/79) the Supreme Court held that private Palestinian land could not be seized for a settlement founded on ideological rather than military grounds, and ordered Elon Moreh removed. The state's response was to switch to declaring land public — by 1984 more than 800,000 dunams had been declared state land, and settlement continued on it."
   },
   {
    "date": "30 Jul 1980",
@@ -321,11 +510,39 @@
    "note": "Declared null and void by UN Security Council Resolution 478 in August 1980; the annexation has never been recognised in international law."
   },
   {
+   "date": "20 Aug 1980",
+   "year": 1980,
+   "sort": "1980-08-20",
+   "event": "Security Council Resolution 478 declares the Jerusalem Law null and void",
+   "note": "The Council held the Basic Law a violation of international law, declared it null and void, and called on states with diplomatic missions in Jerusalem to withdraw them. Thirteen states did. The resolution is the standing legal answer to the 2017 American recognition."
+  },
+  {
+   "date": "8 Nov 1981",
+   "year": 1981,
+   "sort": "1981-11-08",
+   "event": "Military Order 947 establishes the Civil Administration",
+   "note": "The order created a civil administration in the West Bank under the area commander, separating civil functions from the military government in form while leaving them subordinate to it in substance. It is the body that now issues building permits, demolishes houses and administers land in Area C."
+  },
+  {
+   "date": "17 Dec 1981",
+   "year": 1981,
+   "sort": "1981-12-17",
+   "event": "Security Council Resolution 497 declares the annexation of the Golan without effect",
+   "note": "Adopted unanimously three days after the Golan Heights Law, the resolution held Israel's imposition of its law and administration on the occupied Syrian Golan null and void and without international legal effect, and demanded its rescission. The annexation stands, and was recognised by the United States in March 2019."
+  },
+  {
    "date": "6 Jun 1982",
    "year": 1982,
    "sort": "1982-06-06",
    "event": "Invasion of Lebanon",
    "note": "An estimated 17,000–20,000 killed, the great majority civilians, during the invasion and the siege of Beirut."
+  },
+  {
+   "date": "16 Dec 1982",
+   "year": 1982,
+   "sort": "1982-12-16",
+   "event": "The General Assembly calls the Sabra and Shatila massacre an act of genocide",
+   "note": "Resolution 37/123 D resolved that the massacre was an act of genocide, by 123 votes to none with 22 abstentions. It is the only occasion on which the Assembly has applied the term to conduct in this conflict, and it did so three months after the killings and while the Kahan Commission was still sitting."
   },
   {
    "date": "8 Feb 1983",
@@ -335,6 +552,13 @@
    "note": "Israel's own commission of inquiry found he bore personal responsibility for ignoring the danger of bloodshed. He resigned as Defence Minister and became Prime Minister eighteen years later."
   },
   {
+   "date": "Feb 1984",
+   "year": 1984,
+   "sort": "1984-02-07",
+   "event": "The Karp Report is released, two years after it was written",
+   "note": "A committee under Deputy Attorney General Yehudit Karp examined seventy cases of settler violence against Palestinians in 1980–1982 and found fifty-three unsolved, with the police failing to investigate and the army and settlers obstructing. The report was submitted in 1982 and withheld; Karp resigned when nothing was acted on, and the findings have been repeated by every subsequent monitor."
+  },
+  {
    "date": "4 Aug 1985",
    "year": 1985,
    "sort": "1985-08-04",
@@ -342,11 +566,25 @@
    "note": "Under Defence Minister Yitzhak Rabin: administrative detention restored, deportations resumed on a large scale, and house demolition extended beyond cases of killing or wounding. The UN Special Committee to Investigate Israeli Practices recorded the escalation at the time. Rabin was quoted as saying the purpose was to make life so difficult that the population would leave. The First Intifada began two years later."
   },
   {
+   "date": "Dec 1987",
+   "year": 1987,
+   "sort": "1987-12-14",
+   "event": "Hamas is founded in Gaza",
+   "note": "Formed out of the Muslim Brotherhood's Gaza branch in the first days of the intifada. Israel had permitted and in part encouraged the Brotherhood's charitable and religious network through the 1970s and 1980s as a counterweight to the secular nationalism of the PLO — a calculation Israeli officials have since acknowledged in print."
+  },
+  {
    "date": "Jan 1988",
    "year": 1988,
    "sort": "1988-01-19",
    "event": "The 'force, might and beatings' policy in the First Intifada",
    "note": "Defence Minister Yitzhak Rabin's instruction; some 1,000 Palestinians hospitalised with fractures in the first months, documented at the time by Israeli and international medical organisations."
+  },
+  {
+   "date": "31 Jul 1988",
+   "year": 1988,
+   "sort": "1988-07-31",
+   "event": "Jordan severs its legal and administrative ties to the West Bank",
+   "note": "King Hussein's address dissolved the Jordanian parliament's West Bank seats and ended the administrative link, leaving the PLO as the sole claimant. The Palestinian Declaration of Independence followed in November, and the West Bank's residents were left holding no citizenship at all."
   },
   {
    "date": "15 Nov 1988",
@@ -363,11 +601,39 @@
    "note": "UN Security Council Resolution 672 condemned the killings; Israel refused entry to the Secretary-General's mission."
   },
   {
+   "date": "30 Oct 1991",
+   "year": 1991,
+   "sort": "1991-10-30",
+   "event": "The Madrid conference opens",
+   "note": "The first direct multilateral talks, convened by the United States and the Soviet Union. The PLO was excluded by Israeli veto and the Palestinians attended inside a joint Jordanian delegation. The conference produced no agreement; the channel that produced Oslo was opened secretly alongside it."
+  },
+  {
+   "date": "17 Dec 1992",
+   "year": 1992,
+   "sort": "1992-12-17",
+   "event": "415 Palestinians are deported to Marj al-Zuhour",
+   "note": "The mass expulsion of alleged Hamas and Islamic Jihad members to a strip of southern Lebanon, where they were refused entry and spent a winter in tents. The Security Council condemned it as a violation of the Fourth Geneva Convention in Resolution 799 the following day and demanded their safe and immediate return; most returned in 1993."
+  },
+  {
    "date": "13 Sep 1993",
    "year": 1993,
    "sort": "1993-09-13",
    "event": "Oslo I: Declaration of Principles signed in Washington",
    "note": "Deferred Jerusalem, refugees, settlements and borders to final-status talks that never concluded. The settler population roughly doubled during the Oslo years."
+  },
+  {
+   "date": "29 Apr 1994",
+   "year": 1994,
+   "sort": "1994-04-29",
+   "event": "The Paris Protocol binds the Palestinian economy to Israel's",
+   "note": "The economic annex of the Oslo framework created a customs union in which Israel collects Palestinian import duties and VAT and transfers them, sets the tariff schedule, and controls the crossings. The clearance revenues so collected have been withheld repeatedly since, which is why the arrangement is described as a lever rather than a partnership."
+  },
+  {
+   "date": "4 May 1994",
+   "year": 1994,
+   "sort": "1994-05-04",
+   "event": "The Gaza–Jericho Agreement begins the transfer of civil powers",
+   "note": "Signed in Cairo, it created the Palestinian Authority and moved Israeli forces out of Jericho and most of Gaza, while leaving settlements, borders, airspace and external security with Israel. The interim arrangements it set up for five years are still in force."
   },
   {
    "date": "28 Sep 1995",
@@ -398,11 +664,25 @@
    "note": "A further redeployment agreement brokered at Wye Plantation; implementation was suspended by Israel two months later. The last of the Oslo-era agreements before the collapse at Camp David."
   },
   {
+   "date": "6 Sep 1999",
+   "year": 1999,
+   "sort": "1999-09-06",
+   "event": "The Supreme Court holds that the interrogation methods are unlawful",
+   "note": "In PCATI v. State of Israel (HCJ 5100/94) the court ruled that shaking, the shabach position, painful squatting and sleep deprivation were not authorised by law, while leaving open a necessity defence for individual interrogators after the fact. The defence became the route by which the practices continued; the Public Committee Against Torture in Israel records that almost no complaint has resulted in a prosecution since."
+  },
+  {
    "date": "11–25 Jul 2000",
    "year": 2000,
    "sort": "2000-07-11",
    "event": "Camp David summit collapses",
    "note": "The 'generous offer' narrative that followed is contradicted by the accounts of participants, including US negotiator Robert Malley and Israeli negotiator Shlomo Ben-Ami."
+  },
+  {
+   "date": "30 Apr 2001",
+   "year": 2001,
+   "sort": "2001-04-30",
+   "event": "The Mitchell Committee reports on the second intifada",
+   "note": "The international fact-finding committee chaired by Senator George Mitchell called for an unconditional ceasefire, a freeze on all settlement construction including natural growth, and an end to Palestinian attacks. The settlement freeze was not implemented; the committee's finding that the Palestinian Authority had not planned the uprising is also part of the record."
   },
   {
    "date": "Mar–Apr 2002",
@@ -419,6 +699,20 @@
    "note": "About 85% of its route runs inside the West Bank rather than on the Green Line, enclosing major settlement blocs. Ruled contrary to international law by the ICJ in 2004."
   },
   {
+   "date": "30 Apr 2003",
+   "year": 2003,
+   "sort": "2003-04-30",
+   "event": "The Quartet publishes the Road Map",
+   "note": "A three-phase plan to a Palestinian state by 2005, with a settlement freeze in phase one. Israel accepted it with fourteen reservations; the state did not arrive, the freeze did not happen, and the settler population of the West Bank roughly doubled over the following two decades."
+  },
+  {
+   "date": "30 Jun 2004",
+   "year": 2004,
+   "sort": "2004-06-30",
+   "event": "The Beit Sourik judgment orders the wall's route changed",
+   "note": "In Beit Sourik Village Council v. Government of Israel (HCJ 2056/04) the Supreme Court accepted the security rationale for the barrier but held some thirty kilometres of its route disproportionate in the harm done to the villagers, and ordered it moved. The International Court of Justice gave its advisory opinion nine days later, holding the sections inside occupied territory contrary to international law altogether."
+  },
+  {
    "date": "Aug 2005",
    "year": 2005,
    "sort": "2005-08-15",
@@ -433,11 +727,32 @@
    "note": "Monitored and certified as free and fair by international observers, including the Carter Center and the EU. Aid was suspended and the blockade followed."
   },
   {
+   "date": "12 Jul 2006",
+   "year": 2006,
+   "sort": "2006-07-12",
+   "event": "The Lebanon war begins",
+   "note": "Thirty-four days of fighting that killed about 1,100 Lebanese, most of them civilians, and 165 Israelis. Israel's air force chief described the Dahiya doctrine that emerged from it — disproportionate force against the civilian infrastructure of the area from which fire comes — a doctrine later cited in relation to Gaza by the Goldstone Report."
+  },
+  {
+   "date": "27 Nov 2007",
+   "year": 2007,
+   "sort": "2007-11-27",
+   "event": "The Annapolis conference relaunches final-status talks",
+   "note": "Convened by the United States with Israeli, Palestinian and Arab participation, it set a target of an agreement by the end of 2008. The talks ended with the Gaza offensive of December 2008; Olmert's map, offered in September 2008, was the last final-status proposal made."
+  },
+  {
    "date": "15 Sep 2009",
    "year": 2009,
    "sort": "2009-09-15",
    "event": "Goldstone Report documents the Dahiya Doctrine",
    "note": "The UN fact-finding mission on the 2008–09 Gaza conflict found evidence of war crimes and possible crimes against humanity, and recorded the deliberate application of disproportionate force against civilian infrastructure as doctrine."
+  },
+  {
+   "date": "31 Oct 2011",
+   "year": 2011,
+   "sort": "2011-10-31",
+   "event": "UNESCO admits Palestine as a member state",
+   "note": "The vote was 107 to 14 with 52 abstentions. The United States and Israel cut their funding of the agency in response, under American statutes barring contributions to any UN body admitting Palestine, and both later withdrew from it."
   },
   {
    "date": "29 Nov 2012",
@@ -461,6 +776,13 @@
    "note": "Adopted 14–0 with the United States abstaining — the only occasion in the period on which a settlement resolution was not vetoed."
   },
   {
+   "date": "15–17 Mar 2017",
+   "year": 2017,
+   "sort": "2017-03-15",
+   "event": "The ESCWA apartheid report is published and withdrawn",
+   "note": "The report by Richard Falk and Virginia Tilley for the UN Economic and Social Commission for Western Asia concluded that Israel had established an apartheid regime. Under American and Israeli pressure the Secretary-General ordered it removed from the commission's website, and the commission's executive secretary, Rima Khalaf, resigned rather than comply."
+  },
+  {
    "date": "6 Dec 2017",
    "year": 2017,
    "sort": "2017-12-06",
@@ -468,11 +790,32 @@
    "note": "Condemned by the General Assembly 128–9. The embassy moved on 14 May 2018, the day Israeli forces killed some 60 Palestinians at the Gaza perimeter fence."
   },
   {
+   "date": "14 May 2018",
+   "year": 2018,
+   "sort": "2018-05-14",
+   "event": "The United States moves its embassy to Jerusalem",
+   "note": "The opening ceremony was held on the seventieth anniversary of the declaration of the state. On the same day, Israeli forces shot dead about sixty demonstrators at the Gaza perimeter fence during the Great March of Return; the UN Human Rights Council's commission of inquiry later found that the shootings were of unarmed protesters and may amount to crimes against humanity."
+  },
+  {
    "date": "18 Nov 2019",
    "year": 2019,
    "sort": "2019-11-18",
    "event": "The United States declares that settlements are 'not per se inconsistent with international law'",
    "note": "The Pompeo declaration reversed the 1978 Hansell opinion of the State Department's own legal adviser. It was reversed again in 2024, and the settlements' status in international law was unaffected throughout."
+  },
+  {
+   "date": "25 Nov 2019",
+   "year": 2019,
+   "sort": "2019-11-25",
+   "event": "Israel deports the Human Rights Watch director",
+   "note": "Omar Shakir, the organisation's Israel and Palestine director, was expelled after the Supreme Court upheld the order on 5 November under the 2017 amendment to the Entry to Israel Law barring anyone who has called for a boycott. The court held that the bar applies even where the call is founded on the protection of human rights or on international law; it was the first expulsion under the amendment."
+  },
+  {
+   "date": "20 Dec 2019",
+   "year": 2019,
+   "sort": "2019-12-20",
+   "event": "The ICC Prosecutor finds a basis to investigate",
+   "note": "Fatou Bensouda concluded the five-year preliminary examination with the determination that war crimes have been or are being committed in the West Bank, including East Jerusalem, and in Gaza, that cases would be admissible, and that an investigation would serve the interests of justice. She asked the Pre-Trial Chamber to confirm the territorial scope first; the investigation opened on 3 March 2021."
   },
   {
    "date": "15 Sep 2020",

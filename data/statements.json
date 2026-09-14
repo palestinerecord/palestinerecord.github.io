@@ -412,6 +412,21 @@
       "significance": "Denial of the existence of the national group is listed by genocide scholars among the standard precursor markers: a group that does not exist cannot be destroyed, and cannot claim the protection of the Convention."
     },
     {
+      "speaker": "Avigdor Lieberman",
+      "role": "Defence Minister of Israel",
+      "date": "15 April 2018",
+      "sort": "2018-04-15",
+      "cat": [
+        "dehumanisation",
+        "warcrimes"
+      ],
+      "tier": "Cabinet",
+      "quote": "There are no innocent people in the Gaza Strip.",
+      "context": "Said on Israeli public radio after ten days of the Great March of Return, in which Israeli snipers had killed about thirty demonstrators at the perimeter fence. Lieberman added that everyone in Gaza is connected to Hamas and receives a salary from Hamas, and that those approaching the fence were operatives of its military wing.",
+      "source": "AFP and The Jerusalem Post, 16 April 2018, reporting remarks made the previous day.",
+      "significance": "The collective-guilt formula that became routine after October 2023 was ministerial language five years earlier, and was applied then to unarmed demonstrators. It is recorded here with its correct date because it circulated widely in late 2023 as though it had been said during the current war: the statement is real, the 30 November 2023 date attached to it in viral posts is not."
+    },
+    {
       "speaker": "B'Tselem",
       "role": "Israeli Information Center for Human Rights in the Occupied Territories",
       "date": "12 January 2021",
@@ -488,6 +503,22 @@
       "significance": "The explicit naming of the 1948 expulsion as the declared goal, with the stated ambition of exceeding it. The 1948 Nakba expelled some 750,000 Palestinians; “overshadowing” it in a territory of 2.3 million describes a scale of removal that can only be achieved by destruction."
     },
     {
+      "speaker": "Nissim Vaturi",
+      "role": "Deputy Speaker of the Knesset (Likud)",
+      "date": "9 October 2023",
+      "sort": "2023-10-09",
+      "cat": [
+        "genocide",
+        "children",
+        "cleansing"
+      ],
+      "tier": "Legislature",
+      "quote": "Erase Gaza. Nothing else will satisfy us. It is not acceptable that we maintain a terrorist authority next to Israel. Don't leave a child there — expel everyone.",
+      "context": "Subsequently: referred to Gazans as “subhumans” (February 2025); called to “burn Gaza” and “kill all adult men” (March 2025); posted an image of bombed Gaza captioned “no Arabs no terror problems” (September 2025); and on Channel 14 (c. June 2026), of the West Bank: “Jewish Israelis will not be able to live here in peace until we expel all the Arabs from this area. There should not be any Arabs there at all.”",
+      "source": "Euro-Med Human Rights Monitor; Israeli media, 2023–2026.",
+      "significance": "The Knesset Ethics Committee ruled in February 2025 that calling Palestinians “subhumans” and calling to “kill all adult men” did not violate Knesset ethical standards — a formal institutional finding that genocidal incitement is within the bounds of acceptable legislative speech."
+    },
+    {
       "speaker": "Yoav Gallant",
       "role": "Defence Minister of Israel",
       "date": "9 October 2023",
@@ -520,20 +551,33 @@
       "significance": "Three of the five principal markers of genocidal intent identified in ICJ and ICTR jurisprudence in a single statement: dehumanisation, an express call for extermination, and forced mass displacement stated as a defined mission objective. The speaker is the minister responsible for the formation of Israeli children."
     },
     {
-      "speaker": "Nissim Vaturi",
-      "role": "Deputy Speaker of the Knesset (Likud)",
-      "date": "9 October 2023",
-      "sort": "2023-10-09",
+      "speaker": "Maj. Gen. Ghassan Alian",
+      "role": "Head of COGAT (Coordinator of Government Activities in the Territories)",
+      "date": "10 October 2023",
+      "sort": "2023-10-10",
       "cat": [
-        "genocide",
-        "children",
-        "cleansing"
+        "dehumanisation",
+        "starvation"
       ],
-      "tier": "Legislature",
-      "quote": "Erase Gaza. Nothing else will satisfy us. It is not acceptable that we maintain a terrorist authority next to Israel. Don't leave a child there — expel everyone.",
-      "context": "Subsequently: referred to Gazans as “subhumans” (February 2025); called to “burn Gaza” and “kill all adult men” (March 2025); posted an image of bombed Gaza captioned “no Arabs no terror problems” (September 2025); and on Channel 14 (c. June 2026), of the West Bank: “Jewish Israelis will not be able to live here in peace until we expel all the Arabs from this area. There should not be any Arabs there at all.”",
-      "source": "Euro-Med Human Rights Monitor; Israeli media, 2023–2026.",
-      "significance": "The Knesset Ethics Committee ruled in February 2025 that calling Palestinians “subhumans” and calling to “kill all adult men” did not violate Knesset ethical standards — a formal institutional finding that genocidal incitement is within the bounds of acceptable legislative speech."
+      "tier": "Military",
+      "quote": "Human animals must be treated as such. There will be no electricity and no water, there will only be destruction. You wanted hell, you will get hell.",
+      "context": "Video statement in Arabic, addressed directly to the population of Gaza.",
+      "source": "COGAT official channels, 10 October 2023.",
+      "significance": "The officer in command of the body that administers the movement of goods and people into Gaza, stating that deprivation of water and electricity is the policy and that the population is not human. The statement is directly probative both of the actus reus of Article II(c) and of the mens rea."
+    },
+    {
+      "speaker": "Rear Admiral Daniel Hagari",
+      "role": "Chief Spokesperson of the Israel Defense Forces",
+      "date": "10 October 2023",
+      "sort": "2023-10-10",
+      "cat": [
+        "warcrimes"
+      ],
+      "tier": "Military",
+      "quote": "The emphasis is on damage and not on accuracy.",
+      "context": "A briefing to Israeli military correspondents on the third day of the air campaign, reported the same morning by Haaretz's live blog. In the same briefing Hagari said thousands of munitions had been dropped in twenty-four hours, at five times the rate of the 2006 Lebanon war.",
+      "source": "Haaretz live blog, 10 October 2023, reported in English by Middle East Eye and Common Dreams the same day.",
+      "significance": "An operational statement rather than a political one: the declared criterion of target selection is the scale of destruction rather than the discrimination between military objectives and civilians, which is the distinction Article 48 of Additional Protocol I requires. The dispute over it is recorded with it — the briefing was in Hebrew, the English renderings are translations, and HonestReporting argues the sentence is a paraphrase of Hagari's words rather than a verbatim quotation. No Israeli correction of the Haaretz report was issued."
     },
     {
       "speaker": "Yoav Gallant",
@@ -551,19 +595,19 @@
       "significance": "“Everything” is not a military objective. The statement describes an outcome — the elimination of a place and the conditions of its collective life — rather than the defeat of an armed force."
     },
     {
-      "speaker": "Maj. Gen. Ghassan Alian",
-      "role": "Head of COGAT (Coordinator of Government Activities in the Territories)",
-      "date": "10 October 2023",
-      "sort": "2023-10-10",
+      "speaker": "Ezra Yachin",
+      "role": "Reservist mobilised by the IDF to address troops; veteran of the Lehi militia and of the Deir Yassin massacre of April 1948",
+      "date": "12 October 2023",
+      "sort": "2023-10-12",
       "cat": [
-        "dehumanisation",
-        "starvation"
+        "genocide",
+        "dehumanisation"
       ],
       "tier": "Military",
-      "quote": "Human animals must be treated as such. There will be no electricity and no water, there will only be destruction. You wanted hell, you will get hell.",
-      "context": "Video statement in Arabic, addressed directly to the population of Gaza.",
-      "source": "COGAT official channels, 10 October 2023.",
-      "significance": "The officer in command of the body that administers the movement of goods and people into Gaza, stating that deprivation of water and electricity is the policy and that the population is not human. The statement is directly probative both of the actus reus of Article II(c) and of the mens rea."
+      "quote": "Be triumphant and finish them off, and don't leave anyone behind. Erase the memory of them.",
+      "context": "Yachin, then 95, was called up five days after 7 October and driven in an army vehicle, in uniform, to address units before the ground invasion. He had lectured to the army for fifty years; the IDF's chief rabbi promoted him to First Sergeant in 2018.",
+      "source": "Read to the International Court of Justice by advocate Tembeka Ngcukaitobi for South Africa, 11 January 2024; reported by Middle East Eye and the World Socialist Web Site.",
+      "significance": "South Africa advanced it not as the view of one old man but as evidence of what the army chose to transmit to soldiers on the eve of the ground operation: the state selected the speaker, supplied the transport and the platform, and the address was made to units about to enter Gaza."
     },
     {
       "speaker": "Israel Katz",
@@ -625,18 +669,19 @@
       "significance": "Erasure of a place, not defeat of a force. Cited among the ministerial statements catalogued in South Africa's ICJ application."
     },
     {
-      "speaker": "Tally Gotliv",
-      "role": "Member of Knesset (Likud)",
-      "date": "23 October 2023",
-      "sort": "2023-10-23",
+      "speaker": "Meirav Ben-Ari",
+      "role": "Member of Knesset (Yesh Atid, the main opposition party)",
+      "date": "16 October 2023",
+      "sort": "2023-10-16",
       "cat": [
-        "starvation"
+        "children",
+        "dehumanisation"
       ],
       "tier": "Legislature",
-      "quote": "Without hunger and thirst among the Gazan population, we will not succeed in recruiting collaborators, we will not succeed in recruiting intelligence, or in bribing people with food, drink, medicine, in order to obtain intelligence.",
-      "context": "Public statement. Gotliv separately said: “Without a Hiroshima-style attack, the war's objective will not be achieved.”",
-      "source": "Euro-Med Human Rights Monitor; Israeli press, October 2023.",
-      "significance": "The explicit statement that mass civilian hunger and thirst are instruments of intelligence collection — combined with the total blockade imposed from 2 March 2025 — is directly probative of starvation as a deliberate method of warfare."
+      "quote": "The children of Gaza have brought this upon themselves.",
+      "context": "Said in the Knesset chamber during a debate in which the Palestinian member Aida Touma-Sliman noted that more than nine hundred children had been killed by Israeli bombing in nine days. Ben-Ari first heckled that there is no symmetry, then took the floor to repeat it.",
+      "source": "Knesset session video of 16 October 2023, timestamped and translated by Jonathan Ofir for Mondoweiss; republished by Truthout. The National rendered the line as “The children of Gaza brought it upon themselves.”",
+      "significance": "The speaker sits for the liberal opposition rather than the governing right, which is why the statement is included: the attribution of responsibility to the victim group's children was not confined to the coalition. The two English renderings are independent translations of the same Hebrew sentence."
     },
     {
       "speaker": "Almog Cohen",
@@ -651,6 +696,20 @@
       "context": "Public statement.",
       "source": "Euro-Med Human Rights Monitor.",
       "significance": "An explicit call for the destruction of civilian neighbourhoods on a rolling schedule, tied to a political demand, “on its inhabitants” — collective punishment expressly prohibited by Article 33 of the Fourth Geneva Convention."
+    },
+    {
+      "speaker": "Tally Gotliv",
+      "role": "Member of Knesset (Likud)",
+      "date": "23 October 2023",
+      "sort": "2023-10-23",
+      "cat": [
+        "starvation"
+      ],
+      "tier": "Legislature",
+      "quote": "Without hunger and thirst among the Gazan population, we will not succeed in recruiting collaborators, we will not succeed in recruiting intelligence, or in bribing people with food, drink, medicine, in order to obtain intelligence.",
+      "context": "Public statement. Gotliv separately said: “Without a Hiroshima-style attack, the war's objective will not be achieved.”",
+      "source": "Euro-Med Human Rights Monitor; Israeli press, October 2023.",
+      "significance": "The explicit statement that mass civilian hunger and thirst are instruments of intelligence collection — combined with the total blockade imposed from 2 March 2025 — is directly probative of starvation as a deliberate method of warfare."
     },
     {
       "speaker": "Ohad Tal",
@@ -711,6 +770,21 @@
       "significance": "The denial of civilian status to an entire population of 2.3 million, of whom roughly half are children, is the precondition for treating the whole of it as a lawful target."
     },
     {
+      "speaker": "Benjamin Netanyahu",
+      "role": "Prime Minister of Israel",
+      "date": "3 November 2023",
+      "sort": "2023-11-03",
+      "cat": [
+        "genocide",
+        "dehumanisation"
+      ],
+      "tier": "Head of government",
+      "quote": "This is the war between the sons of light and the sons of darkness. We will not let up on our mission until the light overcomes the darkness.",
+      "context": "A letter to Israeli soldiers and officers, published on the Prime Minister's own account, which opened by repeating the Amalek verse — “Remember what Amalek did to you” — that he had used in his televised address of 28 October.",
+      "source": "Letter of 3 November 2023, reported by The Jerusalem Post; translated in Al-Haq's compilation “Statements by Israeli Officials, Soldiers and Civil Society on Genocide”, January 2024.",
+      "significance": "The phrase is from the Qumran War Scroll and describes a war of annihilation between two peoples rather than a campaign against an armed group. Its significance here is the audience and the pairing: it was addressed to the troops carrying out the operation, in the same document as the Amalek reference that South Africa placed before the International Court of Justice."
+    },
+    {
       "speaker": "Amichai Eliyahu",
       "role": "Heritage Minister",
       "date": "5 November 2023",
@@ -723,6 +797,20 @@
       "context": "Radio Kol Barama interview. Eliyahu was suspended from cabinet meetings but not dismissed.",
       "source": "Israeli radio, 5 November 2023; international wire coverage.",
       "significance": "A serving minister treating the nuclear annihilation of 2.3 million people as an available policy option. The absence of dismissal is itself evidence: the state declined to treat the statement as disqualifying."
+    },
+    {
+      "speaker": "Yitzhak Kroizer",
+      "role": "Member of Knesset (Otzma Yehudit)",
+      "date": "5 November 2023",
+      "sort": "2023-11-05",
+      "cat": [
+        "genocide"
+      ],
+      "tier": "Legislature",
+      "quote": "The Gaza Strip should be flattened, and there should be one sentence for everyone there — death. […] We have to wipe the Gaza Strip off the map. […] There are no innocents there.",
+      "context": "Said in an interview on Galey Israel radio a month into the campaign, by a member of the governing coalition.",
+      "source": "Galey Israel, 5 November 2023; official translation in Al-Haq's compilation “Statements by Israeli Officials, Soldiers and Civil Society on Genocide”, January 2024.",
+      "significance": "A call for the death of the entire population of a territory, made by a serving legislator of a coalition party. Direct and public incitement to commit genocide is a separate offence under Article III(c) of the Genocide Convention, complete whether or not genocide follows. Kroizer was appointed chair of a Knesset committee in August 2025."
     },
     {
       "speaker": "Avi Dichter",
@@ -751,6 +839,21 @@
       "context": "A letter written to Israeli soldiers in November 2023 comparing the Gaza operation to what the UN Commission of Inquiry describes as a “holy war of total annihilation” in the Hebrew Bible.",
       "source": "UN Independent International Commission of Inquiry on the OPT, A/HRC/60/CRP.3, 16 September 2025.",
       "significance": "Cited by the Commission of Inquiry as part of the evidentiary basis for its finding that Netanyahu personally engaged in direct and public incitement to commit genocide."
+    },
+    {
+      "speaker": "Maj. Gen. (res.) Giora Eiland",
+      "role": "Former head of Israel's National Security Council; adviser to the Defence Minister during the campaign",
+      "date": "November 2023",
+      "sort": "2023-11-19",
+      "cat": [
+        "genocide",
+        "starvation"
+      ],
+      "tier": "Military",
+      "quote": "Severe epidemics in the south of the Gaza Strip will bring victory closer.",
+      "context": "From an article headed “Let us not be intimidated by the world”, published in the Hebrew edition of Yedioth Ahronoth while the international agencies were warning that the collapse of water and sanitation would produce exactly such epidemics. Eiland had earlier argued that the population of northern Gaza should be given the choice of leaving or starving.",
+      "source": "Yedioth Ahronoth, November 2023; translated and reported by The New Arab and others.",
+      "significance": "Disease is treated as an instrument of the campaign rather than a consequence to be mitigated. Article II(c) of the Genocide Convention covers deliberately inflicting on a group conditions of life calculated to bring about its physical destruction, and the author is a former national security adviser writing in the country's largest-circulation paper, not an anonymous account."
     },
     {
       "speaker": "Masha Gessen",
@@ -1080,20 +1183,6 @@
       "significance": "The single most damaging admission in the forcible-transfer record: a serving minister conceding that the word doing all the legal work in the government's position means coercion. It removes the principal fig-leaf relied on to distinguish “encouraged emigration” from deportation under Article 49 of the Fourth Geneva Convention."
     },
     {
-      "speaker": "Israeli public opinion",
-      "role": "Survey cited by the Times of Israel",
-      "date": "2025",
-      "sort": "2025-07-01",
-      "cat": [
-        "society"
-      ],
-      "tier": "Polling",
-      "quote": "65 per cent of Jewish Israelis believe the IDF is held back from achieving its military objectives by adherence to the principle of minimising unnecessary killing and harm to civilians.",
-      "context": "Cited alongside the finding that IDF soldiers are “rarely punished for posting content online” regardless of what the content documents.",
-      "source": "Times of Israel, 2025.",
-      "significance": "A majority regarding the law of armed conflict itself as the obstacle. This is the societal counterpart to the ministerial statements: the constraint, not the killing, is what is resented."
-    },
-    {
       "speaker": "Avi Shlaim",
       "role": "Emeritus Professor of International Relations, University of Oxford; Israeli historian and former Israeli soldier; Fellow of the British Academy",
       "date": "July 2025",
@@ -1108,6 +1197,20 @@
       "context": "Shlaim served in the Israeli army in the mid-1960s and describes his position as having changed through archival research. He has also said: “I now think there is no longer a meaningful distinction between Israel proper and Israel in the West Bank. It’s apartheid and Jewish supremacy.” His collection Genocide in Gaza: Israel’s Long War on Palestine was published by Irish Pages Press in 2024.",
       "source": "Jacobin, July 2025; Journal of Holy Land and Palestine Studies, 2025–2026; Avi Shlaim, Genocide in Gaza (Irish Pages Press, 2024). Report §23.3.",
       "significance": "An Israeli historian of the New Historians school, decorated by the British Academy, applying both the apartheid and the genocide characterisations on the basis of the archival and documentary record."
+    },
+    {
+      "speaker": "Israeli public opinion",
+      "role": "Survey cited by the Times of Israel",
+      "date": "2025",
+      "sort": "2025-07-01",
+      "cat": [
+        "society"
+      ],
+      "tier": "Polling",
+      "quote": "65 per cent of Jewish Israelis believe the IDF is held back from achieving its military objectives by adherence to the principle of minimising unnecessary killing and harm to civilians.",
+      "context": "Cited alongside the finding that IDF soldiers are “rarely punished for posting content online” regardless of what the content documents.",
+      "source": "Times of Israel, 2025.",
+      "significance": "A majority regarding the law of armed conflict itself as the obstacle. This is the societal counterpart to the ministerial statements: the constraint, not the killing, is what is resented."
     },
     {
       "speaker": "Israel Katz",
@@ -1422,6 +1525,21 @@
       "context": "Posted on X following a Hezbollah drone strike that killed four IDF soldiers in southern Lebanon. He added that he had delivered the same message to the Prime Minister “even in our private meetings.”",
       "source": "Euronews; JNS; Al Jazeera; Middle East Eye; Mediaite; The Daily Caller, 19 June 2026.",
       "significance": "A serving national security minister calling for an entire country to burn, and proposing a 1,000:1 ratio of Lebanese to Israeli grief, is direct and public incitement to genocide against a second national group under Article III(c). The arithmetic echoes the 50:1 formula articulated by former Military Intelligence chief Haliva in respect of Gaza."
+    },
+    {
+      "speaker": "UN Independent International Commission of Inquiry on the OPT",
+      "role": "S. Muralidhar (chair), Chris Sidoti and Navi Pillay — report A/HRC/62/CRP.2, “The essence of childhood has been destroyed”",
+      "date": "23 June 2026",
+      "sort": "2026-06-23",
+      "cat": [
+        "findings",
+        "children"
+      ],
+      "tier": "UN body",
+      "quote": "Israeli authorities and security forces have deliberately targeted Palestinian children, amounting to genocide and atrocity crimes in the Gaza Strip and war crimes in the West Bank.",
+      "context": "A hundred-page report covering 7 October 2023 to 31 March 2026, recording at least 20,179 children killed and 44,143 injured, and identifying the Israeli military units responsible for attacks on children. The commission found that children continued to be killed after the October 2025 ceasefire.",
+      "source": "UN Commission of Inquiry, A/HRC/62/CRP.2, 23 June 2026; press conference, Geneva, the same day.",
+      "significance": "The second occasion in the history of UN commissions of inquiry that a dedicated report has been devoted to violations against children, and the commission's second affirmative genocide finding after 16 September 2025. The counter-argument is recorded: UN Watch contends the report fell outside the commission's twice-yearly reporting mandate, which goes to its procedural standing and not to its findings."
     },
     {
       "speaker": "Genocide Watch",
