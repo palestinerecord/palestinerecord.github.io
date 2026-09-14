@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-14",
-  "total_bytes": 3855112,
+  "total_bytes": 3943403,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -243,7 +243,7 @@
       "title": "The report, described",
       "description": "The title, the counts (words, parts, sections, tables) and the full bibliography of the report, without the text — what a page needs to quote the report accurately when it is not reproducing it.",
       "source": "Derived from the report by build.py.",
-      "bytes": 30916,
+      "bytes": 31107,
       "records": null,
       "fields": [
         "title",
@@ -261,7 +261,7 @@
       "title": "The source report, parsed",
       "description": "Every part, section, paragraph, list, table, chronology entry and bibliography entry of the report, converted losslessly by build.py and checked by verify.py. This is the whole document as structured data.",
       "source": "The report — A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026).",
-      "bytes": 975273,
+      "bytes": 1036265,
       "records": null,
       "fields": [
         "title",
@@ -279,7 +279,7 @@
       "title": "The linked source library",
       "description": "The evidentiary base grouped by kind: courts and tribunals, UN bodies, human rights organisations, open datasets, academic work, Israeli sources, journalism and archives.",
       "source": "Each entry links to the publisher.",
-      "bytes": 55178,
+      "bytes": 63688,
       "records": null,
       "fields": [
         "meta",
@@ -292,8 +292,8 @@
       "title": "Documented statements of intent",
       "description": "Statements by named officials with speaker, role, date, the verbatim quotation, its context, its evidentiary categories, its tier and its legal significance. Contested attributions are marked contested.",
       "source": "Primary reporting as cited per record; §6.2 and Appendix C of the report.",
-      "bytes": 124585,
-      "records": 109,
+      "bytes": 137491,
+      "records": 118,
       "fields": [
         "meta",
         "categories",
@@ -306,8 +306,8 @@
       "title": "The contextual chronology",
       "description": "The legal and political steps between the massacres recorded in Appendix B — mandates, partitions, laws, plans, rulings, resolutions and admissions.",
       "source": "Primary documents as cited per entry.",
-      "bytes": 58724,
-      "records": 137,
+      "bytes": 64416,
+      "records": 147,
       "fields": [
         "meta",
         "items"

@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=49" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=50" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=49" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=50" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2632,6 +2632,35 @@ const Views = (function () {
           <p><b>Part XVIII</b> applies the identical evidentiary and legal standards to Hamas\u2019s conduct on and after 7 October 2023, finds war crimes, names them and sources them. It also records material that cuts the other way where the evidence supports it \u2014 the Hannibal Directive and Israeli fire causing Israeli deaths, prior intelligence knowledge, and atrocity claims that did not survive verification in <i>either</i> direction, including claims made against Hamas that were later withdrawn. <b>Part XIX</b> sets out counter-evidence and the limits of what this record can establish, including Egypt\u2019s role in the blockade, the Palestinian Authority\u2019s own conduct, contested casualty methodology and the human-shields question.</p>
           <p>A document engineered to reach a predetermined conclusion would not contain Parts XVIII and XIX. The reader is invited to test the claim of symmetry against them rather than against this paragraph.</p>
           <p style="margin-top:14px"><a class="btn" href="#part-xviii---hamass-october-7-2023-war-crimes-the-documented-record-and-legal-fr">Read Part XVIII</a> <a class="btn" href="#part-xix---complexity-counter-evidence-and-analytical-limitations">Read Part XIX</a></p>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('Terminology', 'On the phrase “the terrorist state Israel”', 'The record uses the phrase in places. It is defined once, argued in full, and no finding here depends on it.')}
+        <div class="grid c2">
+          <div class="card" style="padding:26px">
+            <h3>The standard, applied to every actor</h3>
+            <p>There is no legal category of <q>terrorist state</q>. No international body designates states; the only state-level mechanism is a unilateral executive one — the United States’ <b>state sponsor of terrorism</b> list, under 22 U.S.C. §§ 2371 and 2780 and 50 U.S.C. § 4813(c) — which has never listed an ally.</p>
+            <p>What this record applies instead is a definition, used identically for every actor: the wording of <b>UN Security Council Resolution 1566 (2004)</b>, and <b>Ruth Blakeley’s</b> four-element test — a deliberate act or threat of violence, by state agents or their proxies, against victims, directed at an audience wider than those victims, for a political end. The same definition is applied to <b>Hamas’s conduct on 7 October 2023</b> at Part XVIII, where it is met, and stated there in the same terms.</p>
+          </div>
+          <div class="card" style="padding:26px">
+            <h3>What the case rests on</h3>
+            <p>Four limbs, each sourced elsewhere in this record: the British Mandate’s designation of the <b>Irgun</b> and <b>Lehi</b> as terrorist organisations and the passage of their commanders into the office of Prime Minister; the <b>ICC’s arrest warrants of 21 November 2024</b>, charging <b>starvation of civilians as a method of warfare</b>; the intent stated on the record by serving ministers, and the <b>Commission of Inquiry’s</b> findings of 16 September 2025 and 23 June 2026, including direct and public incitement by the President, the Prime Minister and the former Defence Minister; and a settler campaign the state funds and does not prosecute — <b>93.6 per cent</b> of investigations closed without indictment (Yesh Din, December 2025), designated by the US Treasury in October 2024 and delisted on 24 January 2025, and called <q>Israeli terrorists</q> by the sitting US Ambassador.</p>
+          </div>
+        </div>
+        <div class="card" style="padding:26px;margin-top:18px">
+          <h3>The witnesses: Israeli, Jewish and international</h3>
+          <p>Each limb is attested by the sources with the least incentive to reach it. The self-description is <b>Lehi’s</b> own — the 1943 article “Terror” in <i>HeHazit</i>, attributed by <i>MERIP</i> to the future Prime Minister <b>Yitzhak Shamir</b>. The standard history is <b>Bruce Hoffman’s</b> <i>Anonymous Soldiers</i> (2015), endorsed by <b>Benny Morris</b>. The contemporaneous Jewish verdict on the Irgun — <q>a terrorist, right-wing, chauvinist organization</q> — is the letter signed by <b>Albert Einstein</b>, <b>Hannah Arendt</b> and <b>Sidney Hook</b> in <i>The New York Times</i> on 4 December 1948.</p>
+          <p><q>Jewish terrorism</q> is an Israeli judicial category, not an outside characterisation: the <b>Lod District Court</b> convicted <b>Amiram Ben-Uliel</b> of the Duma murders of 31 July 2015 and classified the offences as a terrorist act — after which fourteen coalition lawmakers signed a petition on his behalf and a crowdfunding campaign for his release raised over NIS 1.2 million. Former Prime Minister <b>Ehud Olmert</b> wrote in <i>Haaretz</i> on 18 June 2026 of terrorism <q>managed, directed, encouraged and supported by the Israeli government</q>, and of <q>an organised, systematic, state-funded campaign of ethnic cleansing and crimes against humanity</q>. <b>Avi Shlaim</b> applied one definition of terror to Hamas and to Israel in the same answer, and concluded that Israel <q>is practicing state terror</q> (<i>Democracy Now!</i>, 14 January 2009).</p>
+          <p>The conduct findings follow the same pattern: six former Shin Bet directors in <b>The Gatekeepers</b> (2012); <b>Moshe Ya’alon</b> on <q>conquest, annexation and ethnic cleansing</q> and on war crimes; <b>Breaking the Silence</b> on the Gaza perimeter; <b>B’Tselem</b> and <b>Physicians for Human Rights-Israel</b>, <q>Our Genocide</q>, 28 July 2025; the <b>International Association of Genocide Scholars</b>, 86 per cent of those voting, 31 August 2025, whose members include the Israeli and Israeli-trained Holocaust historians <b>Raz Segal</b>, <b>Omer Bartov</b>, <b>Amos Goldberg</b> and <b>Daniel Blatman</b>; <b>Amnesty International</b> and <b>Human Rights Watch</b>, December 2024; <b>Genocide Watch</b>, July 2026. The dissent — Yehuda Bauer, the <i>Journal of Genocide Research</i> exchange, the objection to the resolution’s process — is recorded in its own terms.</p>
+          <p>The weight here comes from position and interest, not identity: a court convicting a member of the national majority, a former Prime Minister accusing the government he led, a former Shin Bet director describing his own service. And almost none of these witnesses uses the phrase itself. They establish the conduct; the phrase is this record’s summary of it, and §24.4 states the test that summary has to pass.</p>
+        </div>
+        <div class="card" style="padding:26px;margin-top:18px">
+          <h3>The objection, and why it is recorded here</h3>
+          <p>The serious objection is not to the facts. It is to the <b>unit of analysis</b>. <q>War crime</q>, <q>apartheid</q> and <q>genocide</q> attach a finding to identified conduct, in an identified period, under an identified instrument, with a forum and a standard of proof; <q>terrorist state</q> attaches to the state as such, across its whole history, when the documented conduct is concentrated in particular policies, units and governments. A label at the level of identity is therefore evidentially weaker than the findings it summarises, and it invites the reader to classify the document by its vocabulary rather than by its sources.</p>
+          <p>That objection is set out in its strongest form in the report, together with the answer: a standard applied to one actor and not the other decides the question before the evidence is heard — and, decisively, <b>nothing here depends on the phrase</b>. Remove it throughout and not one finding changes. That is the test of whether a label is doing evidentiary work or rhetorical work.</p>
+          <p class="src">UN Security Council Resolution 1566 (2004); Ruth Blakeley, “State Terrorism in the Social Sciences”, 2010; Richard Jackson, “The Ghosts of State Terror”, Critical Studies on Terrorism 1(3), 2008, and “Israeli state terrorism: knowledge, power and the ‘public secret’”, Critical Studies on Terrorism, 26 May 2026; Jackson and Turner, Security in Context, 22 December 2023; OFAC, Executive Order 14115 designations and delistings; Yesh Din, Data Sheet, December 2025.</p>
+          <p style="margin-top:14px"><a class="btn" href="#part-xxiv---the-terrorist-state-designation-the-case-the-standard-and-the-object">Read Part XXIV</a></p>
         </div>
       </section>
 

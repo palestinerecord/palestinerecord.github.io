@@ -217,6 +217,20 @@
       "significance": "The programme is summarised rather than quoted verbatim from a single document. Recorded as the last organised institutional expression of classical Reform anti-Zionism before the establishment of the state."
     },
     {
+      "speaker": "Yitzhak Yezernitzky (Yitzhak Shamir)",
+      "role": "Lehi operations commander; later Prime Minister of Israel (1983-1984, 1986-1992)",
+      "date": "1943",
+      "sort": "1943-08-01",
+      "cat": [
+        "historic"
+      ],
+      "tier": "Contemporaneous witness",
+      "quote": "Neither Jewish ethics nor Jewish tradition can disqualify terrorism as a means of combat. We are very far from having any moral qualms as far as our national war goes.",
+      "context": "From an article titled “Terror” published in the Lehi underground journal HeHazit (The Front) in the summer of 1943, republished in translation by MERIP as a documentary source in May 1988, which attributes it to Yezernitzky. Translations of the passage vary in wording, and some sources attribute the article to the journal without naming an author. Lehi was designated and suppressed as a terrorist organisation by the British Mandatory authorities.",
+      "source": "MERIP, “Document: Shamir on Terrorism (1943)”, May 1988",
+      "significance": "The founding organisations' own description of their method. It is the first limb of the argument at Part XXIV: the characterisation is not applied retrospectively by critics but adopted contemporaneously by the organisation whose commander later led the state."
+    },
+    {
       "speaker": "Albert Einstein, Hannah Arendt, Sidney Hook and others",
       "role": "Jewish American intellectuals",
       "date": "4 December 1948",
@@ -352,6 +366,22 @@
       "significance": "A doctrine of deliberate disproportionality against civilian infrastructure, stated openly by a serving general and reclassifying civilian villages as military objectives. The Goldstone Report treated it as evidence that disproportionate destruction was policy rather than error — the doctrinal ancestor of the conduct documented in Gaza after 2023."
     },
     {
+      "speaker": "Avi Shlaim",
+      "role": "Emeritus Professor of International Relations, University of Oxford; Fellow of the British Academy; served in the Israeli army in the mid-1960s",
+      "date": "14 January 2009",
+      "sort": "2009-01-14",
+      "cat": [
+        "historic",
+        "dissent",
+        "jewish-opposition"
+      ],
+      "tier": "Israeli historian",
+      "quote": "My definition of ‘terror’ is the use of violence against civilians for political purposes.",
+      "context": "Interviewed on Democracy Now! during Israel's Gaza offensive. Asked to define terror, Shlaim gave the definition above and then applied it in both directions in the same answer: by that definition Hamas is a terrorist organisation, and Israel “is practicing state terror”. He added that he holds no brief for Hamas, which is “not a paragon of virtue”, and that killing civilians is wrong whoever does it.",
+      "source": "Democracy Now!, 14 January 2009",
+      "significance": "The methodological point at §24.1 and §24.4, made by an Israeli historian: a single definition is stated before the actors are named and then applied to whoever meets it. An actor-based definition that exempts states decides the question before the evidence is heard."
+    },
+    {
       "speaker": "Ehud Barak",
       "role": "Prime Minister of Israel (1999); Defence Minister (2010)",
       "date": "2 February 2010",
@@ -365,6 +395,21 @@
       "context": "Herzliya security conference, as serving Defence Minister. He had made the same argument as Prime Minister in 1999.",
       "source": "Haaretz, 2 February 2010.",
       "significance": "The criterion is stated by a former prime minister and serving defence minister: one political entity, millions who cannot vote. Both conditions were already satisfied when he said it, and remain so."
+    },
+    {
+      "speaker": "Avraham Shalom",
+      "role": "Director of the Shin Bet, 1980-1986",
+      "date": "2012",
+      "sort": "2012-01-01",
+      "cat": [
+        "dissent",
+        "society"
+      ],
+      "tier": "Former intelligence chief",
+      "quote": "We have become cruel, to ourselves as well, but mainly to the occupied population, using the excuse of the war on terror.",
+      "context": "Speaking in Dror Moreh's documentary The Gatekeepers (2012), in which six former directors of the Shin Bet - Shalom, Ami Ayalon, Yaakov Peri, Carmi Gillon, Avi Dichter and Yuval Diskin - spoke collectively on the record for the first time. Shalom also compared the force he had served in to an occupying army of the Second World War. Carmi Gillon, another of the six, said: “We are making the lives of millions unbearable, into prolonged human suffering.”",
+      "source": "The Gatekeepers (dir. Dror Moreh, 2012)",
+      "significance": "Testimony from the head of the agency that ran the policy, describing its effect on the occupied population and the function of the counter-terrorism justification. A statement against the speaker's own institution and career."
     },
     {
       "speaker": "Michael Ben-Yair",
@@ -425,6 +470,21 @@
       "context": "Said on Israeli public radio after ten days of the Great March of Return, in which Israeli snipers had killed about thirty demonstrators at the perimeter fence. Lieberman added that everyone in Gaza is connected to Hamas and receives a salary from Hamas, and that those approaching the fence were operatives of its military wing.",
       "source": "AFP and The Jerusalem Post, 16 April 2018, reporting remarks made the previous day.",
       "significance": "The collective-guilt formula that became routine after October 2023 was ministerial language five years earlier, and was applied then to unarmed demonstrators. It is recorded here with its correct date because it circulated widely in late 2023 as though it had been said during the current war: the statement is real, the 30 November 2023 date attached to it in viral posts is not."
+    },
+    {
+      "speaker": "Lod District Court (Israel)",
+      "role": "Israeli district court, sentencing in the Duma arson case",
+      "date": "May 2020",
+      "sort": "2020-05-18",
+      "cat": [
+        "warcrimes",
+        "findings"
+      ],
+      "tier": "Court",
+      "quote": "Extreme and racist ideology.",
+      "context": "The court's characterisation of the motive of Amiram Ben-Uliel, convicted of three counts of murder, two of attempted murder and conspiracy for the firebombing of the Dawabsheh family home in Duma on 31 July 2015, which killed 18-month-old Ali Dawabsheh outright and both his parents of their burns. The offences were classified as a terrorist act; he received three life sentences and twenty further years. He was acquitted of membership of a terrorist organisation. The Supreme Court dismissed his appeal in 2022, finding “no doubt” that he had committed the “shocking and deeply disturbing” attack. A crowdfunding campaign for his release later raised more than NIS 1.2 million, and a petition to improve his prison conditions was signed by fourteen coalition lawmakers.",
+      "source": "Lod District Court and Supreme Court of Israel; The Times of Israel",
+      "significance": "“Jewish terrorism” is an Israeli judicial and institutional category, not an external characterisation. The state's judicial organ names the conduct terrorism; parts of the state's political organ campaign for the man convicted of it. That division is the sponsorship element of the fourth limb at §24.2, documented internally."
     },
     {
       "speaker": "B'Tselem",
@@ -1052,6 +1112,22 @@
       "significance": "Non-enforcement measured over two decades by an Israeli organisation using Israeli police data. Systematic impunity for violence by one group against another, administered by the same state, is the enforcement limb of the apartheid finding and corroborates Maj. Gen. Bluth's May 2026 admission that the open-fire policy “involves discrimination”."
     },
     {
+      "speaker": "Moshe Ya'alon",
+      "role": "Former IDF Chief of Staff; Minister of Defence, 2013-2016",
+      "date": "2 December 2024",
+      "sort": "2024-12-02",
+      "cat": [
+        "cleansing",
+        "warcrimes",
+        "dissent"
+      ],
+      "tier": "Military",
+      "quote": "The road we are being led down is conquest, annexation and ethnic cleansing.",
+      "context": "Interview with Democrat TV, followed by remarks to Kan and Reshet Bet. Asked what he meant, Ya'alon pointed to northern Gaza: “There is no Beit Lahia, there is no Beit Hanoun. They are operating in Jabalia and are essentially clearing the area of Arabs.” He refused to retract under pressure, said he based the claim on information from commanders in the field, added that “at the end of the day, war crimes are being committed”, rejected the claim that the IDF is the most moral army in the world, and said the ICC warrants were justified and that he would have issued them long ago against Smotrich and Ben-Gvir. He attributed the policy to the political leadership rather than to the military. The IDF Spokesman denied the accusations; Likud called them “slanderous lies”.",
+      "source": "Democrat TV and Kan, reported 1-2 December 2024",
+      "significance": "A former Chief of Staff and Defence Minister applying the terms ethnic cleansing and war crimes to operations he is in a position to characterise, and naming serving ministers as the proper subjects of ICC warrants."
+    },
+    {
       "speaker": "Donald J. Trump",
       "role": "President of the United States",
       "date": "4 February 2025",
@@ -1289,6 +1365,23 @@
       "significance": "A statement against the plan by the officer who would have had to execute it, and the operative reason it was shelved. It also fixes the legal standard the Israeli military applied to itself in court, against which the conduct documented elsewhere in this record is to be measured."
     },
     {
+      "speaker": "Yuli Novak",
+      "role": "Executive Director, B'Tselem",
+      "date": "28 July 2025",
+      "sort": "2025-07-28",
+      "cat": [
+        "genocide",
+        "findings",
+        "dissent",
+        "jewish-opposition"
+      ],
+      "tier": "Israeli human rights organisation",
+      "quote": "Nothing prepares you for the realization that you are part of a society committing genocide.",
+      "context": "On the publication of B'Tselem's report “Our Genocide”, issued the same day as a separate report by Physicians for Human Rights-Israel - the first time two leading Israeli human rights organisations concluded that Israel is committing genocide. The report's central finding is that Israel's policy in Gaza, its outcomes and the statements of senior Israeli politicians and military commanders “lead us to the unequivocal conclusion that Israel is taking coordinated action to intentionally destroy Palestinian society in the Gaza Strip”, and that this has enjoyed “support, legitimization, and normalization from the majority of Jewish-Israelis, as well as from the Israeli legal system”. Outreach director Sarit Michaeli called it “the textbook definition of genocide”.",
+      "source": "B'Tselem, “Our Genocide”, 28 July 2025",
+      "significance": "A finding made by an Israeli organisation about Israeli society, including its own legal system. B'Tselem had made the equivalent move on the previous term in January 2021, four months before Human Rights Watch adopted the apartheid finding."
+    },
+    {
       "speaker": "aChord Center, Hebrew University of Jerusalem",
       "role": "Survey of 912 Israeli respondents, 11–13 August 2025",
       "date": "August 2025",
@@ -1408,6 +1501,21 @@
       "significance": "Denial of the group's existence stated as government position, in direct response to the international community's affirmation of it."
     },
     {
+      "speaker": "Moshe Ya'alon",
+      "role": "Former IDF Chief of Staff; Minister of Defence, 2013-2016",
+      "date": "February 2026",
+      "sort": "2026-02-01",
+      "cat": [
+        "dissent",
+        "society"
+      ],
+      "tier": "Military",
+      "quote": "Yeshayahu Leibowitz was right, and I was wrong.",
+      "context": "Written in remarks connected to International Holocaust Remembrance Day, in which Ya'alon said that the “ideology of ‘Jewish supremacy’” had become dominant in the Israeli government and is “reminiscent of the Nazi race theory”. The reference is to the Orthodox Israeli philosopher Yeshayahu Leibowitz (1903-1994) - called “the conscience of Israel” by Isaiah Berlin - who warned from the 1980s that continued occupation would produce what he called “Judeo-Nazis”, and who applied the term to Israeli judges who permitted the torture of Arab detainees.",
+      "source": "Reported February 2026",
+      "significance": "The warning about the dehumanising effect of occupation, made by an Israeli religious philosopher in the 1980s, endorsed four decades later by a former Chief of Staff who had publicly rejected it."
+    },
+    {
       "speaker": "Jewish Federations of North America / Burson",
       "role": "Survey of more than 1,800 Jewish respondents, fielded March 2025",
       "date": "February 2026",
@@ -1451,6 +1559,36 @@
       "context": "Announcing a Gaza-style buffer zone in southern Lebanon and barring the return of “more than 600,000 residents” to areas south of the Litani. Israel proceeded to destroy entire border villages.",
       "source": "Times of Israel; Common Dreams; Taipei Times, March–April 2026.",
       "significance": "Naming Rafah and Beit Hanoun as the template is simultaneously an admission of what was done in Gaza and a statement of intent to repeat it against a second population of 600,000."
+    },
+    {
+      "speaker": "Itamar Ben-Gvir",
+      "role": "National Security Minister",
+      "date": "30 March 2026",
+      "sort": "2026-03-30",
+      "cat": [
+        "apartheid",
+        "dehumanisation"
+      ],
+      "tier": "Cabinet",
+      "quote": "Today, the State of Israel changes the rules of the game: anyone who murders Jews will no longer breathe freely or enjoy prison privileges. This is a day of justice for the victims and a day of deterrence for our enemies. No more revolving door for terrorists, but a clear decision. Whoever chooses terrorism chooses death.",
+      "context": "Spoken on the passage of the Death Penalty for Terrorists Law, which Ben-Gvir's party Otzma Yehudit initiated and made a condition of its coalition agreement. The Knesset passed it 62 to 48 at second and third readings after nearly twelve hours of debate; Netanyahu came to the chamber to vote in favour. Ben-Gvir wore a golden noose-shaped lapel pin and handed out champagne afterwards. The law makes death by hanging the default sentence in military courts, which try Palestinians alone, requires execution within 90 days, allows sentencing by a simple majority of judges with no right of appeal, and confines the civilian-track offence to killing aimed at denying the existence of the State of Israel.",
+      "source": "The Times of Israel and The Jerusalem Post, 30 March 2026",
+      "significance": "A minister of the state describing the statutory imposition of capital punishment on one national group as a change in the rules of the game. The UN Committee on the Elimination of Racial Discrimination found on 29 April 2026 that the law is racially discriminatory and an instance of segregation; UN special procedures called it a discriminatory regime of capital punishment. See report section 4.4."
+    },
+    {
+      "speaker": "UN Committee on the Elimination of Racial Discrimination",
+      "role": "UN treaty body, 18 independent experts",
+      "date": "29 April 2026",
+      "sort": "2026-04-29",
+      "cat": [
+        "apartheid",
+        "findings"
+      ],
+      "tier": "UN body",
+      "quote": "The law marks a grave human rights retrogression and constitutes racial discrimination and segregation against Palestinians, and must be repealed.",
+      "context": "Statement on Israel's Death Penalty for Terrorists Law, released by OHCHR on 1 May 2026. The Committee found that the mandatory sentence operates before military courts with exclusive jurisdiction over Palestinians, that Israeli citizens and residents are excluded, and that the civilian-track offence makes the law de facto applicable to Palestinians only. It called on all States parties to ensure their resources are not used to enforce or support discriminatory policies in the occupied territory, citing the ICJ advisory opinion of 19 July 2024. Israel ratified the Convention in 1979.",
+      "source": "OHCHR press release, 1 May 2026 (statement dated 29 April 2026)",
+      "significance": "A treaty body with jurisdiction over the state, applying the convention the state ratified, finding a statute racially discriminatory on its face. It converts the apartheid analysis at report section 4.2 from inference about administration into a finding about legislation. See report section 4.4."
     },
     {
       "speaker": "Maj. Gen. Avi Bluth",
