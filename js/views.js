@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=65" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=66" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=65" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=66" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2613,6 +2613,17 @@ const Views = (function () {
               ${note ? `<div class="full">${esc(note)}</div>` : ''}
             </figcaption>
           </figure>`).join('')}
+        </div>
+      </section>
+
+      <section class="section wrap">
+        ${head('Duty', 'Why waiting for the final judgment is itself the breach', 'The point above is a moral one. This one is not: under the Genocide Convention the obligation to act begins before anything has been proved, and a state that waits for the verdict has already failed it.')}
+        <div class="card" style="padding:26px">
+          <p><b>Article I</b> of the Genocide Convention binds its <b>150-plus</b> states parties <q>to prevent and to punish</q> genocide. The duty to prevent is a distinct primary obligation, and its trigger was settled by the only case in which the ICJ has ruled directly on it, <i>Bosnia and Herzegovina v. Serbia and Montenegro</i> (26 February 2007). The Court held that the obligation to prevent, and the corresponding duty to act, <q>arise at the instant that the State learns of, or should normally have learned of, the existence of a serious risk that genocide will be committed</q> — not when genocide is proven, and not when a tribunal has delivered a final judgment.</p>
+          <p>It is an obligation of <b>conduct, not result</b>. A state breaches it if it <q>manifestly failed to take all measures to prevent genocide which were within its power</q>, and the Court was explicit that it is <b>irrelevant</b> whether those measures would in fact have succeeded. The obligation is owed <i>erga omnes partes</i>, by each state party to every other, which is why South Africa had standing to bring its case at all.</p>
+          <p>The trigger the 2007 judgment describes, knowledge of a serious risk, was met on the highest available authority on <b>26 January 2024</b>, when the ICJ found a plausible risk of genocide in Gaza and ordered binding provisional measures to prevent it. From that date the duty has been live for every state party, and continuing to arm, supply or shield the party under those measures is not a neutral posture awaiting clarity but a failure to act on a duty already triggered.</p>
+          <p>This is why the recurring official position — that no final determination of genocide has been made — <b>inverts</b> the obligation rather than exercising caution under it. The duty exists precisely for the interval <i>before</i> a determination, because that is the only interval in which prevention remains possible. The ICJ’s merits judgment is not expected before <b>2028</b>. A duty that activated only once a genocide had been judicially confirmed would be a duty to acknowledge rather than to prevent, and the instrument Raphael Lemkin drafted after losing his own family in the Holocaust was built to let the world act in time. Read as a licence to wait for the verdict, it is turned against its own purpose.</p>
+          <p class="src">ICJ, <i>Bosnia and Herzegovina v. Serbia and Montenegro</i>, Judgment of 26 February 2007, paras 430–431; ICJ, <i>South Africa v. Israel</i>, Order of 26 January 2024; Convention on the Prevention and Punishment of the Crime of Genocide, Article I. See §13.5 and <a href="#/legal">Legal</a>.</p>
         </div>
       </section>
 
