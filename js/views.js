@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=67" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=68" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=67" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=68" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -1455,8 +1455,8 @@ const Views = (function () {
 
   /* ---------- rebuttals ---------- */
 
-  /* Part XVI answers the eleven defences that come up in every argument about
-     Gaza. Inside Evidence they are eleven sections a long way down a very long
+  /* Part XVI answers the seventeen defences that come up in every argument about
+     Gaza. Inside Evidence they are seventeen sections a long way down a very long
      document. Here each one is a claim you can open, the report's own answer
      reproduced verbatim, the charts that carry that answer, and a button that
      puts the whole thing on the clipboard — which is what the page is for. */

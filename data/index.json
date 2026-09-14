@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-15",
-  "total_bytes": 4081583,
+  "total_bytes": 4090018,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -306,13 +306,13 @@
       "title": "The contextual chronology",
       "description": "The legal and political steps between the massacres recorded in Appendix B — mandates, partitions, laws, plans, rulings, resolutions and admissions.",
       "source": "Primary documents as cited per entry.",
-      "bytes": 65918,
-      "records": 149,
+      "bytes": 74353,
+      "records": 163,
       "fields": [
         "meta",
         "items"
       ],
-      "updated": "2026-09-14"
+      "updated": "2026-09-15"
     },
     {
       "path": "data/timeseries.json",
