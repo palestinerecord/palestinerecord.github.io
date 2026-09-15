@@ -89,6 +89,15 @@ DESCRIPTIONS = {
         'organisations, open datasets, academic work, Israeli sources, journalism and archives.',
         'Each entry links to the publisher.',
     ),
+    'provenance.json': (
+        'The provenance graph',
+        'Every curated claim on this site joined to the bodies it rests on: 416 claims, each '
+        'with the source strings it carries normalised to stable source identifiers, and each '
+        'source classified by who controls the body that published it. The five switches '
+        'record what share of the record still stands when a whole class of source is removed.',
+        'Derived by provenance.py from the source field of every curated record; each claim '
+        'keeps the source text it was written with.',
+    ),
     'children.json': (
         'The children\u2019s record, 1948 to the present',
         'Every child this record can count, on both sides, period by period and year by year: '

@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=68" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=69" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=68" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=69" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2028,7 +2028,9 @@ const Views = (function () {
             <h3 style="font-size:17px;margin-bottom:10px">Corroboration</h3>
             <p class="small muted">Every statistic must appear in at least two independent sources before it enters the record.
             Where sources disagree, the more recent and better-documented figure is used and the disagreement is stated.
-            Where a figure is an estimate rather than a count — as with the mortality studies — it is labelled as one.</p>
+            Where a figure is an estimate rather than a count — as with the mortality studies — it is labelled as one.
+            <a href="#/provenance">Provenance</a> joins every claim to the bodies it rests on, and will reject any class
+            of source you name and recount what is left.</p>
           </div>
         </div>
       </section>
@@ -2420,6 +2422,182 @@ const Views = (function () {
     return String(href).replace(/[#?].*$/, '').replace(/\/+$/, '');
   })();
 
+  /* ---------- provenance ---------- */
+
+  /* The record is a graph, not a list, and this route is where that graph is
+     visible: every curated claim joined to the bodies it rests on, and every
+     source string normalised to an entity with an identity of its own. The
+     reason to build it is the objection it answers. The commonest argument
+     against this record is not that a figure is wrong but that a class of
+     source cannot be trusted — the Gaza Ministry of Health, the UN, the human
+     rights organisations, the Israeli press. That argument is usually met by
+     defending the source. It is met here by removing it: take a whole class
+     out, recount, and read what still stands on the rest. The counts are
+     computed by provenance.py and shipped in data/provenance.json, so the
+     figures on this page are the same figures the open-data file carries. */
+
+  // Where a claim lives, so a reader who pulls the thread arrives at the page
+  // that states it rather than at a file name.
+  const PROV_ROUTES = {
+    'figures.json': '#/data',
+    'statements.json': '#/statements',
+    'elements.json': '#/legal',
+    'legal.json': '#/legal',
+    'conduct-record.json': '#/data/gaza',
+    'long-record.json': '#/data/since-1948',
+    'war-record.json': '#/data/wars',
+    'children.json': '#/children',
+    'history.json': '#/data/west-bank',
+    'maps.json': '#/data/land',
+    'nakba.json': '#/data/land',
+    'world-positions.json': '#/data/world',
+    'chronology.json': '#/timeline',
+    'timeline-extra.json': '#/timeline',
+  };
+
+  const PROV_FILE_LABELS = {
+    'figures.json': 'Headline figures',
+    'statements.json': 'Statements of intent',
+    'elements.json': 'Legal elements',
+    'legal.json': 'Determinations',
+    'conduct-record.json': 'Conduct of the war',
+    'long-record.json': 'The long record',
+    'war-record.json': 'The wars',
+    'children.json': 'The children’s record',
+    'history.json': 'The baseline',
+    'maps.json': 'Maps',
+    'nakba.json': 'The villages of 1948',
+    'world-positions.json': 'World positions',
+    'chronology.json': 'Chronology',
+    'timeline-extra.json': 'Chronology',
+  };
+
+  function provenanceView() {
+    const P = D.prov;
+    const S = P.summary;
+    const origins = P.meta.origins.filter((o) => o.sources);
+    const byId = {};
+    P.sources.forEach((s) => { byId[s.id] = s; });
+    const hardest = P.switches.reduce((a, b) => (b.share < a.share ? b : a), P.switches[0]);
+
+    const stats = [
+      { value: S.claims, label: 'Curated claims', note: 'every figure, statement, determination and record entry that carries a source, across ' + P.files.length + ' data files' },
+      { value: S.sources, label: 'Distinct sources', note: 'source strings normalised to entities, each with a stable identifier and a classified origin' },
+      { value: S.independent, label: 'Claims on two or more classes of source', note: 'a figure attested by bodies with no common controller does not fall when one of them is rejected' },
+      { value: hardest.share, unit: '<span class="suffix">%</span>', label: 'Still standing at the hardest setting', note: esc(hardest.label.toLowerCase()) + ' — ' + hardest.stands + ' of ' + S.attributed + ' attributed claims' },
+    ];
+
+    const switchChips = [`<button class="chip active" data-switch="none">Every source<span>${S.attributed}</span></button>`]
+      .concat(P.switches.map((s) => `<button class="chip" data-switch="${esc(s.id)}">${esc(s.label)}<span>${s.stands}</span></button>`)).join('');
+
+    const originRow = (o) => `<tr data-origin="${esc(o.id)}">
+      <td>${esc(o.label)}</td>
+      <td class="num">${o.sources}</td>
+      <td class="num">${o.claims}</td>
+    </tr>`;
+
+    const sourceRow = (s) => `<tr class="prov-src" data-origin="${esc(s.origin)}" data-name="${esc((s.name + ' ' + s.origin_label).toLowerCase())}">
+      <td>${esc(s.name)}</td>
+      <td class="muted">${esc(s.origin_label)}</td>
+      <td class="num">${s.claims}</td>
+    </tr>`;
+
+    const claimRow = (c) => {
+      const originIds = [];
+      c.sources.forEach((sid) => {
+        const s = byId[sid];
+        if (s && originIds.indexOf(s.origin) < 0) originIds.push(s.origin);
+      });
+      const names = c.sources.map((sid) => (byId[sid] ? byId[sid].name : sid));
+      const chain = c.sources.map((sid, i) => `<span class="prov-chip" data-origin="${esc(byId[sid] ? byId[sid].origin : '')}">${esc(names[i])}</span>`).join('');
+      const route = PROV_ROUTES[c.file] || '#/overview';
+      const value = c.numeric ? fmt(c.value) : String(c.value || '');
+      return `<li class="prov-claim" data-origins="${esc(originIds.join(' '))}" data-file="${esc(c.file)}"
+          data-text="${esc((c.label + ' ' + value + ' ' + c.source_text + ' ' + names.join(' ') + ' ' + c.sources.join(' ')).toLowerCase())}" id="prov-${esc(c.id)}">
+        <div class="prov-claim-head">
+          <a href="${route}" class="prov-label">${esc(c.label || PROV_FILE_LABELS[c.file] || c.file)}</a>
+          ${c.date ? `<span class="prov-date">${esc(c.date)}</span>` : ''}
+          ${c.ref ? `<span class="prov-ref">${esc(c.ref)}</span>` : ''}
+        </div>
+        ${value ? `<div class="prov-value">${esc(value)}</div>` : ''}
+        <div class="prov-chain">${chain || '<span class="prov-chip none">no source recorded</span>'}</div>
+        <div class="prov-src-text">${esc(c.source_text || '—')}</div>
+      </li>`;
+    };
+
+    const fileChips = [`<button class="chip active" data-file="all">All<span>${S.claims}</span></button>`]
+      .concat(P.files.map((f) => `<button class="chip" data-file="${esc(f.file)}">${esc(PROV_FILE_LABELS[f.file] || f.file)}<span>${f.claims}</span></button>`)).join('');
+
+    return `<div class="view wrap">
+      <section class="section">
+        ${head('Provenance', 'Pull the thread', 'Every curated claim on this site, joined to the bodies it rests on. '
+          + 'Source strings are normalised to entities with stable identifiers, and each entity is classified by who '
+          + 'controls the body that published it — not by where it files its accounts. That classification is what makes '
+          + 'the switch below possible: reject a whole class of source, and read what still stands on the rest.')}
+        <div class="grid c4">
+          ${stats.map((x, i) => statCard(x, ['blue', '', 'green', 'amber'][i])).join('')}
+        </div>
+      </section>
+
+      <section class="section">
+        ${head('The adversary switch', 'Reject a class of source, and recount',
+          'The commonest objection to a record like this one is not that a figure is wrong. It is that a class of source '
+          + 'cannot be trusted. The answer here is not to defend the source but to remove it. Each setting deletes every '
+          + 'body of that class and recounts what is left: a claim stands if it still has one source outside the classes '
+          + 'removed, and falls if it does not. Nothing else on the page changes.')}
+        <div class="chips" id="prov-switch">${switchChips}</div>
+        <div class="card prov-panel" id="prov-panel"></div>
+        ${chartCard('provenance-switch', 'What survives each rejection',
+          'The share of attributed claims that still rest on at least one source outside the class removed.', 'data/provenance.json')}
+      </section>
+
+      <section class="section">
+        ${head('The classes', 'Who controls the body that published it', 'Sources are classified by controller, because that is what '
+          + 'the objection is actually about. A claim counts once for a class however many of that class’s bodies it cites.')}
+        <div class="grid c2">
+          <div class="card">
+            <div class="table-wrap"><table>
+              <thead><tr><th>Class of source</th><th class="num">Bodies</th><th class="num">Claims</th></tr></thead>
+              <tbody id="prov-origins">${origins.map(originRow).join('')}</tbody>
+            </table></div>
+          </div>
+          ${chartCard('provenance-origins', 'Claims by class of source',
+            'A claim resting on bodies of several classes is counted under each, so these do not sum to the total.', 'data/provenance.json', 'tall')}
+        </div>
+      </section>
+
+      <section class="section">
+        ${head('The sources', `${S.sources} bodies, and what each one is holding up`,
+          'Sorted by the number of claims that rest on it. A body removed by the current setting is struck through.')}
+        <div class="tl-controls">
+          <input type="search" id="prov-src-search" placeholder="Search sources…" autocomplete="off">
+          <span class="small muted" id="prov-src-count"></span>
+        </div>
+        <div class="card">
+          <div class="table-wrap"><table>
+            <thead><tr><th>Source</th><th>Class</th><th class="num">Claims</th></tr></thead>
+            <tbody id="prov-sources">${P.sources.map(sourceRow).join('')}</tbody>
+          </table></div>
+        </div>
+      </section>
+
+      <section class="section">
+        ${head('The claims', `${S.claims} claims, each with its chain`,
+          'Every curated record that carries a source, with the source text it was written with and the entities that text '
+          + 'resolves to. Filter by where the claim lives, search the text, or set the switch above and watch the claims that '
+          + 'fall grey out.')}
+        <div class="chips" id="prov-files">${fileChips}</div>
+        <div class="tl-controls">
+          <input type="search" id="prov-search" placeholder="Search claims, values and source text…" autocomplete="off">
+          <span class="small muted" id="prov-count"></span>
+        </div>
+        <ul class="prov-claims" id="prov-claims">${P.claims.map(claimRow).join('')}</ul>
+        <p class="chart-note" style="margin-top:22px">Generated by provenance.py on ${esc(P.meta.generated)} from the curated data files.
+          ${S.unattributed} claims carry no source: those are the places where the record states that no published source exists.</p>
+      </section>
+    </div>`;
+  }
+
   const SITE_TITLE = `${SITE} — Israel and the Occupied Territories, 1917–2026`;
   const SITE_DESC = 'Every figure carries its source. A forensic survey of state conduct, alleged '
     + 'violations of international law, and the documented record — 1917 to 2026.';
@@ -2460,6 +2638,11 @@ const Views = (function () {
       title: 'Legal — the findings and the instruments they rest on',
       desc: 'The ICJ proceedings, the ICC warrants, and the findings made under the Genocide Convention, '
         + 'the Fourth Geneva Convention and the Apartheid Convention.',
+    },
+    provenance: {
+      title: 'Provenance — pull the thread',
+      desc: 'Every claim joined to the bodies it rests on, with a switch that rejects a whole class of source '
+        + 'and recounts what still stands without it.',
     },
     sources: {
       title: 'Sources — what the record rests on',
@@ -3288,6 +3471,7 @@ const Views = (function () {
     statements: statementsView, legal: legalView, sources: sourcesView,
     tour: tourView, api: apiView, changelog: changelogView, embed: embedView,
     method: methodView, children: childrenView, day: dayView,
+    provenance: provenanceView,
   };
 
   return {

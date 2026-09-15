@@ -1611,3 +1611,47 @@ tr.row-partial td { opacity: .72; }
   .day-panel { padding: 18px 18px 20px; }
   .day-head .share-card { align-self: center; }
 }
+
+/* ---------- provenance ----------
+   The adversary switch needs three states to be legible at a glance: a claim
+   that stands, a claim that has fallen because every source it rests on was
+   removed, and the individual bodies struck out by the current setting. All
+   three are carried by class, not by inline style, so the switch can be set
+   and unset without the markup being rebuilt. */
+.prov-panel { padding: 22px 24px; margin-bottom: 26px; }
+.prov-panel-lede { font-size: 16px; color: var(--text-2); margin: 0 0 12px; }
+.prov-panel-lede b { font-family: var(--serif); font-size: 30px; color: var(--accent); margin-right: 4px; }
+.prov-panel-note { font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+.prov-bar { height: 10px; border-radius: 5px; background: var(--panel-hi); border: 1px solid var(--line); overflow: hidden; }
+.prov-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--green), var(--blue)); }
+
+.prov-claims { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.prov-claim {
+  border: 1px solid var(--line); border-left: 3px solid var(--line-hi); border-radius: 10px;
+  padding: 14px 16px; background: var(--panel); transition: opacity .18s ease, border-color .18s ease;
+}
+.prov-claim.fallen { opacity: .38; border-left-color: var(--red); }
+.prov-claim-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; }
+.prov-label { font-size: 15px; font-weight: 600; color: var(--text); text-decoration: none; }
+.prov-label:hover { color: var(--accent); }
+.prov-date, .prov-ref { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+.prov-value { font-size: 14px; color: var(--text-2); margin: 6px 0 0; }
+.prov-chain { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; }
+.prov-chip {
+  font-size: 11.5px; color: var(--text-2); border: 1px solid var(--line);
+  border-radius: 20px; padding: 2px 9px; background: var(--panel-hi);
+}
+.prov-chip.struck { text-decoration: line-through; color: var(--red); border-color: var(--red); }
+.prov-chip.none { color: var(--muted); font-style: italic; }
+.prov-src-text { font-size: 12.5px; color: var(--muted); margin: 8px 0 0; font-style: italic; }
+tr.struck td { text-decoration: line-through; color: var(--red); }
+
+/* A phone reads the claim head as two lines rather than shrinking the label,
+   and loses the table's third column of padding rather than its numbers. */
+@media (max-width: 700px) {
+  .prov-panel { padding: 16px 18px; }
+  .prov-panel-lede b { font-size: 26px; }
+  .prov-claim { padding: 12px 13px; }
+  .prov-claim-head { gap: 6px; }
+  .prov-label { font-size: 14.5px; }
+}

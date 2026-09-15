@@ -24,7 +24,7 @@ const App = (function () {
   if (window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
   const VIEWS = ['overview', 'tour', 'data', 'children', 'day', 'timeline', 'evidence', 'rebuttals', 'statements',
-    'legal', 'sources', 'method', 'api', 'changelog', 'embed'];
+    'legal', 'sources', 'provenance', 'method', 'api', 'changelog', 'embed'];
 
   /* index.html?prerender=1 renders the text and nothing else: no charts, no
      scroll reveals, no counting numbers, no WebGL scene. prerender.py uses it
@@ -35,8 +35,8 @@ const App = (function () {
 
   /* ---------- loading ---------- */
 
-  /* Fifteen files, fetched together rather than one after another: the boot
-     time is then the slowest single file, not the sum of all fifteen. The map
+  /* Seventeen files, fetched together rather than one after another: the boot
+     time is then the slowest single file, not the sum of all seventeen. The map
      geometry is not among them — charts.js fetches that only if a map is
      actually drawn — and neither is report.json, the largest file on the site,
      which only the five routes in REPORT_ROUTES read and which is fetched on
@@ -60,6 +60,7 @@ const App = (function () {
       ['conduct', 'data/conduct-record.json'],
       ['events', 'data/chart-events.json'],
       ['elements', 'data/elements.json'],
+      ['prov', 'data/provenance.json'],
     ];
     // The open-data manifest is written by manifest.py and describes the files
     // above. It is fetched separately and never fatally: a dashboard that will
@@ -1296,6 +1297,119 @@ const App = (function () {
     }));
     input.addEventListener('input', apply);
     apply();
+  };
+
+  /* The adversary switch. The counts it prints are the counts provenance.py
+     computed and shipped; the filtering here only has to agree with them, and
+     the printed line says so, because a browser-side recount that drifted from
+     the published file would be the one bug this page cannot afford. A claim
+     stands if any of its sources belongs to a class the setting has not
+     removed; a claim with no source at all is shown but never counted. */
+  behaviours.provenance = function () {
+    const P = D.prov;
+    const claims = Array.prototype.slice.call(document.querySelectorAll('#prov-claims .prov-claim'));
+    const srcRows = Array.prototype.slice.call(document.querySelectorAll('#prov-sources .prov-src'));
+    const originRows = Array.prototype.slice.call(document.querySelectorAll('#prov-origins tr'));
+    const chips = Array.prototype.slice.call(document.querySelectorAll('#prov-switch .chip'));
+    const fileChips = Array.prototype.slice.call(document.querySelectorAll('#prov-files .chip'));
+    const panel = document.getElementById('prov-panel');
+    const search = document.getElementById('prov-search');
+    const count = document.getElementById('prov-count');
+    const srcSearch = document.getElementById('prov-src-search');
+    const srcCount = document.getElementById('prov-src-count');
+    const switches = {};
+    P.switches.forEach((s) => { switches[s.id] = s; });
+    let current = 'none';
+    let file = 'all';
+
+    function removedSet() {
+      const s = switches[current];
+      return s ? s.removes : [];
+    }
+
+    function stands(el) {
+      const removed = removedSet();
+      if (!removed.length) return true;
+      const origins = (el.dataset.origins || '').split(' ').filter(Boolean);
+      if (!origins.length) return true;
+      return origins.some((o) => removed.indexOf(o) < 0);
+    }
+
+    function paintPanel() {
+      const s = switches[current];
+      if (!s) {
+        panel.innerHTML = `<p class="prov-panel-lede">Every source in place. <b>${D.prov.summary.attributed}</b> of
+          ${D.prov.summary.claims} claims carry at least one; ${D.prov.summary.independent} of them rest on
+          two or more classes of source at once.</p>`;
+        return;
+      }
+      const labels = s.removes.map((id) => {
+        const o = P.meta.origins.filter((x) => x.id === id)[0];
+        return o ? o.label : id;
+      });
+      panel.innerHTML = `<p class="prov-panel-lede"><b>${s.stands}</b> of ${s.stands + s.falls} attributed claims still stand
+          — ${s.share}% — with ${labels.join(', ').toLowerCase()} removed entirely.</p>
+        <div class="prov-bar"><span style="width:${s.share}%"></span></div>
+        <p class="prov-panel-note">${s.note}</p>
+        <p class="prov-panel-note small muted">${s.falls} claims fall. They are greyed out below, with the bodies
+          that were carrying them struck through.</p>`;
+    }
+
+    function apply() {
+      const term = (search.value || '').trim().toLowerCase();
+      const removed = removedSet();
+      let shown = 0;
+      let attributed = 0;
+      let standing = 0;
+      claims.forEach((el) => {
+        const match = (file === 'all' || el.dataset.file === file)
+          && (!term || (el.dataset.text || '').indexOf(term) >= 0);
+        el.style.display = match ? '' : 'none';
+        if (!match) return;
+        shown++;
+        const ok = stands(el);
+        el.classList.toggle('fallen', !ok);
+        // A claim with no source recorded is neither standing nor falling: it
+        // is one of the places the record states that no source exists, and
+        // counting it either way would make this line disagree with the panel.
+        if (el.dataset.origins) { attributed++; if (ok) standing++; }
+        el.querySelectorAll('.prov-chip').forEach((chip) => {
+          chip.classList.toggle('struck', removed.indexOf(chip.dataset.origin) >= 0);
+        });
+      });
+      count.textContent = removed.length
+        ? `${standing} of the ${attributed} attributed claims shown still stand`
+        : `${shown} of ${claims.length} claims`;
+      srcRows.forEach((row) => row.classList.toggle('struck', removed.indexOf(row.dataset.origin) >= 0));
+      originRows.forEach((row) => row.classList.toggle('struck', removed.indexOf(row.dataset.origin) >= 0));
+      paintPanel();
+    }
+
+    function applySources() {
+      const term = (srcSearch.value || '').trim().toLowerCase();
+      let shown = 0;
+      srcRows.forEach((row) => {
+        const ok = !term || (row.dataset.name || '').indexOf(term) >= 0;
+        row.style.display = ok ? '' : 'none';
+        if (ok) shown++;
+      });
+      srcCount.textContent = `${shown} of ${srcRows.length} sources`;
+    }
+
+    chips.forEach((c) => c.addEventListener('click', () => {
+      current = c.dataset.switch;
+      chips.forEach((o) => o.classList.toggle('active', o === c));
+      apply();
+    }));
+    fileChips.forEach((c) => c.addEventListener('click', () => {
+      file = c.dataset.file;
+      fileChips.forEach((o) => o.classList.toggle('active', o === c));
+      apply();
+    }));
+    search.addEventListener('input', apply);
+    srcSearch.addEventListener('input', applySources);
+    apply();
+    applySources();
   };
 
   /* ---------- search ---------- */

@@ -2883,6 +2883,54 @@ const Charts = (function () {
     });
   };
 
+  /* Provenance — what survives each rejection of a class of source */
+
+  /* Both bars are read straight out of data/provenance.json rather than
+     recounted here, so the chart, the panel and the published file cannot
+     disagree with one another. */
+  R['provenance-switch'] = () => {
+    const rows = data.prov.switches.slice().sort((a, b) => a.share - b.share);
+    return Object.assign({}, base, {
+      grid: { left: 210, right: 76, top: 10, bottom: 46 },
+      tooltip: Object.assign({}, base.tooltip, {
+        formatter: (p) => `<b>${rows[p.dataIndex].label}</b>: ${rows[p.dataIndex].stands} of `
+          + `${rows[p.dataIndex].stands + rows[p.dataIndex].falls} claims still stand`
+          + `<div style="max-width:320px;white-space:normal;color:${C.muted};margin-top:6px">${rows[p.dataIndex].note}</div>`,
+      }),
+      xAxis: axisY({ name: '% of claims standing', max: 100, nameLocation: 'middle', nameGap: 30,
+        nameTextStyle: { color: C.muted, fontSize: 11 } }),
+      yAxis: axisX({ data: rows.map((r) => r.label), axisLabel: { color: C.text2, fontSize: 11.5, width: 200, overflow: 'break' } }),
+      series: [{
+        type: 'bar', barMaxWidth: 20,
+        data: rows.map((r) => ({
+          value: r.share,
+          itemStyle: { color: hexToRgba(r.share >= 75 ? C.green : r.share >= 50 ? C.amber : C.red, 0.85), borderRadius: [0, 4, 4, 0] },
+        })),
+        label: { show: true, position: 'right', color: C.text, fontSize: 11.5, formatter: (p) => p.value + '%' },
+      }],
+    });
+  };
+
+  /* Provenance — claims by class of source */
+  R['provenance-origins'] = () => {
+    const rows = data.prov.meta.origins.filter((o) => o.claims).sort((a, b) => a.claims - b.claims);
+    const palette = [C.red, C.amber, C.blue, C.green, C.violet, '#7f9bd4', '#a86f9b', '#8a8272', '#c98b4b', '#c0c6d4'];
+    return Object.assign({}, base, {
+      grid: { left: 200, right: 70, top: 10, bottom: 46 },
+      tooltip: Object.assign({}, base.tooltip, {
+        formatter: (p) => `<b>${rows[p.dataIndex].label}</b>: ${p.value} claims, `
+          + `${rows[p.dataIndex].sources} ${rows[p.dataIndex].sources === 1 ? 'body' : 'bodies'}`,
+      }),
+      xAxis: axisY({ name: 'claims', nameLocation: 'middle', nameGap: 30, nameTextStyle: { color: C.muted, fontSize: 11 } }),
+      yAxis: axisX({ data: rows.map((r) => r.label), axisLabel: { color: C.text2, fontSize: 11.5, width: 190, overflow: 'break' } }),
+      series: [{
+        type: 'bar', barMaxWidth: 18,
+        data: rows.map((r, i) => ({ value: r.claims, itemStyle: { color: hexToRgba(palette[i % palette.length], 0.85), borderRadius: [0, 4, 4, 0] } })),
+        label: { show: true, position: 'right', color: C.text, fontSize: 11.5 },
+      }],
+    });
+  };
+
   /* Sources — the evidentiary base by class */
   R['sources-groups'] = () => {
     const g = data.sources.groups.map((x) => ({ label: x.label, n: x.items.length, blurb: x.blurb }))

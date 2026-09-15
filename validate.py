@@ -470,6 +470,67 @@ def check_statements(files):
     note('statements: %d entries, %d categories' % (len(blob.get('items', [])), len(categories)))
 
 
+def check_provenance(files):
+    """The provenance graph has to be a rebuild of the data, not a file beside it.
+
+    Everything the #/provenance route states is read out of this file: the
+    claim count, the classification of each source, and the share of the record
+    that still stands when a whole class of source is rejected. So the file is
+    checked the only way that means anything, by rebuilding it from the curated
+    data and comparing: a claim added to any of the scanned files since the last
+    run, or a source string that no longer resolves to the entity it did, shows
+    up here as a difference rather than as a stale number on the page. The
+    switch arithmetic is then recounted independently of provenance.py's own
+    loop, because a page that answers the objection "your sources are partial"
+    with a figure that is wrong would be worse than not answering it at all.
+    """
+    blob = files.get('provenance')
+    if not blob:
+        fail('provenance', 'data/provenance.json is missing; run provenance.py')
+        return
+
+    try:
+        sys.path.insert(0, str(HERE))
+        import provenance as provenance_module
+        fresh, _claims = provenance_module.build()
+    except Exception as err:  # the rebuild is the check; it cannot be skipped
+        fail('provenance', 'provenance.py would not rebuild: %s' % err)
+        return
+
+    for key in ('claims', 'attributed', 'sources', 'origins'):
+        if blob['summary'].get(key) != fresh['summary'].get(key):
+            fail('provenance', 'data/provenance.json states %d %s; a rebuild gives %d — run provenance.py'
+                 % (blob['summary'].get(key, -1), key, fresh['summary'].get(key, -1)))
+
+    ids = [c['id'] for c in blob['claims']]
+    if len(set(ids)) != len(ids):
+        fail('provenance', 'two claims share one identifier, so a link to a chain is ambiguous')
+
+    known = {s['id']: s['origin'] for s in blob['sources']}
+    for claim in blob['claims']:
+        for sid in claim['sources']:
+            if sid not in known:
+                fail('provenance', 'claim %r cites source %r, which is not in the source list' % (claim['id'][:50], sid))
+                break
+
+    attributed = [c for c in blob['claims'] if c['sources']]
+    for switch in blob['switches']:
+        removed = set(switch['removes'])
+        stands = sum(1 for c in attributed
+                     if any(known.get(sid) not in removed for sid in c['sources']))
+        if stands != switch['stands']:
+            fail('provenance', 'the %s switch states %d claims standing; a recount gives %d'
+                 % (switch['id'], switch['stands'], stands))
+        if switch['stands'] + switch['falls'] != len(attributed):
+            fail('provenance', 'the %s switch accounts for %d claims, not the %d attributed ones'
+                 % (switch['id'], switch['stands'] + switch['falls'], len(attributed)))
+
+    weakest = min(blob['switches'], key=lambda s: s['share'])
+    note('provenance: %d claims, %d sources, %d classes; weakest setting leaves %s%% standing'
+         % (blob['summary']['claims'], blob['summary']['sources'],
+            blob['summary']['origins'], weakest['share']))
+
+
 def check_sources(files):
     """The source library is the record's spine; a dead entry is a dead claim."""
     blob = files.get('sources')
@@ -879,6 +940,7 @@ def main():
         check_chronology(files)
         check_statements(files)
         check_sources(files)
+        check_provenance(files)
         check_figures_against_markdown(files)
         check_chart_wiring()
         check_cache_bust()
