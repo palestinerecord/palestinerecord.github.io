@@ -535,6 +535,20 @@
      "date": "updated continuously",
      "url": "https://www.adalah.org/en/law/index",
      "note": "Catalogues more than 65 Israeli laws that discriminate directly or indirectly against Palestinian citizens of Israel and Palestinians in the occupied territory, each with its statutory text and a note on its effect."
+    },
+    {
+     "title": "FEC itemised receipts: Kraft Group LLC contributions, 2016-2026",
+     "org": "Federal Election Commission",
+     "date": "2026",
+     "url": "https://www.fec.gov/data/receipts/?contributor_name=Kraft+Group+LLC",
+     "note": "The primary filings behind §15.12: five contributions totalling $3,000,000 to the United Democracy Project between 15 July 2022 and 26 February 2026, $150,000 to DMFI PAC in 2021, and $1,000,000 to the 58th Presidential Inaugural Committee in 2016."
+    },
+    {
+     "title": "FEC committee profile: United Democracy Project (C00799031)",
+     "org": "Federal Election Commission",
+     "date": "2026",
+     "url": "https://www.fec.gov/data/committee/C00799031/",
+     "note": "AIPAC's super political action committee. Receipts of $35.9m, $87.2m and $107.5m across the 2022, 2024 and 2026 cycles, independent expenditures of $26.1m, $37.9m and $50.9m, and $51,555,842.93 transferred in from AIPAC's own treasury."
     }
    ]
   },
@@ -1277,6 +1291,13 @@
      "date": "2026-01-08",
      "url": "https://www.eunews.it/en/2026/01/08/gaza-kallas-there-is-no-justification-for-the-deterioration-of-the-humanitarian-crisis/",
      "note": "The paired formulation used in Egypt with Badr Abdelatty: Hamas's refusal to disarm set against Israel's restriction of international NGOs."
+    },
+    {
+     "title": "Robert Kraft makes $1M donation to AIPAC's super PAC, while George Soros pours $1M into J Street's",
+     "org": "The Forward",
+     "date": "2022-08-22",
+     "url": "https://forward.com/fast-forward/515534/robert-kraft-makes-1m-donation-to-aipacs-super-pac-while-george-soros-pours-1m-into-j-streets/",
+     "note": "Contemporaneous reporting of the first of the five contributions, recording it as the sixth seven-figure gift the committee had received in that cycle."
     }
    ]
   },
