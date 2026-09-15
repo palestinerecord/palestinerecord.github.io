@@ -5,13 +5,14 @@ The patterns are the wording of the claim as it is actually made in public, not
 the wording of the rebuttal. Nothing here is evidence: every fact the route
 states is read at render time out of the report, the live figures and the
 statements, so this file can never disagree with the record. What it decides is
-only which of the seventeen answers a pasted text is asking for.
+only which of the twenty-three answers a pasted text is asking for.
 """
 import json
 import datetime
 
 CLAIMS = [
-    (1, 'Self-defence', ['self-defence', 'article 51'], [
+    (1, 'Self-defence', ['self-defence', 'article 51', 'right to defend itself',
+        'right to self-defence', 'right to self-defense'], [
         'right to defend itself', 'right to defend herself', 'right to self-defence', 'right to self defence',
         'right to self-defense', 'right to self defense', 'article 51', 'self-defence', 'self defence',
         'self-defense', 'self defense', 'any country would', 'no country would tolerate', 'what would you do if',
@@ -19,14 +20,15 @@ CLAIMS = [
         'defending themselves', 'israel has every right',
     ], ['killed', 'children'], ['genocide']),
 
-    (2, 'Human shields', ['human shields'], [
+    (2, 'Human shields', ['human shields', 'human shield', 'hides behind civilians'], [
         'human shields', 'human shield', 'hamas hides', 'hides behind civilians', 'hides among civilians',
         'hamas uses civilians', 'tunnels under hospitals', 'command centre under', 'command center under',
         'blame hamas for', 'blood is on hamas', 'hamas is responsible for the deaths', 'if hamas surrendered',
         'embedded in civilian', 'operates from hospitals', 'operating out of schools',
     ], ['children', 'killed'], ['dehumanisation', 'warcrimes']),
 
-    (3, 'Inflated numbers', ['hamas-run health ministry', 'hamas run health ministry'], [
+    (3, 'Inflated numbers', ['hamas-run health ministry', 'hamas run health ministry',
+        'numbers are inflated', 'inflated death toll'], [
         'hamas-run health ministry', 'hamas run health ministry', 'hamas-run ministry of health',
         'gaza health ministry figures', 'hamas figures', 'hamas numbers', 'numbers are inflated',
         'inflated casualty', 'inflated death toll', 'made-up numbers', 'made up numbers', 'pallywood',
@@ -85,7 +87,7 @@ CLAIMS = [
         'takes precautions', 'unprecedented precautions',
     ], ['displaced', 'children'], ['cleansing', 'warcrimes']),
 
-    (12, 'Hamas steals the aid', ['hamas steals the aid'], [
+    (12, 'Hamas steals the aid', ['hamas steals the aid', 'hamas steals aid', 'steals the aid'], [
         'hamas steals the aid', 'hamas steals aid', 'steals the aid', 'aid is stolen', 'hamas takes the aid',
         'hamas loots', 'loots the aid', 'israel lets the aid in', 'israel allows aid', 'trucks are waiting',
         'there is no siege', 'aid is diverted', 'unrwa is complicit', 'hamas sells the aid',
@@ -121,6 +123,53 @@ CLAIMS = [
         'arab judge', 'sits on the supreme court', 'apartheid is a lie', 'not an apartheid state',
         'apartheid slur', 'they have equal rights', 'arabs vote in israel', 'equal citizens',
     ], ['settlers'], ['apartheid']),
+
+    (18, 'There is no genocide', ['there is no genocide', 'no genocide in gaza', 'genocide is a lie'], [
+        'there is no genocide', 'no genocide in gaza', 'genocide is a lie', 'not a genocide',
+        "isn't a genocide", 'is not genocide', 'stop calling it genocide', 'genocide accusation',
+        'blood libel', 'cheapens the word genocide', 'cheapens the holocaust', 'no genocidal intent',
+        'genocidal intent', 'dolus specialis', 'the population has grown', 'population keeps growing',
+        'worst genocide in history', 'if this were a genocide', 'misuse of the word genocide',
+        'the icj has not ruled', 'no court has found',
+    ], ['killed', 'children', 'displaced'], ['genocide', 'findings']),
+
+    (19, 'Hamas broke the ceasefire', ['hamas broke the ceasefire', 'broke the ceasefire'], [
+        'hamas broke the ceasefire', 'broke the ceasefire', 'broke the truce', 'violated the ceasefire',
+        'ceasefire violation', 'hamas violated', 'hamas refused to release', 'hamas did not return the bodies',
+        "hamas didn't return the bodies", 'israel honoured the ceasefire', 'israel honored the ceasefire',
+        'hamas never keeps', 'hamas restarted the war', 'who broke the ceasefire', 'israel kept the ceasefire',
+    ], ['killed', 'injured'], ['warcrimes', 'starvation']),
+
+    (20, 'Partition and the refugees', ['rejected the partition plan', 'arab leaders told them to leave'], [
+        'rejected the partition', 'rejected the partition plan', 'turned down partition', 'accepted partition',
+        'the arabs said no', 'five arab armies', 'arab armies invaded', 'arab leaders told them to leave',
+        'told to leave by arab', 'ordered to leave by their own', 'arab radio told them', 'they left voluntarily',
+        'they chose to leave', 'nobody expelled them', 'no one was expelled', 'the nakba is a myth',
+        'nakba myth', 'no ethnic cleansing in 1948', 'they started the 1948 war',
+    ], ['displaced'], ['cleansing', 'historic']),
+
+    (21, 'They were offered a state', ['offered them a state', 'camp david'], [
+        'offered them a state', 'offered a state', 'camp david', 'barak offered', 'olmert offered',
+        'refused every offer', 'rejected every offer', 'turned down every offer', 'never miss an opportunity',
+        'missed an opportunity to miss', 'arafat walked away', 'arafat rejected', 'said no to peace',
+        "they don't want peace", 'they do not want peace', 'could have had a state',
+    ], ['settlers'], ['annexation', 'historic']),
+
+    (22, 'Boycott is antisemitic', ['bds is antisemitic', 'boycott is antisemitic'], [
+        'bds is antisemitic', 'bds movement is antisemitic', 'boycott is antisemitic',
+        'boycotting israel is antisemitic', 'boycott the jewish state', 'bds is a hate',
+        "don't buy jewish", 'do not buy from jews', 'nazis boycotted', 'nazi boycott',
+        'economic warfare against israel', 'bds hurts palestinians', 'boycott only hurts palestinians',
+        'sodastream', 'bds is a terrorist',
+    ], ['recognising'], ['dissent', 'jewish-opposition']),
+
+    (23, 'Jews are indigenous', ['jews are indigenous', 'cannot be colonialism'], [
+        'jews are indigenous', 'indigenous to the land', 'indigenous people of israel', 'jews were there first',
+        'three thousand years', '3000 years', 'ancestral homeland', 'biblical homeland',
+        'judea and samaria have always', 'you cannot colonise your own', 'you cannot colonize your own',
+        'cannot be colonialism', 'not settler colonialism', 'not a colonial', 'jews are not white',
+        'returning to their homeland', 'archaeology proves',
+    ], ['settlers', 'wb-killed'], ['historic', 'annexation']),
 ]
 
 # The ids a pattern may name, resolved to live values by views.js at render
@@ -133,7 +182,7 @@ out = {
         'title': 'Claim patterns',
         'description': (
             'The phrase index behind the answer engine. Each entry maps one of the '
-            'seventeen rebuttals in Part XVI of the report to the wording the claim is '
+            'twenty-three rebuttals in Part XVI of the report to the wording the claim is '
             'made in, so a pasted text can be matched to the answer it is asking for '
             'without a language model and without a network call. The patterns carry no '
             'evidence of their own: the answer is assembled at render time from the '

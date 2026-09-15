@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=88" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=89" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=88" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=89" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -1455,8 +1455,8 @@ const Views = (function () {
 
   /* ---------- rebuttals ---------- */
 
-  /* Part XVI answers the seventeen defences that come up in every argument about
-     Gaza. Inside Evidence they are seventeen sections a long way down a very long
+  /* Part XVI answers the twenty-three defences that come up in every argument
+     about Gaza. Inside Evidence they are twenty-three sections a long way down a very long
      document. Here each one is a claim you can open, the report's own answer
      reproduced verbatim, the charts that carry that answer, and a button that
      puts the whole thing on the clipboard — which is what the page is for. */
@@ -1533,6 +1533,30 @@ const Views = (function () {
     17: [
       ['detention', 'Administrative detention without charge, military courts, and children tried in them. This is the law that governs the Palestinians who cannot vote for it.'],
       ['dispossession', 'The structure the franchise inside the Green Line does not reach: displacement and demolition across the territory under one authority.'],
+    ],
+    18: [
+      ['findings-time', 'When each body reached its determination. The question is not whether the word is contested; it is who has applied the definition, and when.'],
+      ['statements-cats', 'The documented statements, by what they are evidence of. Intent is inferred from conduct under Bosnia (2007), but here it was also said aloud.'],
+    ],
+    19: [
+      ['ceasefire-daily', 'The register since the ceasefire took effect on 10 October 2025. A ceasefire is a claim about what stopped; this is the series.'],
+      ['aid-trucks', 'And the other instrument. The zero bar is the total blockade imposed on 2 March 2025, sixteen days before the bombing resumed.'],
+    ],
+    20: [
+      ['nakba-months', 'The pace of the depopulation, month by month. The peak precedes 15 May 1948, which is the date the Arab armies crossed.'],
+      ['nakba-fate', 'And what stands on the sites now. A population that left of its own accord does not have its villages levelled behind it.'],
+    ],
+    21: [
+      ['settlements', 'What continued through every round of negotiation. A party that keeps acquiring the subject matter is not waiting for an answer.'],
+      ['land-control', 'The same territory at five dates. This is the thing said to have been offered, and the share of it still available to offer.'],
+    ],
+    22: [
+      ['embargo-tracker', 'State measures on arms transfers. A boycott is the same instrument in private hands, and the law treats the call for it as expression.'],
+      ['recognition', 'And the diplomatic measure of the same argument. The claim is about a state\'s conduct, which is why states are the ones acting on it.'],
+    ],
+    23: [
+      ['land-transfer', 'Land in Palestinian hands and land in Zionist institutional hands, on a log scale. Whatever the ancestral question, this is the transfer.'],
+      ['jnf-growth', 'Fifty years of purchase on the open market, then two years of statute. The mechanism changed in 1948; the direction did not.'],
     ],
   };
 
@@ -2426,8 +2450,8 @@ const Views = (function () {
 
   /* The rebuttals page answers a claim a reader has already identified. This
      route answers one they have only been handed: paste the post, the comment
-     or the press line, and it says which of the seventeen answers it is asking
-     for and assembles a sourced reply.
+     or the press line, and it says which of the twenty-three answers it is
+     asking for and assembles a sourced reply.
 
      There is no language model behind it and no network call. Every phrase it
      recognises is written down in data/claim-patterns.json, the match is a
@@ -2478,7 +2502,7 @@ const Views = (function () {
     const phrases = P.claims.reduce((n, c) => n + c.phrases.length, 0);
 
     const stats = [
-      { value: P.claims.length, label: 'Claims recognised', note: 'the seventeen defences answered in Part XVI of the report, each with the wording it is actually made in' },
+      { value: P.claims.length, label: 'Claims recognised', note: 'the defences answered in Part XVI of the report, each with the wording it is actually made in' },
       { value: phrases, label: 'Phrases matched', note: 'written down in data/claim-patterns.json, not inferred — the same text always produces the same answer' },
       { value: D.statements.items.length, label: 'Statements to draw on', note: 'each with speaker, role, date and the verbatim words' },
       { value: 0, label: 'Models consulted', note: 'nothing is generated; the reply is assembled from the report, the live figures and the record' },
@@ -2489,7 +2513,22 @@ const Views = (function () {
       'Israel has the right to defend itself. Hamas hides behind civilians and uses them as human shields.',
       'There is no famine in Gaza. Israel lets the aid in and Hamas steals it.',
       'Anti-Zionism is antisemitism. From the river to the sea is a call to destroy Israel.',
+      'There is no genocide. Hamas broke the ceasefire, and Israel honoured it.',
+      'The Arabs rejected the partition plan, they were offered a state at Camp David, and BDS is antisemitic.',
     ];
+
+    /* Everything it can recognise, listed on the page rather than left in the
+       open-data file. A reader who pastes something and gets nothing back is
+       entitled to know whether the claim is absent from the list or merely
+       worded differently, and that question cannot be answered from a status
+       line. The claims are in report order, which is also the order of Part XVI. */
+    const catalogue = P.claims.map((c) => `<details class="answer-known">
+      <summary><b>${esc(c.label)}</b>
+        <span class="small muted">Rebuttal ${c.rebuttal} · ${c.phrases.length} wordings</span></summary>
+      <p class="small muted">Recognised on, among others:
+        ${c.strong.map((s) => `<code>${esc(s)}</code>`).join(' ')}</p>
+      <p class="small"><a href="#/rebuttals/${c.rebuttal}">Read the answer in full</a></p>
+    </details>`).join('');
 
     return `<div class="view wrap">
       <section class="section">
@@ -2530,8 +2569,21 @@ const Views = (function () {
       <section class="section" id="answer-results-wrap" hidden>
         ${head('The answer', 'Assembled from the record', 'Ranked by how much of the pasted text each one accounts for. '
           + 'Every line below is read out of the report, the live figures or the documented statements at the moment '
-          + 'you press the button, so a reply copied from here carries today’s numbers.')}
+          + 'you press the button, so a reply copied from here carries today’s numbers. A claim marked '
+          + '<b>named</b> matched a phrase that states it; one marked <b>touched on</b> matched only wording that '
+          + 'surrounds it, and may be there for another reason.')}
+        <div class="answer-tools">
+          <button class="chart-tool primary" id="answer-copy-all">Copy every answer</button>
+          <span class="small muted" id="answer-copy-note"></span>
+        </div>
         <div id="answer-results"></div>
+      </section>
+
+      <section class="section">
+        ${head('Everything it recognises', `The ${P.claims.length} claims, and the wording each is recognised by`,
+          'The whole list, so that a claim which produced no answer can be told apart from a claim this record '
+          + 'has no answer for. The full phrase set — all ' + phrases + ' of them — is in the open data.')}
+        <div class="grid c3">${catalogue}</div>
       </section>
 
       <section class="section">
@@ -2553,7 +2605,8 @@ const Views = (function () {
             <h3 style="font-size:17px;margin-bottom:10px">It does not send your text anywhere</h3>
             <p class="small muted">The matching runs in this page. Nothing is uploaded, logged or stored, and the site
             has no server to send it to — the whole record is static files.
-            <a href="#/api">The phrase list is open data</a> like everything else here.</p>
+            <a href="#/api">The phrase list is open data</a> like everything else here, and the whole list of
+            claims is printed above rather than left in the file.</p>
           </div>
         </div>
       </section>

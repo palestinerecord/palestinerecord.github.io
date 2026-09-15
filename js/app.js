@@ -832,19 +832,44 @@ const App = (function () {
     if (button) button.setAttribute('aria-expanded', 'false');
   }
 
+  /* The dropdowns open on hover for a mouse and on the button for everything
+     else, which is two states over one panel and is where the glitch lived: a
+     menu closed by its button re-opened immediately because the pointer was
+     still over the group, and a menu whose link had just been followed stayed
+     open over the new page because the link still held focus - so the next
+     click landed on the panel instead of on the page behind it. Closing here
+     therefore means held shut, until the pointer leaves the group and the
+     intention is unambiguous again. */
   function navGroups() {
     const groups = Array.from(nav.querySelectorAll('.nav-group'));
     if (!groups.length) return;
-    const close = (except) => groups.forEach((g) => {
-      if (g !== except) g.querySelector('.nav-head').setAttribute('aria-expanded', 'false');
-    });
+    const shut = (g) => {
+      g.querySelector('.nav-head').setAttribute('aria-expanded', 'false');
+      g.dataset.shut = '1';
+      if (g.contains(document.activeElement) && document.activeElement.blur) document.activeElement.blur();
+    };
+    const close = (except) => groups.forEach((g) => { if (g !== except) shut(g); });
     groups.forEach((g) => {
       const head = g.querySelector('.nav-head');
       head.addEventListener('click', () => {
-        const open = head.getAttribute('aria-expanded') === 'true';
+        // What the reader sees open, not what the attribute says: under a mouse
+        // the panel is already open on hover before the first click, and a
+        // click that appeared to do nothing was the old behaviour.
+        const seen = !g.dataset.shut
+          && (head.getAttribute('aria-expanded') === 'true' || g.matches(':hover'));
         close(g);
-        head.setAttribute('aria-expanded', open ? 'false' : 'true');
+        if (seen) { shut(g); return; }
+        delete g.dataset.shut;
+        head.setAttribute('aria-expanded', 'true');
       });
+      // Leaving the group is the one unambiguous end of a hover.
+      g.addEventListener('pointerleave', () => {
+        delete g.dataset.shut;
+        head.setAttribute('aria-expanded', 'false');
+      });
+      // A link in the menu changes the route: the menu has done its work and
+      // must not sit over the page the reader just asked for.
+      g.querySelectorAll('.nav-menu a').forEach((a) => a.addEventListener('click', () => shut(g)));
     });
     document.addEventListener('click', (e) => { if (!nav.contains(e.target)) close(null); });
     document.addEventListener('keydown', (e) => {
@@ -1454,11 +1479,18 @@ const App = (function () {
         }
         if (found) { weight += p.weight; matched.push(p.text); }
       });
-      if (weight) hits.push({ claim: entry.claim, weight: weight, first: first, phrases: matched });
+      if (weight) {
+        // A phrase in the strong list states the claim; anything else only
+        // surrounds it, and may be in the text for an unrelated reason. Saying
+        // which of the two fired is the difference between an answer a reader
+        // can rely on and one they have to check for themselves.
+        const named = matched.some((m) => entry.strong.indexOf(m) >= 0);
+        hits.push({ claim: entry.claim, weight: weight, first: first, phrases: matched, named: named });
+      }
     });
     hits.sort((a, b) => (b.weight - a.weight) || (a.first - b.first));
     spans.sort((a, b) => a[0] - b[0] || b[1] - a[1]);
-    return { hits: hits, spans: spans };
+    return { hits: hits, spans: spans, length: hay.length };
   }
 
   /* The pasted text with the matched phrases marked. Overlapping matches are
@@ -1507,7 +1539,8 @@ const App = (function () {
         <span class="answer-rank">${rank}</span>
         <div>
           <h3>“${Views.esc(claimText)}”</h3>
-          <p class="small muted">Rebuttal ${n} · matched on ${hit.phrases.length}
+          <p class="small muted"><span class="answer-conf ${hit.named ? 'is-named' : ''}">${hit.named ? 'named' : 'touched on'}</span>
+            Rebuttal ${n} · matched on ${hit.phrases.length}
             ${hit.phrases.length === 1 ? 'phrase' : 'phrases'}:
             ${hit.phrases.slice(0, 6).map((p) => `<code>${Views.esc(p)}</code>`).join(' ')}</p>
         </div>
@@ -1576,6 +1609,21 @@ const App = (function () {
     const data = document.getElementById('answer-examples-data');
     const examples = data ? JSON.parse(data.textContent) : [];
 
+    /* How much of the pasted text the matches actually account for, in
+       characters, measured on the merged spans so an overlap is not counted
+       twice. It is printed because it is the honest form of the claim this
+       page makes: a post that is nine-tenths unrecognised has been answered in
+       one-tenth, and the reader should be told which. */
+    function covered(text, spans) {
+      let total = 0;
+      let end = -1;
+      spans.forEach(([from, to]) => {
+        if (from > end) { total += to - from; end = to; return; }
+        if (to > end) { total += to - end; end = to; }
+      });
+      return text.length ? Math.round((total / text.length) * 100) : 0;
+    }
+
     function run() {
       const text = input.value.trim();
       if (!text) {
@@ -1589,14 +1637,18 @@ const App = (function () {
       readWrap.hidden = false;
       if (!found.hits.length) {
         resultsWrap.hidden = true;
-        status.textContent = 'No claim in the list was recognised. The phrase list is open data, and a claim that '
-          + 'is missing from it is a gap worth reporting.';
+        status.textContent = 'No claim in the list was recognised. The whole list is printed further down this '
+          + 'page: if the claim is there and the wording is not, the wording is the gap; if the claim is not '
+          + 'there at all, the gap is in the record and is worth reporting.';
         return;
       }
       results.innerHTML = found.hits.map((h, i) => answerBlock(h, i + 1)).join('');
       resultsWrap.hidden = false;
-      status.textContent = `${found.hits.length} ${found.hits.length === 1 ? 'claim' : 'claims'} recognised, `
-        + `${found.spans.length} ${found.spans.length === 1 ? 'phrase' : 'phrases'} matched.`;
+      const named = found.hits.filter((h) => h.named).length;
+      status.textContent = `${found.hits.length} ${found.hits.length === 1 ? 'claim' : 'claims'} recognised`
+        + (named ? `, ${named} of them named outright` : ', none of them named outright')
+        + `, ${found.spans.length} ${found.spans.length === 1 ? 'phrase' : 'phrases'} matched, `
+        + `${covered(text, found.spans)}% of the text accounted for.`;
     }
 
     document.getElementById('answer-run').addEventListener('click', run);
@@ -1609,6 +1661,24 @@ const App = (function () {
     input.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); run(); }
     });
+    // One reply for the whole post, in the order the answers were ranked. A
+    // comment box takes one paste, not five.
+    const copyAll = document.getElementById('answer-copy-all');
+    if (copyAll) copyAll.addEventListener('click', () => {
+      const cards = app.querySelectorAll('.answer-card');
+      const note = document.getElementById('answer-copy-note');
+      if (!cards.length) return;
+      const text = Array.prototype.map.call(cards, (c) => answerReplyText(c.dataset.rebuttal)).join('\n\n---\n\n');
+      const say = (s) => { if (note) { note.textContent = s; setTimeout(() => { note.textContent = ''; }, 2200); } };
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(
+          () => say(`${cards.length} ${cards.length === 1 ? 'answer' : 'answers'} copied, ${text.length} characters.`),
+          () => say('The browser refused the clipboard. Select the cards and press ⌘C.'));
+      } else {
+        say('The browser has no clipboard API. Select the cards and press ⌘C.');
+      }
+    });
+
     app.querySelectorAll('[data-example]').forEach((b) => b.addEventListener('click', () => {
       input.value = examples[Number(b.dataset.example)] || '';
       run();

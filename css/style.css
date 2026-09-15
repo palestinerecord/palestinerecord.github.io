@@ -278,12 +278,25 @@ body:not([data-view="overview"]) #scene { opacity: .18; }
   padding: 7px; border: 1px solid var(--line); border-radius: 13px;
   background: var(--panel-solid); box-shadow: 0 18px 44px rgba(0, 0, 0, .34);
 }
+/* The menu sits seven pixels below the head, and a pointer crossing that gap
+   leaves the group for the length of the crossing, which used to close the
+   menu underneath the pointer on its way to it. The bridge is that gap, drawn
+   invisibly and counted as part of the menu, so the hover never breaks. */
+.nav-menu::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -9px; height: 9px;
+}
 /* Opened by hover for a mouse and by the button for everything else. Both are
    needed: hover alone is unreachable from a keyboard or a touch screen, and
    the button alone makes a mouse click twice for every page. */
 .nav-group:hover .nav-menu,
 .nav-group:focus-within .nav-menu,
 .nav-head[aria-expanded="true"] + .nav-menu { display: flex; }
+/* Dismissed: held shut until the pointer leaves the group. Without this a menu
+   closed by its own button, or by following one of its links, re-opens on the
+   spot because the pointer is still over the group and the link it was just
+   clicked on still holds focus - and an open panel over the page swallows the
+   next click on whatever is behind it. */
+.nav-group[data-shut] .nav-menu { display: none; }
 .nav-menu a {
   display: flex; flex-direction: column; gap: 2px;
   padding: 9px 12px; border-radius: 9px; white-space: nowrap;
@@ -1289,6 +1302,10 @@ tbody td strong { color: var(--text); }
     position: static; display: flex; min-width: 0;
     padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none;
   }
+  /* Nothing opens or closes in the panel, so nothing may be held shut in it
+     either: the dismissal state belongs to the desktop dropdowns alone. */
+  .nav-group[data-shut] .nav-menu { display: flex; }
+  .nav-menu::before { content: none; }
   .nav-menu a { padding: 10px 14px; white-space: normal; }
   .nav-menu a em { font-size: 11.5px; }
   .nav-toggle {
@@ -1794,11 +1811,35 @@ tr.struck td { text-decoration: line-through; color: var(--red); }
 .answer-quotes cite { display: block; font-style: normal; font-size: 12.5px; color: var(--muted); margin-top: 6px; }
 .answer-card-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 
+/* Whether the claim was stated or only brushed against. A reader acting on an
+   answer is entitled to know which of the two the match was, so the label is
+   on the card rather than in a footnote about how the matching works. */
+.answer-conf {
+  display: inline-block; margin-right: 8px; padding: 2px 8px; border-radius: 20px;
+  font-size: 10.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
+  border: 1px solid var(--line); color: var(--muted); background: var(--panel);
+}
+.answer-conf.is-named { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+/* The catalogue of everything the page can recognise, closed by default: the
+   list is the answer to "why did my text produce nothing", and it is only
+   useful if it can be scanned, which twenty-three open blocks cannot be. */
+.answer-known { padding: 14px 16px; border: 1px solid var(--line); border-radius: 13px; background: var(--panel); }
+.answer-known summary {
+  cursor: pointer; display: flex; flex-direction: column; gap: 3px;
+  font-size: 15px; color: var(--text-2);
+}
+.answer-known summary::-webkit-details-marker { display: none; }
+.answer-known[open] summary { color: var(--text); }
+.answer-known p { margin: 10px 0 0; }
+.answer-known code { font-family: var(--mono); font-size: 11px; color: var(--accent); }
+
 @media (max-width: 700px) {
   .answer-box, .answer-card { padding: 16px 18px; }
   .answer-read { padding: 16px 18px; font-size: 15px; }
   .answer-card-top h3 { font-size: 17px; }
   .answer-fig { min-width: 0; flex: 1 1 140px; }
+  .answer-known { padding: 12px 14px; }
 }
 
 /* ---------- the accountability ledger ---------- */

@@ -1,7 +1,7 @@
 {
  "meta": {
   "title": "Claim patterns",
-  "description": "The phrase index behind the answer engine. Each entry maps one of the seventeen rebuttals in Part XVI of the report to the wording the claim is made in, so a pasted text can be matched to the answer it is asking for without a language model and without a network call. The patterns carry no evidence of their own: the answer is assembled at render time from the report, the live figures and the documented statements.",
+  "description": "The phrase index behind the answer engine. Each entry maps one of the twenty-three rebuttals in Part XVI of the report to the wording the claim is made in, so a pasted text can be matched to the answer it is asking for without a language model and without a network call. The patterns carry no evidence of their own: the answer is assembled at render time from the report, the live figures and the documented statements.",
   "generated": "2026-09-15",
   "figure_ids": [
    "killed",
@@ -21,7 +21,10 @@
    "label": "Self-defence",
    "strong": [
     "self-defence",
-    "article 51"
+    "article 51",
+    "right to defend itself",
+    "right to self-defence",
+    "right to self-defense"
    ],
    "phrases": [
     "right to defend itself",
@@ -58,7 +61,9 @@
    "rebuttal": 2,
    "label": "Human shields",
    "strong": [
-    "human shields"
+    "human shields",
+    "human shield",
+    "hides behind civilians"
    ],
    "phrases": [
     "human shields",
@@ -92,7 +97,9 @@
    "label": "Inflated numbers",
    "strong": [
     "hamas-run health ministry",
-    "hamas run health ministry"
+    "hamas run health ministry",
+    "numbers are inflated",
+    "inflated death toll"
    ],
    "phrases": [
     "hamas-run health ministry",
@@ -352,7 +359,9 @@
    "rebuttal": 12,
    "label": "Hamas steals the aid",
    "strong": [
-    "hamas steals the aid"
+    "hamas steals the aid",
+    "hamas steals aid",
+    "steals the aid"
    ],
    "phrases": [
     "hamas steals the aid",
@@ -515,6 +524,216 @@
    ],
    "statement_cats": [
     "apartheid"
+   ]
+  },
+  {
+   "rebuttal": 18,
+   "label": "There is no genocide",
+   "strong": [
+    "there is no genocide",
+    "no genocide in gaza",
+    "genocide is a lie"
+   ],
+   "phrases": [
+    "there is no genocide",
+    "no genocide in gaza",
+    "genocide is a lie",
+    "not a genocide",
+    "isn't a genocide",
+    "is not genocide",
+    "stop calling it genocide",
+    "genocide accusation",
+    "blood libel",
+    "cheapens the word genocide",
+    "cheapens the holocaust",
+    "no genocidal intent",
+    "genocidal intent",
+    "dolus specialis",
+    "the population has grown",
+    "population keeps growing",
+    "worst genocide in history",
+    "if this were a genocide",
+    "misuse of the word genocide",
+    "the icj has not ruled",
+    "no court has found"
+   ],
+   "figures": [
+    "killed",
+    "children",
+    "displaced"
+   ],
+   "statement_cats": [
+    "genocide",
+    "findings"
+   ]
+  },
+  {
+   "rebuttal": 19,
+   "label": "Hamas broke the ceasefire",
+   "strong": [
+    "hamas broke the ceasefire",
+    "broke the ceasefire"
+   ],
+   "phrases": [
+    "hamas broke the ceasefire",
+    "broke the ceasefire",
+    "broke the truce",
+    "violated the ceasefire",
+    "ceasefire violation",
+    "hamas violated",
+    "hamas refused to release",
+    "hamas did not return the bodies",
+    "hamas didn't return the bodies",
+    "israel honoured the ceasefire",
+    "israel honored the ceasefire",
+    "hamas never keeps",
+    "hamas restarted the war",
+    "who broke the ceasefire",
+    "israel kept the ceasefire"
+   ],
+   "figures": [
+    "killed",
+    "injured"
+   ],
+   "statement_cats": [
+    "warcrimes",
+    "starvation"
+   ]
+  },
+  {
+   "rebuttal": 20,
+   "label": "Partition and the refugees",
+   "strong": [
+    "rejected the partition plan",
+    "arab leaders told them to leave"
+   ],
+   "phrases": [
+    "rejected the partition",
+    "rejected the partition plan",
+    "turned down partition",
+    "accepted partition",
+    "the arabs said no",
+    "five arab armies",
+    "arab armies invaded",
+    "arab leaders told them to leave",
+    "told to leave by arab",
+    "ordered to leave by their own",
+    "arab radio told them",
+    "they left voluntarily",
+    "they chose to leave",
+    "nobody expelled them",
+    "no one was expelled",
+    "the nakba is a myth",
+    "nakba myth",
+    "no ethnic cleansing in 1948",
+    "they started the 1948 war"
+   ],
+   "figures": [
+    "displaced"
+   ],
+   "statement_cats": [
+    "cleansing",
+    "historic"
+   ]
+  },
+  {
+   "rebuttal": 21,
+   "label": "They were offered a state",
+   "strong": [
+    "offered them a state",
+    "camp david"
+   ],
+   "phrases": [
+    "offered them a state",
+    "offered a state",
+    "camp david",
+    "barak offered",
+    "olmert offered",
+    "refused every offer",
+    "rejected every offer",
+    "turned down every offer",
+    "never miss an opportunity",
+    "missed an opportunity to miss",
+    "arafat walked away",
+    "arafat rejected",
+    "said no to peace",
+    "they don't want peace",
+    "they do not want peace",
+    "could have had a state"
+   ],
+   "figures": [
+    "settlers"
+   ],
+   "statement_cats": [
+    "annexation",
+    "historic"
+   ]
+  },
+  {
+   "rebuttal": 22,
+   "label": "Boycott is antisemitic",
+   "strong": [
+    "bds is antisemitic",
+    "boycott is antisemitic"
+   ],
+   "phrases": [
+    "bds is antisemitic",
+    "bds movement is antisemitic",
+    "boycott is antisemitic",
+    "boycotting israel is antisemitic",
+    "boycott the jewish state",
+    "bds is a hate",
+    "don't buy jewish",
+    "do not buy from jews",
+    "nazis boycotted",
+    "nazi boycott",
+    "economic warfare against israel",
+    "bds hurts palestinians",
+    "boycott only hurts palestinians",
+    "sodastream",
+    "bds is a terrorist"
+   ],
+   "figures": [
+    "recognising"
+   ],
+   "statement_cats": [
+    "dissent",
+    "jewish-opposition"
+   ]
+  },
+  {
+   "rebuttal": 23,
+   "label": "Jews are indigenous",
+   "strong": [
+    "jews are indigenous",
+    "cannot be colonialism"
+   ],
+   "phrases": [
+    "jews are indigenous",
+    "indigenous to the land",
+    "indigenous people of israel",
+    "jews were there first",
+    "three thousand years",
+    "3000 years",
+    "ancestral homeland",
+    "biblical homeland",
+    "judea and samaria have always",
+    "you cannot colonise your own",
+    "you cannot colonize your own",
+    "cannot be colonialism",
+    "not settler colonialism",
+    "not a colonial",
+    "jews are not white",
+    "returning to their homeland",
+    "archaeology proves"
+   ],
+   "figures": [
+    "settlers",
+    "wb-killed"
+   ],
+   "statement_cats": [
+    "historic",
+    "annexation"
    ]
   }
  ]

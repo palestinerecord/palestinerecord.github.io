@@ -264,7 +264,7 @@ def clean(html, snapshot_url, route_url, generated, depth_prefix='../'):
     html = html.replace('href="#/', 'href="%sindex.html#/' % depth_prefix)
 
     # Self-canonical: a canonical pointing at a fragment collapses to the site
-    # root for every search engine, which would leave sixteen of seventeen
+    # root for every search engine, which would leave twenty-two of twenty-three
     # routes unindexed — the exact problem this script exists to fix.
     html = re.sub(r'<link rel="canonical"[^>]*>',
                   '<link rel="canonical" href="%s">' % snapshot_url, html)
