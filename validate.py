@@ -536,6 +536,140 @@ def check_patterns(files):
          % (len(blob.get('claims', [])), len(seen), len(numbers)))
 
 
+def check_entities(files):
+    """The ledger names people, so it is held to the strictest joins in the file.
+
+    Nothing the #/ledger route states originates there. The offices and the
+    quotes are statements.json read by index, the sections are report.json, the
+    measures are world-positions.json, and the arrest map is the Rome Statute
+    party list. Every one of those joins is checked here, and the file is
+    rebuilt first, because the failure that would matter most — a quotation or
+    a sanction attached to the wrong person — is the one thing a reader cannot
+    see on the page. The map is checked too: a state party that does not
+    resolve to a polygon drops out of the obligation the map exists to show,
+    and it does so in silence.
+    """
+    blob = files.get('entities')
+    if not blob:
+        fail('entities', 'data/entities.json is missing; run entities.py')
+        return
+
+    try:
+        sys.path.insert(0, str(HERE))
+        import entities as entities_module
+        fresh = entities_module.build()
+    except Exception as err:  # the rebuild is the check; it cannot be skipped
+        fail('entities', 'entities.py would not rebuild: %s' % err)
+        return
+
+    for key in ('persons', 'companies', 'warrants', 'sanctioned', 'parties'):
+        if blob['meta'].get(key) != fresh['meta'].get(key):
+            fail('entities', 'data/entities.json states %s %s; a rebuild gives %s — run entities.py'
+                 % (blob['meta'].get(key), key, fresh['meta'].get(key)))
+
+    classes = {c['id'] for c in blob.get('classes', [])}
+    ids = [p['id'] for p in blob.get('persons', [])]
+    if len(set(ids)) != len(ids):
+        fail('entities', 'two persons share one identifier, so a link to a page is ambiguous')
+    company_ids = [c['id'] for c in blob.get('companies', [])]
+    if len(set(company_ids)) != len(company_ids):
+        fail('entities', 'two companies share one identifier')
+
+    statements = (files.get('statements') or {}).get('items', [])
+    report = files.get('report') or {}
+    sections = {s.get('id') for part in report.get('parts', []) for s in part.get('sections', [])}
+    world = files.get('geo/world') or {}
+    polygons = {f['properties'].get('name') for f in world.get('features', [])}
+    alias = (files.get('world-positions') or {}).get('alias', {})
+    resolved = lambda name: alias.get(name, name) in polygons        # noqa: E731 - one line, one use
+
+    quoted = 0
+    for person in blob.get('persons', []):
+        if person.get('class') not in classes:
+            fail('entities', '%s is classified %r, which is not one of the classes on the page'
+                 % (person['id'], person.get('class')))
+        if not person.get('name') or not person.get('role'):
+            fail('entities', '%s has no name or no role, so the page would state an office it cannot source' % person['id'])
+        for index in person.get('statements', []):
+            if not isinstance(index, int) or not 0 <= index < len(statements):
+                fail('entities', '%s cites statement %r, which is not an entry in statements.json' % (person['id'], index))
+                continue
+            quoted += 1
+            speaker = statements[index].get('speaker', '')
+            if entities_module.slug(speaker) != person['id']:
+                # The page shows this quotation under this person's name. If the
+                # index moved, it would show one person's words under another's.
+                fail('entities', '%s cites statement %d, which is spoken by %r' % (person['id'], index, speaker))
+        for mention in person.get('mentions', []):
+            if sections and mention.get('id') not in sections:
+                fail('entities', '%s is said to be named in %r, which is not a section of the report'
+                     % (person['id'], mention.get('id')))
+        warrant = person.get('warrant')
+        if warrant and not (warrant.get('court') and warrant.get('date') and warrant.get('status')):
+            fail('entities', 'the warrant recorded against %s does not name a court, a date and a status' % person['id'])
+        for measure in person.get('sanctions', []):
+            if measure.get('direction') not in ('conduct', 'accountability'):
+                fail('entities', 'the measure %r against %s is neither conduct nor accountability'
+                     % (measure.get('id'), person['id']))
+            for state in measure.get('by', []):
+                if not resolved(state):
+                    fail('entities', '%s is recorded as sanctioning %s but does not resolve to a polygon'
+                         % (state, person['id']))
+
+    for company in blob.get('companies', []):
+        if not company.get('supplies'):
+            fail('entities', '%s is listed with nothing said about what it supplies' % company['id'])
+        if not company.get('ref') and not company.get('source'):
+            # Everything else on the page carries a section of the report. A
+            # company that carries neither a section nor a named source would be
+            # the one entry the reader has to take on trust.
+            fail('entities', '%s carries neither a report section nor a named source' % company['id'])
+        for mention in company.get('mentions', []):
+            if sections and mention.get('id') not in sections:
+                fail('entities', '%s is said to be named in %r, which is not a section of the report'
+                     % (company['id'], mention.get('id')))
+
+    icc = blob.get('icc', {})
+    parties = icc.get('parties', [])
+    names = [p['name'] for p in parties]
+    if len(set(names)) != len(names):
+        fail('entities', 'the states parties list repeats a state, so the count on the page is wrong')
+    if len(parties) != blob['meta'].get('parties'):
+        fail('entities', 'the ledger states %s states parties and lists %d' % (blob['meta'].get('parties'), len(parties)))
+    for party in parties:
+        # A party with no polygon is recorded as such deliberately; a party whose
+        # polygon name is wrong would vanish from the map without saying so.
+        if party.get('map') and not resolved(party['map']):
+            fail('entities', 'the state party %s does not resolve to a polygon in the world geometry' % party['name'])
+    for leaving in icc.get('leaving', []):
+        if leaving['name'] not in names:
+            fail('entities', '%s is recorded as withdrawing but is not on the party list; under Article 127(1) '
+                 'it is bound until %s' % (leaving['name'], leaving.get('effective')))
+    for position in icc.get('positions', []):
+        if position.get('stance') not in ('would-enforce', 'refused', 'non-party', 'other'):
+            fail('entities', '%s is given the stance %r, which the map has no shading for'
+                 % (position.get('name'), position.get('stance')))
+        if position.get('map') and not resolved(position['map']):
+            fail('entities', 'the stated position of %s does not resolve to a polygon' % position['name'])
+        on_list = position['name'] in names
+        if position.get('stance') == 'non-party' and on_list:
+            fail('entities', '%s is shown as a non-party but is on the states parties list' % position['name'])
+        if position.get('stance') in ('would-enforce', 'refused') and not on_list:
+            # Those two stances are statements about the Article 86 obligation,
+            # which only a party carries. A non-party saying either is saying
+            # something else, and belongs under the stance that claims less.
+            fail('entities', '%s is shown as having %s the warrant but is not a state party'
+                 % (position['name'], 'undertaken to enforce' if position['stance'] == 'would-enforce' else 'refused'))
+
+    if "'ledger'" not in (HERE / 'js' / 'app.js').read_text():
+        fail('entities', 'the ledger route is not registered in app.js, so the page cannot be reached')
+    if 'arrest-map' not in (HERE / 'js' / 'charts.js').read_text():
+        fail('entities', 'the arrest map is not registered, so the route would draw an empty container')
+
+    note('entities: %d persons, %d companies, %d quotations by index, %d states parties, %d stated positions'
+         % (len(ids), len(company_ids), quoted, len(parties), len(icc.get('positions', []))))
+
+
 def check_provenance(files):
     """The provenance graph has to be a rebuild of the data, not a file beside it.
 
@@ -1008,6 +1142,7 @@ def main():
         check_sources(files)
         check_provenance(files)
         check_patterns(files)
+        check_entities(files)
         check_figures_against_markdown(files)
         check_chart_wiring()
         check_cache_bust()

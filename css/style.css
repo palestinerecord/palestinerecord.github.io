@@ -1156,25 +1156,27 @@ tbody td strong { color: var(--text); }
    then the nav's padding and the strapline, then the search word and the
    pill itself.
 
-   The numbers are measured, not chosen. With eleven links the bar needs
-   1,740px at full size, 1,541px once the label is gone, 1,400px once the
-   strapline and the padding go, and 1,200px once the pill and the search
+   The numbers are measured, not chosen. With fourteen links the bar needs
+   2,014px at full size, 1,790px once the label is gone, 1,611px once the
+   strapline and the padding go, and 1,414px once the pill and the search
    word have gone; each breakpoint sits just above the width its own step
-   needs. They were set for nine links, and the two added since (Children,
-   Day by day) pushed the requirement past them — which is why the pill was
-   running off the right edge between 1,500 and 1,740px. Any link added here
-   moves all four numbers: measure the bar again rather than guessing. */
-@media (max-width: 1760px) {
+   needs. They were last set for twelve links, and the two added since
+   (Answer a claim, Ledger) pushed every requirement past them — which is why
+   the last link was running off the right edge at every width up to 1,920px.
+   Any link added here moves all four numbers: measure the bar again rather
+   than guessing, by loading the bar's markup on its own at a ladder of window
+   widths and reading the right edge of the last link. */
+@media (max-width: 2020px) {
   .topbar { gap: 14px; }
   .nav a { padding: 8px 10px; font-size: 13px; }
   .fresh-label { display: none; }
 }
-@media (max-width: 1560px) {
+@media (max-width: 1800px) {
   .topbar { gap: 10px; padding: 0 18px; }
   .nav a { padding: 8px 7px; }
   .brand-text em { display: none; }
 }
-@media (max-width: 1420px) {
+@media (max-width: 1620px) {
   .search-open span { display: none; }
   .search-icon { display: block; }
   .search-open { padding: 7px 10px; }
@@ -1187,11 +1189,13 @@ tbody td strong { color: var(--text); }
 /* Below this the links no longer fit beside the brand and the controls, so
    they become a menu. This is the bar's breakpoint, not the page's: the grids
    stay two and three columns down to 860px. The number is what the parts
-   measure, not a round figure: brand, eleven links, the theme toggle and the
-   search glyph come to 1,200px with the padding, and the bar is given a
-   little over that. It was 1,080px when there were nine links, which left
-   the last two hanging off the edge between 1,080 and 1,200. */
-@media (max-width: 1220px) {
+   measure, not a round figure: brand, fourteen links, the theme toggle and
+   the search glyph come to 1,414px with the padding stripped, and the bar is
+   given a little over that. It was 1,220px when there were twelve links,
+   which left the last two hanging off the edge below 1,414px. A laptop at
+   1,440px is the width this number is really set by: it keeps the links in
+   the bar there, and hands them to the menu on anything narrower. */
+@media (max-width: 1440px) {
   /* The nav is out of flow once it is a menu, so its margin-left:auto no
      longer pushes anything: the first remaining control takes over. */
   .theme-toggle { margin-left: auto; }
@@ -1715,4 +1719,97 @@ tr.struck td { text-decoration: line-through; color: var(--red); }
   .answer-read { padding: 16px 18px; font-size: 15px; }
   .answer-card-top h3 { font-size: 17px; }
   .answer-fig { min-width: 0; flex: 1 1 140px; }
+}
+
+/* ---------- the accountability ledger ---------- */
+
+.led-list { display: grid; gap: 12px; }
+.led-person {
+  border: 1px solid var(--line); border-radius: 12px; background: var(--panel);
+  padding: 0; overflow: hidden;
+}
+.led-person[open] { border-color: var(--line-hi); }
+.led-person > summary {
+  list-style: none; cursor: pointer; padding: 16px 20px;
+  display: grid; gap: 4px;
+}
+.led-person > summary::-webkit-details-marker { display: none; }
+.led-person > summary:hover { background: var(--panel-hi); }
+.led-name { font-family: var(--serif); font-size: 19px; color: var(--text); }
+.led-role { font-size: 13.5px; color: var(--text-2); line-height: 1.5; }
+.led-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.led-badge {
+  font-size: 11.5px; color: var(--muted); border: 1px solid var(--line);
+  border-radius: 999px; padding: 2px 9px;
+}
+.led-badge.warrant { color: var(--red); border-color: rgba(210, 83, 76, .45); }
+.led-badge.sanction { color: var(--accent); border-color: var(--accent-soft); }
+/* A person's badges are counts, so they read as pills. A company's is the
+   first sentence of what it supplies, which is a line of prose: in a pill it
+   would be a pill the width of the card. */
+.led-company .led-badge {
+  border: 0; padding: 0; font-size: 12.5px; line-height: 1.5;
+}
+
+.led-body { padding: 4px 20px 20px; display: grid; gap: 18px; }
+.led-block h4 {
+  font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 10px; font-weight: 600;
+}
+.led-block p { font-size: 15px; line-height: 1.65; color: var(--text-2); margin: 0 0 8px; }
+.led-block.warrant {
+  border-left: 3px solid var(--red); padding-left: 16px;
+}
+.led-counts { font-size: 14.5px; }
+.led-ref { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+
+.led-measure { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 12px; }
+.led-measure:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+.led-measure.inverted { border-left: 3px solid var(--accent); padding-left: 14px; }
+.led-measure-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; }
+.led-measure-head b { font-size: 15px; color: var(--text); }
+.led-measure-head span { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+.led-by { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 10px; }
+.led-state {
+  font-size: 12px; color: var(--text-2); background: var(--panel-hi);
+  border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px;
+}
+
+.led-quote {
+  margin: 0 0 12px; border-left: 3px solid var(--line-hi); padding: 2px 0 2px 14px;
+}
+.led-quote p { font-size: 15px; line-height: 1.65; color: var(--text-2); margin: 0; }
+.led-quote cite { display: block; font-style: normal; font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+.led-cite-src { display: block; font-size: 11.5px; margin-top: 2px; }
+
+.led-secs { display: flex; flex-wrap: wrap; gap: 8px; }
+.led-sec {
+  font-size: 12.5px; color: var(--text-2); border: 1px solid var(--line);
+  border-radius: 999px; padding: 4px 10px; text-decoration: none;
+  display: inline-flex; gap: 8px; align-items: center;
+}
+.led-sec:hover { border-color: var(--accent); color: var(--text); }
+.led-sec span { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+
+.led-stances { display: grid; gap: 16px; margin-top: 22px; }
+.led-stance {
+  border: 1px solid var(--line); border-radius: 12px; background: var(--panel); padding: 16px 20px;
+}
+.led-stance h4 {
+  margin: 0 0 12px; font-size: 13px; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--text-2); display: flex; gap: 10px; align-items: baseline;
+}
+.led-stance h4 span { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+.led-stance.would-enforce { border-left: 3px solid var(--green); }
+.led-stance.refused { border-left: 3px solid var(--red); }
+.led-stance.non-party, .led-stance.other { border-left: 3px solid var(--line-hi); }
+.led-pos { font-size: 14.5px; line-height: 1.6; color: var(--text-2); margin-bottom: 10px; }
+.led-pos:last-child { margin-bottom: 0; }
+.led-pos b { color: var(--text); }
+
+@media (max-width: 700px) {
+  .led-person > summary { padding: 14px 16px; }
+  .led-body { padding: 4px 16px 18px; }
+  .led-name { font-size: 17px; }
+  .led-stance { padding: 14px 16px; }
 }

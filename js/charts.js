@@ -3367,6 +3367,70 @@ const Charts = (function () {
     });
   });
 
+  /* Where the arrest warrant actually bites.
+
+     The obligation is not a matter of sympathy: Article 86 of the Rome Statute
+     binds every state party to cooperate with the Court, and Article 89(1)
+     binds it to comply with a request for arrest and surrender. So the shading
+     is the legal position, not the political one — a state party that has said
+     nothing is still bound, and a state that has given notice of withdrawal is
+     bound for the whole year that notice takes to run under Article 127(1).
+     Where the record documents what a state has said or done, the tooltip says
+     it; where it does not, the tooltip says that instead of guessing. */
+  R['arrest-map'] = () => geoMap('world').then(() => {
+    const E = data.entities.icc;
+    const leaving = {};
+    E.leaving.forEach((s) => { leaving[s.name] = s; });
+    const stated = {};
+    E.positions.forEach((s) => { stated[s.map] = s; });
+
+    const PARTY = 1;
+    const LEAVING = 2;
+    const REFUSED = 3;
+    const rows = E.parties.filter((s) => s.map).map((s) => {
+      const pos = stated[s.map];
+      const code = leaving[s.name] ? LEAVING : (pos && pos.stance === 'refused' ? REFUSED : PARTY);
+      return { name: s.map, value: code, party: s.name };
+    });
+
+    const byName = {};
+    rows.forEach((r) => { byName[r.name] = r; });
+
+    return Object.assign({}, base, {
+      legend: { show: false },
+      tooltip: Object.assign({}, base.tooltip, {
+        trigger: 'item',
+        formatter: (t) => {
+          const row = byName[t.name];
+          const pos = stated[t.name];
+          if (!row) {
+            return `<b>${t.name}</b>`
+              + mapNote(pos ? pos.detail : 'Not a party to the Rome Statute, and under no obligation to the Court.');
+          }
+          const note = leaving[row.party]
+            ? `Gave notice of withdrawal on ${leaving[row.party].notified}, effective ${leaving[row.party].effective} — bound throughout.`
+            : 'Bound by Articles 86 and 89(1) to arrest and surrender.';
+          return `<b>${row.party}</b>${mapNote(note + (pos ? '<br><br>' + pos.detail : ''))}`;
+        },
+      }),
+      visualMap: {
+        type: 'piecewise',
+        left: 10, bottom: 8, itemWidth: 13, itemHeight: 10, itemGap: 6,
+        textStyle: { color: C.text2, fontSize: 11 },
+        pieces: [
+          { value: PARTY, label: 'State party — bound to arrest', color: '#347f61' },
+          { value: LEAVING, label: 'Notice of withdrawal given — bound until it takes effect', color: C.amber },
+          { value: REFUSED, label: 'Acted to defeat the warrant', color: C.red },
+        ],
+      },
+      series: [Object.assign({}, MAP_BASE, {
+        map: 'world',
+        name: 'Obligation to arrest',
+        data: rows,
+      })],
+    });
+  });
+
   /* The land itself, at the four dates the geometry can honestly carry */
   R['land-map'] = () => geoMap('palestine').then(() => {
     const sand = '#c9b071';

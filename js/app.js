@@ -24,7 +24,7 @@ const App = (function () {
   if (window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
   const VIEWS = ['overview', 'tour', 'data', 'children', 'day', 'timeline', 'evidence', 'rebuttals', 'statements',
-    'legal', 'sources', 'provenance', 'answer', 'method', 'api', 'changelog', 'embed'];
+    'legal', 'sources', 'provenance', 'answer', 'ledger', 'method', 'api', 'changelog', 'embed'];
 
   /* index.html?prerender=1 renders the text and nothing else: no charts, no
      scroll reveals, no counting numbers, no WebGL scene. prerender.py uses it
@@ -35,8 +35,8 @@ const App = (function () {
 
   /* ---------- loading ---------- */
 
-  /* Eighteen files, fetched together rather than one after another: the boot
-     time is then the slowest single file, not the sum of all eighteen. The map
+  /* Nineteen files, fetched together rather than one after another: the boot
+     time is then the slowest single file, not the sum of all nineteen. The map
      geometry is not among them — charts.js fetches that only if a map is
      actually drawn — and neither is report.json, the largest file on the site,
      which only the five routes in REPORT_ROUTES read and which is fetched on
@@ -62,6 +62,7 @@ const App = (function () {
       ['elements', 'data/elements.json'],
       ['prov', 'data/provenance.json'],
       ['patterns', 'data/claim-patterns.json'],
+      ['entities', 'data/entities.json'],
     ];
     // The open-data manifest is written by manifest.py and describes the files
     // above. It is fetched separately and never fatally: a dashboard that will
@@ -1545,6 +1546,93 @@ const App = (function () {
      the published file would be the one bug this page cannot afford. A claim
      stands if any of its sources belongs to a class the setting has not
      removed; a claim with no source at all is shown but never counted. */
+  /* The ledger: three filters over one list, and a link out to the report.
+
+     The class chips, the standing chips and the search box all narrow the same
+     set, so each is applied in turn rather than replacing the last — a reader
+     who has picked "under sanction" and then types a name expects both to hold.
+     The section links are the other half: they point at an anchor inside the
+     Evidence route, which does not exist while the ledger is on screen, so the
+     click changes route first and then waits for the anchor to appear. */
+  behaviours.ledger = function () {
+    const persons = Array.prototype.slice.call(document.querySelectorAll('#led-persons .led-person'));
+    const companies = Array.prototype.slice.call(document.querySelectorAll('#led-companies .led-person'));
+    const classChips = Array.prototype.slice.call(document.querySelectorAll('#led-classes .chip'));
+    const flagChips = Array.prototype.slice.call(document.querySelectorAll('#led-flags .chip'));
+    const sectorChips = Array.prototype.slice.call(document.querySelectorAll('#led-sectors .chip'));
+    const search = document.getElementById('led-search');
+    const count = document.getElementById('led-count');
+    let cls = 'all';
+    let flag = 'all';
+    let sector = 'all';
+
+    function apply() {
+      const q = (search && search.value || '').trim().toLowerCase();
+      let shown = 0;
+      persons.forEach((el) => {
+        const ok = (cls === 'all' || el.dataset.class === cls)
+          && (flag === 'all' || (el.dataset.flags || '').indexOf(flag) >= 0)
+          && (!q || (el.dataset.text || '').indexOf(q) >= 0);
+        el.hidden = !ok;
+        if (ok) shown++;
+      });
+      if (count) {
+        count.textContent = shown === persons.length
+          ? `${persons.length} persons`
+          : `${shown} of ${persons.length} persons`;
+      }
+    }
+
+    function applyCompanies() {
+      companies.forEach((el) => {
+        el.hidden = !(sector === 'all' || el.dataset.sector === sector);
+      });
+    }
+
+    function pick(chips, el, set) {
+      chips.forEach((c) => c.classList.toggle('active', c === el));
+      set();
+    }
+
+    classChips.forEach((chip) => chip.addEventListener('click', () => {
+      cls = chip.dataset.class;
+      pick(classChips, chip, apply);
+    }));
+    flagChips.forEach((chip) => chip.addEventListener('click', () => {
+      flag = chip.dataset.flag;
+      pick(flagChips, chip, apply);
+    }));
+    sectorChips.forEach((chip) => chip.addEventListener('click', () => {
+      sector = chip.dataset.sector;
+      pick(sectorChips, chip, applyCompanies);
+    }));
+    if (search) search.addEventListener('input', apply);
+
+    document.querySelectorAll('.led-sec').forEach((link) => {
+      link.addEventListener('click', (ev) => {
+        const id = link.dataset.sec;
+        if (!id) return;
+        ev.preventDefault();
+        location.hash = '#/evidence';
+        let tries = 0;
+        const tick = () => {
+          const el = document.getElementById(id);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            el.classList.add('search-target');
+            setTimeout(() => el.classList.remove('search-target'), 2600);
+            return;
+          }
+          if (tries++ < 60) setTimeout(tick, 100);
+        };
+        setTimeout(tick, 80);
+      });
+    });
+
+    apply();
+    applyCompanies();
+  };
+
   behaviours.provenance = function () {
     const P = D.prov;
     const claims = Array.prototype.slice.call(document.querySelectorAll('#prov-claims .prov-claim'));

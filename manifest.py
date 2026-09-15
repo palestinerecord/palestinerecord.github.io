@@ -98,6 +98,18 @@ DESCRIPTIONS = {
         'of what the #/answer route knows.',
         'Written by patterns.py; the answers themselves are Part XVI of the report.',
     ),
+    'entities.json': (
+        'The accountability ledger',
+        'The record cut along the axis international criminal law actually uses: named persons '
+        'and named companies. Each person carries the office they hold, the statements they are '
+        'recorded as making, the sections of the report that deal with them, any arrest warrant '
+        'and its present status, and the measures taken against them by which states \u2014 including '
+        'the measures taken against the officers of the Court itself. The companies carry what '
+        'they supply and what shareholders have done about it, and the file also lists the 125 '
+        'states parties to the Rome Statute with their obligation under Articles 86 and 89(1).',
+        'Joined by entities.py from statements.json, report.json and world-positions.json; no '
+        'claim originates here.',
+    ),
     'provenance.json': (
         'The provenance graph',
         'Every curated claim on this site joined to the bodies it rests on: 416 claims, each '

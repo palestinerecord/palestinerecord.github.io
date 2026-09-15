@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-15",
-  "total_bytes": 4311146,
+  "total_bytes": 4395979,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -101,6 +101,22 @@
         "scorecard"
       ],
       "updated": "2026-09-14"
+    },
+    {
+      "path": "data/entities.json",
+      "title": "The accountability ledger",
+      "description": "The record cut along the axis international criminal law actually uses: named persons and named companies. Each person carries the office they hold, the statements they are recorded as making, the sections of the report that deal with them, any arrest warrant and its present status, and the measures taken against them by which states — including the measures taken against the officers of the Court itself. The companies carry what they supply and what shareholders have done about it, and the file also lists the 125 states parties to the Rome Statute with their obligation under Articles 86 and 89(1).",
+      "source": "Joined by entities.py from statements.json, report.json and world-positions.json; no claim originates here.",
+      "bytes": 84833,
+      "records": null,
+      "fields": [
+        "meta",
+        "classes",
+        "persons",
+        "companies",
+        "icc"
+      ],
+      "updated": "2026-09-15"
     },
     {
       "path": "data/figures.json",

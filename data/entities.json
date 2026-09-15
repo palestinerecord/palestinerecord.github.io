@@ -1,0 +1,2897 @@
+{
+ "meta": {
+  "title": "The accountability ledger",
+  "note": "Persons and companies named in the record, with what a court, a government or a shareholder has actually done about them. Statements are joined from the statements file, the sections are found in the report itself, and the sanctions are the measures on the world-positions file. Nothing on this page is asserted that is not already somewhere else on this site.",
+  "source": "report-final.md; data/statements.json; data/world-positions.json; Rome Statute of the International Criminal Court, Articles 86, 89(1) and 127(1)",
+  "persons": 71,
+  "companies": 11,
+  "warrants": 3,
+  "sanctioned": 10,
+  "parties": 125
+ },
+ "classes": [
+  {
+   "id": "government",
+   "label": "Israeli government",
+   "note": "Ministers, the President and members of the Knesset — the level at which the specific intent for genocide has to be proved, and the level at which it was spoken aloud."
+  },
+  {
+   "id": "military",
+   "label": "Israeli military command",
+   "note": "Officers who commanded, spoke for or administered the campaign. Command responsibility under Article 28 of the Rome Statute attaches to what a commander knew and failed to prevent, not only to what he ordered."
+  },
+  {
+   "id": "allied",
+   "label": "Allied governments",
+   "note": "Officials of the states that supply the weapons, the money and the diplomatic cover, whose own words are part of the record."
+  },
+  {
+   "id": "accountability",
+   "label": "The accountability machinery",
+   "note": "Judges, prosecutors and mandate holders who pursued the case — and who were sanctioned by a permanent member of the Security Council for doing so."
+  },
+  {
+   "id": "armed-group",
+   "label": "Palestinian armed groups",
+   "note": "Those against whom the same court sought warrants for the crimes of 7 October, held to the same standard and listed in the same place."
+  },
+  {
+   "id": "dissent",
+   "label": "Israeli and Jewish dissent",
+   "note": "Former prime ministers, former security chiefs, historians and writers who put the finding on the record from inside the community it is said to injure."
+  },
+  {
+   "id": "historic",
+   "label": "The founding record",
+   "note": "Figures of the movement and of the state before 2023, quoted because the pattern they describe is the one the report documents continuing."
+  }
+ ],
+ "persons": [
+  {
+   "id": "benjamin-netanyahu",
+   "name": "Benjamin Netanyahu",
+   "role": "Prime Minister of Israel",
+   "class": "government",
+   "tier": "Head of government",
+   "statements": [
+    45,
+    48,
+    52,
+    75,
+    103
+   ],
+   "mentions": [
+    {
+     "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
+     "title": "18.7 Prior Intelligence Knowledge: The \"Jericho Wall\" Document and the Surveillance Failure",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 28
+    },
+    {
+     "id": "111-israel-funded-hamas",
+     "title": "11.1 Israel Funded Hamas",
+     "part": "PART XI - STATE-SPONSORED TERROR AND THE HAMAS STRATEGY",
+     "n": 11
+    },
+    {
+     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
+     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 10
+    },
+    {
+     "id": "153-sanctions-on-israeli-officials",
+     "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 4
+    },
+    {
+     "id": "610-the-30-july-2026-disarmament-agreement-and-its-immediate-rejection",
+     "title": "6.10 The 30 July 2026 Disarmament Agreement and Its Immediate Rejection",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 4
+    },
+    {
+     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
+     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 4
+    },
+    {
+     "id": "92-cumulative-west-bank-violence-oct-2023-june-2026",
+     "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 4
+    },
+    {
+     "id": "242-the-four-limbs-of-the-case",
+     "title": "24.2 The Four Limbs of the Case",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 3
+    },
+    {
+     "id": "107-un-commission-of-inquiry-the-deliberate-targeting-of-children-as-a-genocidal",
+     "title": "10.7 UN Commission of Inquiry: The Deliberate Targeting of Children as a Genocidal Act (June 2026)",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 2
+    },
+    {
+     "id": "136-the-maga-isolationist-fracture-israels-growing-strategic-liability-within-th",
+     "title": "13.6 The MAGA-Isolationist Fracture: Israel's Growing Strategic Liability Within the US Right",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    },
+    {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "156a-the-united-states-own-position-statehood-deferred-annexation-opposed",
+     "title": "15.6A The United States' Own Position: Statehood Deferred, Annexation Opposed",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "35-east-jerusalem-and-al-aqsa-the-collapse-of-the-status-quo-2026",
+     "title": "3.5 East Jerusalem and Al-Aqsa: The Collapse of the Status Quo (2026)",
+     "part": "PART III - THE 58-YEAR ILLEGAL OCCUPATION (1967–2026)",
+     "n": 2
+    }
+   ],
+   "sections": 80,
+   "warrant": {
+    "court": "International Criminal Court, Pre-Trial Chamber I",
+    "date": "21 November 2024",
+    "counts": "The war crime of starvation of civilians as a method of warfare, and the crimes against humanity of murder, persecution and other inhumane acts, over the period from at least 8 October 2023 to 20 May 2024.",
+    "status": "In force. The Appeals Chamber rejected the jurisdictional challenge on 15–16 December 2025 by three votes to two, and a separate request to withdraw the warrants outright was refused.",
+    "ref": "§15.5"
+   },
+   "sanctions": []
+  },
+  {
+   "id": "yoav-gallant",
+   "name": "Yoav Gallant",
+   "role": "Defence Minister of Israel",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    31,
+    35
+   ],
+   "mentions": [
+    {
+     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
+     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 4
+    },
+    {
+     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
+     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 4
+    },
+    {
+     "id": "242-the-four-limbs-of-the-case",
+     "title": "24.2 The Four Limbs of the Case",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 3
+    },
+    {
+     "id": "105-un-secretary-generals-conflict-related-sexual-violence-blacklist-28-may-2026",
+     "title": "10.5 UN Secretary-General's Conflict-Related Sexual Violence Blacklist (28 May 2026)",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 1
+    },
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "185-why-october-7-does-not-legally-justify-what-followed",
+     "title": "18.5 Why October 7 Does Not Legally Justify What Followed",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 1
+    },
+    {
+     "id": "63-the-material-acts-of-genocide",
+     "title": "6.3 The Material Acts of Genocide",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    },
+    {
+     "id": "68-the-june-2026-closure-of-all-gaza-crossings---collective-punishment-as-reflex",
+     "title": "6.8 The June 2026 Closure of All Gaza Crossings - Collective Punishment as Reflex",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 16,
+   "warrant": {
+    "court": "International Criminal Court, Pre-Trial Chamber I",
+    "date": "21 November 2024",
+    "counts": "The same counts as the warrant against the Prime Minister: starvation as a method of warfare, murder, persecution and other inhumane acts.",
+    "status": "In force, on the same two rulings that upheld the warrant against Netanyahu.",
+    "ref": "§15.5"
+   },
+   "sanctions": []
+  },
+  {
+   "id": "mohammed-deif",
+   "name": "Mohammed Deif",
+   "role": "Commander of the al-Qassam Brigades, the armed wing of Hamas",
+   "class": "armed-group",
+   "country": "Palestine",
+   "statements": [],
+   "mentions": [
+    {
+     "id": "183-legal-characterisation-under-international-law",
+     "title": "18.3 Legal Characterisation Under International Law",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 6
+    }
+   ],
+   "sections": 6,
+   "warrant": {
+    "court": "International Criminal Court, Pre-Trial Chamber I",
+    "date": "21 November 2024",
+    "counts": "The crimes against humanity of murder, extermination, torture, rape and other forms of sexual violence, hostage-taking and other inhumane acts, and the war crimes of murder, cruel treatment, torture, rape, hostage-taking and outrages upon personal dignity, committed on and after 7 October 2023.",
+    "status": "Withdrawn on 27 February 2025, when the Chamber accepted evidence of his death. The Chamber issued the warrant against him on the same day as the two against Israeli ministers, on the same standard of proof, which is the answer to the claim that the Court applies one law to one side.",
+    "ref": "§18.3"
+   },
+   "sanctions": []
+  },
+  {
+   "id": "bezalel-smotrich",
+   "name": "Bezalel Smotrich",
+   "role": "Finance Minister",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    22,
+    47,
+    64,
+    71,
+    73,
+    89,
+    96,
+    102
+   ],
+   "mentions": [
+    {
+     "id": "111-israel-funded-hamas",
+     "title": "11.1 Israel Funded Hamas",
+     "part": "PART XI - STATE-SPONSORED TERROR AND THE HAMAS STRATEGY",
+     "n": 4
+    },
+    {
+     "id": "153-sanctions-on-israeli-officials",
+     "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 4
+    },
+    {
+     "id": "92-cumulative-west-bank-violence-oct-2023-june-2026",
+     "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 4
+    },
+    {
+     "id": "92a-the-huwara-pogrom-26-february-2023-and-the-ministerial-call-to-erase-a-town",
+     "title": "9.2A The Huwara Pogrom (26 February 2023) and the Ministerial Call to Erase a Town",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 4
+    },
+    {
+     "id": "35b-the-jerusalem-day-flag-march-documented-public-incitement-in-occupied-east-j",
+     "title": "3.5B The Jerusalem Day Flag March: Documented Public Incitement in Occupied East Jerusalem (2022-2026)",
+     "part": "PART III - THE 58-YEAR ILLEGAL OCCUPATION (1967–2026)",
+     "n": 2
+    },
+    {
+     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
+     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 2
+    },
+    {
+     "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
+     "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 2
+    },
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 1
+    }
+   ],
+   "sections": 23,
+   "warrant": null,
+   "sanctions": [
+    {
+     "id": "officials-2025",
+     "date": "June 2025",
+     "measure": "Travel bans and asset freezes",
+     "by": [
+      "United Kingdom",
+      "Australia",
+      "Canada",
+      "New Zealand",
+      "Norway"
+     ],
+     "reason": "Incitement of settler violence and statements promoting the forcible displacement of Palestinians.",
+     "ref": "§15.3",
+     "direction": "conduct"
+    },
+    {
+     "id": "ireland-ministers-2026",
+     "date": "5 June 2026",
+     "measure": "Travel bans",
+     "by": [
+      "Ireland"
+     ],
+     "reason": "Imposed by the Justice Minister, Jim O'Callaghan.",
+     "ref": "§15.5",
+     "direction": "conduct"
+    }
+   ]
+  },
+  {
+   "id": "itamar-ben-gvir",
+   "name": "Itamar Ben-Gvir",
+   "role": "National Security Minister",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    46,
+    91,
+    98,
+    105,
+    109,
+    110,
+    113
+   ],
+   "mentions": [
+    {
+     "id": "104a-ben-gvirs-ai-generated-slaughterhouse-video-of-palestinian-prisoners-31-aug",
+     "title": "10.4A Ben-Gvir's AI-Generated \"Slaughterhouse\" Video of Palestinian Prisoners (31 August - 4 September 2026)",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 6
+    },
+    {
+     "id": "153-sanctions-on-israeli-officials",
+     "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 4
+    },
+    {
+     "id": "35b-the-jerusalem-day-flag-march-documented-public-incitement-in-occupied-east-j",
+     "title": "3.5B The Jerusalem Day Flag March: Documented Public Incitement in Occupied East Jerusalem (2022-2026)",
+     "part": "PART III - THE 58-YEAR ILLEGAL OCCUPATION (1967–2026)",
+     "n": 4
+    },
+    {
+     "id": "44-the-death-penalty-for-terrorists-law-30-march-2026---capital-punishment-along",
+     "title": "4.4 The Death Penalty for Terrorists Law (30 March 2026) - Capital Punishment Along the Racial Line",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 4
+    },
+    {
+     "id": "35-east-jerusalem-and-al-aqsa-the-collapse-of-the-status-quo-2026",
+     "title": "3.5 East Jerusalem and Al-Aqsa: The Collapse of the Status Quo (2026)",
+     "part": "PART III - THE 58-YEAR ILLEGAL OCCUPATION (1967–2026)",
+     "n": 3
+    },
+    {
+     "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
+     "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 3
+    },
+    {
+     "id": "92-cumulative-west-bank-violence-oct-2023-june-2026",
+     "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 3
+    },
+    {
+     "id": "141c-the-states-response---the-venice-prize-the-threat-to-revoke-the-filmmakers-",
+     "title": "14.1C The State's Response - The Venice Prize, the Threat to Revoke the Filmmakers' Citizenship, and the IDF's Rebuttal",
+     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
+     "n": 2
+    },
+    {
+     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
+     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 2
+    },
+    {
+     "id": "63a-the-rafah-humanitarian-city-plan-july-2025-and-the-israeli-legal-revolt-agai",
+     "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 2
+    },
+    {
+     "id": "103-sde-teiman---the-black-site",
+     "title": "10.3 Sde Teiman - The Black Site",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 1
+    },
+    {
+     "id": "186-the-hannibal-directive-israel-killed-its-own-citizens-on-october-7",
+     "title": "18.6 The Hannibal Directive: Israel Killed Its Own Citizens on October 7",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 1
+    },
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 1
+    },
+    {
+     "id": "610-the-30-july-2026-disarmament-agreement-and-its-immediate-rejection",
+     "title": "6.10 The 30 July 2026 Disarmament Agreement and Its Immediate Rejection",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 37,
+   "warrant": null,
+   "sanctions": [
+    {
+     "id": "officials-2025",
+     "date": "June 2025",
+     "measure": "Travel bans and asset freezes",
+     "by": [
+      "United Kingdom",
+      "Australia",
+      "Canada",
+      "New Zealand",
+      "Norway"
+     ],
+     "reason": "Incitement of settler violence and statements promoting the forcible displacement of Palestinians.",
+     "ref": "§15.3",
+     "direction": "conduct"
+    },
+    {
+     "id": "france-bengvir-2026",
+     "date": "May 2026",
+     "measure": "Entry ban",
+     "by": [
+      "France"
+     ],
+     "reason": "Barred from entry by France.",
+     "ref": "§15.5",
+     "direction": "conduct"
+    },
+    {
+     "id": "ireland-ministers-2026",
+     "date": "5 June 2026",
+     "measure": "Travel bans",
+     "by": [
+      "Ireland"
+     ],
+     "reason": "Imposed by the Justice Minister, Jim O'Callaghan.",
+     "ref": "§15.5",
+     "direction": "conduct"
+    }
+   ]
+  },
+  {
+   "id": "francesca-albanese",
+   "name": "Francesca Albanese",
+   "role": "UN Special Rapporteur on the situation of human rights in the Palestinian territories occupied since 1967",
+   "class": "accountability",
+   "tier": "UN mandate holder",
+   "statements": [
+    58
+   ],
+   "mentions": [
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 3
+    },
+    {
+     "id": "103a-ketziot-prison-the-killing-of-thaer-abu-asab-and-guards-own-whatsapp-messag",
+     "title": "10.3A Ketziot Prison: The Killing of Thaer Abu Asab and Guards' Own WhatsApp Messages (November 2023; indictment 1 September 2026; Haaretz investigation 8 September 2026)",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 2
+    },
+    {
+     "id": "104-torture-as-state-doctrine---un-finding-march-2026",
+     "title": "10.4 Torture as \"State Doctrine\" - UN Finding (March 2026)",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 2
+    },
+    {
+     "id": "58-the-systematic-use-of-palestinian-civilians-as-human-shields",
+     "title": "5.8 The Systematic Use of Palestinian Civilians as Human Shields",
+     "part": "PART V - THE PATTERN OF WAR CRIMES: A 75-YEAR RECORD",
+     "n": 2
+    }
+   ],
+   "sections": 9,
+   "warrant": null,
+   "sanctions": [
+    {
+     "id": "eo-14203-albanese",
+     "date": "9 July 2025",
+     "measure": "Designation under Executive Order 14203",
+     "by": [
+      "United States"
+     ],
+     "reason": "The first time a serving holder of a UN special procedures mandate has been sanctioned by a member state — characterised by UN independent experts as a violation of the 1946 Convention on the Privileges and Immunities of the United Nations. A United States District Court suspended the designation on 13 May 2026 pending a ruling on the merits.",
+     "ref": "§15.13",
+     "direction": "accountability"
+    }
+   ]
+  },
+  {
+   "id": "karim-khan",
+   "name": "Karim Khan KC",
+   "role": "Chief Prosecutor of the International Criminal Court until his removal on 24 July 2026",
+   "class": "accountability",
+   "country": "United Kingdom",
+   "statements": [],
+   "mentions": [
+    {
+     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
+     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 4
+    },
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    }
+   ],
+   "sections": 6,
+   "warrant": null,
+   "sanctions": [
+    {
+     "id": "eo-14203-khan",
+     "date": "6 February 2025",
+     "measure": "Asset freeze and entry ban under Executive Order 14203",
+     "by": [
+      "United States"
+     ],
+     "reason": "Designated for seeking the arrest warrants against Netanyahu and Gallant.",
+     "ref": "§15.13",
+     "direction": "accountability"
+    }
+   ]
+  },
+  {
+   "id": "mame-mandiaye-niang",
+   "name": "Mame Mandiaye Niang",
+   "role": "Deputy Prosecutor, and Chief Prosecutor of the International Criminal Court from July 2026",
+   "class": "accountability",
+   "country": "Senegal",
+   "statements": [],
+   "mentions": [
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
+     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": [
+    {
+     "id": "eo-14203-deputies",
+     "date": "20 August 2025",
+     "measure": "Designation under Executive Order 14203",
+     "by": [
+      "United States"
+     ],
+     "reason": "Both Deputy Prosecutors and two judges, designated together. Judge Prost has described being unable to use her credit card or reach her Google and Amazon accounts.",
+     "ref": "§15.13",
+     "direction": "accountability"
+    }
+   ]
+  },
+  {
+   "id": "abdoulaye-seye",
+   "name": "Abdoulaye Seye",
+   "role": "Senior trial lawyer at the International Criminal Court",
+   "class": "accountability",
+   "country": "Senegal",
+   "statements": [],
+   "mentions": [
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": [
+    {
+     "id": "eo-14203-president",
+     "date": "18 August 2026",
+     "measure": "Designation under Executive Order 14203",
+     "by": [
+      "United States"
+     ],
+     "reason": "The Court's serving President and a senior trial lawyer reported to have worked on the team that sought the Netanyahu warrant. The Court called the measures a flagrant attack on the independence of an impartial judicial institution.",
+     "ref": "§15.13",
+     "direction": "accountability"
+    }
+   ]
+  },
+  {
+   "id": "kimberly-prost",
+   "name": "Kimberly Prost",
+   "role": "Judge of the International Criminal Court",
+   "class": "accountability",
+   "country": "Canada",
+   "statements": [],
+   "mentions": [
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": [
+    {
+     "id": "eo-14203-deputies",
+     "date": "20 August 2025",
+     "measure": "Designation under Executive Order 14203",
+     "by": [
+      "United States"
+     ],
+     "reason": "Both Deputy Prosecutors and two judges, designated together. Judge Prost has described being unable to use her credit card or reach her Google and Amazon accounts.",
+     "ref": "§15.13",
+     "direction": "accountability"
+    }
+   ]
+  },
+  {
+   "id": "nazhat-shameem-khan",
+   "name": "Nazhat Shameem Khan",
+   "role": "Deputy Prosecutor of the International Criminal Court",
+   "class": "accountability",
+   "country": "Fiji",
+   "statements": [],
+   "mentions": [
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": [
+    {
+     "id": "eo-14203-deputies",
+     "date": "20 August 2025",
+     "measure": "Designation under Executive Order 14203",
+     "by": [
+      "United States"
+     ],
+     "reason": "Both Deputy Prosecutors and two judges, designated together. Judge Prost has described being unable to use her credit card or reach her Google and Amazon accounts.",
+     "ref": "§15.13",
+     "direction": "accountability"
+    }
+   ]
+  },
+  {
+   "id": "nicolas-guillou",
+   "name": "Nicolas Guillou",
+   "role": "Judge of the International Criminal Court",
+   "class": "accountability",
+   "country": "France",
+   "statements": [],
+   "mentions": [
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": [
+    {
+     "id": "eo-14203-deputies",
+     "date": "20 August 2025",
+     "measure": "Designation under Executive Order 14203",
+     "by": [
+      "United States"
+     ],
+     "reason": "Both Deputy Prosecutors and two judges, designated together. Judge Prost has described being unable to use her credit card or reach her Google and Amazon accounts.",
+     "ref": "§15.13",
+     "direction": "accountability"
+    }
+   ]
+  },
+  {
+   "id": "tomoko-akane",
+   "name": "Tomoko Akane",
+   "role": "President of the International Criminal Court",
+   "class": "accountability",
+   "country": "Japan",
+   "statements": [],
+   "mentions": [
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": [
+    {
+     "id": "eo-14203-president",
+     "date": "18 August 2026",
+     "measure": "Designation under Executive Order 14203",
+     "by": [
+      "United States"
+     ],
+     "reason": "The Court's serving President and a senior trial lawyer reported to have worked on the team that sought the Netanyahu warrant. The Court called the measures a flagrant attack on the independence of an impartial judicial institution.",
+     "ref": "§15.13",
+     "direction": "accountability"
+    }
+   ]
+  },
+  {
+   "id": "israel-katz",
+   "name": "Israel Katz",
+   "role": "Defence Minister",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    37,
+    80,
+    97,
+    112
+   ],
+   "mentions": [
+    {
+     "id": "63a-the-rafah-humanitarian-city-plan-july-2025-and-the-israeli-legal-revolt-agai",
+     "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 4
+    },
+    {
+     "id": "92-cumulative-west-bank-violence-oct-2023-june-2026",
+     "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 4
+    },
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 2
+    },
+    {
+     "id": "610-the-30-july-2026-disarmament-agreement-and-its-immediate-rejection",
+     "title": "6.10 The 30 July 2026 Disarmament Agreement and Its Immediate Rejection",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 2
+    },
+    {
+     "id": "186-the-hannibal-directive-israel-killed-its-own-citizens-on-october-7",
+     "title": "18.6 The Hannibal Directive: Israel Killed Its Own Citizens on October 7",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 1
+    }
+   ],
+   "sections": 13,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "ehud-olmert",
+   "name": "Ehud Olmert",
+   "role": "Former Prime Minister of Israel",
+   "class": "dissent",
+   "tier": "Former head of government",
+   "statements": [
+    15,
+    81,
+    104,
+    117
+   ],
+   "mentions": [
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 6
+    },
+    {
+     "id": "153-sanctions-on-israeli-officials",
+     "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 3
+    },
+    {
+     "id": "63a-the-rafah-humanitarian-city-plan-july-2025-and-the-israeli-legal-revolt-agai",
+     "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 3
+    }
+   ],
+   "sections": 12,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "moshe-ya-alon",
+   "name": "Moshe Ya'alon",
+   "role": "Former IDF Chief of Staff; Minister of Defence, 2013-2016",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    67,
+    94
+   ],
+   "mentions": [
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 5
+    }
+   ],
+   "sections": 5,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "avi-shlaim",
+   "name": "Avi Shlaim",
+   "role": "Emeritus Professor of International Relations, University of Oxford; Israeli historian and former Israeli soldier; Fellow of the British Academy",
+   "class": "dissent",
+   "tier": "Israeli historian",
+   "statements": [
+    17,
+    78
+   ],
+   "mentions": [
+    {
+     "id": "233-jewish-and-israeli-scholars",
+     "title": "23.3 Jewish and Israeli Scholars",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 2
+    },
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 2
+    }
+   ],
+   "sections": 4,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yitzhak-rabin",
+   "name": "Yitzhak Rabin",
+   "role": "Defence Minister of Israel",
+   "class": "historic",
+   "tier": "Cabinet",
+   "statements": [
+    11,
+    13
+   ],
+   "mentions": [
+    {
+     "id": "22-the-massacres---a-selected-record",
+     "title": "2.2 The Massacres - A Selected Record",
+     "part": "PART II - THE NAKBA: PLAN DALET, THE MASSACRES, AND THE MANUFACTURED REFUGEE CRISIS",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "tally-gotliv",
+   "name": "Tally Gotliv",
+   "role": "Member of Knesset (Likud)",
+   "class": "government",
+   "tier": "Legislature",
+   "statements": [
+    28,
+    43
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "donald-j-trump",
+   "name": "Donald J. Trump",
+   "role": "President of the United States",
+   "class": "allied",
+   "tier": "Allied head of state",
+   "statements": [
+    68
+   ],
+   "mentions": [
+    {
+     "id": "136-the-maga-isolationist-fracture-israels-growing-strategic-liability-within-th",
+     "title": "13.6 The MAGA-Isolationist Fracture: Israel's Growing Strategic Liability Within the US Right",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 10
+    },
+    {
+     "id": "86-the-2026-usisrael-war-on-iran",
+     "title": "8.6 The 2026 US–Israel War on Iran",
+     "part": "PART VIII - REGIONAL AGGRESSION: SYRIA, YEMEN, IRAN",
+     "n": 4
+    },
+    {
+     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
+     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 3
+    },
+    {
+     "id": "156a-the-united-states-own-position-statehood-deferred-annexation-opposed",
+     "title": "15.6A The United States' Own Position: Statehood Deferred, Annexation Opposed",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 3
+    },
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "152-arms-embargoes",
+     "title": "15.2 Arms Embargoes",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "156-the-board-of-peace---gaza-reconstruction-plan-and-its-contradictions",
+     "title": "15.6 The \"Board of Peace\" - Gaza Reconstruction Plan and Its Contradictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
+     "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 2
+    },
+    {
+     "id": "132-the-united-states---217-billion",
+     "title": "13.2 The United States - $21.7 Billion",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "610-the-30-july-2026-disarmament-agreement-and-its-immediate-rejection",
+     "title": "6.10 The 30 July 2026 Disarmament Agreement and Its Immediate Rejection",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    },
+    {
+     "id": "69-the-cairo-talks-and-continued-killing-june-2026",
+     "title": "6.9 The Cairo Talks and Continued Killing (June 2026)",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 31,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "maj-gen-avi-bluth",
+   "name": "Maj. Gen. Avi Bluth",
+   "role": "Commander, IDF Central Command (the occupied West Bank)",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    101
+   ],
+   "mentions": [
+    {
+     "id": "94-the-two-tier-open-fire-policy-a-documented-admission-of-apartheid",
+     "title": "9.4 The Two-Tier Open Fire Policy: A Documented Admission of Apartheid",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 10
+    },
+    {
+     "id": "92-cumulative-west-bank-violence-oct-2023-june-2026",
+     "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 5
+    }
+   ],
+   "sections": 15,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yitzhak-yezernitzky-yitzhak-shamir",
+   "name": "Yitzhak Yezernitzky (Yitzhak Shamir)",
+   "role": "Lehi operations commander; later Prime Minister of Israel (1983-1984, 1986-1992)",
+   "class": "historic",
+   "tier": "Contemporaneous witness",
+   "statements": [
+    7
+   ],
+   "mentions": [
+    {
+     "id": "13-the-documented-crimes-of-pre-state-zionist-terrorism",
+     "title": "1.3 The Documented Crimes of Pre-State Zionist Terrorism",
+     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
+     "n": 5
+    },
+    {
+     "id": "242-the-four-limbs-of-the-case",
+     "title": "24.2 The Four Limbs of the Case",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 3
+    },
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 3
+    }
+   ],
+   "sections": 11,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "maj-gen-gadi-eisenkot",
+   "name": "Maj. Gen. Gadi Eisenkot",
+   "role": "IDF Northern Command (later Chief of the General Staff)",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    16
+   ],
+   "mentions": [
+    {
+     "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
+     "title": "18.7 Prior Intelligence Knowledge: The \"Jericho Wall\" Document and the Surveillance Failure",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 6
+    },
+    {
+     "id": "73-the-dahiya-doctrine---codified-disproportionality",
+     "title": "7.3 The Dahiya Doctrine - Codified Disproportionality",
+     "part": "PART VII - THE 2024 LEBANON WAR AND THE PAGER MASSACRE",
+     "n": 3
+    }
+   ],
+   "sections": 9,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "isaac-herzog",
+   "name": "Isaac Herzog",
+   "role": "President of Israel",
+   "class": "government",
+   "tier": "Head of state",
+   "statements": [
+    38
+   ],
+   "mentions": [
+    {
+     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
+     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 4
+    },
+    {
+     "id": "153-sanctions-on-israeli-officials",
+     "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "242-the-four-limbs-of-the-case",
+     "title": "24.2 The Four Limbs of the Case",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 2
+    }
+   ],
+   "sections": 8,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "lieutenant-general-eyal-zamir",
+   "name": "Lieutenant General Eyal Zamir",
+   "role": "Chief of the General Staff, Israel Defense Forces",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    84
+   ],
+   "mentions": [
+    {
+     "id": "63a-the-rafah-humanitarian-city-plan-july-2025-and-the-israeli-legal-revolt-agai",
+     "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 5
+    },
+    {
+     "id": "57-the-institutional-response-to-documented-war-crimes-evidence-suppression-over",
+     "title": "5.7 The Institutional Response to Documented War Crimes: Evidence Suppression Over Accountability",
+     "part": "PART V - THE PATTERN OF WAR CRIMES: A 75-YEAR RECORD",
+     "n": 1
+    }
+   ],
+   "sections": 6,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "ilan-pappe",
+   "name": "Ilan Pappé",
+   "role": "Israeli historian, University of Exeter; formerly University of Haifa",
+   "class": "dissent",
+   "tier": "Israeli historian",
+   "statements": [
+    14
+   ],
+   "mentions": [
+    {
+     "id": "233-jewish-and-israeli-scholars",
+     "title": "23.3 Jewish and Israeli Scholars",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 2
+    },
+    {
+     "id": "21-plan-dalet---the-operational-blueprint",
+     "title": "2.1 Plan Dalet - The Operational Blueprint",
+     "part": "PART II - THE NAKBA: PLAN DALET, THE MASSACRES, AND THE MANUFACTURED REFUGEE CRISIS",
+     "n": 1
+    },
+    {
+     "id": "22-the-massacres---a-selected-record",
+     "title": "2.2 The Massacres - A Selected Record",
+     "part": "PART II - THE NAKBA: PLAN DALET, THE MASSACRES, AND THE MANUFACTURED REFUGEE CRISIS",
+     "n": 1
+    },
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 1
+    }
+   ],
+   "sections": 5,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "gabor-mate",
+   "name": "Gabor Maté",
+   "role": "Physician and author; infant survivor of the Budapest ghetto",
+   "class": "dissent",
+   "tier": "Holocaust survivor",
+   "statements": [
+    61
+   ],
+   "mentions": [
+    {
+     "id": "233-jewish-and-israeli-scholars",
+     "title": "23.3 Jewish and Israeli Scholars",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 2
+    },
+    {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 1
+    }
+   ],
+   "sections": 4,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "hannah-einbinder",
+   "name": "Hannah Einbinder",
+   "role": "Actor; accepting the Primetime Emmy for Outstanding Supporting Actress in a Comedy Series",
+   "class": "dissent",
+   "tier": "Jewish public figure",
+   "statements": [
+    90
+   ],
+   "mentions": [
+    {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "234-organisations-and-public-statements-2023-2026",
+     "title": "23.4 Organisations and Public Statements (2023-2026)",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 2
+    }
+   ],
+   "sections": 4,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "ahad-ha-am-asher-ginsberg",
+   "name": "Ahad Ha'am (Asher Ginsberg)",
+   "role": "Founder of Cultural Zionism",
+   "class": "historic",
+   "tier": "Founder",
+   "statements": [
+    0
+   ],
+   "mentions": [
+    {
+     "id": "10-the-movements-own-self-description-and-jewish-dissent-from-it-before-1917",
+     "title": "1.0 The Movement's Own Self-Description, and Jewish Dissent From It, Before 1917",
+     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
+     "n": 3
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "jonathan-glazer",
+   "name": "Jonathan Glazer",
+   "role": "Director, The Zone of Interest; accepting the Academy Award for Best International Feature",
+   "class": "dissent",
+   "tier": "Jewish public figure",
+   "statements": [
+    57
+   ],
+   "mentions": [
+    {
+     "id": "234-organisations-and-public-statements-2023-2026",
+     "title": "23.4 Organisations and Public Statements (2023-2026)",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 2
+    },
+    {
+     "id": "141a-the-naza-documentary---twenty-four-soldiers-and-intelligence-officers-on-ca",
+     "title": "14.1A The NAZA Documentary - Twenty-Four Soldiers and Intelligence Officers, on Camera",
+     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
+     "n": 1
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "maj-gen-aharon-haliva",
+   "name": "Maj. Gen. Aharon Haliva",
+   "role": "Director of the IDF Military Intelligence Directorate, 2021–2024",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    87
+   ],
+   "mentions": [
+    {
+     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
+     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 3
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "mike-huckabee",
+   "name": "Mike Huckabee",
+   "role": "United States Ambassador to Israel",
+   "class": "allied",
+   "tier": "Allied government",
+   "statements": [
+    115
+   ],
+   "mentions": [
+    {
+     "id": "92-cumulative-west-bank-violence-oct-2023-june-2026",
+     "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 2
+    },
+    {
+     "id": "153-sanctions-on-israeli-officials",
+     "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "naomi-klein",
+   "name": "Naomi Klein",
+   "role": "Writer; Professor of Climate Justice, University of British Columbia",
+   "class": "dissent",
+   "tier": "Jewish writer",
+   "statements": [
+    59
+   ],
+   "mentions": [
+    {
+     "id": "234-organisations-and-public-statements-2023-2026",
+     "title": "23.4 Organisations and Public Statements (2023-2026)",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 2
+    },
+    {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "peter-beinart",
+   "name": "Peter Beinart",
+   "role": "Editor-at-large, Jewish Currents; author of Being Jewish After the Destruction of Gaza",
+   "class": "dissent",
+   "tier": "Jewish writer",
+   "statements": [
+    116
+   ],
+   "mentions": [
+    {
+     "id": "11a-the-definition-of-indigeneity-and-its-application-to-this-dispute",
+     "title": "1.1A The Definition of Indigeneity, and Its Application to This Dispute",
+     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
+     "n": 1
+    },
+    {
+     "id": "218-the-boundary-argued-between-two-jewish-interlocutors-9-september-2026-and-th",
+     "title": "21.8 The Boundary Argued Between Two Jewish Interlocutors (9 September 2026), and the Migration of the Contested Vocabulary",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
+     "n": 1
+    },
+    {
+     "id": "233-jewish-and-israeli-scholars",
+     "title": "23.3 Jewish and Israeli Scholars",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 1
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "david-ben-gurion",
+   "name": "David Ben-Gurion",
+   "role": "Chairman of the Jewish Agency Executive; later first Prime Minister of Israel",
+   "class": "historic",
+   "tier": "Founder",
+   "statements": [
+    4
+   ],
+   "mentions": [
+    {
+     "id": "10-the-movements-own-self-description-and-jewish-dissent-from-it-before-1917",
+     "title": "1.0 The Movement's Own Self-Description, and Jewish Dissent From It, Before 1917",
+     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
+     "n": 1
+    },
+    {
+     "id": "22-the-massacres---a-selected-record",
+     "title": "2.2 The Massacres - A Selected Record",
+     "part": "PART II - THE NAKBA: PLAN DALET, THE MASSACRES, AND THE MANUFACTURED REFUGEE CRISIS",
+     "n": 1
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "ehud-barak",
+   "name": "Ehud Barak",
+   "role": "Prime Minister of Israel (1999); Defence Minister (2010)",
+   "class": "dissent",
+   "tier": "Head of government",
+   "statements": [
+    18
+   ],
+   "mentions": [
+    {
+     "id": "111-israel-funded-hamas",
+     "title": "11.1 Israel Funded Hamas",
+     "part": "PART XI - STATE-SPONSORED TERROR AND THE HAMAS STRATEGY",
+     "n": 1
+    },
+    {
+     "id": "136-the-maga-isolationist-fracture-israels-growing-strategic-liability-within-th",
+     "title": "13.6 The MAGA-Isolationist Fracture: Israel's Growing Strategic Liability Within the US Right",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "masha-gessen",
+   "name": "Masha Gessen",
+   "role": "Staff writer, The New Yorker; descendant of Holocaust survivors",
+   "class": "dissent",
+   "tier": "Jewish writer",
+   "statements": [
+    54
+   ],
+   "mentions": [
+    {
+     "id": "233-jewish-and-israeli-scholars",
+     "title": "23.3 Jewish and Israeli Scholars",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 2
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "theodor-herzl",
+   "name": "Theodor Herzl",
+   "role": "Founder of political Zionism",
+   "class": "historic",
+   "tier": "Founder",
+   "statements": [
+    1
+   ],
+   "mentions": [
+    {
+     "id": "10-the-movements-own-self-description-and-jewish-dissent-from-it-before-1917",
+     "title": "1.0 The Movement's Own Self-Description, and Jewish Dissent From It, Before 1917",
+     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
+     "n": 2
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "vladimir-jabotinsky",
+   "name": "Vladimir Jabotinsky",
+   "role": "Founder of Revisionist Zionism; ideological forebear of Likud",
+   "class": "historic",
+   "tier": "Founder",
+   "statements": [
+    3
+   ],
+   "mentions": [
+    {
+     "id": "11a-the-definition-of-indigeneity-and-its-application-to-this-dispute",
+     "title": "1.1A The Definition of Indigeneity, and Its Application to This Dispute",
+     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
+     "n": 1
+    },
+    {
+     "id": "12a-the-haavara-agreement-and-the-kareski-affair---zionist-institutions-direct-d",
+     "title": "1.2A The Haavara Agreement and the Kareski Affair - Zionist Institutions' Direct Dealings with Nazi Germany, 1933-1935",
+     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
+     "n": 1
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "avigdor-lieberman",
+   "name": "Avigdor Lieberman",
+   "role": "Defence Minister of Israel",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    23
+   ],
+   "mentions": [
+    {
+     "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
+     "title": "18.7 Prior Intelligence Knowledge: The \"Jericho Wall\" Document and the Surveillance Failure",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "avraham-shalom",
+   "name": "Avraham Shalom",
+   "role": "Director of the Shin Bet, 1980-1986",
+   "class": "dissent",
+   "tier": "Former intelligence chief",
+   "statements": [
+    19
+   ],
+   "mentions": [
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "golda-meir",
+   "name": "Golda Meir",
+   "role": "Prime Minister of Israel",
+   "class": "historic",
+   "tier": "Head of government",
+   "statements": [
+    10
+   ],
+   "mentions": [
+    {
+     "id": "121-the-undeclared-arsenal",
+     "title": "12.1 The Undeclared Arsenal",
+     "part": "PART XII - ISRAELI NUCLEAR WEAPONS AND NON-COMPLIANCE",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "hana-bendcowsky",
+   "name": "Hana Bendcowsky",
+   "role": "Director, Jerusalem Center for Jewish-Christian Relations, Rossing Center",
+   "class": "dissent",
+   "tier": "Israeli human rights organisation",
+   "statements": [
+    70
+   ],
+   "mentions": [
+    {
+     "id": "35a-attacks-on-christians-and-christian-sites-in-jerusalem-2023-2026",
+     "title": "3.5A Attacks on Christians and Christian Sites in Jerusalem (2023-2026)",
+     "part": "PART III - THE 58-YEAR ILLEGAL OCCUPATION (1967–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "miki-zohar",
+   "name": "Miki Zohar",
+   "role": "Minister of Culture and Sport of Israel",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    119
+   ],
+   "mentions": [
+    {
+     "id": "141c-the-states-response---the-venice-prize-the-threat-to-revoke-the-filmmakers-",
+     "title": "14.1C The State's Response - The Venice Prize, the Threat to Revoke the Filmmakers' Citizenship, and the IDF's Rebuttal",
+     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "shlomo-karhi",
+   "name": "Shlomo Karhi",
+   "role": "Communications Minister",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    77
+   ],
+   "mentions": [
+    {
+     "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
+     "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yair-lapid",
+   "name": "Yair Lapid",
+   "role": "Leader of the Opposition; Prime Minister of Israel, 2022",
+   "class": "government",
+   "tier": "Former head of government",
+   "statements": [
+    82
+   ],
+   "mentions": [
+    {
+     "id": "63a-the-rafah-humanitarian-city-plan-july-2025-and-the-israeli-legal-revolt-agai",
+     "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yuli-novak",
+   "name": "Yuli Novak",
+   "role": "Executive Director, B'Tselem",
+   "class": "dissent",
+   "tier": "Israeli human rights organisation",
+   "statements": [
+    85
+   ],
+   "mentions": [
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yuval-abraham",
+   "name": "Yuval Abraham",
+   "role": "Israeli journalist and co-director of NAZA",
+   "class": "dissent",
+   "tier": "Israeli journalist",
+   "statements": [
+    118
+   ],
+   "mentions": [
+    {
+     "id": "141a-the-naza-documentary---twenty-four-soldiers-and-intelligence-officers-on-ca",
+     "title": "14.1A The NAZA Documentary - Twenty-Four Soldiers and Intelligence Officers, on Camera",
+     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "almog-cohen",
+   "name": "Almog Cohen",
+   "role": "Member of Knesset (Otzma Yehudit)",
+   "class": "government",
+   "tier": "Legislature",
+   "statements": [
+    42
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "amichai-eliyahu",
+   "name": "Amichai Eliyahu",
+   "role": "Heritage Minister",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    49
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "ariel-kallner",
+   "name": "Ariel Kallner",
+   "role": "Member of Knesset (Likud)",
+   "class": "government",
+   "tier": "Legislature",
+   "statements": [
+    29
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "arthur-ruppin",
+   "name": "Arthur Ruppin",
+   "role": "Head of the Zionist Organisation's Palestine Office; architect of Zionist land settlement",
+   "class": "historic",
+   "tier": "Founder",
+   "statements": [
+    5
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "avi-dichter",
+   "name": "Avi Dichter",
+   "role": "Agriculture Minister; former Director of the Shin Bet",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    51
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "ezra-yachin",
+   "name": "Ezra Yachin",
+   "role": "Reservist mobilised by the IDF to address troops; veteran of the Lehi militia and of the Deir Yassin massacre of April 1948",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    36
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "galit-distel-atbaryan",
+   "name": "Galit Distel-Atbaryan",
+   "role": "Diaspora Affairs Minister",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    40
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "lt-gen-rafael-eitan",
+   "name": "Lt. Gen. Rafael Eitan",
+   "role": "Chief of the General Staff of the IDF (1978–1983)",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    12
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "maj-gen-res-giora-eiland",
+   "name": "Maj. Gen. (res.) Giora Eiland",
+   "role": "Former head of Israel's National Security Council; adviser to the Defence Minister during the campaign",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    53
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "maj-gen-ghassan-alian",
+   "name": "Maj. Gen. Ghassan Alian",
+   "role": "Head of COGAT (Coordinator of Government Activities in the Territories)",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    33
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "may-golan",
+   "name": "May Golan",
+   "role": "Minister for the Advancement of the Status of Women",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    39
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "meir-dagan",
+   "name": "Meir Dagan",
+   "role": "Former Director of the Mossad (2002–2011)",
+   "class": "dissent",
+   "tier": "Former intelligence chief",
+   "statements": [
+    21
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "meirav-ben-ari",
+   "name": "Meirav Ben-Ari",
+   "role": "Member of Knesset (Yesh Atid, the main opposition party)",
+   "class": "government",
+   "tier": "Legislature",
+   "statements": [
+    41
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "michael-ben-yair",
+   "name": "Michael Ben-Yair",
+   "role": "Former Attorney General of Israel",
+   "class": "dissent",
+   "tier": "Former law officer",
+   "statements": [
+    20
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "michal-waldiger",
+   "name": "Michal Waldiger",
+   "role": "Member of Knesset (Religious Zionist Party)",
+   "class": "government",
+   "tier": "Legislature",
+   "statements": [
+    74
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "moshe-dayan",
+   "name": "Moshe Dayan",
+   "role": "Defence Minister of Israel",
+   "class": "historic",
+   "tier": "Cabinet",
+   "statements": [
+    9
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "moshe-feiglin",
+   "name": "Moshe Feiglin",
+   "role": "Leader of the Zehut party; former Deputy Speaker of the Knesset",
+   "class": "government",
+   "tier": "Former legislator",
+   "statements": [
+    76
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "nissim-vaturi",
+   "name": "Nissim Vaturi",
+   "role": "Deputy Speaker of the Knesset (Likud)",
+   "class": "government",
+   "tier": "Legislature",
+   "statements": [
+    30
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "ohad-tal",
+   "name": "Ohad Tal",
+   "role": "Member of Knesset (Religious Zionist Party)",
+   "class": "government",
+   "tier": "Legislature",
+   "statements": [
+    44
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "rear-admiral-daniel-hagari",
+   "name": "Rear Admiral Daniel Hagari",
+   "role": "Chief Spokesperson of the Israel Defense Forces",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    34
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yitzhak-kroizer",
+   "name": "Yitzhak Kroizer",
+   "role": "Member of Knesset (Otzma Yehudit)",
+   "class": "government",
+   "tier": "Legislature",
+   "statements": [
+    50
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yitzhak-wasserlauf",
+   "name": "Yitzhak Wasserlauf",
+   "role": "Minister for the Development of the Negev and Galilee (Otzma Yehudit)",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    93
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yoav-kisch",
+   "name": "Yoav Kisch",
+   "role": "Education Minister",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    32
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  }
+ ],
+ "companies": [
+  {
+   "id": "elbit-systems",
+   "name": "Elbit Systems",
+   "country": "Israel",
+   "sector": "arms",
+   "supplies": "Israel's largest weapons manufacturer, supplying drones, artillery systems and munitions used in the campaign, with research and production sites in the United Kingdom.",
+   "note": "On 4 February 2026 a jury acquitted six Palestine Action defendants on every count, including aggravated burglary, arising from the August 2024 action at Elbit's Filton site in Bristol. They had been held on remand for seventeen months and argued they acted to prevent the facility's output being used in the conduct this report documents.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 3
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "lockheed-martin",
+   "name": "Lockheed Martin",
+   "country": "United States",
+   "sector": "arms",
+   "supplies": "Prime contractor for the F-35, the aircraft at the centre of the United Kingdom's component exemption and of the deliveries recorded in the SIPRI series.",
+   "note": "Named by Amnesty International on 18 September 2025, in POL 40/0289/2025, among the corporations enabling the documented conduct.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "boeing",
+   "name": "Boeing",
+   "country": "United States",
+   "sector": "arms",
+   "supplies": "Supplier of munitions and aircraft to the Israeli air force, including the guidance kits used in Gaza.",
+   "note": "Named in the same Amnesty analysis of 18 September 2025.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "152-arms-embargoes",
+     "title": "15.2 Arms Embargoes",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "bae-systems",
+   "name": "BAE Systems",
+   "country": "United Kingdom",
+   "sector": "arms",
+   "supplies": "Produces around 15% of every F-35 built, the aircraft used to bomb Gaza, and holds strategic partnerships with four of the universities in the Defence Universities Alliance.",
+   "note": "An openDemocracy investigation found British universities accepted almost £100 million from defence companies arming Israel over five years, more than £20 million of it from BAE Systems alone.",
+   "ref": "§13.7",
+   "mentions": [
+    {
+     "id": "137-the-militarisation-of-uk-higher-education-and-the-suppression-of-dissent",
+     "title": "13.7 The Militarisation of UK Higher Education and the Suppression of Dissent",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "palantir",
+   "name": "Palantir Technologies",
+   "country": "United States",
+   "sector": "technology",
+   "supplies": "Signed a strategic partnership with the Israeli Ministry of Defence in January 2024 to supply data-analytics software for what the company described as war-related missions.",
+   "note": "The chief executive, Alex Karp, has said publicly that the product is used, on occasion, to kill people. Palantir disputed Amnesty's characterisation.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "microsoft",
+   "name": "Microsoft",
+   "country": "United States",
+   "sector": "technology",
+   "supplies": "A $125.4 million software agreement with the Israeli state entered in 2024, disclosed only inside a budget-execution report; separately, Azure was used by Unit 8200 to store recordings of millions of Palestinian phone calls.",
+   "note": "Middle East Eye revealed the contract in September 2026; the Guardian, +972 Magazine and Local Call revealed the Azure storage in August 2025. Microsoft said it had nothing to add.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 7
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "nextvision",
+   "name": "NextVision",
+   "country": "Israel",
+   "sector": "arms",
+   "supplies": "Manufactures the cameras carried by Israeli military drones.",
+   "note": "The Bureau of Investigative Journalism reported on 3 September 2026 that Barclays had approved NextVision as a future corporate client, a decision the Bureau said undercuts the bank's own public distancing from companies supplying the Israeli military.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 4
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "barclays",
+   "name": "Barclays",
+   "country": "United Kingdom",
+   "sector": "finance",
+   "supplies": "Holds and trades shares in defence companies supplying Israel, and in September 2026 approved a supplier of Israeli drone components as a client.",
+   "note": "Barclays states publicly that it does not itself invest in the nine defence companies campaigners have identified, and characterises its role as trading shares on behalf of clients.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 6
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "chevron",
+   "name": "Chevron",
+   "country": "United States",
+   "sector": "energy",
+   "supplies": "One of six oil majors that Oil Change International found supply more than a third of Israel's oil between them; Chevron accounts for about 8%.",
+   "note": "Fuel is a material input to an air campaign in the same sense as munitions, which is why the complicity question raised over arms exports is raised over fuel too.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "vitol",
+   "name": "Vitol",
+   "country": "Switzerland",
+   "sector": "energy",
+   "supplies": "Identified by Oil Change International and SOMO as one of the two largest crude traders supplying Israel during the war, together shipping about 22 million barrels, roughly 11% of Israel's crude imports between October 2023 and June 2026.",
+   "note": "The majority moved through the Turkish port of Ceyhan, despite Türkiye's own declared embargo.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "caterpillar",
+   "name": "Caterpillar",
+   "country": "United States",
+   "sector": "equipment",
+   "supplies": "Armoured bulldozers used in demolitions in the occupied territory.",
+   "note": "KLP, Norway's largest pension company, sold its stake in June 2024, finding an unacceptable risk that the bulldozers were used in violations of international law.",
+   "ref": null,
+   "source": "The divestment ledger — KLP exclusion, June 2024",
+   "mentions": [],
+   "divestment": [
+    "KLP"
+   ]
+  }
+ ],
+ "icc": {
+  "parties": [
+   {
+    "name": "Afghanistan",
+    "map": "Afghanistan"
+   },
+   {
+    "name": "Albania",
+    "map": "Albania"
+   },
+   {
+    "name": "Andorra",
+    "map": "Andorra"
+   },
+   {
+    "name": "Antigua and Barbuda",
+    "map": "Antigua and Barb."
+   },
+   {
+    "name": "Argentina",
+    "map": "Argentina"
+   },
+   {
+    "name": "Armenia",
+    "map": "Armenia"
+   },
+   {
+    "name": "Australia",
+    "map": "Australia"
+   },
+   {
+    "name": "Austria",
+    "map": "Austria"
+   },
+   {
+    "name": "Bangladesh",
+    "map": "Bangladesh"
+   },
+   {
+    "name": "Barbados",
+    "map": "Barbados"
+   },
+   {
+    "name": "Belgium",
+    "map": "Belgium"
+   },
+   {
+    "name": "Belize",
+    "map": "Belize"
+   },
+   {
+    "name": "Benin",
+    "map": "Benin"
+   },
+   {
+    "name": "Bolivia",
+    "map": "Bolivia"
+   },
+   {
+    "name": "Bosnia and Herzegovina",
+    "map": "Bosnia and Herz."
+   },
+   {
+    "name": "Botswana",
+    "map": "Botswana"
+   },
+   {
+    "name": "Brazil",
+    "map": "Brazil"
+   },
+   {
+    "name": "Bulgaria",
+    "map": "Bulgaria"
+   },
+   {
+    "name": "Burkina Faso",
+    "map": "Burkina Faso"
+   },
+   {
+    "name": "Cambodia",
+    "map": "Cambodia"
+   },
+   {
+    "name": "Canada",
+    "map": "Canada"
+   },
+   {
+    "name": "Cape Verde",
+    "map": "Cabo Verde"
+   },
+   {
+    "name": "Central African Republic",
+    "map": "Central African Rep."
+   },
+   {
+    "name": "Chad",
+    "map": "Chad"
+   },
+   {
+    "name": "Chile",
+    "map": "Chile"
+   },
+   {
+    "name": "Colombia",
+    "map": "Colombia"
+   },
+   {
+    "name": "Comoros",
+    "map": "Comoros"
+   },
+   {
+    "name": "Democratic Republic of the Congo",
+    "map": "Dem. Rep. Congo"
+   },
+   {
+    "name": "Republic of the Congo",
+    "map": "Congo"
+   },
+   {
+    "name": "Cook Islands",
+    "map": null
+   },
+   {
+    "name": "Costa Rica",
+    "map": "Costa Rica"
+   },
+   {
+    "name": "Côte d'Ivoire",
+    "map": "Côte d'Ivoire"
+   },
+   {
+    "name": "Croatia",
+    "map": "Croatia"
+   },
+   {
+    "name": "Cyprus",
+    "map": "Cyprus"
+   },
+   {
+    "name": "Czech Republic",
+    "map": "Czechia"
+   },
+   {
+    "name": "Denmark",
+    "map": "Denmark"
+   },
+   {
+    "name": "Djibouti",
+    "map": "Djibouti"
+   },
+   {
+    "name": "Dominica",
+    "map": "Dominica"
+   },
+   {
+    "name": "Dominican Republic",
+    "map": "Dominican Rep."
+   },
+   {
+    "name": "Ecuador",
+    "map": "Ecuador"
+   },
+   {
+    "name": "El Salvador",
+    "map": "El Salvador"
+   },
+   {
+    "name": "Estonia",
+    "map": "Estonia"
+   },
+   {
+    "name": "Fiji",
+    "map": "Fiji"
+   },
+   {
+    "name": "Finland",
+    "map": "Finland"
+   },
+   {
+    "name": "France",
+    "map": "France"
+   },
+   {
+    "name": "Gabon",
+    "map": "Gabon"
+   },
+   {
+    "name": "The Gambia",
+    "map": "Gambia"
+   },
+   {
+    "name": "Georgia",
+    "map": "Georgia"
+   },
+   {
+    "name": "Germany",
+    "map": "Germany"
+   },
+   {
+    "name": "Ghana",
+    "map": "Ghana"
+   },
+   {
+    "name": "Greece",
+    "map": "Greece"
+   },
+   {
+    "name": "Grenada",
+    "map": "Grenada"
+   },
+   {
+    "name": "Guatemala",
+    "map": "Guatemala"
+   },
+   {
+    "name": "Guinea",
+    "map": "Guinea"
+   },
+   {
+    "name": "Guyana",
+    "map": "Guyana"
+   },
+   {
+    "name": "Honduras",
+    "map": "Honduras"
+   },
+   {
+    "name": "Hungary",
+    "map": "Hungary"
+   },
+   {
+    "name": "Iceland",
+    "map": "Iceland"
+   },
+   {
+    "name": "Ireland",
+    "map": "Ireland"
+   },
+   {
+    "name": "Italy",
+    "map": "Italy"
+   },
+   {
+    "name": "Japan",
+    "map": "Japan"
+   },
+   {
+    "name": "Jordan",
+    "map": "Jordan"
+   },
+   {
+    "name": "Kenya",
+    "map": "Kenya"
+   },
+   {
+    "name": "Kiribati",
+    "map": "Kiribati"
+   },
+   {
+    "name": "Latvia",
+    "map": "Latvia"
+   },
+   {
+    "name": "Lesotho",
+    "map": "Lesotho"
+   },
+   {
+    "name": "Liberia",
+    "map": "Liberia"
+   },
+   {
+    "name": "Liechtenstein",
+    "map": "Liechtenstein"
+   },
+   {
+    "name": "Lithuania",
+    "map": "Lithuania"
+   },
+   {
+    "name": "Luxembourg",
+    "map": "Luxembourg"
+   },
+   {
+    "name": "Madagascar",
+    "map": "Madagascar"
+   },
+   {
+    "name": "Malawi",
+    "map": "Malawi"
+   },
+   {
+    "name": "Maldives",
+    "map": "Maldives"
+   },
+   {
+    "name": "Mali",
+    "map": "Mali"
+   },
+   {
+    "name": "Malta",
+    "map": "Malta"
+   },
+   {
+    "name": "Marshall Islands",
+    "map": "Marshall Is."
+   },
+   {
+    "name": "Mauritius",
+    "map": "Mauritius"
+   },
+   {
+    "name": "Mexico",
+    "map": "Mexico"
+   },
+   {
+    "name": "Moldova",
+    "map": "Moldova"
+   },
+   {
+    "name": "Mongolia",
+    "map": "Mongolia"
+   },
+   {
+    "name": "Montenegro",
+    "map": "Montenegro"
+   },
+   {
+    "name": "Namibia",
+    "map": "Namibia"
+   },
+   {
+    "name": "Nauru",
+    "map": "Nauru"
+   },
+   {
+    "name": "Netherlands",
+    "map": "Netherlands"
+   },
+   {
+    "name": "New Zealand",
+    "map": "New Zealand"
+   },
+   {
+    "name": "Niger",
+    "map": "Niger"
+   },
+   {
+    "name": "Nigeria",
+    "map": "Nigeria"
+   },
+   {
+    "name": "North Macedonia",
+    "map": "North Macedonia"
+   },
+   {
+    "name": "Norway",
+    "map": "Norway"
+   },
+   {
+    "name": "Palestine",
+    "map": "Palestine"
+   },
+   {
+    "name": "Panama",
+    "map": "Panama"
+   },
+   {
+    "name": "Paraguay",
+    "map": "Paraguay"
+   },
+   {
+    "name": "Peru",
+    "map": "Peru"
+   },
+   {
+    "name": "Poland",
+    "map": "Poland"
+   },
+   {
+    "name": "Portugal",
+    "map": "Portugal"
+   },
+   {
+    "name": "Romania",
+    "map": "Romania"
+   },
+   {
+    "name": "Saint Kitts and Nevis",
+    "map": "St. Kitts and Nevis"
+   },
+   {
+    "name": "Saint Lucia",
+    "map": "Saint Lucia"
+   },
+   {
+    "name": "Saint Vincent and the Grenadines",
+    "map": "St. Vin. and Gren."
+   },
+   {
+    "name": "Samoa",
+    "map": "Samoa"
+   },
+   {
+    "name": "San Marino",
+    "map": "San Marino"
+   },
+   {
+    "name": "Senegal",
+    "map": "Senegal"
+   },
+   {
+    "name": "Serbia",
+    "map": "Serbia"
+   },
+   {
+    "name": "Seychelles",
+    "map": "Seychelles"
+   },
+   {
+    "name": "Sierra Leone",
+    "map": "Sierra Leone"
+   },
+   {
+    "name": "Slovakia",
+    "map": "Slovakia"
+   },
+   {
+    "name": "Slovenia",
+    "map": "Slovenia"
+   },
+   {
+    "name": "South Africa",
+    "map": "South Africa"
+   },
+   {
+    "name": "South Korea",
+    "map": "South Korea"
+   },
+   {
+    "name": "Spain",
+    "map": "Spain"
+   },
+   {
+    "name": "Suriname",
+    "map": "Suriname"
+   },
+   {
+    "name": "Sweden",
+    "map": "Sweden"
+   },
+   {
+    "name": "Switzerland",
+    "map": "Switzerland"
+   },
+   {
+    "name": "Tajikistan",
+    "map": "Tajikistan"
+   },
+   {
+    "name": "Tanzania",
+    "map": "Tanzania"
+   },
+   {
+    "name": "Timor-Leste",
+    "map": "Timor-Leste"
+   },
+   {
+    "name": "Trinidad and Tobago",
+    "map": "Trinidad and Tobago"
+   },
+   {
+    "name": "Tunisia",
+    "map": "Tunisia"
+   },
+   {
+    "name": "Uganda",
+    "map": "Uganda"
+   },
+   {
+    "name": "Ukraine",
+    "map": "Ukraine"
+   },
+   {
+    "name": "United Kingdom",
+    "map": "United Kingdom"
+   },
+   {
+    "name": "Uruguay",
+    "map": "Uruguay"
+   },
+   {
+    "name": "Vanuatu",
+    "map": "Vanuatu"
+   },
+   {
+    "name": "Venezuela",
+    "map": "Venezuela"
+   },
+   {
+    "name": "Zambia",
+    "map": "Zambia"
+   }
+  ],
+  "leaving": [
+   {
+    "name": "Niger",
+    "notified": "18 June 2026",
+    "effective": "18 June 2027"
+   },
+   {
+    "name": "Burkina Faso",
+    "notified": "24 June 2026",
+    "effective": "24 June 2027"
+   },
+   {
+    "name": "Mali",
+    "notified": "24 June 2026",
+    "effective": "24 June 2027"
+   },
+   {
+    "name": "Venezuela",
+    "notified": "24 July 2026",
+    "effective": "24 July 2027"
+   },
+   {
+    "name": "Chad",
+    "notified": "27 July 2026",
+    "effective": "27 July 2027"
+   }
+  ],
+  "positions": [
+   {
+    "name": "Belgium",
+    "stance": "would-enforce",
+    "detail": "Among the states giving the strongest indications that the warrant would be executed.",
+    "ref": "§15.5",
+    "map": "Belgium"
+   },
+   {
+    "name": "Netherlands",
+    "stance": "would-enforce",
+    "detail": "Among the states giving the strongest indications that the warrant would be executed.",
+    "ref": "§15.5",
+    "map": "Netherlands"
+   },
+   {
+    "name": "Ireland",
+    "stance": "would-enforce",
+    "detail": "Among the strongest indications of enforcement, and the Justice Minister imposed travel bans on Ben-Gvir and Smotrich on 5 June 2026.",
+    "ref": "§15.5",
+    "map": "Ireland"
+   },
+   {
+    "name": "Lithuania",
+    "stance": "would-enforce",
+    "detail": "Among the states giving the strongest indications that the warrant would be executed.",
+    "ref": "§15.5",
+    "map": "Lithuania"
+   },
+   {
+    "name": "Slovenia",
+    "stance": "would-enforce",
+    "detail": "Among the states giving the strongest indications that the warrant would be executed.",
+    "ref": "§15.5",
+    "map": "Slovenia"
+   },
+   {
+    "name": "Spain",
+    "stance": "would-enforce",
+    "detail": "Among the states giving the strongest indications that the warrant would be executed.",
+    "ref": "§15.5",
+    "map": "Spain"
+   },
+   {
+    "name": "Canada",
+    "stance": "would-enforce",
+    "detail": "Prime Minister Mark Carney reaffirmed in October 2025 that Canada would arrest Netanyahu if he entered Canadian territory.",
+    "ref": "§15.5",
+    "map": "Canada"
+   },
+   {
+    "name": "Hungary",
+    "stance": "would-enforce",
+    "detail": "Hosted Netanyahu in April 2025 in breach of its obligation to cooperate, a non-compliance finding referred to the Assembly of States Parties, then reversed course: the National Assembly voted 133–37 on 27 May 2026 to repeal the exit law, and Prime Minister Péter Magyar committed to arresting Netanyahu if he visits.",
+    "ref": "§15.5",
+    "map": "Hungary"
+   },
+   {
+    "name": "Switzerland",
+    "stance": "would-enforce",
+    "detail": "Netanyahu skipped Davos in 2026 rather than enter a state party.",
+    "ref": "§15.5",
+    "map": "Switzerland"
+   },
+   {
+    "name": "South Korea",
+    "stance": "would-enforce",
+    "detail": "President Lee Jae Myung called Netanyahu a war criminal in May 2026 and ordered the government to assess issuing an arrest warrant in line with the ICC's.",
+    "ref": "§15.5",
+    "map": "South Korea"
+   },
+   {
+    "name": "France",
+    "stance": "would-enforce",
+    "detail": "Barred Ben-Gvir from entry in May 2026.",
+    "ref": "§15.5",
+    "map": "France"
+   },
+   {
+    "name": "Poland",
+    "stance": "refused",
+    "detail": "Passed a government resolution guaranteeing Netanyahu safe entry for the Auschwitz commemoration — itself a breach of the Rome Statute.",
+    "ref": "§15.5",
+    "map": "Poland"
+   },
+   {
+    "name": "United States",
+    "stance": "non-party",
+    "detail": "Not a party to the Rome Statute. The American Service-Members' Protection Act of 2002 bars federal and state cooperation with the Court, and President Trump stated on 20 July 2026 that Netanyahu \"will not be arrested, in any way, shape, or form\" in the United States.",
+    "ref": "§15.5",
+    "map": "United States of America"
+   },
+   {
+    "name": "Türkiye",
+    "stance": "other",
+    "detail": "Not a party, but submitted a request to Interpol on 21 August 2026 for a Red Notice against Netanyahu. Interpol's constitution bars acting on requests of a predominantly political character, and no notice had issued.",
+    "ref": "§15.5",
+    "map": "Turkey"
+   }
+  ],
+  "note": "All 125 states parties are bound by Article 86 to cooperate fully with the Court and by Article 89(1) to comply with a request for arrest and surrender. A withdrawal notified under Article 127(1) takes effect one year later, so each of the five states that has given notice remains bound throughout that year."
+ }
+}

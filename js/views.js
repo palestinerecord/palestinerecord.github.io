@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=70" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=71" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=70" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=71" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2736,6 +2736,203 @@ const Views = (function () {
     </div>`;
   }
 
+  /* ---------- the accountability ledger ----------
+
+     States are what the rest of this site counts, and states are not what
+     international criminal law punishes. A warrant names a person; a sanction
+     freezes a person's assets; a divestment sells a company's shares. This view
+     is the record re-cut along that axis, and it composes nothing: the offices
+     and the quotes come from the statements file, the sections come from the
+     report, the measures come from the world-positions file, and entities.py
+     does the joining before the page is ever loaded. */
+
+  const LEDGER_SECTORS = {
+    arms: 'Arms and components',
+    technology: 'Technology and data',
+    finance: 'Finance',
+    energy: 'Fuel',
+    equipment: 'Heavy equipment',
+  };
+
+  const STANCE_LABELS = {
+    'would-enforce': 'Has indicated it would execute the warrant',
+    refused: 'Has acted to defeat the warrant',
+    'non-party': 'Not a party to the Rome Statute',
+    other: 'Has acted outside the Court',
+  };
+
+  /* A section of the report, linked so that a click lands on the text itself
+     rather than on the page that summarises it. */
+  function ledgerSection(m) {
+    return `<a class="led-sec" href="#sec-${esc(m.id)}" data-sec="sec-${esc(m.id)}">${esc(m.title)}<span>${m.n}</span></a>`;
+  }
+
+  /* The statements are held by index, not by copy: entities.json stores the
+     position of each one in data/statements.json, so the words on this page are
+     the same object the statements page renders. */
+  function ledgerStatement(i) {
+    const s = D.statements.items[i];
+    return `<blockquote class="led-quote">
+      <p>${esc(s.quote)}</p>
+      <cite>${esc(s.date)} · ${esc(s.role)}<span class="led-cite-src">${esc(s.source)}</span></cite>
+    </blockquote>`;
+  }
+
+  function ledgerPerson(p) {
+    const badges = [
+      p.warrant ? '<span class="led-badge warrant">ICC arrest warrant</span>' : '',
+      p.sanctions.length ? `<span class="led-badge sanction">Sanctioned by ${p.sanctions.reduce((n, s) => n + s.by.length, 0)} state${p.sanctions.reduce((n, s) => n + s.by.length, 0) === 1 ? '' : 's'}</span>` : '',
+      p.statements.length ? `<span class="led-badge">${p.statements.length} documented statement${p.statements.length === 1 ? '' : 's'}</span>` : '',
+      p.sections ? `<span class="led-badge">${p.sections} mention${p.sections === 1 ? '' : 's'} in the report</span>` : '',
+    ].filter(Boolean).join('');
+
+    const warrant = p.warrant ? `<div class="led-block warrant">
+      <h4>Arrest warrant — ${esc(p.warrant.court)}, ${esc(p.warrant.date)}</h4>
+      <p class="led-counts">${esc(p.warrant.counts)}</p>
+      <p class="led-status"><b>Status.</b> ${esc(p.warrant.status)}</p>
+      <span class="led-ref">${esc(p.warrant.ref)}</span>
+    </div>` : '';
+
+    const sanctions = p.sanctions.length ? `<div class="led-block">
+      <h4>Measures against this person</h4>
+      ${p.sanctions.map((s) => `<div class="led-measure ${s.direction === 'accountability' ? 'inverted' : ''}">
+        <div class="led-measure-head"><b>${esc(s.measure)}</b><span>${esc(s.date)}</span></div>
+        <div class="led-by">${s.by.map((c) => `<span class="led-state">${esc(c)}</span>`).join('')}</div>
+        <p>${esc(s.reason)}</p>
+        <span class="led-ref">${esc(s.ref)}</span>
+      </div>`).join('')}
+    </div>` : '';
+
+    const quotes = p.statements.length ? `<div class="led-block">
+      <h4>In their own words</h4>
+      ${p.statements.slice().reverse().map(ledgerStatement).join('')}
+    </div>` : '';
+
+    const secs = p.mentions.length ? `<div class="led-block">
+      <h4>Where the report deals with them</h4>
+      <div class="led-secs">${p.mentions.map(ledgerSection).join('')}</div>
+    </div>` : '';
+
+    return `<details class="led-person" data-class="${esc(p.class)}"
+        data-flags="${p.warrant ? 'warrant ' : ''}${p.sanctions.length ? 'sanctioned ' : ''}${p.statements.length ? 'quoted' : ''}"
+        data-text="${esc((p.name + ' ' + p.role + ' ' + (p.country || '') + ' '
+          + p.statements.map((i) => D.statements.items[i].quote).join(' ')).toLowerCase())}"
+        id="led-${esc(p.id)}">
+      <summary>
+        <div class="led-name">${esc(p.name)}</div>
+        <div class="led-role">${esc(p.role)}</div>
+        <div class="led-badges">${badges}</div>
+      </summary>
+      <div class="led-body">${warrant}${sanctions}${quotes}${secs}</div>
+    </details>`;
+  }
+
+  function ledgerCompany(c) {
+    return `<details class="led-person led-company" data-sector="${esc(c.sector)}"
+        data-text="${esc((c.name + ' ' + c.country + ' ' + c.supplies + ' ' + c.note).toLowerCase())}" id="led-${esc(c.id)}">
+      <summary>
+        <div class="led-name">${esc(c.name)}</div>
+        <div class="led-role">${esc(c.country)} · ${esc(LEDGER_SECTORS[c.sector] || c.sector)}</div>
+        <div class="led-badges"><span class="led-badge">${esc(c.supplies.split('. ')[0])}</span></div>
+      </summary>
+      <div class="led-body">
+        <div class="led-block">
+          <h4>What it supplies</h4>
+          <p>${esc(c.supplies)}</p>
+        </div>
+        <div class="led-block">
+          <h4>What is on the record</h4>
+          <p>${esc(c.note)}</p>
+          ${c.ref ? `<span class="led-ref">${esc(c.ref)}</span>` : `<span class="led-ref">${esc(c.source || '')}</span>`}
+        </div>
+        ${c.mentions.length ? `<div class="led-block">
+          <h4>Where the report deals with it</h4>
+          <div class="led-secs">${c.mentions.map(ledgerSection).join('')}</div>
+        </div>` : ''}
+      </div>
+    </details>`;
+  }
+
+  function ledgerView() {
+    const E = D.entities;
+    const M = E.meta;
+    const quoted = E.persons.filter((p) => p.statements.length).length;
+
+    const stats = [
+      { value: M.persons, label: 'Persons on the ledger', note: 'each named by the report, by a court, or by a documented statement of their own' },
+      { value: M.warrants, label: 'ICC arrest warrants', note: 'two against Israeli ministers and one against a Hamas commander, issued on the same day to the same standard' },
+      { value: M.sanctioned, label: 'Persons under sanction', note: 'and the direction runs both ways — two Israeli ministers for incitement, eight court officers and a UN mandate holder for pursuing the case' },
+      { value: M.parties, label: 'States bound to arrest', note: 'every state party to the Rome Statute, under Articles 86 and 89(1)' },
+    ];
+
+    const classChips = [`<button class="chip active" data-class="all">Everyone<span>${M.persons}</span></button>`]
+      .concat(E.classes.map((c) => {
+        const n = E.persons.filter((p) => p.class === c.id).length;
+        return n ? `<button class="chip" data-class="${esc(c.id)}">${esc(c.label)}<span>${n}</span></button>` : '';
+      })).join('');
+
+    const flagChips = [
+      ['all', 'Any standing', M.persons],
+      ['warrant', 'Under warrant', E.persons.filter((p) => p.warrant).length],
+      ['sanctioned', 'Under sanction', E.persons.filter((p) => p.sanctions.length).length],
+      ['quoted', 'Quoted in the record', quoted],
+    ].map((f, i) => `<button class="chip ${i === 0 ? 'active' : ''}" data-flag="${f[0]}">${f[1]}<span>${f[2]}</span></button>`).join('');
+
+    const sectors = Object.keys(LEDGER_SECTORS).filter((s) => E.companies.some((c) => c.sector === s));
+    const sectorChips = [`<button class="chip active" data-sector="all">All${'<span>' + E.companies.length + '</span>'}</button>`]
+      .concat(sectors.map((s) => `<button class="chip" data-sector="${esc(s)}">${esc(LEDGER_SECTORS[s])}<span>${E.companies.filter((c) => c.sector === s).length}</span></button>`)).join('');
+
+    const stances = ['would-enforce', 'refused', 'non-party', 'other'];
+    const positions = stances.map((st) => {
+      const rows = E.icc.positions.filter((p) => p.stance === st);
+      if (!rows.length) return '';
+      return `<div class="led-stance ${esc(st)}">
+        <h4>${esc(STANCE_LABELS[st])}<span>${rows.length}</span></h4>
+        ${rows.map((r) => `<div class="led-pos"><b>${esc(r.name)}</b> ${esc(r.detail)} <span class="led-ref">${esc(r.ref)}</span></div>`).join('')}
+      </div>`;
+    }).join('');
+
+    return `<div class="view wrap">
+      <section class="section">
+        ${head('Ledger', 'Persons and companies, not only states', 'International criminal law does not punish a state. It names a person, and it reaches a company through its shareholders and its clients. '
+          + 'This page cuts the same record along that axis: who holds the office, what they said on the day, which court has issued what, which governments have acted, and which firms supply the means. '
+          + 'Nothing here is new evidence — every line is joined from the statements, the report and the world-positions data already on this site.')}
+        <div class="grid c4">
+          ${stats.map((x, i) => statCard(x, ['red', 'amber', 'blue', 'green'][i])).join('')}
+        </div>
+      </section>
+
+      <section class="section">
+        ${head('The persons', `${M.persons} named individuals`, 'Ordered by what has actually happened to them: a warrant first, then a sanction, then the weight of the record against them. '
+          + 'Open any name for the warrant and its status, the measures taken by which states, the verbatim statements, and every section of the report that deals with them.')}
+        <div class="chips" id="led-classes">${classChips}</div>
+        <div class="chips" id="led-flags">${flagChips}</div>
+        <div class="tl-controls">
+          <input type="search" id="led-search" placeholder="Search names, offices and quotes…" autocomplete="off">
+          <span class="small muted" id="led-count"></span>
+        </div>
+        <div class="led-list" id="led-persons">${E.persons.map(ledgerPerson).join('')}</div>
+      </section>
+
+      <section class="section">
+        ${head('The arrest map', 'Where the warrant bites', 'A warrant is enforced by states, one border at a time. Every state party to the Rome Statute is bound by Article 86 to cooperate with the Court and by Article 89(1) to comply with a request for arrest and surrender. '
+          + 'The map shades all ' + M.parties + ' of them, marks the five that have given notice of withdrawal — each still bound for the year that notice takes to run — and marks the states whose position the record actually documents.')}
+        ${chartCard('arrest-map', 'The 125 states bound to execute the warrant',
+          'Shaded by obligation, not by intention. A state party that has said nothing is still bound; the stated positions are listed underneath.', '§15.5', 'tall')}
+        <div class="led-stances">${positions}</div>
+        <p class="chart-note" style="margin-top:18px">${esc(E.icc.note)}</p>
+      </section>
+
+      <section class="section">
+        ${head('The companies', `${E.companies.length} firms named in the record`, 'A listing is not a criminal charge. What each entry records is a documented commercial relationship — what the firm supplies, who reported it, and what shareholders have done about it. '
+          + 'The UN database that sits behind the settlement half of this question is the only official list of its kind, and it has grown at every revision.')}
+        <div class="chips" id="led-sectors">${sectorChips}</div>
+        <div class="led-list" id="led-companies">${E.companies.map(ledgerCompany).join('')}</div>
+        <p class="chart-note" style="margin-top:22px">Generated by entities.py from data/entities.json, joined to the statements, the report and the world-positions data. Section references point at the report text itself.</p>
+      </section>
+    </div>`;
+  }
+
   const SITE_TITLE = `${SITE} — Israel and the Occupied Territories, 1917–2026`;
   const SITE_DESC = 'Every figure carries its source. A forensic survey of state conduct, alleged '
     + 'violations of international law, and the documented record — 1917 to 2026.';
@@ -2756,6 +2953,11 @@ const Views = (function () {
       title: 'Timeline — a dated chronology, 1917–2026',
       desc: 'Two chronologies in one: the record of major crimes and massacres, set against the mandates, '
         + 'laws, plans, rulings and admissions between them.',
+    },
+    ledger: {
+      title: 'Ledger — the persons and companies named in the record',
+      desc: 'Who holds the office, what they said, which court has issued a warrant, which states have '
+        + 'sanctioned whom, and which firms supply the means.',
     },
     evidence: {
       title: 'Evidence — the complete report',
@@ -3614,7 +3816,7 @@ const Views = (function () {
     statements: statementsView, legal: legalView, sources: sourcesView,
     tour: tourView, api: apiView, changelog: changelogView, embed: embedView,
     method: methodView, children: childrenView, day: dayView,
-    provenance: provenanceView, answer: answerView,
+    provenance: provenanceView, answer: answerView, ledger: ledgerView,
   };
 
   return {
