@@ -32,6 +32,11 @@ on:
       - 'validate.py'
       - 'fetch_timeseries.py'
       - 'sync_live.py'
+      # The refresh rebuilds whatever holds a copy of a figure it moved.
+      - 'provenance.py'
+      - 'falsify.py'
+      - 'manifest.py'
+      - 'render_check.py'
       - '.github/workflows/dashboard.yml'
   workflow_dispatch:
     inputs:
