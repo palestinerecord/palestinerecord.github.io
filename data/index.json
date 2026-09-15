@@ -3,8 +3,8 @@
   "description": "Every dataset behind the charts at palestinerecord.github.io, as plain JSON over HTTPS, with no login and no key.",
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
-  "generated": "2026-09-15",
-  "total_bytes": 5058962,
+  "generated": "2026-09-16",
+  "total_bytes": 5065582,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -334,14 +334,14 @@
         "timeline_count",
         "parts"
       ],
-      "updated": "2026-09-15"
+      "updated": "2026-09-16"
     },
     {
       "path": "data/report.json",
       "title": "The source report, parsed",
       "description": "Every part, section, paragraph, list, table, chronology entry and bibliography entry of the report, converted losslessly by build.py and checked by verify.py. This is the whole document as structured data.",
       "source": "The report — A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026).",
-      "bytes": 1327982,
+      "bytes": 1333401,
       "records": null,
       "fields": [
         "title",
@@ -352,20 +352,20 @@
         "bibliography",
         "tables"
       ],
-      "updated": "2026-09-15"
+      "updated": "2026-09-16"
     },
     {
       "path": "data/sources.json",
       "title": "The linked source library",
       "description": "The evidentiary base grouped by kind: courts and tribunals, UN bodies, human rights organisations, open datasets, academic work, Israeli sources, journalism and archives.",
       "source": "Each entry links to the publisher.",
-      "bytes": 104330,
+      "bytes": 104884,
       "records": null,
       "fields": [
         "meta",
         "groups"
       ],
-      "updated": "2026-09-15"
+      "updated": "2026-09-16"
     },
     {
       "path": "data/statements.json",
@@ -386,13 +386,13 @@
       "title": "The contextual chronology",
       "description": "The legal and political steps between the massacres recorded in Appendix B — mandates, partitions, laws, plans, rulings, resolutions and admissions.",
       "source": "Primary documents as cited per entry.",
-      "bytes": 93722,
-      "records": 198,
+      "bytes": 94369,
+      "records": 199,
       "fields": [
         "meta",
         "items"
       ],
-      "updated": "2026-09-15"
+      "updated": "2026-09-16"
     },
     {
       "path": "data/timeseries.json",

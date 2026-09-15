@@ -2,7 +2,7 @@
  "meta": {
   "title": "Source Library",
   "description": "The evidentiary base of the record: courts, UN bodies, human rights organisations, peer-reviewed research, open datasets, declassified archives and the Israeli press. Sources are grouped by the weight they carry, not by convenience. Every claim in the report is anchored to a source of one of these classes.",
-  "compiled": "2026-09-15",
+  "compiled": "2026-09-16",
   "note": "Where a link is given it points to the authoritative publisher, not to an aggregator. Where no link is given the source is a print or archival record cited in the report's bibliography."
  },
  "groups": [
@@ -1382,6 +1382,13 @@
      "date": "13 November 2025",
      "url": "https://www.npr.org/2025/11/13/nx-s1-5599908/no-music-for-genocide-israel-boycott",
      "note": "The geo-blocking initiative, its growth from launch and the named participants."
+    },
+    {
+     "title": "Kneecap offer 'love and solidarity' to Macklemore after Ed Sheeran tour dumping",
+     "org": "The Irish News",
+     "date": "15 September 2026",
+     "url": "https://www.irishnews.com/entertainment/kneecap-offer-love-and-solidarity-to-macklemore-after-ed-sheeran-tour-dumping-MJ4VQCS7ZJMJHL42ANPPVR3FGI/",
+     "note": "Verbatim responses from Kneecap, Bob Vylan, Garbage, Kehlani, CMAT, Paloma Faith, Tones and I and Greta Thunberg to the Loop Tour removal; also records the No Music For Genocide signatory list (§15.12)."
     }
    ]
   },
