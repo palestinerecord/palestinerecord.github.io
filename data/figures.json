@@ -41,19 +41,22 @@
   },
   {
    "label": "Killed in the West Bank",
-   "value": 1114,
-   "note": "including 238 children, since Oct 2023",
+   "value": 1123,
+   "note": "including 240 children, since Oct 2023",
    "source": "OCHA",
    "ref": "§9.2",
-   "live": true
+   "live": true,
+   "series": "west_bank.cumulative_killed",
+   "note_series": "west_bank.cumulative_children"
   },
   {
    "label": "Settler attacks recorded",
-   "value": 4554,
+   "value": 4625,
    "note": "West Bank, since Oct 2023",
    "source": "OCHA",
    "ref": "§9.2",
-   "live": true
+   "live": true,
+   "series": "west_bank.cumulative_settler_attacks"
   },
   {
    "label": "Settlers in occupied territory",

@@ -14,9 +14,8 @@ This script closes that gap in the only direction that is honest: the series is
 the record, the curated copy is a copy, so the copy is brought to the series and
 the change is committed with the rest of the refresh. Nothing here invents a
 figure, rounds one, or reconciles a disagreement between two different sources.
-A curated figure that names no series is never touched; those are the figures
-that come from OCHA's own tables and from the report, and they are checked
-against the markdown instead.
+A curated figure that names no series is never touched: those are the figures
+the report itself states, and they are checked against the markdown instead.
 
 What it will not do is accept nonsense from a feed. A recorded toll is
 cumulative: it rises, and a revision of the named list occasionally moves it
@@ -67,14 +66,29 @@ def save(name, blob):
                              encoding='utf-8')
 
 
-def series_value(summary, path):
-    """Read a dotted path out of the timeseries summary, or None if absent."""
-    node = summary
+def walk_series(root, path):
+    """Follow a dotted path and return the figure at the end of it, or None."""
+    node = root
     for key in path.split('.'):
         if not isinstance(node, dict) or key not in node:
             return None
         node = node[key]
+    if isinstance(node, dict) and isinstance(node.get('values'), list) and node['values']:
+        # A cumulative series states its figure at its last month.
+        node = node['values'][-1]
     return node if isinstance(node, (int, float)) and not isinstance(node, bool) else None
+
+
+def series_value(series, path):
+    """Read the figure a curated entry names out of timeseries.json.
+
+    Two shapes are addressable. A path into the summary block names a scalar,
+    as `killed.total` does. A path into one of the territory blocks names a
+    whole series, as `west_bank.cumulative_killed` does, and the figure is its
+    latest month, which is what a cumulative series is stating.
+    """
+    value = walk_series(series.get('summary') or {}, path)
+    return value if value is not None else walk_series(series, path)
 
 
 def accept(label, old, new):
@@ -103,7 +117,7 @@ def walk(node, path=''):
             yield from walk(value, '%s[%d]' % (path, index))
 
 
-def sync_figures(summary):
+def sync_figures(series):
     """Every figure in figures.json that declares which series it tracks."""
     figures = load('figures.json')
     touched = 0
@@ -114,13 +128,27 @@ def sync_figures(summary):
         if not isinstance(old, (int, float)) or isinstance(old, bool):
             continue
         label = node.get('label') or path
-        new = series_value(summary, node['series'])
+        new = series_value(series, node['series'])
         if not accept(label, old, new):
             continue
         if int(new) != int(old):
             node['value'] = int(new)
             touched += 1
             report('%s: %s to %s' % (label, f'{int(old):,}', f'{int(new):,}'))
+        # A note that quotes a second figure from the feed - the children
+        # inside a West Bank toll - names the series it quotes, so the sentence
+        # beside the number moves with the number rather than behind it.
+        if node.get('note_series'):
+            inner = series_value(series, node['note_series'])
+            stated = re.findall(r'(\d[\d,]*) children', node.get('note') or '')
+            if inner is None or len(stated) != 1:
+                problem('the note on %s does not state one figure the feed can check' % label)
+            elif int(stated[0].replace(',', '')) != int(inner):
+                node['note'] = replace_number(node['note'], int(stated[0].replace(',', '')),
+                                              int(inner), 'the note on %s' % label)
+                touched += 1
+                report('%s, children in the note: %s to %s'
+                       % (label, stated[0], f'{int(inner):,}'))
     return ('figures.json', figures) if touched else None
 
 
@@ -206,10 +234,9 @@ def main():
     args = ap.parse_args()
 
     series = load('timeseries.json')
-    summary = series.get('summary') or {}
     demographics = series.get('demographics') or {}
 
-    written = [result for result in (sync_figures(summary), sync_children(demographics))
+    written = [result for result in (sync_figures(series), sync_children(demographics))
                if result]
 
     if problems:

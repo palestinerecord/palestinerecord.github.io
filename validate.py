@@ -272,14 +272,29 @@ def check_timeseries(files):
                 note('%s: monthly sum %s against cumulative %s' % (territory, f'{total:,}', f'{final:,}'))
 
 
-def _series_value(summary, path):
-    """Read a dotted path out of the timeseries summary, or None if absent."""
-    node = summary
+def _walk_series(root, path):
+    """Follow a dotted path and return the figure at the end of it, or None."""
+    node = root
     for key in path.split('.'):
         if not isinstance(node, dict) or key not in node:
             return None
         node = node[key]
-    return node if isinstance(node, (int, float)) else None
+    if isinstance(node, dict) and isinstance(node.get('values'), list) and node['values']:
+        # A cumulative series states its figure at its last month.
+        node = node['values'][-1]
+    return node if isinstance(node, (int, float)) and not isinstance(node, bool) else None
+
+
+def _series_value(series, path):
+    """Read the figure a curated entry names out of timeseries.json.
+
+    Two shapes are addressable. A path into the summary block names a scalar,
+    as `killed.total` does. A path into one of the territory blocks names a
+    whole series, as `west_bank.cumulative_killed` does, and the figure is its
+    latest month, which is what a cumulative series is stating.
+    """
+    value = _walk_series(series.get('summary') or {}, path)
+    return value if value is not None else _walk_series(series, path)
 
 
 def check_headline_agreement(files):
@@ -287,7 +302,6 @@ def check_headline_agreement(files):
     figures, ts = files.get('figures'), files.get('timeseries')
     if not figures or not ts:
         return
-    summary = ts.get('summary', {})
     checked = unbacked = 0
     for where, node, _ in walk(figures, 'figures'):
         if not node.get('live') or not isinstance(node.get('value'), (int, float)):
@@ -299,7 +313,7 @@ def check_headline_agreement(files):
             # and the settler-attack count come straight from OCHA's own tables.
             unbacked += 1
             continue
-        expected = _series_value(summary, path)
+        expected = _series_value(ts, path)
         if expected is None:
             fail('agreement', '"%s" names series %r, which timeseries.json does not hold'
                  % (label, path))
@@ -310,6 +324,17 @@ def check_headline_agreement(files):
                  % (label, f"{node['value']:,}", f'{int(expected):,}'))
         else:
             note('agreement: %s = %s in both' % (label, f"{node['value']:,}"))
+        # A note that quotes a second live figure - the children inside a West
+        # Bank toll - names the series it quotes, so the sentence beside the
+        # number is held to the same standard as the number.
+        if node.get('note_series'):
+            inner = _series_value(ts, node['note_series'])
+            if inner is None:
+                fail('agreement', '"%s" names note series %r, which timeseries.json does not hold'
+                     % (label, node['note_series']))
+            elif f'{int(inner):,}' not in (node.get('note') or ''):
+                fail('agreement', 'the note on "%s" does not state the %s the series gives'
+                     % (label, f'{int(inner):,}'))
     note('agreement: %d live figures checked against the series, %d carried from OCHA directly'
          % (checked, unbacked))
 
