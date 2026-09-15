@@ -82,11 +82,16 @@ def walk_series(root, path):
 def series_value(series, path):
     """Read the figure a curated entry names out of timeseries.json.
 
-    Two shapes are addressable. A path into the summary block names a scalar,
+    Three shapes are addressable. A path into the summary block names a scalar,
     as `killed.total` does. A path into one of the territory blocks names a
     whole series, as `west_bank.cumulative_killed` does, and the figure is its
-    latest month, which is what a cumulative series is stating.
+    latest month, which is what a cumulative series is stating. A list of paths
+    names a figure that is the sum of them, which is how the record states a
+    toll running across both territories.
     """
+    if isinstance(path, list):
+        parts = [series_value(series, one) for one in path]
+        return None if any(part is None for part in parts) else sum(parts)
     value = walk_series(series.get('summary') or {}, path)
     return value if value is not None else walk_series(series, path)
 
@@ -117,14 +122,18 @@ def walk(node, path=''):
             yield from walk(value, '%s[%d]' % (path, index))
 
 
-def sync_figures(series):
-    """Every figure in figures.json that declares which series it tracks."""
-    figures = load('figures.json')
+def sync_curated(name, series):
+    """Every figure in a curated file that declares which series it tracks."""
+    figures = load(name)
     touched = 0
-    for path, node in walk(figures, 'figures'):
+    for path, node in walk(figures, name):
         if not node.get('live') or not node.get('series'):
             continue
-        old = node.get('value')
+        # Almost every curated figure keeps its number in `value`; a row that
+        # states two sides of a comparison keeps each in its own field and says
+        # which of them the series it names is.
+        field = node.get('series_field') or 'value'
+        old = node.get(field)
         if not isinstance(old, (int, float)) or isinstance(old, bool):
             continue
         label = node.get('label') or path
@@ -132,7 +141,7 @@ def sync_figures(series):
         if not accept(label, old, new):
             continue
         if int(new) != int(old):
-            node['value'] = int(new)
+            node[field] = int(new)
             touched += 1
             report('%s: %s to %s' % (label, f'{int(old):,}', f'{int(new):,}'))
         # A note that quotes a second figure from the feed - the children
@@ -149,7 +158,7 @@ def sync_figures(series):
                 touched += 1
                 report('%s, children in the note: %s to %s'
                        % (label, stated[0], f'{int(inner):,}'))
-    return ('figures.json', figures) if touched else None
+    return (name, figures) if touched else None
 
 
 def replace_number(text, old, new, what):
@@ -236,7 +245,9 @@ def main():
     series = load('timeseries.json')
     demographics = series.get('demographics') or {}
 
-    written = [result for result in (sync_figures(series), sync_children(demographics))
+    written = [result for result in (sync_curated('figures.json', series),
+                                     sync_curated('long-record.json', series),
+                                     sync_children(demographics))
                if result]
 
     if problems:

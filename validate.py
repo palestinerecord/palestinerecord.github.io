@@ -272,6 +272,12 @@ def check_timeseries(files):
                 note('%s: monthly sum %s against cumulative %s' % (territory, f'{total:,}', f'{final:,}'))
 
 
+def _sum_paths(series, path):
+    """A figure may be the sum of several series - a toll across two territories."""
+    parts = [_series_value(series, one) for one in path]
+    return None if any(part is None for part in parts) else sum(parts)
+
+
 def _walk_series(root, path):
     """Follow a dotted path and return the figure at the end of it, or None."""
     node = root
@@ -293,49 +299,64 @@ def _series_value(series, path):
     whole series, as `west_bank.cumulative_killed` does, and the figure is its
     latest month, which is what a cumulative series is stating.
     """
+    if isinstance(path, list):
+        return _sum_paths(series, path)
     value = _walk_series(series.get('summary') or {}, path)
     return value if value is not None else _walk_series(series, path)
 
 
 def check_headline_agreement(files):
-    """The curated live figures and the live series are two copies of one count."""
-    figures, ts = files.get('figures'), files.get('timeseries')
-    if not figures or not ts:
+    """The curated live figures and the live series are two copies of one count.
+
+    A curated figure that is a copy of something in the daily feed says so, by
+    naming the series it tracks; sync_live.py carries the feed across and this
+    is the check that it did. Figures kept in more than one curated file are
+    all checked, because a copy is a copy wherever it is kept.
+    """
+    ts = files.get('timeseries')
+    curated = [(name, files.get(name)) for name in ('figures', 'long-record')]
+    if not ts or not all(blob for _, blob in curated):
         return
     checked = unbacked = 0
-    for where, node, _ in walk(figures, 'figures'):
-        if not node.get('live') or not isinstance(node.get('value'), (int, float)):
-            continue
-        label = node.get('label') or where
-        path = node.get('series')
-        if not path:
-            # A live figure the daily feed does not publish - the West Bank toll
-            # and the settler-attack count come straight from OCHA's own tables.
-            unbacked += 1
-            continue
-        expected = _series_value(ts, path)
-        if expected is None:
-            fail('agreement', '"%s" names series %r, which timeseries.json does not hold'
-                 % (label, path))
-            continue
-        checked += 1
-        if int(node['value']) != int(expected):
-            fail('agreement', '"%s" is %s in figures.json but %s in the live series'
-                 % (label, f"{node['value']:,}", f'{int(expected):,}'))
-        else:
-            note('agreement: %s = %s in both' % (label, f"{node['value']:,}"))
-        # A note that quotes a second live figure - the children inside a West
-        # Bank toll - names the series it quotes, so the sentence beside the
-        # number is held to the same standard as the number.
-        if node.get('note_series'):
-            inner = _series_value(ts, node['note_series'])
-            if inner is None:
-                fail('agreement', '"%s" names note series %r, which timeseries.json does not hold'
-                     % (label, node['note_series']))
-            elif f'{int(inner):,}' not in (node.get('note') or ''):
-                fail('agreement', 'the note on "%s" does not state the %s the series gives'
-                     % (label, f'{int(inner):,}'))
-    note('agreement: %d live figures checked against the series, %d carried from OCHA directly'
+    for name, blob in curated:
+        for where, node, _ in walk(blob, name):
+            # Almost every curated figure keeps its number in `value`; a row
+            # stating two sides of a comparison keeps each side in its own
+            # field and says which of them the series it names is.
+            field = node.get('series_field') or 'value'
+            if not node.get('live') or not isinstance(node.get(field), (int, float)):
+                continue
+            label = node.get('label') or where
+            path = node.get('series')
+            if not path:
+                # A live figure the feed does not publish at all. There are
+                # none at present; the field is kept so that a figure can be
+                # marked as moving without a series to move it.
+                unbacked += 1
+                continue
+            expected = _series_value(ts, path)
+            if expected is None:
+                fail('agreement', '"%s" names series %r, which timeseries.json does not hold'
+                     % (label, path))
+                continue
+            checked += 1
+            if int(node[field]) != int(expected):
+                fail('agreement', '"%s" is %s in %s.json but %s in the live series'
+                     % (label, f'{node[field]:,}', name, f'{int(expected):,}'))
+            else:
+                note('agreement: %s = %s in both' % (label, f'{node[field]:,}'))
+            # A note that quotes a second live figure - the children inside a
+            # West Bank toll - names the series it quotes, so the sentence
+            # beside the number is held to the same standard as the number.
+            if node.get('note_series'):
+                inner = _series_value(ts, node['note_series'])
+                if inner is None:
+                    fail('agreement', '"%s" names note series %r, which timeseries.json does not hold'
+                         % (label, node['note_series']))
+                elif f'{int(inner):,}' not in (node.get('note') or ''):
+                    fail('agreement', 'the note on "%s" does not state the %s the series gives'
+                         % (label, f'{int(inner):,}'))
+    note('agreement: %d live figures checked against the series, %d with no series to check'
          % (checked, unbacked))
 
 

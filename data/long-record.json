@@ -1,971 +1,977 @@
 {
-  "meta": {
-    "title": "The long record, 1948–2026",
-    "updated": "2026-09-12",
-    "lede": "Everything else on this dashboard runs on a daily or monthly series that begins in October 2023. This block carries the periods before it. No continuous Palestinian death register has ever existed, so the record is assembled from separate bodies of work — a contemporaneous Palestinian enumeration of 1948, B'Tselem's case-by-case database from 1987, OCHA's monitoring from 2005, the Gaza Ministry of Health register from 2023 — each with its own definitions, geography and start date.",
-    "method": "Every figure below carries the organisation that produced it and the method it used. Where no organisation published a figure, the row carries a constructed estimate instead: it is labelled as an estimate, shown with its low and high bounds, set out with the components it was built from, and excluded from the documented running total. The blocks are not additive with one another unless marked as counted, because several of the series overlap in time and none of them count the same population.",
-    "caution": "Treat every number here as a floor. Undercounting is structural: bodies never recovered, deaths in detention never recorded, indirect deaths from siege and the destruction of the health system, and twenty years of occupation for which no organisation was systematically counting at all."
+ "meta": {
+  "title": "The long record, 1948–2026",
+  "updated": "2026-09-12",
+  "lede": "Everything else on this dashboard runs on a daily or monthly series that begins in October 2023. This block carries the periods before it. No continuous Palestinian death register has ever existed, so the record is assembled from separate bodies of work — a contemporaneous Palestinian enumeration of 1948, B'Tselem's case-by-case database from 1987, OCHA's monitoring from 2005, the Gaza Ministry of Health register from 2023 — each with its own definitions, geography and start date.",
+  "method": "Every figure below carries the organisation that produced it and the method it used. Where no organisation published a figure, the row carries a constructed estimate instead: it is labelled as an estimate, shown with its low and high bounds, set out with the components it was built from, and excluded from the documented running total. The blocks are not additive with one another unless marked as counted, because several of the series overlap in time and none of them count the same population.",
+  "caution": "Treat every number here as a floor. Undercounting is structural: bodies never recovered, deaths in detention never recorded, indirect deaths from siege and the destruction of the health system, and twenty years of occupation for which no organisation was systematically counting at all."
+ },
+ "toll": {
+  "title": "Palestinians killed, by period",
+  "lede": "The documented periods, in order, with the gaps left visible.",
+  "anchor": {
+   "value": 136000,
+   "label": "Palestinians killed since 1948",
+   "source": "Palestinian Central Bureau of Statistics (Dr Ola Awad), World Refugee Day report, June 2024",
+   "note": "The only cumulative figure published by the Palestinian statistical authority. It was issued in June 2024, when the Gaza toll stood near 37,000, so it implies roughly 99,000 deaths across 1948–2023 — far more than the individually documented periods below sum to. PCBS has not published the period-by-period basis for it, so it cannot be reconciled line by line with the blocks in this table. It is shown as an anchor, not as a total."
   },
-  "toll": {
-    "title": "Palestinians killed, by period",
-    "lede": "The documented periods, in order, with the gaps left visible.",
-    "anchor": {
-      "value": 136000,
-      "label": "Palestinians killed since 1948",
-      "source": "Palestinian Central Bureau of Statistics (Dr Ola Awad), World Refugee Day report, June 2024",
-      "note": "The only cumulative figure published by the Palestinian statistical authority. It was issued in June 2024, when the Gaza toll stood near 37,000, so it implies roughly 99,000 deaths across 1948–2023 — far more than the individually documented periods below sum to. PCBS has not published the period-by-period basis for it, so it cannot be reconciled line by line with the blocks in this table. It is shown as an anchor, not as a total."
-    },
-    "periods": [
-      {
-        "id": "nakba",
-        "label": "The Nakba and the 1948 war",
-        "span": "1947–1949",
-        "start": 1947,
-        "end": 1949,
-        "killed": 13000,
-        "low": 5700,
-        "high": 15000,
-        "children": null,
-        "counted": true,
-        "source": "Aref al-Aref, al-Nakba (13,000); PCBS (15,000); Benny Morris, The Birth of the Palestinian Refugee Problem Revisited (5,700–5,800); Stanley Sandler (6,373, of whom 2,373 civilians)",
-        "method": "Contemporaneous Palestinian enumeration by Aref al-Aref, later revised by historians working from Israeli military archives. No central register existed on either side.",
-        "note": "Over 750,000 Palestinians were expelled or fled; 530 villages were destroyed and 11 towns and cities depopulated. The death toll is the least well established part of the 1948 record, because the population that would have counted it was the population being displaced."
-      },
-      {
-        "id": "military-government",
-        "label": "Military government over Palestinian citizens of Israel",
-        "span": "1949–1966",
-        "start": 1949,
-        "end": 1966,
-        "killed": 435,
-        "low": null,
-        "high": null,
-        "estimate": 3850,
-        "estimate_low": 2700,
-        "estimate_high": 5000,
-        "estimate_basis": "Border confrontations, 1949–1956: 2,700–5,000 Palestinians killed, against roughly 500 Israelis over the same years. The midpoint of that range is used. The three documented massacres below sit inside it.",
-        "children": 23,
-        "counted": true,
-        "partial": true,
-        "source": "Kafr Qasim: Israeli military court record, 1957. Khan Yunis and Rafah: UNRWA Director's report to the UN General Assembly, 1957. Border confrontations: standard compilation of Arab–Israeli casualties, 1949–1956",
-        "method": "Individually documented incidents, plus a published range for the border confrontations of 1949–1956. There was no body counting deaths across the period as a whole.",
-        "note": "The hard figure of 435 is the sum of three documented massacres: Kafr Qasim, 29 October 1956, 49 Palestinian citizens of Israel shot at a curfew line, 23 of them children; Khan Yunis, November 1956, 275 killed during the Israeli occupation of Gaza in the Suez war; Rafah, November 1956, 111 killed. The wider estimate adds the border confrontations of 1949–1956, in which 2,700 to 5,000 Palestinians were killed."
-      },
-      {
-        "id": "naksa",
-        "label": "The Six-Day War and the Naksa",
-        "span": "1967",
-        "start": 1967,
-        "end": 1967,
-        "killed": null,
-        "low": null,
-        "high": null,
-        "estimate": 2000,
-        "estimate_low": 1000,
-        "estimate_high": 3000,
-        "estimate_basis": "Constructed, not published. Components: roughly 700 Jordanian soldiers killed in the West Bank campaign of 6–7 June, in an army with heavy Palestinian enlistment; documented civilian killings at Rafah, Khan Yunis and Qalqilya; the destruction of Imwas, Yalo and Bayt Nuba; and refugees shot while attempting to return across the Jordan. The range is wide because the civilian component has no count at all.",
-        "children": null,
-        "counted": false,
-        "gap": true,
-        "source": "Displacement: report of the UN Secretary-General, 1967. Military casualties: standard campaign histories. Civilian killings: BADIL; Segev, 1967; Masalha",
-        "method": "No consolidated Palestinian civilian death toll for the 1967 war has been produced by any of the organisations that count. The figure shown is this dashboard's own estimate, built from its parts and labelled as such.",
-        "note": "The displacement is documented: roughly 300,000 Palestinians driven from the West Bank and Gaza, of whom over 100,000 were already refugees from 1948, with estimates ranging from 280,000 to 325,000, plus 100,000 Syrians from the Golan. The villages of Imwas, Yalo and Bayt Nuba were destroyed outright. The dead were never counted."
-      },
-      {
-        "id": "occupation-pre-intifada",
-        "label": "The occupation before the First Intifada",
-        "span": "1967–1987",
-        "start": 1967,
-        "end": 1987,
-        "killed": null,
-        "low": null,
-        "high": null,
-        "estimate": 3300,
-        "estimate_low": 1960,
-        "estimate_high": 4660,
-        "estimate_basis": "Constructed from the documented components. Sharon's pacification of Gaza, 1970–71: over 1,000 killed (IMEU), against palquest's 742 killed or captured. West Bank, 1968–1983: 92 killed, on Israel's own government figures (MERIP, 1988). Land Day, 30 March 1976: roughly 48. Sabra and Shatila, September 1982: 800 on the Kahan Commission's own finding, up to 3,500 on Bayan Nuwayhed al-Hout's research — the low and high bounds here. April 1986 – May 1987: 22.",
-        "children": null,
-        "counted": false,
-        "gap": true,
-        "source": "MERIP, Israel and the Palestinians 1948–1988; IMEU; palquest; Kahan Commission of Inquiry, 1983; Bayan Nuwayhed al-Hout, Sabra and Shatila: September 1982",
-        "method": "B'Tselem was founded in 1989. OCHA's oPt casualty monitoring begins in 2005. For these twenty years no organisation was systematically recording Palestinian deaths under occupation, so the figure shown is this dashboard's own estimate, assembled from separately documented events and labelled as such.",
-        "note": "The longest hole in the record, and not an accident of archiving: it covers the two decades in which the settlement enterprise was built. It also contains events Israel's own institutions have adjudicated — the Kahan Commission found Defence Minister Ariel Sharon personally responsible for Sabra and Shatila, and he became Prime Minister eighteen years later. The estimate excludes the wider 1982 invasion of Lebanon, in which roughly 17,500 people were killed, most of them Lebanese and Palestinian civilians."
-      },
-      {
-        "id": "first-intifada",
-        "label": "The First Intifada",
-        "span": "Dec 1987 – Sep 1993",
-        "start": 1987,
-        "end": 1993,
-        "killed": 1222,
-        "low": null,
-        "high": null,
-        "children": 240,
-        "counted": true,
-        "source": "B'Tselem, fatality database for 9 December 1987 – 13 September 1993",
-        "method": "Case-by-case investigation: circumstances of each death examined, eyewitness accounts taken, official documents and media reports cross-checked.",
-        "note": "1,087 killed by the Israeli army, 107 killed by Israeli civilians in the occupied territories (94 in the West Bank, 13 in Gaza), and 28 killed inside Israel. 240 were minors. In the first thirteen months alone, 332 Palestinians were killed against 12 Israelis. The report records the same period as over 1,000 killed including 237 children, and Defence Minister Yitzhak Rabin's explicit order to break the limbs of stone-throwing children; Rabin received the Nobel Peace Prize in 1994."
-      },
-      {
-        "id": "oslo",
-        "label": "The Oslo years",
-        "span": "1993–2000",
-        "start": 1993,
-        "end": 2000,
-        "killed": null,
-        "low": null,
-        "high": null,
-        "estimate": 460,
-        "estimate_low": 400,
-        "estimate_high": 520,
-        "estimate_basis": "Derived, not published. B'Tselem's cumulative count of Palestinians killed by the Israeli army or by settlers since 1993 is 6,829; its count for the Second Intifada decade from 29 September 2000 is 6,371. The difference of 458 is the Oslo interval. The derivation assumes the two counts share an end date; B'Tselem maintains its own Oslo-period table, whose annual figures were not obtainable for this build.",
-        "children": null,
-        "counted": false,
-        "gap": true,
-        "source": "Derived from B'Tselem cumulative figures",
-        "method": "B'Tselem's main searchable database begins with the Second Intifada in September 2000; OCHA's begins in 2005. The interval between the two intifadas sits in a separate legacy table, so the figure here is derived by subtraction and labelled as an estimate.",
-        "note": "The years in which the settler population of the West Bank roughly doubled while the peace process was under way. Over the same period nearly 300 Israelis were killed in attacks. The Ibrahimi Mosque massacre of 25 February 1994, in which the Israeli settler Baruch Goldstein shot 29 Palestinians dead at prayer in Hebron, falls inside it."
-      },
-      {
-        "id": "btselem-decade",
-        "label": "The Second Intifada and the decade after it",
-        "span": "29 Sep 2000 – 26 Sep 2010",
-        "start": 2000,
-        "end": 2010,
-        "killed": 6371,
-        "low": null,
-        "high": null,
-        "children": 1317,
-        "counted": true,
-        "source": "B'Tselem, ten-year fatality report",
-        "method": "Case-by-case investigation of every death, with each victim classified by whether they were participating in hostilities at the time.",
-        "note": "6,371 Palestinians killed by Israeli security forces. 1,317 were minors. At least 2,996 were not participating in hostilities when they were killed, against 2,193 who were, with 694 unclassified — so of the cases where status could be established, the majority were not fighting. 248 were Gaza police killed in the opening minutes of Cast Lead and 240 were targets of assassination. B'Tselem's running markers within the decade: 3,174 by the end of 2004 (617 minors), 4,005 by the end of 2006 (811 minors). The report separately records the Second Intifada proper, 2000–2005, as roughly 4,000 Palestinians killed including about 950 children (Defence for Children International)."
-      },
-      {
-        "id": "ocha-series",
-        "label": "OCHA's monitoring period",
-        "span": "2008–2020",
-        "start": 2008,
-        "end": 2020,
-        "killed": 5600,
-        "low": null,
-        "high": null,
-        "children": null,
-        "counted": false,
-        "overlap": true,
-        "source": "UN OCHA, occupied Palestinian territory database",
-        "method": "UN incident-level monitoring across Gaza, the West Bank and East Jerusalem.",
-        "note": "Excluded from the running total because 2008, 2009 and 2010 are already inside B'Tselem's decade above — this is an independent series over an overlapping period, not an additional one. 115,000 Palestinians were injured over the same thirteen years. The deadliest year was 2014, at 2,329 killed; the worst years for injuries were 2018 (31,259), 2021 (19,183) and 2014 (17,533)."
-      },
-      {
-        "id": "gaza-war",
-        "label": "Gaza and the West Bank since 7 October 2023",
-        "span": "Oct 2023 – present",
-        "start": 2023,
-        "end": 2026,
-        "killed": 74784,
-        "low": null,
-        "high": null,
-        "children": 20179,
-        "counted": true,
-        "source": "Gaza Ministry of Health and OCHA, compiled by Tech For Palestine",
-        "method": "Named individual identification records for the majority, aggregate hospital and morgue reporting for the remainder. Excludes the dead still under rubble by definition: the register counts bodies received.",
-        "note": "73,670 killed in Gaza and 1,114 in the West Bank. Peer-reviewed work puts the real figure far higher: The Lancet's capture–recapture study found a 41% undercount of traumatic-injury deaths to 30 June 2024, and the Gaza Mortality Survey found 35% by an independent household method. This single period is larger than every other documented period on this list combined, by a factor of about three and a half."
-      }
-    ],
-    "gaps_note": "Three of the nine periods have no published figure at all, and they span 1967–1987 and 1993–2000 — twenty-seven years. The absence is itself a finding: the record is thinnest exactly where there was no occupying-power obligation to publish, no Palestinian state to count, and no international monitoring mission in place. Rather than leave the three rows empty, each carries a constructed estimate with its arithmetic shown in full, marked as an estimate wherever it appears and never added to the documented running total."
-  },
-  "asymmetry": {
-    "title": "Both sides of the ledger",
-    "lede": "The same question asked of every period for which both figures exist, from the sources each side's own institutions accept. The ratio is not an editorial choice; it is the division.",
-    "periods": [
-      {
-        "label": "First Intifada, first 13 months",
-        "span": "Dec 1987 – Jan 1989",
-        "palestinian": 332,
-        "israeli": 12,
-        "source": "B'Tselem",
-        "note": "The opening period of the intifada, before either side's tactics had changed."
-      },
-      {
-        "label": "Second Intifada",
-        "span": "2000–2005",
-        "palestinian": 4000,
-        "israeli": 1000,
-        "source": "Defence for Children International; report §5.4",
-        "note": "Roughly 950 of the Palestinian dead were children. This is the narrowest ratio in the whole record — the period of the suicide bombings, and the one most often cited as representative of the conflict as a whole."
-      },
-      {
-        "label": "B'Tselem's decade",
-        "span": "29 Sep 2000 – 26 Sep 2010",
-        "palestinian": 6371,
-        "israeli": 1083,
-        "source": "B'Tselem, ten-year fatality report",
-        "note": "The Israeli figure is 741 civilians, including 124 minors, and 342 security personnel. The Palestinian figure includes 1,317 minors. Both sides counted by the same Israeli organisation, on the same methodology, in the same report."
-      },
-      {
-        "label": "OCHA's monitoring period",
-        "span": "2008–2020",
-        "palestinian": 5600,
-        "israeli": 250,
-        "source": "UN OCHA",
-        "note": "Injuries over the same period: 115,000 Palestinians against 5,600 Israelis. The injury ratio is 20.5 to 1 — almost exactly the same as the fatality ratio, which is what you would expect if the difference is firepower rather than intent to avoid harm."
-      },
-      {
-        "label": "Since 7 October 2023",
-        "span": "Oct 2023 – present",
-        "palestinian": 74784,
-        "israeli": 1941,
-        "source": "Gaza MoH / OCHA; Israel's National Insurance Institute; Israeli Ministry of Defense",
-        "note": "The Israeli figure is built to avoid double counting: 1,139 Israelis and foreign nationals killed on 7 October 2023 (National Insurance Institute, December 2023 — 695 civilians, 283 IDF, 71 foreign nationals, 57 police, 10 Shin Bet), plus the 802 further security personnel implied by the Ministry of Defense's count of 1,152 killed in total by October 2025 once the 350 killed on 7 October itself are removed. Israeli civilians killed after 7 October by rocket fire and attacks are not included, so the Israeli figure is a floor too. The Palestinian figure runs to September 2026 and the Israeli figure to October 2025."
-      }
-    ],
-    "children": {
-      "label": "Children, before the war",
-      "palestinian": 2171,
-      "israeli": 139,
-      "source": "B'Tselem, cumulative to 2023",
-      "note": "The pre-October-2023 baseline for children killed, from the Israeli organisation that counted both."
-    },
-    "notes": [
-      "Every Israeli figure in this table comes from an Israeli institution or from B'Tselem, an Israeli organisation. None of it depends on Palestinian sourcing.",
-      "The ratio widens from 4:1 in the period of the suicide bombings to roughly 38:1 in the current war. The direction of that change is the argument."
-    ]
-  },
-  "accountability": {
-    "title": "The accountability gap",
-    "lede": "What happens to a complaint about a soldier killing or injuring a Palestinian, from the Israeli organisation that follows every one of them through the Israeli military justice system. Yesh Din has been tracking the funnel since 2003.",
-    "source": "Yesh Din — Volunteers for Human Rights, data sheets on the Military Advocate General's handling of complaints",
-    "funnels": [
-      {
-        "label": "2016–2024",
-        "complaints": 2427,
-        "investigations": 552,
-        "indictments": 23,
-        "note": "22.7% of complaints produced a criminal investigation. 0.9% produced an indictment."
-      },
-      {
-        "label": "2017–2021",
-        "complaints": 1260,
-        "investigations": 248,
-        "indictments": 11,
-        "note": "409 of the 1,260 cases concerned a killing. 21.4% were investigated. Eleven indictments were filed in total, three of them for a killing — 0.87% of cases."
-      },
-      {
-        "label": "2018–2022",
-        "complaints": 862,
-        "investigations": 258,
-        "indictments": 13,
-        "note": "30% investigated, the highest investigation rate in the series, and still a 1.5% prosecution rate. The thirteen indictments covered 29 soldiers, and exactly one of them was for a killing."
-      }
-    ],
-    "probability": {
-      "value": 0.4,
-      "unit": "%",
-      "label": "Chance of prosecution for killing a Palestinian",
-      "detail": "One prosecution in 219 recorded fatalities",
-      "source": "Yesh Din",
-      "note": "Not the conviction rate and not the acquittal rate — the probability that anyone is charged at all."
-    },
-    "notes": [
-      "The funnel is not a backlog. Most complaints are closed without a criminal investigation ever being opened, so the case never enters the system that could convict anyone.",
-      "This matters legally, not just morally. Complementarity under the Rome Statute means the International Criminal Court may act only where the state is unwilling or unable genuinely to investigate. A 0.9% indictment rate over nine years is the evidentiary basis for that finding, produced by an Israeli organisation from Israeli military records.",
-      "Yesh Din's figures cover soldiers only. Israeli civilians who attack Palestinians in the West Bank are handled by the Israel Police, whose own closure rates over the same period are of the same order."
-    ]
-  },
-  "dispossession": {
-    "title": "Displacement and demolition",
-    "lede": "Killing is the most visible part of the record and the smallest part of it by number. Dispossession is the continuous mechanism, and it runs through every period above without a break.",
-    "displacement": [
-      {
-        "label": "Expelled or fled, 1948",
-        "value": 750000,
-        "suffix": "+",
-        "period": "1947–1949",
-        "source": "UN; report §2.3",
-        "note": "Over half the Arab population of Palestine. 530 villages destroyed, 11 towns and cities depopulated."
-      },
-      {
-        "label": "Displaced, 1967",
-        "value": 300000,
-        "period": "1967",
-        "source": "UN Secretary-General, 1967",
-        "note": "Estimates range from 280,000 to 325,000. Over 100,000 of them were being displaced for the second time, having already been made refugees in 1948."
-      },
-      {
-        "label": "Internally displaced under occupation",
-        "value": 160000,
-        "period": "1967–2023",
-        "source": "BADIL; ICAHD",
-        "note": "Within the West Bank and Gaza, by demolition, revocation and closure rather than by war."
-      },
-      {
-        "label": "Displaced in Gaza",
-        "value": 1900000,
-        "period": "since Oct 2023",
-        "source": "UNRWA / OCHA",
-        "note": "Roughly 90% of the population, most of them repeatedly."
-      },
-      {
-        "label": "Registered refugees today",
-        "value": 6000000,
-        "suffix": "+",
-        "period": "2026",
-        "source": "UNRWA",
-        "note": "The descendants of 1948 and 1967, still registered, still denied return under UNGA 194."
-      }
-    ],
-    "demolitions": [
-      {
-        "label": "Homes demolished in the Nakba",
-        "value": 52000,
-        "period": "1947–1949",
-        "source": "ICAHD",
-        "note": "Across the 530 destroyed villages and 11 depopulated towns."
-      },
-      {
-        "label": "Structures demolished in the occupied territory since 1967",
-        "value": 55000,
-        "period": "1967–2019",
-        "source": "ICAHD, February 2019",
-        "note": "ICAHD's own figure, compiled from the Israeli Ministry of Interior, the Jerusalem Municipality, the Civil Administration, OCHA, Israeli and Palestinian human rights organisations and its own field work."
-      },
-      {
-        "label": "Homes demolished in East Jerusalem since 1967",
-        "value": 5000,
-        "period": "1967–2018",
-        "source": "Land Research Center, March 2018",
-        "note": "1,706 of them between 2000 and 2017, displacing 9,422 people including 5,443 children."
-      }
-    ],
-    "notes": [
-      "ICAHD's figure for the occupied territory is published in three versions — 26,000, 48,038 and 55,000 — which differ by date and by what counts as a structure, not by disagreement about the events. The highest is its February 2019 compilation and is the one shown here.",
-      "ICAHD's own methodological warning applies to every figure in this block: neither Israel nor OCHA keeps a count of home demolitions separately from the demolition of structures, so barns, animal pens, cisterns and fencing are inside the same totals. ICAHD also states that it is still investigating demolitions carried out between 1967 and 1982, before the Civil Administration began keeping records.",
-      "Demolition is administrative, not military. The stated ground in the large majority of cases is building without an Israeli permit, in a permit system that almost never issues one to a Palestinian while approving thousands of settlement housing units over the same period."
-    ]
-  },
-  "detention": {
-    "title": "Mass detention since 1967",
-    "lede": "The occupation's other continuous instrument. Israel has held Palestinians under military order in the occupied territory since 1967, and administrative detention — indefinite imprisonment on secret evidence, without charge or trial — has been available to it throughout.",
-    "cumulative": {
-      "value": 800000,
-      "suffix": "+",
-      "label": "Palestinians detained under Israeli military orders since 1967",
-      "source": "Addameer Prisoner Support and Human Rights Association",
-      "note": "Approximately 20% of the total Palestinian population of the occupied territory, and as much as 40% of the male population. Addameer's figure counts detentions, not unique individuals."
-    },
+  "periods": [
+   {
+    "id": "nakba",
+    "label": "The Nakba and the 1948 war",
+    "span": "1947–1949",
+    "start": 1947,
+    "end": 1949,
+    "killed": 13000,
+    "low": 5700,
+    "high": 15000,
+    "children": null,
+    "counted": true,
+    "source": "Aref al-Aref, al-Nakba (13,000); PCBS (15,000); Benny Morris, The Birth of the Palestinian Refugee Problem Revisited (5,700–5,800); Stanley Sandler (6,373, of whom 2,373 civilians)",
+    "method": "Contemporaneous Palestinian enumeration by Aref al-Aref, later revised by historians working from Israeli military archives. No central register existed on either side.",
+    "note": "Over 750,000 Palestinians were expelled or fled; 530 villages were destroyed and 11 towns and cities depopulated. The death toll is the least well established part of the 1948 record, because the population that would have counted it was the population being displaced."
+   },
+   {
+    "id": "military-government",
+    "label": "Military government over Palestinian citizens of Israel",
+    "span": "1949–1966",
+    "start": 1949,
+    "end": 1966,
+    "killed": 435,
+    "low": null,
+    "high": null,
+    "estimate": 3850,
+    "estimate_low": 2700,
+    "estimate_high": 5000,
+    "estimate_basis": "Border confrontations, 1949–1956: 2,700–5,000 Palestinians killed, against roughly 500 Israelis over the same years. The midpoint of that range is used. The three documented massacres below sit inside it.",
+    "children": 23,
+    "counted": true,
+    "partial": true,
+    "source": "Kafr Qasim: Israeli military court record, 1957. Khan Yunis and Rafah: UNRWA Director's report to the UN General Assembly, 1957. Border confrontations: standard compilation of Arab–Israeli casualties, 1949–1956",
+    "method": "Individually documented incidents, plus a published range for the border confrontations of 1949–1956. There was no body counting deaths across the period as a whole.",
+    "note": "The hard figure of 435 is the sum of three documented massacres: Kafr Qasim, 29 October 1956, 49 Palestinian citizens of Israel shot at a curfew line, 23 of them children; Khan Yunis, November 1956, 275 killed during the Israeli occupation of Gaza in the Suez war; Rafah, November 1956, 111 killed. The wider estimate adds the border confrontations of 1949–1956, in which 2,700 to 5,000 Palestinians were killed."
+   },
+   {
+    "id": "naksa",
+    "label": "The Six-Day War and the Naksa",
+    "span": "1967",
+    "start": 1967,
+    "end": 1967,
+    "killed": null,
+    "low": null,
+    "high": null,
+    "estimate": 2000,
+    "estimate_low": 1000,
+    "estimate_high": 3000,
+    "estimate_basis": "Constructed, not published. Components: roughly 700 Jordanian soldiers killed in the West Bank campaign of 6–7 June, in an army with heavy Palestinian enlistment; documented civilian killings at Rafah, Khan Yunis and Qalqilya; the destruction of Imwas, Yalo and Bayt Nuba; and refugees shot while attempting to return across the Jordan. The range is wide because the civilian component has no count at all.",
+    "children": null,
+    "counted": false,
+    "gap": true,
+    "source": "Displacement: report of the UN Secretary-General, 1967. Military casualties: standard campaign histories. Civilian killings: BADIL; Segev, 1967; Masalha",
+    "method": "No consolidated Palestinian civilian death toll for the 1967 war has been produced by any of the organisations that count. The figure shown is this dashboard's own estimate, built from its parts and labelled as such.",
+    "note": "The displacement is documented: roughly 300,000 Palestinians driven from the West Bank and Gaza, of whom over 100,000 were already refugees from 1948, with estimates ranging from 280,000 to 325,000, plus 100,000 Syrians from the Golan. The villages of Imwas, Yalo and Bayt Nuba were destroyed outright. The dead were never counted."
+   },
+   {
+    "id": "occupation-pre-intifada",
+    "label": "The occupation before the First Intifada",
+    "span": "1967–1987",
+    "start": 1967,
+    "end": 1987,
+    "killed": null,
+    "low": null,
+    "high": null,
+    "estimate": 3300,
+    "estimate_low": 1960,
+    "estimate_high": 4660,
+    "estimate_basis": "Constructed from the documented components. Sharon's pacification of Gaza, 1970–71: over 1,000 killed (IMEU), against palquest's 742 killed or captured. West Bank, 1968–1983: 92 killed, on Israel's own government figures (MERIP, 1988). Land Day, 30 March 1976: roughly 48. Sabra and Shatila, September 1982: 800 on the Kahan Commission's own finding, up to 3,500 on Bayan Nuwayhed al-Hout's research — the low and high bounds here. April 1986 – May 1987: 22.",
+    "children": null,
+    "counted": false,
+    "gap": true,
+    "source": "MERIP, Israel and the Palestinians 1948–1988; IMEU; palquest; Kahan Commission of Inquiry, 1983; Bayan Nuwayhed al-Hout, Sabra and Shatila: September 1982",
+    "method": "B'Tselem was founded in 1989. OCHA's oPt casualty monitoring begins in 2005. For these twenty years no organisation was systematically recording Palestinian deaths under occupation, so the figure shown is this dashboard's own estimate, assembled from separately documented events and labelled as such.",
+    "note": "The longest hole in the record, and not an accident of archiving: it covers the two decades in which the settlement enterprise was built. It also contains events Israel's own institutions have adjudicated — the Kahan Commission found Defence Minister Ariel Sharon personally responsible for Sabra and Shatila, and he became Prime Minister eighteen years later. The estimate excludes the wider 1982 invasion of Lebanon, in which roughly 17,500 people were killed, most of them Lebanese and Palestinian civilians."
+   },
+   {
+    "id": "first-intifada",
+    "label": "The First Intifada",
+    "span": "Dec 1987 – Sep 1993",
+    "start": 1987,
+    "end": 1993,
+    "killed": 1222,
+    "low": null,
+    "high": null,
+    "children": 240,
+    "counted": true,
+    "source": "B'Tselem, fatality database for 9 December 1987 – 13 September 1993",
+    "method": "Case-by-case investigation: circumstances of each death examined, eyewitness accounts taken, official documents and media reports cross-checked.",
+    "note": "1,087 killed by the Israeli army, 107 killed by Israeli civilians in the occupied territories (94 in the West Bank, 13 in Gaza), and 28 killed inside Israel. 240 were minors. In the first thirteen months alone, 332 Palestinians were killed against 12 Israelis. The report records the same period as over 1,000 killed including 237 children, and Defence Minister Yitzhak Rabin's explicit order to break the limbs of stone-throwing children; Rabin received the Nobel Peace Prize in 1994."
+   },
+   {
+    "id": "oslo",
+    "label": "The Oslo years",
+    "span": "1993–2000",
+    "start": 1993,
+    "end": 2000,
+    "killed": null,
+    "low": null,
+    "high": null,
+    "estimate": 460,
+    "estimate_low": 400,
+    "estimate_high": 520,
+    "estimate_basis": "Derived, not published. B'Tselem's cumulative count of Palestinians killed by the Israeli army or by settlers since 1993 is 6,829; its count for the Second Intifada decade from 29 September 2000 is 6,371. The difference of 458 is the Oslo interval. The derivation assumes the two counts share an end date; B'Tselem maintains its own Oslo-period table, whose annual figures were not obtainable for this build.",
+    "children": null,
+    "counted": false,
+    "gap": true,
+    "source": "Derived from B'Tselem cumulative figures",
+    "method": "B'Tselem's main searchable database begins with the Second Intifada in September 2000; OCHA's begins in 2005. The interval between the two intifadas sits in a separate legacy table, so the figure here is derived by subtraction and labelled as an estimate.",
+    "note": "The years in which the settler population of the West Bank roughly doubled while the peace process was under way. Over the same period nearly 300 Israelis were killed in attacks. The Ibrahimi Mosque massacre of 25 February 1994, in which the Israeli settler Baruch Goldstein shot 29 Palestinians dead at prayer in Hebron, falls inside it."
+   },
+   {
+    "id": "btselem-decade",
+    "label": "The Second Intifada and the decade after it",
+    "span": "29 Sep 2000 – 26 Sep 2010",
+    "start": 2000,
+    "end": 2010,
+    "killed": 6371,
+    "low": null,
+    "high": null,
+    "children": 1317,
+    "counted": true,
+    "source": "B'Tselem, ten-year fatality report",
+    "method": "Case-by-case investigation of every death, with each victim classified by whether they were participating in hostilities at the time.",
+    "note": "6,371 Palestinians killed by Israeli security forces. 1,317 were minors. At least 2,996 were not participating in hostilities when they were killed, against 2,193 who were, with 694 unclassified — so of the cases where status could be established, the majority were not fighting. 248 were Gaza police killed in the opening minutes of Cast Lead and 240 were targets of assassination. B'Tselem's running markers within the decade: 3,174 by the end of 2004 (617 minors), 4,005 by the end of 2006 (811 minors). The report separately records the Second Intifada proper, 2000–2005, as roughly 4,000 Palestinians killed including about 950 children (Defence for Children International)."
+   },
+   {
+    "id": "ocha-series",
+    "label": "OCHA's monitoring period",
+    "span": "2008–2020",
+    "start": 2008,
+    "end": 2020,
+    "killed": 5600,
+    "low": null,
+    "high": null,
+    "children": null,
+    "counted": false,
+    "overlap": true,
+    "source": "UN OCHA, occupied Palestinian territory database",
+    "method": "UN incident-level monitoring across Gaza, the West Bank and East Jerusalem.",
+    "note": "Excluded from the running total because 2008, 2009 and 2010 are already inside B'Tselem's decade above — this is an independent series over an overlapping period, not an additional one. 115,000 Palestinians were injured over the same thirteen years. The deadliest year was 2014, at 2,329 killed; the worst years for injuries were 2018 (31,259), 2021 (19,183) and 2014 (17,533)."
+   },
+   {
+    "id": "gaza-war",
+    "label": "Gaza and the West Bank since 7 October 2023",
+    "span": "Oct 2023 – present",
+    "start": 2023,
+    "end": 2026,
+    "killed": 74784,
+    "low": null,
+    "high": null,
+    "children": 20179,
+    "counted": true,
+    "source": "Gaza Ministry of Health and OCHA, compiled by Tech For Palestine",
+    "method": "Named individual identification records for the majority, aggregate hospital and morgue reporting for the remainder. Excludes the dead still under rubble by definition: the register counts bodies received.",
+    "note": "73,670 killed in Gaza and 1,114 in the West Bank. Peer-reviewed work puts the real figure far higher: The Lancet's capture–recapture study found a 41% undercount of traumatic-injury deaths to 30 June 2024, and the Gaza Mortality Survey found 35% by an independent household method. This single period is larger than every other documented period on this list combined, by a factor of about three and a half."
+   }
+  ],
+  "gaps_note": "Three of the nine periods have no published figure at all, and they span 1967–1987 and 1993–2000 — twenty-seven years. The absence is itself a finding: the record is thinnest exactly where there was no occupying-power obligation to publish, no Palestinian state to count, and no international monitoring mission in place. Rather than leave the three rows empty, each carries a constructed estimate with its arithmetic shown in full, marked as an estimate wherever it appears and never added to the documented running total."
+ },
+ "asymmetry": {
+  "title": "Both sides of the ledger",
+  "lede": "The same question asked of every period for which both figures exist, from the sources each side's own institutions accept. The ratio is not an editorial choice; it is the division.",
+  "periods": [
+   {
+    "label": "First Intifada, first 13 months",
+    "span": "Dec 1987 – Jan 1989",
+    "palestinian": 332,
+    "israeli": 12,
+    "source": "B'Tselem",
+    "note": "The opening period of the intifada, before either side's tactics had changed."
+   },
+   {
+    "label": "Second Intifada",
+    "span": "2000–2005",
+    "palestinian": 4000,
+    "israeli": 1000,
+    "source": "Defence for Children International; report §5.4",
+    "note": "Roughly 950 of the Palestinian dead were children. This is the narrowest ratio in the whole record — the period of the suicide bombings, and the one most often cited as representative of the conflict as a whole."
+   },
+   {
+    "label": "B'Tselem's decade",
+    "span": "29 Sep 2000 – 26 Sep 2010",
+    "palestinian": 6371,
+    "israeli": 1083,
+    "source": "B'Tselem, ten-year fatality report",
+    "note": "The Israeli figure is 741 civilians, including 124 minors, and 342 security personnel. The Palestinian figure includes 1,317 minors. Both sides counted by the same Israeli organisation, on the same methodology, in the same report."
+   },
+   {
+    "label": "OCHA's monitoring period",
+    "span": "2008–2020",
+    "palestinian": 5600,
+    "israeli": 250,
+    "source": "UN OCHA",
+    "note": "Injuries over the same period: 115,000 Palestinians against 5,600 Israelis. The injury ratio is 20.5 to 1 — almost exactly the same as the fatality ratio, which is what you would expect if the difference is firepower rather than intent to avoid harm."
+   },
+   {
+    "label": "Since 7 October 2023",
+    "span": "Oct 2023 – present",
+    "palestinian": 74909,
+    "israeli": 1941,
+    "source": "Gaza MoH / OCHA; Israel's National Insurance Institute; Israeli Ministry of Defense",
+    "note": "The Israeli figure is built to avoid double counting: 1,139 Israelis and foreign nationals killed on 7 October 2023 (National Insurance Institute, December 2023 — 695 civilians, 283 IDF, 71 foreign nationals, 57 police, 10 Shin Bet), plus the 802 further security personnel implied by the Ministry of Defense's count of 1,152 killed in total by October 2025 once the 350 killed on 7 October itself are removed. Israeli civilians killed after 7 October by rocket fire and attacks are not included, so the Israeli figure is a floor too. The Palestinian figure runs to September 2026 and the Israeli figure to October 2025.",
+    "live": true,
     "series": [
-      {
-        "label": "2002–03",
-        "value": 1000,
-        "suffix": "+",
-        "note": "The Second Intifada peak, at the height of Operation Defensive Shield.",
-        "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
-      },
-      {
-        "label": "2005–07",
-        "value": 765,
-        "note": "Monthly average across the three years, declining year on year thereafter.",
-        "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
-      },
-      {
-        "label": "Dec 2018",
-        "value": 482,
-        "note": "Including nine members of the Palestinian Legislative Council — elected legislators held without charge.",
-        "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
-      },
-      {
-        "label": "Sep 2023",
-        "value": 1320,
-        "note": "Immediately before the war, against a total prisoner population above 5,250 including about 40 women and 180 children.",
-        "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
-      },
-      {
-        "label": "Oct 2025",
-        "value": 3198,
-        "note": "Against a total of more than 11,100 Palestinian political prisoners, the highest since the Second Intifada began, and excluding those held in army-run military camps.",
-        "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
-      }
+     "killed.total",
+     "west_bank.cumulative_killed"
     ],
-    "legal": [
-      {
-        "instrument": "Article 285, Military Order 1651",
-        "applies": "West Bank",
-        "effect": "Six-month detention orders, renewable without limit, on evidence neither the detainee nor their lawyer may see."
-      },
-      {
-        "instrument": "Internment of Unlawful Combatants Law",
-        "applies": "Gaza residents, since 2005",
-        "effect": "Indefinite detention outside the military order framework."
-      },
-      {
-        "instrument": "Emergency Powers (Detentions) Law",
-        "applies": "Israeli citizens",
-        "effect": "The same power inside Israel. Over the entire history of its use, nine Israeli settlers have been held under administrative detention."
-      }
-    ],
-    "notes": [
-      "Administrative detention is not a charge that has yet to be brought. It is a procedure that replaces charge: the detainee is not told the evidence, cannot answer it, and the order is renewable indefinitely.",
-      "Children are inside these figures. Israel is the only state in the world that systematically prosecutes children in military courts, at roughly 500 to 700 cases a year before the war and 370 child prisoners held as of the October 2025 snapshot.",
-      "98 Palestinians have died in Israeli custody since October 2023, documented by Physicians for Human Rights–Israel."
-    ]
+    "series_field": "palestinian"
+   }
+  ],
+  "children": {
+   "label": "Children, before the war",
+   "palestinian": 2171,
+   "israeli": 139,
+   "source": "B'Tselem, cumulative to 2023",
+   "note": "The pre-October-2023 baseline for children killed, from the Israeli organisation that counted both."
   },
-  "complicity": {
-    "title": "The complicity ledger",
-    "lede": "No state sustains a war of this scale alone. The weapons, the money and the diplomatic cover are supplied, and every supplier is named in the public record. This is the ledger of who supplies what — and of who has stopped.",
-    "suppliers": {
-      "title": "Where the weapons come from",
-      "period": "2020–2024",
-      "source": "Stockholm International Peace Research Institute, Arms Transfers Database, March 2025",
-      "items": [
-        {
-          "country": "United States",
-          "share": 66,
-          "note": "Two thirds of Israel's major conventional arms imports. The relationship is not commercial in the ordinary sense: most of it is paid for with United States grant money, under the Foreign Military Financing programme, and spent back in the United States defence industry."
-        },
-        {
-          "country": "Germany",
-          "share": 33,
-          "note": "One third — the second largest supplier, and the largest in Europe. Germany approved roughly €326 million in arms exports to Israel in 2023, about ten times the 2022 figure. Berlin announced a partial suspension in August 2025 and lifted it in November 2025."
-        },
-        {
-          "country": "Italy",
-          "share": 0.6,
-          "note": "Italy suspended new export licences in October 2023 but continued deliveries under contracts signed before that date."
-        }
-      ],
-      "note": "SIPRI measures deliveries of major conventional weapons, not components, spare parts or ammunition. The F-35 programme in particular is supplied through a global parts pool to which several states contribute without any bilateral licence appearing in their own figures — the mechanism the United Kingdom relied on when it suspended some direct licences in September 2024."
+  "notes": [
+   "Every Israeli figure in this table comes from an Israeli institution or from B'Tselem, an Israeli organisation. None of it depends on Palestinian sourcing.",
+   "The ratio widens from 4:1 in the period of the suicide bombings to roughly 38:1 in the current war. The direction of that change is the argument."
+  ]
+ },
+ "accountability": {
+  "title": "The accountability gap",
+  "lede": "What happens to a complaint about a soldier killing or injuring a Palestinian, from the Israeli organisation that follows every one of them through the Israeli military justice system. Yesh Din has been tracking the funnel since 2003.",
+  "source": "Yesh Din — Volunteers for Human Rights, data sheets on the Military Advocate General's handling of complaints",
+  "funnels": [
+   {
+    "label": "2016–2024",
+    "complaints": 2427,
+    "investigations": 552,
+    "indictments": 23,
+    "note": "22.7% of complaints produced a criminal investigation. 0.9% produced an indictment."
+   },
+   {
+    "label": "2017–2021",
+    "complaints": 1260,
+    "investigations": 248,
+    "indictments": 11,
+    "note": "409 of the 1,260 cases concerned a killing. 21.4% were investigated. Eleven indictments were filed in total, three of them for a killing — 0.87% of cases."
+   },
+   {
+    "label": "2018–2022",
+    "complaints": 862,
+    "investigations": 258,
+    "indictments": 13,
+    "note": "30% investigated, the highest investigation rate in the series, and still a 1.5% prosecution rate. The thirteen indictments covered 29 soldiers, and exactly one of them was for a killing."
+   }
+  ],
+  "probability": {
+   "value": 0.4,
+   "unit": "%",
+   "label": "Chance of prosecution for killing a Palestinian",
+   "detail": "One prosecution in 219 recorded fatalities",
+   "source": "Yesh Din",
+   "note": "Not the conviction rate and not the acquittal rate — the probability that anyone is charged at all."
+  },
+  "notes": [
+   "The funnel is not a backlog. Most complaints are closed without a criminal investigation ever being opened, so the case never enters the system that could convict anyone.",
+   "This matters legally, not just morally. Complementarity under the Rome Statute means the International Criminal Court may act only where the state is unwilling or unable genuinely to investigate. A 0.9% indictment rate over nine years is the evidentiary basis for that finding, produced by an Israeli organisation from Israeli military records.",
+   "Yesh Din's figures cover soldiers only. Israeli civilians who attack Palestinians in the West Bank are handled by the Israel Police, whose own closure rates over the same period are of the same order."
+  ]
+ },
+ "dispossession": {
+  "title": "Displacement and demolition",
+  "lede": "Killing is the most visible part of the record and the smallest part of it by number. Dispossession is the continuous mechanism, and it runs through every period above without a break.",
+  "displacement": [
+   {
+    "label": "Expelled or fled, 1948",
+    "value": 750000,
+    "suffix": "+",
+    "period": "1947–1949",
+    "source": "UN; report §2.3",
+    "note": "Over half the Arab population of Palestine. 530 villages destroyed, 11 towns and cities depopulated."
+   },
+   {
+    "label": "Displaced, 1967",
+    "value": 300000,
+    "period": "1967",
+    "source": "UN Secretary-General, 1967",
+    "note": "Estimates range from 280,000 to 325,000. Over 100,000 of them were being displaced for the second time, having already been made refugees in 1948."
+   },
+   {
+    "label": "Internally displaced under occupation",
+    "value": 160000,
+    "period": "1967–2023",
+    "source": "BADIL; ICAHD",
+    "note": "Within the West Bank and Gaza, by demolition, revocation and closure rather than by war."
+   },
+   {
+    "label": "Displaced in Gaza",
+    "value": 1900000,
+    "period": "since Oct 2023",
+    "source": "UNRWA / OCHA",
+    "note": "Roughly 90% of the population, most of them repeatedly."
+   },
+   {
+    "label": "Registered refugees today",
+    "value": 6000000,
+    "suffix": "+",
+    "period": "2026",
+    "source": "UNRWA",
+    "note": "The descendants of 1948 and 1967, still registered, still denied return under UNGA 194."
+   }
+  ],
+  "demolitions": [
+   {
+    "label": "Homes demolished in the Nakba",
+    "value": 52000,
+    "period": "1947–1949",
+    "source": "ICAHD",
+    "note": "Across the 530 destroyed villages and 11 depopulated towns."
+   },
+   {
+    "label": "Structures demolished in the occupied territory since 1967",
+    "value": 55000,
+    "period": "1967–2019",
+    "source": "ICAHD, February 2019",
+    "note": "ICAHD's own figure, compiled from the Israeli Ministry of Interior, the Jerusalem Municipality, the Civil Administration, OCHA, Israeli and Palestinian human rights organisations and its own field work."
+   },
+   {
+    "label": "Homes demolished in East Jerusalem since 1967",
+    "value": 5000,
+    "period": "1967–2018",
+    "source": "Land Research Center, March 2018",
+    "note": "1,706 of them between 2000 and 2017, displacing 9,422 people including 5,443 children."
+   }
+  ],
+  "notes": [
+   "ICAHD's figure for the occupied territory is published in three versions — 26,000, 48,038 and 55,000 — which differ by date and by what counts as a structure, not by disagreement about the events. The highest is its February 2019 compilation and is the one shown here.",
+   "ICAHD's own methodological warning applies to every figure in this block: neither Israel nor OCHA keeps a count of home demolitions separately from the demolition of structures, so barns, animal pens, cisterns and fencing are inside the same totals. ICAHD also states that it is still investigating demolitions carried out between 1967 and 1982, before the Civil Administration began keeping records.",
+   "Demolition is administrative, not military. The stated ground in the large majority of cases is building without an Israeli permit, in a permit system that almost never issues one to a Palestinian while approving thousands of settlement housing units over the same period."
+  ]
+ },
+ "detention": {
+  "title": "Mass detention since 1967",
+  "lede": "The occupation's other continuous instrument. Israel has held Palestinians under military order in the occupied territory since 1967, and administrative detention — indefinite imprisonment on secret evidence, without charge or trial — has been available to it throughout.",
+  "cumulative": {
+   "value": 800000,
+   "suffix": "+",
+   "label": "Palestinians detained under Israeli military orders since 1967",
+   "source": "Addameer Prisoner Support and Human Rights Association",
+   "note": "Approximately 20% of the total Palestinian population of the occupied territory, and as much as 40% of the male population. Addameer's figure counts detentions, not unique individuals."
+  },
+  "series": [
+   {
+    "label": "2002–03",
+    "value": 1000,
+    "suffix": "+",
+    "note": "The Second Intifada peak, at the height of Operation Defensive Shield.",
+    "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
+   },
+   {
+    "label": "2005–07",
+    "value": 765,
+    "note": "Monthly average across the three years, declining year on year thereafter.",
+    "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
+   },
+   {
+    "label": "Dec 2018",
+    "value": 482,
+    "note": "Including nine members of the Palestinian Legislative Council — elected legislators held without charge.",
+    "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
+   },
+   {
+    "label": "Sep 2023",
+    "value": 1320,
+    "note": "Immediately before the war, against a total prisoner population above 5,250 including about 40 women and 180 children.",
+    "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
+   },
+   {
+    "label": "Oct 2025",
+    "value": 3198,
+    "note": "Against a total of more than 11,100 Palestinian political prisoners, the highest since the Second Intifada began, and excluding those held in army-run military camps.",
+    "source": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention"
+   }
+  ],
+  "legal": [
+   {
+    "instrument": "Article 285, Military Order 1651",
+    "applies": "West Bank",
+    "effect": "Six-month detention orders, renewable without limit, on evidence neither the detainee nor their lawyer may see."
+   },
+   {
+    "instrument": "Internment of Unlawful Combatants Law",
+    "applies": "Gaza residents, since 2005",
+    "effect": "Indefinite detention outside the military order framework."
+   },
+   {
+    "instrument": "Emergency Powers (Detentions) Law",
+    "applies": "Israeli citizens",
+    "effect": "The same power inside Israel. Over the entire history of its use, nine Israeli settlers have been held under administrative detention."
+   }
+  ],
+  "notes": [
+   "Administrative detention is not a charge that has yet to be brought. It is a procedure that replaces charge: the detainee is not told the evidence, cannot answer it, and the order is renewable indefinitely.",
+   "Children are inside these figures. Israel is the only state in the world that systematically prosecutes children in military courts, at roughly 500 to 700 cases a year before the war and 370 child prisoners held as of the October 2025 snapshot.",
+   "98 Palestinians have died in Israeli custody since October 2023, documented by Physicians for Human Rights–Israel."
+  ]
+ },
+ "complicity": {
+  "title": "The complicity ledger",
+  "lede": "No state sustains a war of this scale alone. The weapons, the money and the diplomatic cover are supplied, and every supplier is named in the public record. This is the ledger of who supplies what — and of who has stopped.",
+  "suppliers": {
+   "title": "Where the weapons come from",
+   "period": "2020–2024",
+   "source": "Stockholm International Peace Research Institute, Arms Transfers Database, March 2025",
+   "items": [
+    {
+     "country": "United States",
+     "share": 66,
+     "note": "Two thirds of Israel's major conventional arms imports. The relationship is not commercial in the ordinary sense: most of it is paid for with United States grant money, under the Foreign Military Financing programme, and spent back in the United States defence industry."
     },
-    "us_aid": {
-      "title": "United States military aid",
-      "cumulative": [
-        {
-          "label": "Cumulative bilateral aid, 1946 to February 2022",
-          "value": 150,
-          "unit": "$bn",
-          "source": "Congressional Research Service, RL33222, February 2022"
-        },
-        {
-          "label": "Cumulative bilateral aid, to March 2023",
-          "value": 158.7,
-          "unit": "$bn",
-          "source": "Congressional Research Service, RL33222, March 2023"
-        },
-        {
-          "label": "Cumulative bilateral aid, latest published",
-          "value": 174,
-          "unit": "$bn",
-          "source": "Congressional Research Service, RL33222, current edition"
-        },
-        {
-          "label": "The same aid adjusted for inflation, 1959–2024",
-          "value": 317.9,
-          "unit": "$bn",
-          "source": "Costs of War Project, Brown University, October 2024"
-        }
-      ],
-      "flows": [
-        {
-          "label": "Foreign Military Financing, annual",
-          "value": 3.3,
-          "unit": "$bn",
-          "note": "Under the 2016 Memorandum of Understanding: $38 billion over ten years, FY2019 to FY2028, of which $33 billion is Foreign Military Financing.",
-          "source": "Congressional Research Service, U.S. Foreign Aid to Israel (RL33222)"
-        },
-        {
-          "label": "Missile defence, annual",
-          "value": 0.5,
-          "unit": "$bn",
-          "note": "The remaining $5 billion of the same Memorandum, for Iron Dome, David's Sling and Arrow.",
-          "source": "Congressional Research Service, U.S. Foreign Aid to Israel (RL33222)"
-        },
-        {
-          "label": "Emergency supplemental, FY2024",
-          "value": 14.1,
-          "unit": "$bn",
-          "source": "Public Law 118-50, April 2024"
-        },
-        {
-          "label": "Military aid in the first year of the Gaza war",
-          "value": 17.9,
-          "unit": "$bn",
-          "source": "Costs of War Project, Brown University, October 2024",
-          "note": "The highest single year on record. A further $4.86 billion was spent on United States military operations in the region over the same period."
-        }
-      ],
-      "notes": [
-        "Israel is the largest cumulative recipient of United States foreign assistance since the Second World War.",
-        "United States law already contains the instruments that would restrict this. Section 502B of the Foreign Assistance Act bars security assistance to any government engaged in a consistent pattern of gross violations of internationally recognised human rights; the Leahy Laws bar assistance to units credibly implicated in such violations; and Section 620I bars assistance to any country that restricts the delivery of United States humanitarian aid. None has been applied.",
-        "The aid figures are the published cumulative totals at three dates, not an annual series. The Congressional Research Service does not publish a continuous machine-readable annual table."
-      ]
+    {
+     "country": "Germany",
+     "share": 33,
+     "note": "One third — the second largest supplier, and the largest in Europe. Germany approved roughly €326 million in arms exports to Israel in 2023, about ten times the 2022 figure. Berlin announced a partial suspension in August 2025 and lifted it in November 2025."
     },
-    "embargo": {
-      "title": "The embargo tracker",
-      "lede": "Which states have restricted arms transfers to Israel since October 2023, and which have not.",
-      "countries": [
-        {
-          "country": "Turkey",
-          "status": "halted",
-          "date": "May 2024",
-          "detail": "Suspended all trade with Israel, worth about $7 billion a year, pending unimpeded aid access to Gaza."
-        },
-        {
-          "country": "Slovenia",
-          "status": "halted",
-          "date": "August 2024",
-          "detail": "Banned the import, export and transit of arms to and from Israel — the first European Union member state to impose a full arms ban."
-        },
-        {
-          "country": "Spain",
-          "status": "halted",
-          "date": "October 2023, formalised September 2025",
-          "detail": "Halted arms sales from the start of the war and made the embargo law by royal decree in September 2025, also barring ships and aircraft carrying fuel or arms for Israel from Spanish ports and airspace."
-        },
-        {
-          "country": "Colombia",
-          "status": "halted",
-          "date": "May 2024",
-          "detail": "Broke diplomatic relations and halted coal exports, which had supplied a substantial share of Israel's thermal coal."
-        },
-        {
-          "country": "Netherlands",
-          "status": "partial",
-          "date": "February 2024",
-          "detail": "The Hague Court of Appeal ordered the state to stop exporting F-35 parts to Israel, finding a clear risk of serious violations of international humanitarian law. The government appealed."
-        },
-        {
-          "country": "Belgium",
-          "status": "partial",
-          "date": "October 2023",
-          "detail": "The Walloon and Flemish regions, which control export licensing, suspended licences to Israel; Wallonia's suspension was later confirmed by court."
-        },
-        {
-          "country": "Canada",
-          "status": "partial",
-          "date": "September 2024",
-          "detail": "Suspended about thirty existing permits and halted new ones, while goods continued to reach Israel indirectly through United States supply chains."
-        },
-        {
-          "country": "Italy",
-          "status": "partial",
-          "date": "October 2023",
-          "detail": "Suspended new licences but continued deliveries under contracts already signed."
-        },
-        {
-          "country": "United Kingdom",
-          "status": "partial",
-          "date": "September 2024",
-          "detail": "Suspended about 30 of roughly 350 licences on the grounds of a clear risk of serious violation of international humanitarian law, while expressly exempting F-35 components supplied into the global parts pool."
-        },
-        {
-          "country": "Germany",
-          "status": "continuing",
-          "date": "November 2025",
-          "detail": "The second largest supplier. Announced a partial suspension of weapons usable in Gaza in August 2025 and lifted it in November 2025."
-        },
-        {
-          "country": "United States",
-          "status": "continuing",
-          "date": "—",
-          "detail": "No restriction. Two thirds of supply, and the veto that has blocked every binding Security Council measure."
-        }
-      ],
-      "notes": [
-        "The legal position is not in doubt. Common Article 1 of the Geneva Conventions obliges every High Contracting Party to ensure respect for the Conventions; the Arms Trade Treaty, Article 6(3), prohibits any transfer where the state knows the arms would be used in war crimes; and the International Court of Justice's advisory opinion of 19 July 2024 held that all states are under an obligation not to render aid or assistance in maintaining the unlawful occupation.",
-        "On 20 June 2025 the United Nations Special Rapporteur on the occupied Palestinian territory published a report naming the corporate entities she found to be sustaining it, and recommending that states and companies sever those ties."
-      ]
+    {
+     "country": "Italy",
+     "share": 0.6,
+     "note": "Italy suspended new export licences in October 2023 but continued deliveries under contracts signed before that date."
     }
+   ],
+   "note": "SIPRI measures deliveries of major conventional weapons, not components, spare parts or ammunition. The F-35 programme in particular is supplied through a global parts pool to which several states contribute without any bilateral licence appearing in their own figures — the mechanism the United Kingdom relied on when it suspended some direct licences in September 2024."
   },
-  "divestment": {
-    "title": "Divestment and the settlement-business database",
-    "lede": "In 2016 the Human Rights Council instructed its own office to compile a database of businesses operating in the Israeli settlements. It is the only official list of its kind, and it has grown at every revision.",
-    "database": {
-      "source": "Office of the United Nations High Commissioner for Human Rights, database pursuant to Human Rights Council resolution 31/36",
-      "series": [
-        {
-          "label": "February 2020",
-          "value": 112,
-          "note": "The first release, after four years of institutional resistance and delay. 94 of the 112 were domiciled in Israel."
-        },
-        {
-          "label": "June 2023",
-          "value": 97,
-          "note": "The first update. Fifteen entities were removed after ceasing the listed activity — the database's own evidence that listing changes behaviour."
-        },
-        {
-          "label": "July 2025",
-          "value": 158,
-          "note": "The second update. 158 businesses across 11 countries, the largest list yet."
-        }
-      ],
-      "note": "Listing is not an accusation of a crime. It records that the entity carries on one of ten activities the Human Rights Council identified as raising particular human rights concerns in the settlements — supply of equipment for demolition, services sustaining settlement maintenance, banking for settlement construction, use of natural resources, and the rest. Israeli settlements in the occupied territory are unlawful under Article 49(6) of the Fourth Geneva Convention, a position the International Court of Justice restated on 19 July 2024."
+  "us_aid": {
+   "title": "United States military aid",
+   "cumulative": [
+    {
+     "label": "Cumulative bilateral aid, 1946 to February 2022",
+     "value": 150,
+     "unit": "$bn",
+     "source": "Congressional Research Service, RL33222, February 2022"
     },
-    "movements": [
-      {
-        "label": "Norges Bank Investment Management",
-        "detail": "Norway's sovereign wealth fund, the largest in the world at about $1.9 trillion. In August 2025 it divested from eleven Israeli companies and cut its Israeli holdings from 61 companies to 23, after disclosure that it held a stake in a jet-engine maker servicing Israeli fighter aircraft.",
-        "date": "August 2025"
-      },
-      {
-        "label": "KLP",
-        "detail": "Norway's largest pension company sold its stake in Caterpillar, finding an unacceptable risk that the company's bulldozers were used in violations of international law in the occupied territory.",
-        "date": "June 2024"
-      },
-      {
-        "label": "PFZW",
-        "detail": "The Dutch healthcare pension fund, about €238 billion, divested from Israeli government bonds and from companies tied to the occupation.",
-        "date": "January 2025"
-      },
-      {
-        "label": "AkademikerPension",
-        "detail": "The Danish pension fund excluded Israeli banks financing settlement construction.",
-        "date": "2024"
-      },
-      {
-        "label": "Trinity College Dublin",
-        "detail": "Divested from Israeli companies on the United Nations database after a student encampment — the first university in Ireland to do so.",
-        "date": "May 2024"
-      },
-      {
-        "label": "Ireland, Occupied Territories Bill",
-        "detail": "Legislation to ban trade in goods and services originating in the settlements, revived after the International Court of Justice advisory opinion of July 2024.",
-        "date": "2024–2025"
-      }
-    ],
-    "notes": [
-      "Divestment is not a boycott of a people. It is the withdrawal of investment from named commercial activity in territory an international court has held to be unlawfully occupied.",
-      "The precedent is exact and recent: the same instruments — disclosure, listing, divestment, procurement bans — were used against apartheid South Africa, and the states that used them are in many cases the same states that now decline to."
-    ]
+    {
+     "label": "Cumulative bilateral aid, to March 2023",
+     "value": 158.7,
+     "unit": "$bn",
+     "source": "Congressional Research Service, RL33222, March 2023"
+    },
+    {
+     "label": "Cumulative bilateral aid, latest published",
+     "value": 174,
+     "unit": "$bn",
+     "source": "Congressional Research Service, RL33222, current edition"
+    },
+    {
+     "label": "The same aid adjusted for inflation, 1959–2024",
+     "value": 317.9,
+     "unit": "$bn",
+     "source": "Costs of War Project, Brown University, October 2024"
+    }
+   ],
+   "flows": [
+    {
+     "label": "Foreign Military Financing, annual",
+     "value": 3.3,
+     "unit": "$bn",
+     "note": "Under the 2016 Memorandum of Understanding: $38 billion over ten years, FY2019 to FY2028, of which $33 billion is Foreign Military Financing.",
+     "source": "Congressional Research Service, U.S. Foreign Aid to Israel (RL33222)"
+    },
+    {
+     "label": "Missile defence, annual",
+     "value": 0.5,
+     "unit": "$bn",
+     "note": "The remaining $5 billion of the same Memorandum, for Iron Dome, David's Sling and Arrow.",
+     "source": "Congressional Research Service, U.S. Foreign Aid to Israel (RL33222)"
+    },
+    {
+     "label": "Emergency supplemental, FY2024",
+     "value": 14.1,
+     "unit": "$bn",
+     "source": "Public Law 118-50, April 2024"
+    },
+    {
+     "label": "Military aid in the first year of the Gaza war",
+     "value": 17.9,
+     "unit": "$bn",
+     "source": "Costs of War Project, Brown University, October 2024",
+     "note": "The highest single year on record. A further $4.86 billion was spent on United States military operations in the region over the same period."
+    }
+   ],
+   "notes": [
+    "Israel is the largest cumulative recipient of United States foreign assistance since the Second World War.",
+    "United States law already contains the instruments that would restrict this. Section 502B of the Foreign Assistance Act bars security assistance to any government engaged in a consistent pattern of gross violations of internationally recognised human rights; the Leahy Laws bar assistance to units credibly implicated in such violations; and Section 620I bars assistance to any country that restricts the delivery of United States humanitarian aid. None has been applied.",
+    "The aid figures are the published cumulative totals at three dates, not an annual series. The Congressional Research Service does not publish a continuous machine-readable annual table."
+   ]
   },
-  "vetoes": {
-    "title": "The veto wall",
-    "lede": "The Security Council is the only United Nations organ whose decisions bind. Since 1972 the United States has used its permanent-member veto to stop draft resolutions concerning Israel more often than on any other subject in the Council's history.",
-    "counts": [
-      {
-        "label": "United States vetoes of draft resolutions on Israel and Palestine",
-        "value": 49,
-        "note": "Since the first on 10 September 1972, document S/10784, on a draft concerning Israeli attacks in Lebanon and Syria. Counts vary between 45 and 53 depending on whether blocked presidential statements and unpublished drafts are included.",
-        "source": "United Nations Dag Hammarskjöld Library, Security Council Veto List"
-      },
-      {
-        "label": "Share of all United States vetoes ever cast",
-        "value": 55,
-        "unit": "%",
-        "note": "More than half of every veto the United States has cast since 1945 has concerned Israel.",
-        "source": "United Nations Dag Hammarskjöld Library, Security Council Veto List"
-      },
-      {
-        "label": "Vetoes since 7 October 2023",
-        "value": 7,
-        "note": "Six of them on drafts calling for a ceasefire or humanitarian access, and one on Palestinian membership of the United Nations.",
-        "source": "United Nations Dag Hammarskjöld Library, Security Council Veto List"
-      }
-    ],
-    "war": [
-      {
-        "date": "18 Oct 2023",
-        "draft": "Brazil's draft: humanitarian pauses, aid access, condemnation of all violence against civilians",
-        "for": 12,
-        "against": 1,
-        "abstain": 2
-      },
-      {
-        "date": "8 Dec 2023",
-        "draft": "United Arab Emirates draft: immediate humanitarian ceasefire, invoked under Article 99 by the Secretary-General",
-        "for": 13,
-        "against": 1,
-        "abstain": 1
-      },
-      {
-        "date": "20 Feb 2024",
-        "draft": "Algeria's draft: immediate humanitarian ceasefire, rejection of forcible displacement",
-        "for": 13,
-        "against": 1,
-        "abstain": 1
-      },
-      {
-        "date": "18 Apr 2024",
-        "draft": "Algeria's draft: recommending Palestine for full United Nations membership",
-        "for": 12,
-        "against": 1,
-        "abstain": 2
-      },
-      {
-        "date": "20 Nov 2024",
-        "draft": "The ten elected members' draft: immediate, unconditional and permanent ceasefire",
-        "for": 14,
-        "against": 1,
-        "abstain": 0
-      },
-      {
-        "date": "4 Jun 2025",
-        "draft": "The ten elected members' draft: immediate ceasefire, unrestricted aid, release of hostages",
-        "for": 14,
-        "against": 1,
-        "abstain": 0
-      },
-      {
-        "date": "18 Sep 2025",
-        "draft": "The ten elected members' draft: immediate and unconditional ceasefire",
-        "for": 14,
-        "against": 1,
-        "abstain": 0
-      }
-    ],
-    "landmarks": [
-      {
-        "date": "10 Sep 1972",
-        "detail": "The first. Document S/10784, on Israeli attacks in Lebanon and Syria."
-      },
-      {
-        "date": "18 Feb 2011",
-        "detail": "A draft declaring the settlements illegal — a position the United States itself held — vetoed 14 to 1."
-      },
-      {
-        "date": "18 Dec 2017",
-        "detail": "A draft on the status of Jerusalem, vetoed 14 to 1."
-      },
-      {
-        "date": "10 May 2024",
-        "detail": "Not a veto. Blocked at the Council, the membership question went to the General Assembly, which voted 143 to 9 with 25 abstentions to upgrade Palestine's rights and to ask the Council to reconsider. The Council did not."
-      }
-    ],
-    "notes": [
-      "The pattern is the point. In every vote since November 2024 the tally has been fourteen to one: every other member of the Security Council, including every other permanent member and every American ally on the Council, voted for a ceasefire.",
-      "General Assembly resolutions on the same question have passed repeatedly by margins above 120 votes. They are not binding. That is the design the veto protects."
-    ]
-  },
-  "recognition": {
-    "title": "Recognition",
-    "source": "Palestinian Ministry of Foreign Affairs list of recognitions and the UN documents underlying each entry, compiled as at 12 September 2026. The same list drives the recognition map in data/world-positions.json, so the counts here and there are one figure, not two.",
-    "ref": "§15.4",
-    "lede": "Recognition of the State of Palestine has moved in one direction for thirty-seven years, and it accelerated sharply in 2024 and 2025.",
-    "timeline": [
-      {
-        "year": 1988,
-        "value": 78,
-        "label": "Declaration of Independence, Algiers",
-        "note": "Within weeks of the declaration of 15 November 1988, about 78 states had recognised the State of Palestine."
-      },
-      {
-        "year": 2011,
-        "value": 122,
-        "label": "The Latin American wave",
-        "note": "Brazil, Argentina, Chile, Bolivia, Ecuador, Paraguay, Peru and others recognised in 2010 and 2011."
-      },
-      {
-        "year": 2012,
-        "value": 132,
-        "label": "Non-member observer State",
-        "note": "On 29 November 2012 the General Assembly upgraded Palestine to non-member observer State by 138 votes to 9, with 41 abstentions."
-      },
-      {
-        "year": 2014,
-        "value": 135,
-        "label": "Sweden",
-        "note": "The first European Union member in Western Europe to recognise while in government."
-      },
-      {
-        "year": 2024,
-        "value": 146,
-        "label": "Spain, Ireland, Norway, Slovenia, Armenia",
-        "note": "Spain, Ireland and Norway recognised jointly on 28 May 2024; Slovenia followed on 4 June and Armenia on 21 June."
-      },
-      {
-        "year": 2025,
-        "value": 157,
-        "label": "The United Kingdom, Canada, Australia, France and others",
-        "note": "In two days, 21 and 22 September 2025, eleven further states recognised, including four G7 members."
-      }
-    ],
-    "standing": [
-      {
-        "label": "States recognising the State of Palestine",
-        "value": 157,
-        "of": 193
-      },
-      {
-        "label": "States not recognising",
-        "value": 36,
-        "of": 193
-      },
-      {
-        "label": "G20 members recognising",
-        "value": 14,
-        "of": 19
-      }
-    ],
-    "holdouts": "Among the thirty-six: the United States, Germany, Italy, Japan, South Korea, the Netherlands, Austria, Greece, Switzerland, Croatia, Lithuania, Latvia, Estonia, North Macedonia, Panama, Cameroon, Eritrea, and a group of Pacific microstates — Fiji, Kiribati, the Marshall Islands, Micronesia, Nauru, Palau, Samoa, Tonga and Tuvalu — whose votes at the General Assembly are reliably aligned with Washington.",
-    "notes": [
-      "Recognition is a legal act with consequences: it establishes the recognising state's position that Palestine satisfies the criteria of statehood, and it opens treaty relations, diplomatic representation and standing before international bodies.",
-      "It is also the measure on which the gap between governments and their populations is widest. The states that continue to withhold recognition are, with few exceptions, the states that continue to supply the weapons."
-    ]
-  },
-  "land": {
-    "title": "Where the land went",
-    "lede": "Every other figure on this page follows from this one. In 1946 Jewish landholding in Mandatory Palestine was about six per cent of the territory. Today the area under full Palestinian civil and security control is about four per cent.",
-    "control": [
-      {
-        "label": "1946",
-        "sub": "Under the Mandate",
-        "segments": [
-          {
-            "name": "Jewish-owned land",
-            "value": 6,
-            "source": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946"
-          },
-          {
-            "name": "Palestinian and state land",
-            "value": 94,
-            "source": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946"
-          }
-        ],
-        "note": "The Survey of Palestine prepared for the Anglo-American Committee of Inquiry recorded Jewish landholding at roughly 6 to 7 per cent of the total land area of Mandatory Palestine. Jews were about one third of the population.",
-        "source": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946"
-      },
-      {
-        "label": "1947",
-        "sub": "The partition plan",
-        "segments": [
-          {
-            "name": "Allotted to the Jewish state",
-            "value": 56,
-            "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
-          },
-          {
-            "name": "Allotted to the Arab state",
-            "value": 43,
-            "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
-          },
-          {
-            "name": "Jerusalem, international",
-            "value": 1,
-            "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
-          }
-        ],
-        "note": "General Assembly Resolution 181 allotted about 56 per cent of the territory to a Jewish state whose population was about a third of the whole and which owned about 6 per cent of the land.",
-        "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
-      },
-      {
-        "label": "1949",
-        "sub": "After the armistice",
-        "segments": [
-          {
-            "name": "Israel",
-            "value": 78,
-            "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
-          },
-          {
-            "name": "West Bank, under Jordan",
-            "value": 21,
-            "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
-          },
-          {
-            "name": "Gaza, under Egypt",
-            "value": 1,
-            "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
-          }
-        ],
-        "note": "Israel held about 78 per cent — some 22 per cent more than the partition plan had allotted — and more than 700,000 Palestinians had been displaced from it.",
-        "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
-      },
-      {
-        "label": "1967",
-        "sub": "After the June war",
-        "segments": [
-          {
-            "name": "Under Israeli control",
-            "value": 100,
-            "source": "United Nations Security Council Resolution 242 (1967)"
-          }
-        ],
-        "note": "The remaining 22 per cent came under military occupation, where it has remained for fifty-nine years. East Jerusalem was annexed in 1980 and the Golan in 1981; both annexations were declared null and void by the Security Council.",
-        "source": "United Nations Security Council Resolution 242 (1967)"
-      },
-      {
-        "label": "Today",
-        "sub": "After Oslo",
-        "segments": [
-          {
-            "name": "Israel, pre-1967 lines",
-            "value": 78,
-            "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
-          },
-          {
-            "name": "Area C, full Israeli control",
-            "value": 12.6,
-            "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
-          },
-          {
-            "name": "Area B, Israeli security control",
-            "value": 4.6,
-            "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
-          },
-          {
-            "name": "Area A, Palestinian control",
-            "value": 3.8,
-            "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
-          },
-          {
-            "name": "Gaza",
-            "value": 1,
-            "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
-          }
-        ],
-        "note": "The Oslo II Interim Agreement of September 1995 divided the West Bank into Areas A, B and C as a five-year arrangement pending final status talks. Thirty-one years later the division stands.",
-        "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
-      }
-    ],
-    "areas": [
-      {
-        "label": "Area A",
-        "value": 18,
-        "control": "Palestinian Authority civil and security control",
-        "note": "About 18 per cent of the West Bank, containing the major Palestinian cities. The Israeli army enters it at will.",
-        "source": "B'Tselem; United Nations OCHA, Area C figures"
-      },
-      {
-        "label": "Area B",
-        "value": 22,
-        "control": "Palestinian civil control, Israeli security control",
-        "note": "About 22 per cent, containing most Palestinian villages. No building permits are issued by the Palestinian Authority for state land.",
-        "source": "B'Tselem; United Nations OCHA, Area C figures"
-      },
-      {
-        "label": "Area C",
-        "value": 60,
-        "control": "Full Israeli civil and security control",
-        "note": "About 60 per cent of the West Bank, containing all the settlements, the Jordan Valley, the water aquifers and almost all the agricultural land and open space. Palestinian building permits in Area C are refused in the large majority of applications.",
-        "source": "B'Tselem; United Nations OCHA, Area C figures"
-      }
-    ],
-    "settlements": [
-      {
-        "label": "Settlement built-up area, share of the West Bank",
-        "value": 2,
-        "unit": "%",
-        "note": "The footprint of the houses themselves.",
-        "source": "B'Tselem, settlement statistics"
-      },
-      {
-        "label": "Land under settlement regional council jurisdiction",
-        "value": 40,
-        "unit": "%",
-        "note": "The area from which Palestinians are excluded is twenty times the built-up area.",
-        "source": "B'Tselem, settlement statistics"
-      },
-      {
-        "label": "Land declared Israeli state land in 2024",
-        "value": 23.7,
-        "unit": "km²",
-        "source": "Peace Now",
-        "note": "The largest single year of state-land declarations since the Oslo Accords."
-      }
-    ],
-    "notes": [
-      "The percentages are of Mandatory Palestine as a whole — about 26,320 square kilometres — so that the five rows are comparable. The West Bank is about 21 per cent of that total and Gaza about 1 per cent.",
-      "Area A, the only territory under full Palestinian control, is about 18 per cent of the West Bank, which is about 3.8 per cent of Mandatory Palestine. It is not contiguous: it is 165 separate enclaves.",
-      "The International Court of Justice held on 19 July 2024 that Israel's continued presence in the occupied Palestinian territory is unlawful and must end as rapidly as possible, and that the settlement policy, the annexation of territory and the associated regime violate Article 49(6) of the Fourth Geneva Convention and the prohibition on the acquisition of territory by force."
-    ]
+  "embargo": {
+   "title": "The embargo tracker",
+   "lede": "Which states have restricted arms transfers to Israel since October 2023, and which have not.",
+   "countries": [
+    {
+     "country": "Turkey",
+     "status": "halted",
+     "date": "May 2024",
+     "detail": "Suspended all trade with Israel, worth about $7 billion a year, pending unimpeded aid access to Gaza."
+    },
+    {
+     "country": "Slovenia",
+     "status": "halted",
+     "date": "August 2024",
+     "detail": "Banned the import, export and transit of arms to and from Israel — the first European Union member state to impose a full arms ban."
+    },
+    {
+     "country": "Spain",
+     "status": "halted",
+     "date": "October 2023, formalised September 2025",
+     "detail": "Halted arms sales from the start of the war and made the embargo law by royal decree in September 2025, also barring ships and aircraft carrying fuel or arms for Israel from Spanish ports and airspace."
+    },
+    {
+     "country": "Colombia",
+     "status": "halted",
+     "date": "May 2024",
+     "detail": "Broke diplomatic relations and halted coal exports, which had supplied a substantial share of Israel's thermal coal."
+    },
+    {
+     "country": "Netherlands",
+     "status": "partial",
+     "date": "February 2024",
+     "detail": "The Hague Court of Appeal ordered the state to stop exporting F-35 parts to Israel, finding a clear risk of serious violations of international humanitarian law. The government appealed."
+    },
+    {
+     "country": "Belgium",
+     "status": "partial",
+     "date": "October 2023",
+     "detail": "The Walloon and Flemish regions, which control export licensing, suspended licences to Israel; Wallonia's suspension was later confirmed by court."
+    },
+    {
+     "country": "Canada",
+     "status": "partial",
+     "date": "September 2024",
+     "detail": "Suspended about thirty existing permits and halted new ones, while goods continued to reach Israel indirectly through United States supply chains."
+    },
+    {
+     "country": "Italy",
+     "status": "partial",
+     "date": "October 2023",
+     "detail": "Suspended new licences but continued deliveries under contracts already signed."
+    },
+    {
+     "country": "United Kingdom",
+     "status": "partial",
+     "date": "September 2024",
+     "detail": "Suspended about 30 of roughly 350 licences on the grounds of a clear risk of serious violation of international humanitarian law, while expressly exempting F-35 components supplied into the global parts pool."
+    },
+    {
+     "country": "Germany",
+     "status": "continuing",
+     "date": "November 2025",
+     "detail": "The second largest supplier. Announced a partial suspension of weapons usable in Gaza in August 2025 and lifted it in November 2025."
+    },
+    {
+     "country": "United States",
+     "status": "continuing",
+     "date": "—",
+     "detail": "No restriction. Two thirds of supply, and the veto that has blocked every binding Security Council measure."
+    }
+   ],
+   "notes": [
+    "The legal position is not in doubt. Common Article 1 of the Geneva Conventions obliges every High Contracting Party to ensure respect for the Conventions; the Arms Trade Treaty, Article 6(3), prohibits any transfer where the state knows the arms would be used in war crimes; and the International Court of Justice's advisory opinion of 19 July 2024 held that all states are under an obligation not to render aid or assistance in maintaining the unlawful occupation.",
+    "On 20 June 2025 the United Nations Special Rapporteur on the occupied Palestinian territory published a report naming the corporate entities she found to be sustaining it, and recommending that states and companies sever those ties."
+   ]
   }
+ },
+ "divestment": {
+  "title": "Divestment and the settlement-business database",
+  "lede": "In 2016 the Human Rights Council instructed its own office to compile a database of businesses operating in the Israeli settlements. It is the only official list of its kind, and it has grown at every revision.",
+  "database": {
+   "source": "Office of the United Nations High Commissioner for Human Rights, database pursuant to Human Rights Council resolution 31/36",
+   "series": [
+    {
+     "label": "February 2020",
+     "value": 112,
+     "note": "The first release, after four years of institutional resistance and delay. 94 of the 112 were domiciled in Israel."
+    },
+    {
+     "label": "June 2023",
+     "value": 97,
+     "note": "The first update. Fifteen entities were removed after ceasing the listed activity — the database's own evidence that listing changes behaviour."
+    },
+    {
+     "label": "July 2025",
+     "value": 158,
+     "note": "The second update. 158 businesses across 11 countries, the largest list yet."
+    }
+   ],
+   "note": "Listing is not an accusation of a crime. It records that the entity carries on one of ten activities the Human Rights Council identified as raising particular human rights concerns in the settlements — supply of equipment for demolition, services sustaining settlement maintenance, banking for settlement construction, use of natural resources, and the rest. Israeli settlements in the occupied territory are unlawful under Article 49(6) of the Fourth Geneva Convention, a position the International Court of Justice restated on 19 July 2024."
+  },
+  "movements": [
+   {
+    "label": "Norges Bank Investment Management",
+    "detail": "Norway's sovereign wealth fund, the largest in the world at about $1.9 trillion. In August 2025 it divested from eleven Israeli companies and cut its Israeli holdings from 61 companies to 23, after disclosure that it held a stake in a jet-engine maker servicing Israeli fighter aircraft.",
+    "date": "August 2025"
+   },
+   {
+    "label": "KLP",
+    "detail": "Norway's largest pension company sold its stake in Caterpillar, finding an unacceptable risk that the company's bulldozers were used in violations of international law in the occupied territory.",
+    "date": "June 2024"
+   },
+   {
+    "label": "PFZW",
+    "detail": "The Dutch healthcare pension fund, about €238 billion, divested from Israeli government bonds and from companies tied to the occupation.",
+    "date": "January 2025"
+   },
+   {
+    "label": "AkademikerPension",
+    "detail": "The Danish pension fund excluded Israeli banks financing settlement construction.",
+    "date": "2024"
+   },
+   {
+    "label": "Trinity College Dublin",
+    "detail": "Divested from Israeli companies on the United Nations database after a student encampment — the first university in Ireland to do so.",
+    "date": "May 2024"
+   },
+   {
+    "label": "Ireland, Occupied Territories Bill",
+    "detail": "Legislation to ban trade in goods and services originating in the settlements, revived after the International Court of Justice advisory opinion of July 2024.",
+    "date": "2024–2025"
+   }
+  ],
+  "notes": [
+   "Divestment is not a boycott of a people. It is the withdrawal of investment from named commercial activity in territory an international court has held to be unlawfully occupied.",
+   "The precedent is exact and recent: the same instruments — disclosure, listing, divestment, procurement bans — were used against apartheid South Africa, and the states that used them are in many cases the same states that now decline to."
+  ]
+ },
+ "vetoes": {
+  "title": "The veto wall",
+  "lede": "The Security Council is the only United Nations organ whose decisions bind. Since 1972 the United States has used its permanent-member veto to stop draft resolutions concerning Israel more often than on any other subject in the Council's history.",
+  "counts": [
+   {
+    "label": "United States vetoes of draft resolutions on Israel and Palestine",
+    "value": 49,
+    "note": "Since the first on 10 September 1972, document S/10784, on a draft concerning Israeli attacks in Lebanon and Syria. Counts vary between 45 and 53 depending on whether blocked presidential statements and unpublished drafts are included.",
+    "source": "United Nations Dag Hammarskjöld Library, Security Council Veto List"
+   },
+   {
+    "label": "Share of all United States vetoes ever cast",
+    "value": 55,
+    "unit": "%",
+    "note": "More than half of every veto the United States has cast since 1945 has concerned Israel.",
+    "source": "United Nations Dag Hammarskjöld Library, Security Council Veto List"
+   },
+   {
+    "label": "Vetoes since 7 October 2023",
+    "value": 7,
+    "note": "Six of them on drafts calling for a ceasefire or humanitarian access, and one on Palestinian membership of the United Nations.",
+    "source": "United Nations Dag Hammarskjöld Library, Security Council Veto List"
+   }
+  ],
+  "war": [
+   {
+    "date": "18 Oct 2023",
+    "draft": "Brazil's draft: humanitarian pauses, aid access, condemnation of all violence against civilians",
+    "for": 12,
+    "against": 1,
+    "abstain": 2
+   },
+   {
+    "date": "8 Dec 2023",
+    "draft": "United Arab Emirates draft: immediate humanitarian ceasefire, invoked under Article 99 by the Secretary-General",
+    "for": 13,
+    "against": 1,
+    "abstain": 1
+   },
+   {
+    "date": "20 Feb 2024",
+    "draft": "Algeria's draft: immediate humanitarian ceasefire, rejection of forcible displacement",
+    "for": 13,
+    "against": 1,
+    "abstain": 1
+   },
+   {
+    "date": "18 Apr 2024",
+    "draft": "Algeria's draft: recommending Palestine for full United Nations membership",
+    "for": 12,
+    "against": 1,
+    "abstain": 2
+   },
+   {
+    "date": "20 Nov 2024",
+    "draft": "The ten elected members' draft: immediate, unconditional and permanent ceasefire",
+    "for": 14,
+    "against": 1,
+    "abstain": 0
+   },
+   {
+    "date": "4 Jun 2025",
+    "draft": "The ten elected members' draft: immediate ceasefire, unrestricted aid, release of hostages",
+    "for": 14,
+    "against": 1,
+    "abstain": 0
+   },
+   {
+    "date": "18 Sep 2025",
+    "draft": "The ten elected members' draft: immediate and unconditional ceasefire",
+    "for": 14,
+    "against": 1,
+    "abstain": 0
+   }
+  ],
+  "landmarks": [
+   {
+    "date": "10 Sep 1972",
+    "detail": "The first. Document S/10784, on Israeli attacks in Lebanon and Syria."
+   },
+   {
+    "date": "18 Feb 2011",
+    "detail": "A draft declaring the settlements illegal — a position the United States itself held — vetoed 14 to 1."
+   },
+   {
+    "date": "18 Dec 2017",
+    "detail": "A draft on the status of Jerusalem, vetoed 14 to 1."
+   },
+   {
+    "date": "10 May 2024",
+    "detail": "Not a veto. Blocked at the Council, the membership question went to the General Assembly, which voted 143 to 9 with 25 abstentions to upgrade Palestine's rights and to ask the Council to reconsider. The Council did not."
+   }
+  ],
+  "notes": [
+   "The pattern is the point. In every vote since November 2024 the tally has been fourteen to one: every other member of the Security Council, including every other permanent member and every American ally on the Council, voted for a ceasefire.",
+   "General Assembly resolutions on the same question have passed repeatedly by margins above 120 votes. They are not binding. That is the design the veto protects."
+  ]
+ },
+ "recognition": {
+  "title": "Recognition",
+  "source": "Palestinian Ministry of Foreign Affairs list of recognitions and the UN documents underlying each entry, compiled as at 12 September 2026. The same list drives the recognition map in data/world-positions.json, so the counts here and there are one figure, not two.",
+  "ref": "§15.4",
+  "lede": "Recognition of the State of Palestine has moved in one direction for thirty-seven years, and it accelerated sharply in 2024 and 2025.",
+  "timeline": [
+   {
+    "year": 1988,
+    "value": 78,
+    "label": "Declaration of Independence, Algiers",
+    "note": "Within weeks of the declaration of 15 November 1988, about 78 states had recognised the State of Palestine."
+   },
+   {
+    "year": 2011,
+    "value": 122,
+    "label": "The Latin American wave",
+    "note": "Brazil, Argentina, Chile, Bolivia, Ecuador, Paraguay, Peru and others recognised in 2010 and 2011."
+   },
+   {
+    "year": 2012,
+    "value": 132,
+    "label": "Non-member observer State",
+    "note": "On 29 November 2012 the General Assembly upgraded Palestine to non-member observer State by 138 votes to 9, with 41 abstentions."
+   },
+   {
+    "year": 2014,
+    "value": 135,
+    "label": "Sweden",
+    "note": "The first European Union member in Western Europe to recognise while in government."
+   },
+   {
+    "year": 2024,
+    "value": 146,
+    "label": "Spain, Ireland, Norway, Slovenia, Armenia",
+    "note": "Spain, Ireland and Norway recognised jointly on 28 May 2024; Slovenia followed on 4 June and Armenia on 21 June."
+   },
+   {
+    "year": 2025,
+    "value": 157,
+    "label": "The United Kingdom, Canada, Australia, France and others",
+    "note": "In two days, 21 and 22 September 2025, eleven further states recognised, including four G7 members."
+   }
+  ],
+  "standing": [
+   {
+    "label": "States recognising the State of Palestine",
+    "value": 157,
+    "of": 193
+   },
+   {
+    "label": "States not recognising",
+    "value": 36,
+    "of": 193
+   },
+   {
+    "label": "G20 members recognising",
+    "value": 14,
+    "of": 19
+   }
+  ],
+  "holdouts": "Among the thirty-six: the United States, Germany, Italy, Japan, South Korea, the Netherlands, Austria, Greece, Switzerland, Croatia, Lithuania, Latvia, Estonia, North Macedonia, Panama, Cameroon, Eritrea, and a group of Pacific microstates — Fiji, Kiribati, the Marshall Islands, Micronesia, Nauru, Palau, Samoa, Tonga and Tuvalu — whose votes at the General Assembly are reliably aligned with Washington.",
+  "notes": [
+   "Recognition is a legal act with consequences: it establishes the recognising state's position that Palestine satisfies the criteria of statehood, and it opens treaty relations, diplomatic representation and standing before international bodies.",
+   "It is also the measure on which the gap between governments and their populations is widest. The states that continue to withhold recognition are, with few exceptions, the states that continue to supply the weapons."
+  ]
+ },
+ "land": {
+  "title": "Where the land went",
+  "lede": "Every other figure on this page follows from this one. In 1946 Jewish landholding in Mandatory Palestine was about six per cent of the territory. Today the area under full Palestinian civil and security control is about four per cent.",
+  "control": [
+   {
+    "label": "1946",
+    "sub": "Under the Mandate",
+    "segments": [
+     {
+      "name": "Jewish-owned land",
+      "value": 6,
+      "source": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946"
+     },
+     {
+      "name": "Palestinian and state land",
+      "value": 94,
+      "source": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946"
+     }
+    ],
+    "note": "The Survey of Palestine prepared for the Anglo-American Committee of Inquiry recorded Jewish landholding at roughly 6 to 7 per cent of the total land area of Mandatory Palestine. Jews were about one third of the population.",
+    "source": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946"
+   },
+   {
+    "label": "1947",
+    "sub": "The partition plan",
+    "segments": [
+     {
+      "name": "Allotted to the Jewish state",
+      "value": 56,
+      "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
+     },
+     {
+      "name": "Allotted to the Arab state",
+      "value": 43,
+      "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
+     },
+     {
+      "name": "Jerusalem, international",
+      "value": 1,
+      "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
+     }
+    ],
+    "note": "General Assembly Resolution 181 allotted about 56 per cent of the territory to a Jewish state whose population was about a third of the whole and which owned about 6 per cent of the land.",
+    "source": "United Nations General Assembly Resolution 181 (II), 29 November 1947"
+   },
+   {
+    "label": "1949",
+    "sub": "After the armistice",
+    "segments": [
+     {
+      "name": "Israel",
+      "value": 78,
+      "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
+     },
+     {
+      "name": "West Bank, under Jordan",
+      "value": 21,
+      "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
+     },
+     {
+      "name": "Gaza, under Egypt",
+      "value": 1,
+      "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
+     }
+    ],
+    "note": "Israel held about 78 per cent — some 22 per cent more than the partition plan had allotted — and more than 700,000 Palestinians had been displaced from it.",
+    "source": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine"
+   },
+   {
+    "label": "1967",
+    "sub": "After the June war",
+    "segments": [
+     {
+      "name": "Under Israeli control",
+      "value": 100,
+      "source": "United Nations Security Council Resolution 242 (1967)"
+     }
+    ],
+    "note": "The remaining 22 per cent came under military occupation, where it has remained for fifty-nine years. East Jerusalem was annexed in 1980 and the Golan in 1981; both annexations were declared null and void by the Security Council.",
+    "source": "United Nations Security Council Resolution 242 (1967)"
+   },
+   {
+    "label": "Today",
+    "sub": "After Oslo",
+    "segments": [
+     {
+      "name": "Israel, pre-1967 lines",
+      "value": 78,
+      "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
+     },
+     {
+      "name": "Area C, full Israeli control",
+      "value": 12.6,
+      "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
+     },
+     {
+      "name": "Area B, Israeli security control",
+      "value": 4.6,
+      "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
+     },
+     {
+      "name": "Area A, Palestinian control",
+      "value": 3.8,
+      "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
+     },
+     {
+      "name": "Gaza",
+      "value": 1,
+      "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
+     }
+    ],
+    "note": "The Oslo II Interim Agreement of September 1995 divided the West Bank into Areas A, B and C as a five-year arrangement pending final status talks. Thirty-one years later the division stands.",
+    "source": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA"
+   }
+  ],
+  "areas": [
+   {
+    "label": "Area A",
+    "value": 18,
+    "control": "Palestinian Authority civil and security control",
+    "note": "About 18 per cent of the West Bank, containing the major Palestinian cities. The Israeli army enters it at will.",
+    "source": "B'Tselem; United Nations OCHA, Area C figures"
+   },
+   {
+    "label": "Area B",
+    "value": 22,
+    "control": "Palestinian civil control, Israeli security control",
+    "note": "About 22 per cent, containing most Palestinian villages. No building permits are issued by the Palestinian Authority for state land.",
+    "source": "B'Tselem; United Nations OCHA, Area C figures"
+   },
+   {
+    "label": "Area C",
+    "value": 60,
+    "control": "Full Israeli civil and security control",
+    "note": "About 60 per cent of the West Bank, containing all the settlements, the Jordan Valley, the water aquifers and almost all the agricultural land and open space. Palestinian building permits in Area C are refused in the large majority of applications.",
+    "source": "B'Tselem; United Nations OCHA, Area C figures"
+   }
+  ],
+  "settlements": [
+   {
+    "label": "Settlement built-up area, share of the West Bank",
+    "value": 2,
+    "unit": "%",
+    "note": "The footprint of the houses themselves.",
+    "source": "B'Tselem, settlement statistics"
+   },
+   {
+    "label": "Land under settlement regional council jurisdiction",
+    "value": 40,
+    "unit": "%",
+    "note": "The area from which Palestinians are excluded is twenty times the built-up area.",
+    "source": "B'Tselem, settlement statistics"
+   },
+   {
+    "label": "Land declared Israeli state land in 2024",
+    "value": 23.7,
+    "unit": "km²",
+    "source": "Peace Now",
+    "note": "The largest single year of state-land declarations since the Oslo Accords."
+   }
+  ],
+  "notes": [
+   "The percentages are of Mandatory Palestine as a whole — about 26,320 square kilometres — so that the five rows are comparable. The West Bank is about 21 per cent of that total and Gaza about 1 per cent.",
+   "Area A, the only territory under full Palestinian control, is about 18 per cent of the West Bank, which is about 3.8 per cent of Mandatory Palestine. It is not contiguous: it is 165 separate enclaves.",
+   "The International Court of Justice held on 19 July 2024 that Israel's continued presence in the occupied Palestinian territory is unlawful and must end as rapidly as possible, and that the settlement policy, the annexation of territory and the associated regime violate Article 49(6) of the Fourth Geneva Convention and the prohibition on the acquisition of territory by force."
+  ]
+ }
 }
