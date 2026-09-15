@@ -322,35 +322,51 @@ def previous_dates():
         return {}
 
 
+def git(*args):
+    """Run a git command here and return its output, or None if git cannot."""
+    try:
+        done = subprocess.run(('git',) + args, cwd=str(HERE),
+                              capture_output=True, text=True, timeout=15)
+    except (OSError, subprocess.SubprocessError):
+        return None
+    return done.stdout if done.returncode == 0 else None
+
+
+def is_shallow():
+    """A checkout holding one commit cannot say when anything last changed.
+
+    This is what a runner takes by default. Its single commit has no parent, so
+    git reports every file in the tree as having been added by it, and dating
+    the manifest from that would announce that every dataset changed today.
+    """
+    out = git('rev-parse', '--is-shallow-repository')
+    return (out or '').strip() == 'true'
+
+
+SHALLOW = None
+
+
 def last_changed(path, known=None):
     """The date the file last changed, not the date this copy of it was made.
 
     Modification times are the obvious answer and the wrong one: a fresh clone
-    stamps every file with the moment it was checked out, so a manifest built
-    on a runner would announce that all twenty-seven datasets were updated
-    today. Git knows when each file actually last changed, which is the claim
-    this field is making. A file edited since its last commit - which is the
-    normal case during a refresh - is newer than git knows, so it is dated
-    today.
-
-    A shallow checkout, which is what a runner takes by default, holds one
-    commit and can date only the files that commit touched. Rather than restamp
-    the rest, the date the previous manifest published is carried forward: a
+    stamps every file with the moment it was checked out. Git knows when each
+    file actually last changed, which is the claim this field is making. A file
+    edited since its last commit - the normal case during a refresh - is newer
+    than git knows, so it is dated today; where the history is too shallow to
+    ask, the date the last manifest published is carried forward, because a
     date that cannot be established is no reason to publish a wrong one.
     """
-    try:
-        rev = subprocess.run(['git', 'log', '-1', '--format=%cs', '--', str(path)],
-                             cwd=str(HERE), capture_output=True, text=True, timeout=15)
-        dirty = subprocess.run(['git', 'status', '--porcelain', '--', str(path)],
-                               cwd=str(HERE), capture_output=True, text=True, timeout=15)
-        if rev.returncode == 0 and dirty.returncode == 0:
-            if dirty.stdout.strip():
-                return datetime.date.today().isoformat()
-            stamp = rev.stdout.strip()
-            if re.fullmatch(r'\d{4}-\d{2}-\d{2}', stamp):
-                return stamp
-    except (OSError, subprocess.SubprocessError):
-        pass
+    global SHALLOW
+    if SHALLOW is None:
+        SHALLOW = is_shallow()
+    dirty = git('status', '--porcelain', '--', str(path))
+    if dirty is not None and dirty.strip():
+        return datetime.date.today().isoformat()
+    if not SHALLOW:
+        stamp = (git('log', '-1', '--format=%cs', '--', str(path)) or '').strip()
+        if re.fullmatch(r'\d{4}-\d{2}-\d{2}', stamp):
+            return stamp
     return known or datetime.date.fromtimestamp(path.stat().st_mtime).isoformat()
 
 
