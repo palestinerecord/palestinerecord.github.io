@@ -110,6 +110,25 @@ DESCRIPTIONS = {
         'Joined by entities.py from statements.json, report.json and world-positions.json; no '
         'claim originates here.',
     ),
+    'constituency.json': (
+        'The constituency ledger',
+        'Every seat in the House of Commons, the member who holds it, and how that member voted '
+        'the three times the House divided on Gaza: the immediate-ceasefire amendment and the '
+        'humanitarian-pauses amendment of 15 November 2023, and the Order proscribing Palestine '
+        'Action of 2 July 2025. Each division carries the question as it was put, what a vote '
+        'for it meant, the published counts that identify it, and a link to its own division '
+        'list. Against each member the file also carries any entry in the Register of '
+        'Members\u2019 Financial Interests and any donation in the Electoral Commission\u2019s '
+        'register that the published search terms match, together with the constituency the '
+        'member sat for at the time of a vote taken before the 2024 boundaries. Money that '
+        'reached a party rather than a named member is aggregated to the party, because it '
+        'cannot honestly be attributed to any one of them. No email address is published here.',
+        'Built by constituency.py from members-api.parliament.uk, commonsvotes-api.parliament.uk, '
+        'interests-api.parliament.uk and search.electoralcommission.org.uk. The division subjects '
+        'are curated rather than machine-derived, because the House titles a division by its '
+        'procedural form; the published counts are re-checked against the pulled division on '
+        'every build.',
+    ),
     'falsification.json': (
         'The falsification register',
         'One entry for every curated claim on this site that a reader could settle on their own: '

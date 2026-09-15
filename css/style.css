@@ -1890,3 +1890,112 @@ tr.struck td { text-decoration: line-through; color: var(--red); }
   .fx-claim { font-size: 15px; }
   .fx-route { display: block; margin: 8px 0 0; }
 }
+
+/* ---------- the constituency ledger ---------- */
+
+.mp-find { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.mp-find input {
+  flex: 1 1 260px; min-width: 220px; background: var(--panel); color: var(--text);
+  border: 1px solid var(--line); border-radius: 8px; padding: 11px 14px;
+  font-family: inherit; font-size: 15px; text-transform: uppercase;
+}
+.mp-find input:focus { outline: none; border-color: var(--accent); }
+.mp-found {
+  margin-top: 16px; border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  border-radius: 10px; background: var(--panel); padding: 14px 18px;
+}
+.mp-found p { margin: 0 0 6px; font-size: 15px; line-height: 1.6; color: var(--text-2); }
+.mp-found p:last-child { margin-bottom: 0; }
+
+.mp-div { padding: 20px 24px; }
+.mp-div-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; justify-content: space-between; }
+.mp-div-head h3 { margin: 0; font-family: var(--serif); font-size: 20px; color: var(--text); }
+.mp-div-date { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+.mp-div-formal { font-size: 12.5px; color: var(--muted); margin: 6px 0 14px; }
+.mp-div .led-quote { margin-bottom: 14px; }
+.mp-tally { display: flex; flex-wrap: wrap; gap: 18px; align-items: baseline; margin-bottom: 12px; }
+.mp-count { font-size: 13.5px; color: var(--muted); }
+.mp-count b { font-family: var(--mono); font-size: 20px; }
+.mp-count.aye b { color: var(--green); }
+.mp-count.no b { color: var(--red); }
+.mp-result { font-size: 13px; color: var(--text-2); }
+.mp-div-now { font-size: 14.5px; line-height: 1.65; color: var(--text-2); margin: 12px 0; }
+.mp-div-now b { font-family: var(--mono); color: var(--text); }
+
+.mp-legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 14px; }
+.mp-legend span { font-size: 11.5px; color: var(--muted); }
+
+.mp-entry {
+  border: 1px solid var(--line); border-radius: 10px; background: var(--panel); overflow: hidden;
+}
+.mp-entry[open] { border-color: var(--line-hi); }
+.mp-entry > summary {
+  list-style: none; cursor: pointer; padding: 11px 18px;
+  display: grid; grid-template-columns: 1fr auto minmax(0, 330px) auto; gap: 14px; align-items: center;
+}
+.mp-entry > summary::-webkit-details-marker { display: none; }
+.mp-entry > summary:hover { background: var(--panel-hi); }
+.mp-who { display: grid; gap: 1px; min-width: 0; }
+.mp-who b { font-size: 15px; color: var(--text); font-weight: 600; }
+.mp-seat { font-size: 12.5px; color: var(--muted); }
+.mp-party {
+  font-family: var(--mono); font-size: 11px; color: var(--text-2);
+  border: 1px solid var(--line); border-left: 3px solid var(--party, var(--line-hi));
+  border-radius: 4px; padding: 2px 7px; white-space: nowrap;
+}
+.mp-votes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.mp-cell { min-width: 0; }
+/* The legend above the list names the three columns, so the per-badge name is
+   carried only where the badges stack and the columns stop existing. */
+.mp-cell > b { display: none; }
+.mp-legend span b { color: var(--text-2); font-weight: 600; }
+.mp-vote {
+  display: block; font-size: 11px; text-align: center; border-radius: 999px;
+  padding: 3px 4px; border: 1px solid var(--line); color: var(--muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.mp-vote.v-aye { color: var(--green); border-color: rgba(106, 168, 118, .45); }
+.mp-vote.v-no { color: var(--red); border-color: rgba(210, 83, 76, .45); }
+.mp-vote.v-absent { color: var(--muted); border-style: dashed; }
+.mp-vote.v-not-a-member { color: var(--muted); opacity: .6; }
+.mp-flag { font-size: 11px; color: var(--accent); white-space: nowrap; }
+
+.mp-body { padding: 4px 18px 18px; display: grid; gap: 16px; }
+.mp-block h4 {
+  font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 10px; font-weight: 600;
+}
+.mp-block p { font-size: 14.5px; line-height: 1.6; color: var(--text-2); margin: 0 0 6px; }
+.mp-interest { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 10px; }
+.mp-interest:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+.mp-meta { font-size: 11.5px; color: var(--muted); line-height: 1.55; }
+.mp-money { font-family: var(--mono); text-align: right; }
+
+.mp-draft { margin-top: 12px; display: grid; gap: 10px; justify-items: start; }
+.mp-draft textarea {
+  width: 100%; background: var(--bg-2, var(--panel-hi)); color: var(--text-2);
+  border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px;
+  font-family: var(--mono); font-size: 12.5px; line-height: 1.65; resize: vertical;
+}
+.mp-draft textarea:focus { outline: none; border-color: var(--accent); }
+
+@media (max-width: 1080px) {
+  .mp-entry > summary { grid-template-columns: 1fr auto; }
+  .mp-votes { grid-column: 1 / -1; }
+  .mp-flag { grid-column: 1 / -1; }
+}
+
+@media (max-width: 700px) {
+  .mp-div { padding: 16px 16px; }
+  .mp-div-head h3 { font-size: 17px; }
+  .mp-entry > summary { padding: 11px 14px; }
+  .mp-votes { grid-template-columns: 1fr; }
+  .mp-cell { display: grid; grid-template-columns: 92px 1fr; gap: 8px; align-items: center; }
+  .mp-cell > b {
+    display: block; font-size: 11px; font-weight: 600; color: var(--muted);
+  }
+  .mp-vote { text-align: left; padding: 3px 10px; }
+  .mp-body { padding: 4px 14px 16px; }
+  .mp-find input { flex: 1 1 100%; }
+  .mp-find .btn { width: 100%; }
+}

@@ -24,7 +24,7 @@ const App = (function () {
   if (window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
   const VIEWS = ['overview', 'tour', 'data', 'children', 'day', 'timeline', 'evidence', 'rebuttals', 'statements',
-    'legal', 'sources', 'provenance', 'answer', 'ledger', 'method', 'api', 'changelog', 'embed'];
+    'legal', 'sources', 'provenance', 'answer', 'ledger', 'mp', 'method', 'api', 'changelog', 'embed'];
 
   /* index.html?prerender=1 renders the text and nothing else: no charts, no
      scroll reveals, no counting numbers, no WebGL scene. prerender.py uses it
@@ -91,6 +91,30 @@ const App = (function () {
   /* The routes that reproduce the report itself, rather than quoting figures
      drawn from it. Everything else renders without report.json. */
   const REPORT_ROUTES = ['evidence', 'rebuttals', 'legal', 'changelog', 'answer'];
+
+  /* A route whose data is large enough that loading it at boot would slow
+     every other route down, and narrow enough that most readers never open it.
+     data/constituency.json is a quarter of a megabyte holding all 649 seats,
+     and nothing outside its own route reads a byte of it. */
+  const LAZY = { mp: ['constituency', 'data/constituency.json'] };
+  const lazyPromises = {};
+
+  function ensureLazy(name) {
+    const spec = LAZY[name];
+    const key = spec[0];
+    if (D && D[key]) return Promise.resolve(D[key]);
+    if (!lazyPromises[name]) {
+      lazyPromises[name] = fetch(spec[1])
+        .then((r) => { if (!r.ok) throw new Error(`${spec[1]} — HTTP ${r.status}`); return r.json(); })
+        .then((json) => {
+          D[key] = json;
+          if (Views.setData) Views.setData(D);
+          return json;
+        })
+        .catch((err) => { lazyPromises[name] = null; throw err; });
+    }
+    return lazyPromises[name];
+  }
 
   let reportPromise = null;
 
@@ -309,6 +333,23 @@ const App = (function () {
     // The four routes that reproduce the report wait for it here rather than
     // making every other route wait for it at boot. One line on screen while
     // it arrives; the render then runs again with the report in hand.
+    // A lazy route paints a line, fetches its own file, and renders again.
+    // The route is re-read afterwards so that a reader who navigated away
+    // while the file was in flight is not dragged back to it.
+    if (LAZY[name] && !(D && D[LAZY[name][0]])) {
+      app.innerHTML = '<div class="section"><div class="card" style="padding:26px">'
+        + '<p class="chart-note">Loading the constituency ledger…</p></div></div>';
+      ensureLazy(name).then(() => {
+        const now = currentRoute();
+        if (now.name === name && (now.sub || '') === (sub || '')) render(name, sub);
+      }).catch((err) => {
+        app.innerHTML = '<div class="section"><div class="card" style="padding:26px">'
+          + `<p class="chart-note">Could not load the constituency ledger: ${Views.esc(err.message)}</p></div></div>`;
+        console.error(err);
+      });
+      return;
+    }
+
     if (routeNeedsReport(name, sub) && !(D && D.report)) {
       app.innerHTML = '<div class="section"><div class="card" style="padding:26px">'
         + '<p class="chart-note">Loading the full report…</p></div></div>';
@@ -1561,6 +1602,185 @@ const App = (function () {
      that "figures resting on one class of source that the hostile setting
      removes" is a view of the register rather than a search anyone has to
      construct. */
+  /* The constituency ledger. Three things happen on this page: a postcode is
+     turned into a seat, 649 rows are filtered, and a letter is written into the
+     clipboard. The first is the only one that leaves the browser, and it goes to
+     postcodes.io rather than here — this site has no server to receive it. */
+  behaviours.mp = function () {
+    const C = D.constituency;
+    const rows = Array.prototype.slice.call(document.querySelectorAll('#mp-list .mp-entry'));
+    const partyChips = Array.prototype.slice.call(document.querySelectorAll('#mp-parties .chip'));
+    const voteChips = Array.prototype.slice.call(document.querySelectorAll('#mp-votes .chip'));
+    const search = document.getElementById('mp-search');
+    const count = document.getElementById('mp-count');
+    const ceasefire = C && C.divisions[0].id;
+    let party = 'all';
+    let vote = 'all';
+
+    function apply() {
+      const q = (search && search.value || '').trim().toLowerCase();
+      let shown = 0;
+      rows.forEach((el) => {
+        const ok = (party === 'all' || el.dataset.party === party)
+          && (vote === 'all' || el.dataset['v' + ceasefire] === vote)
+          && (!q || (el.dataset.text || '').indexOf(q) >= 0);
+        el.hidden = !ok;
+        // A row filtered away while it was open would otherwise come back open.
+        if (!ok) el.open = false;
+        if (ok) shown++;
+      });
+      if (count) {
+        count.textContent = shown === rows.length ? `${rows.length} seats` : `${shown} of ${rows.length} seats`;
+      }
+    }
+
+    function pick(chips, el, set) {
+      chips.forEach((c) => c.classList.toggle('active', c === el));
+      set();
+    }
+
+    partyChips.forEach((chip) => chip.addEventListener('click', () => {
+      party = chip.dataset.party;
+      pick(partyChips, chip, apply);
+    }));
+    voteChips.forEach((chip) => chip.addEventListener('click', () => {
+      vote = chip.dataset.vote;
+      pick(voteChips, chip, apply);
+    }));
+    if (search) search.addEventListener('input', apply);
+
+    /* ---------- postcode to seat ---------- */
+
+    const box = document.getElementById('mp-postcode');
+    const button = document.getElementById('mp-lookup');
+    const found = document.getElementById('mp-found');
+
+    function say(html) {
+      if (!found) return;
+      found.hidden = false;
+      found.innerHTML = html;
+    }
+
+    function openSeat(seat) {
+      const index = C.seats[seat];
+      if (index === undefined) {
+        say(`<p class="chart-note">That postcode is in <b>${Views.esc(seat)}</b>, which is not a seat in this ledger. `
+          + 'The ledger covers the House of Commons only, so a Northern Ireland seat held by a member who does not take it, '
+          + 'or a seat vacant at the last rebuild, will not resolve here.</p>');
+        return;
+      }
+      const m = C.members[index];
+      const el = document.getElementById('seat-' + m.slug);
+      say(`<p><b>${Views.esc(seat)}</b> is held by <b>${Views.esc(m.name)}</b> (${Views.esc(m.party)}).</p>`
+        + '<p class="chart-note">Their row is open below, with every vote and every register entry against their name.</p>');
+      if (!el) return;
+      // Clear any filter that would be hiding the row the reader just asked for.
+      party = 'all';
+      vote = 'all';
+      if (search) search.value = '';
+      partyChips.forEach((c, i) => c.classList.toggle('active', i === 0));
+      voteChips.forEach((c, i) => c.classList.toggle('active', i === 0));
+      apply();
+      el.open = true;
+      el.classList.add('search-target');
+      setTimeout(() => el.classList.remove('search-target'), 2600);
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function lookup() {
+      if (!C || !box) return;
+      const code = (box.value || '').trim();
+      if (!code) return;
+      say('<p class="chart-note">Looking that up…</p>');
+      fetch('https://api.postcodes.io/postcodes/' + encodeURIComponent(code))
+        .then((r) => r.json())
+        .then((json) => {
+          const result = json && json.result;
+          const seat = result && (result.parliamentary_constituency_2024 || result.parliamentary_constituency);
+          if (!seat) {
+            say('<p class="chart-note">No seat came back for that postcode. Check the spelling, or search the '
+              + 'constituency by name below.</p>');
+            return;
+          }
+          openSeat(seat);
+        })
+        .catch(() => {
+          say('<p class="chart-note">The postcode lookup could not be reached. It runs against postcodes.io, '
+            + 'which is a separate service; the list below is searchable by constituency name without it.</p>');
+        });
+    }
+
+    if (button) button.addEventListener('click', lookup);
+    if (box) {
+      box.addEventListener('keydown', (ev) => { if (ev.key === 'Enter') { ev.preventDefault(); lookup(); } });
+    }
+
+    /* ---------- the letter ---------- */
+
+    /* Built on demand, for one member at a time. Writing 649 letters into the
+       markup would add well over a megabyte to a page that already carries the
+       whole House. */
+    const list = document.getElementById('mp-list');
+    if (list) {
+      list.addEventListener('click', (ev) => {
+        const button2 = ev.target.closest && ev.target.closest('.mp-letter');
+        if (!button2) return;
+        const block = button2.parentNode;
+        const open = block.querySelector('.mp-draft');
+        if (open) { open.remove(); button2.textContent = 'Draft a letter with the figures'; return; }
+        const text = Views.constituencyLetter(parseInt(button2.dataset.member, 10));
+        const wrap = document.createElement('div');
+        wrap.className = 'mp-draft';
+        const area = document.createElement('textarea');
+        area.readOnly = true;
+        area.value = text;
+        area.rows = 18;
+        const copy = document.createElement('button');
+        copy.className = 'btn';
+        copy.type = 'button';
+        copy.textContent = 'Copy the letter';
+        copy.addEventListener('click', () => {
+          area.select();
+          const done = () => { copy.textContent = 'Copied'; setTimeout(() => { copy.textContent = 'Copy the letter'; }, 2000); };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, () => { document.execCommand('copy'); done(); });
+          } else {
+            document.execCommand('copy');
+            done();
+          }
+        });
+        wrap.appendChild(area);
+        wrap.appendChild(copy);
+        block.appendChild(wrap);
+        button2.textContent = 'Hide the letter';
+      });
+    }
+
+    /* The link into Part XIII.3 lives on this page too, and the report is not
+       loaded until a report route asks for it, so the hash is set first and the
+       anchor waited for. */
+    document.querySelectorAll('.led-sec[data-sec]').forEach((link) => {
+      link.addEventListener('click', (ev) => {
+        const id = link.dataset.sec;
+        if (!id) return;
+        ev.preventDefault();
+        location.hash = '#/evidence';
+        let tries = 0;
+        const tick = () => {
+          const el = document.getElementById(id);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            el.classList.add('search-target');
+            setTimeout(() => el.classList.remove('search-target'), 2600);
+            return;
+          }
+          if (tries++ < 60) setTimeout(tick, 100);
+        };
+        setTimeout(tick, 120);
+      });
+    });
+  };
+
   behaviours.method = function () {
     const entries = Array.prototype.slice.call(document.querySelectorAll('#fx-list .fx-entry'));
     if (!entries.length) return;

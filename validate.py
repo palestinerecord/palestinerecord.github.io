@@ -670,6 +670,178 @@ def check_entities(files):
          % (len(ids), len(company_ids), quoted, len(parties), len(icc.get('positions', []))))
 
 
+def check_constituency(files):
+    """The constituency ledger says how a named person voted, so it is checked hardest.
+
+    Everything else on this site is a claim about a state. This file is a claim
+    about 649 living people, each of whom is entitled to have it be right, and
+    each of whom can be written to on the strength of it. A wrong vote here is
+    not a rendering fault; it is a letter to a member accusing them of something
+    they did not do.
+
+    So: the three divisions are checked against the published counts that
+    identify them, a vote is checked to be one of the six things a vote can be,
+    every member who is recorded as having voted is checked to have been in the
+    House at the time, the seat map is checked to resolve to a real member
+    because the postcode lookup joins through it, and the money is checked to
+    add up. The search terms are checked to be present and to compile, because
+    the page prints them as the statement of what the ledger cannot see.
+    """
+    blob = files.get('constituency')
+    if not blob:
+        fail('constituency', 'data/constituency.json is missing; run constituency.py')
+        return
+
+    meta = blob.get('meta', {})
+    members = blob.get('members', [])
+    divisions = blob.get('divisions', [])
+    seats = blob.get('seats', {})
+    parties = blob.get('parties', [])
+
+    if len(members) != meta.get('members'):
+        fail('constituency', 'the file states %s members and carries %d'
+             % (meta.get('members'), len(members)))
+
+    # A vote is one of six things. Anything else would render as a badge with
+    # no meaning, and would silently be counted as neither for nor against.
+    casts = {'aye', 'no', 'aye-teller', 'no-teller', 'absent', 'not-a-member'}
+    ids = {str(d['id']) for d in divisions}
+
+    if not divisions:
+        fail('constituency', 'the ledger carries no divisions, so every member row is empty')
+    for d in divisions:
+        for key in ('date', 'title', 'formal', 'moved', 'question', 'aye_means', 'no_means',
+                    'result', 'ayes', 'noes', 'note', 'source'):
+            if not str(d.get(key, '')).strip():
+                fail('constituency', 'division %s carries no %s, and the page states each of them'
+                     % (d.get('id'), key))
+        if not str(d.get('source', '')).startswith('http'):
+            fail('constituency', 'division %s does not link to its own division list' % d.get('id'))
+        # The published counts are what identify the division, since the House
+        # titles it by procedural form and the title is curated here.
+        cast = [m['votes'].get(str(d['id'])) for m in members]
+        recorded = sum(1 for c in cast if c in ('aye', 'no', 'aye-teller', 'no-teller'))
+        sat = sum(1 for c in cast if c != 'not-a-member')
+        if sat != d.get('sitting'):
+            fail('constituency', 'division %s states %s members sat in it; %d members carry a vote '
+                                 'other than not-a-member' % (d.get('id'), d.get('sitting'), sat))
+        still = d.get('still_here', {})
+        for key in ('aye', 'no', 'absent'):
+            want = sum(1 for c in cast if (c or '').replace('-teller', '') == key)
+            if still.get(key) != want:
+                fail('constituency', 'division %s states %s members still sitting voted %s; the rows give %d'
+                     % (d.get('id'), still.get(key), key, want))
+        if recorded > d['ayes'] + d['noes']:
+            fail('constituency', 'division %s records %d votes among sitting members but was published '
+                                 'as %d to %d in total' % (d.get('id'), recorded, d['ayes'], d['noes']))
+
+    slugs = set()
+    for m in members:
+        if not m.get('name') or not m.get('seat'):
+            fail('constituency', 'a member row carries no name or no seat')
+            continue
+        if m.get('slug') in slugs:
+            fail('constituency', 'two members share the slug %s, so the postcode lookup would open '
+                                 'the wrong row' % m.get('slug'))
+        slugs.add(m.get('slug'))
+        if set(m.get('votes', {})) != ids:
+            fail('constituency', '%s does not carry a vote for every division; the page renders one '
+                                 'badge per division and would leave a gap' % m['name'])
+        for did, cast in m.get('votes', {}).items():
+            if cast not in casts:
+                fail('constituency', '%s is recorded as "%s" in division %s, which is not a vote'
+                     % (m['name'], cast, did))
+        # `since` is the start of the member's current unbroken service, so a
+        # member sitting continuously since before a division must appear in
+        # that division's list, as an aye, a no or a no-vote-recorded. The
+        # converse does not hold: a `since` later than the division is also
+        # what a member who served, left and returned by by-election looks
+        # like, and at least one member of this House is exactly that.
+        for d in divisions:
+            cast = m['votes'].get(str(d['id']))
+            if cast == 'not-a-member' and m.get('since') and m['since'] <= d['date']:
+                fail('constituency', '%s has sat without a break since %s but is recorded as not a '
+                                     'member in the division of %s' % (m['name'], m['since'], d['date']))
+        for i in m.get('interests', []):
+            if not (i.get('summary') or '').strip():
+                fail('constituency', 'an interest against %s carries no summary' % m['name'])
+        for g in m.get('donations', []):
+            if not g.get('ref'):
+                fail('constituency', 'a donation to %s carries no Electoral Commission reference, so '
+                                     'it cannot be looked up' % m['name'])
+            if not isinstance(g.get('value'), (int, float)) or g['value'] <= 0:
+                fail('constituency', 'a donation to %s carries no value' % m['name'])
+
+    # The postcode lookup joins a constituency name to this map and opens the
+    # row it points at. An index out of range would open nothing and say nothing.
+    if len(seats) != len(members):
+        fail('constituency', 'the seat map holds %d entries for %d members' % (len(seats), len(members)))
+    for name, index in seats.items():
+        if not isinstance(index, int) or not 0 <= index < len(members):
+            fail('constituency', 'the seat %s points at member %s, which is not in the file' % (name, index))
+        elif members[index]['seat'] != name:
+            fail('constituency', 'the seat %s points at the row for %s' % (name, members[index]['seat']))
+
+    with_interest = sum(1 for m in members if m.get('interests'))
+    with_donation = sum(1 for m in members if m.get('donations'))
+    if with_interest != meta.get('members_with_interest'):
+        fail('constituency', 'the file states %s members with a registered interest and carries %d'
+             % (meta.get('members_with_interest'), with_interest))
+    if with_donation != meta.get('members_with_donation'):
+        fail('constituency', 'the file states %s members with a reported donation and carries %d'
+             % (meta.get('members_with_donation'), with_donation))
+
+    to_members = sum(len(m.get('donations', [])) for m in members)
+    if to_members != meta.get('donations_to_members'):
+        fail('constituency', 'the file states %s donations reaching members and carries %d'
+             % (meta.get('donations_to_members'), to_members))
+    party_total = round(sum(p.get('total', 0) for p in parties), 2)
+    if abs(party_total - (meta.get('party_total') or 0)) > 1:
+        fail('constituency', 'the party donations total %s but the file states %s'
+             % (party_total, meta.get('party_total')))
+    for p in parties:
+        if round(sum(d['total'] for d in p.get('donors', [])), 2) != round(p.get('total', 0), 2):
+            fail('constituency', "the donors listed against %s do not add to its total" % p.get('name'))
+
+    # The page prints these terms as the statement of what the ledger cannot
+    # see. A term that does not compile would silently match nothing.
+    for key in ('register_terms', 'donation_terms'):
+        pattern = meta.get(key)
+        if not pattern:
+            fail('constituency', 'the file publishes no %s, so the page cannot state what it searched for'
+                 % key)
+            continue
+        try:
+            re.compile(pattern)
+        except re.error as err:
+            fail('constituency', 'the published %s will not compile: %s' % (key, err))
+    if not str(meta.get('lookup', '')).startswith('https://'):
+        fail('constituency', 'the postcode lookup is not published as an https endpoint')
+
+    app = (HERE / 'js' / 'app.js').read_text()
+    views = (HERE / 'js' / 'views.js').read_text()
+    if "'constituency', 'data/constituency.json'" not in app:
+        fail('constituency', 'app.js does not fetch data/constituency.json, so the route would paint '
+                             'a loading line and never leave it')
+    if 'behaviours.mp' not in app:
+        fail('constituency', 'app.js wires no behaviour for the constituency route, so the postcode '
+                             'lookup and the filters would do nothing')
+    if 'mp: mpView' not in views:
+        fail('constituency', 'views.js does not register the constituency view')
+    if 'api.postcodes.io' not in app:
+        fail('constituency', 'the postcode lookup is not wired to the published endpoint')
+    # No member email address is published here, deliberately: the page offers
+    # a letter and a link to the member's own contact page instead.
+    for blob_text, label in ((views, 'views.js'), (json.dumps(blob), 'constituency.json')):
+        if re.search(r'@parliament\.uk', blob_text):
+            fail('constituency', '%s carries a parliament.uk address; this page publishes none' % label)
+
+    note('constituency: %d seats, %d divisions, %d registered interests against %d members, '
+         '%d donations reaching %d members, \u00a3%s to parties'
+         % (len(members), len(divisions), sum(len(m.get('interests', [])) for m in members),
+            with_interest, to_members, with_donation, format(meta.get('party_total') or 0, ',.0f')))
+
+
 def check_falsification(files):
     """The register is an offer, so the check is that the offer is real.
 
@@ -1261,6 +1433,7 @@ def main():
         check_patterns(files)
         check_entities(files)
         check_falsification(files)
+        check_constituency(files)
         check_figures_against_markdown(files)
         check_chart_wiring()
         check_cache_bust()
