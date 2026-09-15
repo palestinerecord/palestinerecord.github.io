@@ -30,7 +30,7 @@
    this worker and empties every cache it made.
    ============================================================ */
 
-const VERSION = 'v73';
+const VERSION = 'v74';
 const SHELL = 'record-shell-' + VERSION;
 const DATA = 'record-data';
 const MINE = /^record-(shell|data)/;
@@ -42,15 +42,15 @@ const MINE = /^record-(shell|data)/;
 const SHELL_FILES = [
   './',
   './index.html',
-  './css/style.css?v=73',
-  './js/charts.js?v=73',
-  './js/share.js?v=73',
-  './js/views.js?v=73',
-  './js/app.js?v=73',
-  './js/scene.js?v=73',
+  './css/style.css?v=74',
+  './js/charts.js?v=74',
+  './js/share.js?v=74',
+  './js/views.js?v=74',
+  './js/app.js?v=74',
+  './js/scene.js?v=74',
   './manifest.webmanifest',
-  './assets/flag-palestine.svg?v=73',
-  './assets/favicon.svg?v=73',
+  './assets/flag-palestine.svg?v=74',
+  './assets/favicon.svg?v=74',
   './assets/icon-192.png',
   './assets/icon-512.png',
 ];
@@ -153,6 +153,12 @@ self.addEventListener('fetch', (event) => {
   // deliberately incomplete page.
   if (url.searchParams.has('prerender') || url.searchParams.has('nosw')) return;
   if (url.protocol !== 'http:' && url.protocol !== 'https:') return;
+
+  // Anything on another origin is left entirely alone. The constituency
+  // ledger turns a postcode into a seat by asking postcodes.io, and a worker
+  // that answers for that request caches nothing useful and breaks the one
+  // call on this site that has to reach a service other than this one.
+  if (url.origin !== self.location.origin) return;
 
   if (request.mode === 'navigate') {
     event.respondWith(networkFirst(request));

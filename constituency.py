@@ -49,6 +49,10 @@ DIVISIONS = [
         # can say which division it belongs to without the reader counting
         # columns. It names the subject, never the side.
         'short': 'Ceasefire',
+        # The title as it reads inside a sentence. A title lowercased in code
+        # would lowercase Gaza with it, and the letter this page drafts is
+        # sent to a member's office under the reader's own name.
+        'in_sentence': 'an immediate ceasefire in Gaza',
         'formal': "King's Speech Motion for an Address: Amendment (h)",
         'moved': 'Moved by the Scottish National Party',
         'question': 'That the House call on the government to join the international community in '
@@ -69,6 +73,7 @@ DIVISIONS = [
         'date': '2023-11-15',
         'title': 'Extended humanitarian pauses, short of a ceasefire',
         'short': 'Pauses',
+        'in_sentence': 'extending the humanitarian pauses, short of a ceasefire',
         'formal': "King's Speech Motion for an Address: Amendment (r)",
         'moved': 'Moved by the Labour front bench',
         'question': 'That the existing daily humanitarian pauses be extended to allow aid in at '
@@ -89,6 +94,7 @@ DIVISIONS = [
         'date': '2025-07-02',
         'title': 'Proscribing Palestine Action as a terrorist organisation',
         'short': 'Proscription',
+        'in_sentence': 'proscribing Palestine Action as a terrorist organisation',
         'formal': 'Terrorism Act 2000 (Proscribed Organisations) (Amendment) Order 2025',
         'moved': 'Moved by the Home Secretary',
         'question': 'That the draft Order, proscribing Palestine Action alongside the Russian '

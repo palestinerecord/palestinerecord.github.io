@@ -710,8 +710,8 @@ def check_constituency(files):
     if not divisions:
         fail('constituency', 'the ledger carries no divisions, so every member row is empty')
     for d in divisions:
-        for key in ('date', 'title', 'formal', 'moved', 'question', 'aye_means', 'no_means',
-                    'result', 'ayes', 'noes', 'note', 'source'):
+        for key in ('date', 'title', 'short', 'in_sentence', 'formal', 'moved', 'question',
+                    'aye_means', 'no_means', 'result', 'ayes', 'noes', 'note', 'source'):
             if not str(d.get(key, '')).strip():
                 fail('constituency', 'division %s carries no %s, and the page states each of them'
                      % (d.get('id'), key))
@@ -815,8 +815,19 @@ def check_constituency(files):
             re.compile(pattern)
         except re.error as err:
             fail('constituency', 'the published %s will not compile: %s' % (key, err))
-    if not str(meta.get('lookup', '')).startswith('https://'):
+    lookup = str(meta.get('lookup', ''))
+    if not lookup.startswith('https://'):
         fail('constituency', 'the postcode lookup is not published as an https endpoint')
+    else:
+        # The page carries a content security policy, and a policy that does
+        # not name this host turns the postcode box into a control that does
+        # nothing at all: the fetch is refused by the browser before it is
+        # made, and the page reports that the service could not be reached.
+        host = 'https://' + lookup.split('/')[2]
+        policy = re.search(r'connect-src ([^;]+);', (HERE / 'index.html').read_text())
+        if not policy or host not in policy.group(1):
+            fail('constituency', "the content security policy does not allow a connection to %s, so "
+                                 "the postcode lookup would be refused before it was made" % host)
 
     app = (HERE / 'js' / 'app.js').read_text()
     views = (HERE / 'js' / 'views.js').read_text()

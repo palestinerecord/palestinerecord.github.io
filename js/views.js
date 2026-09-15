@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=73" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=74" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=73" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=74" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -3239,7 +3239,7 @@ const Views = (function () {
         no: 'you voted against it', 'no-teller': 'you were a teller against it',
         absent: 'you did not vote', 'not-a-member': 'you were not then a member of the House',
       }[cast] || 'the record does not show how you voted';
-      lines.push('On ' + longDay(d.date) + ' the House divided on ' + d.title.toLowerCase()
+      lines.push('On ' + longDay(d.date) + ' the House divided on ' + d.in_sentence
         + '. The question was: "' + d.question + '" It was ' + d.result.toLowerCase()
         + ' by ' + fmt(d.ayes) + ' to ' + fmt(d.noes) + '. Sitting for ' + seat + ', ' + how + '.');
       lines.push('');
