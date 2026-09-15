@@ -1249,20 +1249,41 @@ tbody td strong { color: var(--text); }
   .nav {
     position: fixed; top: var(--topbar-h); left: 0; right: 0;
     flex-direction: column; background: var(--panel-solid); border-bottom: 1px solid var(--line);
-    padding: 12px; gap: 2px; display: none;
+    gap: 2px; display: none;
+    /* The panel is fixed, so it does not move when the page scrolls. Without a
+       height of its own it simply runs off the bottom of a phone screen and
+       everything past the fold — the whole of the third group — is unreachable.
+       It takes the viewport left under the bar and scrolls inside it instead.
+       100dvh is the unit that shrinks with the mobile browser's own chrome;
+       the 100vh line above it is the fallback for engines without dvh, and is
+       deliberately left in place rather than replaced. */
+    max-height: calc(100vh - var(--topbar-h));
+    max-height: calc(100dvh - var(--topbar-h));
+    overflow-y: auto; overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    /* The last row has to clear the home indicator, or it cannot be tapped. */
+    padding: 12px 12px calc(16px + env(safe-area-inset-bottom));
+    box-shadow: 0 26px 50px rgba(0, 0, 0, .38);
   }
   .nav.open { display: flex; }
   .nav a { padding: 11px 14px; font-size: 13.5px; }
   /* In the panel there is room to show every route at once, so a group is a
      heading over its links rather than a control: nothing to open, nothing to
-     miss, and the same five names ordering the same fourteen destinations. */
+     miss, and the same five names ordering the same fourteen destinations.
+     The headings stick to the top of the panel as it scrolls, so the reader
+     can always see which of the three they are currently inside. */
   .nav-group { display: contents; }
   .nav-head {
     padding: 14px 14px 5px; font-size: 11px; font-weight: 600;
     letter-spacing: .09em; text-transform: uppercase; color: var(--muted);
-    pointer-events: none; background: none;
+    pointer-events: none; background: var(--panel-solid);
+    position: sticky; top: 0; z-index: 1;
+    /* A hairline above each heading, so the three groups read as three blocks
+       rather than as one list of eighteen rows. */
+    border-top: 1px solid var(--line); margin-top: 6px;
   }
-  .nav-head.active { background: none; color: var(--accent); }
+  .nav > .nav-group:first-of-type .nav-head { border-top: 0; margin-top: 0; }
+  .nav-head.active { background: var(--panel-solid); color: var(--accent); }
   .nav-caret { display: none; }
   .nav-menu {
     position: static; display: flex; min-width: 0;

@@ -378,7 +378,7 @@ const App = (function () {
       head.classList.toggle('active', !!g.querySelector('a.active'));
       head.setAttribute('aria-expanded', 'false');
     });
-    nav.classList.remove('open');
+    closeNavPanel();
 
     // Chrome, motion and behaviour are all optional extras — the content is not.
     const settled = earlyPainted;
@@ -824,6 +824,14 @@ const App = (function () {
      :focus-within — what a button adds is a touch target and a state a screen
      reader can announce. Only one group is open at a time, and any click
      outside the bar, any Escape, and every navigation closes it. */
+  /* The collapsed panel is opened from one place and closed from three, and the
+     button beside it has to say which state it is in either way. */
+  function closeNavPanel() {
+    nav.classList.remove('open');
+    const button = document.getElementById('nav-toggle');
+    if (button) button.setAttribute('aria-expanded', 'false');
+  }
+
   function navGroups() {
     const groups = Array.from(nav.querySelectorAll('.nav-group'));
     if (!groups.length) return;
@@ -842,7 +850,7 @@ const App = (function () {
     document.addEventListener('keydown', (e) => {
       if (e.key !== 'Escape') return;
       close(null);
-      nav.classList.remove('open');
+      closeNavPanel();
     });
   }
 
@@ -2384,7 +2392,15 @@ const App = (function () {
       `<a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> ` +
       `(public domain), ${D.ts.meta.first_month} – ${D.ts.meta.last_month}.`;
 
-    document.getElementById('nav-toggle').addEventListener('click', () => nav.classList.toggle('open'));
+    const navToggle = document.getElementById('nav-toggle');
+    navToggle.addEventListener('click', () => {
+      if (nav.classList.contains('open')) return closeNavPanel();
+      nav.classList.add('open');
+      navToggle.setAttribute('aria-expanded', 'true');
+      /* The panel scrolls inside itself, so without this it would reopen
+         wherever the last reader left it rather than at the first route. */
+      nav.scrollTop = 0;
+    });
     navGroups();
     window.addEventListener('hashchange', route);
     initSearch();
