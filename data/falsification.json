@@ -1457,7 +1457,7 @@
     "israeli-western-only"
    ],
    "ref": "§6.3",
-   "value": 174771,
+   "value": 174798,
    "attribution": "Gaza MoH"
   },
   {
@@ -4446,7 +4446,7 @@
     "israeli-western-only"
    ],
    "ref": "§6.3",
-   "value": 73786,
+   "value": 73789,
    "attribution": "Gaza MoH / OCHA"
   },
   {
@@ -6451,26 +6451,6 @@
    "statement": 15
   },
   {
-   "id": "statements-eyal-zamir",
-   "claim": "Eyal Zamir",
-   "kind": "statement",
-   "file": "statements.json",
-   "sources": [
-    "times-of-israel",
-    "ynet",
-    "aljazeera"
-   ],
-   "origins": [
-    "israeli-media",
-    "media"
-   ],
-   "independence": 2,
-   "falls": [],
-   "date": "14 September 2026",
-   "attribution": "Times of Israel, 14 September 2026; Ynet, 14 September 2026; Al Jazeera, 14 September 2026; VINnews, 14 September 2026.",
-   "statement": 122
-  },
-  {
    "id": "statements-ezra-yachin",
    "claim": "Ezra Yachin",
    "kind": "statement",
@@ -6706,6 +6686,26 @@
    "date": "4 January 2024 (continuously updated)",
    "attribution": "Law for Palestine, 4 January 2024; ReliefWeb; TRT World.",
    "statement": 55
+  },
+  {
+   "id": "statements-lieutenant-general-eyal-zamir-2",
+   "claim": "Lieutenant General Eyal Zamir",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "ynet",
+    "aljazeera"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "14 September 2026",
+   "attribution": "Times of Israel, 14 September 2026; Ynet, 14 September 2026; Al Jazeera, 14 September 2026; VINnews, 14 September 2026.",
+   "statement": 122
   },
   {
    "id": "statements-lt-gen-rafael-eitan",

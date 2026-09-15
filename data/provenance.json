@@ -1243,7 +1243,7 @@
    "file": "figures.json",
    "path": "headline[0]",
    "label": "Palestinians killed in Gaza",
-   "value": 73786,
+   "value": 73789,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
@@ -1273,7 +1273,7 @@
    "file": "figures.json",
    "path": "headline[2]",
    "label": "Injured in Gaza",
-   "value": 174771,
+   "value": 174798,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
@@ -3523,7 +3523,7 @@
   {
    "file": "statements.json",
    "path": "items[122]",
-   "label": "Eyal Zamir",
+   "label": "Lieutenant General Eyal Zamir",
    "value": "It is based on blood libels, deliberate distortion of reality, and false and serious accusations.",
    "numeric": false,
    "ref": "",
@@ -3534,7 +3534,7 @@
     "ynet",
     "aljazeera"
    ],
-   "id": "statements-eyal-zamir"
+   "id": "statements-lieutenant-general-eyal-zamir-2"
   },
   {
    "file": "statements.json",
