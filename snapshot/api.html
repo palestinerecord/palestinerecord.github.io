@@ -32,8 +32,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="../assets/favicon.svg?v=74" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=74">
+<link rel="icon" href="../assets/favicon.svg?v=75" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=75">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -66,8 +66,8 @@
 <meta name="twitter:title" content="Open data — the record as files · The Documented Record">
 <meta name="twitter:description" content="Every dataset behind these charts, published as plain JSON under no login and no key, with an embeddable address for each of the charts drawn from them.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/api.png">
-<link rel="preload" href="../css/style.css?v=74" as="style">
-<link rel="stylesheet" href="../css/style.css?v=74">
+<link rel="preload" href="../css/style.css?v=75" as="style">
+<link rel="stylesheet" href="../css/style.css?v=75">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -105,7 +105,7 @@
   "url": "https://palestinerecord.github.io/",
   "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
   "image": "https://palestinerecord.github.io/assets/share-card.png",
-  "wordCount": 133570,
+  "wordCount": 136953,
   "dateModified": "2026-09-15",
   "temporalCoverage": "1917/2026",
   "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
@@ -261,26 +261,52 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=74" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=75" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
     </span>
   </a>
+  <!-- Nineteen routes will not fit in a bar, and fourteen of them in a flat row
+       said nothing about how they relate: the charts, the children and the
+       single day are one record at three grains, and the four ways of using it
+       against a claim were scattered between them. They are grouped instead.
+       Every destination is a plain anchor in the markup, hidden by CSS until
+       its group is open, so a crawler, a reader with no JavaScript and the
+       prerenderer all see the same set of links a mouse does. Below the bar's
+       breakpoint the groups become labelled blocks in the menu panel, with
+       nothing to open. -->
   <nav class="nav" id="nav">
     <a href="../index.html#/overview" data-view="overview">Overview</a>
     <a href="../index.html#/tour/1" data-view="tour">Start here</a>
-    <a href="../index.html#/data" data-view="data">Data</a> <a href="../index.html#/children" data-view="children">Children</a>
-    <a href="../index.html#/day" data-view="day">Day by day</a>
-    <a href="../index.html#/timeline" data-view="timeline">Timeline</a>
-    <a href="../index.html#/evidence" data-view="evidence">Evidence</a>
-    <a href="../index.html#/rebuttals" data-view="rebuttals">Rebuttals</a>
-    <a href="../index.html#/statements" data-view="statements">Statements</a>
-    <a href="../index.html#/legal" data-view="legal">Legal</a>
-    <a href="../index.html#/sources" data-view="sources">Sources</a>
-    <a href="../index.html#/provenance" data-view="provenance">Provenance</a>
-    <a href="../index.html#/answer" data-view="answer">Answer a claim</a>
-      <a href="../index.html#/ledger" data-view="ledger">Ledger</a>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/data" data-view="data">The charts<em>Nine chapters, every figure plotted</em></a>
+        <a href="../index.html#/children" data-view="children">Children<em>The cohort, named and counted</em></a>
+        <a href="../index.html#/day" data-view="day">Day by day<em>Any single day of the record</em></a>
+        <a href="../index.html#/timeline" data-view="timeline">Timeline<em>The chronology, 1917–2026</em></a>
+      </div>
+    </div>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/evidence" data-view="evidence">Evidence<em>The report in full, nothing omitted</em></a>
+        <a href="../index.html#/statements" data-view="statements">Statements<em>Intent, in the speaker’s own words</em></a>
+        <a href="../index.html#/sources" data-view="sources">Sources<em>Every source, linked at origin</em></a>
+        <a href="../index.html#/provenance" data-view="provenance">Provenance<em>Pull the thread behind a figure</em></a>
+      </div>
+    </div>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/legal" data-view="legal">Legal<em>The findings and the instruments</em></a>
+        <a href="../index.html#/ledger" data-view="ledger">Ledger<em>The persons and companies named</em></a>
+        <a href="../index.html#/mp" data-view="mp">Constituency<em>All 649 seats, and how yours voted</em></a>
+        <a href="../index.html#/rebuttals" data-view="rebuttals">Rebuttals<em>Every defence, answered</em></a>
+        <a href="../index.html#/answer" data-view="answer">Answer a claim<em>Paste one, and read the record</em></a>
+      </div>
+    </div>
   </nav>
   <div class="freshness" id="freshness" title="Casualty time-series last updated 14 September 2026 (1 days ago). Report and curated figures compiled 15 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>14 September 2026</b></span></div>
   
@@ -423,7 +449,7 @@
               <div class="src">Joined by entities.py from statements.json, report.json and world-positions.json; no claim originates here.</div>
             </div>
             <div class="ds-meta">
-              83 kB<br>2026-09-15
+              84 kB<br>2026-09-15
               <a href="../data/entities.json" download="">download ↓</a>
             </div>
             <div class="ds-fields">meta · classes · persons · companies · icc</div>
@@ -435,7 +461,7 @@
               <div class="src">Generated by falsify.py from provenance.json and statements.json; the register asserts nothing the graph does not already hold, and adds only the test, which is written once per kind of claim rather than per entry.</div>
             </div>
             <div class="ds-meta">
-              171 kB<br>358 records<br>2026-09-15
+              173 kB<br>364 records<br>2026-09-15
               <a href="../data/falsification.json" download="">download ↓</a>
             </div>
             <div class="ds-fields">meta · conditions · kinds · origins · sources · switches · entries</div>
@@ -555,7 +581,7 @@
               <div class="src">Derived by provenance.py from the source field of every curated record; each claim keeps the source text it was written with.</div>
             </div>
             <div class="ds-meta">
-              205 kB<br>2026-09-15
+              208 kB<br>2026-09-15
               <a href="../data/provenance.json" download="">download ↓</a>
             </div>
             <div class="ds-fields">meta · summary · switches · sources · files · claims</div>
@@ -591,7 +617,7 @@
               <div class="src">Each entry links to the publisher.</div>
             </div>
             <div class="ds-meta">
-              80 kB<br>2026-09-15
+              85 kB<br>2026-09-15
               <a href="../data/sources.json" download="">download ↓</a>
             </div>
             <div class="ds-fields">meta · groups</div>
@@ -603,7 +629,7 @@
               <div class="src">Primary reporting as cited per record; §6.2 and Appendix C of the report.</div>
             </div>
             <div class="ds-meta">
-              137 kB<br>120 records<br>2026-09-14
+              147 kB<br>126 records<br>2026-09-15
               <a href="../data/statements.json" download="">download ↓</a>
             </div>
             <div class="ds-fields">meta · categories · items</div>
@@ -615,7 +641,7 @@
               <div class="src">Primary documents as cited per entry.</div>
             </div>
             <div class="ds-meta">
-              73 kB<br>163 records<br>2026-09-15
+              76 kB<br>167 records<br>2026-09-15
               <a href="../data/timeline-extra.json" download="">download ↓</a>
             </div>
             <div class="ds-fields">meta · items</div>
@@ -1228,13 +1254,13 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=74" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=75" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
             evidentiary standards to all actors. Every heading, paragraph, list and table it contains is
             reproduced in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">133,570 words · 36 parts · 161 sections · 14 tables · 305 chronology entries · 120 documented statements · 180 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">136,953 words · 36 parts · 163 sections · 14 tables · 309 chronology entries · 126 documented statements · 188 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
     <!-- A record meant to be used in an argument has to be citable in one.
          Filled in by app.js with the route on screen and the date of the data
          it is showing, so a citation copied from here names the version the
@@ -1255,7 +1281,7 @@
       </div>
     </details>
     <p class="footer-links">
-      <a href="../index.html#/method">Method</a> · <a href="../index.html#/mp">Constituency</a> · <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../index.html#/method">Method</a> · <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
       <a href="snapshot/">Text-only versions</a> ·
       <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a> ·
       <a href="feed.xml">Feed</a> ·

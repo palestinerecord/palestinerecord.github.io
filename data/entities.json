@@ -58,7 +58,8 @@
     48,
     52,
     75,
-    103
+    103,
+    120
    ],
    "mentions": [
     {
@@ -122,6 +123,12 @@
      "n": 2
     },
     {
+     "id": "141d-the-turn-to-investigation---the-prime-minister-the-chief-of-the-general-sta",
+     "title": "14.1D The Turn to Investigation - The Prime Minister, the Chief of the General Staff, and the Search for the Sources (14 September 2026)",
+     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
+     "n": 2
+    },
+    {
      "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
      "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
@@ -137,12 +144,6 @@
      "id": "156a-the-united-states-own-position-statehood-deferred-annexation-opposed",
      "title": "15.6A The United States' Own Position: Statehood Deferred, Annexation Opposed",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 2
-    },
-    {
-     "id": "35-east-jerusalem-and-al-aqsa-the-collapse-of-the-status-quo-2026",
-     "title": "3.5 East Jerusalem and Al-Aqsa: The Collapse of the Status Quo (2026)",
-     "part": "PART III - THE 58-YEAR ILLEGAL OCCUPATION (1967–2026)",
      "n": 2
     }
    ],
@@ -856,6 +857,40 @@
    "sanctions": []
   },
   {
+   "id": "lieutenant-general-eyal-zamir",
+   "name": "Lieutenant General Eyal Zamir",
+   "role": "Lieutenant General, Chief of the General Staff of the Israel Defense Forces",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    84,
+    122
+   ],
+   "mentions": [
+    {
+     "id": "63a-the-rafah-humanitarian-city-plan-july-2025-and-the-israeli-legal-revolt-agai",
+     "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 5
+    },
+    {
+     "id": "141d-the-turn-to-investigation---the-prime-minister-the-chief-of-the-general-sta",
+     "title": "14.1D The Turn to Investigation - The Prime Minister, the Chief of the General Staff, and the Search for the Sources (14 September 2026)",
+     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
+     "n": 2
+    },
+    {
+     "id": "57-the-institutional-response-to-documented-war-crimes-evidence-suppression-over",
+     "title": "5.7 The Institutional Response to Documented War Crimes: Evidence Suppression Over Accountability",
+     "part": "PART V - THE PATTERN OF WAR CRIMES: A 75-YEAR RECORD",
+     "n": 1
+    }
+   ],
+   "sections": 8,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "moshe-ya-alon",
    "name": "Moshe Ya'alon",
    "role": "Former IDF Chief of Staff; Minister of Defence, 2013-2016",
@@ -902,6 +937,34 @@
     }
    ],
    "sections": 4,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "miki-zohar",
+   "name": "Miki Zohar",
+   "role": "Minister of Culture and Sport of Israel",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    119,
+    121
+   ],
+   "mentions": [
+    {
+     "id": "141c-the-states-response---the-venice-prize-the-threat-to-revoke-the-filmmakers-",
+     "title": "14.1C The State's Response - The Venice Prize, the Threat to Revoke the Filmmakers' Citizenship, and the IDF's Rebuttal",
+     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
+     "n": 1
+    },
+    {
+     "id": "141d-the-turn-to-investigation---the-prime-minister-the-chief-of-the-general-sta",
+     "title": "14.1D The Turn to Investigation - The Prime Minister, the Chief of the General Staff, and the Search for the Sources (14 September 2026)",
+     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
+     "n": 1
+    }
+   ],
+   "sections": 2,
    "warrant": null,
    "sanctions": []
   },
@@ -1140,33 +1203,6 @@
     }
    ],
    "sections": 8,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "lieutenant-general-eyal-zamir",
-   "name": "Lieutenant General Eyal Zamir",
-   "role": "Chief of the General Staff, Israel Defense Forces",
-   "class": "military",
-   "tier": "Military",
-   "statements": [
-    84
-   ],
-   "mentions": [
-    {
-     "id": "63a-the-rafah-humanitarian-city-plan-july-2025-and-the-israeli-legal-revolt-agai",
-     "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
-     "n": 5
-    },
-    {
-     "id": "57-the-institutional-response-to-documented-war-crimes-evidence-suppression-over",
-     "title": "5.7 The Institutional Response to Documented War Crimes: Evidence Suppression Over Accountability",
-     "part": "PART V - THE PATTERN OF WAR CRIMES: A 75-YEAR RECORD",
-     "n": 1
-    }
-   ],
-   "sections": 6,
    "warrant": null,
    "sanctions": []
   },
@@ -1625,27 +1661,6 @@
      "id": "35a-attacks-on-christians-and-christian-sites-in-jerusalem-2023-2026",
      "title": "3.5A Attacks on Christians and Christian Sites in Jerusalem (2023-2026)",
      "part": "PART III - THE 58-YEAR ILLEGAL OCCUPATION (1967–2026)",
-     "n": 1
-    }
-   ],
-   "sections": 1,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "miki-zohar",
-   "name": "Miki Zohar",
-   "role": "Minister of Culture and Sport of Israel",
-   "class": "government",
-   "tier": "Cabinet",
-   "statements": [
-    119
-   ],
-   "mentions": [
-    {
-     "id": "141c-the-states-response---the-venice-prize-the-threat-to-revoke-the-filmmakers-",
-     "title": "14.1C The State's Response - The Venice Prize, the Threat to Revoke the Filmmakers' Citizenship, and the IDF's Rebuttal",
-     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
      "n": 1
     }
    ],

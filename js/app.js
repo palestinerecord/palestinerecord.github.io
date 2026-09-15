@@ -371,6 +371,13 @@ const App = (function () {
     window.scrollTo(0, 0);
 
     nav.querySelectorAll('a').forEach((a) => a.classList.toggle('active', a.dataset.view === name));
+    /* A grouped link is inside a panel nobody can see, so the group itself has
+       to carry the mark, or the bar stops saying where the reader is. */
+    nav.querySelectorAll('.nav-group').forEach((g) => {
+      const head = g.querySelector('.nav-head');
+      head.classList.toggle('active', !!g.querySelector('a.active'));
+      head.setAttribute('aria-expanded', 'false');
+    });
     nav.classList.remove('open');
 
     // Chrome, motion and behaviour are all optional extras — the content is not.
@@ -812,6 +819,33 @@ const App = (function () {
 
   /* The skip link must not become a route: it moves focus into the record
      without touching the hash the router reads. */
+  /* Hover opens a group for a mouse; this opens it for everything else. The
+     panels are ordinary markup, so the keyboard already reaches them through
+     :focus-within — what a button adds is a touch target and a state a screen
+     reader can announce. Only one group is open at a time, and any click
+     outside the bar, any Escape, and every navigation closes it. */
+  function navGroups() {
+    const groups = Array.from(nav.querySelectorAll('.nav-group'));
+    if (!groups.length) return;
+    const close = (except) => groups.forEach((g) => {
+      if (g !== except) g.querySelector('.nav-head').setAttribute('aria-expanded', 'false');
+    });
+    groups.forEach((g) => {
+      const head = g.querySelector('.nav-head');
+      head.addEventListener('click', () => {
+        const open = head.getAttribute('aria-expanded') === 'true';
+        close(g);
+        head.setAttribute('aria-expanded', open ? 'false' : 'true');
+      });
+    });
+    document.addEventListener('click', (e) => { if (!nav.contains(e.target)) close(null); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      close(null);
+      nav.classList.remove('open');
+    });
+  }
+
   function skipLink() {
     const link = document.querySelector('.skip-link');
     if (!link) return;
@@ -2351,6 +2385,7 @@ const App = (function () {
       `(public domain), ${D.ts.meta.first_month} – ${D.ts.meta.last_month}.`;
 
     document.getElementById('nav-toggle').addEventListener('click', () => nav.classList.toggle('open'));
+    navGroups();
     window.addEventListener('hashchange', route);
     initSearch();
     chartTools();

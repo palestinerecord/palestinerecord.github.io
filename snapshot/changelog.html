@@ -32,8 +32,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="../assets/favicon.svg?v=74" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=74">
+<link rel="icon" href="../assets/favicon.svg?v=75" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=75">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -66,8 +66,8 @@
 <meta name="twitter:title" content="Changelog — every revision, dated · The Documented Record">
 <meta name="twitter:description" content="What changed in the record and when: each figure refreshed, each finding added, in the words of the report itself.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/changelog.png">
-<link rel="preload" href="../css/style.css?v=74" as="style">
-<link rel="stylesheet" href="../css/style.css?v=74">
+<link rel="preload" href="../css/style.css?v=75" as="style">
+<link rel="stylesheet" href="../css/style.css?v=75">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -105,7 +105,7 @@
   "url": "https://palestinerecord.github.io/",
   "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
   "image": "https://palestinerecord.github.io/assets/share-card.png",
-  "wordCount": 133570,
+  "wordCount": 136953,
   "dateModified": "2026-09-15",
   "temporalCoverage": "1917/2026",
   "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
@@ -261,26 +261,52 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=74" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=75" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
     </span>
   </a>
+  <!-- Nineteen routes will not fit in a bar, and fourteen of them in a flat row
+       said nothing about how they relate: the charts, the children and the
+       single day are one record at three grains, and the four ways of using it
+       against a claim were scattered between them. They are grouped instead.
+       Every destination is a plain anchor in the markup, hidden by CSS until
+       its group is open, so a crawler, a reader with no JavaScript and the
+       prerenderer all see the same set of links a mouse does. Below the bar's
+       breakpoint the groups become labelled blocks in the menu panel, with
+       nothing to open. -->
   <nav class="nav" id="nav">
     <a href="../index.html#/overview" data-view="overview">Overview</a>
     <a href="../index.html#/tour/1" data-view="tour">Start here</a>
-    <a href="../index.html#/data" data-view="data">Data</a> <a href="../index.html#/children" data-view="children">Children</a>
-    <a href="../index.html#/day" data-view="day">Day by day</a>
-    <a href="../index.html#/timeline" data-view="timeline">Timeline</a>
-    <a href="../index.html#/evidence" data-view="evidence">Evidence</a>
-    <a href="../index.html#/rebuttals" data-view="rebuttals">Rebuttals</a>
-    <a href="../index.html#/statements" data-view="statements">Statements</a>
-    <a href="../index.html#/legal" data-view="legal">Legal</a>
-    <a href="../index.html#/sources" data-view="sources">Sources</a>
-    <a href="../index.html#/provenance" data-view="provenance">Provenance</a>
-    <a href="../index.html#/answer" data-view="answer">Answer a claim</a>
-      <a href="../index.html#/ledger" data-view="ledger">Ledger</a>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/data" data-view="data">The charts<em>Nine chapters, every figure plotted</em></a>
+        <a href="../index.html#/children" data-view="children">Children<em>The cohort, named and counted</em></a>
+        <a href="../index.html#/day" data-view="day">Day by day<em>Any single day of the record</em></a>
+        <a href="../index.html#/timeline" data-view="timeline">Timeline<em>The chronology, 1917–2026</em></a>
+      </div>
+    </div>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/evidence" data-view="evidence">Evidence<em>The report in full, nothing omitted</em></a>
+        <a href="../index.html#/statements" data-view="statements">Statements<em>Intent, in the speaker’s own words</em></a>
+        <a href="../index.html#/sources" data-view="sources">Sources<em>Every source, linked at origin</em></a>
+        <a href="../index.html#/provenance" data-view="provenance">Provenance<em>Pull the thread behind a figure</em></a>
+      </div>
+    </div>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/legal" data-view="legal">Legal<em>The findings and the instruments</em></a>
+        <a href="../index.html#/ledger" data-view="ledger">Ledger<em>The persons and companies named</em></a>
+        <a href="../index.html#/mp" data-view="mp">Constituency<em>All 649 seats, and how yours voted</em></a>
+        <a href="../index.html#/rebuttals" data-view="rebuttals">Rebuttals<em>Every defence, answered</em></a>
+        <a href="../index.html#/answer" data-view="answer">Answer a claim<em>Paste one, and read the record</em></a>
+      </div>
+    </div>
   </nav>
   <div class="freshness" id="freshness" title="Casualty time-series last updated 14 September 2026 (1 days ago). Report and curated figures compiled 15 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>14 September 2026</b></span></div>
   
@@ -292,7 +318,7 @@
       <section class="section">
         <div class="section-head">
       <div class="eyebrow">Changelog</div>
-      <h2>67 dated revisions to the record</h2>
+      <h2>69 dated revisions to the record</h2>
       <p>Every change to the source report, in the words of the report itself. Figures move because the bodies that count them publish again; findings are added as courts and commissions make them. Nothing is removed — the log says what was added and when.</p>
     </div>
         <p class="small muted"><em>This appendix records, in chronological order, every dated update made to this document since the 8 May 2026 enhanced edition. Each entry states what was added, corrected, or reorganised, and the section(s) affected. It is a working log rather than part of the evidentiary record itself; the evidentiary content described in each entry is carried in the Part or section it references.</em></p>
@@ -501,6 +527,12 @@
           </div><div class="log-entry">
             <div class="log-when">15 September 2026, nineteenth pass</div>
             <div class="log-what"><p><em><strong>Part XVI extended from eleven rebuttals to seventeen.</strong> Six defences that had no entry in the Part are now addressed on their own legal terms. <strong>Rebuttal 12</strong> (aid diversion) sets the USAID humanitarian bureau's review of 156 reported incidents of theft or loss between October 2023 and May 2025, which found no report alleging that Hamas had benefited, against the Gaza Humanitarian Foundation's four militarised sites and the OHCHR toll of people killed collecting food, with the review's own stated limitation recorded. <strong>Rebuttal 13</strong> (famine denial) sets out the IPC's three technical thresholds, the famine classification of 22 August 2025 for Gaza Governorate and the responses of the Ministry of Foreign Affairs and COGAT, which produced no alternative data and no access. <strong>Rebuttal 14</strong> (journalists as operatives) records the strike of 10 August 2025 on the tent outside al-Shifa, the six men killed, the allegation made about one of them, and Additional Protocol I Article 79. <strong>Rebuttal 15</strong> ('from the river to the sea') sets the Likud platforms of 1977 and 1999 and the Prime Minister's statement of 18 January 2024 against the consequences imposed for the same territorial formulation in other mouths, and distinguishes the Commission of Inquiry's incitement findings. <strong>Rebuttal 16</strong> (selectivity) records the seven United States vetoes since October 2023, the Advisory Opinion of 19 July 2024, this document's own treatment of Hamas in Part XVIII, and the non-comparative character of the duty to prevent. <strong>Rebuttal 17</strong> (Arab citizenship and representation) sets Basic Law: Israel - the Nation State of the Jewish People, the Supreme Court's judgment of 8 July 2021, Adalah's database of more than 65 discriminatory laws and the Citizenship and Entry into Israel Law against the definition of apartheid in Article 7(2)(h) of the Rome Statute.</em></p></div>
+          </div><div class="log-entry">
+            <div class="log-when">15 September 2026, twentieth pass</div>
+            <div class="log-what"><p><em><strong>New §14.1D ("The Turn to Investigation - The Prime Minister, the Chief of the General Staff, and the Search for the Sources")</strong> added to Part XIV, and §14.1C extended. The section records the second stage of the Israeli state's response to the documentary </em>NAZA<em>: Prime Minister <strong>Benjamin Netanyahu</strong>'s Telegram video of 14 September 2026 ("we are fighting global anti-Semitic incitement, and when it comes from within us it is intolerable"); Culture Minister <strong>Miki Zohar</strong>'s referral asking the authorities to investigate whether the film's making amounted to <strong>"aiding the enemy during wartime"</strong> under <strong>section 99 of the Penal Law, 5737-1977</strong> (death penalty or life imprisonment), and his separate approach to the <strong>Interior Ministry</strong> over citizenship; and Chief of the General Staff <strong>Lt. Gen. Eyal Zamir</strong>'s instruction to the <strong>Military Advocate General, Maj. Gen. Itai Ofir</strong>, to advance legal action against the film "and those involved in it," together with an information-security examination aimed at identifying the twenty-four anonymous sources and a new Planning Directorate team to respond to claims against the military. Zamir's characterisation of the film as "blood libels" is recorded alongside his statement in the same remarks that he had <strong>not watched it</strong>; the IDF Spokesperson's Unit, through <strong>Brig. Gen. Effie Defrin</strong>, has confirmed the same of its own rebuttal. §14.1C additionally now carries <strong>Ben-Gvir</strong>'s post in full, <strong>Yuval Abraham</strong>'s Venice remarks on the more than 200 Palestinian journalists killed, and </em>The Telegraph<em>'s coverage of 14 September 2026. The evidential note sets out why a national apparatus directed at the witnesses rather than at the conduct they describe bears on <strong>Article 17(1)-(3) of the Rome Statute</strong> (complementarity) and on <strong>Article 19(2) of the ICCPR</strong>.</em></p></div>
+          </div><div class="log-entry">
+            <div class="log-when">15 September 2026, twenty-first pass</div>
+            <div class="log-what"><p><em><strong>New §21.9 ("The Organised Rejection of the Definition: A Court, a Petition, and Two Letters to the United Nations (2023-2026)")</strong> added to Part XXI. The subsection records the judgment of the Supreme Court of New South Wales in <strong>State of New South Wales v Farhat [2026] NSWSC 985</strong> (Fagan J, 30 July 2026, reasons 17 August 2026), which refused an extended supervision order and, in doing so, rejected the IHRA working definition as "so verbose and imprecise that it could not realistically be attributed to the ordinary, reasonably informed member of the Australian public" and as "detached from the reality of the common usage and understanding of antisemitism in this country", together with the New South Wales Attorney General's statement of 31 August 2026 that the State would not appeal; the Jewish Council of Australia's petition "Don't let Israel define antisemitism", its operative text, its proposed alternative in the Australian Human Rights Commission's National Anti-Racism Framework, and the Australian adoption record it publishes; the letter of 3 April 2023 to the UN Secretary-General and the High Representative for the Alliance of Civilizations, whose signatories grew to 104 by 20 April 2023 and include B'Tselem, Breaking the Silence and Americans for Peace Now; and, stated alongside it, the competing letter of 17 May 2023 calling the definition "an indispensable tool" and the state practice including Executive Order 13899. <strong>§15.12</strong> additionally now carries the sentence of Macklemore's statement of 14 September 2026 that immediately precedes the passage already quoted there.</em></p></div>
           </div>
         </div>
       </section>
@@ -527,13 +559,13 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=74" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=75" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
             evidentiary standards to all actors. Every heading, paragraph, list and table it contains is
             reproduced in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">133,570 words · 36 parts · 161 sections · 14 tables · 305 chronology entries · 120 documented statements · 180 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">136,953 words · 36 parts · 163 sections · 14 tables · 309 chronology entries · 126 documented statements · 188 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
     <!-- A record meant to be used in an argument has to be citable in one.
          Filled in by app.js with the route on screen and the date of the data
          it is showing, so a citation copied from here names the version the
@@ -554,7 +586,7 @@
       </div>
     </details>
     <p class="footer-links">
-      <a href="../index.html#/method">Method</a> · <a href="../index.html#/mp">Constituency</a> · <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../index.html#/method">Method</a> · <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
       <a href="snapshot/">Text-only versions</a> ·
       <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a> ·
       <a href="feed.xml">Feed</a> ·

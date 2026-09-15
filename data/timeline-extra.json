@@ -2,7 +2,7 @@
  "meta": {
   "title": "Contextual chronology",
   "description": "Events that fill the gaps between the entries in the report's own chronology (Appendix B). Appendix B records major crimes and massacres; these entries record the legal, political and institutional steps between them — the mandates, laws, plans, rulings and admissions that make the pattern legible. They are marked as context so the report's chronology remains distinguishable.",
-  "compiled": "2026-09-14"
+  "compiled": "2026-09-15"
  },
  "items": [
   {
@@ -902,6 +902,13 @@
    "note": "The IDF general commanding the West Bank called it a pogrom. Smotrich, the minister with authority over the Civil Administration, said the state should do the wiping out."
   },
   {
+   "date": "3 Apr 2023",
+   "year": 2023,
+   "sort": "2023-04-03",
+   "event": "104 organisations, among them B'Tselem and Breaking the Silence, ask the United Nations not to adopt the IHRA definition",
+   "note": "Open letter to Secretary-General António Guterres and High Representative Miguel Ángel Moratinos, signed by sixty organisations on 3 April and by 104 by 20 April 2023. It states that antisemitism “poses real harm to Jewish communities around the world and requires meaningful action to combat it”, and objects that the IHRA working definition “has often been used to wrongly label criticism of Israel as antisemitic”. It names the Jerusalem Declaration on Antisemitism and the Nexus Document as alternatives. Signatories include Human Rights Watch, Amnesty International, the ACLU, Al-Haq and FIDH, together with the Israeli organisations B'Tselem and Breaking the Silence and the American Jewish organisation Americans for Peace Now. A counter-letter of 17 May 2023, signed by more than 160 Jewish communal and civil society organisations, urged the opposite course, calling the definition “an indispensable tool”. See §21.9."
+  },
+  {
    "date": "3–5 Jul 2023",
    "year": 2023,
    "sort": "2023-07-03",
@@ -1105,6 +1112,13 @@
    "note": "University of Bristol v Dr David Miller [2026] EAT 84 (EA-2024-000324-RS). Eight of the university’s nine grounds of appeal were rejected, leaving standing the Bristol tribunal’s finding of 6 February 2024 that the belief satisfies the Grainger criteria under s. 10 and that the dismissal was direct discrimination under s. 13. The protection attaches to the bounded formulation Miller advanced, not to anti-Zionism at large."
   },
   {
+   "date": "17 Aug 2026",
+   "year": 2026,
+   "sort": "2026-08-17",
+   "event": "The Supreme Court of New South Wales rejects the IHRA definition as “detached from … reality”",
+   "note": "State of New South Wales v Farhat [2026] NSWSC 985, decided 30 July 2026 with reasons published 17 August. Refusing an extended supervision order under the Terrorism (High Risk Offenders) Act 2017 (NSW), Fagan J held the IHRA working definition “so verbose and imprecise that it could not realistically be attributed to the ordinary, reasonably informed member of the Australian public”, an attempt “to repurpose the term ‘antisemitism’”, and “detached from the reality of the common usage and understanding of antisemitism in this country”. On 31 August 2026 the New South Wales Attorney General, Michael Daley, said the State would not appeal. See §21.9."
+  },
+  {
    "date": "9 Sep 2026",
    "year": 2026,
    "sort": "2026-09-09",
@@ -1140,11 +1154,25 @@
    "note": "The letter to Shabana Mahmood rests on two named individuals, one claimed posthumously by Palestinian Islamic Jihad and one named on an Israeli allegation; proscription would make membership of or support for MSF an offence carrying up to fourteen years, on the precedent of Palestine Action in July 2025. MSF: \"We would never knowingly employ people engaging in military activity.\""
   },
   {
+   "date": "13 Sep 2026",
+   "year": 2026,
+   "sort": "2026-09-13",
+   "event": "Israeli ministers move to strip the NAZA filmmakers of citizenship",
+   "note": "A day after the documentary NAZA won the Special Jury Prize at the 83rd Venice International Film Festival, Culture Minister Miki Zohar wrote that he would act “immediately to revoke the Israeli citizenship of these despicable creators for betraying the state,” and National Security Minister Itamar Ben-Gvir called the two directors a “disgrace and an embarrassment.” The Culture Minister holds no such power: revocation runs under Article 11(b)(2) of the Citizenship Law, 5712-1952 through a court for administrative affairs on the Interior Minister's application, and the criteria the Supreme Court set out in Zayoud (2022) are terrorism, treason or serious espionage. §14.1C."
+  },
+  {
    "date": "14 Sep 2026",
    "year": 2026,
    "sort": "2026-09-14",
    "event": "Macklemore removed from Ed Sheeran's US tour after onstage “Free Palestine” statements",
    "note": "Messina Touring Group told Rolling Stone it had been notified by venues that they would not allow a concert with Macklemore on the lineup. Seven stadiums were reported as objecting, covering eight of the last ten US dates. Ed Sheeran made no public statement. At MetLife Stadium on 4 and 5 September Macklemore had told the crowd that criticism of Israel, of apartheid and of genocide is in no way a criticism of Jewish people. Macklemore published a statement the same day naming Sheeran and his team as having made the decision, quoting Sheeran's position as “I don’t take sides”, and arguing that there is no neutral position between the oppressor and the oppressed. The passages describing private conversations are his account and are unconfirmed by the other parties."
+  },
+  {
+   "date": "14 Sep 2026",
+   "year": 2026,
+   "sort": "2026-09-14",
+   "event": "The Chief of the General Staff directs the Military Advocate General at the film and its sources",
+   "note": "Lt. Gen. Eyal Zamir instructed the Military Advocate General, Maj. Gen. Itai Ofir, to “examine and advance possible legal actions regarding the film and those involved in it,” and ordered an examination of “information security aspects and possible individuals involved in the leaking of classified materials” — an effort to identify the twenty-four anonymous serving and former personnel who testified. He called the film “blood libels” while stating in the same remarks that he had not watched it. The same day Netanyahu called the award “shocking” on Telegram and Zohar asked the authorities to consider whether the film's making amounted to “aiding the enemy during wartime,” an offence carrying life imprisonment or death under section 99 of the Penal Law, 5737-1977. §14.1D."
   }
  ]
 }

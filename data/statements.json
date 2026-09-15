@@ -2,7 +2,7 @@
   "meta": {
     "title": "The Record of Intent",
     "description": "A curated register of statements bearing on intent: genocide, ethnic cleansing, apartheid, annexation, starvation and war crimes. Every entry is verbatim, attributed to a named speaker with role and date, and carries the source and a note on evidentiary significance. Statements by serving officials are admissions, not allegations.",
-    "compiled": "2026-09-14",
+    "compiled": "2026-09-15",
     "primary_databases": [
       {
         "name": "Law for Palestine — Database of Israeli Incitement to Genocide",
@@ -1899,6 +1899,94 @@
       "context": "Posted on X after NAZA won the Special Jury Prize at Venice. Zohar called the film “vile” and the award “shocking”, and said that “the self-loathing that burns in the creators, who are willing to harm their homeland just to get applause from antisemites around the world, is inconceivable and constitutes a betrayal of the state”. National Security Minister Itamar Ben-Gvir called the two a “disgrace and an embarrassment” and told them to leave the country. The Culture Minister holds no power to revoke citizenship: under Article 11(b)(2) of the Citizenship Law, 5712-1952 as amended in 2008, revocation requires an application by the Interior Minister to a court for administrative affairs, on the criteria the Israeli Supreme Court enumerated in Administrative Appeal 8277/17, Zayoud v. Minister of the Interior (21 July 2022) as terrorism, treason or serious espionage, or the acquisition of status in a hostile state. Hebrew sources render the operative phrase as both “betrayal of the state” and “treason against the state”.",
       "source": "Miki Zohar on X, 13 September 2026; Haaretz, 13 September 2026; Al Jazeera, 14 September 2026; The National; AFP.",
       "significance": "A serving minister proposing to strip nationality from citizens for documenting the conduct of their own army. Arbitrary deprivation of nationality engages Article 15(2) of the Universal Declaration of Human Rights and Article 24(3) of the ICCPR; deprivation for the content of expression additionally engages Article 19 of the ICCPR. It belongs with the record of measures directed at those who document the conduct rather than at the conduct itself."
+    },
+    {
+      "speaker": "Benjamin Netanyahu",
+      "role": "Prime Minister of Israel",
+      "date": "14 September 2026",
+      "sort": "2026-09-14",
+      "cat": [
+        "society"
+      ],
+      "tier": "Head of government",
+      "quote": "We are fighting global anti-Semitic incitement, and when it comes from within us it is intolerable.",
+      "context": "Posted as a video to Telegram on 14 September 2026, two days after the documentary NAZA — built on the testimony of twenty-four anonymous Israeli soldiers and Unit 8200 intelligence officers — won the Special Jury Prize at the 83rd Venice International Film Festival. Netanyahu called the award “shocking” and objected that “two Israeli directors portraying the [Israeli military] as war criminals receive applause at the Venice festival.” The film's directors, Yuval Abraham and Rachel Szor, are Israeli citizens, two of the four co-directors of the Oscar-winning No Other Land.",
+      "source": "Benjamin Netanyahu on Telegram, 14 September 2026; Al Jazeera, 14 September 2026; The National, 14–15 September 2026; The Telegraph, 14 September 2026.",
+      "significance": "The testimony the film carries is that of the state's own serving and former personnel, and the answer to it at the head of government is a characterisation of the speakers rather than of what they said. Recorded at §14.1D of the report, with the measures that followed the same day."
+    },
+    {
+      "speaker": "Miki Zohar",
+      "role": "Minister of Culture and Sport of Israel",
+      "date": "14 September 2026",
+      "sort": "2026-09-14",
+      "cat": [
+        "society"
+      ],
+      "tier": "Cabinet",
+      "quote": "Investigate how the materials were obtained, who is behind them.",
+      "context": "Zohar's referral of 14 September 2026, asking the authorities to establish whether the making of NAZA amounted to “aiding the enemy during wartime.” That is a defined offence: section 99 of the Penal Law, 5737-1977 makes a person who, with intent to assist an enemy at war against Israel, commits an act liable to do so “liable to the death penalty or to life imprisonment,” and provides that it is immaterial whether a state of war in fact existed. He separately approached the Interior Ministry, which does hold the revocation power, over the two directors' citizenship.",
+      "source": "Al Jazeera, 14 September 2026; Times of Israel, 14 September 2026; Penal Law 5737-1977, ss. 91, 97–100.",
+      "significance": "The offence proposed against the makers of a documentary is the one Israeli law reserves for assisting an enemy in war, and it carries life imprisonment or death. No application has been filed and the Interior Ministry has not responded. §14.1D."
+    },
+    {
+      "speaker": "Lieutenant General Eyal Zamir",
+      "role": "Lieutenant General, Chief of the General Staff of the Israel Defense Forces",
+      "date": "14 September 2026",
+      "sort": "2026-09-14",
+      "cat": [
+        "society",
+        "warcrimes"
+      ],
+      "tier": "Military",
+      "quote": "It is based on blood libels, deliberate distortion of reality, and false and serious accusations.",
+      "context": "Zamir's characterisation of NAZA on 14 September 2026, in remarks in which he also said that he had “not watched the film” and did not know “whom they interviewed in it or who or what is behind it.” In the same instructions he directed the Military Advocate General, Maj. Gen. Itai Ofir, to “examine and advance possible legal actions regarding the film and those involved in it,” ordered an examination of “information security aspects and possible individuals involved in the leaking of classified materials,” and established a Planning Directorate team to develop responses to claims made against the military.",
+      "source": "Times of Israel, 14 September 2026; Ynet, 14 September 2026; Al Jazeera, 14 September 2026; VINnews, 14 September 2026.",
+      "significance": "The Military Advocate General is the office that decides whether to open a criminal investigation into the conduct the twenty-four interviewees describe; it was directed instead at the film and at those involved in it, and the accompanying examination is aimed at identifying the sources. A national apparatus turned on the witnesses rather than on the conduct bears on Article 17 of the Rome Statute. §14.1D."
+    },
+    {
+      "speaker": "Supreme Court of New South Wales (Fagan J)",
+      "role": "Superior court of record, Australia",
+      "date": "17 August 2026",
+      "sort": "2026-08-17",
+      "cat": [
+        "findings",
+        "society"
+      ],
+      "tier": "Court",
+      "quote": "The IHRA proposal is detached from the reality of the common usage and understanding of antisemitism in this country.",
+      "context": "State of New South Wales v Farhat [2026] NSWSC 985, decided 30 July 2026 with reasons published 17 August 2026. The State sought an extended supervision order under the Terrorism (High Risk Offenders) Act 2017 (NSW) against Mohommed Farhat over graffiti and arson in Woollahra in November 2024. Fagan J found he had acted as a “vandal for hire” and that the slogans were “crude expressions of political hostility to the state of Israel” rather than hostility to Jews. Deciding that question required the court to decide what antisemitism means; it declined to take the meaning from the IHRA working definition, holding the text “so verbose and imprecise that it could not realistically be attributed to the ordinary, reasonably informed member of the Australian public”, that it “appears to be an attempt to repurpose the term ‘antisemitism’”, and that its effect and evident aim is “to graft onto the community's abhorrence of antisemitism” a “parasitic rejection of protest against Israel”. Reasoning from a June 2026 Pew Research Center survey recording 79 per cent of Australians disapproving of Israel's treatment of the Palestinians, the judgment states that “it would be preposterous to suggest that 79% of Australians are antisemitic because they disapprove of Israel's treatment of the Palestinians.”",
+      "source": "State of New South Wales v Farhat [2026] NSWSC 985, Fagan J; NSW Parliament, 31 August 2026.",
+      "significance": "The rejection of the IHRA working definition is now the reasoned holding of a superior court of record, reached in proceedings brought by a state government against an individual defendant. On 31 August 2026 the New South Wales Attorney General, Michael Daley, told a parliamentary hearing “No, we won't be appealing that decision,” on advice that an appeal had no reasonable prospect of success, so the reasoning stands unappealed. The judgment also holds that “as an ideology of Jewish nationalism, Zionism is open to political discussion and criticism” and that anti-Zionists “hold a negative view of a political ideology” rather than hostility to Jews as Jews. See §21.9."
+    },
+    {
+      "speaker": "104 human rights organisations",
+      "role": "Open letter to the UN Secretary-General and the High Representative for the UN Alliance of Civilizations",
+      "date": "3 April 2023",
+      "sort": "2023-04-03",
+      "cat": [
+        "findings",
+        "jewish-opposition"
+      ],
+      "tier": "NGO finding",
+      "quote": "[The IHRA definition] has often been used to wrongly label criticism of Israel as antisemitic, and thus chill and sometimes suppress, non-violent protest, activism and speech critical of Israel and/or Zionism.",
+      "context": "Letter to António Guterres and Miguel Ángel Moratinos urging the United Nations not to endorse or adopt the IHRA working definition in its action plan on monitoring antisemitism. Sixty organisations signed on 3 April 2023; the list had grown to 104 by 20 April. The letter opens from the premise that antisemitism “poses real harm to Jewish communities around the world and requires meaningful action to combat it”, and objects to the instrument rather than the aim: UN action must not “inadvertently embolden or endorse policies and laws that undermine fundamental human rights”. It names the Jerusalem Declaration on Antisemitism and the Nexus Document as alternatives. Signatories include Human Rights Watch, Amnesty International, the ACLU, Al-Haq, the Cairo Institute for Human Rights Studies and FIDH, together with the Israeli organisations B'Tselem and Breaking the Silence and the American Jewish organisation Americans for Peace Now.",
+      "source": "Human Rights Watch, 4 and 20 April 2023; Amnesty International, April 2023.",
+      "significance": "The objection to the definition is not advanced only from outside the community the definition exists to protect. The counter-record is stated alongside it at §21.9: a letter of 17 May 2023 signed by more than 160 Jewish communal and civil society organisations calls the definition “an indispensable tool to understand and fight antisemitism”, “one that can be used entirely consistently with fundamental human rights standards”."
+    },
+    {
+      "speaker": "Jewish Council of Australia",
+      "role": "Jewish representative organisation, Australia",
+      "date": "2026",
+      "sort": "2026-08-13",
+      "cat": [
+        "jewish-opposition",
+        "society"
+      ],
+      "tier": "NGO finding",
+      "quote": "We the undersigned call on governments and institutions around the country to reject the IHRA definition of antisemitism.",
+      "context": "Operative text of the Council's public petition “Don't let Israel define antisemitism”, which describes the definition as “an example of anti-Palestinian racism” that “dangerously conflates Jewish identity with the State of Israel”, and argues that in merging Jews with the Israeli state its examples “only serve to make Jewish people less safe”. It asks institutions to adopt the Australian Human Rights Commission's National Anti-Racism Framework instead, and quotes the definition's drafter, Kenneth Stern, that adoption is “a disaster” because the text is being “weaponised to go after Pro-Palestinian speech… and blind us to how antisemitism actually works”. As at 15 September 2026 it carried more than 26,600 signatures against a target of 30,000.",
+      "source": "Jewish Council of Australia, petition “Don't let Israel define antisemitism”.",
+      "significance": "The same organisation put this analysis to Australia's Royal Commission into Antisemitism and Social Cohesion in June 2026 (§21.5). The petition publishes the Australian adoption record it addresses: AHPRA, the Commonwealth Ombudsman and the Australian Government have adopted the definition; the ABC and SBS have rejected it; ACMA, TEQSA, the Australian Public Service Commission, the Commonwealth Department of Education and most universities have taken no position. See §21.9."
     }
   ]
 }

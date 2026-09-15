@@ -38,7 +38,7 @@
     "id": "israeli-media",
     "label": "Israeli press",
     "sources": 9,
-    "claims": 68
+    "claims": 70
    },
    {
     "id": "un",
@@ -56,7 +56,7 @@
     "id": "international-ngo",
     "label": "International human rights organisations",
     "sources": 21,
-    "claims": 63
+    "claims": 64
    },
    {
     "id": "academic",
@@ -74,7 +74,7 @@
     "id": "media",
     "label": "International press",
     "sources": 22,
-    "claims": 55
+    "claims": 58
    },
    {
     "id": "data-project",
@@ -91,13 +91,13 @@
   ]
  },
  "summary": {
-  "claims": 416,
-  "attributed": 412,
-  "unattributed": 4,
+  "claims": 422,
+  "attributed": 416,
+  "unattributed": 6,
   "sources": 127,
   "origins": 14,
-  "multi_source": 156,
-  "independent": 135
+  "multi_source": 159,
+  "independent": 137
  },
  "switches": [
   {
@@ -108,9 +108,9 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 382,
+   "stands": 386,
    "falls": 30,
-   "share": 92.7
+   "share": 92.8
   },
   {
    "id": "no-israeli",
@@ -122,9 +122,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 341,
+   "stands": 345,
    "falls": 71,
-   "share": 82.8
+   "share": 82.9
   },
   {
    "id": "no-un",
@@ -133,9 +133,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 347,
+   "stands": 351,
    "falls": 65,
-   "share": 84.2
+   "share": 84.4
   },
   {
    "id": "no-ngo",
@@ -146,8 +146,8 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 309,
-   "falls": 103,
+   "stands": 312,
+   "falls": 104,
    "share": 75.0
   },
   {
@@ -161,9 +161,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 218,
-   "falls": 194,
-   "share": 52.9
+   "stands": 221,
+   "falls": 195,
+   "share": 53.1
   }
  ],
  "sources": [
@@ -200,20 +200,20 @@
    "claims": 28
   },
   {
+   "id": "times-of-israel",
+   "name": "The Times of Israel",
+   "kind": "press",
+   "origin": "israeli-media",
+   "origin_label": "Israeli press",
+   "claims": 25
+  },
+  {
    "id": "israel-tv",
    "name": "Israeli broadcast media",
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
    "claims": 24
-  },
-  {
-   "id": "times-of-israel",
-   "name": "The Times of Israel",
-   "kind": "press",
-   "origin": "israeli-media",
-   "origin_label": "Israeli press",
-   "claims": 23
   },
   {
    "id": "trade-press",
@@ -224,20 +224,20 @@
    "claims": 20
   },
   {
+   "id": "aljazeera",
+   "name": "Al Jazeera",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 19
+  },
+  {
    "id": "remember-children",
    "name": "Remember These Children",
    "kind": "dataset",
    "origin": "data-project",
    "origin_label": "Open datasets and derived figures",
    "claims": 17
-  },
-  {
-   "id": "aljazeera",
-   "name": "Al Jazeera",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 16
   },
   {
    "id": "un-coi",
@@ -256,6 +256,14 @@
    "claims": 14
   },
   {
+   "id": "hrw",
+   "name": "Human Rights Watch",
+   "kind": "ngo",
+   "origin": "international-ngo",
+   "origin_label": "International human rights organisations",
+   "claims": 13
+  },
+  {
    "id": "tfp",
    "name": "Tech For Palestine open datasets",
    "kind": "dataset",
@@ -266,14 +274,6 @@
   {
    "id": "euromed",
    "name": "Euro-Mediterranean Human Rights Monitor",
-   "kind": "ngo",
-   "origin": "international-ngo",
-   "origin_label": "International human rights organisations",
-   "claims": 12
-  },
-  {
-   "id": "hrw",
-   "name": "Human Rights Watch",
    "kind": "ngo",
    "origin": "international-ngo",
    "origin_label": "International human rights organisations",
@@ -336,6 +336,14 @@
    "claims": 8
   },
   {
+   "id": "amnesty",
+   "name": "Amnesty International",
+   "kind": "ngo",
+   "origin": "international-ngo",
+   "origin_label": "International human rights organisations",
+   "claims": 7
+  },
+  {
    "id": "ipc",
    "name": "IPC Famine Review Committee",
    "kind": "un",
@@ -373,14 +381,6 @@
    "kind": "ngo",
    "origin": "palestinian-ngo",
    "origin_label": "Palestinian human rights organisations",
-   "claims": 6
-  },
-  {
-   "id": "amnesty",
-   "name": "Amnesty International",
-   "kind": "ngo",
-   "origin": "international-ngo",
-   "origin_label": "International human rights organisations",
    "claims": 6
   },
   {
@@ -437,6 +437,14 @@
    "kind": "un",
    "origin": "un",
    "origin_label": "United Nations bodies",
+   "claims": 6
+  },
+  {
+   "id": "ynet",
+   "name": "Ynet and Yedioth Ahronoth",
+   "kind": "press",
+   "origin": "israeli-media",
+   "origin_label": "Israeli press",
    "claims": 6
   },
   {
@@ -509,14 +517,6 @@
    "kind": "un",
    "origin": "un",
    "origin_label": "United Nations bodies",
-   "claims": 5
-  },
-  {
-   "id": "ynet",
-   "name": "Ynet and Yedioth Ahronoth",
-   "kind": "press",
-   "origin": "israeli-media",
-   "origin_label": "Israeli press",
    "claims": 5
   },
   {
@@ -1191,7 +1191,7 @@
   },
   {
    "file": "statements.json",
-   "claims": 120
+   "claims": 126
   },
   {
    "file": "elements.json",
@@ -3490,6 +3490,90 @@
     "trade-press"
    ],
    "id": "statements-miki-zohar"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[120]",
+   "label": "Benjamin Netanyahu",
+   "value": "We are fighting global anti-Semitic incitement, and when it comes from within us it is intolerable.",
+   "numeric": false,
+   "ref": "",
+   "date": "14 September 2026",
+   "source_text": "Benjamin Netanyahu on Telegram, 14 September 2026; Al Jazeera, 14 September 2026; The National, 14–15 September 2026; The Telegraph, 14 September 2026.",
+   "sources": [
+    "aljazeera"
+   ],
+   "id": "statements-benjamin-netanyahu-6"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[121]",
+   "label": "Miki Zohar",
+   "value": "Investigate how the materials were obtained, who is behind them.",
+   "numeric": false,
+   "ref": "",
+   "date": "14 September 2026",
+   "source_text": "Al Jazeera, 14 September 2026; Times of Israel, 14 September 2026; Penal Law 5737-1977, ss. 91, 97–100.",
+   "sources": [
+    "times-of-israel",
+    "aljazeera"
+   ],
+   "id": "statements-miki-zohar-2"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[122]",
+   "label": "Eyal Zamir",
+   "value": "It is based on blood libels, deliberate distortion of reality, and false and serious accusations.",
+   "numeric": false,
+   "ref": "",
+   "date": "14 September 2026",
+   "source_text": "Times of Israel, 14 September 2026; Ynet, 14 September 2026; Al Jazeera, 14 September 2026; VINnews, 14 September 2026.",
+   "sources": [
+    "times-of-israel",
+    "ynet",
+    "aljazeera"
+   ],
+   "id": "statements-eyal-zamir"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[123]",
+   "label": "Supreme Court of New South Wales (Fagan J)",
+   "value": "The IHRA proposal is detached from the reality of the common usage and understanding of antisemitism in this country.",
+   "numeric": false,
+   "ref": "",
+   "date": "17 August 2026",
+   "source_text": "State of New South Wales v Farhat [2026] NSWSC 985, Fagan J; NSW Parliament, 31 August 2026.",
+   "sources": [],
+   "id": "statements-supreme-court-of-new-south-wales-fagan-j"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[124]",
+   "label": "104 human rights organisations",
+   "value": "[The IHRA definition] has often been used to wrongly label criticism of Israel as antisemitic, and thus chill and sometimes suppress, non-violent protest, activism and speech critical of Israel and/or Zionism.",
+   "numeric": false,
+   "ref": "",
+   "date": "3 April 2023",
+   "source_text": "Human Rights Watch, 4 and 20 April 2023; Amnesty International, April 2023.",
+   "sources": [
+    "amnesty",
+    "hrw"
+   ],
+   "id": "statements-104-human-rights-organisations"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[125]",
+   "label": "Jewish Council of Australia",
+   "value": "We the undersigned call on governments and institutions around the country to reject the IHRA definition of antisemitism.",
+   "numeric": false,
+   "ref": "",
+   "date": "2026",
+   "source_text": "Jewish Council of Australia, petition “Don't let Israel define antisemitism”.",
+   "sources": [],
+   "id": "statements-jewish-council-of-australia"
   },
   {
    "file": "elements.json",

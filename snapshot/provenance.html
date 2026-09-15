@@ -32,8 +32,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="../assets/favicon.svg?v=74" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=74">
+<link rel="icon" href="../assets/favicon.svg?v=75" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=75">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -66,8 +66,8 @@
 <meta name="twitter:title" content="Provenance — pull the thread · The Documented Record">
 <meta name="twitter:description" content="Every claim joined to the bodies it rests on, with a switch that rejects a whole class of source and recounts what still stands without it.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/provenance.png">
-<link rel="preload" href="../css/style.css?v=74" as="style">
-<link rel="stylesheet" href="../css/style.css?v=74">
+<link rel="preload" href="../css/style.css?v=75" as="style">
+<link rel="stylesheet" href="../css/style.css?v=75">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -105,7 +105,7 @@
   "url": "https://palestinerecord.github.io/",
   "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
   "image": "https://palestinerecord.github.io/assets/share-card.png",
-  "wordCount": 133570,
+  "wordCount": 136953,
   "dateModified": "2026-09-15",
   "temporalCoverage": "1917/2026",
   "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
@@ -261,26 +261,52 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=74" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=75" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
     </span>
   </a>
+  <!-- Nineteen routes will not fit in a bar, and fourteen of them in a flat row
+       said nothing about how they relate: the charts, the children and the
+       single day are one record at three grains, and the four ways of using it
+       against a claim were scattered between them. They are grouped instead.
+       Every destination is a plain anchor in the markup, hidden by CSS until
+       its group is open, so a crawler, a reader with no JavaScript and the
+       prerenderer all see the same set of links a mouse does. Below the bar's
+       breakpoint the groups become labelled blocks in the menu panel, with
+       nothing to open. -->
   <nav class="nav" id="nav">
     <a href="../index.html#/overview" data-view="overview">Overview</a>
     <a href="../index.html#/tour/1" data-view="tour">Start here</a>
-    <a href="../index.html#/data" data-view="data">Data</a> <a href="../index.html#/children" data-view="children">Children</a>
-    <a href="../index.html#/day" data-view="day">Day by day</a>
-    <a href="../index.html#/timeline" data-view="timeline">Timeline</a>
-    <a href="../index.html#/evidence" data-view="evidence">Evidence</a>
-    <a href="../index.html#/rebuttals" data-view="rebuttals">Rebuttals</a>
-    <a href="../index.html#/statements" data-view="statements">Statements</a>
-    <a href="../index.html#/legal" data-view="legal">Legal</a>
-    <a href="../index.html#/sources" data-view="sources">Sources</a>
-    <a href="../index.html#/provenance" data-view="provenance" class="active">Provenance</a>
-    <a href="../index.html#/answer" data-view="answer">Answer a claim</a>
-      <a href="../index.html#/ledger" data-view="ledger">Ledger</a>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/data" data-view="data">The charts<em>Nine chapters, every figure plotted</em></a>
+        <a href="../index.html#/children" data-view="children">Children<em>The cohort, named and counted</em></a>
+        <a href="../index.html#/day" data-view="day">Day by day<em>Any single day of the record</em></a>
+        <a href="../index.html#/timeline" data-view="timeline">Timeline<em>The chronology, 1917–2026</em></a>
+      </div>
+    </div>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/evidence" data-view="evidence">Evidence<em>The report in full, nothing omitted</em></a>
+        <a href="../index.html#/statements" data-view="statements">Statements<em>Intent, in the speaker’s own words</em></a>
+        <a href="../index.html#/sources" data-view="sources">Sources<em>Every source, linked at origin</em></a>
+        <a href="../index.html#/provenance" data-view="provenance" class="active">Provenance<em>Pull the thread behind a figure</em></a>
+      </div>
+    </div>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/legal" data-view="legal">Legal<em>The findings and the instruments</em></a>
+        <a href="../index.html#/ledger" data-view="ledger">Ledger<em>The persons and companies named</em></a>
+        <a href="../index.html#/mp" data-view="mp">Constituency<em>All 649 seats, and how yours voted</em></a>
+        <a href="../index.html#/rebuttals" data-view="rebuttals">Rebuttals<em>Every defence, answered</em></a>
+        <a href="../index.html#/answer" data-view="answer">Answer a claim<em>Paste one, and read the record</em></a>
+      </div>
+    </div>
   </nav>
   <div class="freshness" id="freshness" title="Casualty time-series last updated 14 September 2026 (1 days ago). Report and curated figures compiled 15 September 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>14 September 2026</b></span></div>
   
@@ -297,7 +323,7 @@
     </div>
         <div class="grid c4">
           <div class="stat blue" data-tone="blue">
-      <div class="val" data-count="416">416</div>
+      <div class="val" data-count="422">422</div>
       <div class="lbl">Curated claims</div>
       <div class="note">every figure, statement, determination and record entry that carries a source, across 13 data files</div>
       
@@ -309,15 +335,15 @@
       
       
     </div><div class="stat green" data-tone="green">
-      <div class="val" data-count="135">135</div>
+      <div class="val" data-count="137">137</div>
       <div class="lbl">Claims on two or more classes of source</div>
       <div class="note">a figure attested by bodies with no common controller does not fall when one of them is rejected</div>
       
       
     </div><div class="stat amber" data-tone="amber">
-      <div class="val" data-count="52.9">52.9<span class="suffix">%</span></div>
+      <div class="val" data-count="53.1">53.1<span class="suffix">%</span></div>
       <div class="lbl">Still standing at the hardest setting</div>
-      <div class="note">keep only israeli and western sources — 218 of 412 attributed claims</div>
+      <div class="note">keep only israeli and western sources — 221 of 416 attributed claims</div>
       
       
     </div>
@@ -331,8 +357,8 @@
       <p>The commonest objection to a record like this one is not that a figure is wrong. It is that a class of source cannot be trusted. The answer here is not to defend the source but to remove it. Each setting deletes every body of that class and recounts what is left: a claim stands if it still has one source outside the classes removed, and falls if it does not. Nothing else on the page changes.</p>
     </div>
         <div class="chips" id="prov-switch"></div>
-        <div class="card prov-panel" id="prov-panel"><p class="prov-panel-lede">Every source in place. <b>412</b> of
-          416 claims carry at least one; 135 of them rest on
+        <div class="card prov-panel" id="prov-panel"><p class="prov-panel-lede">Every source in place. <b>416</b> of
+          422 claims carry at least one; 137 of them rest on
           two or more classes of source at once.</p></div>
         <div class="card chart-card" id="chart-provenance-switch" data-chart-card="provenance-switch" data-title="What survives each rejection" data-source="data/provenance.json" data-note="The share of attributed claims that still rest on at least one source outside the class removed.">
       <div class="chart-head">
@@ -385,7 +411,7 @@
     </tr><tr data-origin="israeli-media">
       <td>Israeli press</td>
       <td class="num">9</td>
-      <td class="num">68</td>
+      <td class="num">70</td>
     </tr><tr data-origin="un">
       <td>United Nations bodies</td>
       <td class="num">22</td>
@@ -397,7 +423,7 @@
     </tr><tr data-origin="international-ngo">
       <td>International human rights organisations</td>
       <td class="num">21</td>
-      <td class="num">63</td>
+      <td class="num">64</td>
     </tr><tr data-origin="academic">
       <td>Academic and peer-reviewed research</td>
       <td class="num">13</td>
@@ -409,7 +435,7 @@
     </tr><tr data-origin="media">
       <td>International press</td>
       <td class="num">22</td>
-      <td class="num">55</td>
+      <td class="num">58</td>
     </tr><tr data-origin="data-project">
       <td>Open datasets and derived figures</td>
       <td class="num">4</td>
@@ -469,26 +495,26 @@
       <td>Gaza Ministry of Health</td>
       <td class="muted">Palestinian official bodies</td>
       <td class="num">28</td>
+    </tr><tr class="prov-src" data-origin="israeli-media" data-name="the times of israel israeli press">
+      <td>The Times of Israel</td>
+      <td class="muted">Israeli press</td>
+      <td class="num">25</td>
     </tr><tr class="prov-src" data-origin="israeli-media" data-name="israeli broadcast media israeli press">
       <td>Israeli broadcast media</td>
       <td class="muted">Israeli press</td>
       <td class="num">24</td>
-    </tr><tr class="prov-src" data-origin="israeli-media" data-name="the times of israel israeli press">
-      <td>The Times of Israel</td>
-      <td class="muted">Israeli press</td>
-      <td class="num">23</td>
     </tr><tr class="prov-src" data-origin="media" data-name="entertainment and trade press international press">
       <td>Entertainment and trade press</td>
       <td class="muted">International press</td>
       <td class="num">20</td>
+    </tr><tr class="prov-src" data-origin="media" data-name="al jazeera international press">
+      <td>Al Jazeera</td>
+      <td class="muted">International press</td>
+      <td class="num">19</td>
     </tr><tr class="prov-src" data-origin="data-project" data-name="remember these children open datasets and derived figures">
       <td>Remember These Children</td>
       <td class="muted">Open datasets and derived figures</td>
       <td class="num">17</td>
-    </tr><tr class="prov-src" data-origin="media" data-name="al jazeera international press">
-      <td>Al Jazeera</td>
-      <td class="muted">International press</td>
-      <td class="num">16</td>
     </tr><tr class="prov-src" data-origin="un" data-name="un commission of inquiry on the opt united nations bodies">
       <td>UN Commission of Inquiry on the OPT</td>
       <td class="muted">United Nations bodies</td>
@@ -497,16 +523,16 @@
       <td>Haaretz</td>
       <td class="muted">Israeli press</td>
       <td class="num">14</td>
+    </tr><tr class="prov-src" data-origin="international-ngo" data-name="human rights watch international human rights organisations">
+      <td>Human Rights Watch</td>
+      <td class="muted">International human rights organisations</td>
+      <td class="num">13</td>
     </tr><tr class="prov-src" data-origin="data-project" data-name="tech for palestine open datasets open datasets and derived figures">
       <td>Tech For Palestine open datasets</td>
       <td class="muted">Open datasets and derived figures</td>
       <td class="num">13</td>
     </tr><tr class="prov-src" data-origin="international-ngo" data-name="euro-mediterranean human rights monitor international human rights organisations">
       <td>Euro-Mediterranean Human Rights Monitor</td>
-      <td class="muted">International human rights organisations</td>
-      <td class="num">12</td>
-    </tr><tr class="prov-src" data-origin="international-ngo" data-name="human rights watch international human rights organisations">
-      <td>Human Rights Watch</td>
       <td class="muted">International human rights organisations</td>
       <td class="num">12</td>
     </tr><tr class="prov-src" data-origin="international-court" data-name="international court of justice international courts">
@@ -537,6 +563,10 @@
       <td>US Congress and the Congressional Research Service</td>
       <td class="muted">Western states and parliaments</td>
       <td class="num">8</td>
+    </tr><tr class="prov-src" data-origin="international-ngo" data-name="amnesty international international human rights organisations">
+      <td>Amnesty International</td>
+      <td class="muted">International human rights organisations</td>
+      <td class="num">7</td>
     </tr><tr class="prov-src" data-origin="un" data-name="ipc famine review committee united nations bodies">
       <td>IPC Famine Review Committee</td>
       <td class="muted">United Nations bodies</td>
@@ -556,10 +586,6 @@
     </tr><tr class="prov-src" data-origin="palestinian-ngo" data-name="al-haq palestinian human rights organisations">
       <td>Al-Haq</td>
       <td class="muted">Palestinian human rights organisations</td>
-      <td class="num">6</td>
-    </tr><tr class="prov-src" data-origin="international-ngo" data-name="amnesty international international human rights organisations">
-      <td>Amnesty International</td>
-      <td class="muted">International human rights organisations</td>
       <td class="num">6</td>
     </tr><tr class="prov-src" data-origin="media" data-name="cnn international press">
       <td>CNN</td>
@@ -588,6 +614,10 @@
     </tr><tr class="prov-src" data-origin="un" data-name="world health organization united nations bodies">
       <td>World Health Organization</td>
       <td class="muted">United Nations bodies</td>
+      <td class="num">6</td>
+    </tr><tr class="prov-src" data-origin="israeli-media" data-name="ynet and yedioth ahronoth israeli press">
+      <td>Ynet and Yedioth Ahronoth</td>
+      <td class="muted">Israeli press</td>
       <td class="num">6</td>
     </tr><tr class="prov-src" data-origin="academic" data-name="brown university costs of war academic and peer-reviewed research">
       <td>Brown University Costs of War</td>
@@ -624,10 +654,6 @@
     </tr><tr class="prov-src" data-origin="un" data-name="unrwa united nations bodies">
       <td>UNRWA</td>
       <td class="muted">United Nations bodies</td>
-      <td class="num">5</td>
-    </tr><tr class="prov-src" data-origin="israeli-media" data-name="ynet and yedioth ahronoth israeli press">
-      <td>Ynet and Yedioth Ahronoth</td>
-      <td class="muted">Israeli press</td>
       <td class="num">5</td>
     </tr><tr class="prov-src" data-origin="academic" data-name="benny morris and the israeli new historians academic and peer-reviewed research">
       <td>Benny Morris and the Israeli New Historians</td>
@@ -969,13 +995,13 @@
       <section class="section">
         <div class="section-head">
       <div class="eyebrow">The claims</div>
-      <h2>416 claims, each with its chain</h2>
+      <h2>422 claims, each with its chain</h2>
       <p>Every curated record that carries a source, with the source text it was written with and the entities that text resolves to. Filter by where the claim lives, search the text, or set the switch above and watch the claims that fall grey out.</p>
     </div>
         <div class="chips" id="prov-files"></div>
         <div class="tl-controls">
           <input type="search" id="prov-search" placeholder="Search claims, values and source text…" autocomplete="off">
-          <span class="small muted" id="prov-count">416 of 416 claims</span>
+          <span class="small muted" id="prov-count">422 of 422 claims</span>
         </div>
         <ul class="prov-claims" id="prov-claims"><li class="prov-claim" data-origins="palestinian-official un" data-file="figures.json" data-text="palestinians killed in gaza 73,786 gaza moh / ocha gaza ministry of health un ocha gaza-moh ocha" id="prov-figures-palestinians-killed-in-gaza">
         <div class="prov-claim-head">
@@ -2345,6 +2371,60 @@
         <div class="prov-value">I will act immediately to revoke the Israeli citizenship of these despicable creators for betraying the state.</div>
         <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">Haaretz</span><span class="prov-chip" data-origin="media">Al Jazeera</span><span class="prov-chip" data-origin="media">Entertainment and trade press</span></div>
         <div class="prov-src-text">Miki Zohar on X, 13 September 2026; Haaretz, 13 September 2026; Al Jazeera, 14 September 2026; The National; AFP.</div>
+      </li><li class="prov-claim" data-origins="media" data-file="statements.json" data-text="benjamin netanyahu we are fighting global anti-semitic incitement, and when it comes from within us it is intolerable. benjamin netanyahu on telegram, 14 september 2026; al jazeera, 14 september 2026; the national, 14–15 september 2026; the telegraph, 14 september 2026. al jazeera aljazeera" id="prov-statements-benjamin-netanyahu-6">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">Benjamin Netanyahu</a>
+          <span class="prov-date">14 September 2026</span>
+          
+        </div>
+        <div class="prov-value">We are fighting global anti-Semitic incitement, and when it comes from within us it is intolerable.</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="media">Al Jazeera</span></div>
+        <div class="prov-src-text">Benjamin Netanyahu on Telegram, 14 September 2026; Al Jazeera, 14 September 2026; The National, 14–15 September 2026; The Telegraph, 14 September 2026.</div>
+      </li><li class="prov-claim" data-origins="israeli-media media" data-file="statements.json" data-text="miki zohar investigate how the materials were obtained, who is behind them. al jazeera, 14 september 2026; times of israel, 14 september 2026; penal law 5737-1977, ss. 91, 97–100. the times of israel al jazeera times-of-israel aljazeera" id="prov-statements-miki-zohar-2">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">Miki Zohar</a>
+          <span class="prov-date">14 September 2026</span>
+          
+        </div>
+        <div class="prov-value">Investigate how the materials were obtained, who is behind them.</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">The Times of Israel</span><span class="prov-chip" data-origin="media">Al Jazeera</span></div>
+        <div class="prov-src-text">Al Jazeera, 14 September 2026; Times of Israel, 14 September 2026; Penal Law 5737-1977, ss. 91, 97–100.</div>
+      </li><li class="prov-claim" data-origins="israeli-media media" data-file="statements.json" data-text="eyal zamir it is based on blood libels, deliberate distortion of reality, and false and serious accusations. times of israel, 14 september 2026; ynet, 14 september 2026; al jazeera, 14 september 2026; vinnews, 14 september 2026. the times of israel ynet and yedioth ahronoth al jazeera times-of-israel ynet aljazeera" id="prov-statements-eyal-zamir">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">Eyal Zamir</a>
+          <span class="prov-date">14 September 2026</span>
+          
+        </div>
+        <div class="prov-value">It is based on blood libels, deliberate distortion of reality, and false and serious accusations.</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">The Times of Israel</span><span class="prov-chip" data-origin="israeli-media">Ynet and Yedioth Ahronoth</span><span class="prov-chip" data-origin="media">Al Jazeera</span></div>
+        <div class="prov-src-text">Times of Israel, 14 September 2026; Ynet, 14 September 2026; Al Jazeera, 14 September 2026; VINnews, 14 September 2026.</div>
+      </li><li class="prov-claim" data-origins="" data-file="statements.json" data-text="supreme court of new south wales (fagan j) the ihra proposal is detached from the reality of the common usage and understanding of antisemitism in this country. state of new south wales v farhat [2026] nswsc 985, fagan j; nsw parliament, 31 august 2026.  " id="prov-statements-supreme-court-of-new-south-wales-fagan-j">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">Supreme Court of New South Wales (Fagan J)</a>
+          <span class="prov-date">17 August 2026</span>
+          
+        </div>
+        <div class="prov-value">The IHRA proposal is detached from the reality of the common usage and understanding of antisemitism in this country.</div>
+        <div class="prov-chain"><span class="prov-chip none">no source recorded</span></div>
+        <div class="prov-src-text">State of New South Wales v Farhat [2026] NSWSC 985, Fagan J; NSW Parliament, 31 August 2026.</div>
+      </li><li class="prov-claim" data-origins="international-ngo" data-file="statements.json" data-text="104 human rights organisations [the ihra definition] has often been used to wrongly label criticism of israel as antisemitic, and thus chill and sometimes suppress, non-violent protest, activism and speech critical of israel and/or zionism. human rights watch, 4 and 20 april 2023; amnesty international, april 2023. amnesty international human rights watch amnesty hrw" id="prov-statements-104-human-rights-organisations">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">104 human rights organisations</a>
+          <span class="prov-date">3 April 2023</span>
+          
+        </div>
+        <div class="prov-value">[The IHRA definition] has often been used to wrongly label criticism of Israel as antisemitic, and thus chill and sometimes suppress, non-violent protest, activism and speech critical of Israel and/or Zionism.</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="international-ngo">Amnesty International</span><span class="prov-chip" data-origin="international-ngo">Human Rights Watch</span></div>
+        <div class="prov-src-text">Human Rights Watch, 4 and 20 April 2023; Amnesty International, April 2023.</div>
+      </li><li class="prov-claim" data-origins="" data-file="statements.json" data-text="jewish council of australia we the undersigned call on governments and institutions around the country to reject the ihra definition of antisemitism. jewish council of australia, petition “don't let israel define antisemitism”.  " id="prov-statements-jewish-council-of-australia">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">Jewish Council of Australia</a>
+          <span class="prov-date">2026</span>
+          
+        </div>
+        <div class="prov-value">We the undersigned call on governments and institutions around the country to reject the IHRA definition of antisemitism.</div>
+        <div class="prov-chain"><span class="prov-chip none">no source recorded</span></div>
+        <div class="prov-src-text">Jewish Council of Australia, petition “Don't let Israel define antisemitism”.</div>
       </li><li class="prov-claim" data-origins="international-court" data-file="elements.json" data-text="icj, the wall  international court of justice international court of justice icj" id="prov-elements-icj-the-wall">
         <div class="prov-claim-head">
           <a href="../index.html#/legal" class="prov-label">ICJ, the Wall</a>
@@ -4723,20 +4803,20 @@
         <div class="prov-src-text">The report, Appendix B</div>
       </li></ul>
         <p class="chart-note" style="margin-top:22px">Generated by provenance.py on 2026-09-15 from the curated data files.
-          4 claims carry no source: those are the places where the record states that no published source exists.</p>
+          6 claims carry no source: those are the places where the record states that no published source exists.</p>
       </section>
     </div><nav class="snapshot-links" aria-label="Other sections"><h2>Every other section, without JavaScript</h2><ul><li><a href="overview.html">The Documented Record — Israel and the Occupied Territories, 1917–2026</a></li><li><a href="tour.html">Start here — the case in eight steps</a></li><li><a href="data-gaza.html">Gaza — the toll since 7 October 2023</a></li><li><a href="data-asymmetry.html">The asymmetry — Palestinians and Israelis killed</a></li><li><a href="data-since-1948.html">Since 1948 — seventy-eight years of the toll</a></li><li><a href="data-complicity.html">Complicity — who supplies the war</a></li><li><a href="data-land.html">The land — six per cent to seventy-eight</a></li><li><a href="data-west-bank.html">The West Bank — before and after October 2023</a></li><li><a href="data-wars.html">Wars and 7 October — seventy-five years of operations</a></li><li><a href="data-world.html">The world — recognition, embargoes and vetoes</a></li><li><a href="data-tables.html">Source tables — every table in the report</a></li><li><a href="children.html">The children — every child the record can count</a></li><li><a href="day.html">Said and done — the war, one day at a time</a></li><li><a href="timeline.html">Timeline — a dated chronology, 1917–2026</a></li><li><a href="evidence.html">Evidence — the complete report</a></li><li><a href="rebuttals.html">Rebuttals — every defence, answered</a></li><li><a href="statements.html">Statements — the documented record of intent</a></li><li><a href="legal.html">Legal — the findings and the instruments they rest on</a></li><li><a href="sources.html">Sources — what the record rests on</a></li><li><a href="answer.html">Answer a claim — paste it, and read what the record says</a></li><li><a href="ledger.html">Ledger — the persons and companies named in the record</a></li><li><a href="mp.html">The Documented Record — Israel and the Occupied Territories, 1917–2026</a></li><li><a href="method.html">Method — impartial, not neutral</a></li><li><a href="api.html">Open data — the record as files</a></li><li><a href="changelog.html">Changelog — every revision, dated</a></li></ul></nav></main>
 
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=74" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=75" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
             evidentiary standards to all actors. Every heading, paragraph, list and table it contains is
             reproduced in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">133,570 words · 36 parts · 161 sections · 14 tables · 305 chronology entries · 120 documented statements · 180 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">136,953 words · 36 parts · 163 sections · 14 tables · 309 chronology entries · 126 documented statements · 188 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
     <!-- A record meant to be used in an argument has to be citable in one.
          Filled in by app.js with the route on screen and the date of the data
          it is showing, so a citation copied from here names the version the
@@ -4757,7 +4837,7 @@
       </div>
     </details>
     <p class="footer-links">
-      <a href="../index.html#/method">Method</a> · <a href="../index.html#/mp">Constituency</a> · <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="../index.html#/method">Method</a> · <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
       <a href="snapshot/">Text-only versions</a> ·
       <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a> ·
       <a href="feed.xml">Feed</a> ·

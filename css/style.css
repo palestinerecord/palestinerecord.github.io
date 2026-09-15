@@ -249,6 +249,51 @@ body:not([data-view="overview"]) #scene { opacity: .18; }
 .nav a:hover { background: var(--panel-hi); color: var(--text); text-decoration: none; }
 .nav a.active { background: var(--accent-soft); color: var(--accent); }
 
+/* A group reads as one item in the bar and opens to the routes beneath it. The
+   head is a button rather than a link because it is not a destination: there
+   is no page for "the data" as such, only the four ways of reading it. */
+.nav-group { position: relative; }
+.nav-head {
+  display: flex; align-items: center; gap: 6px;
+  font: inherit; font-size: 13.5px; font-weight: 500;
+  color: var(--text-2); background: none; border: 0; cursor: pointer;
+  padding: 8px 13px; border-radius: 9px;
+  transition: background .2s, color .2s;
+}
+.nav-head:hover { background: var(--panel-hi); color: var(--text); }
+/* The whole group lights when the route on screen is one of its own, so the
+   bar still answers "where am I" with five items instead of fourteen. */
+.nav-head.active { background: var(--accent-soft); color: var(--accent); }
+.nav-caret {
+  width: 0; height: 0; margin-top: 1px;
+  border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-top: 4px solid currentColor; opacity: .55;
+  transition: transform .2s, opacity .2s;
+}
+.nav-head[aria-expanded="true"] .nav-caret { transform: rotate(180deg); opacity: 1; }
+
+.nav-menu {
+  position: absolute; top: calc(100% + 7px); left: 0; z-index: 60;
+  display: none; flex-direction: column; gap: 1px; min-width: 264px;
+  padding: 7px; border: 1px solid var(--line); border-radius: 13px;
+  background: var(--panel-solid); box-shadow: 0 18px 44px rgba(0, 0, 0, .34);
+}
+/* Opened by hover for a mouse and by the button for everything else. Both are
+   needed: hover alone is unreachable from a keyboard or a touch screen, and
+   the button alone makes a mouse click twice for every page. */
+.nav-group:hover .nav-menu,
+.nav-group:focus-within .nav-menu,
+.nav-head[aria-expanded="true"] + .nav-menu { display: flex; }
+.nav-menu a {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 9px 12px; border-radius: 9px; white-space: nowrap;
+}
+.nav-menu a em {
+  font-style: normal; font-size: 11.5px; font-weight: 400;
+  color: var(--muted); letter-spacing: .01em;
+}
+.nav-menu a:hover em, .nav-menu a.active em { color: inherit; opacity: .75; }
+
 /* A record that silently goes stale is worse than one that says so. */
 .freshness {
   display: flex; align-items: center; gap: 8px;
@@ -1151,32 +1196,31 @@ tbody td strong { color: var(--text); }
 
 /* The toggle is a fourth control in a bar that was already close to full, and
    its 38px was enough at laptop widths to push the last nav links onto a
-   second row. The bar sheds width in three steps, in order of how much each
+   second row. The bar sheds width in two steps, in order of how much each
    part carries: the pill's label first (the date still reads on its own),
-   then the nav's padding and the strapline, then the search word and the
-   pill itself.
+   then the nav's padding, the strapline, the search word and the pill itself.
 
-   The numbers are measured, not chosen. With fourteen links the bar needs
-   2,014px at full size, 1,790px once the label is gone, 1,611px once the
-   strapline and the padding go, and 1,414px once the pill and the search
-   word have gone; each breakpoint sits just above the width its own step
-   needs. They were last set for twelve links, and the two added since
-   (Answer a claim, Ledger) pushed every requirement past them — which is why
-   the last link was running off the right edge at every width up to 1,920px.
-   Any link added here moves all four numbers: measure the bar again rather
-   than guessing, by loading the bar's markup on its own at a ladder of window
-   widths and reading the right edge of the last link. */
-@media (max-width: 2020px) {
+   The numbers are measured, not chosen, and grouping the fourteen links into
+   five items moved every one of them. The bar now needs 1,053px at full size,
+   989px once the label is gone, and 829px once the strapline, the nav padding,
+   the search word and the pill have gone; each breakpoint sits above the width
+   its own step needs, with room to spare at every one of them. The previous
+   figures were 2,014 / 1,790 / 1,611 / 1,414 for a flat row of fourteen, which
+   is why the bar used to hand a 1,440px laptop the hamburger and why the
+   constituency ledger had no place in it at all.
+
+   Measure again rather than guessing if the bar changes: load index.html at a
+   ladder of window widths with the collapse out of the way, sum the widths of
+   the bar's children plus its gaps and padding, and read what the row needs. */
+@media (max-width: 1240px) {
   .topbar { gap: 14px; }
-  .nav a { padding: 8px 10px; font-size: 13px; }
+  .nav a, .nav-head { padding: 8px 10px; font-size: 13px; }
   .fresh-label { display: none; }
 }
-@media (max-width: 1800px) {
+@media (max-width: 1140px) {
   .topbar { gap: 10px; padding: 0 18px; }
-  .nav a { padding: 8px 7px; }
+  .nav a, .nav-head { padding: 8px 7px; }
   .brand-text em { display: none; }
-}
-@media (max-width: 1620px) {
   .search-open span { display: none; }
   .search-icon { display: block; }
   .search-open { padding: 7px 10px; }
@@ -1187,15 +1231,13 @@ tbody td strong { color: var(--text); }
 }
 
 /* Below this the links no longer fit beside the brand and the controls, so
-   they become a menu. This is the bar's breakpoint, not the page's: the grids
-   stay two and three columns down to 860px. The number is what the parts
-   measure, not a round figure: brand, fourteen links, the theme toggle and
-   the search glyph come to 1,414px with the padding stripped, and the bar is
-   given a little over that. It was 1,220px when there were twelve links,
-   which left the last two hanging off the edge below 1,414px. A laptop at
-   1,440px is the width this number is really set by: it keeps the links in
-   the bar there, and hands them to the menu on anything narrower. */
-@media (max-width: 1440px) {
+   they become a menu. Five grouped items come to 829px with the padding
+   stripped, so the bar could in principle be carried further down than this;
+   1,080px is chosen because it is where the page's own layout already turns,
+   and a bar that collapsed at some width of its own would be the only thing
+   on the page changing at that width. Every laptop keeps the full bar, which
+   the old 1,440px threshold could not offer. */
+@media (max-width: 1080px) {
   /* The nav is out of flow once it is a menu, so its margin-left:auto no
      longer pushes anything: the first remaining control takes over. */
   .theme-toggle { margin-left: auto; }
@@ -1211,6 +1253,23 @@ tbody td strong { color: var(--text); }
   }
   .nav.open { display: flex; }
   .nav a { padding: 11px 14px; font-size: 13.5px; }
+  /* In the panel there is room to show every route at once, so a group is a
+     heading over its links rather than a control: nothing to open, nothing to
+     miss, and the same five names ordering the same fourteen destinations. */
+  .nav-group { display: contents; }
+  .nav-head {
+    padding: 14px 14px 5px; font-size: 11px; font-weight: 600;
+    letter-spacing: .09em; text-transform: uppercase; color: var(--muted);
+    pointer-events: none; background: none;
+  }
+  .nav-head.active { background: none; color: var(--accent); }
+  .nav-caret { display: none; }
+  .nav-menu {
+    position: static; display: flex; min-width: 0;
+    padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none;
+  }
+  .nav-menu a { padding: 10px 14px; white-space: normal; }
+  .nav-menu a em { font-size: 11.5px; }
   .nav-toggle {
     display: block; width: 38px; height: 34px; background: var(--panel);
     border: 1px solid var(--line); border-radius: 9px; cursor: pointer; position: relative;

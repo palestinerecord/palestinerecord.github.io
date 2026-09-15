@@ -52,6 +52,7 @@ CLASSES = [
 # testimony rather than a person. Listed exhaustively rather than guessed at, and
 # asserted below: a new speaker must be classified before the file will build.
 ORG_SPEAKERS = {
+    '104-human-rights-organisations',
     'achord-center-hebrew-university-of-jerusalem',
     'al-haq-forensic-architecture-investigation-unit',
     'albert-einstein-hannah-arendt-sidney-hook-and-others',
@@ -68,6 +69,7 @@ ORG_SPEAKERS = {
     'international-court-of-justice',
     'international-criminal-court-pre-trial-chamber-i',
     'israeli-public-opinion',
+    'jewish-council-of-australia',
     'jewish-federations-of-north-america-burson',
     'law-for-palestine',
     'lemkin-institute-for-genocide-prevention',
@@ -76,6 +78,7 @@ ORG_SPEAKERS = {
     'ohchr',
     'physicians-for-human-rights-israel',
     'rossing-center-for-education-and-dialogue-federica-sasso',
+    'supreme-court-of-new-south-wales-fagan-j',
     'un-committee-on-the-elimination-of-racial-discrimination',
     'un-independent-international-commission-of-inquiry-on-the-opt',
     'yesh-din',
