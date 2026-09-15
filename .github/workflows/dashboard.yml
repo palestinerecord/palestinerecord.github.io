@@ -31,6 +31,7 @@ on:
       - 'prerender.py'
       - 'validate.py'
       - 'fetch_timeseries.py'
+      - 'sync_live.py'
       - '.github/workflows/dashboard.yml'
   workflow_dispatch:
     inputs:
@@ -52,9 +53,9 @@ jobs:
     name: Refresh the data
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
 
@@ -65,6 +66,26 @@ jobs:
       - name: Rebuild from the cached raw feeds
         if: ${{ inputs.skip_fetch == true }}
         run: python3 fetch_timeseries.py --offline | tee "$RUNNER_TEMP/fetch.log"
+
+      # A handful of the curated figures are copies of a number in the feed and
+      # say so, by naming the series they track. The moment the feed advances
+      # the copy disagrees with the original, which validate.py reports as a
+      # failure - correctly, but it would leave this job unable to publish a
+      # series it had just pulled properly. sync_live.py carries the new value
+      # across in the one direction that is honest, and refuses a feed whose
+      # numbers have collapsed rather than risen. Several derived files hold
+      # their own copy of those figures, so they are rebuilt whenever it moved.
+      - name: Carry the series into the curated figures
+        run: |
+          set -o pipefail
+          python3 sync_live.py | tee "$RUNNER_TEMP/sync.log"
+          if ! git diff --quiet -- data/; then
+            {
+              python3 provenance.py
+              python3 falsify.py
+              python3 manifest.py
+            } | tee -a "$RUNNER_TEMP/sync.log"
+          fi
 
       - name: Validate the data
         # validate.py exits non-zero on any failure, which stops the job before
@@ -211,7 +232,7 @@ jobs:
             echo
             echo "Data changed: **${{ steps.diff.outputs.changed || 'unknown' }}**"
             echo
-            for log in fetch validate prerender render; do
+            for log in fetch sync validate prerender render; do
               if [ -f "$RUNNER_TEMP/$log.log" ]; then
                 echo "### $log"
                 echo '```'

@@ -314,6 +314,50 @@ def check_headline_agreement(files):
          % (checked, unbacked))
 
 
+def check_live_copies(files):
+    """Every second copy of a live figure has to be the same figure.
+
+    figures.json holds the curated copy of the series; headline.json is a copy
+    of figures.json, written by manifest.py so that the first screen can be
+    painted from two kilobytes. The nightly refresh moves all of them together:
+    it pulls the feed, runs sync_live.py to carry the new values into the
+    curated files, and rebuilds everything derived from them. A copy left
+    behind would put one number on the first screen and a different one on the
+    page below it, so the copies are compared here rather than trusted.
+    """
+    figures, headline = files.get('figures'), files.get('headline')
+    if not figures or not headline:
+        fail('copies', 'figures.json or headline.json is missing')
+        return
+    curated = {row.get('label'): row.get('value') for row in figures.get('headline', [])}
+    copied = headline.get('headline', [])
+    for row in copied:
+        label = row.get('label')
+        if label not in curated:
+            fail('copies', 'headline.json carries "%s", which figures.json does not' % label)
+        elif curated[label] != row.get('value'):
+            fail('copies', '"%s" is %s in headline.json but %s in figures.json - run manifest.py'
+                 % (label, row.get('value'), curated[label]))
+    if len(copied) != len(curated):
+        fail('copies', 'headline.json carries %d headline figures against %d in figures.json'
+             % (len(copied), len(curated)))
+    note('copies: %d headline figures agree between figures.json and headline.json' % len(curated))
+
+    # The refresh is only safe if the workflow syncs before it validates. A
+    # series pulled fresh and then checked against a copy nobody updated is
+    # exactly the failure this check exists to stop recurring, and it is a
+    # failure of the workflow rather than of the data, so it is caught here.
+    workflow = HERE / '.github' / 'workflows' / 'dashboard.yml'
+    if not workflow.exists():
+        return
+    text = workflow.read_text()
+    if 'sync_live.py' not in text:
+        fail('copies', 'the refresh workflow never runs sync_live.py, so the first advance '
+                       'of the series will fail the nightly run')
+    elif 'python3 validate.py' in text and text.index('sync_live.py') > text.index('python3 validate.py'):
+        fail('copies', 'the refresh workflow validates the data before it syncs the curated copies')
+
+
 def check_declared_totals(files):
     """A declared total must equal the list it counts."""
     figures = files.get('figures', {})
@@ -1434,6 +1478,7 @@ def main():
         check_children(files)
         check_day(files)
         check_headline_agreement(files)
+        check_live_copies(files)
         check_declared_totals(files)
         check_recognition_count(files)
         check_map_joins(files)

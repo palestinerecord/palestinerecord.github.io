@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-15",
-  "total_bytes": 4821599,
+  "total_bytes": 4821882,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -49,7 +49,7 @@
         "meta",
         "entries"
       ],
-      "updated": "2026-09-15"
+      "updated": "2026-09-14"
     },
     {
       "path": "data/claim-patterns.json",
@@ -173,7 +173,7 @@
         "recognition",
         "opinion"
       ],
-      "updated": "2026-09-14"
+      "updated": "2026-09-15"
     },
     {
       "path": "data/headline.json",
@@ -205,7 +205,7 @@
         "settler_violence",
         "true_toll"
       ],
-      "updated": "2026-09-11"
+      "updated": "2026-09-12"
     },
     {
       "path": "data/legal.json",
@@ -286,7 +286,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-14"
+      "updated": "2026-09-15"
     },
     {
       "path": "data/names.json",
@@ -299,7 +299,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-14"
+      "updated": "2026-09-15"
     },
     {
       "path": "data/provenance.json",
@@ -399,7 +399,7 @@
       "title": "Daily and monthly casualty series",
       "description": "Killed and injured in Gaza and the West Bank, day by day and aggregated by month, with the reporting gaps left as gaps rather than interpolated.",
       "source": "Tech For Palestine, from Gaza Ministry of Health and OCHA reporting (public domain).",
-      "bytes": 95889,
+      "bytes": 96172,
       "records": null,
       "fields": [
         "meta",
@@ -411,7 +411,7 @@
         "press_killed_count",
         "demographics"
       ],
-      "updated": "2026-09-14"
+      "updated": "2026-09-15"
     },
     {
       "path": "data/war-record.json",

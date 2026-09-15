@@ -22,6 +22,8 @@ import argparse
 import datetime
 import json
 import pathlib
+import re
+import subprocess
 import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
@@ -265,6 +267,7 @@ def shape(blob):
 def build():
     datasets = []
     missing = []
+    known = previous_dates()
     for path in sorted(DATA.glob('*.json')):
         if path.name in SKIP:
             continue
@@ -286,7 +289,7 @@ def build():
             'bytes': len(raw),
             'records': records,
             'fields': fields,
-            'updated': datetime.date.fromtimestamp(path.stat().st_mtime).isoformat(),
+            'updated': last_changed(path, known.get('data/%s' % path.name)),
         })
 
     if missing:
@@ -308,6 +311,47 @@ def build():
         'total_bytes': sum(d['bytes'] for d in datasets),
         'datasets': datasets,
     }
+
+
+def previous_dates():
+    """The dates the last manifest published, kept for anything git cannot date."""
+    try:
+        return {d['path']: d['updated']
+                for d in json.loads(OUT.read_text(encoding='utf-8'))['datasets']}
+    except (OSError, ValueError, KeyError):
+        return {}
+
+
+def last_changed(path, known=None):
+    """The date the file last changed, not the date this copy of it was made.
+
+    Modification times are the obvious answer and the wrong one: a fresh clone
+    stamps every file with the moment it was checked out, so a manifest built
+    on a runner would announce that all twenty-seven datasets were updated
+    today. Git knows when each file actually last changed, which is the claim
+    this field is making. A file edited since its last commit - which is the
+    normal case during a refresh - is newer than git knows, so it is dated
+    today.
+
+    A shallow checkout, which is what a runner takes by default, holds one
+    commit and can date only the files that commit touched. Rather than restamp
+    the rest, the date the previous manifest published is carried forward: a
+    date that cannot be established is no reason to publish a wrong one.
+    """
+    try:
+        rev = subprocess.run(['git', 'log', '-1', '--format=%cs', '--', str(path)],
+                             cwd=str(HERE), capture_output=True, text=True, timeout=15)
+        dirty = subprocess.run(['git', 'status', '--porcelain', '--', str(path)],
+                               cwd=str(HERE), capture_output=True, text=True, timeout=15)
+        if rev.returncode == 0 and dirty.returncode == 0:
+            if dirty.stdout.strip():
+                return datetime.date.today().isoformat()
+            stamp = rev.stdout.strip()
+            if re.fullmatch(r'\d{4}-\d{2}-\d{2}', stamp):
+                return stamp
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return known or datetime.date.fromtimestamp(path.stat().st_mtime).isoformat()
 
 
 HEADLINE = DATA / 'headline.json'
@@ -366,7 +410,15 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument('--check', action='store_true',
                     help='report what would change and write nothing')
+    ap.add_argument('--headline', action='store_true',
+                    help='write only data/headline.json, the copy of the first screen')
     args = ap.parse_args()
+
+    if args.headline:
+        head = json.dumps(headline(), ensure_ascii=False, separators=(',', ':')) + '\n'
+        HEADLINE.write_text(head, encoding='utf-8')
+        print('manifest: wrote %s — %d bytes' % (HEADLINE.relative_to(HERE), len(head)))
+        return 0
 
     manifest = build()
     text = json.dumps(manifest, indent=2, ensure_ascii=False) + '\n'
