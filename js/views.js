@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=71" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=72" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=71" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=72" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -3101,6 +3101,185 @@ const Views = (function () {
      conclusions are not neutral, and the difference between those two words is
      the whole of it. Everything on this page is reproduced from the Preamble
      to report-final.md, which remains the source of record. */
+  /* ---------- the falsification register ---------- */
+
+  /* The register is the four conditions above, made into something a reader can
+     act on one claim at a time. Each entry states what is claimed, what it rests
+     on, how many independent classes of source stand behind it, which adversary
+     switch would remove it, and what a challenger would have to produce. The
+     test is the same for every entry of a kind, which is the part that matters:
+     the standard offered for the figures this record would least like to lose is
+     the standard offered for the rest. */
+
+  function fxIndependence(n) {
+    if (n <= 0) return 'No source recorded';
+    if (n === 1) return 'One class of source';
+    return `${n} independent classes of source`;
+  }
+
+  /* The challenge arrives as a GitHub issue with the entry, the published value
+     and the current attribution already filled in, so that it can be checked
+     against the same entry it disputes rather than against a recollection of
+     it. Nothing is sent from the page: the link opens a compose form, and the
+     reader decides whether to file it.
+
+     The prefilled body is about 1.2kB once encoded, and there are 358 of them,
+     so writing them all into the markup would put 400kB of query string into
+     a page whose own prose is a fraction of that. The markup therefore carries
+     the short form — label and title, which is enough to file a usable issue
+     with no JavaScript at all — and app.js upgrades each link to the full
+     prefilled body once the register's filters are wired up. */
+  function fxTitle(e) {
+    return 'Challenge: ' + ((e.context ? e.context + ' — ' : '') + e.claim).slice(0, 90);
+  }
+
+  function fxShortUrl(F, e) {
+    return `https://github.com/${F.meta.repo}/issues/new`
+      + `?labels=${encodeURIComponent(F.meta.label)}`
+      + `&title=${encodeURIComponent(fxTitle(e))}`;
+  }
+
+  function fxChallengeUrl(F, e, kind) {
+    const claim = (e.context ? e.context + ' — ' : '') + e.claim;
+    const named = e.sources.map((id) => (F.sources[id] || {}).name || id).join(', ');
+    const body = [
+      '### The entry',
+      '',
+      '- Register id: `' + e.id + '`',
+      '- Claim: ' + claim,
+      e.value !== undefined ? '- As published: ' + e.value : '',
+      e.date ? '- Dated: ' + e.date : '',
+      e.attribution ? '- Attributed to: ' + e.attribution : '',
+      '- Resting on: ' + (named || 'no source recorded') + ' (' + fxIndependence(e.independence).toLowerCase() + ')',
+      '',
+      '### What would settle it',
+      '',
+      kind ? kind.test : '',
+      '',
+      '### The evidence offered',
+      '',
+      '<!-- Link the primary source, with its date and its issuing body. -->',
+      '',
+      '### What the entry should read instead',
+      '',
+      '<!-- If the correction is a figure, give the figure and the date it was recorded. -->',
+      '',
+    ].filter((line) => line !== '').join('\n');
+    return fxShortUrl(F, e) + `&body=${encodeURIComponent(body)}`;
+  }
+
+  function fxEntry(F, e, kinds, switches) {
+    const kind = kinds[e.kind];
+    const claim = (e.context ? `<span class="fx-context">${esc(e.context)}</span> ` : '') + esc(e.claim);
+    const facts = [
+      e.value !== undefined ? `<b>${esc(String(e.value))}</b>` : '',
+      e.date ? esc(e.date) : '',
+      e.attribution ? esc(e.attribution) : '',
+    ].filter(Boolean).join(' · ');
+    const removed = e.falls.map((id) => `<span class="fx-badge falls">${esc((switches[id] || {}).label || id)}</span>`).join('');
+    const quote = e.statement !== undefined && D.statements.items[e.statement]
+      ? `<div class="fx-block"><h4>The words themselves</h4>
+          <blockquote class="led-quote">${esc(D.statements.items[e.statement].quote)}</blockquote>
+          <div class="led-cite-src">${esc(D.statements.items[e.statement].source || '')}</div></div>`
+      : '';
+    const text = [e.context || '', e.claim, e.attribution || '', String(e.value === undefined ? '' : e.value)]
+      .join(' ').toLowerCase();
+    return `<details class="fx-entry" id="fx-${esc(e.id)}" data-kind="${esc(e.kind)}"
+        data-ind="${e.independence}" data-falls="${esc(e.falls.join(' '))}" data-text="${esc(text)}">
+      <summary>
+        <div class="fx-claim">${claim}</div>
+        ${facts ? `<div class="fx-facts">${facts}</div>` : ''}
+        <div class="fx-badges">
+          <span class="fx-badge ind-${Math.min(e.independence, 3)}">${esc(fxIndependence(e.independence))}</span>
+          ${removed}
+        </div>
+      </summary>
+      <div class="fx-body">
+        <div class="fx-block">
+          <h4>What it rests on</h4>
+          <div class="fx-sources">${e.sources.map((id) => {
+            const s = F.sources[id] || {};
+            return `<span class="fx-source">${esc(s.name || id)}<em>${esc(F.originLabels[s.origin] || s.origin || '')}</em></span>`;
+          }).join('') || '<span class="fx-source">No source recorded</span>'}</div>
+          ${e.ref ? `<span class="led-ref">${esc(e.ref)}</span>` : ''}
+        </div>
+        ${quote}
+        <div class="fx-block">
+          <h4>What would settle it</h4>
+          <p>The test for every entry of this kind, stated in full under
+            <a href="#fx-test-${esc(e.kind)}">${esc(kind ? kind.label.toLowerCase() : e.kind)}</a> above:
+            ${esc(kind ? kind.test.split('. ')[0] + '.' : '')}</p>
+        </div>
+        <div class="fx-block">
+          <a class="btn" href="${fxShortUrl(F, e)}" data-fx-id="${esc(e.id)}" target="_blank" rel="noopener noreferrer">Challenge this entry</a>
+          <span class="fx-route">Opens a GitHub issue with the entry, its value and its attribution filled in. Nothing is sent from this page.</span>
+        </div>
+      </div>
+    </details>`;
+  }
+
+  function registerSection() {
+    const F = D.falsify;
+    const M = F.meta;
+    const kinds = {};
+    F.kinds.forEach((k) => { kinds[k.id] = k; });
+    const switches = {};
+    F.switches.forEach((s) => { switches[s.id] = s; });
+    F.originLabels = F.originLabels || (() => {
+      const map = {};
+      F.origins.forEach((o) => { map[o.id] = o.label; });
+      return map;
+    })();
+
+    const stats = [
+      { value: M.entries, label: 'Entries in the register', note: 'every curated claim on this site that a reader could settle on their own' },
+      { value: M.single_origin, label: 'Resting on one class of source', note: 'listed first, because they are the ones a single retraction would take out' },
+      { value: M.exposed, label: 'Removed by an adversary switch', note: 'an entry that does not survive one of the settings on the provenance page' },
+      { value: F.origins.length, label: 'Classes of source in use', note: 'the axis the independence score is counted on' },
+    ];
+
+    const kindChips = [`<button class="chip active" data-kind="all">Everything<span>${M.entries}</span></button>`]
+      .concat(F.kinds.map((k) => `<button class="chip" data-kind="${esc(k.id)}">${esc(k.label)}<span>${M.kinds[k.id] || 0}</span></button>`)).join('');
+    const indChips = [
+      ['all', 'Any standing', M.entries],
+      ['1', 'One class of source', F.entries.filter((e) => e.independence <= 1).length],
+      ['2', 'Two or more', F.entries.filter((e) => e.independence >= 2).length],
+      ['3', 'Three or more', F.entries.filter((e) => e.independence >= 3).length],
+    ].map((f, i) => `<button class="chip ${i === 0 ? 'active' : ''}" data-ind="${f[0]}">${f[1]}<span>${f[2]}</span></button>`).join('');
+    const switchChips = [`<button class="chip active" data-switch="all">Every entry<span>${M.entries}</span></button>`]
+      .concat(F.switches.map((s) => `<button class="chip" data-switch="${esc(s.id)}">${esc(s.label)}<span>${F.entries.filter((e) => e.falls.indexOf(s.id) >= 0).length}</span></button>`)).join('');
+
+    return `<section class="section wrap" id="register">
+        ${head('The register', `${M.entries} entries, each with the evidence that would settle it`,
+          'The conditions above are the promise. This is the list. Every curated claim on this site that a reader could take up on their own is here, '
+          + 'with what it rests on, how many independent classes of source stand behind it, which adversary switch would remove it, and the specific evidence that would decide it. '
+          + 'The weakest entries are at the top, because a register that led with its strongest would be advertising rather than inviting.')}
+        <div class="grid c4">
+          ${stats.map((x, i) => statCard(x, ['red', 'amber', 'blue', 'green'][i])).join('')}
+        </div>
+        <div class="fx-tests">
+          ${F.kinds.map((k) => `<div class="fx-test" id="fx-test-${esc(k.id)}">
+            <h4>${esc(k.label)} <span>${M.kinds[k.id] || 0}</span></h4>
+            <p class="fx-test-note">${esc(k.note)}</p>
+            <p>${esc(k.test)}</p>
+          </div>`).join('')}
+        </div>
+        <div class="chips" id="fx-kinds" style="margin-top:22px">${kindChips}</div>
+        <div class="chips" id="fx-inds">${indChips}</div>
+        <div class="chips" id="fx-switches">${switchChips}</div>
+        <div class="tl-controls">
+          <input type="search" id="fx-search" placeholder="Search the register…" autocomplete="off">
+          <span class="small muted" id="fx-count">${M.entries} entries</span>
+        </div>
+        <div class="led-list" id="fx-list">
+          ${F.entries.map((e) => fxEntry(F, e, kinds, switches)).join('')}
+        </div>
+        <p class="chart-note" style="margin-top:18px">The register is generated from the provenance graph, so an entry cannot go missing by being forgotten:
+          add a claim to any curated file and it appears here with its sources and its test the next time the site is built.
+          The independence score and the switch settings are the same ones the <a href="#/provenance">provenance page</a> computes, and the counts agree with it.</p>
+      </section>`;
+  }
+
   function methodView() {
     const quotes = [
       ['Elie Wiesel', 'Auschwitz survivor, Nobel Peace Prize acceptance speech, Oslo City Hall, 10 December 1986',
@@ -3125,16 +3304,6 @@ const Views = (function () {
       ['\u201cThe cultural and celebrity material is not forensic.\u201d',
         'Correct, and it is labelled accordingly. \u00a715.12 records public and professional reaction to the war. It is not evidence of state conduct and it carries no weight in any legal conclusion. It is retained because the direction and scale of public response is itself a documented fact about the period, and because the parties themselves repeatedly make it an issue. Nothing in Parts I\u2013XIV or XVI\u2013XVIII depends on it.',
         ''],
-    ];
-    const falsify = [
-      ['A load-bearing figure shown to be wrong',
-        'from a source of equal or better standing. Casualty figures, settlement counts, detention numbers and destruction totals are attributed to the body that recorded them, with the date of the record, precisely so that a superseding figure can be identified and substituted.'],
-      ['A quotation shown to be fabricated, mistranslated or materially decontextualised.',
-        'Every statement carries a named speaker, a role, a date and a source; where a widely circulated paraphrase differs from the sourced verbatim wording, both are recorded and the difference is stated; a weakly sourced item carries that caveat inline rather than being quietly retained.'],
-      ['A finding withdrawn or reversed by the body that issued it.',
-        'The findings relied on here are institutional, not anonymous, and each is therefore capable of being retracted by an identifiable author.'],
-      ['The ICJ\u2019s merits judgment in South Africa v. Israel,',
-        'which is the one authority that could displace rather than merely dispute the central legal characterisation, and which this record expressly does not pre-empt.'],
     ];
     return `<div class="view">
       <section class="section wrap">
@@ -3252,10 +3421,12 @@ const Views = (function () {
       <section class="section wrap">
         ${head('Falsification', 'What would falsify this record', 'A record that cannot in principle be shown to be wrong is not a forensic document. This one can be, in these specific ways, and the reader is invited to attempt them.')}
         <ol class="method-falsify">
-          ${falsify.map(([claim, rest]) => `<li><b>${esc(claim)}</b> ${esc(rest)}</li>`).join('')}
+          ${D.falsify.conditions.map((c) => `<li><b>${esc(c.title)}</b> ${esc(c.detail)}</li>`).join('')}
         </ol>
         <p class="chart-note" style="margin-top:18px">This is not a hypothetical commitment. The <a href="#/changelog">revision history</a> publishes corrections made against this record\u2019s own earlier editions \u2014 a mis-computed casualty ratio, an impossible journalist-toll comparison, a duplicated village entry, out-of-sequence subsections, and load-bearing claims found to be thinly sourced and either given full sourcing or retained with an explicit caveat. Errors found in a record that publishes its corrections are evidence that the method is running; errors found in a record that does not publish them are discovered by its opponents.</p>
       </section>
+
+      ${registerSection()}
 
       <section class="section wrap">
         ${head('Privacy', 'What this site does with you', 'Nothing.')}
@@ -3834,5 +4005,6 @@ const Views = (function () {
     meta,
     blocksHTML, esc, fmt,
     answerFigure, answerStatements,
+    challengeUrl(entry, kind) { return fxChallengeUrl(D.falsify, entry, kind); },
   };
 })();

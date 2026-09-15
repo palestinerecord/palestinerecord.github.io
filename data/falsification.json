@@ -1,0 +1,7633 @@
+{
+ "meta": {
+  "title": "The falsification register",
+  "note": "One entry for every curated claim on this site that a reader could settle on their own: what is claimed, what it rests on, how many independent classes of source stand behind it, which adversary switch would remove it, and the evidence that would decide it. The register is generated from the provenance graph, so an entry cannot go missing by being forgotten.",
+  "source": "data/provenance.json; data/statements.json",
+  "repo": "palestinerecord/palestinerecord.github.io",
+  "label": "challenge",
+  "entries": 358,
+  "kinds": {
+   "figure": 104,
+   "statement": 120,
+   "record": 134
+  },
+  "single_origin": 228,
+  "exposed": 217,
+  "claims": 416
+ },
+ "conditions": [
+  {
+   "id": "figure",
+   "title": "A load-bearing figure shown to be wrong",
+   "detail": "from a source of equal or better standing. Casualty figures, settlement counts, detention numbers and destruction totals are attributed to the body that recorded them, with the date of the record, precisely so that a superseding figure can be identified and substituted."
+  },
+  {
+   "id": "statement",
+   "title": "A quotation shown to be fabricated, mistranslated or materially decontextualised",
+   "detail": "Every statement carries a named speaker, a role, a date and a source; where a widely circulated paraphrase differs from the sourced verbatim wording, both are recorded and the difference is stated; a weakly sourced item carries that caveat inline rather than being quietly retained."
+  },
+  {
+   "id": "record",
+   "title": "A finding withdrawn or reversed by the body that issued it",
+   "detail": "The findings relied on here are institutional, not anonymous, and each is therefore capable of being retracted by an identifiable author."
+  },
+  {
+   "id": "judgment",
+   "title": "The ICJ’s merits judgment in South Africa v. Israel",
+   "detail": "which is the one authority that could displace rather than merely dispute the central legal characterisation, and which this record expressly does not pre-empt. It is not in the register below because no entry can anticipate it: it is the one test this record cannot run on itself."
+  }
+ ],
+ "kinds": [
+  {
+   "id": "figure",
+   "label": "Figures",
+   "note": "A number attributed to the body that recorded it, on the date it recorded it.",
+   "test": "Produce a figure for the same quantity, at the same date or later, from a body of equal or better standing than the one named here. The figure on this page is then superseded and replaced, and the change is published in the revision history."
+  },
+  {
+   "id": "statement",
+   "label": "Statements",
+   "note": "Something a named person or body said, on a named date, in a named place.",
+   "test": "Produce the recording, transcript or original publication showing that the words were not said, that the translation is wrong, or that the surrounding text changes their meaning. The entry is then withdrawn or corrected on its face, and the correction is published rather than made silently."
+  },
+  {
+   "id": "record",
+   "label": "Findings and records",
+   "note": "A finding, a ruling or a documented fact carried from an identified body.",
+   "test": "Show that the body named has withdrawn, corrected or reversed the finding, or produce a record of equal standing that contradicts it. A finding retracted by its own author is removed here; a finding merely disputed is kept with the dispute recorded beside it."
+  }
+ ],
+ "origins": [
+  {
+   "id": "academic",
+   "label": "Academic and peer-reviewed research"
+  },
+  {
+   "id": "archive",
+   "label": "Declassified archives"
+  },
+  {
+   "id": "data-project",
+   "label": "Open datasets and derived figures"
+  },
+  {
+   "id": "international-court",
+   "label": "International courts"
+  },
+  {
+   "id": "international-ngo",
+   "label": "International human rights organisations"
+  },
+  {
+   "id": "israeli-court",
+   "label": "Israeli courts and commissions"
+  },
+  {
+   "id": "israeli-media",
+   "label": "Israeli press"
+  },
+  {
+   "id": "israeli-ngo",
+   "label": "Israeli human rights organisations"
+  },
+  {
+   "id": "israeli-official",
+   "label": "Israeli state, military and ministries"
+  },
+  {
+   "id": "media",
+   "label": "International press"
+  },
+  {
+   "id": "palestinian-ngo",
+   "label": "Palestinian human rights organisations"
+  },
+  {
+   "id": "palestinian-official",
+   "label": "Palestinian official bodies"
+  },
+  {
+   "id": "un",
+   "label": "United Nations bodies"
+  },
+  {
+   "id": "western-state",
+   "label": "Western states and parliaments"
+  }
+ ],
+ "sources": {
+  "btselem": {
+   "name": "B'Tselem",
+   "origin": "israeli-ngo"
+  },
+  "ocha": {
+   "name": "UN OCHA",
+   "origin": "un"
+  },
+  "site-derived": {
+   "name": "Derived within this record",
+   "origin": "data-project"
+  },
+  "gaza-moh": {
+   "name": "Gaza Ministry of Health",
+   "origin": "palestinian-official"
+  },
+  "israel-tv": {
+   "name": "Israeli broadcast media",
+   "origin": "israeli-media"
+  },
+  "times-of-israel": {
+   "name": "The Times of Israel",
+   "origin": "israeli-media"
+  },
+  "trade-press": {
+   "name": "Entertainment and trade press",
+   "origin": "media"
+  },
+  "remember-children": {
+   "name": "Remember These Children",
+   "origin": "data-project"
+  },
+  "aljazeera": {
+   "name": "Al Jazeera",
+   "origin": "media"
+  },
+  "un-coi": {
+   "name": "UN Commission of Inquiry on the OPT",
+   "origin": "un"
+  },
+  "haaretz": {
+   "name": "Haaretz",
+   "origin": "israeli-media"
+  },
+  "tfp": {
+   "name": "Tech For Palestine open datasets",
+   "origin": "data-project"
+  },
+  "euromed": {
+   "name": "Euro-Mediterranean Human Rights Monitor",
+   "origin": "international-ngo"
+  },
+  "hrw": {
+   "name": "Human Rights Watch",
+   "origin": "international-ngo"
+  },
+  "icj": {
+   "name": "International Court of Justice",
+   "origin": "international-court"
+  },
+  "dci-p": {
+   "name": "Defence for Children International – Palestine",
+   "origin": "palestinian-ngo"
+  },
+  "mee": {
+   "name": "Middle East Eye",
+   "origin": "media"
+  },
+  "cia-archive": {
+   "name": "Declassified state archives",
+   "origin": "archive"
+  },
+  "israel-hcj": {
+   "name": "High Court of Justice (Israel)",
+   "origin": "israeli-court"
+  },
+  "law-for-palestine": {
+   "name": "Law for Palestine",
+   "origin": "palestinian-ngo"
+  },
+  "us-congress": {
+   "name": "US Congress and the Congressional Research Service",
+   "origin": "western-state"
+  },
+  "ipc": {
+   "name": "IPC Famine Review Committee",
+   "origin": "un"
+  },
+  "ohchr": {
+   "name": "OHCHR",
+   "origin": "un"
+  },
+  "unicef": {
+   "name": "UNICEF",
+   "origin": "un"
+  },
+  "addameer": {
+   "name": "Addameer",
+   "origin": "palestinian-ngo"
+  },
+  "al-haq": {
+   "name": "Al-Haq",
+   "origin": "palestinian-ngo"
+  },
+  "amnesty": {
+   "name": "Amnesty International",
+   "origin": "international-ngo"
+  },
+  "cnn": {
+   "name": "CNN",
+   "origin": "media"
+  },
+  "save-children": {
+   "name": "Save the Children",
+   "origin": "international-ngo"
+  },
+  "jpost": {
+   "name": "The Jerusalem Post",
+   "origin": "israeli-media"
+  },
+  "un-ga": {
+   "name": "UN General Assembly",
+   "origin": "un"
+  },
+  "un-hrc": {
+   "name": "UN Human Rights Council",
+   "origin": "un"
+  },
+  "un-sc": {
+   "name": "UN Security Council",
+   "origin": "un"
+  },
+  "who": {
+   "name": "World Health Organization",
+   "origin": "un"
+  },
+  "costs-of-war": {
+   "name": "Brown University Costs of War",
+   "origin": "academic"
+  },
+  "genocide-watch": {
+   "name": "Genocide Watch",
+   "origin": "international-ngo"
+  },
+  "iags": {
+   "name": "International Association of Genocide Scholars",
+   "origin": "international-ngo"
+  },
+  "icc": {
+   "name": "International Criminal Court",
+   "origin": "international-court"
+  },
+  "idf": {
+   "name": "Israel Defense Forces",
+   "origin": "israeli-official"
+  },
+  "phr-israel": {
+   "name": "Physicians for Human Rights Israel",
+   "origin": "israeli-ngo"
+  },
+  "guardian": {
+   "name": "The Guardian",
+   "origin": "media"
+  },
+  "un-sr": {
+   "name": "UN Special Rapporteurs",
+   "origin": "un"
+  },
+  "unrwa": {
+   "name": "UNRWA",
+   "origin": "un"
+  },
+  "ynet": {
+   "name": "Ynet and Yedioth Ahronoth",
+   "origin": "israeli-media"
+  },
+  "morris": {
+   "name": "Benny Morris and the Israeli New Historians",
+   "origin": "academic"
+  },
+  "documentary": {
+   "name": "Documentary film and broadcast interviews",
+   "origin": "media"
+  },
+  "founding-texts": {
+   "name": "Founding Zionist texts and primary documents",
+   "origin": "archive"
+  },
+  "pchr": {
+   "name": "Palestinian Centre for Human Rights",
+   "origin": "palestinian-ngo"
+  },
+  "lancet": {
+   "name": "The Lancet and Lancet Global Health",
+   "origin": "academic"
+  },
+  "uk-gov": {
+   "name": "UK Government records",
+   "origin": "western-state"
+  },
+  "unccp": {
+   "name": "UN Conciliation Commission for Palestine",
+   "origin": "un"
+  },
+  "un-sg": {
+   "name": "UN Secretary-General",
+   "origin": "un"
+  },
+  "wafa": {
+   "name": "WAFA (Palestinian news agency)",
+   "origin": "palestinian-official"
+  },
+  "yesh-din": {
+   "name": "Yesh Din",
+   "origin": "israeli-ngo"
+  },
+  "al-mezan": {
+   "name": "Al Mezan Centre for Human Rights",
+   "origin": "palestinian-ngo"
+  },
+  "badil": {
+   "name": "BADIL Resource Center",
+   "origin": "palestinian-ngo"
+  },
+  "breaking-silence": {
+   "name": "Breaking the Silence",
+   "origin": "israeli-ngo"
+  },
+  "cbs": {
+   "name": "CBS News",
+   "origin": "media"
+  },
+  "france24": {
+   "name": "France 24 and Euronews",
+   "origin": "media"
+  },
+  "pal-civil-defence": {
+   "name": "Gaza Civil Defence",
+   "origin": "palestinian-official"
+  },
+  "israel-cbs": {
+   "name": "Israeli Central Bureau of Statistics",
+   "origin": "israeli-official"
+  },
+  "icahd": {
+   "name": "Israeli Committee Against House Demolitions",
+   "origin": "israeli-ngo"
+  },
+  "jns": {
+   "name": "JNS",
+   "origin": "israeli-media"
+  },
+  "lemkin": {
+   "name": "Lemkin Institute for Genocide Prevention",
+   "origin": "international-ngo"
+  },
+  "pal-mfa": {
+   "name": "Palestinian Ministry of Foreign Affairs",
+   "origin": "palestinian-official"
+  },
+  "journal": {
+   "name": "Peer-reviewed journals and university presses",
+   "origin": "academic"
+  },
+  "trt": {
+   "name": "TRT World",
+   "origin": "media"
+  },
+  "new-arab": {
+   "name": "The New Arab",
+   "origin": "media"
+  },
+  "wapo": {
+   "name": "The Washington Post",
+   "origin": "media"
+  },
+  "un-library": {
+   "name": "UN Dag Hammarskjöld Library",
+   "origin": "un"
+  },
+  "goldstone": {
+   "name": "UN Goldstone Report (2009)",
+   "origin": "un"
+  },
+  "972": {
+   "name": "+972 Magazine and Local Call",
+   "origin": "israeli-media"
+  },
+  "ap": {
+   "name": "Associated Press",
+   "origin": "media"
+  },
+  "cst": {
+   "name": "Community Security Trust",
+   "origin": "international-ngo"
+  },
+  "israel-archives": {
+   "name": "Israel State Archives and cabinet records",
+   "origin": "israeli-official"
+  },
+  "israel-mod": {
+   "name": "Israeli Ministry of Defense",
+   "origin": "israeli-official"
+  },
+  "j-street": {
+   "name": "J Street",
+   "origin": "international-ngo"
+  },
+  "merip": {
+   "name": "MERIP",
+   "origin": "academic"
+  },
+  "max-planck": {
+   "name": "Max Planck Institute for Demographic Research",
+   "origin": "academic"
+  },
+  "npr": {
+   "name": "NPR",
+   "origin": "media"
+  },
+  "pcbs": {
+   "name": "Palestinian Central Bureau of Statistics",
+   "origin": "palestinian-official"
+  },
+  "palquest": {
+   "name": "Palquest / Institute for Palestine Studies",
+   "origin": "palestinian-ngo"
+  },
+  "khalidi": {
+   "name": "Rashid Khalidi, The Hundred Years War on Palestine",
+   "origin": "academic"
+  },
+  "reuters": {
+   "name": "Reuters",
+   "origin": "media"
+  },
+  "sipri": {
+   "name": "SIPRI",
+   "origin": "academic"
+  },
+  "nyt": {
+   "name": "The New York Times",
+   "origin": "media"
+  },
+  "wsj": {
+   "name": "The Wall Street Journal",
+   "origin": "media"
+  },
+  "un-special-cttee": {
+   "name": "UN Special Committee on Israeli Practices",
+   "origin": "un"
+  },
+  "wikipedia": {
+   "name": "Wikipedia (with its own cited sources)",
+   "origin": "data-project"
+  },
+  "abc": {
+   "name": "ABC News",
+   "origin": "media"
+  },
+  "adalah": {
+   "name": "Adalah",
+   "origin": "israeli-ngo"
+  },
+  "bbc": {
+   "name": "BBC",
+   "origin": "media"
+  },
+  "cogat": {
+   "name": "COGAT",
+   "origin": "israeli-official"
+  },
+  "chatham": {
+   "name": "Chatham House",
+   "origin": "academic"
+  },
+  "cpj": {
+   "name": "Committee to Protect Journalists",
+   "origin": "international-ngo"
+  },
+  "ecchr": {
+   "name": "European Center for Constitutional and Human Rights",
+   "origin": "international-ngo"
+  },
+  "fas": {
+   "name": "Federation of American Scientists",
+   "origin": "academic"
+  },
+  "fortune": {
+   "name": "Fortune",
+   "origin": "media"
+  },
+  "germany": {
+   "name": "German Federal Ministry for Economic Affairs and Energy",
+   "origin": "western-state"
+  },
+  "icj-jurists": {
+   "name": "International Commission of Jurists",
+   "origin": "international-ngo"
+  },
+  "fidh": {
+   "name": "International Federation for Human Rights",
+   "origin": "international-ngo"
+  },
+  "israel-europe-press": {
+   "name": "Israeli and European press reporting",
+   "origin": "israeli-media"
+  },
+  "jfna": {
+   "name": "Jewish Federations of North America",
+   "origin": "international-ngo"
+  },
+  "jvp": {
+   "name": "Jewish Voice for Peace",
+   "origin": "international-ngo"
+  },
+  "knesset": {
+   "name": "Knesset",
+   "origin": "israeli-official"
+  },
+  "land-research": {
+   "name": "Land Research Center",
+   "origin": "palestinian-ngo"
+  },
+  "lshtm": {
+   "name": "London School of Hygiene and Tropical Medicine",
+   "origin": "academic"
+  },
+  "maariv": {
+   "name": "Maariv",
+   "origin": "israeli-media"
+  },
+  "msf": {
+   "name": "Médecins Sans Frontières",
+   "origin": "international-ngo"
+  },
+  "nbc": {
+   "name": "NBC News",
+   "origin": "media"
+  },
+  "oxfam": {
+   "name": "Oxfam",
+   "origin": "international-ngo"
+  },
+  "peace-now": {
+   "name": "Peace Now",
+   "origin": "israeli-ngo"
+  },
+  "quincy": {
+   "name": "Quincy Institute",
+   "origin": "academic"
+  },
+  "reuters-institute": {
+   "name": "Reuters Institute for the Study of Journalism",
+   "origin": "academic"
+  },
+  "rossing": {
+   "name": "Rossing Center for Education and Dialogue",
+   "origin": "international-ngo"
+  },
+  "abu-sitta": {
+   "name": "Salman Abu Sitta, Atlas of Palestine",
+   "origin": "palestinian-ngo"
+  },
+  "tell-mama": {
+   "name": "Tell MAMA",
+   "origin": "international-ngo"
+  },
+  "newyorker": {
+   "name": "The New Yorker",
+   "origin": "media"
+  },
+  "sunday-times": {
+   "name": "The Sunday Times",
+   "origin": "media"
+  },
+  "un-crpd": {
+   "name": "UN Committee on the Rights of Persons with Disabilities",
+   "origin": "un"
+  },
+  "escwa": {
+   "name": "UN ESCWA",
+   "origin": "un"
+  },
+  "un-news": {
+   "name": "UN News",
+   "origin": "un"
+  },
+  "un-membership": {
+   "name": "UN membership and treaty records",
+   "origin": "un"
+  },
+  "unesco": {
+   "name": "UNESCO",
+   "origin": "un"
+  },
+  "wcc": {
+   "name": "World Council of Churches",
+   "origin": "international-ngo"
+  },
+  "wfp": {
+   "name": "World Food Programme",
+   "origin": "un"
+  },
+  "omct": {
+   "name": "World Organisation Against Torture",
+   "origin": "international-ngo"
+  }
+ },
+ "switches": [
+  {
+   "id": "no-palestinian",
+   "label": "Remove every Palestinian source",
+   "removes": [
+    "palestinian-official",
+    "palestinian-ngo"
+   ],
+   "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
+   "stands": 382,
+   "falls": 30,
+   "share": 92.7
+  },
+  {
+   "id": "no-israeli",
+   "label": "Remove every Israeli source",
+   "removes": [
+    "israeli-official",
+    "israeli-court",
+    "israeli-ngo",
+    "israeli-media"
+   ],
+   "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
+   "stands": 341,
+   "falls": 71,
+   "share": 82.8
+  },
+  {
+   "id": "no-un",
+   "label": "Remove the United Nations",
+   "removes": [
+    "un"
+   ],
+   "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
+   "stands": 347,
+   "falls": 65,
+   "share": 84.2
+  },
+  {
+   "id": "no-ngo",
+   "label": "Remove every human rights organisation",
+   "removes": [
+    "international-ngo",
+    "palestinian-ngo",
+    "israeli-ngo"
+   ],
+   "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
+   "stands": 309,
+   "falls": 103,
+   "share": 75.0
+  },
+  {
+   "id": "israeli-western-only",
+   "label": "Keep only Israeli and Western sources",
+   "removes": [
+    "palestinian-official",
+    "palestinian-ngo",
+    "un",
+    "international-ngo",
+    "data-project"
+   ],
+   "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
+   "stands": 218,
+   "falls": 194,
+   "share": 52.9
+  }
+ ],
+ "entries": [
+  {
+   "id": "long-record-2002-03",
+   "claim": "2002–03",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "addameer"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 1000,
+   "attribution": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention",
+   "context": "Mass detention since 1967"
+  },
+  {
+   "id": "long-record-2005-07",
+   "claim": "2005–07",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "addameer"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 765,
+   "attribution": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention",
+   "context": "Mass detention since 1967"
+  },
+  {
+   "id": "long-record-dec-2018",
+   "claim": "Dec 2018",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "addameer"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 482,
+   "attribution": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention",
+   "context": "Mass detention since 1967"
+  },
+  {
+   "id": "long-record-homes-demolished-in-east-jerusalem-since-1967",
+   "claim": "Homes demolished in East Jerusalem since 1967",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "land-research"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 5000,
+   "attribution": "Land Research Center, March 2018",
+   "context": "Displacement and demolition"
+  },
+  {
+   "id": "long-record-oct-2025",
+   "claim": "Oct 2025",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "addameer"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 3198,
+   "attribution": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention",
+   "context": "Mass detention since 1967"
+  },
+  {
+   "id": "long-record-palestinians-detained-under-israeli-military-orders-since-",
+   "claim": "Palestinians detained under Israeli military orders since 1967",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "addameer"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 800000,
+   "attribution": "Addameer Prisoner Support and Human Rights Association",
+   "context": "Mass detention since 1967"
+  },
+  {
+   "id": "long-record-sep-2023",
+   "claim": "Sep 2023",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "addameer"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 1320,
+   "attribution": "Addameer Prisoner Support and Human Rights Association, statistics on administrative detention",
+   "context": "Mass detention since 1967"
+  },
+  {
+   "id": "statements-al-haq-forensic-architecture-investigation-unit",
+   "claim": "Al-Haq Forensic Architecture Investigation Unit",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "al-haq"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "2024–2026 (continuously updated)",
+   "attribution": "Al-Haq FAI Unit, alhaq.org/FAI-Unit/26257.html.",
+   "statement": 60
+  },
+  {
+   "id": "children-2015-2017-2019-2020",
+   "claim": "2015, 2017, 2019, 2020",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "dci-p"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "attribution": "Defence for Children International – Palestine."
+  },
+  {
+   "id": "children-2016",
+   "claim": "2016",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "dci-p"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "attribution": "Defence for Children International – Palestine."
+  },
+  {
+   "id": "children-2018",
+   "claim": "2018",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "dci-p"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "attribution": "Defence for Children International – Palestine."
+  },
+  {
+   "id": "children-2021",
+   "claim": "2021",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "dci-p"
+   ],
+   "origins": [
+    "palestinian-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "attribution": "Defence for Children International – Palestine."
+  },
+  {
+   "id": "figures-aid-workers",
+   "claim": "Aid workers",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "ohchr"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 589,
+   "attribution": "OHCHR, April 2026",
+   "context": "Protected persons killed in Gaza"
+  },
+  {
+   "id": "conduct-record-all-israeli-custody",
+   "claim": "All Israeli custody",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "date": "2025-11",
+   "value": 90,
+   "attribution": "B'Tselem, November 2025",
+   "context": "Deaths in Israeli custody"
+  },
+  {
+   "id": "conduct-record-all-israeli-prisons-and-military-detention",
+   "claim": "All Israeli prisons and military detention",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "phr-israel"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "date": "2026-09",
+   "value": 98,
+   "attribution": "Physicians for Human Rights–Israel, September 2026",
+   "context": "Deaths in Israeli custody"
+  },
+  {
+   "id": "long-record-allotted-to-the-arab-state",
+   "claim": "Allotted to the Arab state",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "un-ga"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 43,
+   "attribution": "United Nations General Assembly Resolution 181 (II), 29 November 1947",
+   "context": "1947"
+  },
+  {
+   "id": "long-record-allotted-to-the-jewish-state",
+   "claim": "Allotted to the Jewish state",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "un-ga"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 56,
+   "attribution": "United Nations General Assembly Resolution 181 (II), 29 November 1947",
+   "context": "1947"
+  },
+  {
+   "id": "conduct-record-below-the-emergency-minimum-of-six-litres-of-drinking-w",
+   "claim": "Below the emergency minimum of six litres of drinking water a day",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "hrw"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 49,
+   "attribution": "Human Rights Watch World Report 2026",
+   "context": "Who is projected to die of hunger"
+  },
+  {
+   "id": "history-bodies-recovered-since-the-ceasefire",
+   "claim": "Bodies recovered since the ceasefire",
+   "kind": "figure",
+   "file": "history.json",
+   "sources": [
+    "pal-civil-defence"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "value": 827,
+   "attribution": "Gaza Civil Defence, 2025–2026",
+   "context": "Still unaccounted for"
+  },
+  {
+   "id": "long-record-chance-of-prosecution-for-killing-a-palestinian",
+   "claim": "Chance of prosecution for killing a Palestinian",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "yesh-din"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "value": 0.4,
+   "attribution": "Yesh Din",
+   "context": "The accountability gap"
+  },
+  {
+   "id": "children-children-injured",
+   "claim": "Children injured",
+   "kind": "figure",
+   "file": "children.json",
+   "sources": [
+    "un-coi"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 44143,
+   "attribution": "UN Independent International Commission of Inquiry, report on the targeting of children, 23 June 2026."
+  },
+  {
+   "id": "children-children-killed-before-their-first-birthday",
+   "claim": "Children killed before their first birthday",
+   "kind": "figure",
+   "file": "children.json",
+   "sources": [
+    "save-children"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 1009,
+   "attribution": "Save the Children, 6 September 2025."
+  },
+  {
+   "id": "conduct-record-children-killed-since-the-ceasefire",
+   "claim": "Children killed since the ceasefire",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "unicef"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§6.7",
+   "value": 265,
+   "attribution": "UNICEF, June 2026",
+   "context": "Since the ceasefire"
+  },
+  {
+   "id": "history-children-of-unknown-fate",
+   "claim": "Children of unknown fate",
+   "kind": "figure",
+   "file": "history.json",
+   "sources": [
+    "unicef"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 2900,
+   "attribution": "UNICEF and Ministry of Health",
+   "context": "Still unaccounted for"
+  },
+  {
+   "id": "conduct-record-children-projected-to-face-catastrophic-hunger-in-2026",
+   "claim": "Children projected to face catastrophic hunger in 2026",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "save-children"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 80,
+   "attribution": "Save the Children International",
+   "context": "Who is projected to die of hunger"
+  },
+  {
+   "id": "figures-civil-defence",
+   "claim": "Civil defence",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "pal-civil-defence"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "value": 140,
+   "attribution": "Gaza Civil Defence",
+   "context": "Protected persons killed in Gaza"
+  },
+  {
+   "id": "figures-deaths-in-israeli-custody-since-oct-2023",
+   "claim": "Deaths in Israeli custody since Oct 2023",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "phr-israel"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "value": 98,
+   "attribution": "Physicians for Human Rights–Israel",
+   "context": "Detention"
+  },
+  {
+   "id": "figures-displaced",
+   "claim": "Displaced",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "unrwa"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 1900000,
+   "attribution": "UNRWA",
+   "context": "Starvation and siege"
+  },
+  {
+   "id": "figures-displaced-in-gaza",
+   "claim": "Displaced in Gaza",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "ocha",
+    "unrwa"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "value": 1900000,
+   "attribution": "UNRWA / OCHA"
+  },
+  {
+   "id": "long-record-displaced-in-gaza",
+   "claim": "Displaced in Gaza",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "ocha",
+    "unrwa"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 1900000,
+   "attribution": "UNRWA / OCHA",
+   "context": "Displacement and demolition"
+  },
+  {
+   "id": "long-record-displaced-1967",
+   "claim": "Displaced, 1967",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "un-sg"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 300000,
+   "attribution": "UN Secretary-General, 1967",
+   "context": "Displacement and demolition"
+  },
+  {
+   "id": "history-estimated-dead-under-the-rubble",
+   "claim": "Estimated dead under the rubble",
+   "kind": "figure",
+   "file": "history.json",
+   "sources": [
+    "pal-civil-defence"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "value": 9000,
+   "attribution": "Gaza Civil Defence and Ministry of Health estimates",
+   "context": "Still unaccounted for"
+  },
+  {
+   "id": "conduct-record-expected-aid-trucks-actually-allowed-to-cross",
+   "claim": "Expected aid trucks actually allowed to cross",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "hrw"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 35,
+   "attribution": "Human Rights Watch, 19 May 2026",
+   "context": "Aid entering Gaza against the requirement"
+  },
+  {
+   "id": "figures-facing-severe-hunger",
+   "claim": "Facing severe hunger",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "ipc"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 1600000,
+   "attribution": "IPC",
+   "context": "Starvation and siege"
+  },
+  {
+   "id": "conduct-record-gaza-s-population-still-facing-acute-food-insecurity",
+   "claim": "Gaza's population still facing acute food insecurity",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "j-street"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 77,
+   "attribution": "J Street / UN data",
+   "context": "Who is projected to die of hunger"
+  },
+  {
+   "id": "long-record-homes-demolished-in-the-nakba",
+   "claim": "Homes demolished in the Nakba",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "icahd"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "value": 52000,
+   "attribution": "ICAHD",
+   "context": "Displacement and demolition"
+  },
+  {
+   "id": "conduct-record-hospitals-partially-functional",
+   "claim": "Hospitals partially functional",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "who"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 19,
+   "attribution": "WHO",
+   "context": "What is left"
+  },
+  {
+   "id": "figures-injured-in-gaza",
+   "claim": "Injured in Gaza",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "gaza-moh"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "value": 174682,
+   "attribution": "Gaza MoH"
+  },
+  {
+   "id": "conduct-record-injured-since-the-ceasefire",
+   "claim": "Injured since the ceasefire",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "gaza-moh",
+    "wafa"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "ref": "§6.7",
+   "value": 4464,
+   "attribution": "Gaza Ministry of Health / WAFA, 5 September 2026",
+   "context": "Since the ceasefire"
+  },
+  {
+   "id": "long-record-jerusalem-international",
+   "claim": "Jerusalem, international",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "un-ga"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 1,
+   "attribution": "United Nations General Assembly Resolution 181 (II), 29 November 1947",
+   "context": "1947"
+  },
+  {
+   "id": "figures-killed-in-the-west-bank",
+   "claim": "Killed in the West Bank",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "ocha"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§9.2",
+   "value": 1114,
+   "attribution": "OCHA"
+  },
+  {
+   "id": "conduct-record-killed-since-the-ceasefire",
+   "claim": "Killed since the ceasefire",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "gaza-moh",
+    "wafa"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "ref": "§6.7",
+   "value": 1344,
+   "attribution": "Gaza Ministry of Health / WAFA, 5 September 2026",
+   "context": "Since the ceasefire"
+  },
+  {
+   "id": "long-record-land-declared-israeli-state-land-in-2024",
+   "claim": "Land declared Israeli state land in 2024",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "peace-now"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "value": 23.7,
+   "attribution": "Peace Now",
+   "context": "Where the land went"
+  },
+  {
+   "id": "long-record-land-under-settlement-regional-council-jurisdiction",
+   "claim": "Land under settlement regional council jurisdiction",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "value": 40,
+   "attribution": "B'Tselem, settlement statistics",
+   "context": "Where the land went"
+  },
+  {
+   "id": "history-ministry-of-health-recorded",
+   "claim": "Ministry of Health, recorded",
+   "kind": "figure",
+   "file": "history.json",
+   "sources": [
+    "gaza-moh"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "value": 37877,
+   "attribution": "Gaza Ministry of Health",
+   "context": "What the recorded toll leaves out"
+  },
+  {
+   "id": "history-ministry-of-health-recorded-2",
+   "claim": "Ministry of Health, recorded",
+   "kind": "figure",
+   "file": "history.json",
+   "sources": [
+    "gaza-moh"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "value": 49090,
+   "attribution": "Gaza Ministry of Health",
+   "context": "What the recorded toll leaves out"
+  },
+  {
+   "id": "long-record-palestinians-killed-since-1948",
+   "claim": "Palestinians killed since 1948",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "pcbs"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "value": 136000,
+   "attribution": "Palestinian Central Bureau of Statistics (Dr Ola Awad), World Refugee Day report, June 2024",
+   "context": "Palestinians killed, by period"
+  },
+  {
+   "id": "conduct-record-permitted-travellers-actually-allowed-to-cross",
+   "claim": "Permitted travellers actually allowed to cross",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "hrw"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 36,
+   "attribution": "Human Rights Watch, 19 May 2026",
+   "context": "Aid entering Gaza against the requirement"
+  },
+  {
+   "id": "conduct-record-primary-health-care-facilities-partially-functional",
+   "claim": "Primary health care facilities partially functional",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "who"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 114,
+   "attribution": "WHO",
+   "context": "What is left"
+  },
+  {
+   "id": "conduct-record-projected-to-face-high-acute-food-insecurity-by-end-202",
+   "claim": "Projected to face high acute food insecurity by end 2026",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "wfp"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 90,
+   "attribution": "World Food Programme",
+   "context": "Who is projected to die of hunger"
+  },
+  {
+   "id": "long-record-registered-refugees-today",
+   "claim": "Registered refugees today",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "unrwa"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 6000000,
+   "attribution": "UNRWA",
+   "context": "Displacement and demolition"
+  },
+  {
+   "id": "long-record-settlement-built-up-area-share-of-the-west-bank",
+   "claim": "Settlement built-up area, share of the West Bank",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "value": 2,
+   "attribution": "B'Tselem, settlement statistics",
+   "context": "Where the land went"
+  },
+  {
+   "id": "figures-settler-attacks-recorded",
+   "claim": "Settler attacks recorded",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "ocha"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§9.2",
+   "value": 4554,
+   "attribution": "OCHA"
+  },
+  {
+   "id": "figures-settlers-in-occupied-territory",
+   "claim": "Settlers in occupied territory",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "un-hrc"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§3.3",
+   "value": 700000,
+   "attribution": "UN Human Rights Council, 2026"
+  },
+  {
+   "id": "long-record-share-of-all-united-states-vetoes-ever-cast",
+   "claim": "Share of all United States vetoes ever cast",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "un-sc",
+    "un-library"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 55,
+   "attribution": "United Nations Dag Hammarskjöld Library, Security Council Veto List",
+   "context": "The veto wall"
+  },
+  {
+   "id": "children-share-of-gaza-s-schools-damaged-or-destroyed",
+   "claim": "Share of Gaza’s schools damaged or destroyed",
+   "kind": "figure",
+   "file": "children.json",
+   "sources": [
+    "save-children"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "value": 97,
+   "attribution": "Save the Children, 6 September 2025."
+  },
+  {
+   "id": "figures-states-recognising-palestine",
+   "claim": "States recognising Palestine",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "un-membership"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§15.1",
+   "value": 157,
+   "attribution": "UN membership records"
+  },
+  {
+   "id": "long-record-structures-demolished-in-the-occupied-territory-since-1967",
+   "claim": "Structures demolished in the occupied territory since 1967",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "icahd"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "value": 55000,
+   "attribution": "ICAHD, February 2019",
+   "context": "Displacement and demolition"
+  },
+  {
+   "id": "figures-un-staff",
+   "claim": "UN staff",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "ohchr"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 397,
+   "attribution": "OHCHR — highest in UN history",
+   "context": "Protected persons killed in Gaza"
+  },
+  {
+   "id": "long-record-under-israeli-control",
+   "claim": "Under Israeli control",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "un-sc"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 100,
+   "attribution": "United Nations Security Council Resolution 242 (1967)",
+   "context": "1967"
+  },
+  {
+   "id": "long-record-united-states-vetoes-of-draft-resolutions-on-israel-and-pa",
+   "claim": "United States vetoes of draft resolutions on Israel and Palestine",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "un-sc",
+    "un-library"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 49,
+   "attribution": "United Nations Dag Hammarskjöld Library, Security Council Veto List",
+   "context": "The veto wall"
+  },
+  {
+   "id": "long-record-vetoes-since-7-october-2023",
+   "claim": "Vetoes since 7 October 2023",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "un-sc",
+    "un-library"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 7,
+   "attribution": "United Nations Dag Hammarskjöld Library, Security Council Veto List",
+   "context": "The veto wall"
+  },
+  {
+   "id": "figures-women",
+   "claim": "Women",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "gaza-moh"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "value": 12500,
+   "attribution": "Gaza MoH",
+   "context": "Protected persons killed in Gaza"
+  },
+  {
+   "id": "statements-almog-cohen",
+   "claim": "Almog Cohen",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "euromed"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "23 October 2023",
+   "attribution": "Euro-Med Human Rights Monitor.",
+   "statement": 42
+  },
+  {
+   "id": "statements-amnesty-international",
+   "claim": "Amnesty International",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "amnesty"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "1 February 2022",
+   "attribution": "Amnesty International, “Israel's Apartheid Against Palestinians”, 1 February 2022.",
+   "statement": 27
+  },
+  {
+   "id": "statements-b-tselem",
+   "claim": "B'Tselem",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "date": "12 January 2021",
+   "attribution": "B'Tselem, 12 January 2021.",
+   "statement": 25
+  },
+  {
+   "id": "statements-benjamin-netanyahu-3",
+   "claim": "Benjamin Netanyahu",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "un-coi",
+    "un-hrc"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "date": "November 2023",
+   "attribution": "UN Independent International Commission of Inquiry on the OPT, A/HRC/60/CRP.3, 16 September 2025.",
+   "statement": 52
+  },
+  {
+   "id": "statements-breaking-the-silence",
+   "claim": "Breaking the Silence",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "breaking-silence"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "date": "April 2025",
+   "attribution": "Breaking the Silence, “The Perimeter”, April 2025.",
+   "statement": 72
+  },
+  {
+   "id": "statements-francesca-albanese",
+   "claim": "Francesca Albanese",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "un-hrc",
+    "un-sr"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "date": "March 2024",
+   "attribution": "UN Special Rapporteur, “Anatomy of a Genocide”, A/HRC/55/73, March 2024.",
+   "statement": 58
+  },
+  {
+   "id": "statements-genocide-watch",
+   "claim": "Genocide Watch",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "genocide-watch"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "July 2026",
+   "attribution": "Genocide Watch report, July 2026.",
+   "statement": 107
+  },
+  {
+   "id": "statements-human-rights-watch",
+   "claim": "Human Rights Watch",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "hrw"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "27 April 2021",
+   "attribution": "Human Rights Watch, “A Threshold Crossed”, 27 April 2021.",
+   "statement": 26
+  },
+  {
+   "id": "statements-international-association-of-genocide-scholars",
+   "claim": "International Association of Genocide Scholars",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "iags"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "31 August 2025",
+   "attribution": "International Association of Genocide Scholars resolution, 31 August/1 September 2025.",
+   "statement": 88
+  },
+  {
+   "id": "statements-lemkin-institute-for-genocide-prevention",
+   "claim": "Lemkin Institute for Genocide Prevention",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "lemkin"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "1 September 2026",
+   "attribution": "Lemkin Institute for Genocide Prevention, 1 September 2026.",
+   "statement": 111
+  },
+  {
+   "id": "statements-ohad-tal",
+   "claim": "Ohad Tal",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "euromed"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "23 October 2023",
+   "attribution": "Euro-Med Human Rights Monitor.",
+   "statement": 44
+  },
+  {
+   "id": "statements-ohchr",
+   "claim": "OHCHR",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "ohchr"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "date": "4 September 2026",
+   "attribution": "OHCHR report, 4 September 2026.",
+   "statement": 114
+  },
+  {
+   "id": "statements-physicians-for-human-rights-israel",
+   "claim": "Physicians for Human Rights Israel",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "btselem",
+    "phr-israel"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "date": "July 2025",
+   "attribution": "Physicians for Human Rights Israel, July 2025; B'Tselem, “Our Genocide”, July 2025.",
+   "statement": 83
+  },
+  {
+   "id": "statements-rossing-center-for-education-and-dialogue-federica-sasso",
+   "claim": "Rossing Center for Education and Dialogue (Federica Sasso)",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "rossing"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "30 March 2026",
+   "attribution": "Rossing Center, Annual Report 2025; Jerusalem Story, 5 April 2026",
+   "statement": 99
+  },
+  {
+   "id": "statements-tally-gotliv",
+   "claim": "Tally Gotliv",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "euromed"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "7 October 2023",
+   "attribution": "Euro-Med Human Rights Monitor.",
+   "statement": 28
+  },
+  {
+   "id": "statements-un-committee-on-the-elimination-of-racial-discrimination",
+   "claim": "UN Committee on the Elimination of Racial Discrimination",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "ohchr"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "date": "29 April 2026",
+   "attribution": "OHCHR press release, 1 May 2026 (statement dated 29 April 2026)",
+   "statement": 100
+  },
+  {
+   "id": "statements-un-independent-international-commission-of-inquiry-on-the-o",
+   "claim": "UN Independent International Commission of Inquiry on the OPT",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "ohchr"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "date": "16 September 2025",
+   "attribution": "OHCHR press release and report, 16 September 2025.",
+   "statement": 92
+  },
+  {
+   "id": "statements-un-independent-international-commission-of-inquiry-on-the-o-2",
+   "claim": "UN Independent International Commission of Inquiry on the OPT",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "un-coi",
+    "un-hrc"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "date": "23 June 2026",
+   "attribution": "UN Commission of Inquiry, A/HRC/62/CRP.2, 23 June 2026; press conference, Geneva, the same day.",
+   "statement": 106
+  },
+  {
+   "id": "statements-yesh-din",
+   "claim": "Yesh Din",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "yesh-din"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "date": "2005–2026 (cumulative monitoring)",
+   "attribution": "Yesh Din, law enforcement data sheets, 2005–2026.",
+   "statement": 66
+  },
+  {
+   "id": "statements-yuli-novak",
+   "claim": "Yuli Novak",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "date": "28 July 2025",
+   "attribution": "B'Tselem, “Our Genocide”, 28 July 2025",
+   "statement": 85
+  },
+  {
+   "id": "long-record-1947",
+   "claim": "1947",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "un-ga"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "attribution": "United Nations General Assembly Resolution 181 (II), 29 November 1947",
+   "context": "Where the land went"
+  },
+  {
+   "id": "long-record-1967",
+   "claim": "1967",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "un-sc"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "attribution": "United Nations Security Council Resolution 242 (1967)",
+   "context": "Where the land went"
+  },
+  {
+   "id": "children-1988",
+   "claim": "1988",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-1989",
+   "claim": "1989",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-1990",
+   "claim": "1990",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-1991",
+   "claim": "1991",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-1992",
+   "claim": "1992",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-1993",
+   "claim": "1993",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-1994",
+   "claim": "1994",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-1995",
+   "claim": "1995",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-1996",
+   "claim": "1996",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-1997",
+   "claim": "1997",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-1998",
+   "claim": "1998",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-1999",
+   "claim": "1999",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "elements-albanese-anatomy-of-a-genocide",
+   "claim": "Albanese, Anatomy of a Genocide",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "un-sr"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§15.8",
+   "date": "2024",
+   "attribution": "UN Special Rapporteur on the OPT",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-amnesty-apartheid",
+   "claim": "Amnesty, apartheid",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "amnesty"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "ref": "§4.2",
+   "date": "2022",
+   "attribution": "Amnesty International",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-amnesty-genocide",
+   "claim": "Amnesty, genocide",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "amnesty"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "ref": "§15.8",
+   "date": "December 2024",
+   "attribution": "Amnesty International",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "figures-antisemitic-incidents-in-the-uk-and-what-the-series-tracks",
+   "claim": "Antisemitic incidents in the UK, and what the series tracks",
+   "kind": "record",
+   "file": "figures.json",
+   "sources": [
+    "cst"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "ref": "§21.6",
+   "attribution": "CST, Antisemitic Incidents Report 2025 (11 February 2026)"
+  },
+  {
+   "id": "long-record-b-tselem-s-decade",
+   "claim": "B'Tselem's decade",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, ten-year fatality report",
+   "context": "Both sides of the ledger"
+  },
+  {
+   "id": "war-record-beyond-gaza",
+   "claim": "Beyond Gaza",
+   "kind": "record",
+   "file": "war-record.json",
+   "sources": [
+    "un-sc"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§8.1–8.6",
+   "attribution": "UN Security Council records; report Part VIII"
+  },
+  {
+   "id": "elements-b-tselem-apartheid",
+   "claim": "B’Tselem, apartheid",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "ref": "§4.2",
+   "date": "January 2021",
+   "attribution": "B’Tselem",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-b-tselem-our-genocide",
+   "claim": "B’Tselem, Our Genocide",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "ref": "§15.8",
+   "date": "July 2025",
+   "attribution": "B’Tselem",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "long-record-children-before-the-war",
+   "claim": "Children, before the war",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, cumulative to 2023",
+   "context": "Both sides of the ledger"
+  },
+  {
+   "id": "elements-coi-children",
+   "claim": "COI, children",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "un-coi"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§10.7",
+   "date": "23 June 2026",
+   "attribution": "UN Commission of Inquiry",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-coi-cultural-destruction",
+   "claim": "COI, cultural destruction",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "un-coi"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "date": "June 2025",
+   "attribution": "UN Commission of Inquiry",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-coi-genocide",
+   "claim": "COI, genocide",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "un-coi"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§15.8",
+   "date": "16 September 2025",
+   "attribution": "UN Commission of Inquiry",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-coi-sexual-violence",
+   "claim": "COI, sexual violence",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "un-coi"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "date": "March 2025",
+   "attribution": "UN Commission of Inquiry",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-escwa-apartheid",
+   "claim": "ESCWA, apartheid",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "escwa"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§4.2",
+   "date": "2017",
+   "attribution": "UN ESCWA",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "long-record-first-intifada-first-13-months",
+   "claim": "First Intifada, first 13 months",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem",
+   "context": "Both sides of the ledger"
+  },
+  {
+   "id": "children-from-9-december-1987",
+   "claim": "from 9 December 1987",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "maps-gaza-by-governorate-on-the-ipc-scale",
+   "claim": "Gaza, by governorate, on the IPC scale",
+   "kind": "record",
+   "file": "maps.json",
+   "sources": [
+    "ipc"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "attribution": "IPC Famine Review Committee and IPC Global Initiative, Gaza Strip analyses of 22 August 2025, 19 December 2025 and 2026"
+  },
+  {
+   "id": "elements-hrw-apartheid",
+   "claim": "HRW, apartheid",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "hrw"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "ref": "§4.2",
+   "date": "2021",
+   "attribution": "Human Rights Watch",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-hrw-extermination",
+   "claim": "HRW, extermination",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "hrw"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "ref": "§15.8",
+   "date": "December 2024",
+   "attribution": "Human Rights Watch",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-iags-86-per-cent",
+   "claim": "IAGS, 86 per cent",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "iags"
+   ],
+   "origins": [
+    "international-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "ref": "§15.8",
+   "date": "1 September 2025",
+   "attribution": "International Association of Genocide Scholars",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "children-israeli-children-after-7-october-2023",
+   "claim": "Israeli children after 7 October 2023",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B’Tselem."
+  },
+  {
+   "id": "children-israeli-children-2013-6-october-2023",
+   "claim": "Israeli children, 2013 – 6 October 2023",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B’Tselem."
+  },
+  {
+   "id": "elements-lynk-apartheid",
+   "claim": "Lynk, apartheid",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "un-sr"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§4.2",
+   "date": "2022",
+   "attribution": "UN Special Rapporteur on the OPT",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "long-record-ocha-s-monitoring-period",
+   "claim": "OCHA's monitoring period",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "ocha"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "attribution": "UN OCHA, occupied Palestinian territory database",
+   "context": "Palestinians killed, by period"
+  },
+  {
+   "id": "long-record-ocha-s-monitoring-period-2",
+   "claim": "OCHA's monitoring period",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "ocha"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "attribution": "UN OCHA",
+   "context": "Both sides of the ledger"
+  },
+  {
+   "id": "elements-ohchr-forcible-transfer",
+   "claim": "OHCHR, forcible transfer",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "ohchr"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "date": "4 September 2026",
+   "attribution": "UN Human Rights Office",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "maps-operation-iron-wall-the-three-camps",
+   "claim": "Operation Iron Wall: the three camps",
+   "kind": "record",
+   "file": "maps.json",
+   "sources": [
+    "ohchr"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "attribution": "OHCHR, 4 September 2026",
+   "context": "The West Bank, by governorate"
+  },
+  {
+   "id": "elements-phr-israel",
+   "claim": "PHR–Israel",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "phr-israel"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "ref": "§15.8",
+   "date": "July 2025",
+   "attribution": "Physicians for Human Rights–Israel",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "long-record-recognition",
+   "claim": "Recognition",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "pal-mfa"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "ref": "§15.4",
+   "attribution": "Palestinian Ministry of Foreign Affairs list of recognitions and the UN documents underlying each entry, compiled as at 12 September 2026. The same list drives the recognition map in data/world-positions.json, so the counts here and there are one figure, not two."
+  },
+  {
+   "id": "elements-special-committee",
+   "claim": "Special Committee",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "un-special-cttee"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "ref": "§15.8",
+   "date": "November 2024",
+   "attribution": "UN Special Committee on Israeli Practices",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "long-record-the-accountability-gap",
+   "claim": "The accountability gap",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "yesh-din"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "Yesh Din — Volunteers for Human Rights, data sheets on the Military Advocate General's handling of complaints"
+  },
+  {
+   "id": "long-record-the-first-intifada",
+   "claim": "The First Intifada",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, fatality database for 9 December 1987 – 13 September 1993",
+   "context": "Palestinians killed, by period"
+  },
+  {
+   "id": "children-the-first-intifada-and-the-oslo-years",
+   "claim": "The first Intifada and the Oslo years",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "children-the-first-intifada-and-the-oslo-years-2",
+   "claim": "The first Intifada and the Oslo years",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "long-record-the-second-intifada-and-the-decade-after-it",
+   "claim": "The Second Intifada and the decade after it",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, ten-year fatality report",
+   "context": "Palestinians killed, by period"
+  },
+  {
+   "id": "history-the-west-bank-in-2023-before-and-after-7-october",
+   "claim": "The West Bank in 2023, before and after 7 October",
+   "kind": "record",
+   "file": "history.json",
+   "sources": [
+    "ocha"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "attribution": "OCHA, Data on Casualties and West Bank Snapshot, December 2023"
+  },
+  {
+   "id": "children-to-28-september-2000",
+   "claim": "to 28 September 2000",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
+  },
+  {
+   "id": "elements-yesh-din-apartheid",
+   "claim": "Yesh Din, apartheid",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "yesh-din"
+   ],
+   "origins": [
+    "israeli-ngo"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli",
+    "no-ngo"
+   ],
+   "ref": "§4.2",
+   "date": "2020",
+   "attribution": "Yesh Din",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "statements-ariel-kallner",
+   "claim": "Ariel Kallner",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "law-for-palestine",
+    "euromed"
+   ],
+   "origins": [
+    "international-ngo",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "8 October 2023",
+   "attribution": "Euro-Med Human Rights Monitor; Law for Palestine database.",
+   "statement": 29
+  },
+  {
+   "id": "statements-galit-distel-atbaryan",
+   "claim": "Galit Distel-Atbaryan",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "law-for-palestine",
+    "euromed"
+   ],
+   "origins": [
+    "international-ngo",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "October 2023",
+   "attribution": "Euro-Med Human Rights Monitor; Law for Palestine database.",
+   "statement": 40
+  },
+  {
+   "id": "statements-yoav-kisch",
+   "claim": "Yoav Kisch",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "law-for-palestine",
+    "euromed"
+   ],
+   "origins": [
+    "international-ngo",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [
+    "no-ngo",
+    "israeli-western-only"
+   ],
+   "date": "9 October 2023",
+   "attribution": "Euro-Med Human Rights Monitor; Law for Palestine database.",
+   "statement": 32
+  },
+  {
+   "id": "long-record-expelled-or-fled-1948",
+   "claim": "Expelled or fled, 1948",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "site-derived"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "value": 750000,
+   "attribution": "UN; report §2.3",
+   "context": "Displacement and demolition"
+  },
+  {
+   "id": "conduct-record-reporting-days-at-a-time-without-eating",
+   "claim": "Reporting days at a time without eating",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "site-derived"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "value": 39,
+   "attribution": "Survey data cited at §6.3",
+   "context": "Who is projected to die of hunger"
+  },
+  {
+   "id": "statements-anonymous-idf-officer",
+   "claim": "Anonymous IDF officer",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "haaretz"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "13 August 2024",
+   "attribution": "Haaretz, 13 August 2024.",
+   "statement": 63
+  },
+  {
+   "id": "statements-bezalel-smotrich-6",
+   "claim": "Bezalel Smotrich",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "jpost"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "September 2025",
+   "attribution": "Times of Israel; Jerusalem Post; Crisis Group, “Israel's Quickening Annexation of the West Bank”, October 2025.",
+   "statement": 89
+  },
+  {
+   "id": "statements-ehud-barak",
+   "claim": "Ehud Barak",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "haaretz"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "2 February 2010",
+   "attribution": "Haaretz, 2 February 2010.",
+   "statement": 18
+  },
+  {
+   "id": "statements-ehud-olmert-3",
+   "claim": "Ehud Olmert",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "haaretz"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "18 June 2026",
+   "attribution": "Haaretz, 18 June 2026.",
+   "statement": 104
+  },
+  {
+   "id": "statements-ehud-olmert-4",
+   "claim": "Ehud Olmert",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "10 September 2026",
+   "attribution": "Radio 103FM; Times of Israel, 10 September 2026.",
+   "statement": 117
+  },
+  {
+   "id": "statements-hana-bendcowsky",
+   "claim": "Hana Bendcowsky",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "27 March 2025",
+   "attribution": "The Times of Israel, 27 March 2025",
+   "statement": 70
+  },
+  {
+   "id": "statements-israeli-public-opinion",
+   "claim": "Israeli public opinion",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "2025",
+   "attribution": "Times of Israel, 2025.",
+   "statement": 79
+  },
+  {
+   "id": "statements-itamar-ben-gvir-2",
+   "claim": "Itamar Ben-Gvir",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "September 2025",
+   "attribution": "Israeli media, September 2025.",
+   "statement": 91
+  },
+  {
+   "id": "statements-itamar-ben-gvir-3",
+   "claim": "Itamar Ben-Gvir",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "jpost"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "30 March 2026",
+   "attribution": "The Times of Israel and The Jerusalem Post, 30 March 2026",
+   "statement": 98
+  },
+  {
+   "id": "statements-maj-gen-avi-bluth",
+   "claim": "Maj. Gen. Avi Bluth",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "haaretz",
+    "times-of-israel"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "4 May 2026",
+   "attribution": "Haaretz; Times of Israel, 4 May 2026.",
+   "statement": 101
+  },
+  {
+   "id": "statements-maj-gen-ghassan-alian",
+   "claim": "Maj. Gen. Ghassan Alian",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "cogat"
+   ],
+   "origins": [
+    "israeli-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "10 October 2023",
+   "attribution": "COGAT official channels, 10 October 2023.",
+   "statement": 33
+  },
+  {
+   "id": "statements-meir-dagan",
+   "claim": "Meir Dagan",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "2015",
+   "attribution": "Israeli press, 2015.",
+   "statement": 21
+  },
+  {
+   "id": "statements-michael-ben-yair",
+   "claim": "Michael Ben-Yair",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-europe-press"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "November 2014",
+   "attribution": "Israeli and European press, November 2014.",
+   "statement": 20
+  },
+  {
+   "id": "statements-moshe-dayan",
+   "claim": "Moshe Dayan",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "haaretz"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "19 March 1969",
+   "attribution": "Haaretz, 4 April 1969; Edward Said, The Question of Palestine (1980).",
+   "statement": 9
+  },
+  {
+   "id": "statements-moshe-ya-alon",
+   "claim": "Moshe Ya'alon",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "2 December 2024",
+   "attribution": "Democrat TV and Kan, reported 1-2 December 2024",
+   "statement": 67
+  },
+  {
+   "id": "statements-moshe-ya-alon-2",
+   "claim": "Moshe Ya'alon",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "site-derived"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "date": "February 2026",
+   "attribution": "Reported February 2026",
+   "statement": 94
+  },
+  {
+   "id": "statements-peter-beinart",
+   "claim": "Peter Beinart",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "site-derived"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "date": "9 September 2026",
+   "attribution": "Zeteo, “Are Democrats Turning Against Israel – or Jews?”, 9 September 2026. Report §21.8.",
+   "statement": 116
+  },
+  {
+   "id": "statements-shlomo-karhi",
+   "claim": "Shlomo Karhi",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "2025",
+   "attribution": "Israeli media, 2025.",
+   "statement": 77
+  },
+  {
+   "id": "statements-yitzhak-rabin",
+   "claim": "Yitzhak Rabin",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "1976",
+   "attribution": "Contemporaneous Israeli press, 1976; collated in Israeli apartheid scholarship.",
+   "statement": 11
+  },
+  {
+   "id": "statements-yitzhak-wasserlauf",
+   "claim": "Yitzhak Wasserlauf",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "September 2025",
+   "attribution": "Times of Israel; Arab News, September 2025.",
+   "statement": 93
+  },
+  {
+   "id": "children-2001",
+   "claim": "2001",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2002",
+   "claim": "2002",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2003",
+   "claim": "2003",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2004",
+   "claim": "2004",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2005",
+   "claim": "2005",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2006",
+   "claim": "2006",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2007",
+   "claim": "2007",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2008",
+   "claim": "2008",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2009",
+   "claim": "2009",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2010",
+   "claim": "2010",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2011",
+   "claim": "2011",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2012",
+   "claim": "2012",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2013",
+   "claim": "2013",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-2013-2",
+   "claim": "2013",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children."
+  },
+  {
+   "id": "conduct-record-complete-siege-then-intermittent-entry",
+   "claim": "Complete siege, then intermittent entry",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "site-derived"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§6.2",
+   "attribution": "Yoav Gallant, 9 October 2023; Israel Katz, 12 October 2023 (the report, §6.2, Appendix C)",
+   "context": "Aid entering Gaza against the requirement"
+  },
+  {
+   "id": "children-from-29-september-2000",
+   "claim": "from 29 September 2000",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "war-record-lebanon",
+   "claim": "Lebanon",
+   "kind": "record",
+   "file": "war-record.json",
+   "sources": [
+    "israel-hcj"
+   ],
+   "origins": [
+    "israeli-court"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "ref": "§5.2, §7.1–7.2, §8.6",
+   "attribution": "Lebanese Ministry of Public Health; Lebanese government casualty figures; Kahan Commission; UN investigations"
+  },
+  {
+   "id": "conduct-record-restrictions-reimposed",
+   "claim": "Restrictions reimposed",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "site-derived"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "Appendix B",
+   "attribution": "The report, Appendix B (February 2026)",
+   "context": "Aid entering Gaza against the requirement"
+  },
+  {
+   "id": "conduct-record-states-that-have-taken-a-restrictive-measure",
+   "claim": "States that have taken a restrictive measure",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "site-derived"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§15.2–15.5",
+   "attribution": "Derived from the embargo tracker in long-record.json and the sanctions measures in world-positions.json, both of which carry the announcement date of each measure"
+  },
+  {
+   "id": "figures-the-j50-forum",
+   "claim": "The J50 Forum",
+   "kind": "record",
+   "file": "figures.json",
+   "sources": [
+    "jns"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "attribution": "Israel Ministry of Foreign Affairs; JNS, 1 September 2026",
+   "context": "The J50 Declaration on Zionism and Antisemitism"
+  },
+  {
+   "id": "children-the-second-intifada-years",
+   "claim": "The second Intifada years",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "children-the-second-intifada-years-2",
+   "claim": "The second Intifada years",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "remember-children"
+   ],
+   "origins": [
+    "data-project"
+   ],
+   "independence": 1,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Remember These Children, 2000–2014 compilation (American Educational Trust / Washington Report on Middle East Affairs), last updated 22 July 2014."
+  },
+  {
+   "id": "figures-children",
+   "claim": "Children",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "gaza-moh",
+    "un-coi"
+   ],
+   "origins": [
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "value": 20179,
+   "attribution": "Gaza MoH / UN COI",
+   "context": "Protected persons killed in Gaza"
+  },
+  {
+   "id": "figures-children-killed-in-gaza",
+   "claim": "Children killed in Gaza",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "gaza-moh",
+    "un-coi"
+   ],
+   "origins": [
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "value": 20179,
+   "attribution": "Gaza MoH / UN COI"
+  },
+  {
+   "id": "children-children-left-with-a-permanent-disability",
+   "claim": "Children left with a permanent disability",
+   "kind": "figure",
+   "file": "children.json",
+   "sources": [
+    "un-crpd",
+    "save-children"
+   ],
+   "origins": [
+    "international-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "value": 21000,
+   "attribution": "UN Committee on the Rights of Persons with Disabilities, cited by Save the Children, 6 September 2025."
+  },
+  {
+   "id": "children-children-on-the-named-list-of-the-dead",
+   "claim": "Children on the named list of the dead",
+   "kind": "figure",
+   "file": "children.json",
+   "sources": [
+    "gaza-moh",
+    "tfp"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "value": 21637,
+   "attribution": "Gaza Ministry of Health named list, via the Tech For Palestine open datasets."
+  },
+  {
+   "id": "children-children-who-starved-to-death",
+   "claim": "Children who starved to death",
+   "kind": "figure",
+   "file": "children.json",
+   "sources": [
+    "gaza-moh",
+    "tfp"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "value": 157,
+   "attribution": "Gaza Ministry of Health, via the Tech For Palestine open datasets."
+  },
+  {
+   "id": "long-record-internally-displaced-under-occupation",
+   "claim": "Internally displaced under occupation",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "badil",
+    "icahd"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [
+    "no-ngo"
+   ],
+   "value": 160000,
+   "attribution": "BADIL; ICAHD",
+   "context": "Displacement and demolition"
+  },
+  {
+   "id": "figures-journalists",
+   "claim": "Journalists",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "gaza-moh",
+    "cpj"
+   ],
+   "origins": [
+    "international-ngo",
+    "palestinian-official"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "value": 262,
+   "attribution": "Gaza MoH / CPJ",
+   "context": "Protected persons killed in Gaza"
+  },
+  {
+   "id": "figures-medical-personnel",
+   "claim": "Medical personnel",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "gaza-moh",
+    "who"
+   ],
+   "origins": [
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "value": 1701,
+   "attribution": "WHO / Gaza MoH",
+   "context": "Protected persons killed in Gaza"
+  },
+  {
+   "id": "figures-palestinians-killed-in-gaza",
+   "claim": "Palestinians killed in Gaza",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "gaza-moh",
+    "ocha"
+   ],
+   "origins": [
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "value": 73670,
+   "attribution": "Gaza MoH / OCHA"
+  },
+  {
+   "id": "figures-starvation-deaths-recorded",
+   "claim": "Starvation deaths recorded",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "gaza-moh",
+    "ipc"
+   ],
+   "origins": [
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "value": 440,
+   "attribution": "IPC / Gaza MoH",
+   "context": "Starvation and siege"
+  },
+  {
+   "id": "conduct-record-total-blockade",
+   "claim": "Total blockade",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "ipc",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "value": 0,
+   "attribution": "The report, §6.3; IPC, 22 August 2025",
+   "context": "Aid entering Gaza against the requirement"
+  },
+  {
+   "id": "children-under-fives-at-risk-of-death-from-acute-malnutrition",
+   "claim": "Under-fives at risk of death from acute malnutrition",
+   "kind": "figure",
+   "file": "children.json",
+   "sources": [
+    "unicef",
+    "ipc",
+    "save-children"
+   ],
+   "origins": [
+    "international-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "value": 132000,
+   "attribution": "IPC and UNICEF, cited by Save the Children, 6 September 2025."
+  },
+  {
+   "id": "statements-lod-district-court-israel",
+   "claim": "Lod District Court (Israel)",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-hcj",
+    "times-of-israel"
+   ],
+   "origins": [
+    "israeli-court",
+    "israeli-media"
+   ],
+   "independence": 2,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "May 2020",
+   "attribution": "Lod District Court and Supreme Court of Israel; The Times of Israel",
+   "statement": 24
+  },
+  {
+   "id": "children-2014",
+   "claim": "2014",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "dci-p",
+    "ocha"
+   ],
+   "origins": [
+    "palestinian-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "OCHA; Defence for Children International – Palestine."
+  },
+  {
+   "id": "children-2022",
+   "claim": "2022",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "dci-p",
+    "ocha"
+   ],
+   "origins": [
+    "palestinian-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Defence for Children International – Palestine; OCHA."
+  },
+  {
+   "id": "conduct-record-ceasefire-a-limited-improvement-in-access",
+   "claim": "Ceasefire: a limited improvement in access",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "j-street",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "international-ngo"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "attribution": "The report, §6.3 (J Street / UN data, April 2026)",
+   "context": "Aid entering Gaza against the requirement"
+  },
+  {
+   "id": "children-children-on-the-named-list-of-the-dead-by-age",
+   "claim": "Children on the named list of the dead, by age",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "gaza-moh",
+    "tfp"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Gaza Ministry of Health named list, via the Tech For Palestine open datasets."
+  },
+  {
+   "id": "legal-recognition-of-the-state-of-palestine",
+   "claim": "Recognition of the State of Palestine",
+   "kind": "record",
+   "file": "legal.json",
+   "sources": [
+    "pal-mfa",
+    "un-ga"
+   ],
+   "origins": [
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§15.4",
+   "attribution": "Palestinian Ministry of Foreign Affairs list of recognitions and the UN documents underlying each entry, compiled as at 12 September 2026; the 2011 count as given by the Palestinian UN ambassador Riyad Mansour, the 2012 figure from UNGA Resolution 67/19."
+  },
+  {
+   "id": "world-positions-recognition-of-the-state-of-palestine",
+   "claim": "Recognition of the State of Palestine",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "pal-mfa",
+    "wikipedia"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§15.4",
+   "attribution": "Wikipedia, \"International recognition of Palestine\", retrieved 12 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there."
+  },
+  {
+   "id": "long-record-second-intifada",
+   "claim": "Second Intifada",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "dci-p",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Defence for Children International; report §5.4",
+   "context": "Both sides of the ledger"
+  },
+  {
+   "id": "figures-the-legal-machinery-of-transfer-how-expulsion-became-title",
+   "claim": "The legal machinery of transfer: how expulsion became title",
+   "kind": "record",
+   "file": "figures.json",
+   "sources": [
+    "badil",
+    "adalah"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [
+    "no-ngo"
+   ],
+   "ref": "§2.4",
+   "attribution": "Absentees' Property Law 5710-1950 (Adalah Discriminatory Laws Database); Development Authority (Transfer of Property) Law 5710-1950 (UNCCP, UNISPAL); Land Acquisition (Validation of Acts and Compensation) Law 5713-1953; BADIL; Norwegian Refugee Council"
+  },
+  {
+   "id": "long-record-the-six-day-war-and-the-naksa",
+   "claim": "The Six-Day War and the Naksa",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "badil",
+    "un-sg"
+   ],
+   "origins": [
+    "palestinian-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Displacement: report of the UN Secretary-General, 1967. Military casualties: standard campaign histories. Civilian killings: BADIL; Segev, 1967; Masalha",
+   "context": "Palestinians killed, by period"
+  },
+  {
+   "id": "nakba-the-villages-depopulated-in-1948",
+   "claim": "The villages depopulated in 1948",
+   "kind": "record",
+   "file": "nakba.json",
+   "sources": [
+    "abu-sitta",
+    "wikipedia"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Salman Abu Sitta, *Atlas of Palestine 1917–1966* (Palestine Land Society, 2010), pp. 108–115, as transcribed in the Wikipedia article \"List of towns and villages depopulated in the 1948 Palestine war\""
+  },
+  {
+   "id": "conduct-record-what-israeli-fire-did-on-7-october",
+   "claim": "What Israeli fire did on 7 October",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "idf",
+    "israel-cbs",
+    "haaretz",
+    "ynet",
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media",
+    "israeli-official"
+   ],
+   "independence": 2,
+   "falls": [
+    "no-israeli"
+   ],
+   "ref": "§18.6, §18.1",
+   "attribution": "Haaretz, 7 July 2024 and 31 May 2024; Channel 12, February 2026; Yediot Ahronot, January 2024; IDF statement, 18 December 2023; Israel's National Insurance Institute"
+  },
+  {
+   "id": "conduct-record-who-is-projected-to-die-of-hunger",
+   "claim": "Who is projected to die of hunger",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "unicef",
+    "ipc",
+    "save-children"
+   ],
+   "origins": [
+    "international-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "attribution": "IPC; UNICEF, 2026; Save the Children International, 2026; IPC famine declaration, 22 August 2025"
+  },
+  {
+   "id": "conduct-record-80-to-120-trucks-a-day-against-500-required",
+   "claim": "80 to 120 trucks a day, against 500 required",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "gaza-moh",
+    "who",
+    "hrw"
+   ],
+   "origins": [
+    "international-ngo",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "value": 100,
+   "attribution": "WHO; Palestinian Ministry of Health in Gaza, May 2026; Human Rights Watch, 19 May 2026",
+   "context": "Aid entering Gaza against the requirement"
+  },
+  {
+   "id": "children-2024",
+   "claim": "2024",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "gaza-moh",
+    "ocha",
+    "tfp"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages."
+  },
+  {
+   "id": "children-2025",
+   "claim": "2025",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "gaza-moh",
+    "ocha",
+    "tfp"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages."
+  },
+  {
+   "id": "conduct-record-aid-entering-gaza-against-the-requirement",
+   "claim": "Aid entering Gaza against the requirement",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "gaza-moh",
+    "ocha",
+    "who",
+    "hrw"
+   ],
+   "origins": [
+    "international-ngo",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§6.3",
+   "attribution": "UN OCHA; WHO; Human Rights Watch, 19 May 2026; Palestinian Ministry of Health in Gaza, May 2026"
+  },
+  {
+   "id": "conduct-record-children-in-the-military-courts",
+   "claim": "Children in the military courts",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "dci-p",
+    "unicef",
+    "omct"
+   ],
+   "origins": [
+    "international-ngo",
+    "palestinian-ngo",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§10.2",
+   "attribution": "Defence for Children International – Palestine; UNICEF; OMCT"
+  },
+  {
+   "id": "children-from-7-october-2023",
+   "claim": "from 7 October 2023",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "gaza-moh",
+    "ocha",
+    "tfp"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages."
+  },
+  {
+   "id": "long-record-gaza-and-the-west-bank-since-7-october-2023",
+   "claim": "Gaza and the West Bank since 7 October 2023",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "gaza-moh",
+    "ocha",
+    "tfp"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Gaza Ministry of Health and OCHA, compiled by Tech For Palestine",
+   "context": "Palestinians killed, by period"
+  },
+  {
+   "id": "children-the-war",
+   "claim": "The war",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "gaza-moh",
+    "ocha",
+    "tfp"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages."
+  },
+  {
+   "id": "children-the-war-2",
+   "claim": "The war",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "gaza-moh",
+    "ocha",
+    "tfp"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages."
+  },
+  {
+   "id": "children-to-10-september-2026",
+   "claim": "to 10 September 2026",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "gaza-moh",
+    "ocha",
+    "tfp"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "attribution": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages."
+  },
+  {
+   "id": "children-1947-1966",
+   "claim": "1947–1966",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "attribution": "—"
+  },
+  {
+   "id": "children-1967-1987",
+   "claim": "1967–1987",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "attribution": "—"
+  },
+  {
+   "id": "children-from-the-occupation-to-the-first-intifada",
+   "claim": "From the occupation to the first Intifada",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "attribution": "No published source covers this period systematically."
+  },
+  {
+   "id": "children-the-nakba-and-the-years-after-it",
+   "claim": "The Nakba and the years after it",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "attribution": "No published source disaggregates children for this period."
+  },
+  {
+   "id": "war-record-all-military-aid-october-2023-to-september-2025-including-t",
+   "claim": "All military aid, October 2023 to September 2025, including transfers, foreign military sales and emergency authority",
+   "kind": "figure",
+   "file": "war-record.json",
+   "sources": [
+    "costs-of-war"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 21.7,
+   "attribution": "Brown University Costs of War, through September 2025",
+   "context": "United States arms to Israel since 7 October 2023"
+  },
+  {
+   "id": "long-record-cumulative-bilateral-aid-1946-to-february-2022",
+   "claim": "Cumulative bilateral aid, 1946 to February 2022",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "us-congress"
+   ],
+   "origins": [
+    "western-state"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 150,
+   "attribution": "Congressional Research Service, RL33222, February 2022",
+   "context": "United States military aid"
+  },
+  {
+   "id": "long-record-cumulative-bilateral-aid-latest-published",
+   "claim": "Cumulative bilateral aid, latest published",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "us-congress"
+   ],
+   "origins": [
+    "western-state"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 174,
+   "attribution": "Congressional Research Service, RL33222, current edition",
+   "context": "United States military aid"
+  },
+  {
+   "id": "long-record-cumulative-bilateral-aid-to-march-2023",
+   "claim": "Cumulative bilateral aid, to March 2023",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "us-congress"
+   ],
+   "origins": [
+    "western-state"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 158.7,
+   "attribution": "Congressional Research Service, RL33222, March 2023",
+   "context": "United States military aid"
+  },
+  {
+   "id": "long-record-emergency-supplemental-fy2024",
+   "claim": "Emergency supplemental, FY2024",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "us-congress"
+   ],
+   "origins": [
+    "western-state"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 14.1,
+   "attribution": "Public Law 118-50, April 2024",
+   "context": "United States military aid"
+  },
+  {
+   "id": "war-record-enacted-by-us-legislation-since-7-october-2023",
+   "claim": "Enacted by US legislation since 7 October 2023",
+   "kind": "figure",
+   "file": "war-record.json",
+   "sources": [
+    "us-congress"
+   ],
+   "origins": [
+    "western-state"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 16.3,
+   "attribution": "US Congress, Library of Congress",
+   "context": "United States arms to Israel since 7 October 2023"
+  },
+  {
+   "id": "long-record-foreign-military-financing-annual",
+   "claim": "Foreign Military Financing, annual",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "us-congress"
+   ],
+   "origins": [
+    "western-state"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 3.3,
+   "attribution": "Congressional Research Service, U.S. Foreign Aid to Israel (RL33222)",
+   "context": "United States military aid"
+  },
+  {
+   "id": "history-gaza-mortality-survey",
+   "claim": "Gaza Mortality Survey",
+   "kind": "figure",
+   "file": "history.json",
+   "sources": [
+    "lancet"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 75200,
+   "attribution": "The Lancet Global Health, February 2026",
+   "context": "What the recorded toll leaves out"
+  },
+  {
+   "id": "long-record-jewish-owned-land",
+   "claim": "Jewish-owned land",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "cia-archive"
+   ],
+   "origins": [
+    "archive"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 6,
+   "attribution": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946",
+   "context": "1946"
+  },
+  {
+   "id": "history-lancet-capture-recapture",
+   "claim": "Lancet capture–recapture",
+   "kind": "figure",
+   "file": "history.json",
+   "sources": [
+    "lancet",
+    "lshtm"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 64260,
+   "attribution": "The Lancet, 10 January 2025 (London School of Hygiene and Tropical Medicine, Yale and others)",
+   "context": "What the recorded toll leaves out"
+  },
+  {
+   "id": "long-record-military-aid-in-the-first-year-of-the-gaza-war",
+   "claim": "Military aid in the first year of the Gaza war",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "costs-of-war"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 17.9,
+   "attribution": "Costs of War Project, Brown University, October 2024",
+   "context": "United States military aid"
+  },
+  {
+   "id": "long-record-missile-defence-annual",
+   "claim": "Missile defence, annual",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "us-congress"
+   ],
+   "origins": [
+    "western-state"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 0.5,
+   "attribution": "Congressional Research Service, U.S. Foreign Aid to Israel (RL33222)",
+   "context": "United States military aid"
+  },
+  {
+   "id": "history-missing-per-the-mortality-survey",
+   "claim": "Missing, per the mortality survey",
+   "kind": "figure",
+   "file": "history.json",
+   "sources": [
+    "lancet"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 12200,
+   "attribution": "Gaza Mortality Survey, The Lancet Global Health, 2026",
+   "context": "Still unaccounted for"
+  },
+  {
+   "id": "history-mpidr-demographic-reconstruction",
+   "claim": "MPIDR demographic reconstruction",
+   "kind": "figure",
+   "file": "history.json",
+   "sources": [
+    "max-planck"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 78318,
+   "attribution": "Max Planck Institute for Demographic Research, November 2025",
+   "context": "What the recorded toll leaves out"
+  },
+  {
+   "id": "conduct-record-muslims-as-a-share-of-religious-hate-crime-victims",
+   "claim": "Muslims as a share of religious-hate-crime victims",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "uk-gov"
+   ],
+   "origins": [
+    "western-state"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 44,
+   "attribution": "Home Office",
+   "context": "Two monitored series, one axis"
+  },
+  {
+   "id": "long-record-palestinian-and-state-land",
+   "claim": "Palestinian and state land",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "cia-archive"
+   ],
+   "origins": [
+    "archive"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 94,
+   "attribution": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946",
+   "context": "1946"
+  },
+  {
+   "id": "long-record-the-same-aid-adjusted-for-inflation-1959-2024",
+   "claim": "The same aid adjusted for inflation, 1959–2024",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "costs-of-war"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 317.9,
+   "attribution": "Costs of War Project, Brown University, October 2024",
+   "context": "United States military aid"
+  },
+  {
+   "id": "statements-ahad-ha-am-asher-ginsberg",
+   "claim": "Ahad Ha'am (Asher Ginsberg)",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "founding-texts"
+   ],
+   "origins": [
+    "archive"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "1891",
+   "attribution": "Ahad Ha'am, “Truth from Eretz Yisrael”, 1891.",
+   "statement": 0
+  },
+  {
+   "id": "statements-albert-einstein-hannah-arendt-sidney-hook-and-others",
+   "claim": "Albert Einstein, Hannah Arendt, Sidney Hook and others",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "nyt"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "4 December 1948",
+   "attribution": "The New York Times, 4 December 1948.",
+   "statement": 8
+  },
+  {
+   "id": "statements-avi-shlaim",
+   "claim": "Avi Shlaim",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "documentary"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "14 January 2009",
+   "attribution": "Democracy Now!, 14 January 2009",
+   "statement": 17
+  },
+  {
+   "id": "statements-avraham-shalom",
+   "claim": "Avraham Shalom",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "documentary"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2012",
+   "attribution": "The Gatekeepers (dir. Dror Moreh, 2012)",
+   "statement": 19
+  },
+  {
+   "id": "statements-bezalel-smotrich-5",
+   "claim": "Bezalel Smotrich",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "aljazeera"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "6 May 2025",
+   "attribution": "Al Jazeera, 6 May 2025.",
+   "statement": 73
+  },
+  {
+   "id": "statements-donald-j-trump",
+   "claim": "Donald J. Trump",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "cnn",
+    "npr",
+    "aljazeera",
+    "fortune"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "4 February 2025",
+   "attribution": "Al Jazeera; CNN; NPR; Fortune, 5 February 2025.",
+   "statement": 68
+  },
+  {
+   "id": "statements-ilan-papp",
+   "claim": "Ilan Pappé",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "morris"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2006",
+   "attribution": "Ilan Pappé, The Ethnic Cleansing of Palestine (2006).",
+   "statement": 14
+  },
+  {
+   "id": "statements-international-court-of-justice",
+   "claim": "International Court of Justice",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "26 January 2024",
+   "attribution": "ICJ, Order of 26 January 2024, South Africa v. Israel.",
+   "statement": 56
+  },
+  {
+   "id": "statements-international-court-of-justice-2",
+   "claim": "International Court of Justice",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "19 July 2024",
+   "attribution": "ICJ Advisory Opinion, 19 July 2024, paras. 224–229; separate opinions of Judges Nolte, Iwasawa and Tladi.",
+   "statement": 62
+  },
+  {
+   "id": "statements-international-criminal-court-pre-trial-chamber-i",
+   "claim": "International Criminal Court, Pre-Trial Chamber I",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "icc"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "21 November 2024",
+   "attribution": "ICC Pre-Trial Chamber I, 21 November 2024.",
+   "statement": 65
+  },
+  {
+   "id": "statements-itamar-ben-gvir-6",
+   "claim": "Itamar Ben-Gvir",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "aljazeera",
+    "france24",
+    "cbs",
+    "abc",
+    "trade-press"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "c. 16 August 2026",
+   "attribution": "Al Jazeera, 16 August 2026; CBS News; Euronews; ABC News; Truthout, 16–17 August 2026.",
+   "statement": 110
+  },
+  {
+   "id": "statements-itamar-ben-gvir-7",
+   "claim": "Itamar Ben-Gvir",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "aljazeera"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "3 September 2026",
+   "attribution": "Al Arabiya; Irish Times; Al Jazeera, 3 September 2026.",
+   "statement": 113
+  },
+  {
+   "id": "statements-michal-waldiger",
+   "claim": "Michal Waldiger",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "mee"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "13 May 2025",
+   "attribution": "Middle East Eye, 13 May 2025; Israeli and international media.",
+   "statement": 74
+  },
+  {
+   "id": "statements-theodor-herzl",
+   "claim": "Theodor Herzl",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "founding-texts"
+   ],
+   "origins": [
+    "archive"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "1896",
+   "attribution": "Theodor Herzl, Der Judenstaat, 1896.",
+   "statement": 1
+  },
+  {
+   "id": "statements-yitzhak-yezernitzky-yitzhak-shamir",
+   "claim": "Yitzhak Yezernitzky (Yitzhak Shamir)",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "merip"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "1943",
+   "attribution": "MERIP, “Document: Shamir on Terrorism (1943)”, May 1988",
+   "statement": 7
+  },
+  {
+   "id": "statements-yuval-abraham",
+   "claim": "Yuval Abraham",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "aljazeera",
+    "trade-press"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "12 September 2026",
+   "attribution": "Venice Film Festival closing ceremony, 12 September 2026; Variety; Deadline; Al Jazeera, 14 September 2026.",
+   "statement": 118
+  },
+  {
+   "id": "long-record-1946",
+   "claim": "1946",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "cia-archive"
+   ],
+   "origins": [
+    "archive"
+   ],
+   "independence": 1,
+   "falls": [],
+   "attribution": "Survey of Palestine, prepared for the Anglo-American Committee of Inquiry, 1946",
+   "context": "Where the land went"
+  },
+  {
+   "id": "war-record-german-arms-export-licences-to-israel-by-year",
+   "claim": "German arms export licences to Israel, by year",
+   "kind": "record",
+   "file": "war-record.json",
+   "sources": [
+    "germany"
+   ],
+   "origins": [
+    "western-state"
+   ],
+   "independence": 1,
+   "falls": [],
+   "ref": "§13.4",
+   "attribution": "German Federal Ministry for Economic Affairs and Energy, answer to a parliamentary inquiry by the Left Party, September 2026; reported by Der Spiegel via Anadolu Agency, and Globes",
+   "context": "The suppliers' own numbers"
+  },
+  {
+   "id": "figures-home-office-protective-security-for-faith-sites-2026-27",
+   "claim": "Home Office protective security for faith sites, 2026/27",
+   "kind": "record",
+   "file": "figures.json",
+   "sources": [
+    "uk-gov"
+   ],
+   "origins": [
+    "western-state"
+   ],
+   "independence": 1,
+   "falls": [],
+   "ref": "§21.6, §22",
+   "attribution": "Home Office, “Record funding to protect faith communities”, 19 February 2026",
+   "context": "Antisemitic incidents in the UK, and what the series tracks"
+  },
+  {
+   "id": "elements-icc-arrest-warrants",
+   "claim": "ICC, arrest warrants",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "icc"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "ref": "Part XV",
+   "date": "21 November 2024",
+   "attribution": "International Criminal Court",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-icc-jurisdiction-upheld",
+   "claim": "ICC, jurisdiction upheld",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "icc"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "ref": "Appendix A",
+   "date": "December 2025",
+   "attribution": "International Criminal Court",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-icc-warrant-for-deif",
+   "claim": "ICC, warrant for Deif",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "icc"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "ref": "Appendix A",
+   "date": "21 November 2024",
+   "attribution": "International Criminal Court",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-icj-advisory-opinion",
+   "claim": "ICJ, advisory opinion",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "ref": "Part XV",
+   "date": "19 July 2024",
+   "attribution": "International Court of Justice",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-icj-provisional-measures",
+   "claim": "ICJ, provisional measures",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "ref": "Part VI",
+   "date": "26 January 2024",
+   "attribution": "International Court of Justice",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-icj-the-wall",
+   "claim": "ICJ, the Wall",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "ref": "Appendix A",
+   "date": "9 July 2004",
+   "attribution": "International Court of Justice",
+   "context": "What the findings rest on"
+  },
+  {
+   "id": "elements-the-duty-to-prevent-state-by-state",
+   "claim": "The duty to prevent, state by state",
+   "kind": "record",
+   "file": "elements.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "attribution": "Compiled from the recognition, sanctions and ICJ records in data/world-positions.json and the embargo and arms-supplier records in data/long-record.json, both of which carry their own sources."
+  },
+  {
+   "id": "figures-the-j50-declaration-on-zionism-and-antisemitism",
+   "claim": "The J50 Declaration on Zionism and Antisemitism",
+   "kind": "record",
+   "file": "figures.json",
+   "sources": [
+    "founding-texts"
+   ],
+   "origins": [
+    "archive"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "11 September 2026",
+   "attribution": "J50 Declaration on Zionism and Antisemitism, issued on the eve of Rosh Hashanah 5787 and published by the European Jewish Congress",
+   "context": "The definition, the declaration and the law"
+  },
+  {
+   "id": "long-record-where-the-weapons-come-from",
+   "claim": "Where the weapons come from",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "sipri"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "attribution": "Stockholm International Peace Research Institute, Arms Transfers Database, March 2025",
+   "context": "The complicity ledger"
+  },
+  {
+   "id": "long-record-area-a",
+   "claim": "Area A",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "ocha",
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 18,
+   "attribution": "B'Tselem; United Nations OCHA, Area C figures",
+   "context": "Where the land went"
+  },
+  {
+   "id": "long-record-area-a-palestinian-control",
+   "claim": "Area A, Palestinian control",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "ocha",
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 3.8,
+   "attribution": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA",
+   "context": "Today"
+  },
+  {
+   "id": "long-record-area-b",
+   "claim": "Area B",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "ocha",
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 22,
+   "attribution": "B'Tselem; United Nations OCHA, Area C figures",
+   "context": "Where the land went"
+  },
+  {
+   "id": "long-record-area-b-israeli-security-control",
+   "claim": "Area B, Israeli security control",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "ocha",
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 4.6,
+   "attribution": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA",
+   "context": "Today"
+  },
+  {
+   "id": "long-record-area-c",
+   "claim": "Area C",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "ocha",
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 60,
+   "attribution": "B'Tselem; United Nations OCHA, Area C figures",
+   "context": "Where the land went"
+  },
+  {
+   "id": "long-record-area-c-full-israeli-control",
+   "claim": "Area C, full Israeli control",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "ocha",
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 12.6,
+   "attribution": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA",
+   "context": "Today"
+  },
+  {
+   "id": "long-record-gaza",
+   "claim": "Gaza",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "ocha",
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 1,
+   "attribution": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA",
+   "context": "Today"
+  },
+  {
+   "id": "long-record-gaza-under-egypt",
+   "claim": "Gaza, under Egypt",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "unccp",
+    "cia-archive"
+   ],
+   "origins": [
+    "archive",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 1,
+   "attribution": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine",
+   "context": "1949"
+  },
+  {
+   "id": "long-record-israel",
+   "claim": "Israel",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "unccp",
+    "cia-archive"
+   ],
+   "origins": [
+    "archive",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 78,
+   "attribution": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine",
+   "context": "1949"
+  },
+  {
+   "id": "long-record-israel-pre-1967-lines",
+   "claim": "Israel, pre-1967 lines",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "ocha",
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 78,
+   "attribution": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA",
+   "context": "Today"
+  },
+  {
+   "id": "conduct-record-recorded-ceasefire-violations",
+   "claim": "Recorded ceasefire violations",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "genocide-watch",
+    "aljazeera"
+   ],
+   "origins": [
+    "international-ngo",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "ref": "§6.7",
+   "value": 2400,
+   "attribution": "Genocide Watch / Al Jazeera",
+   "context": "Since the ceasefire"
+  },
+  {
+   "id": "long-record-west-bank-under-jordan",
+   "claim": "West Bank, under Jordan",
+   "kind": "figure",
+   "file": "long-record.json",
+   "sources": [
+    "unccp",
+    "cia-archive"
+   ],
+   "origins": [
+    "archive",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 21,
+   "attribution": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine",
+   "context": "1949"
+  },
+  {
+   "id": "statements-achord-center-hebrew-university-of-jerusalem",
+   "claim": "aChord Center, Hebrew University of Jerusalem",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "haaretz",
+    "mee"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "August 2025",
+   "attribution": "aChord Center, Hebrew University; Haaretz; Middle East Eye, August 2025.",
+   "statement": 86
+  },
+  {
+   "id": "statements-american-council-for-judaism",
+   "claim": "American Council for Judaism",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "journal",
+    "site-derived"
+   ],
+   "origins": [
+    "academic",
+    "data-project"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "December 1942",
+   "attribution": "Thomas A. Kolsky, Jews Against Zionism: The American Council for Judaism, 1942–1948 (Temple University Press, 1990); Jewish Virtual Library. Report §23.2.",
+   "statement": 6
+  },
+  {
+   "id": "statements-amichai-eliyahu",
+   "claim": "Amichai Eliyahu",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv",
+    "trade-press"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "5 November 2023",
+   "attribution": "Israeli radio, 5 November 2023; international wire coverage.",
+   "statement": 49
+  },
+  {
+   "id": "statements-arthur-ruppin",
+   "claim": "Arthur Ruppin",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "palquest",
+    "israel-archives"
+   ],
+   "origins": [
+    "israeli-official",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "1938",
+   "attribution": "Jewish Agency Executive minutes, 1938; Institute for Palestine Studies.",
+   "statement": 5
+  },
+  {
+   "id": "statements-avi-dichter",
+   "claim": "Avi Dichter",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "law-for-palestine",
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "November 2023",
+   "attribution": "Israeli television, November 2023; Law for Palestine database.",
+   "statement": 51
+  },
+  {
+   "id": "statements-avi-shlaim-2",
+   "claim": "Avi Shlaim",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "morris",
+    "journal",
+    "site-derived"
+   ],
+   "origins": [
+    "academic",
+    "data-project"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "July 2025",
+   "attribution": "Jacobin, July 2025; Journal of Holy Land and Palestine Studies, 2025–2026; Avi Shlaim, Genocide in Gaza (Irish Pages Press, 2024). Report §23.3.",
+   "statement": 78
+  },
+  {
+   "id": "statements-avigdor-lieberman",
+   "claim": "Avigdor Lieberman",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "jpost",
+    "trade-press"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "15 April 2018",
+   "attribution": "AFP and The Jerusalem Post, 16 April 2018, reporting remarks made the previous day.",
+   "statement": 23
+  },
+  {
+   "id": "statements-benjamin-netanyahu-2",
+   "claim": "Benjamin Netanyahu",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "al-haq",
+    "jpost"
+   ],
+   "origins": [
+    "israeli-media",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "3 November 2023",
+   "attribution": "Letter of 3 November 2023, reported by The Jerusalem Post; translated in Al-Haq's compilation “Statements by Israeli Officials, Soldiers and Civil Society on Genocide”, January 2024.",
+   "statement": 48
+  },
+  {
+   "id": "statements-benjamin-netanyahu-4",
+   "claim": "Benjamin Netanyahu",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "icj-jurists"
+   ],
+   "origins": [
+    "international-ngo",
+    "israeli-media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "May 2025",
+   "attribution": "Times of Israel liveblog, May 2025; International Commission of Jurists analysis.",
+   "statement": 75
+  },
+  {
+   "id": "statements-benjamin-netanyahu-5",
+   "claim": "Benjamin Netanyahu",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "cnn",
+    "aljazeera",
+    "mee"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "28 May 2026",
+   "attribution": "Al Jazeera; Times of Israel; CNN; Middle East Eye, 28 May 2026.",
+   "statement": 103
+  },
+  {
+   "id": "statements-bezalel-smotrich",
+   "claim": "Bezalel Smotrich",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv",
+    "iags"
+   ],
+   "origins": [
+    "international-ngo",
+    "israeli-media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "2017",
+   "attribution": "Israeli media, 2017; cited by genocide scholars as precursor speech.",
+   "statement": 22
+  },
+  {
+   "id": "statements-bezalel-smotrich-2",
+   "claim": "Bezalel Smotrich",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "law-for-palestine",
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "2023",
+   "attribution": "Israeli media, 2023; Law for Palestine database.",
+   "statement": 47
+  },
+  {
+   "id": "statements-bezalel-smotrich-3",
+   "claim": "Bezalel Smotrich",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv",
+    "aljazeera"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "August 2024",
+   "attribution": "Israeli media; Al Jazeera, August 2024.",
+   "statement": 64
+  },
+  {
+   "id": "statements-bezalel-smotrich-4",
+   "claim": "Bezalel Smotrich",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "ynet",
+    "israel-tv",
+    "npr",
+    "trade-press"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "7 April 2025",
+   "attribution": "Israel National News; Ynetnews; NPR; Press TV, April 2025.",
+   "statement": 71
+  },
+  {
+   "id": "statements-bezalel-smotrich-7",
+   "claim": "Bezalel Smotrich",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv",
+    "lemkin"
+   ],
+   "origins": [
+    "international-ngo",
+    "israeli-media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "5 March 2026",
+   "attribution": "Israeli and Lebanese media, 5 March 2026; Lemkin Institute Red Flag Alert, “Israel in Lebanon”, March 2026.",
+   "statement": 96
+  },
+  {
+   "id": "statements-bezalel-smotrich-8",
+   "claim": "Bezalel Smotrich",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "jpost",
+    "chatham"
+   ],
+   "origins": [
+    "academic",
+    "israeli-media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "May 2026",
+   "attribution": "Jerusalem Post; Chatham House, “Israel's accelerating de facto annexation of the West Bank”, April 2026.",
+   "statement": 102
+  },
+  {
+   "id": "statements-central-conference-of-american-rabbis",
+   "claim": "Central Conference of American Rabbis",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "journal",
+    "site-derived"
+   ],
+   "origins": [
+    "academic",
+    "data-project"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "1897",
+   "attribution": "Central Conference of American Rabbis, 1897; American Jewish Archives; Posen Library. Report §23.2.",
+   "statement": 2
+  },
+  {
+   "id": "statements-david-ben-gurion",
+   "claim": "David Ben-Gurion",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-archives",
+    "morris"
+   ],
+   "origins": [
+    "academic",
+    "israeli-official"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "12 July 1937",
+   "attribution": "Ben-Gurion diaries, 12 July 1937; 1937 Ben-Gurion letter; Benny Morris, The Birth of the Palestinian Refugee Problem Revisited (2004).",
+   "statement": 4
+  },
+  {
+   "id": "statements-ehud-olmert",
+   "claim": "Ehud Olmert",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "haaretz",
+    "guardian"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "November 2007",
+   "attribution": "Haaretz; The Guardian, November 2007.",
+   "statement": 15
+  },
+  {
+   "id": "statements-ezra-yachin",
+   "claim": "Ezra Yachin",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "icj",
+    "mee"
+   ],
+   "origins": [
+    "international-court",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "12 October 2023",
+   "attribution": "Read to the International Court of Justice by advocate Tembeka Ngcukaitobi for South Africa, 11 January 2024; reported by Middle East Eye and the World Socialist Web Site.",
+   "statement": 36
+  },
+  {
+   "id": "statements-gabor-mat",
+   "claim": "Gabor Maté",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "documentary",
+    "aljazeera",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "2024",
+   "attribution": "Interview with Ahmed Shihab-Eldin, 2024; The Real News Network; Al Jazeera, 26 June 2025. Report §23.3.",
+   "statement": 61
+  },
+  {
+   "id": "statements-golda-meir",
+   "claim": "Golda Meir",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "khalidi",
+    "sunday-times"
+   ],
+   "origins": [
+    "academic",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "15 June 1969",
+   "attribution": "The Sunday Times, 15 June 1969; cited in Rashid Khalidi, The Hundred Years' War on Palestine (2020) and Edward Said, The Question of Palestine (1980).",
+   "statement": 10
+  },
+  {
+   "id": "statements-hannah-einbinder",
+   "claim": "Hannah Einbinder",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "nbc",
+    "trade-press",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "14 September 2025",
+   "attribution": "The Hollywood Reporter; Deadline; NBC News, September 2025. Report §23.4.",
+   "statement": 90
+  },
+  {
+   "id": "statements-isaac-herzog",
+   "claim": "Isaac Herzog",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv",
+    "euromed"
+   ],
+   "origins": [
+    "international-ngo",
+    "israeli-media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "13 October 2023",
+   "attribution": "Euro-Med Human Rights Monitor; multiple Israeli outlets, 13 October 2023.",
+   "statement": 38
+  },
+  {
+   "id": "statements-israel-katz",
+   "claim": "Israel Katz",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv",
+    "euromed"
+   ],
+   "origins": [
+    "international-ngo",
+    "israeli-media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "12 October 2023",
+   "attribution": "Israeli media, 12 October 2023; Euro-Med Human Rights Monitor.",
+   "statement": 37
+  },
+  {
+   "id": "statements-israel-katz-3",
+   "claim": "Israel Katz",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "trade-press"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "March 2026",
+   "attribution": "Times of Israel; Common Dreams; Taipei Times, March–April 2026.",
+   "statement": 97
+  },
+  {
+   "id": "statements-israel-katz-4",
+   "claim": "Israel Katz",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "aljazeera"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "2 September 2026",
+   "attribution": "Times of Israel; Al Jazeera, 2 September 2026; US Senator Chris Van Hollen: “Now the Israeli Minister of Defense confirmed that's the goal.”",
+   "statement": 112
+  },
+  {
+   "id": "statements-itamar-ben-gvir",
+   "claim": "Itamar Ben-Gvir",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "law-for-palestine",
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "2023",
+   "attribution": "Israeli media, 2023; Law for Palestine database.",
+   "statement": 46
+  },
+  {
+   "id": "statements-itamar-ben-gvir-4",
+   "claim": "Itamar Ben-Gvir",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "jns",
+    "aljazeera",
+    "mee",
+    "france24",
+    "trade-press"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "19 June 2026",
+   "attribution": "Euronews; JNS; Al Jazeera; Middle East Eye; Mediaite; The Daily Caller, 19 June 2026.",
+   "statement": 105
+  },
+  {
+   "id": "statements-itamar-ben-gvir-5",
+   "claim": "Itamar Ben-Gvir",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "jns",
+    "mee",
+    "new-arab",
+    "france24"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "30–31 July 2026",
+   "attribution": "Al-Quds; Middle East Eye; France 24; JNS; Times of Israel, 30–31 July 2026.",
+   "statement": 109
+  },
+  {
+   "id": "statements-law-for-palestine",
+   "claim": "Law for Palestine",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "law-for-palestine",
+    "trt",
+    "trade-press"
+   ],
+   "origins": [
+    "media",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "4 January 2024 (continuously updated)",
+   "attribution": "Law for Palestine, 4 January 2024; ReliefWeb; TRT World.",
+   "statement": 55
+  },
+  {
+   "id": "statements-lt-gen-rafael-eitan",
+   "claim": "Lt. Gen. Rafael Eitan",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "ynet",
+    "nyt"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "April 1983",
+   "attribution": "Yediot Ahronot, 13 April 1983 (Gad Becker); The New York Times, 14 April 1983.",
+   "statement": 12
+  },
+  {
+   "id": "statements-maj-gen-res-giora-eiland",
+   "claim": "Maj. Gen. (res.) Giora Eiland",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "ynet",
+    "new-arab"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "November 2023",
+   "attribution": "Yedioth Ahronoth, November 2023; translated and reported by The New Arab and others.",
+   "statement": 53
+  },
+  {
+   "id": "statements-maj-gen-gadi-eisenkot",
+   "claim": "Maj. Gen. Gadi Eisenkot",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "goldstone",
+    "un-hrc",
+    "ynet"
+   ],
+   "origins": [
+    "israeli-media",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "2008",
+   "attribution": "Yedioth Ahronoth, October 2008; cited in the UN Goldstone Report (A/HRC/12/48, 2009).",
+   "statement": 16
+  },
+  {
+   "id": "statements-masha-gessen",
+   "claim": "Masha Gessen",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "documentary",
+    "newyorker",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "9 December 2023",
+   "attribution": "The New Yorker, 9 December 2023; Jewish Telegraphic Agency; Democracy Now!, 15 December 2023. Report §23.3.",
+   "statement": 54
+  },
+  {
+   "id": "statements-may-golan",
+   "claim": "May Golan",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv",
+    "euromed"
+   ],
+   "origins": [
+    "international-ngo",
+    "israeli-media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "13 October 2023",
+   "attribution": "Euro-Med Human Rights Monitor; Israeli media, October 2023.",
+   "statement": 39
+  },
+  {
+   "id": "statements-meirav-ben-ari",
+   "claim": "Meirav Ben-Ari",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "knesset",
+    "trade-press"
+   ],
+   "origins": [
+    "israeli-official",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "16 October 2023",
+   "attribution": "Knesset session video of 16 October 2023, timestamped and translated by Jonathan Ofir for Mondoweiss; republished by Truthout. The National rendered the line as “The children of Gaza brought it upon themselves.”",
+   "statement": 41
+  },
+  {
+   "id": "statements-mike-huckabee",
+   "claim": "Mike Huckabee",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "trade-press"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "5 September 2026",
+   "attribution": "Times of Israel; wire coverage, 5 September 2026.",
+   "statement": 115
+  },
+  {
+   "id": "statements-miki-zohar",
+   "claim": "Miki Zohar",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "haaretz",
+    "aljazeera",
+    "trade-press"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "13 September 2026",
+   "attribution": "Miki Zohar on X, 13 September 2026; Haaretz, 13 September 2026; Al Jazeera, 14 September 2026; The National; AFP.",
+   "statement": 119
+  },
+  {
+   "id": "statements-moshe-feiglin",
+   "claim": "Moshe Feiglin",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "maariv",
+    "mee",
+    "trt"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "c. 20 May 2025",
+   "attribution": "Middle East Eye; TRT World; Antiwar.com; Maariv, May 2025.",
+   "statement": 76
+  },
+  {
+   "id": "statements-nachala-settler-movement-march-28-ministers-and-mks",
+   "claim": "Nachala settler movement march — 28 ministers and MKs",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "972",
+    "times-of-israel",
+    "cnn"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "19 July 2026",
+   "attribution": "CNN (“Israel's far-right openly boasts of resettling Gaza as election looms”); +972 Magazine; Times of Israel, 19 July 2026.",
+   "statement": 108
+  },
+  {
+   "id": "statements-naomi-klein",
+   "claim": "Naomi Klein",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "guardian",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "23 April 2024",
+   "attribution": "The Guardian, 24 April 2024. Report §23.4.",
+   "statement": 59
+  },
+  {
+   "id": "statements-nissim-vaturi",
+   "claim": "Nissim Vaturi",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv",
+    "euromed"
+   ],
+   "origins": [
+    "international-ngo",
+    "israeli-media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "9 October 2023",
+   "attribution": "Euro-Med Human Rights Monitor; Israeli media, 2023–2026.",
+   "statement": 30
+  },
+  {
+   "id": "statements-rear-admiral-daniel-hagari",
+   "claim": "Rear Admiral Daniel Hagari",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "haaretz",
+    "mee",
+    "trade-press"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "10 October 2023",
+   "attribution": "Haaretz live blog, 10 October 2023, reported in English by Middle East Eye and Common Dreams the same day.",
+   "statement": 34
+  },
+  {
+   "id": "statements-tally-gotliv-2",
+   "claim": "Tally Gotliv",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-tv",
+    "euromed"
+   ],
+   "origins": [
+    "international-ngo",
+    "israeli-media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "23 October 2023",
+   "attribution": "Euro-Med Human Rights Monitor; Israeli press, October 2023.",
+   "statement": 43
+  },
+  {
+   "id": "statements-vladimir-jabotinsky",
+   "claim": "Vladimir Jabotinsky",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "khalidi",
+    "founding-texts"
+   ],
+   "origins": [
+    "academic",
+    "archive"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "1923",
+   "attribution": "Vladimir Jabotinsky, “The Iron Wall”, 1923; cited in Rashid Khalidi, The Hundred Years' War on Palestine (2020).",
+   "statement": 3
+  },
+  {
+   "id": "statements-yitzhak-kroizer",
+   "claim": "Yitzhak Kroizer",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "al-haq",
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media",
+    "palestinian-ngo"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "5 November 2023",
+   "attribution": "Galey Israel, 5 November 2023; official translation in Al-Haq's compilation “Statements by Israeli Officials, Soldiers and Civil Society on Genocide”, January 2024.",
+   "statement": 50
+  },
+  {
+   "id": "statements-yitzhak-rabin-2",
+   "claim": "Yitzhak Rabin",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "btselem",
+    "trade-press"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "January 1988",
+   "attribution": "Contemporaneous Israeli and international press, January 1988; B'Tselem.",
+   "statement": 13
+  },
+  {
+   "id": "statements-yoav-gallant",
+   "claim": "Yoav Gallant",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "icj",
+    "israel-mod"
+   ],
+   "origins": [
+    "international-court",
+    "israeli-official"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "9 October 2023",
+   "attribution": "Israeli Ministry of Defence statement, 9 October 2023; cited in South Africa v. Israel, ICJ.",
+   "statement": 31
+  },
+  {
+   "id": "statements-yoav-gallant-2",
+   "claim": "Yoav Gallant",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "un-coi",
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "10 October 2023",
+   "attribution": "Israeli media, 10 October 2023; cited by the UN Commission of Inquiry, September 2025.",
+   "statement": 35
+  },
+  {
+   "id": "long-record-1949",
+   "claim": "1949",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "unccp",
+    "cia-archive"
+   ],
+   "origins": [
+    "archive",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "attribution": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine",
+   "context": "Where the land went"
+  },
+  {
+   "id": "conduct-record-the-ai-targeting-systems",
+   "claim": "The AI targeting systems",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "972",
+    "guardian"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "ref": "§6.4",
+   "attribution": "+972 Magazine and Local Call, April 2024, corroborated by The Guardian; accounts of Israeli intelligence officers"
+  },
+  {
+   "id": "conduct-record-the-coverage-and-what-it-cost",
+   "claim": "The coverage, and what it cost",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "reuters-institute",
+    "bbc",
+    "trade-press"
+   ],
+   "origins": [
+    "academic",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "ref": "§15.9",
+   "attribution": "Reuters Institute Digital News Report 2026, 16 June 2026, surveying nearly 100,000 people across 48 markets; Novara Media, April 2026; Centre for Media Monitoring; Media Bias Meter, 'Framing Gaza', November 2025; BBC staff open letters, 2024–2025"
+  },
+  {
+   "id": "long-record-the-nakba-and-the-1948-war",
+   "claim": "The Nakba and the 1948 war",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "pcbs",
+    "morris"
+   ],
+   "origins": [
+    "academic",
+    "palestinian-official"
+   ],
+   "independence": 2,
+   "falls": [],
+   "attribution": "Aref al-Aref, al-Nakba (13,000); PCBS (15,000); Benny Morris, The Birth of the Palestinian Refugee Problem Revisited (5,700–5,800); Stanley Sandler (6,373, of whom 2,373 civilians)",
+   "context": "Palestinians killed, by period"
+  },
+  {
+   "id": "conduct-record-the-nuclear-exception",
+   "claim": "The nuclear exception",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "sipri",
+    "fas",
+    "site-derived"
+   ],
+   "origins": [
+    "academic",
+    "data-project"
+   ],
+   "independence": 2,
+   "falls": [],
+   "ref": "§12.1–12.3, §8.5–8.6",
+   "attribution": "SIPRI; Federation of American Scientists; NPT and IAEA status; report §12 and §8"
+  },
+  {
+   "id": "long-record-the-oslo-years",
+   "claim": "The Oslo years",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "btselem",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "israeli-ngo"
+   ],
+   "independence": 2,
+   "falls": [],
+   "attribution": "Derived from B'Tselem cumulative figures",
+   "context": "Palestinians killed, by period"
+  },
+  {
+   "id": "conduct-record-the-policy-of-keeping-hamas-funded",
+   "claim": "The policy of keeping Hamas funded",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "haaretz",
+    "times-of-israel",
+    "jpost",
+    "wsj"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "ref": "§11.1",
+   "attribution": "Wall Street Journal, 24 January 2009; Haaretz, March 2019, January 2026 and 4 March 2025; Times of Israel; Jerusalem Post"
+  },
+  {
+   "id": "maps-the-west-bank-by-governorate",
+   "claim": "The West Bank, by governorate",
+   "kind": "record",
+   "file": "maps.json",
+   "sources": [
+    "ocha",
+    "aljazeera"
+   ],
+   "origins": [
+    "media",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "attribution": "OCHA, via Al Jazeera, \"Mapping Israeli settler violence in the West Bank\", 27 July 2026"
+  },
+  {
+   "id": "long-record-today",
+   "claim": "Today",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "ocha",
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "attribution": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA",
+   "context": "Where the land went"
+  },
+  {
+   "id": "conduct-record-two-monitored-series-one-axis",
+   "claim": "Two monitored series, one axis",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "cst",
+    "tell-mama",
+    "uk-gov"
+   ],
+   "origins": [
+    "international-ngo",
+    "western-state"
+   ],
+   "independence": 2,
+   "falls": [],
+   "ref": "§21.6, §22.1",
+   "attribution": "CST, Antisemitic Incidents Report 2025, 11 February 2026; Tell MAMA 2024 annual report; Home Office hate crime statistics, England and Wales, 2025"
+  },
+  {
+   "id": "war-record-united-states-arms-to-israel-since-7-october-2023",
+   "claim": "United States arms to Israel since 7 October 2023",
+   "kind": "record",
+   "file": "war-record.json",
+   "sources": [
+    "costs-of-war",
+    "quincy",
+    "us-congress"
+   ],
+   "origins": [
+    "academic",
+    "western-state"
+   ],
+   "independence": 2,
+   "falls": [],
+   "ref": "§13.2",
+   "attribution": "Quincy Institute and Brown University Costs of War; US Congress via the Library of Congress; Defense Security Cooperation Agency notifications",
+   "context": "The suppliers' own numbers"
+  },
+  {
+   "id": "conduct-record-sde-teiman-alone",
+   "claim": "Sde Teiman alone",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "btselem",
+    "israel-tv",
+    "hrw"
+   ],
+   "origins": [
+    "international-ngo",
+    "israeli-media",
+    "israeli-ngo"
+   ],
+   "independence": 3,
+   "falls": [],
+   "date": "2024-07",
+   "value": 36,
+   "attribution": "Human Rights Watch, B'Tselem, Israeli press",
+   "context": "Deaths in Israeli custody"
+  },
+  {
+   "id": "statements-benjamin-netanyahu",
+   "claim": "Benjamin Netanyahu",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "un-coi",
+    "icj",
+    "iags"
+   ],
+   "origins": [
+    "international-court",
+    "international-ngo",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [],
+   "date": "28 October 2023",
+   "attribution": "National broadcast, 28 October 2023; cited in South Africa's ICJ application, the UN Commission of Inquiry and the IAGS resolution.",
+   "statement": 45
+  },
+  {
+   "id": "statements-ehud-olmert-2",
+   "claim": "Ehud Olmert",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "guardian",
+    "cnn",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "israeli-media",
+    "media"
+   ],
+   "independence": 3,
+   "falls": [],
+   "date": "13 July 2025",
+   "attribution": "The Guardian, 13 July 2025; CNN, 14 July 2025; The Times of Israel. Report §6.3A, §21.8.",
+   "statement": 81
+  },
+  {
+   "id": "statements-geocartography-knowledge-group-penn-state-university",
+   "claim": "Geocartography Knowledge Group / Penn State University",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "haaretz",
+    "genocide-watch",
+    "mee",
+    "trt",
+    "trade-press"
+   ],
+   "origins": [
+    "international-ngo",
+    "israeli-media",
+    "media"
+   ],
+   "independence": 3,
+   "falls": [],
+   "date": "March 2025",
+   "attribution": "Published in Haaretz; Geopolitical Economy Report, 30 May 2025; Middle East Eye; Genocide Watch; TRT World.",
+   "statement": 69
+  },
+  {
+   "id": "statements-israel-katz-2",
+   "claim": "Israel Katz",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "guardian",
+    "aljazeera",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "israeli-media",
+    "media"
+   ],
+   "independence": 3,
+   "falls": [],
+   "date": "7 July 2025",
+   "attribution": "Briefing to Israeli reporters, 7 July 2025; The Guardian; The Times of Israel; Al Jazeera satellite analysis, 13 July 2025. Report §6.3A.",
+   "statement": 80
+  },
+  {
+   "id": "statements-jonathan-glazer",
+   "claim": "Jonathan Glazer",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "trade-press",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "israeli-media",
+    "media"
+   ],
+   "independence": 3,
+   "falls": [],
+   "date": "10 March 2024",
+   "attribution": "The Hollywood Reporter; Variety; Times of Israel, March–April 2024. Report §23.4.",
+   "statement": 57
+  },
+  {
+   "id": "statements-maj-gen-aharon-haliva",
+   "claim": "Maj. Gen. Aharon Haliva",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "law-for-palestine",
+    "un-coi",
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media",
+    "palestinian-ngo",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [],
+   "date": "August 2025",
+   "attribution": "Channel 12, August 2025; UN Commission of Inquiry; Law for Palestine database.",
+   "statement": 87
+  },
+  {
+   "id": "statements-yair-lapid",
+   "claim": "Yair Lapid",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "idf",
+    "times-of-israel",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "israeli-media",
+    "israeli-official"
+   ],
+   "independence": 3,
+   "falls": [],
+   "date": "13 July 2025",
+   "attribution": "Israeli Army Radio, 13 July 2025; The Times of Israel. Report §6.3A, §21.8.",
+   "statement": 82
+  },
+  {
+   "id": "long-record-military-government-over-palestinian-citizens-of-israel",
+   "claim": "Military government over Palestinian citizens of Israel",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "unrwa",
+    "un-ga",
+    "idf",
+    "israel-hcj"
+   ],
+   "origins": [
+    "israeli-court",
+    "israeli-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [],
+   "attribution": "Kafr Qasim: Israeli military court record, 1957. Khan Yunis and Rafah: UNRWA Director's report to the UN General Assembly, 1957. Border confrontations: standard compilation of Arab–Israeli casualties, 1949–1956",
+   "context": "Palestinians killed, by period"
+  },
+  {
+   "id": "long-record-since-7-october-2023",
+   "claim": "Since 7 October 2023",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "gaza-moh",
+    "ocha",
+    "israel-mod",
+    "israel-cbs"
+   ],
+   "origins": [
+    "israeli-official",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [],
+   "attribution": "Gaza MoH / OCHA; Israel's National Insurance Institute; Israeli Ministry of Defense",
+   "context": "Both sides of the ledger"
+  },
+  {
+   "id": "children-the-years-between",
+   "claim": "The years between",
+   "kind": "record",
+   "file": "children.json",
+   "sources": [
+    "dci-p",
+    "ocha",
+    "btselem"
+   ],
+   "origins": [
+    "israeli-ngo",
+    "palestinian-ngo",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [],
+   "attribution": "Defence for Children International – Palestine; OCHA; B’Tselem."
+  },
+  {
+   "id": "conduct-record-what-is-left",
+   "claim": "What is left",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "pchr",
+    "ocha",
+    "who",
+    "unesco",
+    "aljazeera"
+   ],
+   "origins": [
+    "media",
+    "palestinian-ngo",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [],
+   "ref": "Appendix E, §6.3",
+   "attribution": "UN OCHA Humanitarian Situation Reports, 15 and 25 May 2026; WHO; UNESCO; PCHR; Al Jazeera 1,000-day assessment, 2 July 2026"
+  },
+  {
+   "id": "conduct-record-all-crossings-closed",
+   "claim": "All crossings closed",
+   "kind": "figure",
+   "file": "conduct-record.json",
+   "sources": [
+    "un-news",
+    "times-of-israel",
+    "new-arab",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "israeli-media",
+    "media",
+    "un"
+   ],
+   "independence": 4,
+   "falls": [],
+   "ref": "§6.8",
+   "value": 0,
+   "attribution": "The report, §6.8 (Times of Israel; Siasat; The New Arab, 6–8 June 2026; UN News, July 2026)",
+   "context": "Aid entering Gaza against the requirement"
+  },
+  {
+   "id": "statements-jewish-federations-of-north-america-burson",
+   "claim": "Jewish Federations of North America / Burson",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "jfna",
+    "wapo",
+    "trade-press",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "international-ngo",
+    "israeli-media",
+    "media"
+   ],
+   "independence": 4,
+   "falls": [],
+   "date": "February 2026",
+   "attribution": "Jewish Federations of North America / Burson, published February 2026 (Jewish Insider; JTA; Times of Israel); The Washington Post, September 2025. Report §23.5.",
+   "statement": 95
+  },
+  {
+   "id": "statements-lieutenant-general-eyal-zamir",
+   "claim": "Lieutenant General Eyal Zamir",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "israel-hcj",
+    "times-of-israel",
+    "wsj",
+    "site-derived"
+   ],
+   "origins": [
+    "data-project",
+    "israeli-court",
+    "israeli-media",
+    "media"
+   ],
+   "independence": 4,
+   "falls": [],
+   "date": "July 2025",
+   "attribution": "Israel's High Court of Justice, July 2025; The Wall Street Journal; The Times of Israel. Report §6.3A.",
+   "statement": 84
+  },
+  {
+   "id": "conduct-record-since-the-ceasefire",
+   "claim": "Since the ceasefire",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "gaza-moh",
+    "wafa",
+    "ocha",
+    "unicef",
+    "genocide-watch",
+    "aljazeera"
+   ],
+   "origins": [
+    "international-ngo",
+    "media",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 4,
+   "falls": [],
+   "ref": "§6.7",
+   "attribution": "Gaza Ministry of Health / WAFA, 5 September 2026; UNICEF, June 2026; Genocide Watch / Al Jazeera; OCHA"
+  },
+  {
+   "id": "war-record-what-the-united-kingdom-suspended-and-what-it-left-in-force",
+   "claim": "What the United Kingdom suspended, and what it left in force",
+   "kind": "record",
+   "file": "war-record.json",
+   "sources": [
+    "israel-hcj",
+    "uk-gov",
+    "cia-archive",
+    "trade-press"
+   ],
+   "origins": [
+    "archive",
+    "israeli-court",
+    "media",
+    "western-state"
+   ],
+   "independence": 4,
+   "falls": [],
+   "ref": "§13.3, §15.2",
+   "attribution": "UK export-licensing records; High Court of Justice; gov.uk; Declassified UK and Novara Media flight-tracking",
+   "context": "The suppliers' own numbers"
+  },
+  {
+   "id": "long-record-the-occupation-before-the-first-intifada",
+   "claim": "The occupation before the First Intifada",
+   "kind": "record",
+   "file": "long-record.json",
+   "sources": [
+    "palquest",
+    "un-coi",
+    "israel-hcj",
+    "merip",
+    "trade-press"
+   ],
+   "origins": [
+    "academic",
+    "israeli-court",
+    "media",
+    "palestinian-ngo",
+    "un"
+   ],
+   "independence": 5,
+   "falls": [],
+   "attribution": "MERIP, Israel and the Palestinians 1948–1988; IMEU; palquest; Kahan Commission of Inquiry, 1983; Bayan Nuwayhed al-Hout, Sabra and Shatila: September 1982",
+   "context": "Palestinians killed, by period"
+  },
+  {
+   "id": "conduct-record-human-shields-who-found-what",
+   "claim": "Human shields: who found what",
+   "kind": "record",
+   "file": "conduct-record.json",
+   "sources": [
+    "al-haq",
+    "al-mezan",
+    "pchr",
+    "goldstone",
+    "un-sg",
+    "israel-hcj",
+    "btselem",
+    "breaking-silence",
+    "haaretz",
+    "amnesty",
+    "hrw",
+    "reuters",
+    "ap",
+    "wapo",
+    "cnn",
+    "cbs"
+   ],
+   "origins": [
+    "international-ngo",
+    "israeli-court",
+    "israeli-media",
+    "israeli-ngo",
+    "media",
+    "palestinian-ngo",
+    "un"
+   ],
+   "independence": 7,
+   "falls": [],
+   "ref": "§5.8, §19.5",
+   "attribution": "HCJ 3799/02 (6 October 2005); UN Secretary-General, Children and Armed Conflict, A/79/878-S/2025/247 (June 2025); UN Goldstone Report (2009); Amnesty International; Human Rights Watch; B'Tselem; Breaking the Silence; Al-Haq, Al Mezan and PCHR (27 June 2025); Haaretz, CNN, AP, CBS News, The Washington Post; Reuters, November 2025"
+  }
+ ]
+}

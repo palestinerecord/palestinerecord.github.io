@@ -35,7 +35,7 @@ const App = (function () {
 
   /* ---------- loading ---------- */
 
-  /* Nineteen files, fetched together rather than one after another: the boot
+  /* Twenty files, fetched together rather than one after another: the boot
      time is then the slowest single file, not the sum of all nineteen. The map
      geometry is not among them — charts.js fetches that only if a map is
      actually drawn — and neither is report.json, the largest file on the site,
@@ -63,6 +63,7 @@ const App = (function () {
       ['prov', 'data/provenance.json'],
       ['patterns', 'data/claim-patterns.json'],
       ['entities', 'data/entities.json'],
+      ['falsify', 'data/falsification.json'],
     ];
     // The open-data manifest is written by manifest.py and describes the files
     // above. It is fetched separately and never fatally: a dashboard that will
@@ -1554,6 +1555,99 @@ const App = (function () {
      The section links are the other half: they point at an anchor inside the
      Evidence route, which does not exist while the ledger is on screen, so the
      click changes route first and then waits for the anchor to appear. */
+  /* The falsification register. The filters are the three questions a reader
+     would actually put to it — what kind of claim is this, how much does it
+     rest on, and which adversary switch takes it out — applied together, so
+     that "figures resting on one class of source that the hostile setting
+     removes" is a view of the register rather than a search anyone has to
+     construct. */
+  behaviours.method = function () {
+    const entries = Array.prototype.slice.call(document.querySelectorAll('#fx-list .fx-entry'));
+    if (!entries.length) return;
+    const kindChips = Array.prototype.slice.call(document.querySelectorAll('#fx-kinds .chip'));
+    const indChips = Array.prototype.slice.call(document.querySelectorAll('#fx-inds .chip'));
+    const switchChips = Array.prototype.slice.call(document.querySelectorAll('#fx-switches .chip'));
+    const search = document.getElementById('fx-search');
+    const count = document.getElementById('fx-count');
+    let kind = 'all';
+    let ind = 'all';
+    let sw = 'all';
+
+    function apply() {
+      const q = (search && search.value || '').trim().toLowerCase();
+      const floor = ind === 'all' ? 0 : parseInt(ind, 10);
+      let shown = 0;
+      entries.forEach((el) => {
+        // An entry filtered to "one class of source" is the weak end of the
+        // scale, so that chip is a ceiling where the others are floors.
+        const n = parseInt(el.dataset.ind || '0', 10);
+        const standing = ind === 'all' || (floor === 1 ? n <= 1 : n >= floor);
+        const ok = (kind === 'all' || el.dataset.kind === kind)
+          && standing
+          && (sw === 'all' || (el.dataset.falls || '').split(' ').indexOf(sw) >= 0)
+          && (!q || (el.dataset.text || '').indexOf(q) >= 0);
+        el.hidden = !ok;
+        // A filtered-out entry left open would reopen on its own when the
+        // filter was cleared, which reads as the page having been scrolled.
+        if (!ok) el.open = false;
+        if (ok) shown++;
+      });
+      if (count) {
+        count.textContent = shown === entries.length
+          ? `${entries.length} entries`
+          : `${shown} of ${entries.length} entries`;
+      }
+    }
+
+    function pick(chips, el, set) {
+      chips.forEach((c) => c.classList.toggle('active', c === el));
+      set();
+    }
+
+    kindChips.forEach((chip) => chip.addEventListener('click', () => {
+      kind = chip.dataset.kind;
+      pick(kindChips, chip, apply);
+    }));
+    indChips.forEach((chip) => chip.addEventListener('click', () => {
+      ind = chip.dataset.ind;
+      pick(indChips, chip, apply);
+    }));
+    switchChips.forEach((chip) => chip.addEventListener('click', () => {
+      sw = chip.dataset.switch;
+      pick(switchChips, chip, apply);
+    }));
+    if (search) search.addEventListener('input', apply);
+
+    /* The links arrive carrying only the label and the title, which is a
+       usable issue on its own and is what a reader with no JavaScript gets.
+       The full prefilled body — the entry id, the published value, the
+       attribution, the sources and the test — is written onto a link only when
+       the reader reaches for it, because writing all 358 of them up front puts
+       400kB of query string into the document for the sake of the one link
+       anybody will ever follow. */
+    const F = D.falsify;
+    const list = document.getElementById('fx-list');
+    if (F && list && Views.challengeUrl) {
+      const byId = {};
+      F.entries.forEach((e) => { byId[e.id] = e; });
+      const kinds = {};
+      F.kinds.forEach((k) => { kinds[k.id] = k; });
+      const upgrade = (ev) => {
+        const link = ev.target.closest && ev.target.closest('a[data-fx-id]');
+        if (!link || link.dataset.fxReady) return;
+        const entry = byId[link.dataset.fxId];
+        if (!entry) return;
+        link.href = Views.challengeUrl(entry, kinds[entry.kind]);
+        link.dataset.fxReady = '1';
+      };
+      // Pointer and keyboard both reach the link before the click does, so the
+      // href is already the full one by the time the browser reads it.
+      ['pointerdown', 'focusin', 'click'].forEach((name) => list.addEventListener(name, upgrade, true));
+    }
+
+    apply();
+  };
+
   behaviours.ledger = function () {
     const persons = Array.prototype.slice.call(document.querySelectorAll('#led-persons .led-person'));
     const companies = Array.prototype.slice.call(document.querySelectorAll('#led-companies .led-person'));

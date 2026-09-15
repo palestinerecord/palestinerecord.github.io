@@ -670,6 +670,123 @@ def check_entities(files):
          % (len(ids), len(company_ids), quoted, len(parties), len(icc.get('positions', []))))
 
 
+def check_falsification(files):
+    """The register is an offer, so the check is that the offer is real.
+
+    An entry that names a source the reader cannot look up, or states a value
+    that no longer matches the file it was drawn from, or points at a statement
+    index that has since moved, is worse than no entry at all: it invites a
+    challenge and then cannot receive one. So the register is rebuilt from the
+    provenance graph and compared, every source id is resolved, every statement
+    index is checked against statements.json, and the ordering the page relies
+    on — weakest first — is checked rather than assumed, because the page says
+    in prose that the weakest entries are at the top.
+    """
+    blob = files.get('falsification')
+    if not blob:
+        fail('falsify', 'data/falsification.json is missing; run falsify.py')
+        return
+
+    try:
+        sys.path.insert(0, str(HERE))
+        import falsify as falsify_module
+        fresh = falsify_module.build()
+    except Exception as err:  # the rebuild is the check; it cannot be skipped
+        fail('falsify', 'falsify.py would not rebuild: %s' % err)
+        return
+
+    for key in ('entries', 'single_origin', 'exposed', 'claims'):
+        if blob['meta'].get(key) != fresh['meta'].get(key):
+            fail('falsify', 'data/falsification.json states %s for %s; a rebuild gives %s — run falsify.py'
+                 % (blob['meta'].get(key), key, fresh['meta'].get(key)))
+
+    entries = blob.get('entries', [])
+    sources = blob.get('sources', {})
+    kinds = {k['id']: k for k in blob.get('kinds', [])}
+    switches = {s['id']: s for s in blob.get('switches', [])}
+    origins = {o['id']: o['label'] for o in blob.get('origins', [])}
+    statements = files.get('statements', {}).get('items', [])
+    prov_claims = {c['id']: c for c in files.get('provenance', {}).get('claims', [])}
+
+    if not kinds:
+        fail('falsify', 'the register lists no kinds of claim, so no entry can state its test')
+    for kind in kinds.values():
+        if not (kind.get('test') or '').strip():
+            fail('falsify', 'the %s kind offers no test, so its entries ask the reader for nothing'
+                 % kind['id'])
+
+    seen = set()
+    counts = {k: 0 for k in kinds}
+    for entry in entries:
+        eid = entry.get('id')
+        if eid in seen:
+            fail('falsify', 'two register entries share the identifier %s, so a challenge could not '
+                            'name which one it disputes' % eid)
+        seen.add(eid)
+        if entry.get('kind') not in kinds:
+            fail('falsify', '%s is of kind %s, which the register does not define' % (eid, entry.get('kind')))
+            continue
+        counts[entry['kind']] += 1
+        if not (entry.get('claim') or '').strip():
+            fail('falsify', '%s states no claim, so there is nothing to falsify' % eid)
+        for sid in entry.get('sources', []):
+            if sid not in sources:
+                fail('falsify', '%s rests on source %s, which the register does not carry' % (eid, sid))
+            elif sources[sid].get('origin') not in origins:
+                fail('falsify', 'source %s is of class %s, which is not one the register counts'
+                     % (sid, sources[sid].get('origin')))
+        classes = {sources[sid]['origin'] for sid in entry.get('sources', []) if sid in sources}
+        if entry.get('independence') != len(classes):
+            fail('falsify', '%s claims %s independent classes of source but its sources fall into %d'
+                 % (eid, entry.get('independence'), len(classes)))
+        for sid in entry.get('falls', []):
+            if sid not in switches:
+                fail('falsify', '%s is said to fall under switch %s, which does not exist' % (eid, sid))
+            elif classes and not classes.issubset(set(switches[sid]['removes'])):
+                # The switch removes classes of source. An entry survives it as
+                # long as one of its sources is of a class the switch keeps.
+                fail('falsify', '%s is shown as removed by "%s" but rests on a class that switch keeps'
+                     % (eid, switches[sid]['label']))
+        index = entry.get('statement')
+        if index is not None:
+            if not (0 <= index < len(statements)):
+                fail('falsify', '%s points at statement %s, which is past the end of statements.json'
+                     % (eid, index))
+            elif not statements[index].get('quote'):
+                fail('falsify', '%s points at a statement carrying no quotation' % eid)
+        claim = prov_claims.get(eid)
+        if claim is None:
+            fail('falsify', '%s is in the register but not in the provenance graph, so it was not '
+                            'generated from the data' % eid)
+        elif 'value' in entry and claim.get('value') != entry['value']:
+            fail('falsify', '%s publishes %s but the provenance graph holds %s'
+                 % (eid, entry['value'], claim.get('value')))
+
+    for kind, seen_count in counts.items():
+        if blob['meta'].get('kinds', {}).get(kind) != seen_count:
+            fail('falsify', 'the register states %s %s entries but carries %d'
+                 % (blob['meta'].get('kinds', {}).get(kind), kind, seen_count))
+
+    # Weakest first. The page states this in prose beside the register, so it
+    # is checked here rather than trusted to the sort in falsify.py.
+    order = [(-len(e.get('falls', [])), e.get('independence', 0)) for e in entries]
+    if order != sorted(order):
+        fail('falsify', 'the register is not ordered weakest first, but the page says it is')
+
+    if "'falsify', 'data/falsification.json'" not in (HERE / 'js' / 'app.js').read_text():
+        fail('falsify', 'the register is not fetched at boot, so the method page would not render it')
+    views = (HERE / 'js' / 'views.js').read_text()
+    if 'registerSection()' not in views:
+        fail('falsify', 'the method view does not draw the register')
+    if blob['meta'].get('repo', '') not in views and 'F.meta.repo' not in views:
+        fail('falsify', 'no challenge route is built, so the register invites a challenge with '
+                        'nowhere to file it')
+
+    note('falsify: %d entries, %d resting on one class of source, %d removed by a switch, %d kinds'
+         % (len(entries), blob['meta'].get('single_origin', 0),
+            blob['meta'].get('exposed', 0), len(kinds)))
+
+
 def check_provenance(files):
     """The provenance graph has to be a rebuild of the data, not a file beside it.
 
@@ -1143,6 +1260,7 @@ def main():
         check_provenance(files)
         check_patterns(files)
         check_entities(files)
+        check_falsification(files)
         check_figures_against_markdown(files)
         check_chart_wiring()
         check_cache_bust()
