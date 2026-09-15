@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=69" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=70" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=69" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=70" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2422,6 +2422,144 @@ const Views = (function () {
     return String(href).replace(/[#?].*$/, '').replace(/\/+$/, '');
   })();
 
+  /* ---------- answer a claim ---------- */
+
+  /* The rebuttals page answers a claim a reader has already identified. This
+     route answers one they have only been handed: paste the post, the comment
+     or the press line, and it says which of the seventeen answers it is asking
+     for and assembles a sourced reply.
+
+     There is no language model behind it and no network call. Every phrase it
+     recognises is written down in data/claim-patterns.json, the match is a
+     boundary-anchored substring test, and the reply is built from the report's
+     own refutation, the live headline figures with their sources, and the
+     documented statements in the matching categories. Deterministic matters
+     here for the same reason it matters everywhere else on this site: a reply
+     a reader cannot check is worth nothing in the argument they are about to
+     have, and a reply that is generated afresh each time cannot be checked at
+     all. */
+
+  // The eight live figures a pattern may name, resolved from the headline set
+  // so the reply carries today's number rather than the number that was true
+  // when the pattern was written. The ids are the ones claim-patterns.json
+  // declares in meta.figure_ids; validate.py checks the two lists agree.
+  const ANSWER_FIGURES = {
+    killed: 'Palestinians killed in Gaza',
+    children: 'Children killed in Gaza',
+    injured: 'Injured in Gaza',
+    displaced: 'Displaced in Gaza',
+    'wb-killed': 'Killed in the West Bank',
+    'settler-attacks': 'Settler attacks recorded',
+    settlers: 'Settlers in occupied territory',
+    recognising: 'States recognising Palestine',
+  };
+
+  function answerFigure(id) {
+    const label = ANSWER_FIGURES[id];
+    if (!label) return null;
+    return (D.fig.headline || []).filter((f) => f.label === label)[0] || null;
+  }
+
+  /* Two statements per category at most, the highest tier first and the
+     earliest of those, so the same claim always draws the same quotes. */
+  function answerStatements(cats, limit) {
+    const rank = ['Head of government', 'Head government', 'Cabinet', 'Legislature', 'Military'];
+    const out = [];
+    (D.statements.items || []).forEach((s, i) => {
+      if (!cats.some((c) => s.cat.indexOf(c) >= 0)) return;
+      out.push({ s: s, i: i, rank: rank.indexOf(s.tier) < 0 ? rank.length : rank.indexOf(s.tier) });
+    });
+    out.sort((a, b) => (a.rank - b.rank) || (a.s.sort < b.s.sort ? -1 : 1));
+    return out.slice(0, limit || 2);
+  }
+
+  function answerView() {
+    const P = D.patterns;
+    const phrases = P.claims.reduce((n, c) => n + c.phrases.length, 0);
+
+    const stats = [
+      { value: P.claims.length, label: 'Claims recognised', note: 'the seventeen defences answered in Part XVI of the report, each with the wording it is actually made in' },
+      { value: phrases, label: 'Phrases matched', note: 'written down in data/claim-patterns.json, not inferred — the same text always produces the same answer' },
+      { value: D.statements.items.length, label: 'Statements to draw on', note: 'each with speaker, role, date and the verbatim words' },
+      { value: 0, label: 'Models consulted', note: 'nothing is generated; the reply is assembled from the report, the live figures and the record' },
+    ];
+
+    const examples = [
+      'The casualty numbers are inflated — they come from the Hamas-run health ministry and include combatants.',
+      'Israel has the right to defend itself. Hamas hides behind civilians and uses them as human shields.',
+      'There is no famine in Gaza. Israel lets the aid in and Hamas steals it.',
+      'Anti-Zionism is antisemitism. From the river to the sea is a call to destroy Israel.',
+    ];
+
+    return `<div class="view wrap">
+      <section class="section">
+        ${head('Answer a claim', 'Paste it, and read what the record says',
+          'Paste a post, a comment, a press line or a minister’s quote. Every phrase the record recognises is '
+          + 'highlighted, and the answers it is asking for are assembled underneath: the refutation from the report, '
+          + 'the figures with their sources, and the documented words of the officials involved. No language model is '
+          + 'used and nothing is sent anywhere — the matching runs in this page, against a list of phrases you can read.')}
+        <div class="grid c4">
+          ${stats.map((x, i) => statCard(x, ['blue', '', 'amber', 'green'][i])).join('')}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card answer-box">
+          <label class="answer-label" for="answer-input">The claim, as it was made</label>
+          <textarea id="answer-input" rows="6" placeholder="Paste the post, the comment or the quote here…"></textarea>
+          <div class="answer-tools">
+            <button class="chart-tool primary" id="answer-run">Answer it</button>
+            <button class="chart-tool" id="answer-clear">Clear</button>
+            <span class="small muted" id="answer-status">Nothing pasted yet.</span>
+          </div>
+          <div class="answer-examples">
+            <span class="small muted">Or try one:</span>
+            ${examples.map((e, i) => `<button class="chip" data-example="${i}">${esc(e.slice(0, 46))}…</button>`).join('')}
+          </div>
+          <script type="application/json" id="answer-examples-data">${JSON.stringify(examples)}</script>
+        </div>
+      </section>
+
+      <section class="section" id="answer-read-wrap" hidden>
+        ${head('What was recognised', 'The text, with every matched phrase marked',
+          'A phrase is matched on word boundaries and nothing else is read into it. If the marking looks wrong, the '
+          + 'phrase list is published in the open data and can be corrected.')}
+        <div class="card answer-read" id="answer-read"></div>
+      </section>
+
+      <section class="section" id="answer-results-wrap" hidden>
+        ${head('The answer', 'Assembled from the record', 'Ranked by how much of the pasted text each one accounts for. '
+          + 'Every line below is read out of the report, the live figures or the documented statements at the moment '
+          + 'you press the button, so a reply copied from here carries today’s numbers.')}
+        <div id="answer-results"></div>
+      </section>
+
+      <section class="section">
+        ${head('What this is not', 'The limits, stated', '')}
+        <div class="grid c3">
+          <div class="card">
+            <h3 style="font-size:17px;margin-bottom:10px">It does not read meaning</h3>
+            <p class="small muted">It matches phrases. A claim made in wording nobody has written down yet will not be
+            recognised, and a phrase used to make the opposite point will be. What it recognised is shown above so the
+            reader can see which it was.</p>
+          </div>
+          <div class="card">
+            <h3 style="font-size:17px;margin-bottom:10px">It does not write anything</h3>
+            <p class="small muted">Every sentence in the reply already exists: the refutation is Part XVI of the report
+            reproduced word for word, the figures are the live series with their sources attached, and the quotes are
+            the documented statements with speaker, role and date.</p>
+          </div>
+          <div class="card">
+            <h3 style="font-size:17px;margin-bottom:10px">It does not send your text anywhere</h3>
+            <p class="small muted">The matching runs in this page. Nothing is uploaded, logged or stored, and the site
+            has no server to send it to — the whole record is static files.
+            <a href="#/api">The phrase list is open data</a> like everything else here.</p>
+          </div>
+        </div>
+      </section>
+    </div>`;
+  }
+
   /* ---------- provenance ---------- */
 
   /* The record is a graph, not a list, and this route is where that graph is
@@ -2638,6 +2776,11 @@ const Views = (function () {
       title: 'Legal — the findings and the instruments they rest on',
       desc: 'The ICJ proceedings, the ICC warrants, and the findings made under the Genocide Convention, '
         + 'the Fourth Geneva Convention and the Apartheid Convention.',
+    },
+    answer: {
+      title: 'Answer a claim — paste it, and read what the record says',
+      desc: 'Paste a post or a quote and the record marks every claim it recognises, then assembles the answer '
+        + 'from the report, the live figures and the documented statements.',
     },
     provenance: {
       title: 'Provenance — pull the thread',
@@ -3471,7 +3614,7 @@ const Views = (function () {
     statements: statementsView, legal: legalView, sources: sourcesView,
     tour: tourView, api: apiView, changelog: changelogView, embed: embedView,
     method: methodView, children: childrenView, day: dayView,
-    provenance: provenanceView,
+    provenance: provenanceView, answer: answerView,
   };
 
   return {
@@ -3488,5 +3631,6 @@ const Views = (function () {
     origin: SITE_ORIGIN,
     meta,
     blocksHTML, esc, fmt,
+    answerFigure, answerStatements,
   };
 })();

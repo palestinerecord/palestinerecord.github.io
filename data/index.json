@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-15",
-  "total_bytes": 4299907,
+  "total_bytes": 4311146,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -48,6 +48,19 @@
       "fields": [
         "meta",
         "entries"
+      ],
+      "updated": "2026-09-15"
+    },
+    {
+      "path": "data/claim-patterns.json",
+      "title": "The claim patterns behind the answer engine",
+      "description": "The phrase index that maps a claim as it is actually made in public to the rebuttal that answers it: seventeen entries, each with the wordings it recognises. It carries no evidence of its own — the answer is assembled at render time from the report, the live figures and the documented statements — so this file is the whole of what the #/answer route knows.",
+      "source": "Written by patterns.py; the answers themselves are Part XVI of the report.",
+      "bytes": 11239,
+      "records": null,
+      "fields": [
+        "meta",
+        "claims"
       ],
       "updated": "2026-09-15"
     },

@@ -24,7 +24,7 @@ const App = (function () {
   if (window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
   const VIEWS = ['overview', 'tour', 'data', 'children', 'day', 'timeline', 'evidence', 'rebuttals', 'statements',
-    'legal', 'sources', 'provenance', 'method', 'api', 'changelog', 'embed'];
+    'legal', 'sources', 'provenance', 'answer', 'method', 'api', 'changelog', 'embed'];
 
   /* index.html?prerender=1 renders the text and nothing else: no charts, no
      scroll reveals, no counting numbers, no WebGL scene. prerender.py uses it
@@ -35,8 +35,8 @@ const App = (function () {
 
   /* ---------- loading ---------- */
 
-  /* Seventeen files, fetched together rather than one after another: the boot
-     time is then the slowest single file, not the sum of all seventeen. The map
+  /* Eighteen files, fetched together rather than one after another: the boot
+     time is then the slowest single file, not the sum of all eighteen. The map
      geometry is not among them — charts.js fetches that only if a map is
      actually drawn — and neither is report.json, the largest file on the site,
      which only the five routes in REPORT_ROUTES read and which is fetched on
@@ -61,6 +61,7 @@ const App = (function () {
       ['events', 'data/chart-events.json'],
       ['elements', 'data/elements.json'],
       ['prov', 'data/provenance.json'],
+      ['patterns', 'data/claim-patterns.json'],
     ];
     // The open-data manifest is written by manifest.py and describes the files
     // above. It is fetched separately and never fatally: a dashboard that will
@@ -87,7 +88,7 @@ const App = (function () {
 
   /* The routes that reproduce the report itself, rather than quoting figures
      drawn from it. Everything else renders without report.json. */
-  const REPORT_ROUTES = ['evidence', 'rebuttals', 'legal', 'changelog'];
+  const REPORT_ROUTES = ['evidence', 'rebuttals', 'legal', 'changelog', 'answer'];
 
   let reportPromise = null;
 
@@ -1297,6 +1298,245 @@ const App = (function () {
     }));
     input.addEventListener('input', apply);
     apply();
+  };
+
+  /* The answer engine. Deterministic by design: the same text produces the
+     same answer on every machine, on every day, offline, and a reader who
+     doubts a match can read the phrase that caused it in data/claim-patterns.json.
+
+     Normalisation is the whole of the cleverness. Curly quotation marks,
+     hyphens of three different widths and runs of whitespace are flattened,
+     because a claim pasted out of a newspaper is typeset and a claim typed
+     into a comment box is not, and they are the same claim. Offsets into the
+     normalised string stay valid in the original because the normalisation is
+     character-for-character: nothing is inserted and nothing is dropped. */
+  const ANSWER_FOLD = [
+    [/[‘’ʼ′]/g, "'"],
+    [/[“”″]/g, '"'],
+    [/[‐-―−]/g, '-'],
+    [/ /g, ' '],
+  ];
+
+  function answerNormalise(text) {
+    let out = String(text || '');
+    ANSWER_FOLD.forEach(([re, ch]) => { out = out.replace(re, ch); });
+    return out.toLowerCase();
+  }
+
+  const answerEscapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+  /* A phrase matches on word boundaries at both ends, so "ipc is" does not
+     fire inside "recipient" and "singled out" does not fire inside a longer
+     word. Phrases that start or end in punctuation keep that edge unanchored. */
+  function answerPhraseRe(phrase) {
+    const body = answerEscapeRe(phrase);
+    const left = /^[a-z0-9]/.test(phrase) ? '\\b' : '';
+    const right = /[a-z0-9]$/.test(phrase) ? '\\b' : '';
+    return new RegExp(left + body + right, 'g');
+  }
+
+  let answerPatterns = null;
+  function answerCompiled() {
+    if (answerPatterns) return answerPatterns;
+    answerPatterns = (D.patterns.claims || []).map((c) => ({
+      claim: c,
+      strong: c.strong.slice(),
+      phrases: c.phrases.map((p) => ({ text: p, re: answerPhraseRe(p), weight: c.strong.indexOf(p) >= 0 ? 2 : 1 })),
+    }));
+    return answerPatterns;
+  }
+
+  /* Returns the claims the text touches, each with the phrases that fired and
+     where, ordered by weight and then by how early the claim first appears —
+     the first claim made in a post is usually the one being argued. */
+  function answerMatch(text) {
+    const hay = answerNormalise(text);
+    const hits = [];
+    const spans = [];
+    answerCompiled().forEach((entry) => {
+      let weight = 0;
+      let first = Infinity;
+      const matched = [];
+      entry.phrases.forEach((p) => {
+        p.re.lastIndex = 0;
+        let m;
+        let found = false;
+        while ((m = p.re.exec(hay)) !== null) {
+          found = true;
+          first = Math.min(first, m.index);
+          spans.push([m.index, m.index + m[0].length, entry.claim.rebuttal]);
+          if (m.index === p.re.lastIndex) p.re.lastIndex++;
+        }
+        if (found) { weight += p.weight; matched.push(p.text); }
+      });
+      if (weight) hits.push({ claim: entry.claim, weight: weight, first: first, phrases: matched });
+    });
+    hits.sort((a, b) => (b.weight - a.weight) || (a.first - b.first));
+    spans.sort((a, b) => a[0] - b[0] || b[1] - a[1]);
+    return { hits: hits, spans: spans };
+  }
+
+  /* The pasted text with the matched phrases marked. Overlapping matches are
+     merged rather than nested, so the marking never rewrites what was pasted. */
+  function answerMarked(text, spans) {
+    const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+    const merged = [];
+    spans.forEach((s) => {
+      const top = merged[merged.length - 1];
+      if (top && s[0] <= top[1]) { top[1] = Math.max(top[1], s[1]); return; }
+      merged.push([s[0], s[1], s[2]]);
+    });
+    let out = '';
+    let at = 0;
+    merged.forEach(([from, to, n]) => {
+      out += esc(text.slice(at, from));
+      out += `<mark data-rebuttal="${n}">${esc(text.slice(from, to))}</mark>`;
+      at = to;
+    });
+    return out + esc(text.slice(at));
+  }
+
+  /* One answer, built from the record: the report's own refutation, the live
+     figures the pattern names, and the documented statements in its categories.
+     Nothing is composed here — every line is quoted from something. */
+  function answerBlock(hit, rank) {
+    const n = hit.claim.rebuttal;
+    const part = (D.report.parts || []).filter((p) => /DEFEATING EVERY REBUTTAL/i.test(p.title))[0];
+    const section = part ? part.sections.filter((s) => new RegExp('^Rebuttal\\s+' + n + ':').test(s.title))[0] : null;
+    const claimText = section ? section.title.replace(/^Rebuttal\s+\d+:\s*/i, '').replace(/^["“']|["”']$/g, '') : hit.claim.label;
+    const points = [];
+    if (section) {
+      section.blocks.forEach((b) => {
+        if (b.type !== 'list') return;
+        (b.items || []).forEach((item) => {
+          const text = String(item.html || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+          if (text) points.push(text);
+        });
+      });
+    }
+    const figures = hit.claim.figures.map((id) => Views.answerFigure(id)).filter(Boolean);
+    const quotes = Views.answerStatements(hit.claim.statement_cats, 2);
+
+    return `<article class="card answer-card" data-rebuttal="${n}">
+      <div class="answer-card-top">
+        <span class="answer-rank">${rank}</span>
+        <div>
+          <h3>“${Views.esc(claimText)}”</h3>
+          <p class="small muted">Rebuttal ${n} · matched on ${hit.phrases.length}
+            ${hit.phrases.length === 1 ? 'phrase' : 'phrases'}:
+            ${hit.phrases.slice(0, 6).map((p) => `<code>${Views.esc(p)}</code>`).join(' ')}</p>
+        </div>
+      </div>
+      <ol class="answer-points">${points.map((p) => `<li>${Views.esc(p)}</li>`).join('')}</ol>
+      ${figures.length ? `<div class="answer-figures">${figures.map((f) => `<div class="answer-fig">
+        <b>${Charts.fmt(f.value)}${f.suffix ? f.suffix : ''}</b>
+        <span>${Views.esc(f.label)}</span>
+        <em>${Views.esc(f.source)}${f.ref ? ' · ' + Views.esc(f.ref) : ''}</em>
+      </div>`).join('')}</div>` : ''}
+      ${quotes.length ? `<div class="answer-quotes">${quotes.map((q) => `<blockquote>
+        “${Views.esc(q.s.quote)}”
+        <cite>${Views.esc(q.s.speaker)}, ${Views.esc(q.s.role)}, ${Views.esc(q.s.date)}</cite>
+      </blockquote>`).join('')}</div>` : ''}
+      <div class="answer-card-tools">
+        <button class="chart-tool" data-answer-copy="${n}">copy the reply</button>
+        <a class="chart-tool" href="#/rebuttals/${n}">read it in full</a>
+        <a class="chart-tool" href="#/statements">the statements</a>
+      </div>
+    </article>`;
+  }
+
+  /* The copyable reply. Plain text, because it is going into a comment box:
+     the claim, the refutation, the figures with their sources, the quotes with
+     their speakers, and the link to the section it all came from. */
+  function answerReplyText(n) {
+    const card = app.querySelector(`.answer-card[data-rebuttal="${n}"]`);
+    if (!card) return '';
+    const lines = [];
+    lines.push('Claim: ' + card.querySelector('h3').textContent.trim());
+    lines.push('');
+    card.querySelectorAll('.answer-points li').forEach((li) => {
+      lines.push('- ' + li.textContent.replace(/\s+/g, ' ').trim());
+      lines.push('');
+    });
+    const figs = card.querySelectorAll('.answer-fig');
+    if (figs.length) {
+      lines.push('The figures, each with its source:');
+      figs.forEach((f) => {
+        lines.push('- ' + f.querySelector('span').textContent.trim() + ': '
+          + f.querySelector('b').textContent.trim() + ' (' + f.querySelector('em').textContent.trim() + ')');
+      });
+      lines.push('');
+    }
+    const quotes = card.querySelectorAll('.answer-quotes blockquote');
+    if (quotes.length) {
+      lines.push('On the record, in their own words:');
+      quotes.forEach((q) => {
+        const cite = q.querySelector('cite').textContent.trim();
+        const text = q.textContent.replace(cite, '').replace(/\s+/g, ' ').trim();
+        lines.push('- ' + text + ' — ' + cite);
+      });
+      lines.push('');
+    }
+    lines.push('Sources and the full answer: ' + location.origin + location.pathname + '#/rebuttals/' + n);
+    return lines.join('\n');
+  }
+
+  behaviours.answer = function () {
+    const input = document.getElementById('answer-input');
+    const status = document.getElementById('answer-status');
+    const readWrap = document.getElementById('answer-read-wrap');
+    const read = document.getElementById('answer-read');
+    const resultsWrap = document.getElementById('answer-results-wrap');
+    const results = document.getElementById('answer-results');
+    const data = document.getElementById('answer-examples-data');
+    const examples = data ? JSON.parse(data.textContent) : [];
+
+    function run() {
+      const text = input.value.trim();
+      if (!text) {
+        readWrap.hidden = true;
+        resultsWrap.hidden = true;
+        status.textContent = 'Nothing pasted yet.';
+        return;
+      }
+      const found = answerMatch(text);
+      read.innerHTML = answerMarked(text, found.spans);
+      readWrap.hidden = false;
+      if (!found.hits.length) {
+        resultsWrap.hidden = true;
+        status.textContent = 'No claim in the list was recognised. The phrase list is open data, and a claim that '
+          + 'is missing from it is a gap worth reporting.';
+        return;
+      }
+      results.innerHTML = found.hits.map((h, i) => answerBlock(h, i + 1)).join('');
+      resultsWrap.hidden = false;
+      status.textContent = `${found.hits.length} ${found.hits.length === 1 ? 'claim' : 'claims'} recognised, `
+        + `${found.spans.length} ${found.spans.length === 1 ? 'phrase' : 'phrases'} matched.`;
+    }
+
+    document.getElementById('answer-run').addEventListener('click', run);
+    document.getElementById('answer-clear').addEventListener('click', () => {
+      input.value = '';
+      run();
+      input.focus();
+    });
+    // Enter runs it; the textarea keeps newlines on shift-enter, as a textarea should.
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) { e.preventDefault(); run(); }
+    });
+    app.querySelectorAll('[data-example]').forEach((b) => b.addEventListener('click', () => {
+      input.value = examples[Number(b.dataset.example)] || '';
+      run();
+    }));
+    app.addEventListener('click', (e) => {
+      const btn = e.target.closest && e.target.closest('[data-answer-copy]');
+      if (!btn) return;
+      const was = btn.textContent;
+      const flash = (t) => { btn.textContent = t; setTimeout(() => { btn.textContent = was; }, 1400); };
+      const text = answerReplyText(btn.dataset.answerCopy);
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(() => flash('copied'), () => flash('press ⌘C'));
+      else flash('press ⌘C');
+    });
   };
 
   /* The adversary switch. The counts it prints are the counts provenance.py

@@ -470,6 +470,72 @@ def check_statements(files):
     note('statements: %d entries, %d categories' % (len(blob.get('items', [])), len(categories)))
 
 
+def check_patterns(files):
+    """The answer engine can only be as honest as its phrase list.
+
+    Three things have to hold. Every entry must point at a rebuttal the report
+    actually contains, or the route offers an answer that does not exist. Every
+    figure and every statement category it names must resolve, or a reply is
+    assembled with a hole in it. And no phrase may be claimed by two entries,
+    because the ranking is a count of matched phrases: a phrase in two lists
+    would silently weight both, and the reader would have no way to see why.
+    """
+    blob = files.get('claim-patterns')
+    if not blob:
+        fail('patterns', 'data/claim-patterns.json is missing; run patterns.py')
+        return
+    report = files.get('report')
+    statements = files.get('statements')
+    views = (HERE / 'js' / 'views.js').read_text()
+
+    numbers = set()
+    if report:
+        for part in report.get('parts', []):
+            if 'REBUTTAL' in part.get('title', '').upper():
+                for section in part.get('sections', []):
+                    m = re.match(r'Rebuttal\s+(\d+)\s*:', section.get('title', ''))
+                    if m:
+                        numbers.add(int(m.group(1)))
+
+    cats = {c['id'] for c in (statements or {}).get('categories', [])}
+    figure_ids = set(blob['meta'].get('figure_ids', []))
+    for fid in sorted(figure_ids):
+        if ("'%s':" % fid) not in views and ('%s:' % fid) not in views:
+            fail('patterns', 'the figure id %r is declared in the data but views.js does not resolve it' % fid)
+
+    seen = {}
+    for entry in blob.get('claims', []):
+        n = entry.get('rebuttal')
+        if numbers and n not in numbers:
+            fail('patterns', 'entry %r answers rebuttal %s, which the report does not contain' % (entry.get('label'), n))
+        if not entry.get('phrases'):
+            fail('patterns', 'rebuttal %s has no phrases, so nothing can ever match it' % n)
+        for phrase in entry.get('phrases', []):
+            if phrase != phrase.lower().strip():
+                fail('patterns', 'the phrase %r is not normalised; matching is done in lower case' % phrase)
+            if phrase in seen:
+                fail('patterns', 'the phrase %r is claimed by rebuttals %s and %s' % (phrase, seen[phrase], n))
+            seen[phrase] = n
+        for strong in entry.get('strong', []):
+            if strong not in entry.get('phrases', []):
+                fail('patterns', 'rebuttal %s marks %r as strong but does not list it as a phrase' % (n, strong))
+        for fid in entry.get('figures', []):
+            if fid not in figure_ids:
+                fail('patterns', 'rebuttal %s names the figure %r, which is not declared' % (n, fid))
+        for cat in entry.get('statement_cats', []):
+            if cats and cat not in cats:
+                fail('patterns', 'rebuttal %s names the statement category %r, which does not exist' % (n, cat))
+
+    if numbers and len(blob.get('claims', [])) != len(numbers):
+        warn('patterns', '%d rebuttals in the report, %d with patterns — the rest can only be reached by hand'
+             % (len(numbers), len(blob.get('claims', []))))
+    if 'answer' not in (HERE / 'js' / 'app.js').read_text():
+        fail('patterns', 'the answer route has no behaviour, so the paste box does nothing')
+
+    note('patterns: %d claims, %d phrases, %d rebuttals in the report'
+         % (len(blob.get('claims', [])), len(seen), len(numbers)))
+
+
 def check_provenance(files):
     """The provenance graph has to be a rebuild of the data, not a file beside it.
 
@@ -941,6 +1007,7 @@ def main():
         check_statements(files)
         check_sources(files)
         check_provenance(files)
+        check_patterns(files)
         check_figures_against_markdown(files)
         check_chart_wiring()
         check_cache_bust()

@@ -89,6 +89,15 @@ DESCRIPTIONS = {
         'organisations, open datasets, academic work, Israeli sources, journalism and archives.',
         'Each entry links to the publisher.',
     ),
+    'claim-patterns.json': (
+        'The claim patterns behind the answer engine',
+        'The phrase index that maps a claim as it is actually made in public to the '
+        'rebuttal that answers it: seventeen entries, each with the wordings it recognises. '
+        'It carries no evidence of its own — the answer is assembled at render time from the '
+        'report, the live figures and the documented statements — so this file is the whole '
+        'of what the #/answer route knows.',
+        'Written by patterns.py; the answers themselves are Part XVI of the report.',
+    ),
     'provenance.json': (
         'The provenance graph',
         'Every curated claim on this site joined to the bodies it rests on: 416 claims, each '

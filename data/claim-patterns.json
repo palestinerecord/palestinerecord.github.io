@@ -1,0 +1,521 @@
+{
+ "meta": {
+  "title": "Claim patterns",
+  "description": "The phrase index behind the answer engine. Each entry maps one of the seventeen rebuttals in Part XVI of the report to the wording the claim is made in, so a pasted text can be matched to the answer it is asking for without a language model and without a network call. The patterns carry no evidence of their own: the answer is assembled at render time from the report, the live figures and the documented statements.",
+  "generated": "2026-09-15",
+  "figure_ids": [
+   "killed",
+   "children",
+   "injured",
+   "displaced",
+   "wb-killed",
+   "settler-attacks",
+   "settlers",
+   "recognising"
+  ],
+  "note": "Matching is case-insensitive and punctuation-insensitive, and a phrase must match on a word boundary. A phrase listed under \"strong\" counts double, because it names the claim rather than merely touching its subject."
+ },
+ "claims": [
+  {
+   "rebuttal": 1,
+   "label": "Self-defence",
+   "strong": [
+    "self-defence",
+    "article 51"
+   ],
+   "phrases": [
+    "right to defend itself",
+    "right to defend herself",
+    "right to self-defence",
+    "right to self defence",
+    "right to self-defense",
+    "right to self defense",
+    "article 51",
+    "self-defence",
+    "self defence",
+    "self-defense",
+    "self defense",
+    "any country would",
+    "no country would tolerate",
+    "what would you do if",
+    "they started it",
+    "hamas started",
+    "unprovoked attack",
+    "israel was attacked",
+    "defending itself",
+    "defending themselves",
+    "israel has every right"
+   ],
+   "figures": [
+    "killed",
+    "children"
+   ],
+   "statement_cats": [
+    "genocide"
+   ]
+  },
+  {
+   "rebuttal": 2,
+   "label": "Human shields",
+   "strong": [
+    "human shields"
+   ],
+   "phrases": [
+    "human shields",
+    "human shield",
+    "hamas hides",
+    "hides behind civilians",
+    "hides among civilians",
+    "hamas uses civilians",
+    "tunnels under hospitals",
+    "command centre under",
+    "command center under",
+    "blame hamas for",
+    "blood is on hamas",
+    "hamas is responsible for the deaths",
+    "if hamas surrendered",
+    "embedded in civilian",
+    "operates from hospitals",
+    "operating out of schools"
+   ],
+   "figures": [
+    "children",
+    "killed"
+   ],
+   "statement_cats": [
+    "dehumanisation",
+    "warcrimes"
+   ]
+  },
+  {
+   "rebuttal": 3,
+   "label": "Inflated numbers",
+   "strong": [
+    "hamas-run health ministry",
+    "hamas run health ministry"
+   ],
+   "phrases": [
+    "hamas-run health ministry",
+    "hamas run health ministry",
+    "hamas-run ministry of health",
+    "gaza health ministry figures",
+    "hamas figures",
+    "hamas numbers",
+    "numbers are inflated",
+    "inflated casualty",
+    "inflated death toll",
+    "made-up numbers",
+    "made up numbers",
+    "pallywood",
+    "they count combatants",
+    "includes hamas fighters",
+    "include hamas combatants",
+    "cannot trust the numbers",
+    "can't trust the numbers",
+    "unverified figures",
+    "fake casualty",
+    "casualty figures are propaganda"
+   ],
+   "figures": [
+    "killed",
+    "children",
+    "injured"
+   ],
+   "statement_cats": [
+    "findings"
+   ]
+  },
+  {
+   "rebuttal": 4,
+   "label": "Anti-Zionism is antisemitism",
+   "strong": [
+    "anti-zionism is antisemitism"
+   ],
+   "phrases": [
+    "anti-zionism is antisemitism",
+    "antizionism is antisemitism",
+    "anti zionism is antisemitism",
+    "anti-zionism is anti-semitism",
+    "zionism is judaism",
+    "anti-zionist is antisemit",
+    "hating israel is hating jews",
+    "denying jewish self-determination",
+    "denies jewish self-determination",
+    "ihra definition",
+    "antisemitic to criticise israel",
+    "antisemitic to criticize israel",
+    "criticism of israel is antisemit",
+    "jew-hatred dressed",
+    "you are antisemitic"
+   ],
+   "figures": [],
+   "statement_cats": [
+    "dissent",
+    "jewish-opposition"
+   ]
+  },
+  {
+   "rebuttal": 5,
+   "label": "The 2005 disengagement",
+   "strong": [
+    "left gaza in 2005",
+    "gaza is not occupied"
+   ],
+   "phrases": [
+    "left gaza in 2005",
+    "withdrew from gaza",
+    "disengagement",
+    "gaza is not occupied",
+    "gaza was not occupied",
+    "no occupation in gaza",
+    "not occupied since 2005",
+    "gave them gaza",
+    "handed gaza over",
+    "israel does not occupy gaza",
+    "they got gaza and",
+    "pulled out of gaza"
+   ],
+   "figures": [
+    "displaced"
+   ],
+   "statement_cats": [
+    "annexation"
+   ]
+  },
+  {
+   "rebuttal": 6,
+   "label": "The UN is biased",
+   "strong": [
+    "un is biased"
+   ],
+   "phrases": [
+    "un is biased",
+    "biased against israel",
+    "anti-israel body",
+    "un obsession with israel",
+    "human rights council is",
+    "unrwa is hamas",
+    "un resolutions against israel",
+    "kangaroo court",
+    "the un hates israel",
+    "united nations is biased",
+    "un is antisemitic"
+   ],
+   "figures": [
+    "recognising"
+   ],
+   "statement_cats": [
+    "findings"
+   ]
+  },
+  {
+   "rebuttal": 7,
+   "label": "Israel investigates itself",
+   "strong": [
+    "israel investigates",
+    "most moral army"
+   ],
+   "phrases": [
+    "israel investigates",
+    "investigates itself",
+    "idf investigates",
+    "military advocate general",
+    "most moral army",
+    "functioning judiciary",
+    "independent judiciary",
+    "complementarity",
+    "israeli courts will",
+    "its own legal system",
+    "israel holds its soldiers to account"
+   ],
+   "figures": [],
+   "statement_cats": [
+    "findings",
+    "dissent"
+   ]
+  },
+  {
+   "rebuttal": 8,
+   "label": "A land without a people",
+   "strong": [
+    "a land without a people",
+    "invented people"
+   ],
+   "phrases": [
+    "a land without a people",
+    "land without a people",
+    "there was no one there",
+    "the land was empty",
+    "made the desert bloom",
+    "swamps and desert",
+    "no such thing as palestinians",
+    "invented people",
+    "palestinians are an invention",
+    "there was never a palestinian state",
+    "jordan is palestine",
+    "they are all jordanians",
+    "they came from egypt"
+   ],
+   "figures": [
+    "settlers"
+   ],
+   "statement_cats": [
+    "historic",
+    "cleansing"
+   ]
+  },
+  {
+   "rebuttal": 9,
+   "label": "The only democracy",
+   "strong": [
+    "only democracy in the middle east"
+   ],
+   "phrases": [
+    "only democracy in the middle east",
+    "only democracy in the region",
+    "bible belt",
+    "vibrant democracy",
+    "liberal democracy",
+    "the only free country in",
+    "a beacon of democracy",
+    "democratic values"
+   ],
+   "figures": [],
+   "statement_cats": [
+    "apartheid",
+    "society"
+   ]
+  },
+  {
+   "rebuttal": 10,
+   "label": "But the hostages",
+   "strong": [
+    "but the hostages",
+    "release the hostages"
+   ],
+   "phrases": [
+    "but the hostages",
+    "release the hostages",
+    "return the hostages",
+    "give back the hostages",
+    "bring them home",
+    "hostages are still",
+    "hamas still holds",
+    "still holding hostages",
+    "free the hostages",
+    "if hamas released",
+    "hand over the hostages"
+   ],
+   "figures": [
+    "killed",
+    "displaced"
+   ],
+   "statement_cats": [
+    "warcrimes"
+   ]
+  },
+  {
+   "rebuttal": 11,
+   "label": "Evacuation warnings",
+   "strong": [
+    "evacuation warning",
+    "roof knock"
+   ],
+   "phrases": [
+    "evacuation warning",
+    "evacuation order",
+    "roof knock",
+    "warns civilians",
+    "warned civilians",
+    "drops leaflets",
+    "dropped leaflets",
+    "tells civilians to leave",
+    "told them to leave",
+    "safe zone",
+    "humanitarian zone",
+    "al-mawasi",
+    "al mawasi",
+    "they were warned",
+    "takes precautions",
+    "unprecedented precautions"
+   ],
+   "figures": [
+    "displaced",
+    "children"
+   ],
+   "statement_cats": [
+    "cleansing",
+    "warcrimes"
+   ]
+  },
+  {
+   "rebuttal": 12,
+   "label": "Hamas steals the aid",
+   "strong": [
+    "hamas steals the aid"
+   ],
+   "phrases": [
+    "hamas steals the aid",
+    "hamas steals aid",
+    "steals the aid",
+    "aid is stolen",
+    "hamas takes the aid",
+    "hamas loots",
+    "loots the aid",
+    "israel lets the aid in",
+    "israel allows aid",
+    "trucks are waiting",
+    "there is no siege",
+    "aid is diverted",
+    "unrwa is complicit",
+    "hamas sells the aid"
+   ],
+   "figures": [
+    "displaced"
+   ],
+   "statement_cats": [
+    "starvation"
+   ]
+  },
+  {
+   "rebuttal": 13,
+   "label": "There is no famine",
+   "strong": [
+    "there is no famine",
+    "no famine in gaza",
+    "famine is a lie"
+   ],
+   "phrases": [
+    "there is no famine",
+    "no famine in gaza",
+    "famine is a lie",
+    "famine hoax",
+    "no starvation in gaza",
+    "starvation is a lie",
+    "markets are full",
+    "plenty of food in gaza",
+    "ipc is",
+    "the ipc report",
+    "fake famine",
+    "nobody is starving",
+    "they look well fed"
+   ],
+   "figures": [
+    "children"
+   ],
+   "statement_cats": [
+    "starvation"
+   ]
+  },
+  {
+   "rebuttal": 14,
+   "label": "The journalists were operatives",
+   "strong": [
+    "journalists were hamas",
+    "posing as a journalist"
+   ],
+   "phrases": [
+    "journalists were hamas",
+    "journalist was hamas",
+    "was a hamas operative",
+    "posed as a journalist",
+    "posing as a journalist",
+    "terrorist posing as",
+    "so-called journalist",
+    "press card",
+    "al jazeera journalist was",
+    "journalists in gaza are",
+    "not a real journalist"
+   ],
+   "figures": [
+    "killed"
+   ],
+   "statement_cats": [
+    "warcrimes",
+    "findings"
+   ]
+  },
+  {
+   "rebuttal": 15,
+   "label": "From the river to the sea",
+   "strong": [
+    "from the river to the sea"
+   ],
+   "phrases": [
+    "from the river to the sea",
+    "river to the sea",
+    "call for the destruction of israel",
+    "genocidal chant",
+    "wipe israel off the map",
+    "destroy the jewish state",
+    "globalize the intifada",
+    "globalise the intifada",
+    "intifada revolution",
+    "code for genocide"
+   ],
+   "figures": [],
+   "statement_cats": [
+    "genocide",
+    "annexation"
+   ]
+  },
+  {
+   "rebuttal": 16,
+   "label": "Singling out Israel",
+   "strong": [
+    "singling out israel",
+    "why not syria"
+   ],
+   "phrases": [
+    "singled out",
+    "singling out israel",
+    "why not syria",
+    "what about syria",
+    "what about yemen",
+    "what about sudan",
+    "what about china",
+    "what about the uyghur",
+    "uyghurs",
+    "why only israel",
+    "obsession with israel",
+    "double standard against israel",
+    "nobody protests about",
+    "where are the protests for"
+   ],
+   "figures": [
+    "recognising"
+   ],
+   "statement_cats": [
+    "findings"
+   ]
+  },
+  {
+   "rebuttal": 17,
+   "label": "Arab citizens of Israel",
+   "strong": [
+    "arab citizens of israel",
+    "apartheid is a lie"
+   ],
+   "phrases": [
+    "arab citizens of israel",
+    "arab israelis",
+    "arabs in the knesset",
+    "arab members of knesset",
+    "arab judge",
+    "sits on the supreme court",
+    "apartheid is a lie",
+    "not an apartheid state",
+    "apartheid slur",
+    "they have equal rights",
+    "arabs vote in israel",
+    "equal citizens"
+   ],
+   "figures": [
+    "settlers"
+   ],
+   "statement_cats": [
+    "apartheid"
+   ]
+  }
+ ]
+}
