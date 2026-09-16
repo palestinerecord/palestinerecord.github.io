@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-16",
-  "total_bytes": 5065582,
+  "total_bytes": 5067513,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -189,7 +189,7 @@
         "ratio",
         "counts"
       ],
-      "updated": "2026-09-15"
+      "updated": "2026-09-16"
     },
     {
       "path": "data/history.json",
@@ -341,7 +341,7 @@
       "title": "The source report, parsed",
       "description": "Every part, section, paragraph, list, table, chronology entry and bibliography entry of the report, converted losslessly by build.py and checked by verify.py. This is the whole document as structured data.",
       "source": "The report — A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026).",
-      "bytes": 1333401,
+      "bytes": 1335352,
       "records": null,
       "fields": [
         "title",
@@ -386,7 +386,7 @@
       "title": "The contextual chronology",
       "description": "The legal and political steps between the massacres recorded in Appendix B — mandates, partitions, laws, plans, rulings, resolutions and admissions.",
       "source": "Primary documents as cited per entry.",
-      "bytes": 94369,
+      "bytes": 94349,
       "records": 199,
       "fields": [
         "meta",

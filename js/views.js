@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=91" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=92" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -297,7 +297,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=91" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=92" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -3312,7 +3312,7 @@ const Views = (function () {
     if (donations.length) {
       const total = donations.reduce((sum, g) => sum + g.value, 0);
       lines.push('The Electoral Commission records ' + gbp(total) + ' in reported donations to you from '
-        + 'organisations campaigning on the terrorist state of Israel’s behalf:');
+        + 'organisations campaigning on Israel’s behalf:');
       donations.forEach((g) => {
         lines.push('  — ' + gbp(g.value) + ' from ' + g.donor + ', ' + g.date
           + (g.purpose ? ' (' + g.purpose + ')' : '') + ', reference ' + g.ref + '.');
@@ -3338,7 +3338,7 @@ const Views = (function () {
     lines.push('');
     lines.push('I would like to know: what you take the United Kingdom’s obligation under Article I of '
       + 'the Genocide Convention to require of it now; whether you will press for a full suspension of '
-      + 'arms export licences to the terrorist state of Israel, including F-35 components; and whether '
+      + 'arms export licences to Israel, including F-35 components; and whether '
       + 'you will support the enforcement of the International Criminal Court’s arrest warrants of '
       + '21 November 2024 without exception.');
     lines.push('');
@@ -3422,7 +3422,7 @@ const Views = (function () {
       </section>
 
       <section class="section">
-        ${head('The money', 'What the Electoral Commission has published', `Organisations that campaign on the terrorist state of Israel’s behalf are lawful donors and their gifts are lawfully reported. ${esc(gbp(M.party_total))} of the total in this ledger went to parties and party units rather than to named members, and cannot honestly be attributed to any one of them.`)}
+        ${head('The money', 'What the Electoral Commission has published', `Organisations that campaign on Israel’s behalf are lawful donors and their gifts are lawfully reported. ${esc(gbp(M.party_total))} of the total in this ledger went to parties and party units rather than to named members, and cannot honestly be attributed to any one of them.`)}
         <div class="table-wrap"><table>
           <thead><tr><th>Recipient</th><th class="mp-money">Reported</th><th class="mp-money">Donations</th><th>Largest donor</th></tr></thead>
           <tbody>${C.parties.map((p) => `<tr>
@@ -3748,6 +3748,7 @@ const Views = (function () {
           <h3>The objection, and why it is recorded here</h3>
           <p>The serious objection is not to the facts. It is to the <b>unit of analysis</b>. <q>War crime</q>, <q>apartheid</q> and <q>genocide</q> attach a finding to identified conduct, in an identified period, under an identified instrument, with a forum and a standard of proof; <q>terrorist state</q> attaches to the state as such, across its whole history, when the documented conduct is concentrated in particular policies, units and governments. A label at the level of identity is therefore evidentially weaker than the findings it summarises, and it invites the reader to classify the document by its vocabulary rather than by its sources.</p>
           <p>That objection is set out in its strongest form in the report, together with the answer: a standard applied to one actor and not the other decides the question before the evidence is heard — and, decisively, <b>nothing here depends on the phrase</b>. Remove it throughout and not one finding changes. That is the test of whether a label is doing evidentiary work or rhetorical work.</p>
+          <p>That test is also enforced editorially, and the enforcement is checkable. The phrase appears in the Preamble subsection that defines it, in <b>Part XXIV</b>, which argues it in full, and in the revision note recording that Part. It is <b>not</b> used as a running substitute for the name of the state in the evidentiary and legal passages, in the rebuttals, or in the chronology, all of which name Israel. A characterisation re-asserted in the subject of every sentence is not being demonstrated by the evidence in that sentence, and the finding-level language throughout is the conduct-level language the institutions themselves use.</p>
           <p class="src">UN Security Council Resolution 1566 (2004); Ruth Blakeley, “State Terrorism in the Social Sciences”, 2010; Richard Jackson, “The Ghosts of State Terror”, Critical Studies on Terrorism 1(3), 2008, and “Israeli state terrorism: knowledge, power and the ‘public secret’”, Critical Studies on Terrorism, 26 May 2026; Jackson and Turner, Security in Context, 22 December 2023; OFAC, Executive Order 14115 designations and delistings; Yesh Din, Data Sheet, December 2025.</p>
           <p style="margin-top:14px"><a class="btn" href="#part-xxiv---the-terrorist-state-designation-the-case-the-standard-and-the-object">Read Part XXIV</a></p>
         </div>
