@@ -2,7 +2,7 @@
  "meta": {
   "title": "Contextual chronology",
   "description": "Events that fill the gaps between the entries in the report's own chronology (Appendix B). Appendix B records major crimes and massacres; these entries record the legal, political and institutional steps between them — the mandates, laws, plans, rulings and admissions that make the pattern legible. They are marked as context so the report's chronology remains distinguishable.",
-  "compiled": "2026-09-15"
+  "compiled": "2026-09-16"
  },
  "items": [
   {
@@ -1404,6 +1404,13 @@
    "sort": "2026-09-15-d",
    "event": "Artists across the industry publicly back Macklemore after the Loop Tour removal",
    "note": "Kneecap (\"Free Palestine. They can never silence the truth\"), Bob Vylan (\"There is no thanks for a duty\"), Garbage (\"Those who exile, silence and censor others are never the good guys\"), Kehlani, CMAT, Ms. Rachel, MUNA, Paloma Faith, Greta Thunberg, Zara Larsson and PinkPantheress. Kneecap and Bob Vylan were both subjects of the June 2025 Avon and Somerset Police investigation into their Glastonbury sets. (Irish News; Billboard; BuzzFeed UK.)"
+  },
+  {
+   "date": "16 September 2026",
+   "year": 2026,
+   "sort": "2026-09-16",
+   "event": "The petitioning organisation states on the BBC what it takes the words to mean",
+   "note": "Elan Carr, chief executive of the Israeli-American Council, which circulated the 6-8 September petition seeking Macklemore's removal from the Loop Tour, was interviewed on BBC Radio 4's Today programme. He called the stage remarks \"outrageous\", said the performer had taken a \"captive audience of tens of thousands\" and gone on to \"slander the State of Israel and the Jewish people\", and said \"he put forth a blood libel against the state of Israel, and by connection, the Jewish people\". Of the slogan itself: \"Free Palestine absolutely is a call for the extermination of the State of Israel and the Jewish People.\" He added that the performer \"has no right to hijack a stage at a concert\", that political statements have \"no place in a concert\", which \"is supposed to be inclusive\", and that the removal was \"entirely appropriate\". Carr was United States Special Envoy to Monitor and Combat Anti-Semitism from 2019 to 2021 and told the Conference of Presidents of Major American Jewish Organizations in Jerusalem in February 2019: \"I will work to eradicate the attempted distinction between anti-Zionism and anti-Semitism. There is no distinction.\" The stage remarks to which the characterisation was applied made the opposite distinction expressly: \"Criticism of Israel, criticism of apartheid, being against genocide in no way is a criticism of you.\""
   }
  ]
 }
