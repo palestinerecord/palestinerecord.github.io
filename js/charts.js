@@ -2161,23 +2161,53 @@ const Charts = (function () {
       ['West Bank — all', w.monthly_killed],
       ['West Bank — children', w.monthly_children],
     ];
+    /* Heights stay on one z-axis, because the asymmetry between the two territories
+       is the finding and rescaling it away would be a lie. Colour is split instead:
+       one ramp per territory, each running to its own maximum, so the West Bank
+       months are legible as a series rather than four rows of the darkest blue.
+       The two ramps therefore do not mean the same number, which is why each
+       carries its own maximum in its label. */
     const pts = [];
     rows.forEach((r, y) => {
       const byMonth = {};
       r[1].months.forEach((m, i) => { byMonth[m] = r[1].values[i]; });
       months.forEach((m, x) => pts.push([x, y, byMonth[m] || 0]));
     });
+    const gazaPts = pts.filter((p) => p[1] < 2);
+    const wbPts = pts.filter((p) => p[1] >= 2);
+    const gazaMax = Math.max.apply(null, gazaPts.map((p) => p[2]));
+    const wbMax = Math.max.apply(null, wbPts.map((p) => p[2]));
+    const ramp = (opts) => Object.assign({
+      type: 'continuous', dimension: 2, min: 0, calculable: false,
+      textStyle: { color: C.muted, fontSize: 10 },
+      left: 0, itemWidth: 11, itemHeight: 84,
+    }, opts);
     return {
       backgroundColor: 'transparent',
       tooltip: Object.assign({}, base.tooltip, {
-        formatter: (p) => `<b>${monthLabel(months[p.value[0]])}</b><br>${rows[p.value[1]][0]}: <b>${fmt(p.value[2])}</b> killed`,
+        formatter: (p) => {
+          const gaza = p.value[1] < 2;
+          const other = gaza ? null : (function () {
+            const x = p.value[0];
+            const peer = pts.find((q) => q[0] === x && q[1] === p.value[1] - 2);
+            return peer ? peer[2] : null;
+          })();
+          return `<b>${monthLabel(months[p.value[0]])}</b><br>${rows[p.value[1]][0]}: <b>${fmt(p.value[2])}</b> killed`
+            + (other ? `<br><span style="color:${C.muted}">Gaza, same month and category: ${fmt(other)}</span>` : '');
+        },
       }),
-      visualMap: {
-        max: Math.max.apply(null, pts.map((p) => p[2])),
-        inRange: { color: ['#1d2637', '#3b6ea5', '#d9a441', '#d2534c', '#8f1d18'] },
-        textStyle: { color: C.muted, fontSize: 11 },
-        left: 0, bottom: 10, itemWidth: 12, itemHeight: 120,
-      },
+      visualMap: [
+        ramp({
+          seriesIndex: 0, max: gazaMax, bottom: 112,
+          text: ['Gaza ' + fmt(gazaMax), '0'],
+          inRange: { color: ['#1d2637', '#3b6ea5', '#d9a441', '#d2534c', '#8f1d18'] },
+        }),
+        ramp({
+          seriesIndex: 1, max: wbMax, bottom: 10,
+          text: ['West Bank ' + fmt(wbMax), '0'],
+          inRange: { color: ['#1b2a24', '#2f6f5a', '#5fae7d', '#a8cf6b', '#e4e06a'] },
+        }),
+      ],
       xAxis3D: { type: 'category', data: months.map(monthLabel), axisLabel: { color: C.muted, fontSize: 9, interval: 2 }, name: '' },
       yAxis3D: { type: 'category', data: rows.map((r) => r[0]), axisLabel: { color: C.text2, fontSize: 10 }, name: '' },
       zAxis3D: { type: 'value', axisLabel: { color: C.muted, fontSize: 10 }, name: 'killed' },
@@ -2190,12 +2220,58 @@ const Charts = (function () {
         splitLine: { lineStyle: { color: C.ink(.06) } },
         environment: 'transparent',
       },
-      series: [{
-        type: 'bar3D', data: pts, shading: 'lambert', barSize: 1.7,
-        itemStyle: { opacity: 0.94 },
-        emphasis: { label: { show: false }, itemStyle: { color: '#fff' } },
-      }],
+      series: [
+        {
+          name: 'Gaza', type: 'bar3D', data: gazaPts, shading: 'lambert', barSize: 1.7,
+          itemStyle: { opacity: 0.94 },
+          emphasis: { label: { show: false }, itemStyle: { color: '#fff' } },
+        },
+        {
+          name: 'West Bank', type: 'bar3D', data: wbPts, shading: 'lambert', barSize: 1.7,
+          itemStyle: { opacity: 0.94 },
+          emphasis: { label: { show: false }, itemStyle: { color: '#fff' } },
+        },
+      ],
     };
+  };
+
+  /* The West Bank on its own scale — the companion to the 3D scene above.
+     At the peak the ratio is roughly 69 to 1, so on a shared height axis the
+     West Bank is a flat band. Here the same months are read on their own axis,
+     with the Gaza figure for each month printed in the tooltip so the
+     comparison is not lost by separating them. */
+  R['west-bank-scale'] = () => {
+    const w = data.ts.west_bank, g = data.ts.gaza;
+    const months = w.monthly_killed.months;
+    const gazaBy = {};
+    g.monthly_killed.months.forEach((m, i) => { gazaBy[m] = g.monthly_killed.values[i]; });
+    return Object.assign({}, base, {
+      grid: { left: 46, right: 20, top: 42, bottom: 48 },
+      legend: Object.assign({}, base.legend, { data: ['Palestinians killed', 'Children killed'] }),
+      tooltip: Object.assign({}, base.tooltip, {
+        trigger: 'axis', axisPointer: { type: 'shadow' },
+        formatter: (ps) => {
+          const m = months[ps[0].dataIndex];
+          const gz = gazaBy[m] || 0;
+          return `<b>${monthLabel(m)}</b><br>`
+            + ps.map((p) => `${p.seriesName}: <b>${fmt(p.value)}</b>`).join('<br>')
+            + `<br><span style="color:${C.muted}">Gaza, all, same month: ${fmt(gz)}`
+            + (ps[0].value ? ` (${(gz / ps[0].value).toFixed(0)}×)` : '') + '</span>';
+        },
+      }),
+      xAxis: axisX({ data: months.map(monthLabel), axisLabel: { color: C.muted, fontSize: 10, interval: 2, rotate: 45 } }),
+      yAxis: axisY({ name: 'killed, West Bank', nameTextStyle: { color: C.muted, fontSize: 11 } }),
+      series: [
+        Object.assign({
+          name: 'Palestinians killed', type: 'bar', data: w.monthly_killed.values, barMaxWidth: 18,
+          itemStyle: { color: fade('rgb(95,174,125)', 0.95, 0.4), borderRadius: [3, 3, 0, 0] },
+        }, seriesMarks('west-bank', months, 'month')),
+        {
+          name: 'Children killed', type: 'bar', data: w.monthly_children.values, barMaxWidth: 18, barGap: '-100%',
+          itemStyle: { color: hexToRgba(C.amber, 0.92), borderRadius: [3, 3, 0, 0] },
+        },
+      ],
+    });
   };
 
   /* Wars — every Gaza operation since 2008 on one comparable axis */

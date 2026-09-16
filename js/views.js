@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=95" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=96" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -253,8 +253,16 @@ const Views = (function () {
       ${ceasefireSection()}
 
       <section class="section wrap">
-        ${head('Place and period', 'Deaths by month, category and territory', 'A three-dimensional reading of the same record: each bar is one month, in one category, in one territory. Drag to rotate.')}
-        ${chartCard('deaths-3d', 'Killings by month, category and territory', 'Gaza and the West Bank on a shared 36-month axis.', 'Tech For Palestine', 'xtall')}
+        ${head('Place and period', 'Deaths by month, category and territory',
+          `A three-dimensional reading of the same record: each bar is one month, in one category, in one
+           territory. Drag to rotate. Heights are on one axis for both territories, because the difference in
+           scale is itself the finding: at the peak, Gaza's monthly figure is around sixty-nine times the West
+           Bank's. That is also why the West Bank rows read as a flat band, so the colour is scaled separately
+           for each territory and the second chart plots the West Bank on an axis of its own.`)}
+        ${chartCard('deaths-3d', 'Killings by month, category and territory', 'Gaza and the West Bank on a shared height axis. The two colour ramps run to different maximums, each printed on its own scale bar.', 'Tech For Palestine', 'xtall')}
+        <div style="margin-top:16px">
+          ${chartCard('west-bank-scale', 'The West Bank on its own scale', 'The same months, read against a West Bank axis rather than a Gaza one. Hover any month for the Gaza figure alongside it and the ratio between them.', 'Tech For Palestine', 'tall')}
+        </div>
       </section>
 
       <section class="section wrap">
@@ -297,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=95" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=96" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -380,7 +388,8 @@ const Views = (function () {
         <div class="grid">
           ${chartCard('gaza-monthly', 'Killed per month, October 2023 – September 2026', 'All recorded deaths, with the child share overlaid.', 'Tech For Palestine', 'tall')}
           ${chartCard('gaza-cumulative', 'Cumulative toll by protected category', 'Children, women, medical personnel and journalists against the total.', '§6.3', 'tall')}
-          ${chartCard('deaths-3d', 'Month × category × territory', 'Drag to rotate. Gaza and the West Bank on one 36-month axis.', 'Tech For Palestine', 'xtall')}
+          ${chartCard('deaths-3d', 'Month × category × territory', 'Drag to rotate. Gaza and the West Bank on one height axis, with the colour scaled separately for each so the West Bank is legible.', 'Tech For Palestine', 'xtall')}
+          ${chartCard('west-bank-scale', 'The West Bank on its own scale', 'The West Bank rows of the scene above, plotted against a West Bank axis. The tooltip carries the Gaza figure for the same month and the ratio.', 'Tech For Palestine', 'tall')}
         </div>
       </section>
 
