@@ -11,6 +11,10 @@ const Charts = (function () {
      minutes of software rendering before the check can read the result. The
      flag is for the render checks in publish.py; nothing a reader sees uses it. */
   const STILL = /(^|[?&])still=1(&|$)/.test(location.search);
+  /* A 3D scene reserves fixed pixels for its scale bars and cannot reflow them,
+     so the few charts that need it read the viewport width at build time. The
+     resize handler re-applies their options when the breakpoint is crossed. */
+  const NARROW = () => (window.innerWidth || 1200) < 760;
 
   /* The greys, and the neutral the charts lay over the background, are read
      from the stylesheet rather than held here a second time, so the light
@@ -2180,10 +2184,11 @@ const Charts = (function () {
     /* The two scale bars anchor to opposite ends of the canvas rather than
        stacking, because stacked continuous ramps put one ramp's zero label
        directly against the other's maximum and the pair reads as one scale. */
+    const narrow = NARROW();
     const ramp = (opts) => Object.assign({
       type: 'continuous', dimension: 2, min: 0, calculable: false,
-      textStyle: { color: C.muted, fontSize: 10, lineHeight: 14 },
-      left: 6, itemWidth: 10, itemHeight: 78, precision: 0,
+      textStyle: { color: C.muted, fontSize: narrow ? 9 : 10, lineHeight: narrow ? 12 : 14 },
+      left: narrow ? 2 : 6, itemWidth: narrow ? 8 : 10, itemHeight: narrow ? 54 : 78, precision: 0,
     }, opts);
     return {
       backgroundColor: 'transparent',
@@ -2201,23 +2206,29 @@ const Charts = (function () {
       }),
       visualMap: [
         ramp({
-          seriesIndex: 0, max: gazaMax, top: 18,
+          seriesIndex: 0, max: gazaMax, top: narrow ? 8 : 18,
           text: ['Gaza\n' + fmt(gazaMax), '0'],
           inRange: { color: ['#1d2637', '#3b6ea5', '#d9a441', '#d2534c', '#8f1d18'] },
         }),
         ramp({
-          seriesIndex: 1, max: wbMax, bottom: 18,
+          seriesIndex: 1, max: wbMax, bottom: narrow ? 8 : 18,
           text: ['West Bank\n' + fmt(wbMax), '0'],
           inRange: { color: ['#1b2a24', '#2f6f5a', '#5fae7d', '#a8cf6b', '#e4e06a'] },
         }),
       ],
-      xAxis3D: { type: 'category', data: months.map(monthLabel), axisLabel: { color: C.muted, fontSize: 9, interval: 2 }, name: '' },
-      yAxis3D: { type: 'category', data: rows.map((r) => r[0]), axisLabel: { color: C.text2, fontSize: 10 }, name: '' },
+      xAxis3D: { type: 'category', data: months.map(monthLabel), axisLabel: { color: C.muted, fontSize: narrow ? 8 : 9, interval: narrow ? 5 : 2 }, name: '' },
+      yAxis3D: {
+        type: 'category',
+        /* The full pair does not fit beside a phone-width box, and the tooltip
+           carries the row name in full, so the separator goes on narrow screens. */
+        data: rows.map((r) => (narrow ? r[0].replace(' — ', ' ') : r[0])),
+        axisLabel: { color: C.text2, fontSize: narrow ? 8 : 10 }, name: '',
+      },
       zAxis3D: { type: 'value', axisLabel: { color: C.muted, fontSize: 10 }, name: 'killed' },
       grid3D: {
-        left: 72, right: 24, top: 8, bottom: 18,
-        boxWidth: 198, boxDepth: 74, boxHeight: 84,
-        viewControl: { alpha: 24, beta: 34, distance: 248, autoRotate: !STILL, autoRotateSpeed: 3, rotateSensitivity: 1.4 },
+        left: narrow ? 36 : 72, right: narrow ? 70 : 24, top: 8, bottom: narrow ? 10 : 18,
+        boxWidth: narrow ? 108 : 198, boxDepth: narrow ? 44 : 74, boxHeight: narrow ? 70 : 84,
+        viewControl: { alpha: 22, beta: 34, distance: narrow ? 252 : 248, autoRotate: !STILL, autoRotateSpeed: 3, rotateSensitivity: 1.4 },
         light: { main: { intensity: 1.25, shadow: true, alpha: 40, beta: 40 }, ambient: { intensity: 0.42 } },
         axisLine: { lineStyle: { color: C.ink(.25) } },
         axisPointer: { lineStyle: { color: C.amber } },
@@ -4172,7 +4183,19 @@ const Charts = (function () {
     Object.keys(built).forEach((k) => delete built[k]);
   }
 
-  window.addEventListener('resize', () => live.forEach((c) => c.resize()));
+  /* Charts that branch on NARROW() fix their layout when the option is built,
+     so a resize alone leaves a phone-width scene on a desktop canvas. Re-apply
+     the options once, on the crossing itself, rather than on every resize tick. */
+  let wasNarrow = NARROW();
+  window.addEventListener('resize', () => {
+    live.forEach((c) => c.resize());
+    if (NARROW() === wasNarrow) return;
+    wasNarrow = NARROW();
+    Object.keys(built).forEach((name) => {
+      if (!R[name]) return;
+      try { built[name].setOption(R[name](), true); } catch (err) { /* a chart that cannot rebuild keeps the layout it has */ }
+    });
+  });
 
   /* ---------------- export ----------------
      Every chart is a canvas, which is invisible to a screen reader and
