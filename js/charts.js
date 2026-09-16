@@ -2177,10 +2177,13 @@ const Charts = (function () {
     const wbPts = pts.filter((p) => p[1] >= 2);
     const gazaMax = Math.max.apply(null, gazaPts.map((p) => p[2]));
     const wbMax = Math.max.apply(null, wbPts.map((p) => p[2]));
+    /* The two scale bars anchor to opposite ends of the canvas rather than
+       stacking, because stacked continuous ramps put one ramp's zero label
+       directly against the other's maximum and the pair reads as one scale. */
     const ramp = (opts) => Object.assign({
       type: 'continuous', dimension: 2, min: 0, calculable: false,
-      textStyle: { color: C.muted, fontSize: 10 },
-      left: 0, itemWidth: 11, itemHeight: 84,
+      textStyle: { color: C.muted, fontSize: 10, lineHeight: 14 },
+      left: 6, itemWidth: 10, itemHeight: 78, precision: 0,
     }, opts);
     return {
       backgroundColor: 'transparent',
@@ -2198,13 +2201,13 @@ const Charts = (function () {
       }),
       visualMap: [
         ramp({
-          seriesIndex: 0, max: gazaMax, bottom: 112,
-          text: ['Gaza ' + fmt(gazaMax), '0'],
+          seriesIndex: 0, max: gazaMax, top: 18,
+          text: ['Gaza\n' + fmt(gazaMax), '0'],
           inRange: { color: ['#1d2637', '#3b6ea5', '#d9a441', '#d2534c', '#8f1d18'] },
         }),
         ramp({
-          seriesIndex: 1, max: wbMax, bottom: 10,
-          text: ['West Bank ' + fmt(wbMax), '0'],
+          seriesIndex: 1, max: wbMax, bottom: 18,
+          text: ['West Bank\n' + fmt(wbMax), '0'],
           inRange: { color: ['#1b2a24', '#2f6f5a', '#5fae7d', '#a8cf6b', '#e4e06a'] },
         }),
       ],
@@ -2212,8 +2215,9 @@ const Charts = (function () {
       yAxis3D: { type: 'category', data: rows.map((r) => r[0]), axisLabel: { color: C.text2, fontSize: 10 }, name: '' },
       zAxis3D: { type: 'value', axisLabel: { color: C.muted, fontSize: 10 }, name: 'killed' },
       grid3D: {
-        boxWidth: 200, boxDepth: 62, boxHeight: 72,
-        viewControl: { alpha: 22, beta: 32, distance: 235, autoRotate: !STILL, autoRotateSpeed: 3, rotateSensitivity: 1.4 },
+        left: 72, right: 24, top: 8, bottom: 18,
+        boxWidth: 198, boxDepth: 74, boxHeight: 84,
+        viewControl: { alpha: 24, beta: 34, distance: 248, autoRotate: !STILL, autoRotateSpeed: 3, rotateSensitivity: 1.4 },
         light: { main: { intensity: 1.25, shadow: true, alpha: 40, beta: 40 }, ambient: { intensity: 0.42 } },
         axisLine: { lineStyle: { color: C.ink(.25) } },
         axisPointer: { lineStyle: { color: C.amber } },
@@ -2227,7 +2231,7 @@ const Charts = (function () {
           emphasis: { label: { show: false }, itemStyle: { color: '#fff' } },
         },
         {
-          name: 'West Bank', type: 'bar3D', data: wbPts, shading: 'lambert', barSize: 1.7,
+          name: 'West Bank', type: 'bar3D', data: wbPts, shading: 'lambert', barSize: 2.2,
           itemStyle: { opacity: 0.94 },
           emphasis: { label: { show: false }, itemStyle: { color: '#fff' } },
         },
