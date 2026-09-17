@@ -2,7 +2,7 @@
  "meta": {
   "title": "Provenance graph",
   "description": "Every curated claim on this site, joined to the bodies it rests on. Source strings are normalised to entities with stable identifiers, and each entity is classified by origin so that a whole class of source can be removed and the remainder recounted.",
-  "generated": "2026-09-16",
+  "generated": "2026-09-17",
   "origins": [
    {
     "id": "palestinian-official",
