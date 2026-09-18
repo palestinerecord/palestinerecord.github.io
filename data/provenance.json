@@ -2,7 +2,7 @@
  "meta": {
   "title": "Provenance graph",
   "description": "Every curated claim on this site, joined to the bodies it rests on. Source strings are normalised to entities with stable identifiers, and each entity is classified by origin so that a whole class of source can be removed and the remainder recounted.",
-  "generated": "2026-09-17",
+  "generated": "2026-09-18",
   "origins": [
    {
     "id": "palestinian-official",
@@ -1243,7 +1243,7 @@
    "file": "figures.json",
    "path": "headline[0]",
    "label": "Palestinians killed in Gaza",
-   "value": 73795,
+   "value": 73821,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
@@ -1273,7 +1273,7 @@
    "file": "figures.json",
    "path": "headline[2]",
    "label": "Injured in Gaza",
-   "value": 174869,
+   "value": 174897,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
