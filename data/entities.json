@@ -3,7 +3,7 @@
   "title": "The accountability ledger",
   "note": "Persons and companies named in the record, with what a court, a government or a shareholder has actually done about them. Statements are joined from the statements file, the sections are found in the report itself, and the sanctions are the measures on the world-positions file. Nothing on this page is asserted that is not already somewhere else on this site.",
   "source": "report-final.md; data/statements.json; data/world-positions.json; Rome Statute of the International Criminal Court, Articles 86, 89(1) and 127(1)",
-  "persons": 71,
+  "persons": 72,
   "companies": 11,
   "warrants": 3,
   "sanctioned": 10,
@@ -54,12 +54,12 @@
    "class": "government",
    "tier": "Head of government",
    "statements": [
-    45,
-    48,
-    52,
-    75,
-    103,
-    120
+    46,
+    49,
+    53,
+    77,
+    105,
+    124
    ],
    "mentions": [
     {
@@ -164,8 +164,8 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    31,
-    35
+    32,
+    36
    ],
    "mentions": [
     {
@@ -260,13 +260,13 @@
    "tier": "Cabinet",
    "statements": [
     22,
-    47,
-    64,
-    71,
+    48,
+    66,
     73,
-    89,
-    96,
-    102
+    75,
+    91,
+    98,
+    104
    ],
    "mentions": [
     {
@@ -356,13 +356,13 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    46,
-    91,
-    98,
-    105,
-    109,
-    110,
-    113
+    47,
+    93,
+    100,
+    107,
+    111,
+    113,
+    117
    ],
    "mentions": [
     {
@@ -499,7 +499,7 @@
    "class": "accountability",
    "tier": "UN mandate holder",
    "statements": [
-    58
+    59
    ],
    "mentions": [
     {
@@ -785,10 +785,10 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    37,
-    80,
-    97,
-    112
+    38,
+    82,
+    99,
+    116
    ],
    "mentions": [
     {
@@ -834,9 +834,9 @@
    "tier": "Former head of government",
    "statements": [
     15,
-    81,
-    104,
-    117
+    83,
+    106,
+    121
    ],
    "mentions": [
     {
@@ -869,8 +869,8 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    84,
-    122
+    86,
+    126
    ],
    "mentions": [
     {
@@ -903,8 +903,8 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    67,
-    94
+    69,
+    96
    ],
    "mentions": [
     {
@@ -926,7 +926,7 @@
    "tier": "Israeli historian",
    "statements": [
     17,
-    78
+    80
    ],
    "mentions": [
     {
@@ -953,8 +953,8 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    119,
-    121
+    123,
+    125
    ],
    "mentions": [
     {
@@ -977,6 +977,28 @@
     }
    ],
    "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "hanoch-milwidsky",
+   "name": "Hanoch Milwidsky",
+   "role": "Member of Knesset (Likud)",
+   "class": "government",
+   "tier": "Legislature",
+   "statements": [
+    64,
+    127
+   ],
+   "mentions": [
+    {
+     "id": "1513a-the-exemption-stated-in-the-first-person-a-governing-party-legislator-on-t",
+     "title": "15.13A The Exemption Stated in the First Person: A Governing-Party Legislator on the Application of International Law (16 September 2026)",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 1,
    "warrant": null,
    "sanctions": []
   },
@@ -1009,8 +1031,8 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    28,
-    43
+    29,
+    44
    ],
    "mentions": [],
    "sections": 0,
@@ -1024,7 +1046,7 @@
    "class": "allied",
    "tier": "Allied head of state",
    "statements": [
-    68
+    70
    ],
    "mentions": [
     {
@@ -1105,7 +1127,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    101
+    103
    ],
    "mentions": [
     {
@@ -1165,7 +1187,7 @@
    "class": "government",
    "tier": "Head of state",
    "statements": [
-    38
+    39
    ],
    "mentions": [
     {
@@ -1297,7 +1319,7 @@
    "class": "dissent",
    "tier": "Holocaust survivor",
    "statements": [
-    61
+    62
    ],
    "mentions": [
     {
@@ -1330,7 +1352,7 @@
    "class": "dissent",
    "tier": "Jewish public figure",
    "statements": [
-    90
+    92
    ],
    "mentions": [
     {
@@ -1357,7 +1379,7 @@
    "class": "dissent",
    "tier": "Jewish public figure",
    "statements": [
-    57
+    58
    ],
    "mentions": [
     {
@@ -1390,7 +1412,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    115
+    119
    ],
    "mentions": [
     {
@@ -1444,7 +1466,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    87
+    89
    ],
    "mentions": [
     {
@@ -1465,7 +1487,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    59
+    60
    ],
    "mentions": [
     {
@@ -1492,7 +1514,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    116
+    120
    ],
    "mentions": [
     {
@@ -1579,7 +1601,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    54
+    55
    ],
    "mentions": [
     {
@@ -1627,7 +1649,7 @@
    "class": "dissent",
    "tier": "Israeli journalist",
    "statements": [
-    118
+    122
    ],
    "mentions": [
     {
@@ -1717,7 +1739,7 @@
    "class": "dissent",
    "tier": "Israeli human rights organisation",
    "statements": [
-    70
+    72
    ],
    "mentions": [
     {
@@ -1738,7 +1760,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    77
+    79
    ],
    "mentions": [
     {
@@ -1759,7 +1781,7 @@
    "class": "government",
    "tier": "Former head of government",
    "statements": [
-    82
+    84
    ],
    "mentions": [
     {
@@ -1780,7 +1802,7 @@
    "class": "dissent",
    "tier": "Israeli human rights organisation",
    "statements": [
-    85
+    87
    ],
    "mentions": [
     {
@@ -1801,7 +1823,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    42
+    43
    ],
    "mentions": [],
    "sections": 0,
@@ -1815,7 +1837,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    49
+    50
    ],
    "mentions": [],
    "sections": 0,
@@ -1829,7 +1851,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    29
+    30
    ],
    "mentions": [],
    "sections": 0,
@@ -1857,7 +1879,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    51
+    52
    ],
    "mentions": [],
    "sections": 0,
@@ -1871,7 +1893,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    36
+    37
    ],
    "mentions": [],
    "sections": 0,
@@ -1885,7 +1907,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    40
+    41
    ],
    "mentions": [],
    "sections": 0,
@@ -1913,7 +1935,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    53
+    54
    ],
    "mentions": [],
    "sections": 0,
@@ -1927,7 +1949,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    33
+    34
    ],
    "mentions": [],
    "sections": 0,
@@ -1941,7 +1963,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    39
+    40
    ],
    "mentions": [],
    "sections": 0,
@@ -1969,7 +1991,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    41
+    42
    ],
    "mentions": [],
    "sections": 0,
@@ -1997,7 +2019,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    74
+    76
    ],
    "mentions": [],
    "sections": 0,
@@ -2025,7 +2047,7 @@
    "class": "government",
    "tier": "Former legislator",
    "statements": [
-    76
+    78
    ],
    "mentions": [],
    "sections": 0,
@@ -2039,7 +2061,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    30
+    31
    ],
    "mentions": [],
    "sections": 0,
@@ -2053,7 +2075,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    44
+    45
    ],
    "mentions": [],
    "sections": 0,
@@ -2067,7 +2089,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    34
+    35
    ],
    "mentions": [],
    "sections": 0,
@@ -2081,7 +2103,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    50
+    51
    ],
    "mentions": [],
    "sections": 0,
@@ -2095,7 +2117,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    93
+    95
    ],
    "mentions": [],
    "sections": 0,
@@ -2109,7 +2131,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    32
+    33
    ],
    "mentions": [],
    "sections": 0,
