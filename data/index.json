@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-19",
-  "total_bytes": 5185981,
+  "total_bytes": 5191301,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -359,7 +359,7 @@
       "title": "The linked source library",
       "description": "The evidentiary base grouped by kind: courts and tribunals, UN bodies, human rights organisations, open datasets, academic work, Israeli sources, journalism and archives.",
       "source": "Each entry links to the publisher.",
-      "bytes": 113477,
+      "bytes": 115978,
       "records": null,
       "fields": [
         "meta",
@@ -386,8 +386,8 @@
       "title": "The contextual chronology",
       "description": "The legal and political steps between the massacres recorded in Appendix B — mandates, partitions, laws, plans, rulings, resolutions and admissions.",
       "source": "Primary documents as cited per entry.",
-      "bytes": 111014,
-      "records": 218,
+      "bytes": 113833,
+      "records": 221,
       "fields": [
         "meta",
         "items"
