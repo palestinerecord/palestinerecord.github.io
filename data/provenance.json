@@ -38,13 +38,13 @@
     "id": "israeli-media",
     "label": "Israeli press",
     "sources": 9,
-    "claims": 70
+    "claims": 72
    },
    {
     "id": "un",
     "label": "United Nations bodies",
     "sources": 22,
-    "claims": 117
+    "claims": 118
    },
    {
     "id": "international-court",
@@ -91,9 +91,9 @@
   ]
  },
  "summary": {
-  "claims": 422,
-  "attributed": 416,
-  "unattributed": 6,
+  "claims": 427,
+  "attributed": 419,
+  "unattributed": 8,
   "sources": 127,
   "origins": 14,
   "multi_source": 159,
@@ -108,7 +108,7 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 386,
+   "stands": 389,
    "falls": 30,
    "share": 92.8
   },
@@ -122,9 +122,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 345,
-   "falls": 71,
-   "share": 82.9
+   "stands": 346,
+   "falls": 73,
+   "share": 82.6
   },
   {
    "id": "no-un",
@@ -133,9 +133,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 351,
-   "falls": 65,
-   "share": 84.4
+   "stands": 353,
+   "falls": 66,
+   "share": 84.2
   },
   {
    "id": "no-ngo",
@@ -146,9 +146,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 312,
+   "stands": 315,
    "falls": 104,
-   "share": 75.0
+   "share": 75.2
   },
   {
    "id": "israeli-western-only",
@@ -161,9 +161,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 221,
-   "falls": 195,
-   "share": 53.1
+   "stands": 223,
+   "falls": 196,
+   "share": 53.2
   }
  ],
  "sources": [
@@ -328,6 +328,14 @@
    "claims": 8
   },
   {
+   "id": "jpost",
+   "name": "The Jerusalem Post",
+   "kind": "press",
+   "origin": "israeli-media",
+   "origin_label": "Israeli press",
+   "claims": 8
+  },
+  {
    "id": "us-congress",
    "name": "US Congress and the Congressional Research Service",
    "kind": "state",
@@ -397,14 +405,6 @@
    "kind": "ngo",
    "origin": "international-ngo",
    "origin_label": "International human rights organisations",
-   "claims": 6
-  },
-  {
-   "id": "jpost",
-   "name": "The Jerusalem Post",
-   "kind": "press",
-   "origin": "israeli-media",
-   "origin_label": "Israeli press",
    "claims": 6
   },
   {
@@ -872,6 +872,14 @@
    "claims": 2
   },
   {
+   "id": "unesco",
+   "name": "UNESCO",
+   "kind": "un",
+   "origin": "un",
+   "origin_label": "United Nations bodies",
+   "claims": 2
+  },
+  {
    "id": "wikipedia",
    "name": "Wikipedia (with its own cited sources)",
    "kind": "reference",
@@ -1152,14 +1160,6 @@
    "claims": 1
   },
   {
-   "id": "unesco",
-   "name": "UNESCO",
-   "kind": "un",
-   "origin": "un",
-   "origin_label": "United Nations bodies",
-   "claims": 1
-  },
-  {
    "id": "wcc",
    "name": "World Council of Churches",
    "kind": "ngo",
@@ -1187,7 +1187,7 @@
  "files": [
   {
    "file": "figures.json",
-   "claims": 32
+   "claims": 37
   },
   {
    "file": "statements.json",
@@ -1243,7 +1243,7 @@
    "file": "figures.json",
    "path": "headline[0]",
    "label": "Palestinians killed in Gaza",
-   "value": 73821,
+   "value": 73910,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
@@ -1273,7 +1273,7 @@
    "file": "figures.json",
    "path": "headline[2]",
    "label": "Injured in Gaza",
-   "value": 174897,
+   "value": 174914,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
@@ -1695,6 +1695,72 @@
     "jns"
    ],
    "id": "figures-the-j50-forum"
+  },
+  {
+   "file": "figures.json",
+   "path": "gaza_christians.items[0]",
+   "label": "Christians in Gaza, 7 October 2023",
+   "value": 1017,
+   "numeric": true,
+   "ref": "",
+   "date": "",
+   "source_text": "Fr Gabriel Romanelli, Holy Family parish",
+   "sources": [],
+   "id": "figures-christians-in-gaza-7-october-2023"
+  },
+  {
+   "file": "figures.json",
+   "path": "gaza_christians.items[1]",
+   "label": "Christians in Gaza, early 2026",
+   "value": 600,
+   "numeric": true,
+   "ref": "",
+   "date": "",
+   "source_text": "Jerusalem Post / The Media Line, 2026",
+   "sources": [
+    "jpost"
+   ],
+   "id": "figures-christians-in-gaza-early-2026"
+  },
+  {
+   "file": "figures.json",
+   "path": "gaza_christians.items[2]",
+   "label": "Christians killed since October 2023",
+   "value": 44,
+   "numeric": true,
+   "ref": "",
+   "date": "",
+   "source_text": "Jerusalem Post, 2026",
+   "sources": [
+    "jpost"
+   ],
+   "id": "figures-christians-killed-since-october-2023"
+  },
+  {
+   "file": "figures.json",
+   "path": "gaza_christians.items[3]",
+   "label": "Churches still functioning",
+   "value": 3,
+   "numeric": true,
+   "ref": "",
+   "date": "",
+   "source_text": "Catholic News Agency, 18 July 2025",
+   "sources": [],
+   "id": "figures-churches-still-functioning"
+  },
+  {
+   "file": "figures.json",
+   "path": "gaza_christians.items[4]",
+   "label": "Cultural sites with UNESCO-verified damage",
+   "value": 164,
+   "numeric": true,
+   "ref": "",
+   "date": "",
+   "source_text": "UNESCO",
+   "sources": [
+    "unesco"
+   ],
+   "id": "figures-cultural-sites-with-unesco-verified-damage"
   },
   {
    "file": "statements.json",

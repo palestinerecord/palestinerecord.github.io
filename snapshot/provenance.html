@@ -32,8 +32,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="../assets/favicon.svg?v=102" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=102">
+<link rel="icon" href="../assets/favicon.svg?v=103" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=103">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -66,8 +66,8 @@
 <meta name="twitter:title" content="Provenance — pull the thread · The Documented Record">
 <meta name="twitter:description" content="Every claim joined to the bodies it rests on, with a switch that rejects a whole class of source and recounts what still stands without it.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/provenance.png">
-<link rel="preload" href="../css/style.css?v=102" as="style">
-<link rel="stylesheet" href="../css/style.css?v=102">
+<link rel="preload" href="../css/style.css?v=103" as="style">
+<link rel="stylesheet" href="../css/style.css?v=103">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -105,7 +105,7 @@
   "url": "https://palestinerecord.github.io/",
   "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
   "image": "https://palestinerecord.github.io/assets/share-card.png",
-  "wordCount": 164834,
+  "wordCount": 170726,
   "dateModified": "2026-09-19",
   "temporalCoverage": "1917/2026",
   "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
@@ -261,7 +261,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=102" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=103" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -323,7 +323,7 @@
     </div>
         <div class="grid c4">
           <div class="stat blue" data-tone="blue">
-      <div class="val" data-count="422">422</div>
+      <div class="val" data-count="427">427</div>
       <div class="lbl">Curated claims</div>
       <div class="note">every figure, statement, determination and record entry that carries a source, across 13 data files</div>
       
@@ -341,9 +341,9 @@
       
       
     </div><div class="stat amber" data-tone="amber">
-      <div class="val" data-count="53.1">53.1<span class="suffix">%</span></div>
+      <div class="val" data-count="53.2">53.2<span class="suffix">%</span></div>
       <div class="lbl">Still standing at the hardest setting</div>
-      <div class="note">keep only israeli and western sources — 221 of 416 attributed claims</div>
+      <div class="note">keep only israeli and western sources — 223 of 419 attributed claims</div>
       
       
     </div>
@@ -357,8 +357,8 @@
       <p>The commonest objection to a record like this one is not that a figure is wrong. It is that a class of source cannot be trusted. The answer here is not to defend the source but to remove it. Each setting deletes every body of that class and recounts what is left: a claim stands if it still has one source outside the classes removed, and falls if it does not. Nothing else on the page changes.</p>
     </div>
         <div class="chips" id="prov-switch"></div>
-        <div class="card prov-panel" id="prov-panel"><p class="prov-panel-lede">Every source in place. <b>416</b> of
-          422 claims carry at least one; 137 of them rest on
+        <div class="card prov-panel" id="prov-panel"><p class="prov-panel-lede">Every source in place. <b>419</b> of
+          427 claims carry at least one; 137 of them rest on
           two or more classes of source at once.</p></div>
         <div class="card chart-card" id="chart-provenance-switch" data-chart-card="provenance-switch" data-title="What survives each rejection" data-source="data/provenance.json" data-note="The share of attributed claims that still rest on at least one source outside the class removed.">
       <div class="chart-head">
@@ -411,11 +411,11 @@
     </tr><tr data-origin="israeli-media">
       <td>Israeli press</td>
       <td class="num">9</td>
-      <td class="num">70</td>
+      <td class="num">72</td>
     </tr><tr data-origin="un">
       <td>United Nations bodies</td>
       <td class="num">22</td>
-      <td class="num">117</td>
+      <td class="num">118</td>
     </tr><tr data-origin="international-court">
       <td>International courts</td>
       <td class="num">2</td>
@@ -559,6 +559,10 @@
       <td>Law for Palestine</td>
       <td class="muted">Palestinian human rights organisations</td>
       <td class="num">8</td>
+    </tr><tr class="prov-src" data-origin="israeli-media" data-name="the jerusalem post israeli press">
+      <td>The Jerusalem Post</td>
+      <td class="muted">Israeli press</td>
+      <td class="num">8</td>
     </tr><tr class="prov-src" data-origin="western-state" data-name="us congress and the congressional research service western states and parliaments">
       <td>US Congress and the Congressional Research Service</td>
       <td class="muted">Western states and parliaments</td>
@@ -594,10 +598,6 @@
     </tr><tr class="prov-src" data-origin="international-ngo" data-name="save the children international human rights organisations">
       <td>Save the Children</td>
       <td class="muted">International human rights organisations</td>
-      <td class="num">6</td>
-    </tr><tr class="prov-src" data-origin="israeli-media" data-name="the jerusalem post israeli press">
-      <td>The Jerusalem Post</td>
-      <td class="muted">Israeli press</td>
       <td class="num">6</td>
     </tr><tr class="prov-src" data-origin="un" data-name="un general assembly united nations bodies">
       <td>UN General Assembly</td>
@@ -831,6 +831,10 @@
       <td>UN Special Committee on Israeli Practices</td>
       <td class="muted">United Nations bodies</td>
       <td class="num">2</td>
+    </tr><tr class="prov-src" data-origin="un" data-name="unesco united nations bodies">
+      <td>UNESCO</td>
+      <td class="muted">United Nations bodies</td>
+      <td class="num">2</td>
     </tr><tr class="prov-src" data-origin="data-project" data-name="wikipedia (with its own cited sources) open datasets and derived figures">
       <td>Wikipedia (with its own cited sources)</td>
       <td class="muted">Open datasets and derived figures</td>
@@ -971,10 +975,6 @@
       <td>UN membership and treaty records</td>
       <td class="muted">United Nations bodies</td>
       <td class="num">1</td>
-    </tr><tr class="prov-src" data-origin="un" data-name="unesco united nations bodies">
-      <td>UNESCO</td>
-      <td class="muted">United Nations bodies</td>
-      <td class="num">1</td>
     </tr><tr class="prov-src" data-origin="international-ngo" data-name="world council of churches international human rights organisations">
       <td>World Council of Churches</td>
       <td class="muted">International human rights organisations</td>
@@ -995,21 +995,21 @@
       <section class="section">
         <div class="section-head">
       <div class="eyebrow">The claims</div>
-      <h2>422 claims, each with its chain</h2>
+      <h2>427 claims, each with its chain</h2>
       <p>Every curated record that carries a source, with the source text it was written with and the entities that text resolves to. Filter by where the claim lives, search the text, or set the switch above and watch the claims that fall grey out.</p>
     </div>
         <div class="chips" id="prov-files"></div>
         <div class="tl-controls">
           <input type="search" id="prov-search" placeholder="Search claims, values and source text…" autocomplete="off">
-          <span class="small muted" id="prov-count">422 of 422 claims</span>
+          <span class="small muted" id="prov-count">427 of 427 claims</span>
         </div>
-        <ul class="prov-claims" id="prov-claims"><li class="prov-claim" data-origins="palestinian-official un" data-file="figures.json" data-text="palestinians killed in gaza 73,821 gaza moh / ocha gaza ministry of health un ocha gaza-moh ocha" id="prov-figures-palestinians-killed-in-gaza">
+        <ul class="prov-claims" id="prov-claims"><li class="prov-claim" data-origins="palestinian-official un" data-file="figures.json" data-text="palestinians killed in gaza 73,910 gaza moh / ocha gaza ministry of health un ocha gaza-moh ocha" id="prov-figures-palestinians-killed-in-gaza">
         <div class="prov-claim-head">
           <a href="../index.html#/data" class="prov-label">Palestinians killed in Gaza</a>
           
           <span class="prov-ref">§6.3</span>
         </div>
-        <div class="prov-value">73,821</div>
+        <div class="prov-value">73,910</div>
         <div class="prov-chain"><span class="prov-chip" data-origin="palestinian-official">Gaza Ministry of Health</span><span class="prov-chip" data-origin="un">UN OCHA</span></div>
         <div class="prov-src-text">Gaza MoH / OCHA</div>
       </li><li class="prov-claim" data-origins="palestinian-official un" data-file="figures.json" data-text="children killed in gaza 20,179 gaza moh / un coi gaza ministry of health un commission of inquiry on the opt gaza-moh un-coi" id="prov-figures-children-killed-in-gaza">
@@ -1021,13 +1021,13 @@
         <div class="prov-value">20,179</div>
         <div class="prov-chain"><span class="prov-chip" data-origin="palestinian-official">Gaza Ministry of Health</span><span class="prov-chip" data-origin="un">UN Commission of Inquiry on the OPT</span></div>
         <div class="prov-src-text">Gaza MoH / UN COI</div>
-      </li><li class="prov-claim" data-origins="palestinian-official" data-file="figures.json" data-text="injured in gaza 174,897 gaza moh gaza ministry of health gaza-moh" id="prov-figures-injured-in-gaza">
+      </li><li class="prov-claim" data-origins="palestinian-official" data-file="figures.json" data-text="injured in gaza 174,914 gaza moh gaza ministry of health gaza-moh" id="prov-figures-injured-in-gaza">
         <div class="prov-claim-head">
           <a href="../index.html#/data" class="prov-label">Injured in Gaza</a>
           
           <span class="prov-ref">§6.3</span>
         </div>
-        <div class="prov-value">174,897</div>
+        <div class="prov-value">174,914</div>
         <div class="prov-chain"><span class="prov-chip" data-origin="palestinian-official">Gaza Ministry of Health</span></div>
         <div class="prov-src-text">Gaza MoH</div>
       </li><li class="prov-claim" data-origins="un" data-file="figures.json" data-text="displaced in gaza 1,900,000 unrwa / ocha un ocha unrwa ocha unrwa" id="prov-figures-displaced-in-gaza">
@@ -1291,6 +1291,51 @@
         <div class="prov-value">Established by Foreign Minister Gideon Sa’ar in May 2025 and convened by Israel’s Ministry of Foreign Affairs. Its third meeting was held in Jerusalem on 1 September 2026, chaired by William Daroff of the Conference of Presidents, with 59…</div>
         <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">JNS</span></div>
         <div class="prov-src-text">Israel Ministry of Foreign Affairs; JNS, 1 September 2026</div>
+      </li><li class="prov-claim" data-origins="" data-file="figures.json" data-text="christians in gaza, 7 october 2023 1,017 fr gabriel romanelli, holy family parish  " id="prov-figures-christians-in-gaza-7-october-2023">
+        <div class="prov-claim-head">
+          <a href="../index.html#/data" class="prov-label">Christians in Gaza, 7 October 2023</a>
+          
+          
+        </div>
+        <div class="prov-value">1,017</div>
+        <div class="prov-chain"><span class="prov-chip none">no source recorded</span></div>
+        <div class="prov-src-text">Fr Gabriel Romanelli, Holy Family parish</div>
+      </li><li class="prov-claim" data-origins="israeli-media" data-file="figures.json" data-text="christians in gaza, early 2026 600 jerusalem post / the media line, 2026 the jerusalem post jpost" id="prov-figures-christians-in-gaza-early-2026">
+        <div class="prov-claim-head">
+          <a href="../index.html#/data" class="prov-label">Christians in Gaza, early 2026</a>
+          
+          
+        </div>
+        <div class="prov-value">600</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">The Jerusalem Post</span></div>
+        <div class="prov-src-text">Jerusalem Post / The Media Line, 2026</div>
+      </li><li class="prov-claim" data-origins="israeli-media" data-file="figures.json" data-text="christians killed since october 2023 44 jerusalem post, 2026 the jerusalem post jpost" id="prov-figures-christians-killed-since-october-2023">
+        <div class="prov-claim-head">
+          <a href="../index.html#/data" class="prov-label">Christians killed since October 2023</a>
+          
+          
+        </div>
+        <div class="prov-value">44</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">The Jerusalem Post</span></div>
+        <div class="prov-src-text">Jerusalem Post, 2026</div>
+      </li><li class="prov-claim" data-origins="" data-file="figures.json" data-text="churches still functioning 3 catholic news agency, 18 july 2025  " id="prov-figures-churches-still-functioning">
+        <div class="prov-claim-head">
+          <a href="../index.html#/data" class="prov-label">Churches still functioning</a>
+          
+          
+        </div>
+        <div class="prov-value">3</div>
+        <div class="prov-chain"><span class="prov-chip none">no source recorded</span></div>
+        <div class="prov-src-text">Catholic News Agency, 18 July 2025</div>
+      </li><li class="prov-claim" data-origins="un" data-file="figures.json" data-text="cultural sites with unesco-verified damage 164 unesco unesco unesco" id="prov-figures-cultural-sites-with-unesco-verified-damage">
+        <div class="prov-claim-head">
+          <a href="../index.html#/data" class="prov-label">Cultural sites with UNESCO-verified damage</a>
+          
+          
+        </div>
+        <div class="prov-value">164</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="un">UNESCO</span></div>
+        <div class="prov-src-text">UNESCO</div>
       </li><li class="prov-claim" data-origins="archive" data-file="statements.json" data-text="ahad ha'am (asher ginsberg) [jewish settlers] treat the arabs with hostility and cruelty, trespass unjustly upon their boundaries, beat them shamefully without reason, and even brag about it. ahad ha'am, “truth from eretz yisrael”, 1891. founding zionist texts and primary documents founding-texts" id="prov-statements-ahad-ha-am-asher-ginsberg">
         <div class="prov-claim-head">
           <a href="../index.html#/statements" class="prov-label">Ahad Ha'am (Asher Ginsberg)</a>
@@ -4803,20 +4848,20 @@
         <div class="prov-src-text">The report, Appendix B</div>
       </li></ul>
         <p class="chart-note" style="margin-top:22px">Generated by provenance.py on 2026-09-19 from the curated data files.
-          6 claims carry no source: those are the places where the record states that no published source exists.</p>
+          8 claims carry no source: those are the places where the record states that no published source exists.</p>
       </section>
     </div><nav class="snapshot-links" aria-label="Other sections"><h2>Every other section, without JavaScript</h2><ul><li><a href="overview.html">The Documented Record — Israel and the Occupied Territories, 1917–2026</a></li><li><a href="tour.html">Start here — the case in eight steps</a></li><li><a href="data-gaza.html">Gaza — the toll since 7 October 2023</a></li><li><a href="data-asymmetry.html">The asymmetry — Palestinians and Israelis killed</a></li><li><a href="data-since-1948.html">Since 1948 — seventy-eight years of the toll</a></li><li><a href="data-complicity.html">Complicity — who supplies the war</a></li><li><a href="data-land.html">The land — six per cent to seventy-eight</a></li><li><a href="data-west-bank.html">The West Bank — before and after October 2023</a></li><li><a href="data-wars.html">Wars and 7 October — seventy-five years of operations</a></li><li><a href="data-world.html">The world — recognition, embargoes and vetoes</a></li><li><a href="data-tables.html">Source tables — every table in the report</a></li><li><a href="children.html">The children — every child the record can count</a></li><li><a href="day.html">Said and done — the war, one day at a time</a></li><li><a href="timeline.html">Timeline — a dated chronology, 1917–2026</a></li><li><a href="evidence.html">Evidence — the complete report</a></li><li><a href="rebuttals.html">Rebuttals — every defence, answered</a></li><li><a href="statements.html">Statements — the documented record of intent</a></li><li><a href="legal.html">Legal — the findings and the instruments they rest on</a></li><li><a href="sources.html">Sources — what the record rests on</a></li><li><a href="answer.html">Answer a claim — paste it, and read what the record says</a></li><li><a href="ledger.html">Ledger — the persons and companies named in the record</a></li><li><a href="mp.html">The Documented Record — Israel and the Occupied Territories, 1917–2026</a></li><li><a href="method.html">Method — impartial, not neutral</a></li><li><a href="api.html">Open data — the record as files</a></li><li><a href="changelog.html">Changelog — every revision, dated</a></li></ul></nav></main>
 
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=102" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=103" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
             evidentiary standards to all actors. Every heading, paragraph, list and table it contains is
             reproduced in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">164,834 words · 36 parts · 175 sections · 14 tables · 354 chronology entries · 126 documented statements · 234 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">170,726 words · 36 parts · 177 sections · 14 tables · 360 chronology entries · 126 documented statements · 241 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
     <!-- A record meant to be used in an argument has to be citable in one.
          Filled in by app.js with the route on screen and the date of the data
          it is showing, so a citation copied from here names the version the

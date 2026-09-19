@@ -81,6 +81,12 @@
      "n": 10
     },
     {
+     "id": "136-the-maga-isolationist-fracture-israels-growing-strategic-liability-within-th",
+     "title": "13.6 The MAGA-Isolationist Fracture: Israel's Growing Strategic Liability Within the US Right",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 4
+    },
+    {
      "id": "153-sanctions-on-israeli-officials",
      "title": "15.3 Sanctions on Israeli Officials",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
@@ -105,6 +111,12 @@
      "n": 4
     },
     {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 3
+    },
+    {
      "id": "242-the-four-limbs-of-the-case",
      "title": "24.2 The Four Limbs of the Case",
      "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
@@ -117,21 +129,9 @@
      "n": 2
     },
     {
-     "id": "136-the-maga-isolationist-fracture-israels-growing-strategic-liability-within-th",
-     "title": "13.6 The MAGA-Isolationist Fracture: Israel's Growing Strategic Liability Within the US Right",
-     "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 2
-    },
-    {
      "id": "141d-the-turn-to-investigation---the-prime-minister-the-chief-of-the-general-sta",
      "title": "14.1D The Turn to Investigation - The Prime Minister, the Chief of the General Staff, and the Search for the Sources (14 September 2026)",
      "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
-     "n": 2
-    },
-    {
-     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
-     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 2
     },
     {
@@ -147,7 +147,7 @@
      "n": 2
     }
    ],
-   "sections": 80,
+   "sections": 83,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -521,13 +521,19 @@
      "n": 2
     },
     {
+     "id": "1512a-organised-cultural-refusal-a-benefit-concert-an-industry-pledge-and-a-circ",
+     "title": "15.12A Organised Cultural Refusal: A Benefit Concert, an Industry Pledge, and a Circulated Claim (2025-2026)",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
      "id": "58-the-systematic-use-of-palestinian-civilians-as-human-shields",
      "title": "5.8 The Systematic Use of Palestinian Civilians as Human Shields",
      "part": "PART V - THE PATTERN OF WAR CRIMES: A 75-YEAR RECORD",
      "n": 2
     }
    ],
-   "sections": 9,
+   "sections": 11,
    "warrant": null,
    "sanctions": [
     {
@@ -1246,6 +1252,33 @@
    "sanctions": []
   },
   {
+   "id": "theodor-herzl",
+   "name": "Theodor Herzl",
+   "role": "Founder of political Zionism",
+   "class": "historic",
+   "tier": "Founder",
+   "statements": [
+    1
+   ],
+   "mentions": [
+    {
+     "id": "26-those-who-arrived-and-those-who-were-expelled-the-refugee-question-1938-1949",
+     "title": "2.6 Those Who Arrived and Those Who Were Expelled: The Refugee Question, 1938-1949",
+     "part": "PART II - THE NAKBA: PLAN DALET, THE MASSACRES, AND THE MANUFACTURED REFUGEE CRISIS",
+     "n": 3
+    },
+    {
+     "id": "10-the-movements-own-self-description-and-jewish-dissent-from-it-before-1917",
+     "title": "1.0 The Movement's Own Self-Description, and Jewish Dissent From It, Before 1917",
+     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
+     "n": 2
+    }
+   ],
+   "sections": 5,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "gabor-mate",
    "name": "Gabor Maté",
    "role": "Physician and author; infant survivor of the Budapest ghetto",
@@ -1306,27 +1339,6 @@
    "sanctions": []
   },
   {
-   "id": "ahad-ha-am-asher-ginsberg",
-   "name": "Ahad Ha'am (Asher Ginsberg)",
-   "role": "Founder of Cultural Zionism",
-   "class": "historic",
-   "tier": "Founder",
-   "statements": [
-    0
-   ],
-   "mentions": [
-    {
-     "id": "10-the-movements-own-self-description-and-jewish-dissent-from-it-before-1917",
-     "title": "1.0 The Movement's Own Self-Description, and Jewish Dissent From It, Before 1917",
-     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
-     "n": 3
-    }
-   ],
-   "sections": 3,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
    "id": "jonathan-glazer",
    "name": "Jonathan Glazer",
    "role": "Director, The Zone of Interest; accepting the Academy Award for Best International Feature",
@@ -1347,30 +1359,15 @@
      "title": "14.1A The NAZA Documentary - Twenty-Four Soldiers and Intelligence Officers, on Camera",
      "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
      "n": 1
-    }
-   ],
-   "sections": 3,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "maj-gen-aharon-haliva",
-   "name": "Maj. Gen. Aharon Haliva",
-   "role": "Director of the IDF Military Intelligence Directorate, 2021–2024",
-   "class": "military",
-   "tier": "Military",
-   "statements": [
-    87
-   ],
-   "mentions": [
+    },
     {
-     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
-     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
-     "n": 3
+     "id": "1512a-organised-cultural-refusal-a-benefit-concert-an-industry-pledge-and-a-circ",
+     "title": "15.12A Organised Cultural Refusal: A Benefit Concert, an Industry Pledge, and a Circulated Claim (2025-2026)",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
     }
    ],
-   "sections": 3,
+   "sections": 4,
    "warrant": null,
    "sanctions": []
   },
@@ -1395,6 +1392,54 @@
      "title": "15.3 Sanctions on Israeli Officials",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 1
+    },
+    {
+     "id": "611-the-christian-community-of-gaza-2023-2026",
+     "title": "6.11 The Christian Community of Gaza (2023-2026)",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 4,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "ahad-ha-am-asher-ginsberg",
+   "name": "Ahad Ha'am (Asher Ginsberg)",
+   "role": "Founder of Cultural Zionism",
+   "class": "historic",
+   "tier": "Founder",
+   "statements": [
+    0
+   ],
+   "mentions": [
+    {
+     "id": "10-the-movements-own-self-description-and-jewish-dissent-from-it-before-1917",
+     "title": "1.0 The Movement's Own Self-Description, and Jewish Dissent From It, Before 1917",
+     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
+     "n": 3
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "maj-gen-aharon-haliva",
+   "name": "Maj. Gen. Aharon Haliva",
+   "role": "Director of the IDF Military Intelligence Directorate, 2021–2024",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    87
+   ],
+   "mentions": [
+    {
+     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
+     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 3
     }
    ],
    "sections": 3,
@@ -1529,27 +1574,6 @@
      "id": "233-jewish-and-israeli-scholars",
      "title": "23.3 Jewish and Israeli Scholars",
      "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
-     "n": 2
-    }
-   ],
-   "sections": 2,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "theodor-herzl",
-   "name": "Theodor Herzl",
-   "role": "Founder of political Zionism",
-   "class": "historic",
-   "tier": "Founder",
-   "statements": [
-    1
-   ],
-   "mentions": [
-    {
-     "id": "10-the-movements-own-self-description-and-jewish-dissent-from-it-before-1917",
-     "title": "1.0 The Movement's Own Self-Description, and Jewish Dissent From It, Before 1917",
-     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
      "n": 2
     }
    ],
@@ -2090,6 +2114,12 @@
      "title": "13.8 Corporate and Platform Complicity",
      "part": "PART XIII - WESTERN COMPLICITY",
      "n": 3
+    },
+    {
+     "id": "139b-a-jurys-answer-on-protest-the-churchill-statue-acquittal-15-september-2026",
+     "title": "13.9B A Jury's Answer on Protest: The Churchill Statue Acquittal (15 September 2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
     }
    ],
    "divestment": []
@@ -2150,6 +2180,12 @@
      "title": "13.7 The Militarisation of UK Higher Education and the Suppression of Dissent",
      "part": "PART XIII - WESTERN COMPLICITY",
      "n": 2
+    },
+    {
+     "id": "1512b-withdrawal-as-a-method-the-documented-record-of-artist-refusals-2024-2026",
+     "title": "15.12B Withdrawal as a Method: The Documented Record of Artist Refusals (2024-2026)",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
     }
    ],
    "divestment": []
@@ -2204,6 +2240,12 @@
      "title": "13.8 Corporate and Platform Complicity",
      "part": "PART XIII - WESTERN COMPLICITY",
      "n": 4
+    },
+    {
+     "id": "1512b-withdrawal-as-a-method-the-documented-record-of-artist-refusals-2024-2026",
+     "title": "15.12B Withdrawal as a Method: The Documented Record of Artist Refusals (2024-2026)",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
     }
    ],
    "divestment": []
@@ -2221,6 +2263,12 @@
      "id": "138-corporate-and-platform-complicity",
      "title": "13.8 Corporate and Platform Complicity",
      "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 6
+    },
+    {
+     "id": "1512b-withdrawal-as-a-method-the-documented-record-of-artist-refusals-2024-2026",
+     "title": "15.12B Withdrawal as a Method: The Documented Record of Artist Refusals (2024-2026)",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 6
     }
    ],

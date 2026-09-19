@@ -181,6 +181,13 @@
    "note": "British-trained joint units used in the suppression of the revolt. Moshe Dayan and Yigal Allon served in them; the methods were carried into 1948."
   },
   {
+   "date": "6-15 July 1938",
+   "year": 1938,
+   "sort": "1938-07-06",
+   "event": "The Évian Conference declines to admit Jewish refugees",
+   "note": "Delegates of 32 states met at Évian-les-Bains to consider German and Austrian Jewish refugees. With the sole exception of the Dominican Republic, none agreed to raise its admissions. Britain attended on condition that Mandatory Palestine would not be discussed; the United States sent a businessman rather than a senior official and proposed no increase in its quotas. On 13 July the Nazi party newspaper Völkischer Beobachter drew the conclusion: \"No one wants them.\""
+  },
+  {
    "date": "7 Feb – 17 Mar 1939",
    "year": 1939,
    "sort": "1939-02-07",
@@ -193,6 +200,13 @@
    "sort": "1939-05-17",
    "event": "British White Paper limits Jewish immigration and land purchase",
    "note": "Proposed an independent Palestine within ten years with an Arab majority. Rejected by the Zionist leadership; the Irgun and Lehi campaigns against British rule follow."
+  },
+  {
+   "date": "23 May 1939",
+   "year": 1939,
+   "sort": "1939-05-23",
+   "event": "The White Paper caps Jewish immigration to Palestine",
+   "note": "Britain limited Jewish immigration to 75,000 over five years and provided that further immigration would require the consent of the Arab majority; land transfer regulations the following year restricted Jewish land purchase in all but about 5 per cent of Palestine. The policy was rejected by the Zionist leadership and by the Palestine Arab parties alike. By 1944 only 51,000 of the 75,000 certificates had been used. The cap held through the years of the extermination in Europe."
   },
   {
    "date": "28 Feb 1940",
@@ -221,6 +235,13 @@
    "sort": "1945-09-27",
    "event": "British Defence (Emergency) Regulations enacted",
    "note": "Administrative detention, house demolition, closure and deportation powers. Denounced at the time by Jewish jurists in Palestine as Nazi-like; retained by Israel after 1948 and still applied in the occupied territory today."
+  },
+  {
+   "date": "13 April 1947",
+   "year": 1947,
+   "sort": "1947-04-13",
+   "event": "The Theodor Herzl is intercepted off Palestine",
+   "note": "The Haganah refugee ship reached the coast carrying about 2,600 Jewish passengers, most of them survivors of the Nazi camps, outside the British quota. A banner along the rail read: \"The Germans destroyed our families and homes - don't you destroy our hopes.\" A Royal Navy boarding party took the ship, three passengers were killed resisting, and the passengers were deported to the British internment camps on Cyprus, through which Yad Vashem records 52,000 people passing between 1946 and 1949. The photograph of the banner is authentic and is frequently recaptioned; the interception was carried out by the Mandatory power, not by the population of Palestine."
   },
   {
    "date": "31 Aug 1947",
@@ -993,6 +1014,20 @@
    "note": "2023 was already the deadliest year on record in the West Bank before the war began (OCHA)."
   },
   {
+   "date": "19 October 2023",
+   "year": 2023,
+   "sort": "2023-10-19",
+   "event": "The Saint Porphyrius compound is struck",
+   "note": "An Israeli strike hit a building adjoining the Greek Orthodox church in Gaza City, where about 500 displaced Muslims and Christians were sheltering. The standard count is 18 killed; Airwars identified at least 23 civilians by name, including ten children, eight women and five men of the al-Amash, al-Souri and al-Tarazi families. The Israeli military said it had struck a Hamas command and control centre and that the church was not the target. The original fabric of the building dates to 425 AD."
+  },
+  {
+   "date": "16 December 2023",
+   "year": 2023,
+   "sort": "2023-12-16",
+   "event": "Nahida and Samar Anton are shot inside the Holy Family parish",
+   "note": "Nahida Khalil Anton, 70, and her daughter Samar Kamal Anton, 50, were shot dead while walking inside the grounds of Gaza's only Catholic parish, which was sheltering 648 people. The Latin Patriarch of Jerusalem, Cardinal Pierbattista Pizzaballa, stated that \"a sniper of the IDF murdered two Christian women inside the Holy Family Parish in Gaza\" and that seven more were wounded as they tried to shield others, with no warning given. The Israeli military denied targeting civilians and, in the account carried by Vatican News, asserted that a rocket launcher was present in the parish; no evidence for that assertion has been produced since."
+  },
+  {
    "date": "18 Jan 2024",
    "year": 2024,
    "sort": "2024-01-18",
@@ -1096,6 +1131,13 @@
    "sort": "2025-07-13",
    "event": "Two former Israeli prime ministers call the Rafah plan a concentration camp; the army declines to execute it",
    "note": "Ehud Olmert: “It is a concentration camp. I am sorry.” Yair Lapid, conditionally, the same day. Sixteen Israeli law academics had written on 10 July that any order to advance the plan was manifestly illegal; the Chief of the General Staff told the High Court the army “does not impose forced population expulsions”. The plan was later reported shelved."
+  },
+  {
+   "date": "17 July 2025",
+   "year": 2025,
+   "sort": "2025-07-17",
+   "event": "The Holy Family Church is struck",
+   "note": "An Israeli munition hit Gaza's only Catholic church, where about 600 people were sheltering, killing Saad Salama, the 60-year-old parish janitor, Fumya Ayaad, 84, and Najwa Abu Dawood, 71, and injuring ten including the parish priest, Father Gabriel Romanelli. Prime Minister Netanyahu's office said Israel \"deeply regrets that a stray ammunition hit Gaza's Holy Family Church\" and the Foreign Ministry said the findings would be \"published transparently\"; survivors described a strike without warning and no published investigation has been identified since. Cardinal Pizzaballa and Patriarch Theophilos III entered Gaza together the following day."
   },
   {
    "date": "25 Jul 2025",

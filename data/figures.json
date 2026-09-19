@@ -1077,5 +1077,41 @@
    "The IHRA definition has been adopted or endorsed by some 29 states and by both major British parties; it is the mainstream instrument, not a fringe one.",
    "In the one jurisdiction where the question has been litigated to appellate level, it has been decided the other way."
   ]
+ },
+ "gaza_christians": {
+  "title": "Gaza's Christian community",
+  "subtitle": "The smallest community in the Strip, individually known to its clergy and recorded by name when it dies.",
+  "ref": "§6.11",
+  "items": [
+   {
+    "label": "Christians in Gaza, 7 October 2023",
+    "value": 1017,
+    "source": "Fr Gabriel Romanelli, Holy Family parish"
+   },
+   {
+    "label": "Christians in Gaza, early 2026",
+    "value": 600,
+    "prefix": "~",
+    "source": "Jerusalem Post / The Media Line, 2026"
+   },
+   {
+    "label": "Christians killed since October 2023",
+    "value": 44,
+    "note": "estimates run from 30 to 44, directly and through the collapse of medical care",
+    "source": "Jerusalem Post, 2026"
+   },
+   {
+    "label": "Churches still functioning",
+    "value": 3,
+    "note": "Saint Porphyrius, Holy Family and the Gaza Baptist Church",
+    "source": "Catholic News Agency, 18 July 2025"
+   },
+   {
+    "label": "Cultural sites with UNESCO-verified damage",
+    "value": 164,
+    "note": "of which 14 are religious sites, as of 24 March 2026",
+    "source": "UNESCO"
+   }
+  ]
  }
 }

@@ -5,15 +5,15 @@
   "source": "data/provenance.json; data/statements.json",
   "repo": "palestinerecord/palestinerecord.github.io",
   "label": "challenge",
-  "entries": 364,
+  "entries": 369,
   "kinds": {
-   "figure": 104,
+   "figure": 109,
    "statement": 126,
    "record": 134
   },
-  "single_origin": 232,
-  "exposed": 218,
-  "claims": 422
+  "single_origin": 237,
+  "exposed": 221,
+  "claims": 427
  },
  "conditions": [
   {
@@ -196,6 +196,10 @@
    "name": "Law for Palestine",
    "origin": "palestinian-ngo"
   },
+  "jpost": {
+   "name": "The Jerusalem Post",
+   "origin": "israeli-media"
+  },
   "us-congress": {
    "name": "US Congress and the Congressional Research Service",
    "origin": "western-state"
@@ -231,10 +235,6 @@
   "save-children": {
    "name": "Save the Children",
    "origin": "international-ngo"
-  },
-  "jpost": {
-   "name": "The Jerusalem Post",
-   "origin": "israeli-media"
   },
   "un-ga": {
    "name": "UN General Assembly",
@@ -468,6 +468,10 @@
    "name": "UN Special Committee on Israeli Practices",
    "origin": "un"
   },
+  "unesco": {
+   "name": "UNESCO",
+   "origin": "un"
+  },
   "wikipedia": {
    "name": "Wikipedia (with its own cited sources)",
    "origin": "data-project"
@@ -608,10 +612,6 @@
    "name": "UN membership and treaty records",
    "origin": "un"
   },
-  "unesco": {
-   "name": "UNESCO",
-   "origin": "un"
-  },
   "wcc": {
    "name": "World Council of Churches",
    "origin": "international-ngo"
@@ -634,7 +634,7 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 386,
+   "stands": 389,
    "falls": 30,
    "share": 92.8
   },
@@ -648,9 +648,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 345,
-   "falls": 71,
-   "share": 82.9
+   "stands": 346,
+   "falls": 73,
+   "share": 82.6
   },
   {
    "id": "no-un",
@@ -659,9 +659,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 351,
-   "falls": 65,
-   "share": 84.4
+   "stands": 353,
+   "falls": 66,
+   "share": 84.2
   },
   {
    "id": "no-ngo",
@@ -672,9 +672,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 312,
+   "stands": 315,
    "falls": 104,
-   "share": 75.0
+   "share": 75.2
   },
   {
    "id": "israeli-western-only",
@@ -687,9 +687,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 221,
-   "falls": 195,
-   "share": 53.1
+   "stands": 223,
+   "falls": 196,
+   "share": 53.2
   }
  ],
  "entries": [
@@ -1219,6 +1219,26 @@
    "context": "Protected persons killed in Gaza"
   },
   {
+   "id": "figures-cultural-sites-with-unesco-verified-damage",
+   "claim": "Cultural sites with UNESCO-verified damage",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "unesco"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 164,
+   "attribution": "UNESCO",
+   "context": "Gaza's Christian community"
+  },
+  {
    "id": "figures-deaths-in-israeli-custody-since-oct-2023",
    "claim": "Deaths in Israeli custody since Oct 2023",
    "kind": "figure",
@@ -1457,7 +1477,7 @@
     "israeli-western-only"
    ],
    "ref": "§6.3",
-   "value": 174897,
+   "value": 174914,
    "attribution": "Gaza MoH"
   },
   {
@@ -3461,6 +3481,44 @@
    "statement": 32
   },
   {
+   "id": "figures-christians-in-gaza-early-2026",
+   "claim": "Christians in Gaza, early 2026",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "jpost"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "value": 600,
+   "attribution": "Jerusalem Post / The Media Line, 2026",
+   "context": "Gaza's Christian community"
+  },
+  {
+   "id": "figures-christians-killed-since-october-2023",
+   "claim": "Christians killed since October 2023",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "jpost"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "value": 44,
+   "attribution": "Jerusalem Post, 2026",
+   "context": "Gaza's Christian community"
+  },
+  {
    "id": "long-record-expelled-or-fled-1948",
    "claim": "Expelled or fled, 1948",
    "kind": "figure",
@@ -4446,7 +4504,7 @@
     "israeli-western-only"
    ],
    "ref": "§6.3",
-   "value": 73821,
+   "value": 73910,
    "attribution": "Gaza MoH / OCHA"
   },
   {
@@ -4991,6 +5049,32 @@
     "israeli-western-only"
    ],
    "attribution": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages."
+  },
+  {
+   "id": "figures-christians-in-gaza-7-october-2023",
+   "claim": "Christians in Gaza, 7 October 2023",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "value": 1017,
+   "attribution": "Fr Gabriel Romanelli, Holy Family parish",
+   "context": "Gaza's Christian community"
+  },
+  {
+   "id": "figures-churches-still-functioning",
+   "claim": "Churches still functioning",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "value": 3,
+   "attribution": "Catholic News Agency, 18 July 2025",
+   "context": "Gaza's Christian community"
   },
   {
    "id": "statements-jewish-council-of-australia",
