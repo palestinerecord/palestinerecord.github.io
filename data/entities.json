@@ -1621,6 +1621,33 @@
    "sanctions": []
   },
   {
+   "id": "yuval-abraham",
+   "name": "Yuval Abraham",
+   "role": "Israeli journalist and co-director of NAZA",
+   "class": "dissent",
+   "tier": "Israeli journalist",
+   "statements": [
+    118
+   ],
+   "mentions": [
+    {
+     "id": "141a-the-naza-documentary---twenty-four-soldiers-and-intelligence-officers-on-ca",
+     "title": "14.1A The NAZA Documentary - Twenty-Four Soldiers and Intelligence Officers, on Camera",
+     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
+     "n": 1
+    },
+    {
+     "id": "143-israeli-holocaust-scholars-publicly-declaring-genocide",
+     "title": "14.3 Israeli Holocaust Scholars Publicly Declaring Genocide",
+     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
+     "n": 1
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "avigdor-lieberman",
    "name": "Avigdor Lieberman",
    "role": "Defence Minister of Israel",
@@ -1760,27 +1787,6 @@
      "id": "242a-the-witnesses-israeli-jewish-and-international",
      "title": "24.2A The Witnesses: Israeli, Jewish, and International",
      "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
-     "n": 1
-    }
-   ],
-   "sections": 1,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "yuval-abraham",
-   "name": "Yuval Abraham",
-   "role": "Israeli journalist and co-director of NAZA",
-   "class": "dissent",
-   "tier": "Israeli journalist",
-   "statements": [
-    118
-   ],
-   "mentions": [
-    {
-     "id": "141a-the-naza-documentary---twenty-four-soldiers-and-intelligence-officers-on-ca",
-     "title": "14.1A The NAZA Documentary - Twenty-Four Soldiers and Intelligence Officers, on Camera",
-     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
      "n": 1
     }
    ],
