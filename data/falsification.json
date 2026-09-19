@@ -5,15 +5,15 @@
   "source": "data/provenance.json; data/statements.json",
   "repo": "palestinerecord/palestinerecord.github.io",
   "label": "challenge",
-  "entries": 369,
+  "entries": 375,
   "kinds": {
-   "figure": 109,
+   "figure": 115,
    "statement": 126,
    "record": 134
   },
-  "single_origin": 237,
-  "exposed": 221,
-  "claims": 427
+  "single_origin": 243,
+  "exposed": 222,
+  "claims": 433
  },
  "conditions": [
   {
@@ -184,6 +184,10 @@
    "name": "Middle East Eye",
    "origin": "media"
   },
+  "us-congress": {
+   "name": "US Congress and the Congressional Research Service",
+   "origin": "western-state"
+  },
   "cia-archive": {
    "name": "Declassified state archives",
    "origin": "archive"
@@ -200,10 +204,6 @@
    "name": "The Jerusalem Post",
    "origin": "israeli-media"
   },
-  "us-congress": {
-   "name": "US Congress and the Congressional Research Service",
-   "origin": "western-state"
-  },
   "amnesty": {
    "name": "Amnesty International",
    "origin": "international-ngo"
@@ -214,6 +214,10 @@
   },
   "ohchr": {
    "name": "OHCHR",
+   "origin": "un"
+  },
+  "un-sc": {
+   "name": "UN Security Council",
    "origin": "un"
   },
   "unicef": {
@@ -242,10 +246,6 @@
   },
   "un-hrc": {
    "name": "UN Human Rights Council",
-   "origin": "un"
-  },
-  "un-sc": {
-   "name": "UN Security Council",
    "origin": "un"
   },
   "who": {
@@ -279,6 +279,10 @@
   "phr-israel": {
    "name": "Physicians for Human Rights Israel",
    "origin": "israeli-ngo"
+  },
+  "sipri": {
+   "name": "SIPRI",
+   "origin": "academic"
   },
   "guardian": {
    "name": "The Guardian",
@@ -444,6 +448,10 @@
    "name": "Palquest / Institute for Palestine Studies",
    "origin": "palestinian-ngo"
   },
+  "quincy": {
+   "name": "Quincy Institute",
+   "origin": "academic"
+  },
   "khalidi": {
    "name": "Rashid Khalidi, The Hundred Years War on Palestine",
    "origin": "academic"
@@ -451,10 +459,6 @@
   "reuters": {
    "name": "Reuters",
    "origin": "media"
-  },
-  "sipri": {
-   "name": "SIPRI",
-   "origin": "academic"
   },
   "nyt": {
    "name": "The New York Times",
@@ -568,10 +572,6 @@
    "name": "Peace Now",
    "origin": "israeli-ngo"
   },
-  "quincy": {
-   "name": "Quincy Institute",
-   "origin": "academic"
-  },
   "reuters-institute": {
    "name": "Reuters Institute for the Study of Journalism",
    "origin": "academic"
@@ -634,9 +634,9 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 389,
+   "stands": 395,
    "falls": 30,
-   "share": 92.8
+   "share": 92.9
   },
   {
    "id": "no-israeli",
@@ -648,9 +648,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 346,
+   "stands": 352,
    "falls": 73,
-   "share": 82.6
+   "share": 82.8
   },
   {
    "id": "no-un",
@@ -659,8 +659,8 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 353,
-   "falls": 66,
+   "stands": 358,
+   "falls": 67,
    "share": 84.2
   },
   {
@@ -672,9 +672,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 315,
+   "stands": 321,
    "falls": 104,
-   "share": 75.2
+   "share": 75.5
   },
   {
    "id": "israeli-western-only",
@@ -687,9 +687,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 223,
-   "falls": 196,
-   "share": 53.2
+   "stands": 228,
+   "falls": 197,
+   "share": 53.6
   }
  ],
  "entries": [
@@ -1944,6 +1944,26 @@
    "value": 49,
    "attribution": "United Nations Dag Hammarskjöld Library, Security Council Veto List",
    "context": "The veto wall"
+  },
+  {
+   "id": "figures-us-security-council-vetoes-cast-on-drafts-concerning-israel",
+   "claim": "US Security Council vetoes cast on drafts concerning Israel",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "un-sc"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "value": 51,
+   "attribution": "United Nations Security Council veto list",
+   "context": "The supply relationship"
   },
   {
    "id": "long-record-vetoes-since-7-october-2023",
@@ -4708,7 +4728,7 @@
     "israeli-western-only"
    ],
    "ref": "§15.4",
-   "attribution": "Wikipedia, \"International recognition of Palestine\", retrieved 12 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there."
+   "attribution": "Wikipedia, \"International recognition of Palestine\", retrieved 19 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there."
   },
   {
    "id": "long-record-second-intifada",
@@ -5249,6 +5269,23 @@
    "context": "United States arms to Israel since 7 October 2023"
   },
   {
+   "id": "figures-enacted-us-direct-military-aid-to-israel-since-october-2023",
+   "claim": "Enacted US direct military aid to Israel since October 2023",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "us-congress"
+   ],
+   "origins": [
+    "western-state"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 16.3,
+   "attribution": "Congressional Research Service, RL33222",
+   "context": "The supply relationship"
+  },
+  {
    "id": "long-record-foreign-military-financing-annual",
    "claim": "Foreign Military Financing, annual",
    "kind": "figure",
@@ -5281,6 +5318,23 @@
    "value": 75200,
    "attribution": "The Lancet Global Health, February 2026",
    "context": "What the recorded toll leaves out"
+  },
+  {
+   "id": "figures-israel-s-own-share-of-global-major-arms-exports",
+   "claim": "Israel's own share of global major-arms exports",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "sipri"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 4.4,
+   "attribution": "SIPRI, 9 March 2026",
+   "context": "The supply relationship"
   },
   {
    "id": "long-record-jewish-owned-land",
@@ -5420,6 +5474,23 @@
    "context": "1946"
   },
   {
+   "id": "figures-share-of-israel-s-major-arms-imports-supplied-by-the-united-st",
+   "claim": "Share of Israel's major-arms imports supplied by the United States",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "sipri"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 68,
+   "attribution": "SIPRI, Trends in International Arms Transfers, 2025, 9 March 2026",
+   "context": "The supply relationship"
+  },
+  {
    "id": "long-record-the-same-aid-adjusted-for-inflation-1959-2024",
    "claim": "The same aid adjusted for inflation, 1959–2024",
    "kind": "figure",
@@ -5435,6 +5506,40 @@
    "value": 317.9,
    "attribution": "Costs of War Project, Brown University, October 2024",
    "context": "United States military aid"
+  },
+  {
+   "id": "figures-united-states-share-of-global-major-arms-exports",
+   "claim": "United States share of global major-arms exports",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "sipri"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 42,
+   "attribution": "SIPRI, 9 March 2026",
+   "context": "The supply relationship"
+  },
+  {
+   "id": "figures-us-military-bases-in-foreign-countries-and-colonies",
+   "claim": "US military bases in foreign countries and colonies",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "quincy"
+   ],
+   "origins": [
+    "academic"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 750,
+   "attribution": "Vine, Deppen and Bolger, Quincy Institute, September 2021",
+   "context": "The supply relationship"
   },
   {
    "id": "statements-ahad-ha-am-asher-ginsberg",

@@ -81,6 +81,12 @@
      "n": 10
     },
     {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 7
+    },
+    {
      "id": "136-the-maga-isolationist-fracture-israels-growing-strategic-liability-within-th",
      "title": "13.6 The MAGA-Isolationist Fracture: Israel's Growing Strategic Liability Within the US Right",
      "part": "PART XIII - WESTERN COMPLICITY",
@@ -109,12 +115,6 @@
      "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
      "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
      "n": 4
-    },
-    {
-     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
-     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 3
     },
     {
      "id": "242-the-four-limbs-of-the-case",
@@ -147,7 +147,7 @@
      "n": 2
     }
    ],
-   "sections": 83,
+   "sections": 87,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -968,9 +968,15 @@
      "title": "14.1D The Turn to Investigation - The Prime Minister, the Chief of the General Staff, and the Search for the Sources (14 September 2026)",
      "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
      "n": 1
+    },
+    {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
     }
    ],
-   "sections": 2,
+   "sections": 3,
    "warrant": null,
    "sanctions": []
   },
@@ -1153,6 +1159,45 @@
    "sanctions": []
   },
   {
+   "id": "isaac-herzog",
+   "name": "Isaac Herzog",
+   "role": "President of Israel",
+   "class": "government",
+   "tier": "Head of state",
+   "statements": [
+    38
+   ],
+   "mentions": [
+    {
+     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
+     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 4
+    },
+    {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "153-sanctions-on-israeli-officials",
+     "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "242-the-four-limbs-of-the-case",
+     "title": "24.2 The Four Limbs of the Case",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 2
+    }
+   ],
+   "sections": 10,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "maj-gen-gadi-eisenkot",
    "name": "Maj. Gen. Gadi Eisenkot",
    "role": "IDF Northern Command (later Chief of the General Staff)",
@@ -1176,39 +1221,6 @@
     }
    ],
    "sections": 9,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "isaac-herzog",
-   "name": "Isaac Herzog",
-   "role": "President of Israel",
-   "class": "government",
-   "tier": "Head of state",
-   "statements": [
-    38
-   ],
-   "mentions": [
-    {
-     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
-     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
-     "n": 4
-    },
-    {
-     "id": "153-sanctions-on-israeli-officials",
-     "title": "15.3 Sanctions on Israeli Officials",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 2
-    },
-    {
-     "id": "242-the-four-limbs-of-the-case",
-     "title": "24.2 The Four Limbs of the Case",
-     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
-     "n": 2
-    }
-   ],
-   "sections": 8,
    "warrant": null,
    "sanctions": []
   },

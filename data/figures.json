@@ -1113,5 +1113,53 @@
     "source": "UNESCO"
    }
   ]
+ },
+ "arms_supply": {
+  "title": "The supply relationship",
+  "subtitle": "Where Israel's weapons come from, and what the supplier state's own record looks like, for 2021-25.",
+  "ref": "§13.10",
+  "items": [
+   {
+    "label": "Share of Israel's major-arms imports supplied by the United States",
+    "value": 68,
+    "suffix": "%",
+    "note": "2021-25; Germany supplied 31 per cent, so two states account for essentially the whole of the supply",
+    "source": "SIPRI, Trends in International Arms Transfers, 2025, 9 March 2026"
+   },
+   {
+    "label": "United States share of global major-arms exports",
+    "value": 42,
+    "suffix": "%",
+    "note": "up from 36 per cent in 2016-20, an increase of 27 per cent in volume",
+    "source": "SIPRI, 9 March 2026"
+   },
+   {
+    "label": "Israel's own share of global major-arms exports",
+    "value": 4.4,
+    "suffix": "%",
+    "note": "seventh largest exporter in the world",
+    "source": "SIPRI, 9 March 2026"
+   },
+   {
+    "label": "US military bases in foreign countries and colonies",
+    "value": 750,
+    "note": "across 80 countries, at an annual cost of about $55 billion; the Pentagon no longer publishes a full Base Structure Report",
+    "source": "Vine, Deppen and Bolger, Quincy Institute, September 2021"
+   },
+   {
+    "label": "Enacted US direct military aid to Israel since October 2023",
+    "value": 16.3,
+    "prefix": "$",
+    "suffix": "bn",
+    "note": "the Quincy Institute and Costs of War put military aid and related regional operations at $21.7 billion to September 2025",
+    "source": "Congressional Research Service, RL33222"
+   },
+   {
+    "label": "US Security Council vetoes cast on drafts concerning Israel",
+    "value": 51,
+    "note": "of 89 US vetoes in total to 17 September 2026; six were on Gaza ceasefire drafts",
+    "source": "United Nations Security Council veto list"
+   }
+  ]
  }
 }
