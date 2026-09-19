@@ -3,8 +3,8 @@
   "title": "The accountability ledger",
   "note": "Persons and companies named in the record, with what a court, a government or a shareholder has actually done about them. Statements are joined from the statements file, the sections are found in the report itself, and the sanctions are the measures on the world-positions file. Nothing on this page is asserted that is not already somewhere else on this site.",
   "source": "report-final.md; data/statements.json; data/world-positions.json; Rome Statute of the International Criminal Court, Articles 86, 89(1) and 127(1)",
-  "persons": 73,
-  "companies": 11,
+  "persons": 80,
+  "companies": 12,
   "warrants": 3,
   "sanctioned": 10,
   "parties": 125
@@ -24,6 +24,11 @@
    "id": "allied",
    "label": "Allied governments",
    "note": "Officials of the states that supply the weapons, the money and the diplomatic cover, whose own words are part of the record."
+  },
+  {
+   "id": "corporate",
+   "label": "Corporate actors",
+   "note": "Executives of the companies whose products, platforms and finance the documented conduct runs on, quoted where they have spoken about that use themselves."
   },
   {
    "id": "accountability",
@@ -54,12 +59,12 @@
    "class": "government",
    "tier": "Head of government",
    "statements": [
-    46,
-    49,
-    53,
-    79,
-    107,
-    126
+    47,
+    50,
+    54,
+    82,
+    112,
+    134
    ],
    "mentions": [
     {
@@ -187,6 +192,12 @@
      "n": 3
     },
     {
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    },
+    {
      "id": "105-un-secretary-generals-conflict-related-sexual-violence-blacklist-28-may-2026",
      "title": "10.5 UN Secretary-General's Conflict-Related Sexual Violence Blacklist (28 May 2026)",
      "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
@@ -217,7 +228,7 @@
      "n": 1
     }
    ],
-   "sections": 16,
+   "sections": 18,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -260,13 +271,13 @@
    "tier": "Cabinet",
    "statements": [
     22,
-    48,
-    67,
-    74,
+    49,
+    69,
     76,
-    93,
-    100,
-    106
+    79,
+    96,
+    105,
+    111
    ],
    "mentions": [
     {
@@ -356,13 +367,13 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    47,
-    95,
-    102,
-    109,
-    113,
+    48,
+    98,
+    107,
     115,
-    119
+    120,
+    122,
+    126
    ],
    "mentions": [
     {
@@ -499,7 +510,7 @@
    "class": "accountability",
    "tier": "UN mandate holder",
    "statements": [
-    59
+    61
    ],
    "mentions": [
     {
@@ -521,6 +532,12 @@
      "n": 2
     },
     {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    },
+    {
      "id": "1512a-organised-cultural-refusal-a-benefit-concert-an-industry-pledge-and-a-circ",
      "title": "15.12A Organised Cultural Refusal: A Benefit Concert, an Industry Pledge, and a Circulated Claim (2025-2026)",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
@@ -533,7 +550,7 @@
      "n": 2
     }
    ],
-   "sections": 11,
+   "sections": 13,
    "warrant": null,
    "sanctions": [
     {
@@ -785,10 +802,10 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    38,
-    84,
-    101,
-    118
+    39,
+    87,
+    106,
+    125
    ],
    "mentions": [
     {
@@ -834,9 +851,9 @@
    "tier": "Former head of government",
    "statements": [
     15,
-    85,
-    108,
-    123
+    88,
+    114,
+    131
    ],
    "mentions": [
     {
@@ -869,8 +886,8 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    88,
-    128
+    91,
+    136
    ],
    "mentions": [
     {
@@ -903,8 +920,8 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    70,
-    98
+    72,
+    103
    ],
    "mentions": [
     {
@@ -926,7 +943,7 @@
    "tier": "Israeli historian",
    "statements": [
     17,
-    82
+    85
    ],
    "mentions": [
     {
@@ -953,8 +970,8 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    125,
-    127
+    133,
+    135
    ],
    "mentions": [
     {
@@ -981,14 +998,42 @@
    "sanctions": []
   },
   {
+   "id": "shlomo-karhi",
+   "name": "Shlomo Karhi",
+   "role": "Communications Minister",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    56,
+    84
+   ],
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    },
+    {
+     "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
+     "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "hanoch-milwidsky",
    "name": "Hanoch Milwidsky",
    "role": "Member of Knesset (Likud)",
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    65,
-    129
+    67,
+    137
    ],
    "mentions": [
     {
@@ -1031,8 +1076,8 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    63,
-    77
+    65,
+    80
    ],
    "mentions": [],
    "sections": 0,
@@ -1047,7 +1092,7 @@
    "tier": "Legislature",
    "statements": [
     29,
-    44
+    45
    ],
    "mentions": [],
    "sections": 0,
@@ -1061,7 +1106,7 @@
    "class": "allied",
    "tier": "Allied head of state",
    "statements": [
-    71
+    73
    ],
    "mentions": [
     {
@@ -1069,6 +1114,12 @@
      "title": "13.6 The MAGA-Isolationist Fracture: Israel's Growing Strategic Liability Within the US Right",
      "part": "PART XIII - WESTERN COMPLICITY",
      "n": 10
+    },
+    {
+     "id": "156-the-board-of-peace---gaza-reconstruction-plan-and-its-contradictions",
+     "title": "15.6 The \"Board of Peace\" - Gaza Reconstruction Plan and Its Contradictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 6
     },
     {
      "id": "86-the-2026-usisrael-war-on-iran",
@@ -1101,12 +1152,6 @@
      "n": 2
     },
     {
-     "id": "156-the-board-of-peace---gaza-reconstruction-plan-and-its-contradictions",
-     "title": "15.6 The \"Board of Peace\" - Gaza Reconstruction Plan and Its Contradictions",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 2
-    },
-    {
      "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
      "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
      "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
@@ -1131,7 +1176,7 @@
      "n": 1
     }
    ],
-   "sections": 31,
+   "sections": 35,
    "warrant": null,
    "sanctions": []
   },
@@ -1142,7 +1187,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    105
+    110
    ],
    "mentions": [
     {
@@ -1202,7 +1247,7 @@
    "class": "government",
    "tier": "Head of state",
    "statements": [
-    39
+    40
    ],
    "mentions": [
     {
@@ -1258,6 +1303,102 @@
     }
    ],
    "sections": 9,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "andy-burnham",
+   "name": "Andy Burnham",
+   "role": "Prime Minister of the United Kingdom (from 20 July 2026); then Mayor of Greater Manchester",
+   "class": "allied",
+   "tier": "Allied government",
+   "statements": [
+    113
+   ],
+   "mentions": [
+    {
+     "id": "133-the-united-kingdom",
+     "title": "13.3 The United Kingdom",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "1510-british-public-opinion-the-gap-between-the-public-and-its-government",
+     "title": "15.10 British Public Opinion: The Gap Between the Public and Its Government",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "152-arms-embargoes",
+     "title": "15.2 Arms Embargoes",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "153b-the-measures-tested-the-legal-professions-assessment-the-enforcement-gap-an",
+     "title": "15.3B The Measures Tested: The Legal Profession's Assessment, the Enforcement Gap, and the State's Own Contracts",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
+     "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 6,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "ed-miliband",
+   "name": "Ed Miliband",
+   "role": "Secretary of State for Foreign, Commonwealth and Development Affairs, United Kingdom",
+   "class": "allied",
+   "tier": "Allied government",
+   "statements": [
+    129
+   ],
+   "mentions": [
+    {
+     "id": "133-the-united-kingdom",
+     "title": "13.3 The United Kingdom",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "152-arms-embargoes",
+     "title": "15.2 Arms Embargoes",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "153-sanctions-on-israeli-officials",
+     "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "153a-british-charitable-funds-and-the-settlements-the-regulatory-record",
+     "title": "15.3A British Charitable Funds and the Settlements: The Regulatory Record",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 5,
    "warrant": null,
    "sanctions": []
   },
@@ -1334,7 +1475,7 @@
    "class": "dissent",
    "tier": "Holocaust survivor",
    "statements": [
-    62
+    64
    ],
    "mentions": [
     {
@@ -1367,7 +1508,7 @@
    "class": "dissent",
    "tier": "Jewish public figure",
    "statements": [
-    94
+    97
    ],
    "mentions": [
     {
@@ -1394,7 +1535,7 @@
    "class": "dissent",
    "tier": "Jewish public figure",
    "statements": [
-    58
+    60
    ],
    "mentions": [
     {
@@ -1427,7 +1568,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    121
+    128
    ],
    "mentions": [
     {
@@ -1481,7 +1622,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    91
+    94
    ],
    "mentions": [
     {
@@ -1502,7 +1643,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    60
+    62
    ],
    "mentions": [
     {
@@ -1529,7 +1670,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    122
+    130
    ],
    "mentions": [
     {
@@ -1552,6 +1693,54 @@
     }
    ],
    "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "wes-streeting",
+   "name": "Wes Streeting",
+   "role": "Secretary of State for Defence, United Kingdom",
+   "class": "allied",
+   "tier": "Allied government",
+   "statements": [
+    119
+   ],
+   "mentions": [
+    {
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    },
+    {
+     "id": "133-the-united-kingdom",
+     "title": "13.3 The United Kingdom",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "alex-karp",
+   "name": "Alex Karp",
+   "role": "Chief Executive Officer, Palantir Technologies",
+   "class": "corporate",
+   "tier": "Corporate",
+   "statements": [
+    78
+   ],
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    }
+   ],
+   "sections": 2,
    "warrant": null,
    "sanctions": []
   },
@@ -1616,7 +1805,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    55
+    57
    ],
    "mentions": [
     {
@@ -1624,6 +1813,33 @@
      "title": "23.3 Jewish and Israeli Scholars",
      "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
      "n": 2
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "sir-keir-starmer",
+   "name": "Sir Keir Starmer",
+   "role": "Leader of the Opposition, United Kingdom (Prime Minister, July 2024 – June 2026)",
+   "class": "allied",
+   "tier": "Allied government",
+   "statements": [
+    37
+   ],
+   "mentions": [
+    {
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "139b-a-jurys-answer-on-protest-the-churchill-statue-acquittal-15-september-2026",
+     "title": "13.9B A Jury's Answer on Protest: The Churchill Statue Acquittal (15 September 2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
     }
    ],
    "sections": 2,
@@ -1664,7 +1880,7 @@
    "class": "dissent",
    "tier": "Israeli journalist",
    "statements": [
-    124
+    132
    ],
    "mentions": [
     {
@@ -1754,7 +1970,7 @@
    "class": "dissent",
    "tier": "Israeli human rights organisation",
    "statements": [
-    73
+    75
    ],
    "mentions": [
     {
@@ -1769,19 +1985,19 @@
    "sanctions": []
   },
   {
-   "id": "shlomo-karhi",
-   "name": "Shlomo Karhi",
-   "role": "Communications Minister",
-   "class": "government",
-   "tier": "Cabinet",
+   "id": "sadiq-khan",
+   "name": "Sadiq Khan",
+   "role": "Mayor of London",
+   "class": "allied",
+   "tier": "Allied government",
    "statements": [
-    81
+    100
    ],
    "mentions": [
     {
-     "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
-     "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
      "n": 1
     }
    ],
@@ -1796,7 +2012,7 @@
    "class": "government",
    "tier": "Former head of government",
    "statements": [
-    86
+    89
    ],
    "mentions": [
     {
@@ -1817,7 +2033,7 @@
    "class": "dissent",
    "tier": "Israeli human rights organisation",
    "statements": [
-    89
+    92
    ],
    "mentions": [
     {
@@ -1838,7 +2054,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    43
+    44
    ],
    "mentions": [],
    "sections": 0,
@@ -1852,7 +2068,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    50
+    51
    ],
    "mentions": [],
    "sections": 0,
@@ -1894,7 +2110,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    52
+    53
    ],
    "mentions": [],
    "sections": 0,
@@ -1908,7 +2124,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    37
+    38
    ],
    "mentions": [],
    "sections": 0,
@@ -1922,7 +2138,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    41
+    42
    ],
    "mentions": [],
    "sections": 0,
@@ -1950,7 +2166,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    54
+    55
    ],
    "mentions": [],
    "sections": 0,
@@ -1978,7 +2194,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    40
+    41
    ],
    "mentions": [],
    "sections": 0,
@@ -2006,7 +2222,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    42
+    43
    ],
    "mentions": [],
    "sections": 0,
@@ -2034,7 +2250,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    78
+    81
    ],
    "mentions": [],
    "sections": 0,
@@ -2062,7 +2278,7 @@
    "class": "government",
    "tier": "Former legislator",
    "statements": [
-    80
+    83
    ],
    "mentions": [],
    "sections": 0,
@@ -2090,7 +2306,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    45
+    46
    ],
    "mentions": [],
    "sections": 0,
@@ -2112,13 +2328,27 @@
    "sanctions": []
   },
   {
+   "id": "richard-tice",
+   "name": "Richard Tice",
+   "role": "Deputy Leader, Reform UK; Member of Parliament",
+   "class": "allied",
+   "tier": "Allied legislature",
+   "statements": [
+    102
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "yitzhak-kroizer",
    "name": "Yitzhak Kroizer",
    "role": "Member of Knesset (Otzma Yehudit)",
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    51
+    52
    ],
    "mentions": [],
    "sections": 0,
@@ -2132,7 +2362,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    97
+    101
    ],
    "mentions": [],
    "sections": 0,
@@ -2251,7 +2481,7 @@
    "country": "United States",
    "sector": "technology",
    "supplies": "Signed a strategic partnership with the Israeli Ministry of Defence in January 2024 to supply data-analytics software for what the company described as war-related missions.",
-   "note": "The chief executive, Alex Karp, has said publicly that the product is used, on occasion, to kill people. Palantir disputed Amnesty's characterisation.",
+   "note": "The chief executive, Alex Karp, has said publicly that the product is used, on occasion, to kill people, and told a protester at the Hill & Valley Forum in May 2025 that those killed were \"mostly terrorists, that's true\". Palantir disputed Amnesty's characterisation. The same company holds at least 34 UK government contracts worth at least £670 million since 2020, including the £330 million NHS Federated Data Platform and a £240.6 million uncompeted Ministry of Defence contract; on 3 June 2026 the Commons Science, Innovation and Technology Committee recommended that the government exercise the February 2027 break clause and replace it.",
    "ref": "§13.8",
    "mentions": [
     {
@@ -2261,6 +2491,17 @@
      "n": 1
     }
    ],
+   "divestment": []
+  },
+  {
+   "id": "spacex",
+   "name": "SpaceX (Starlink)",
+   "country": "United States",
+   "sector": "technology",
+   "supplies": "The satellite network that was the only alternative to Gaza's repeatedly severed terrestrial communications.",
+   "note": "On 27 November 2023 Elon Musk agreed with Israel's Communications Minister Shlomo Karhi that Starlink would operate in Gaza only with the approval of the Israeli Ministry of Communications. By February 2024 the single authorised deployment was a terminal serving the Emirati field hospital in Rafah.",
+   "ref": "§13.8",
+   "mentions": [],
    "divestment": []
   },
   {

@@ -5,15 +5,15 @@
   "source": "data/provenance.json; data/statements.json",
   "repo": "palestinerecord/palestinerecord.github.io",
   "label": "challenge",
-  "entries": 379,
+  "entries": 398,
   "kinds": {
-   "figure": 115,
-   "statement": 130,
+   "figure": 126,
+   "statement": 138,
    "record": 134
   },
-  "single_origin": 243,
+  "single_origin": 257,
   "exposed": 223,
-  "claims": 437
+  "claims": 456
  },
  "conditions": [
   {
@@ -132,20 +132,20 @@
    "name": "Gaza Ministry of Health",
    "origin": "palestinian-official"
   },
-  "israel-tv": {
-   "name": "Israeli broadcast media",
-   "origin": "israeli-media"
+  "trade-press": {
+   "name": "Entertainment and trade press",
+   "origin": "media"
   },
   "times-of-israel": {
    "name": "The Times of Israel",
    "origin": "israeli-media"
   },
+  "israel-tv": {
+   "name": "Israeli broadcast media",
+   "origin": "israeli-media"
+  },
   "aljazeera": {
    "name": "Al Jazeera",
-   "origin": "media"
-  },
-  "trade-press": {
-   "name": "Entertainment and trade press",
    "origin": "media"
   },
   "remember-children": {
@@ -155,6 +155,10 @@
   "haaretz": {
    "name": "Haaretz",
    "origin": "israeli-media"
+  },
+  "mee": {
+   "name": "Middle East Eye",
+   "origin": "media"
   },
   "un-coi": {
    "name": "UN Commission of Inquiry on the OPT",
@@ -172,13 +176,13 @@
    "name": "Euro-Mediterranean Human Rights Monitor",
    "origin": "international-ngo"
   },
+  "cia-archive": {
+   "name": "Declassified state archives",
+   "origin": "archive"
+  },
   "icj": {
    "name": "International Court of Justice",
    "origin": "international-court"
-  },
-  "mee": {
-   "name": "Middle East Eye",
-   "origin": "media"
   },
   "dci-p": {
    "name": "Defence for Children International – Palestine",
@@ -192,10 +196,6 @@
    "name": "US Congress and the Congressional Research Service",
    "origin": "western-state"
   },
-  "cia-archive": {
-   "name": "Declassified state archives",
-   "origin": "archive"
-  },
   "israel-hcj": {
    "name": "High Court of Justice (Israel)",
    "origin": "israeli-court"
@@ -203,6 +203,10 @@
   "law-for-palestine": {
    "name": "Law for Palestine",
    "origin": "palestinian-ngo"
+  },
+  "guardian": {
+   "name": "The Guardian",
+   "origin": "media"
   },
   "amnesty": {
    "name": "Amnesty International",
@@ -223,6 +227,10 @@
   "unicef": {
    "name": "UNICEF",
    "origin": "un"
+  },
+  "ynet": {
+   "name": "Ynet and Yedioth Ahronoth",
+   "origin": "israeli-media"
   },
   "addameer": {
    "name": "Addameer",
@@ -252,10 +260,6 @@
    "name": "World Health Organization",
    "origin": "un"
   },
-  "ynet": {
-   "name": "Ynet and Yedioth Ahronoth",
-   "origin": "israeli-media"
-  },
   "costs-of-war": {
    "name": "Brown University Costs of War",
    "origin": "academic"
@@ -283,10 +287,6 @@
   "sipri": {
    "name": "SIPRI",
    "origin": "academic"
-  },
-  "guardian": {
-   "name": "The Guardian",
-   "origin": "media"
   },
   "un-sr": {
    "name": "UN Special Rapporteurs",
@@ -348,6 +348,10 @@
    "name": "Al Mezan Centre for Human Rights",
    "origin": "palestinian-ngo"
   },
+  "ap": {
+   "name": "Associated Press",
+   "origin": "media"
+  },
   "badil": {
    "name": "BADIL Resource Center",
    "origin": "palestinian-ngo"
@@ -384,6 +388,10 @@
    "name": "Peer-reviewed journals and university presses",
    "origin": "academic"
   },
+  "reuters": {
+   "name": "Reuters",
+   "origin": "media"
+  },
   "trt": {
    "name": "TRT World",
    "origin": "media"
@@ -408,8 +416,8 @@
    "name": "+972 Magazine and Local Call",
    "origin": "israeli-media"
   },
-  "ap": {
-   "name": "Associated Press",
+  "bbc": {
+   "name": "BBC",
    "origin": "media"
   },
   "cst": {
@@ -460,10 +468,6 @@
    "name": "Rashid Khalidi, The Hundred Years War on Palestine",
    "origin": "academic"
   },
-  "reuters": {
-   "name": "Reuters",
-   "origin": "media"
-  },
   "nyt": {
    "name": "The New York Times",
    "origin": "media"
@@ -491,10 +495,6 @@
   "adalah": {
    "name": "Adalah",
    "origin": "israeli-ngo"
-  },
-  "bbc": {
-   "name": "BBC",
-   "origin": "media"
   },
   "cogat": {
    "name": "COGAT",
@@ -634,9 +634,9 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 399,
+   "stands": 412,
    "falls": 30,
-   "share": 93.0
+   "share": 93.2
   },
   {
    "id": "no-israeli",
@@ -648,9 +648,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 355,
+   "stands": 368,
    "falls": 74,
-   "share": 82.8
+   "share": 83.3
   },
   {
    "id": "no-un",
@@ -659,9 +659,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 362,
+   "stands": 375,
    "falls": 67,
-   "share": 84.4
+   "share": 84.8
   },
   {
    "id": "no-ngo",
@@ -672,9 +672,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 325,
+   "stands": 338,
    "falls": 104,
-   "share": 75.8
+   "share": 76.5
   },
   {
    "id": "israeli-western-only",
@@ -687,9 +687,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 232,
+   "stands": 245,
    "falls": 197,
-   "share": 54.1
+   "share": 55.4
   }
  ],
  "entries": [
@@ -859,7 +859,7 @@
    ],
    "date": "2024–2026 (continuously updated)",
    "attribution": "Al-Haq FAI Unit, alhaq.org/FAI-Unit/26257.html.",
-   "statement": 61
+   "statement": 63
   },
   {
    "id": "children-2015-2017-2019-2020",
@@ -2045,7 +2045,7 @@
    ],
    "date": "23 October 2023",
    "attribution": "Euro-Med Human Rights Monitor.",
-   "statement": 43
+   "statement": 44
   },
   {
    "id": "statements-amnesty-international",
@@ -2106,7 +2106,7 @@
    ],
    "date": "November 2023",
    "attribution": "UN Independent International Commission of Inquiry on the OPT, A/HRC/60/CRP.3, 16 September 2025.",
-   "statement": 53
+   "statement": 54
   },
   {
    "id": "statements-breaking-the-silence",
@@ -2126,7 +2126,7 @@
    ],
    "date": "April 2025",
    "attribution": "Breaking the Silence, “The Perimeter”, April 2025.",
-   "statement": 75
+   "statement": 77
   },
   {
    "id": "statements-francesca-albanese",
@@ -2147,7 +2147,7 @@
    ],
    "date": "March 2024",
    "attribution": "UN Special Rapporteur, “Anatomy of a Genocide”, A/HRC/55/73, March 2024.",
-   "statement": 59
+   "statement": 61
   },
   {
    "id": "statements-genocide-watch",
@@ -2167,7 +2167,7 @@
    ],
    "date": "July 2026",
    "attribution": "Genocide Watch report, July 2026.",
-   "statement": 111
+   "statement": 117
   },
   {
    "id": "statements-human-rights-watch",
@@ -2207,7 +2207,7 @@
    ],
    "date": "31 August 2025",
    "attribution": "International Association of Genocide Scholars resolution, 31 August/1 September 2025.",
-   "statement": 92
+   "statement": 95
   },
   {
    "id": "statements-lemkin-institute-for-genocide-prevention",
@@ -2227,7 +2227,7 @@
    ],
    "date": "1 September 2026",
    "attribution": "Lemkin Institute for Genocide Prevention, 1 September 2026.",
-   "statement": 117
+   "statement": 124
   },
   {
    "id": "statements-ohad-tal",
@@ -2247,7 +2247,7 @@
    ],
    "date": "23 October 2023",
    "attribution": "Euro-Med Human Rights Monitor.",
-   "statement": 45
+   "statement": 46
   },
   {
    "id": "statements-ohchr",
@@ -2267,7 +2267,7 @@
    ],
    "date": "4 September 2026",
    "attribution": "OHCHR report, 4 September 2026.",
-   "statement": 120
+   "statement": 127
   },
   {
    "id": "statements-physicians-for-human-rights-israel",
@@ -2288,7 +2288,7 @@
    ],
    "date": "July 2025",
    "attribution": "Physicians for Human Rights Israel, July 2025; B'Tselem, “Our Genocide”, July 2025.",
-   "statement": 87
+   "statement": 90
   },
   {
    "id": "statements-rossing-center-for-education-and-dialogue-federica-sasso",
@@ -2308,7 +2308,7 @@
    ],
    "date": "30 March 2026",
    "attribution": "Rossing Center, Annual Report 2025; Jerusalem Story, 5 April 2026",
-   "statement": 103
+   "statement": 108
   },
   {
    "id": "statements-tally-gotliv",
@@ -2348,7 +2348,7 @@
    ],
    "date": "29 April 2026",
    "attribution": "OHCHR press release, 1 May 2026 (statement dated 29 April 2026)",
-   "statement": 104
+   "statement": 109
   },
   {
    "id": "statements-un-independent-international-commission-of-inquiry-on-the-o",
@@ -2368,7 +2368,7 @@
    ],
    "date": "16 September 2025",
    "attribution": "OHCHR press release and report, 16 September 2025.",
-   "statement": 96
+   "statement": 99
   },
   {
    "id": "statements-un-independent-international-commission-of-inquiry-on-the-o-2",
@@ -2389,7 +2389,7 @@
    ],
    "date": "23 June 2026",
    "attribution": "UN Commission of Inquiry, A/HRC/62/CRP.2, 23 June 2026; press conference, Geneva, the same day.",
-   "statement": 110
+   "statement": 116
   },
   {
    "id": "statements-yesh-din",
@@ -2409,7 +2409,7 @@
    ],
    "date": "2005–2026 (cumulative monitoring)",
    "attribution": "Yesh Din, law enforcement data sheets, 2005–2026.",
-   "statement": 69
+   "statement": 71
   },
   {
    "id": "statements-yuli-novak",
@@ -2429,7 +2429,7 @@
    ],
    "date": "28 July 2025",
    "attribution": "B'Tselem, “Our Genocide”, 28 July 2025",
-   "statement": 89
+   "statement": 92
   },
   {
    "id": "long-record-1947",
@@ -3476,7 +3476,7 @@
    ],
    "date": "October 2023",
    "attribution": "Euro-Med Human Rights Monitor; Law for Palestine database.",
-   "statement": 41
+   "statement": 42
   },
   {
    "id": "statements-yoav-kisch",
@@ -3593,7 +3593,7 @@
    ],
    "date": "13 August 2024",
    "attribution": "Haaretz, 13 August 2024.",
-   "statement": 66
+   "statement": 68
   },
   {
    "id": "statements-bezalel-smotrich-6",
@@ -3613,7 +3613,7 @@
    ],
    "date": "September 2025",
    "attribution": "Times of Israel; Jerusalem Post; Crisis Group, “Israel's Quickening Annexation of the West Bank”, October 2025.",
-   "statement": 93
+   "statement": 96
   },
   {
    "id": "statements-ehud-barak",
@@ -3651,7 +3651,7 @@
    ],
    "date": "18 June 2026",
    "attribution": "Haaretz, 18 June 2026.",
-   "statement": 108
+   "statement": 114
   },
   {
    "id": "statements-ehud-olmert-4",
@@ -3671,7 +3671,7 @@
    ],
    "date": "10 September 2026",
    "attribution": "Radio 103FM; Times of Israel, 10 September 2026.",
-   "statement": 123
+   "statement": 131
   },
   {
    "id": "statements-hana-bendcowsky",
@@ -3690,7 +3690,7 @@
    ],
    "date": "27 March 2025",
    "attribution": "The Times of Israel, 27 March 2025",
-   "statement": 73
+   "statement": 75
   },
   {
    "id": "statements-israeli-public-opinion",
@@ -3709,7 +3709,7 @@
    ],
    "date": "2025",
    "attribution": "Times of Israel, 2025.",
-   "statement": 83
+   "statement": 86
   },
   {
    "id": "statements-itamar-ben-gvir-2",
@@ -3728,7 +3728,7 @@
    ],
    "date": "September 2025",
    "attribution": "Israeli media, September 2025.",
-   "statement": 95
+   "statement": 98
   },
   {
    "id": "statements-itamar-ben-gvir-3",
@@ -3748,7 +3748,7 @@
    ],
    "date": "30 March 2026",
    "attribution": "The Times of Israel and The Jerusalem Post, 30 March 2026",
-   "statement": 102
+   "statement": 107
   },
   {
    "id": "statements-maj-gen-avi-bluth",
@@ -3768,7 +3768,7 @@
    ],
    "date": "4 May 2026",
    "attribution": "Haaretz; Times of Israel, 4 May 2026.",
-   "statement": 105
+   "statement": 110
   },
   {
    "id": "statements-maj-gen-ghassan-alian",
@@ -3863,7 +3863,7 @@
    ],
    "date": "2 December 2024",
    "attribution": "Democrat TV and Kan, reported 1-2 December 2024",
-   "statement": 70
+   "statement": 72
   },
   {
    "id": "statements-moshe-ya-alon-2",
@@ -3882,7 +3882,7 @@
    ],
    "date": "February 2026",
    "attribution": "Reported February 2026",
-   "statement": 98
+   "statement": 103
   },
   {
    "id": "statements-peter-beinart",
@@ -3901,10 +3901,10 @@
    ],
    "date": "9 September 2026",
    "attribution": "Zeteo, “Are Democrats Turning Against Israel – or Jews?”, 9 September 2026. Report §21.8.",
-   "statement": 122
+   "statement": 130
   },
   {
-   "id": "statements-shlomo-karhi",
+   "id": "statements-shlomo-karhi-2",
    "claim": "Shlomo Karhi",
    "kind": "statement",
    "file": "statements.json",
@@ -3920,7 +3920,7 @@
    ],
    "date": "2025",
    "attribution": "Israeli media, 2025.",
-   "statement": 81
+   "statement": 84
   },
   {
    "id": "statements-yitzhak-rabin",
@@ -3958,7 +3958,7 @@
    ],
    "date": "September 2025",
    "attribution": "Times of Israel; Arab News, September 2025.",
-   "statement": 97
+   "statement": 101
   },
   {
    "id": "children-2001",
@@ -4610,7 +4610,7 @@
    ],
    "date": "10 May 2025",
    "attribution": "Nir Hasson, Haaretz, 10 May 2025, “Knesset Debate Reveals Not Everyone Thinks Starving Gazan Children Is a Bad Thing.”",
-   "statement": 77
+   "statement": 80
   },
   {
    "id": "statements-lod-district-court-israel",
@@ -5092,6 +5092,19 @@
    "attribution": "Gaza Ministry of Health and OCHA, via the Tech For Palestine open datasets; the same series this site plots on the Gaza and West Bank pages."
   },
   {
+   "id": "figures-arms-export-licences-to-israel-suspended-in-september-2024",
+   "claim": "Arms export licences to Israel suspended in September 2024",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "value": 30,
+   "attribution": "Hansard, HC Deb 2 September 2024 (David Lammy)",
+   "context": "The United Kingdom's own record"
+  },
+  {
    "id": "figures-christians-in-gaza-7-october-2023",
    "claim": "Christians in Gaza, 7 October 2023",
    "kind": "figure",
@@ -5118,6 +5131,71 @@
    "context": "Gaza's Christian community"
   },
   {
+   "id": "figures-contracts-with-the-atomic-weapons-establishment",
+   "claim": "Contracts with the Atomic Weapons Establishment",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "value": 15,
+   "attribution": "The Nerve, 27 January 2026",
+   "context": "One vendor, two states"
+  },
+  {
+   "id": "figures-nhs-federated-data-platform-contract",
+   "claim": "NHS Federated Data Platform contract",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "value": 330,
+   "attribution": "House of Commons Science, Innovation and Technology Committee, 3 June 2026",
+   "context": "One vendor, two states"
+  },
+  {
+   "id": "figures-single-issue-arms-licences-approved-october-to-december-2024",
+   "claim": "Single-issue arms licences approved, October to December 2024",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "value": 127.6,
+   "attribution": "Campaign Against Arms Trade, licensing analysis, 2025",
+   "context": "The United Kingdom's own record"
+  },
+  {
+   "id": "figures-uk-government-contracts-held-by-palantir",
+   "claim": "UK government contracts held by Palantir",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "value": 34,
+   "attribution": "The Nerve, 27 January 2026",
+   "context": "One vendor, two states"
+  },
+  {
+   "id": "figures-value-of-those-contracts-since-2020",
+   "claim": "Value of those contracts since 2020",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "value": 670,
+   "attribution": "The Nerve, 27 January 2026",
+   "context": "One vendor, two states"
+  },
+  {
    "id": "statements-jewish-council-of-australia",
    "claim": "Jewish Council of Australia",
    "kind": "statement",
@@ -5128,7 +5206,7 @@
    "falls": [],
    "date": "2026",
    "attribution": "Jewish Council of Australia, petition “Don't let Israel define antisemitism”.",
-   "statement": 114
+   "statement": 121
   },
   {
    "id": "statements-supreme-court-of-new-south-wales-fagan-j",
@@ -5141,7 +5219,7 @@
    "falls": [],
    "date": "17 August 2026",
    "attribution": "State of New South Wales v Farhat [2026] NSWSC 985, Fagan J; NSW Parliament, 31 August 2026.",
-   "statement": 116
+   "statement": 123
   },
   {
    "id": "children-1947-1966",
@@ -5205,6 +5283,23 @@
    "context": "United States arms to Israel since 7 October 2023"
   },
   {
+   "id": "figures-british-military-flights-to-israel-in-the-new-government-s-fir",
+   "claim": "British military flights to Israel in the new government's first six weeks",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "trade-press"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 10,
+   "attribution": "Novara Media, 3 September 2026",
+   "context": "The United Kingdom's own record"
+  },
+  {
    "id": "long-record-cumulative-bilateral-aid-1946-to-february-2022",
    "claim": "Cumulative bilateral aid, 1946 to February 2022",
    "kind": "figure",
@@ -5254,6 +5349,23 @@
    "value": 158.7,
    "attribution": "Congressional Research Service, RL33222, March 2023",
    "context": "United States military aid"
+  },
+  {
+   "id": "figures-donations-to-the-defence-secretary-from-donors-connected-to-pa",
+   "claim": "Donations to the Defence Secretary from donors connected to Palantir and to licensed exporters to Israel",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "trade-press"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 51750,
+   "attribution": "Novara Media, 23 July 2026",
+   "context": "The United Kingdom's own record"
   },
   {
    "id": "long-record-emergency-supplemental-fy2024",
@@ -5408,6 +5520,23 @@
    "value": 17.9,
    "attribution": "Costs of War Project, Brown University, October 2024",
    "context": "United States military aid"
+  },
+  {
+   "id": "figures-ministry-of-defence-contract-placed-without-competition",
+   "claim": "Ministry of Defence contract placed without competition",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "mee"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "value": 240.6,
+   "attribution": "Contracts Finder award notice, 23 January 2026; Middle East Eye, 3 July 2026",
+   "context": "One vendor, two states"
   },
   {
    "id": "long-record-missile-defence-annual",
@@ -5597,6 +5726,42 @@
    "statement": 8
   },
   {
+   "id": "statements-alex-karp",
+   "claim": "Alex Karp",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "aljazeera",
+    "mee"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "5 May 2025",
+   "attribution": "The National, 6 May 2025; Middle East Eye and Al Jazeera video records of the exchange; Palantir press release, 12 January 2024.",
+   "statement": 78
+  },
+  {
+   "id": "statements-andy-burnham",
+   "claim": "Andy Burnham",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "guardian",
+    "trade-press"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "4 June 2026",
+   "attribution": "Guardian, 4 June 2026; Novara Media, 27 July and 3 September 2026.",
+   "statement": 113
+  },
+  {
    "id": "statements-avi-shlaim",
    "claim": "Avi Shlaim",
    "kind": "statement",
@@ -5645,7 +5810,7 @@
    "falls": [],
    "date": "14 September 2026",
    "attribution": "Benjamin Netanyahu on Telegram, 14 September 2026; Al Jazeera, 14 September 2026; The National, 14–15 September 2026; The Telegraph, 14 September 2026.",
-   "statement": 126
+   "statement": 134
   },
   {
    "id": "statements-bezalel-smotrich-5",
@@ -5662,7 +5827,7 @@
    "falls": [],
    "date": "6 May 2025",
    "attribution": "Al Jazeera, 6 May 2025.",
-   "statement": 76
+   "statement": 79
   },
   {
    "id": "statements-donald-j-trump",
@@ -5682,7 +5847,7 @@
    "falls": [],
    "date": "4 February 2025",
    "attribution": "Al Jazeera; CNN; NPR; Fortune, 5 February 2025.",
-   "statement": 71
+   "statement": 73
   },
   {
    "id": "statements-ilan-papp",
@@ -5716,7 +5881,7 @@
    "falls": [],
    "date": "26 January 2024",
    "attribution": "ICJ, Order of 26 January 2024, South Africa v. Israel.",
-   "statement": 57
+   "statement": 59
   },
   {
    "id": "statements-international-court-of-justice-2",
@@ -5733,7 +5898,7 @@
    "falls": [],
    "date": "19 July 2024",
    "attribution": "ICJ Advisory Opinion, 19 July 2024, paras. 224–229; separate opinions of Judges Nolte, Iwasawa and Tladi.",
-   "statement": 64
+   "statement": 66
   },
   {
    "id": "statements-international-criminal-court-pre-trial-chamber-i",
@@ -5750,7 +5915,7 @@
    "falls": [],
    "date": "21 November 2024",
    "attribution": "ICC Pre-Trial Chamber I, 21 November 2024.",
-   "statement": 68
+   "statement": 70
   },
   {
    "id": "statements-itamar-ben-gvir-6",
@@ -5771,7 +5936,7 @@
    "falls": [],
    "date": "c. 16 August 2026",
    "attribution": "Al Jazeera, 16 August 2026; CBS News; Euronews; ABC News; Truthout, 16–17 August 2026.",
-   "statement": 115
+   "statement": 122
   },
   {
    "id": "statements-itamar-ben-gvir-7",
@@ -5788,7 +5953,7 @@
    "falls": [],
    "date": "3 September 2026",
    "attribution": "Al Arabiya; Irish Times; Al Jazeera, 3 September 2026.",
-   "statement": 119
+   "statement": 126
   },
   {
    "id": "statements-michal-waldiger",
@@ -5805,7 +5970,43 @@
    "falls": [],
    "date": "13 May 2025",
    "attribution": "Middle East Eye, 13 May 2025; Israeli and international media.",
-   "statement": 78
+   "statement": 81
+  },
+  {
+   "id": "statements-sadiq-khan",
+   "claim": "Sadiq Khan",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "guardian"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "17 September 2025",
+   "attribution": "Guardian; Evening Standard, 17–18 September 2025.",
+   "statement": 100
+  },
+  {
+   "id": "statements-sir-keir-starmer",
+   "claim": "Sir Keir Starmer",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "bbc",
+    "guardian",
+    "mee"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "11 October 2023",
+   "attribution": "LBC, 11 October 2023; Guardian, BBC and Middle East Eye coverage, 11–20 October 2023.",
+   "statement": 37
   },
   {
    "id": "statements-theodor-herzl",
@@ -5823,6 +6024,23 @@
    "date": "1896",
    "attribution": "Theodor Herzl, Der Judenstaat, 1896.",
    "statement": 1
+  },
+  {
+   "id": "statements-wes-streeting",
+   "claim": "Wes Streeting",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "trade-press"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "22 July 2026",
+   "attribution": "Bloomberg; Jewish Chronicle; Middle East Monitor, 22 July 2026; Novara Media, 10 February 2026 (the leaked message).",
+   "statement": 119
   },
   {
    "id": "statements-yitzhak-yezernitzky-yitzhak-shamir",
@@ -5857,7 +6075,7 @@
    "falls": [],
    "date": "12 September 2026",
    "attribution": "Venice Film Festival closing ceremony, 12 September 2026; Variety; Deadline; Al Jazeera, 14 September 2026.",
-   "statement": 124
+   "statement": 132
   },
   {
    "id": "long-record-1946",
@@ -6180,6 +6398,25 @@
    "context": "Today"
   },
   {
+   "id": "figures-further-licences-approved-in-the-two-months-after-that-suspens",
+   "claim": "Further licences approved in the two months after that suspension",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "cia-archive",
+    "trade-press"
+   ],
+   "origins": [
+    "archive",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 34,
+   "attribution": "Declassified UK, 2024-25",
+   "context": "The United Kingdom's own record"
+  },
+  {
    "id": "long-record-gaza",
    "claim": "Gaza",
    "kind": "figure",
@@ -6256,6 +6493,25 @@
    "context": "Today"
   },
   {
+   "id": "figures-raf-and-contractor-surveillance-flights-identified-over-or-nea",
+   "claim": "RAF and contractor surveillance flights identified over or near Gaza",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "cia-archive",
+    "trade-press"
+   ],
+   "origins": [
+    "archive",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 623,
+   "attribution": "Action on Armed Violence / Declassified UK, 2025",
+   "context": "The United Kingdom's own record"
+  },
+  {
    "id": "conduct-record-recorded-ceasefire-violations",
    "claim": "Recorded ceasefire violations",
    "kind": "figure",
@@ -6311,7 +6567,7 @@
    "falls": [],
    "date": "August 2025",
    "attribution": "aChord Center, Hebrew University; Haaretz; Middle East Eye, August 2025.",
-   "statement": 90
+   "statement": 93
   },
   {
    "id": "statements-american-council-for-judaism",
@@ -6349,7 +6605,7 @@
    "falls": [],
    "date": "5 November 2023",
    "attribution": "Israeli radio, 5 November 2023; international wire coverage.",
-   "statement": 50
+   "statement": 51
   },
   {
    "id": "statements-amit-halevi",
@@ -6369,7 +6625,7 @@
    "falls": [],
    "date": "7 July 2024",
    "attribution": "Kan 11, 7 July 2024; clip circulated with English subtitles from 9 July 2024 (Middle East Eye; Younis Tirawi); quoted in Euronews, 3 December 2024.",
-   "statement": 63
+   "statement": 65
   },
   {
    "id": "statements-arthur-ruppin",
@@ -6407,7 +6663,7 @@
    "falls": [],
    "date": "November 2023",
    "attribution": "Israeli television, November 2023; Law for Palestine database.",
-   "statement": 52
+   "statement": 53
   },
   {
    "id": "statements-avi-shlaim-2",
@@ -6427,7 +6683,7 @@
    "falls": [],
    "date": "July 2025",
    "attribution": "Jacobin, July 2025; Journal of Holy Land and Palestine Studies, 2025–2026; Avi Shlaim, Genocide in Gaza (Irish Pages Press, 2024). Report §23.3.",
-   "statement": 82
+   "statement": 85
   },
   {
    "id": "statements-avigdor-lieberman",
@@ -6465,7 +6721,7 @@
    "falls": [],
    "date": "3 November 2023",
    "attribution": "Letter of 3 November 2023, reported by The Jerusalem Post; translated in Al-Haq's compilation “Statements by Israeli Officials, Soldiers and Civil Society on Genocide”, January 2024.",
-   "statement": 49
+   "statement": 50
   },
   {
    "id": "statements-benjamin-netanyahu-4",
@@ -6484,7 +6740,7 @@
    "falls": [],
    "date": "May 2025",
    "attribution": "Times of Israel liveblog, May 2025; International Commission of Jurists analysis.",
-   "statement": 79
+   "statement": 82
   },
   {
    "id": "statements-benjamin-netanyahu-5",
@@ -6505,7 +6761,7 @@
    "falls": [],
    "date": "28 May 2026",
    "attribution": "Al Jazeera; Times of Israel; CNN; Middle East Eye, 28 May 2026.",
-   "statement": 107
+   "statement": 112
   },
   {
    "id": "statements-bezalel-smotrich",
@@ -6543,7 +6799,7 @@
    "falls": [],
    "date": "2023",
    "attribution": "Israeli media, 2023; Law for Palestine database.",
-   "statement": 48
+   "statement": 49
   },
   {
    "id": "statements-bezalel-smotrich-3",
@@ -6562,7 +6818,7 @@
    "falls": [],
    "date": "August 2024",
    "attribution": "Israeli media; Al Jazeera, August 2024.",
-   "statement": 67
+   "statement": 69
   },
   {
    "id": "statements-bezalel-smotrich-4",
@@ -6583,7 +6839,7 @@
    "falls": [],
    "date": "7 April 2025",
    "attribution": "Israel National News; Ynetnews; NPR; Press TV, April 2025.",
-   "statement": 74
+   "statement": 76
   },
   {
    "id": "statements-bezalel-smotrich-7",
@@ -6602,7 +6858,7 @@
    "falls": [],
    "date": "5 March 2026",
    "attribution": "Israeli and Lebanese media, 5 March 2026; Lemkin Institute Red Flag Alert, “Israel in Lebanon”, March 2026.",
-   "statement": 100
+   "statement": 105
   },
   {
    "id": "statements-bezalel-smotrich-8",
@@ -6621,7 +6877,7 @@
    "falls": [],
    "date": "May 2026",
    "attribution": "Jerusalem Post; Chatham House, “Israel's accelerating de facto annexation of the West Bank”, April 2026.",
-   "statement": 106
+   "statement": 111
   },
   {
    "id": "statements-central-conference-of-american-rabbis",
@@ -6662,6 +6918,26 @@
    "statement": 4
   },
   {
+   "id": "statements-ed-miliband",
+   "claim": "Ed Miliband",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "ynet",
+    "aljazeera"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "8 September 2026",
+   "attribution": "Hansard, HC Deb 8 September 2026; Al Jazeera, 8 September 2026; Times of Israel (full speech text); Jewish Chronicle; Ynet, 9 September 2026.",
+   "statement": 129
+  },
+  {
    "id": "statements-ehud-olmert",
    "claim": "Ehud Olmert",
    "kind": "statement",
@@ -6697,7 +6973,7 @@
    "falls": [],
    "date": "12 October 2023",
    "attribution": "Read to the International Court of Justice by advocate Tembeka Ngcukaitobi for South Africa, 11 January 2024; reported by Middle East Eye and the World Socialist Web Site.",
-   "statement": 37
+   "statement": 38
   },
   {
    "id": "statements-gabor-mat",
@@ -6717,7 +6993,7 @@
    "falls": [],
    "date": "2024",
    "attribution": "Interview with Ahmed Shihab-Eldin, 2024; The Real News Network; Al Jazeera, 26 June 2025. Report §23.3.",
-   "statement": 62
+   "statement": 64
   },
   {
    "id": "statements-golda-meir",
@@ -6756,7 +7032,7 @@
    "falls": [],
    "date": "14 September 2025",
    "attribution": "The Hollywood Reporter; Deadline; NBC News, September 2025. Report §23.4.",
-   "statement": 94
+   "statement": 97
   },
   {
    "id": "statements-hanoch-milwidsky",
@@ -6776,7 +7052,7 @@
    "falls": [],
    "date": "29 July 2024",
    "attribution": "CBS News, 30 July 2024; Jerusalem Post, 29–30 July 2024; Al Jazeera, 9 August 2024.",
-   "statement": 65
+   "statement": 67
   },
   {
    "id": "statements-hanoch-milwidsky-2",
@@ -6795,7 +7071,7 @@
    "falls": [],
    "date": "16 September 2026",
    "attribution": "Channel 13, 16–17 September 2026; Anadolu Agency, 18 September 2026; Middle East Monitor, 17 September 2026; Middle East Eye, 19 September 2026.",
-   "statement": 129
+   "statement": 137
   },
   {
    "id": "statements-isaac-herzog",
@@ -6814,7 +7090,7 @@
    "falls": [],
    "date": "13 October 2023",
    "attribution": "Euro-Med Human Rights Monitor; multiple Israeli outlets, 13 October 2023.",
-   "statement": 39
+   "statement": 40
   },
   {
    "id": "statements-israel-katz",
@@ -6833,7 +7109,7 @@
    "falls": [],
    "date": "12 October 2023",
    "attribution": "Israeli media, 12 October 2023; Euro-Med Human Rights Monitor.",
-   "statement": 38
+   "statement": 39
   },
   {
    "id": "statements-israel-katz-3",
@@ -6852,7 +7128,7 @@
    "falls": [],
    "date": "March 2026",
    "attribution": "Times of Israel; Common Dreams; Taipei Times, March–April 2026.",
-   "statement": 101
+   "statement": 106
   },
   {
    "id": "statements-israel-katz-4",
@@ -6871,7 +7147,7 @@
    "falls": [],
    "date": "2 September 2026",
    "attribution": "Times of Israel; Al Jazeera, 2 September 2026; US Senator Chris Van Hollen: “Now the Israeli Minister of Defense confirmed that's the goal.”",
-   "statement": 118
+   "statement": 125
   },
   {
    "id": "statements-itamar-ben-gvir",
@@ -6890,7 +7166,7 @@
    "falls": [],
    "date": "2023",
    "attribution": "Israeli media, 2023; Law for Palestine database.",
-   "statement": 47
+   "statement": 48
   },
   {
    "id": "statements-itamar-ben-gvir-4",
@@ -6912,7 +7188,7 @@
    "falls": [],
    "date": "19 June 2026",
    "attribution": "Euronews; JNS; Al Jazeera; Middle East Eye; Mediaite; The Daily Caller, 19 June 2026.",
-   "statement": 109
+   "statement": 115
   },
   {
    "id": "statements-itamar-ben-gvir-5",
@@ -6934,7 +7210,7 @@
    "falls": [],
    "date": "30–31 July 2026",
    "attribution": "Al-Quds; Middle East Eye; France 24; JNS; Times of Israel, 30–31 July 2026.",
-   "statement": 113
+   "statement": 120
   },
   {
    "id": "statements-law-for-palestine",
@@ -6954,7 +7230,7 @@
    "falls": [],
    "date": "4 January 2024 (continuously updated)",
    "attribution": "Law for Palestine, 4 January 2024; ReliefWeb; TRT World.",
-   "statement": 56
+   "statement": 58
   },
   {
    "id": "statements-lieutenant-general-eyal-zamir-2",
@@ -6974,7 +7250,7 @@
    "falls": [],
    "date": "14 September 2026",
    "attribution": "Times of Israel, 14 September 2026; Ynet, 14 September 2026; Al Jazeera, 14 September 2026; VINnews, 14 September 2026.",
-   "statement": 128
+   "statement": 136
   },
   {
    "id": "statements-lt-gen-rafael-eitan",
@@ -7012,7 +7288,7 @@
    "falls": [],
    "date": "November 2023",
    "attribution": "Yedioth Ahronoth, November 2023; translated and reported by The New Arab and others.",
-   "statement": 54
+   "statement": 55
   },
   {
    "id": "statements-maj-gen-gadi-eisenkot",
@@ -7052,7 +7328,7 @@
    "falls": [],
    "date": "9 December 2023",
    "attribution": "The New Yorker, 9 December 2023; Jewish Telegraphic Agency; Democracy Now!, 15 December 2023. Report §23.3.",
-   "statement": 55
+   "statement": 57
   },
   {
    "id": "statements-may-golan",
@@ -7071,7 +7347,7 @@
    "falls": [],
    "date": "13 October 2023",
    "attribution": "Euro-Med Human Rights Monitor; Israeli media, October 2023.",
-   "statement": 40
+   "statement": 41
   },
   {
    "id": "statements-meirav-ben-ari",
@@ -7090,7 +7366,7 @@
    "falls": [],
    "date": "16 October 2023",
    "attribution": "Knesset session video of 16 October 2023, timestamped and translated by Jonathan Ofir for Mondoweiss; republished by Truthout. The National rendered the line as “The children of Gaza brought it upon themselves.”",
-   "statement": 42
+   "statement": 43
   },
   {
    "id": "statements-mike-huckabee",
@@ -7109,7 +7385,7 @@
    "falls": [],
    "date": "5 September 2026",
    "attribution": "Times of Israel; wire coverage, 5 September 2026.",
-   "statement": 121
+   "statement": 128
   },
   {
    "id": "statements-miki-zohar",
@@ -7129,7 +7405,7 @@
    "falls": [],
    "date": "13 September 2026",
    "attribution": "Miki Zohar on X, 13 September 2026; Haaretz, 13 September 2026; Al Jazeera, 14 September 2026; The National; AFP.",
-   "statement": 125
+   "statement": 133
   },
   {
    "id": "statements-miki-zohar-2",
@@ -7148,7 +7424,7 @@
    "falls": [],
    "date": "14 September 2026",
    "attribution": "Al Jazeera, 14 September 2026; Times of Israel, 14 September 2026; Penal Law 5737-1977, ss. 91, 97–100.",
-   "statement": 127
+   "statement": 135
   },
   {
    "id": "statements-moshe-feiglin",
@@ -7168,7 +7444,7 @@
    "falls": [],
    "date": "c. 20 May 2025",
    "attribution": "Middle East Eye; TRT World; Antiwar.com; Maariv, May 2025.",
-   "statement": 80
+   "statement": 83
   },
   {
    "id": "statements-nachala-settler-movement-march-28-ministers-and-mks",
@@ -7188,7 +7464,7 @@
    "falls": [],
    "date": "19 July 2026",
    "attribution": "CNN (“Israel's far-right openly boasts of resettling Gaza as election looms”); +972 Magazine; Times of Israel, 19 July 2026.",
-   "statement": 112
+   "statement": 118
   },
   {
    "id": "statements-naomi-klein",
@@ -7207,7 +7483,7 @@
    "falls": [],
    "date": "23 April 2024",
    "attribution": "The Guardian, 24 April 2024. Report §23.4.",
-   "statement": 60
+   "statement": 62
   },
   {
    "id": "statements-nissim-vaturi",
@@ -7249,6 +7525,46 @@
    "statement": 35
   },
   {
+   "id": "statements-richard-tice",
+   "claim": "Richard Tice",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "cia-archive",
+    "mee",
+    "trade-press"
+   ],
+   "origins": [
+    "archive",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "September 2025",
+   "attribution": "Middle East Eye, Imran Mulla, 1 July 2026; Declassified UK, April and June 2026.",
+   "statement": 102
+  },
+  {
+   "id": "statements-shlomo-karhi",
+   "claim": "Shlomo Karhi",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "reuters",
+    "ap"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "27 November 2023",
+   "attribution": "Shlomo Karhi, statement on X, 27 November 2023; Reuters; Associated Press; Times of Israel, 27–28 November 2023.",
+   "statement": 56
+  },
+  {
    "id": "statements-tally-gotliv-2",
    "claim": "Tally Gotliv",
    "kind": "statement",
@@ -7265,7 +7581,7 @@
    "falls": [],
    "date": "23 October 2023",
    "attribution": "Euro-Med Human Rights Monitor; Israeli press, October 2023.",
-   "statement": 44
+   "statement": 45
   },
   {
    "id": "statements-vladimir-jabotinsky",
@@ -7303,7 +7619,7 @@
    "falls": [],
    "date": "5 November 2023",
    "attribution": "Galey Israel, 5 November 2023; official translation in Al-Haq's compilation “Statements by Israeli Officials, Soldiers and Civil Society on Genocide”, January 2024.",
-   "statement": 51
+   "statement": 52
   },
   {
    "id": "statements-yitzhak-rabin-2",
@@ -7607,7 +7923,7 @@
    "falls": [],
    "date": "28 October 2023",
    "attribution": "National broadcast, 28 October 2023; cited in South Africa's ICJ application, the UN Commission of Inquiry and the IAGS resolution.",
-   "statement": 46
+   "statement": 47
   },
   {
    "id": "statements-ehud-olmert-2",
@@ -7629,7 +7945,7 @@
    "falls": [],
    "date": "13 July 2025",
    "attribution": "The Guardian, 13 July 2025; CNN, 14 July 2025; The Times of Israel. Report §6.3A, §21.8.",
-   "statement": 85
+   "statement": 88
   },
   {
    "id": "statements-geocartography-knowledge-group-penn-state-university",
@@ -7652,7 +7968,7 @@
    "falls": [],
    "date": "March 2025",
    "attribution": "Published in Haaretz; Geopolitical Economy Report, 30 May 2025; Middle East Eye; Genocide Watch; TRT World.",
-   "statement": 72
+   "statement": 74
   },
   {
    "id": "statements-israel-katz-2",
@@ -7674,7 +7990,7 @@
    "falls": [],
    "date": "7 July 2025",
    "attribution": "Briefing to Israeli reporters, 7 July 2025; The Guardian; The Times of Israel; Al Jazeera satellite analysis, 13 July 2025. Report §6.3A.",
-   "statement": 84
+   "statement": 87
   },
   {
    "id": "statements-jonathan-glazer",
@@ -7695,7 +8011,7 @@
    "falls": [],
    "date": "10 March 2024",
    "attribution": "The Hollywood Reporter; Variety; Times of Israel, March–April 2024. Report §23.4.",
-   "statement": 58
+   "statement": 60
   },
   {
    "id": "statements-maj-gen-aharon-haliva",
@@ -7716,7 +8032,7 @@
    "falls": [],
    "date": "August 2025",
    "attribution": "Channel 12, August 2025; UN Commission of Inquiry; Law for Palestine database.",
-   "statement": 91
+   "statement": 94
   },
   {
    "id": "statements-yair-lapid",
@@ -7737,7 +8053,7 @@
    "falls": [],
    "date": "13 July 2025",
    "attribution": "Israeli Army Radio, 13 July 2025; The Times of Israel. Report §6.3A, §21.8.",
-   "statement": 86
+   "statement": 89
   },
   {
    "id": "long-record-military-government-over-palestinian-citizens-of-israel",
@@ -7868,7 +8184,7 @@
    "falls": [],
    "date": "February 2026",
    "attribution": "Jewish Federations of North America / Burson, published February 2026 (Jewish Insider; JTA; Times of Israel); The Washington Post, September 2025. Report §23.5.",
-   "statement": 99
+   "statement": 104
   },
   {
    "id": "statements-lieutenant-general-eyal-zamir",
@@ -7891,7 +8207,7 @@
    "falls": [],
    "date": "July 2025",
    "attribution": "Israel's High Court of Justice, July 2025; The Wall Street Journal; The Times of Israel. Report §6.3A.",
-   "statement": 88
+   "statement": 91
   },
   {
    "id": "conduct-record-since-the-ceasefire",

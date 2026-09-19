@@ -1161,5 +1161,96 @@
     "source": "United Nations Security Council veto list"
    }
   ]
+ },
+ "uk_complicity": {
+  "title": "The United Kingdom's own record",
+  "subtitle": "What British ministers said set against what British departments licensed, flew and paid for, 2023-2026.",
+  "ref": "§13.3A",
+  "items": [
+   {
+    "label": "RAF and contractor surveillance flights identified over or near Gaza",
+    "value": 623,
+    "note": "at least 606 RAF Shadow R1 sorties from RAF Akrotiri plus 17 flown by US defence contractors, 3 December 2023 to 25 July 2025; the Ministry of Defence refuses to disclose the total or the imagery",
+    "source": "Action on Armed Violence / Declassified UK, 2025"
+   },
+   {
+    "label": "Arms export licences to Israel suspended in September 2024",
+    "value": 30,
+    "note": "of about 350 extant licences, with F-35 components expressly excluded from the suspension",
+    "source": "Hansard, HC Deb 2 September 2024 (David Lammy)"
+   },
+   {
+    "label": "Further licences approved in the two months after that suspension",
+    "value": 34,
+    "note": "the licensing record does not fall after the government states on the floor of the House that the clear-risk test is met",
+    "source": "Declassified UK, 2024-25"
+   },
+   {
+    "label": "Single-issue arms licences approved, October to December 2024",
+    "value": 127.6,
+    "prefix": "£",
+    "suffix": "m",
+    "note": "more than the totals for 2020, 2021, 2022 and 2023 combined",
+    "source": "Campaign Against Arms Trade, licensing analysis, 2025"
+   },
+   {
+    "label": "British military flights to Israel in the new government's first six weeks",
+    "value": 10,
+    "note": "20 July to 3 September 2026, under a Prime Minister who had declined to call the conduct genocide",
+    "source": "Novara Media, 3 September 2026"
+   },
+   {
+    "label": "Donations to the Defence Secretary from donors connected to Palantir and to licensed exporters to Israel",
+    "value": 51750,
+    "prefix": "£",
+    "note": "£20,000 from a Quadrature Capital adviser in June 2026 and £31,750 across seven donations from an adviser to the majority owner of a firm holding two export licences to Israel",
+    "source": "Novara Media, 23 July 2026"
+   }
+  ]
+ },
+ "palantir_uk": {
+  "title": "One vendor, two states",
+  "subtitle": "The company that contracted with Israel's Ministry of Defence in January 2024, measured inside the British state.",
+  "ref": "§13.8",
+  "items": [
+   {
+    "label": "UK government contracts held by Palantir",
+    "value": 34,
+    "note": "across more than ten departments and public bodies; the figure is a floor, not a total",
+    "source": "The Nerve, 27 January 2026"
+   },
+   {
+    "label": "Value of those contracts since 2020",
+    "value": 670,
+    "prefix": "£",
+    "suffix": "m",
+    "note": "at least; no parliamentary committee has been able to quantify the full exposure",
+    "source": "The Nerve, 27 January 2026"
+   },
+   {
+    "label": "NHS Federated Data Platform contract",
+    "value": 330,
+    "prefix": "£",
+    "suffix": "m",
+    "note": "awarded November 2023 after about £60m of Covid-era NHS contracts placed without competition; the initial commitment breaks on 15 February 2027",
+    "source": "House of Commons Science, Innovation and Technology Committee, 3 June 2026"
+   },
+   {
+    "label": "Ministry of Defence contract placed without competition",
+    "value": 240.6,
+    "prefix": "£",
+    "suffix": "m",
+    "note": "reporting differs on the date: one account places the award in September 2025, while the published record shows signature on 30 December 2025 and the notice on 23 January 2026",
+    "source": "Contracts Finder award notice, 23 January 2026; Middle East Eye, 3 July 2026"
+   },
+   {
+    "label": "Contracts with the Atomic Weapons Establishment",
+    "value": 15,
+    "prefix": "£",
+    "suffix": "m",
+    "note": "approximately; the establishment maintains the United Kingdom's nuclear deterrent",
+    "source": "The Nerve, 27 January 2026"
+   }
+  ]
  }
 }

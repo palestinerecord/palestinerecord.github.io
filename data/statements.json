@@ -670,6 +670,20 @@
    "significance": "“Everything” is not a military objective. The statement describes an outcome — the elimination of a place and the conditions of its collective life — rather than the defeat of an armed force."
   },
   {
+   "speaker": "Sir Keir Starmer",
+   "role": "Leader of the Opposition, United Kingdom (Prime Minister, July 2024 – June 2026)",
+   "date": "11 October 2023",
+   "sort": "2023-10-11",
+   "cat": [
+    "starvation"
+   ],
+   "tier": "Allied government",
+   "quote": "I think that Israel does have that right. It is an ongoing situation.",
+   "context": "Asked on LBC by Nick Ferrari whether a siege of Gaza was appropriate — “cutting off power, cutting off water” — two days after Defence Minister Yoav Gallant's “complete siege” order. On 20 October 2023, after sustained objection inside his own party, Starmer said: “I was not saying that Israel had the right to cut off water, food, fuel or medicines.” The original answer was reframed as a misunderstanding of the question rather than withdrawn as a misstatement.",
+   "source": "LBC, 11 October 2023; Guardian, BBC and Middle East Eye coverage, 11–20 October 2023.",
+   "significance": "The conduct endorsed here is, in substance, the conduct for which the International Criminal Court issued arrest warrants on 21 November 2024, charging starvation of civilians as a method of warfare. The speaker was a former Director of Public Prosecutions and a King's Counsel in international law, and became Prime Minister of a state supplying F-35 components nine months later."
+  },
+  {
    "speaker": "Ezra Yachin",
    "role": "Reservist mobilised by the IDF to address troops; veteran of the Lehi militia and of the Deir Yassin massacre of April 1948",
    "date": "12 October 2023",
@@ -929,6 +943,20 @@
    "context": "From an article headed “Let us not be intimidated by the world”, published in the Hebrew edition of Yedioth Ahronoth while the international agencies were warning that the collapse of water and sanitation would produce exactly such epidemics. Eiland had earlier argued that the population of northern Gaza should be given the choice of leaving or starving.",
    "source": "Yedioth Ahronoth, November 2023; translated and reported by The New Arab and others.",
    "significance": "Disease is treated as an instrument of the campaign rather than a consequence to be mitigated. Article II(c) of the Genocide Convention covers deliberately inflicting on a group conditions of life calculated to bring about its physical destruction, and the author is a former national security adviser writing in the country's largest-circulation paper, not an anonymous account."
+  },
+  {
+   "speaker": "Shlomo Karhi",
+   "role": "Minister of Communications, Israel",
+   "date": "27 November 2023",
+   "sort": "2023-11-27",
+   "cat": [
+    "warcrimes"
+   ],
+   "tier": "Cabinet",
+   "quote": "Starlink satellite units can only be operated in Israel with the approval of the Israeli Ministry of Communications, including the Gaza Strip.",
+   "context": "Announced as a “principle understanding” reached with Elon Musk during Musk's visit to Israel. By February 2024 the single authorised deployment inside Gaza was a terminal serving the Emirati field hospital in Rafah. Israeli bombardment had by then repeatedly severed Gaza's terrestrial communications.",
+   "source": "Shlomo Karhi, statement on X, 27 November 2023; Reuters; Associated Press; Times of Israel, 27–28 November 2023.",
+   "significance": "Establishes by the operator's own agreement, rather than by inference, that the one alternative network available to a population whose communications were being cut was made conditional on the permission of the belligerent cutting them — bearing directly on access to emergency services and on the survivability of documentation."
   },
   {
    "speaker": "Masha Gessen",
@@ -1243,6 +1271,21 @@
    "context": "From “The Perimeter: Soldiers' testimonies from the Gaza Buffer Zone 2023–2024”, based on interviews with dozens of soldiers. The report documents the razing of roughly 16% of the Gaza Strip to create a buffer zone at least a kilometre deep: “The mission given to soldiers in the field… was to create an empty, completely flat expanse about a kilometer wide along the Gaza side of the border fence.”",
    "source": "Breaking the Silence, “The Perimeter”, April 2025.",
    "significance": "A kill zone whose boundary the population it kills has no way of knowing. The soldiers' own account establishes that the destruction was systematic and ordered, not incidental to fighting. Later testimony collected by the organisation describes “retrospective incrimination” — seeking evidence connecting the dead to Hamas after a strike, in order to justify it."
+  },
+  {
+   "speaker": "Alex Karp",
+   "role": "Chief Executive Officer, Palantir Technologies",
+   "date": "5 May 2025",
+   "sort": "2025-05-05",
+   "cat": [
+    "dehumanisation",
+    "warcrimes"
+   ],
+   "tier": "Corporate",
+   "quote": "Mostly terrorists, that's true.",
+   "context": "Reply to a protester at the Hill & Valley Forum in Washington who told him “your AI and technology from Palantir kills Palestinians”. Karp has separately said of the company's products that “our product is used, on occasion, to kill people”. Palantir signed a strategic partnership with Israel's Ministry of Defence on 12 January 2024, after holding its board meeting in Tel Aviv, to supply technology for what it called war-related missions.",
+   "source": "The National, 6 May 2025; Middle East Eye and Al Jazeera video records of the exchange; Palantir press release, 12 January 2024.",
+   "significance": "Not a denial that the technology kills Palestinians but a characterisation of who is killed — offered by the chief executive of a company that is simultaneously the data-integration layer of the NHS, the Atomic Weapons Establishment and the armed forces of the United Kingdom."
   },
   {
    "speaker": "Bezalel Smotrich",
@@ -1561,6 +1604,20 @@
    "significance": "The first UN body to make an affirmative genocide finding. It expressly noted it had not yet fully assessed statements by Ben-Gvir and Smotrich, and recommended they be assessed for incitement under Article III(c). Israel's ambassador in Geneva called the finding a “libellous rant”."
   },
   {
+   "speaker": "Sadiq Khan",
+   "role": "Mayor of London",
+   "date": "17 September 2025",
+   "sort": "2025-09-17",
+   "cat": [
+    "genocide"
+   ],
+   "tier": "Allied government",
+   "quote": "I think it's inescapable to draw the conclusion in Gaza we are seeing before our very eyes a genocide.",
+   "context": "People's Question Time. The Scottish Labour leader Anas Sarwar had used the term earlier the same month. No serving UK Prime Minister, Foreign Secretary or Defence Secretary has used it.",
+   "source": "Guardian; Evening Standard, 17–18 September 2025.",
+   "significance": "The senior elected officeholder of the supplier state to adopt the characterisation, and the contrast that measures the positions of those holding the offices that control the exports."
+  },
+  {
    "speaker": "Yitzhak Wasserlauf",
    "role": "Minister for the Development of the Negev and Galilee (Otzma Yehudit)",
    "date": "September 2025",
@@ -1574,6 +1631,20 @@
    "context": "Response to the recognition of Palestine by the United Kingdom, Canada and Australia.",
    "source": "Times of Israel; Arab News, September 2025.",
    "significance": "Denial of the group's existence stated as government position, in direct response to the international community's affirmation of it."
+  },
+  {
+   "speaker": "Richard Tice",
+   "role": "Deputy Leader, Reform UK; Member of Parliament",
+   "date": "September 2025",
+   "sort": "2025-09-30",
+   "cat": [
+    "starvation"
+   ],
+   "tier": "Allied legislature",
+   "quote": "I have seen enough with my own eyes… to be convinced that this is simply untrue.",
+   "context": "On the famine in Gaza, after a visit to Israel funded by Reform Friends of Israel that included a meeting with Foreign Minister Gideon Sa'ar. Middle East Eye reported on 1 July 2026 that Reform Friends of Israel was established under Jason Pearlman, who was at the time the serving international media adviser to Israel's President Isaac Herzog; its funders have not been disclosed. A separate Reform delegation travelled to Israel and the occupied Golan in November 2025, arranged by an organisation paid more than £50,000 by Israel's foreign ministry.",
+   "source": "Middle East Eye, Imran Mulla, 1 July 2026; Declassified UK, April and June 2026.",
+   "significance": "Denial of the famine by a legislator of a supplier state, in the period the IPC had classified Gaza governorate as Famine (Phase 5), following a visit paid for by a body founded by a serving adviser to the Israeli presidency."
   },
   {
    "speaker": "Moshe Ya'alon",
@@ -1725,6 +1796,20 @@
    "significance": "A prime minister already under ICC arrest warrant confirming on camera the seizure of 60% of Gaza beyond ceasefire terms and a directive to reach 70%, in direct defiance of the ICJ's July 2024 order that the occupation end. “First 70 percent” is not a limit; it is a sequence."
   },
   {
+   "speaker": "Andy Burnham",
+   "role": "Prime Minister of the United Kingdom (from 20 July 2026); then Mayor of Greater Manchester",
+   "date": "4 June 2026",
+   "sort": "2026-06-04",
+   "cat": [
+    "genocide"
+   ],
+   "tier": "Allied government",
+   "quote": "I can't judge things of that enormity from where I am as mayor of Greater Manchester.",
+   "context": "Answering the Guardian's direct question whether what was happening in Gaza was a genocide, six weeks before he was invited to form a government. On 10 July 2026 he said Labour “didn't get it right” on Gaza and should have condemned Israel's conduct far earlier. Novara Media reported on 3 September 2026 that ten British military flights to Israel were recorded in his first six weeks in office.",
+   "source": "Guardian, 4 June 2026; Novara Media, 27 July and 3 September 2026.",
+   "significance": "The refusal is recorded because of what followed it: the speaker held, seven weeks later, precisely the office from which such a judgment can be made, and the record does not show the characterisation being adopted after the constraint he cited had gone."
+  },
+  {
    "speaker": "Ehud Olmert",
    "role": "Former Prime Minister of Israel (2006–2009)",
    "date": "18 June 2026",
@@ -1798,6 +1883,20 @@
    "context": "At least 28 serving ministers and MKs — nearly half the governing coalition, including Smotrich, Ben-Gvir and Communications Minister Shlomo Karhi — marched to the Gaza border demanding the re-establishment of the settlements of Nisanit, Dugit and Elei Sinai. The IDF declared the area a closed military zone; the ministers marched through it regardless.",
    "source": "CNN (“Israel's far-right openly boasts of resettling Gaza as election looms”); +972 Magazine; Times of Israel, 19 July 2026.",
    "significance": "Half a government publicly demanding the resettlement of territory from which 1.9 million Palestinians have been displaced. It is evidence of the specific intent to prevent the return of the protected group and to render the displacement permanent, and would, if executed, constitute the war crime of population transfer into occupied territory."
+  },
+  {
+   "speaker": "Wes Streeting",
+   "role": "Secretary of State for Defence, United Kingdom",
+   "date": "22 July 2026",
+   "sort": "2026-07-22",
+   "cat": [
+    "warcrimes"
+   ],
+   "tier": "Allied government",
+   "quote": "I also hold Israel, as a friend and ally, to the same standard that we hold ourselves to… That is the standard that I think, I fear, they have fallen short of.",
+   "context": "Farnborough International Airshow, on his second day in the office responsible for British arms-export licensing. Asked about the leaked July 2025 message to Peter Mandelson in which he wrote that Israel was “committing war crimes before our eyes” and “talks the language of ethnic cleansing”, he replied: “I'm not going to pretend I didn't make those comments.” On exports he said decisions would follow a “clear framework” and that “those are not my decisions alone.”",
+   "source": "Bloomberg; Jewish Chronicle; Middle East Monitor, 22 July 2026; Novara Media, 10 February 2026 (the leaked message).",
+   "significance": "A serving defence minister of a supplier state declining to withdraw a private assessment that the recipient is committing war crimes, while the licensing framework he administers continues to authorise the exports. The following day Novara Media reported he had received more than £50,000 from donors connected to Palantir and to firms holding military export licences to Israel."
   },
   {
    "speaker": "Itamar Ben-Gvir",
@@ -1932,6 +2031,21 @@
    "context": "Statement on settler attacks at the West Bank village of Turmus Ayya. Huckabee has repeatedly and publicly used the terms “Israeli terrorists” and “horrific acts of terror” of settlement-related violence during 2026, including at Qusra.",
    "source": "Times of Israel; wire coverage, 5 September 2026.",
    "significance": "An admission from the government most closely allied with Israel, and from an ambassador with a long record of support for the settlement enterprise, that settler violence meets the definition of terrorism."
+  },
+  {
+   "speaker": "Ed Miliband",
+   "role": "Secretary of State for Foreign, Commonwealth and Development Affairs, United Kingdom",
+   "date": "8 September 2026",
+   "sort": "2026-09-08",
+   "cat": [
+    "annexation",
+    "cleansing"
+   ],
+   "tier": "Allied government",
+   "quote": "That means a double prohibition on arms sales.",
+   "context": "Commons statement announcing what he called a comprehensive reset: the whole occupation described as unlawful, “settler terrorists” accused of ethnic cleansing indulged by the Israeli government, an import ban on settlement goods extending to services such as insurance (in force in six to nine months), and the retention of the 30 suspended arms licences plus refusal of licences for arms contributing to the occupation. The F-35 component exemption survived, on the stated ground that the aircraft “do not materially support the occupation”. He condemned BDS for targeting the Israeli economy as a whole and left the genocide question to the international courts.",
+   "source": "Hansard, HC Deb 8 September 2026; Al Jazeera, 8 September 2026; Times of Israel (full speech text); Jewish Chronicle; Ynet, 9 September 2026.",
+   "significance": "The first British Foreign Secretary to describe the occupation in its entirety as unlawful, which is the ICJ's position of 19 July 2024. The carve-out preserves the single largest documented British material contribution, and settlement produce is a small, largely agricultural share of the trade the ban reaches. Israel responded by closing the British Consulate in Jerusalem and banning twelve British MPs."
   },
   {
    "speaker": "Peter Beinart",
