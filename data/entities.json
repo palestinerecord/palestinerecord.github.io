@@ -3,7 +3,7 @@
   "title": "The accountability ledger",
   "note": "Persons and companies named in the record, with what a court, a government or a shareholder has actually done about them. Statements are joined from the statements file, the sections are found in the report itself, and the sanctions are the measures on the world-positions file. Nothing on this page is asserted that is not already somewhere else on this site.",
   "source": "report-final.md; data/statements.json; data/world-positions.json; Rome Statute of the International Criminal Court, Articles 86, 89(1) and 127(1)",
-  "persons": 72,
+  "persons": 73,
   "companies": 11,
   "warrants": 3,
   "sanctioned": 10,
@@ -57,9 +57,9 @@
     46,
     49,
     53,
-    77,
-    105,
-    124
+    79,
+    107,
+    126
    ],
    "mentions": [
     {
@@ -261,12 +261,12 @@
    "statements": [
     22,
     48,
-    66,
-    73,
-    75,
-    91,
-    98,
-    104
+    67,
+    74,
+    76,
+    93,
+    100,
+    106
    ],
    "mentions": [
     {
@@ -357,12 +357,12 @@
    "tier": "Cabinet",
    "statements": [
     47,
-    93,
-    100,
-    107,
-    111,
+    95,
+    102,
+    109,
     113,
-    117
+    115,
+    119
    ],
    "mentions": [
     {
@@ -786,9 +786,9 @@
    "tier": "Cabinet",
    "statements": [
     38,
-    82,
-    99,
-    116
+    84,
+    101,
+    118
    ],
    "mentions": [
     {
@@ -834,9 +834,9 @@
    "tier": "Former head of government",
    "statements": [
     15,
-    83,
-    106,
-    121
+    85,
+    108,
+    123
    ],
    "mentions": [
     {
@@ -869,8 +869,8 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    86,
-    126
+    88,
+    128
    ],
    "mentions": [
     {
@@ -903,8 +903,8 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    69,
-    96
+    70,
+    98
    ],
    "mentions": [
     {
@@ -926,7 +926,7 @@
    "tier": "Israeli historian",
    "statements": [
     17,
-    80
+    82
    ],
    "mentions": [
     {
@@ -953,8 +953,8 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    123,
-    125
+    125,
+    127
    ],
    "mentions": [
     {
@@ -987,8 +987,8 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    64,
-    127
+    65,
+    129
    ],
    "mentions": [
     {
@@ -1025,6 +1025,21 @@
    "sanctions": []
   },
   {
+   "id": "amit-halevi",
+   "name": "Amit Halevi",
+   "role": "Member of Knesset (Likud); deputy chairman, Foreign Affairs and Defence Committee",
+   "class": "government",
+   "tier": "Legislature",
+   "statements": [
+    63,
+    77
+   ],
+   "mentions": [],
+   "sections": 0,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "tally-gotliv",
    "name": "Tally Gotliv",
    "role": "Member of Knesset (Likud)",
@@ -1046,7 +1061,7 @@
    "class": "allied",
    "tier": "Allied head of state",
    "statements": [
-    70
+    71
    ],
    "mentions": [
     {
@@ -1127,7 +1142,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    103
+    105
    ],
    "mentions": [
     {
@@ -1352,7 +1367,7 @@
    "class": "dissent",
    "tier": "Jewish public figure",
    "statements": [
-    92
+    94
    ],
    "mentions": [
     {
@@ -1412,7 +1427,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    119
+    121
    ],
    "mentions": [
     {
@@ -1466,7 +1481,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    89
+    91
    ],
    "mentions": [
     {
@@ -1514,7 +1529,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    120
+    122
    ],
    "mentions": [
     {
@@ -1649,7 +1664,7 @@
    "class": "dissent",
    "tier": "Israeli journalist",
    "statements": [
-    122
+    124
    ],
    "mentions": [
     {
@@ -1739,7 +1754,7 @@
    "class": "dissent",
    "tier": "Israeli human rights organisation",
    "statements": [
-    72
+    73
    ],
    "mentions": [
     {
@@ -1760,7 +1775,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    79
+    81
    ],
    "mentions": [
     {
@@ -1781,7 +1796,7 @@
    "class": "government",
    "tier": "Former head of government",
    "statements": [
-    84
+    86
    ],
    "mentions": [
     {
@@ -1802,7 +1817,7 @@
    "class": "dissent",
    "tier": "Israeli human rights organisation",
    "statements": [
-    87
+    89
    ],
    "mentions": [
     {
@@ -2019,7 +2034,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    76
+    78
    ],
    "mentions": [],
    "sections": 0,
@@ -2047,7 +2062,7 @@
    "class": "government",
    "tier": "Former legislator",
    "statements": [
-    78
+    80
    ],
    "mentions": [],
    "sections": 0,
@@ -2117,7 +2132,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    95
+    97
    ],
    "mentions": [],
    "sections": 0,

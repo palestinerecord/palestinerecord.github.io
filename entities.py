@@ -109,6 +109,7 @@ PERSON_CLASS = {
     'ohad-tal': 'government',
     'michal-waldiger': 'government',
     'hanoch-milwidsky': 'government',
+    'amit-halevi': 'government',
     'yitzhak-kroizer': 'government',
     'meirav-ben-ari': 'government',
     'moshe-feiglin': 'government',
