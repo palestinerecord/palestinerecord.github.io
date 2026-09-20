@@ -6,7 +6,7 @@
  "headline": [
   {
    "label": "Palestinians killed in Gaza",
-   "value": 73910,
+   "value": 73913,
    "suffix": "+",
    "note": "identified killed, Oct 2023 – Sept 2026",
    "source": "Gaza MoH / OCHA",
@@ -25,7 +25,7 @@
   },
   {
    "label": "Injured in Gaza",
-   "value": 174914,
+   "value": 174935,
    "note": "cumulative recorded injuries",
    "source": "Gaza MoH",
    "ref": "§6.3",
@@ -1205,6 +1205,12 @@
     "prefix": "£",
     "note": "£20,000 from a Quadrature Capital adviser in June 2026 and £31,750 across seven donations from an adviser to the majority owner of a firm holding two export licences to Israel",
     "source": "Novara Media, 23 July 2026"
+   },
+   {
+    "label": "Lawyers and legal academics who told the Prime Minister the settlement measures fall short of the UK's legal obligations",
+    "value": 130,
+    "note": "open letter of 15 September 2026, signed by 15 silks and more than 30 solicitors, among them former Lord Justice of Appeal Sir Alan Moses and Michael Mansfield KC",
+    "source": "Novara Media, 15 September 2026; Law Society Gazette, September 2026"
    }
   ]
  },

@@ -83,6 +83,7 @@ ORG_SPEAKERS = {
     'un-committee-on-the-elimination-of-racial-discrimination',
     'un-independent-international-commission-of-inquiry-on-the-opt',
     'yesh-din',
+    '130-lawyers-and-legal-academics',
 }
 
 # The class of every person who speaks in the statements file. The office in the
@@ -146,6 +147,7 @@ PERSON_CLASS = {
     'hana-bendcowsky': 'dissent',
     'yuval-abraham': 'dissent',
     'naomi-klein': 'dissent',
+    'seth-rogen': 'dissent',
     'peter-beinart': 'dissent',
     'masha-gessen': 'dissent',
     'gabor-mate': 'dissent',

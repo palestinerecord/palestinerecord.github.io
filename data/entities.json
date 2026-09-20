@@ -3,7 +3,7 @@
   "title": "The accountability ledger",
   "note": "Persons and companies named in the record, with what a court, a government or a shareholder has actually done about them. Statements are joined from the statements file, the sections are found in the report itself, and the sanctions are the measures on the world-positions file. Nothing on this page is asserted that is not already somewhere else on this site.",
   "source": "report-final.md; data/statements.json; data/world-positions.json; Rome Statute of the International Criminal Court, Articles 86, 89(1) and 127(1)",
-  "persons": 80,
+  "persons": 81,
   "companies": 12,
   "warrants": 3,
   "sanctioned": 10,
@@ -59,12 +59,12 @@
    "class": "government",
    "tier": "Head of government",
    "statements": [
-    47,
-    50,
-    54,
-    82,
-    112,
-    134
+    48,
+    51,
+    55,
+    83,
+    113,
+    135
    ],
    "mentions": [
     {
@@ -169,8 +169,8 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    32,
-    36
+    33,
+    37
    ],
    "mentions": [
     {
@@ -271,13 +271,13 @@
    "tier": "Cabinet",
    "statements": [
     22,
-    49,
-    69,
-    76,
-    79,
-    96,
-    105,
-    111
+    50,
+    70,
+    77,
+    80,
+    97,
+    106,
+    112
    ],
    "mentions": [
     {
@@ -367,13 +367,13 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    48,
-    98,
-    107,
-    115,
-    120,
-    122,
-    126
+    49,
+    99,
+    108,
+    116,
+    121,
+    123,
+    127
    ],
    "mentions": [
     {
@@ -510,7 +510,7 @@
    "class": "accountability",
    "tier": "UN mandate holder",
    "statements": [
-    61
+    62
    ],
    "mentions": [
     {
@@ -802,10 +802,10 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    39,
-    87,
-    106,
-    125
+    40,
+    88,
+    107,
+    126
    ],
    "mentions": [
     {
@@ -851,9 +851,9 @@
    "tier": "Former head of government",
    "statements": [
     15,
-    88,
-    114,
-    131
+    89,
+    115,
+    132
    ],
    "mentions": [
     {
@@ -886,8 +886,8 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    91,
-    136
+    92,
+    137
    ],
    "mentions": [
     {
@@ -920,8 +920,8 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    72,
-    103
+    73,
+    104
    ],
    "mentions": [
     {
@@ -943,7 +943,7 @@
    "tier": "Israeli historian",
    "statements": [
     17,
-    85
+    86
    ],
    "mentions": [
     {
@@ -970,8 +970,8 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    133,
-    135
+    134,
+    136
    ],
    "mentions": [
     {
@@ -1004,8 +1004,8 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    56,
-    84
+    57,
+    85
    ],
    "mentions": [
     {
@@ -1032,8 +1032,8 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    67,
-    137
+    68,
+    139
    ],
    "mentions": [
     {
@@ -1076,8 +1076,8 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    65,
-    80
+    66,
+    81
    ],
    "mentions": [],
    "sections": 0,
@@ -1091,8 +1091,8 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    29,
-    45
+    30,
+    46
    ],
    "mentions": [],
    "sections": 0,
@@ -1106,7 +1106,7 @@
    "class": "allied",
    "tier": "Allied head of state",
    "statements": [
-    73
+    74
    ],
    "mentions": [
     {
@@ -1187,7 +1187,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    110
+    111
    ],
    "mentions": [
     {
@@ -1204,6 +1204,51 @@
     }
    ],
    "sections": 15,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "isaac-herzog",
+   "name": "Isaac Herzog",
+   "role": "President of Israel",
+   "class": "government",
+   "tier": "Head of state",
+   "statements": [
+    41
+   ],
+   "mentions": [
+    {
+     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
+     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 4
+    },
+    {
+     "id": "234-organisations-and-public-statements-2023-2026",
+     "title": "23.4 Organisations and Public Statements (2023-2026)",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 3
+    },
+    {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "153-sanctions-on-israeli-officials",
+     "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "242-the-four-limbs-of-the-case",
+     "title": "24.2 The Four Limbs of the Case",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 2
+    }
+   ],
+   "sections": 13,
    "warrant": null,
    "sanctions": []
   },
@@ -1241,45 +1286,6 @@
    "sanctions": []
   },
   {
-   "id": "isaac-herzog",
-   "name": "Isaac Herzog",
-   "role": "President of Israel",
-   "class": "government",
-   "tier": "Head of state",
-   "statements": [
-    40
-   ],
-   "mentions": [
-    {
-     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
-     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
-     "n": 4
-    },
-    {
-     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
-     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 2
-    },
-    {
-     "id": "153-sanctions-on-israeli-officials",
-     "title": "15.3 Sanctions on Israeli Officials",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 2
-    },
-    {
-     "id": "242-the-four-limbs-of-the-case",
-     "title": "24.2 The Four Limbs of the Case",
-     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
-     "n": 2
-    }
-   ],
-   "sections": 10,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
    "id": "maj-gen-gadi-eisenkot",
    "name": "Maj. Gen. Gadi Eisenkot",
    "role": "IDF Northern Command (later Chief of the General Staff)",
@@ -1313,7 +1319,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    113
+    114
    ],
    "mentions": [
     {
@@ -1364,7 +1370,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    129
+    130
    ],
    "mentions": [
     {
@@ -1475,7 +1481,7 @@
    "class": "dissent",
    "tier": "Holocaust survivor",
    "statements": [
-    64
+    65
    ],
    "mentions": [
     {
@@ -1508,7 +1514,7 @@
    "class": "dissent",
    "tier": "Jewish public figure",
    "statements": [
-    97
+    98
    ],
    "mentions": [
     {
@@ -1535,7 +1541,7 @@
    "class": "dissent",
    "tier": "Jewish public figure",
    "statements": [
-    60
+    61
    ],
    "mentions": [
     {
@@ -1568,7 +1574,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    128
+    129
    ],
    "mentions": [
     {
@@ -1622,7 +1628,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    94
+    95
    ],
    "mentions": [
     {
@@ -1643,7 +1649,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    62
+    63
    ],
    "mentions": [
     {
@@ -1670,7 +1676,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    130
+    131
    ],
    "mentions": [
     {
@@ -1697,13 +1703,40 @@
    "sanctions": []
   },
   {
+   "id": "seth-rogen",
+   "name": "Seth Rogen",
+   "role": "Actor and film producer",
+   "class": "dissent",
+   "tier": "Jewish public figure",
+   "statements": [
+    25
+   ],
+   "mentions": [
+    {
+     "id": "234-organisations-and-public-statements-2023-2026",
+     "title": "23.4 Organisations and Public Statements (2023-2026)",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 2
+    },
+    {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "wes-streeting",
    "name": "Wes Streeting",
    "role": "Secretary of State for Defence, United Kingdom",
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    119
+    120
    ],
    "mentions": [
     {
@@ -1730,7 +1763,7 @@
    "class": "corporate",
    "tier": "Corporate",
    "statements": [
-    78
+    79
    ],
    "mentions": [
     {
@@ -1805,7 +1838,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    57
+    58
    ],
    "mentions": [
     {
@@ -1826,7 +1859,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    37
+    38
    ],
    "mentions": [
     {
@@ -1880,7 +1913,7 @@
    "class": "dissent",
    "tier": "Israeli journalist",
    "statements": [
-    132
+    133
    ],
    "mentions": [
     {
@@ -1970,7 +2003,7 @@
    "class": "dissent",
    "tier": "Israeli human rights organisation",
    "statements": [
-    75
+    76
    ],
    "mentions": [
     {
@@ -1991,7 +2024,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    100
+    101
    ],
    "mentions": [
     {
@@ -2012,7 +2045,7 @@
    "class": "government",
    "tier": "Former head of government",
    "statements": [
-    89
+    90
    ],
    "mentions": [
     {
@@ -2033,7 +2066,7 @@
    "class": "dissent",
    "tier": "Israeli human rights organisation",
    "statements": [
-    92
+    93
    ],
    "mentions": [
     {
@@ -2054,7 +2087,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    44
+    45
    ],
    "mentions": [],
    "sections": 0,
@@ -2068,7 +2101,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    51
+    52
    ],
    "mentions": [],
    "sections": 0,
@@ -2082,7 +2115,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    30
+    31
    ],
    "mentions": [],
    "sections": 0,
@@ -2110,7 +2143,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    53
+    54
    ],
    "mentions": [],
    "sections": 0,
@@ -2124,7 +2157,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    38
+    39
    ],
    "mentions": [],
    "sections": 0,
@@ -2138,7 +2171,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    42
+    43
    ],
    "mentions": [],
    "sections": 0,
@@ -2166,7 +2199,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    55
+    56
    ],
    "mentions": [],
    "sections": 0,
@@ -2180,7 +2213,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    34
+    35
    ],
    "mentions": [],
    "sections": 0,
@@ -2194,7 +2227,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    41
+    42
    ],
    "mentions": [],
    "sections": 0,
@@ -2222,7 +2255,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    43
+    44
    ],
    "mentions": [],
    "sections": 0,
@@ -2250,7 +2283,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    81
+    82
    ],
    "mentions": [],
    "sections": 0,
@@ -2278,7 +2311,7 @@
    "class": "government",
    "tier": "Former legislator",
    "statements": [
-    83
+    84
    ],
    "mentions": [],
    "sections": 0,
@@ -2292,7 +2325,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    31
+    32
    ],
    "mentions": [],
    "sections": 0,
@@ -2306,7 +2339,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    46
+    47
    ],
    "mentions": [],
    "sections": 0,
@@ -2320,7 +2353,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    35
+    36
    ],
    "mentions": [],
    "sections": 0,
@@ -2334,7 +2367,7 @@
    "class": "allied",
    "tier": "Allied legislature",
    "statements": [
-    102
+    103
    ],
    "mentions": [],
    "sections": 0,
@@ -2348,7 +2381,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    52
+    53
    ],
    "mentions": [],
    "sections": 0,
@@ -2362,7 +2395,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    101
+    102
    ],
    "mentions": [],
    "sections": 0,
@@ -2376,7 +2409,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    33
+    34
    ],
    "mentions": [],
    "sections": 0,

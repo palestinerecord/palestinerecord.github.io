@@ -38,7 +38,7 @@
     "id": "israeli-media",
     "label": "Israeli press",
     "sources": 9,
-    "claims": 78
+    "claims": 79
    },
    {
     "id": "un",
@@ -74,7 +74,7 @@
     "id": "media",
     "label": "International press",
     "sources": 22,
-    "claims": 74
+    "claims": 76
    },
    {
     "id": "data-project",
@@ -91,12 +91,12 @@
   ]
  },
  "summary": {
-  "claims": 456,
-  "attributed": 442,
+  "claims": 459,
+  "attributed": 445,
   "unattributed": 14,
   "sources": 127,
   "origins": 14,
-  "multi_source": 171,
+  "multi_source": 173,
   "independent": 146
  },
  "switches": [
@@ -108,9 +108,9 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 412,
+   "stands": 415,
    "falls": 30,
-   "share": 93.2
+   "share": 93.3
   },
   {
    "id": "no-israeli",
@@ -122,9 +122,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 368,
-   "falls": 74,
-   "share": 83.3
+   "stands": 370,
+   "falls": 75,
+   "share": 83.1
   },
   {
    "id": "no-un",
@@ -133,9 +133,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 375,
+   "stands": 378,
    "falls": 67,
-   "share": 84.8
+   "share": 84.9
   },
   {
    "id": "no-ngo",
@@ -146,9 +146,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 338,
+   "stands": 341,
    "falls": 104,
-   "share": 76.5
+   "share": 76.6
   },
   {
    "id": "israeli-western-only",
@@ -161,9 +161,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 245,
+   "stands": 248,
    "falls": 197,
-   "share": 55.4
+   "share": 55.7
   }
  ],
  "sources": [
@@ -184,6 +184,14 @@
    "claims": 42
   },
   {
+   "id": "trade-press",
+   "name": "Entertainment and trade press",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 29
+  },
+  {
    "id": "site-derived",
    "name": "Derived within this record",
    "kind": "derived",
@@ -200,20 +208,12 @@
    "claims": 28
   },
   {
-   "id": "trade-press",
-   "name": "Entertainment and trade press",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 27
-  },
-  {
    "id": "times-of-israel",
    "name": "The Times of Israel",
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
-   "claims": 27
+   "claims": 28
   },
   {
    "id": "israel-tv",
@@ -245,7 +245,7 @@
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
-   "claims": 15
+   "claims": 16
   },
   {
    "id": "mee",
@@ -253,7 +253,7 @@
    "kind": "press",
    "origin": "media",
    "origin_label": "International press",
-   "claims": 15
+   "claims": 16
   },
   {
    "id": "un-coi",
@@ -1187,11 +1187,11 @@
  "files": [
   {
    "file": "figures.json",
-   "claims": 54
+   "claims": 55
   },
   {
    "file": "statements.json",
-   "claims": 138
+   "claims": 140
   },
   {
    "file": "elements.json",
@@ -1243,7 +1243,7 @@
    "file": "figures.json",
    "path": "headline[0]",
    "label": "Palestinians killed in Gaza",
-   "value": 73910,
+   "value": 73913,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
@@ -1273,7 +1273,7 @@
    "file": "figures.json",
    "path": "headline[2]",
    "label": "Injured in Gaza",
-   "value": 174914,
+   "value": 174935,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
@@ -1930,6 +1930,20 @@
   },
   {
    "file": "figures.json",
+   "path": "uk_complicity.items[6]",
+   "label": "Lawyers and legal academics who told the Prime Minister the settlement measures fall short of the UK's legal obligations",
+   "value": 130,
+   "numeric": true,
+   "ref": "",
+   "date": "",
+   "source_text": "Novara Media, 15 September 2026; Law Society Gazette, September 2026",
+   "sources": [
+    "trade-press"
+   ],
+   "id": "figures-lawyers-and-legal-academics-who-told-the-prime-minister-the-se"
+  },
+  {
+   "file": "figures.json",
    "path": "palantir_uk.items[0]",
    "label": "UK government contracts held by Palantir",
    "value": 34,
@@ -2357,6 +2371,21 @@
   {
    "file": "statements.json",
    "path": "items[25]",
+   "label": "Seth Rogen",
+   "value": "As a Jewish person I was fed a huge amount of lies about Israel my entire life. They never tell you that — oh by the way, there were people there. They make it seem like it was just sitting there, like the door's open.",
+   "numeric": false,
+   "ref": "",
+   "date": "27 July 2020",
+   "source_text": "WTF with Marc Maron, episode 1,143, 27 July 2020; Jewish Telegraphic Agency, 28 July and 3 August 2020; Times of Israel, 29 July 2020; Haaretz; Algemeiner, 3 August 2020.",
+   "sources": [
+    "haaretz",
+    "times-of-israel"
+   ],
+   "id": "statements-seth-rogen"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[26]",
    "label": "B'Tselem",
    "value": "This is not democracy plus occupation. This is apartheid between the river and the sea.",
    "numeric": false,
@@ -2370,7 +2399,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[26]",
+   "path": "items[27]",
    "label": "Human Rights Watch",
    "value": "[Israeli authorities are committing] the crimes against humanity of apartheid and persecution.",
    "numeric": false,
@@ -2384,7 +2413,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[27]",
+   "path": "items[28]",
    "label": "Amnesty International",
    "value": "[Israel maintains] a system of oppression and domination [over Palestinians, meeting the international legal definition of apartheid.]",
    "numeric": false,
@@ -2398,7 +2427,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[28]",
+   "path": "items[29]",
    "label": "104 human rights organisations",
    "value": "[The IHRA definition] has often been used to wrongly label criticism of Israel as antisemitic, and thus chill and sometimes suppress, non-violent protest, activism and speech critical of Israel and/or Zionism.",
    "numeric": false,
@@ -2413,7 +2442,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[29]",
+   "path": "items[30]",
    "label": "Tally Gotliv",
    "value": "Bring down buildings! Bomb without distinction!! Stop with this impotence. You have ability. There is worldwide legitimacy! Flatten Gaza. Without mercy! This time, there is no room for mercy.",
    "numeric": false,
@@ -2427,7 +2456,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[30]",
+   "path": "items[31]",
    "label": "Ariel Kallner",
    "value": "Nakba to the enemy now! This day is our Pearl Harbor. We will still learn the lessons. Right now, one goal: Nakba! A Nakba that will overshadow the Nakba of 48. A Nakba in Gaza and a Nakba for anyone who dares to join.",
    "numeric": false,
@@ -2442,7 +2471,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[31]",
+   "path": "items[32]",
    "label": "Nissim Vaturi",
    "value": "Erase Gaza. Nothing else will satisfy us. It is not acceptable that we maintain a terrorist authority next to Israel. Don't leave a child there — expel everyone.",
    "numeric": false,
@@ -2457,7 +2486,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[32]",
+   "path": "items[33]",
    "label": "Yoav Gallant",
    "value": "I have ordered a complete siege on the Gaza Strip. There will be no electricity, no food, no fuel, everything is closed. We are fighting human animals, and we are acting accordingly.",
    "numeric": false,
@@ -2472,7 +2501,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[33]",
+   "path": "items[34]",
    "label": "Yoav Kisch",
    "value": "Those are animals, they have no right to exist. I am not debating the way it will happen, but they need to be exterminated… until we see hundreds of thousands fleeing Gaza, we, the IDF has not achieved its mission.",
    "numeric": false,
@@ -2487,7 +2516,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[34]",
+   "path": "items[35]",
    "label": "Maj. Gen. Ghassan Alian",
    "value": "Human animals must be treated as such. There will be no electricity and no water, there will only be destruction. You wanted hell, you will get hell.",
    "numeric": false,
@@ -2501,7 +2530,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[35]",
+   "path": "items[36]",
    "label": "Rear Admiral Daniel Hagari",
    "value": "The emphasis is on damage and not on accuracy.",
    "numeric": false,
@@ -2517,7 +2546,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[36]",
+   "path": "items[37]",
    "label": "Yoav Gallant",
    "value": "Gaza won't return to what it was before. We will eliminate everything.",
    "numeric": false,
@@ -2532,7 +2561,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[37]",
+   "path": "items[38]",
    "label": "Sir Keir Starmer",
    "value": "I think that Israel does have that right. It is an ongoing situation.",
    "numeric": false,
@@ -2548,7 +2577,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[38]",
+   "path": "items[39]",
    "label": "Ezra Yachin",
    "value": "Be triumphant and finish them off, and don't leave anyone behind. Erase the memory of them.",
    "numeric": false,
@@ -2563,7 +2592,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[39]",
+   "path": "items[40]",
    "label": "Israel Katz",
    "value": "Humanitarian aid to Gaza? No electrical switch will be turned on, no water hydrant will be opened, and no fuel truck will enter Gaza until the Israeli abductees are returned. No one will preach morals to us.",
    "numeric": false,
@@ -2578,7 +2607,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[40]",
+   "path": "items[41]",
    "label": "Isaac Herzog",
    "value": "It is an entire nation out there that is responsible. It is not true this rhetoric about civilians not aware, not involved. It's absolutely not true. They could've risen up, they could have fought against that evil regime.",
    "numeric": false,
@@ -2593,7 +2622,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[41]",
+   "path": "items[42]",
    "label": "May Golan",
    "value": "I don't care about Gaza. I literally don't care at all. They can go out and swim in the sea. I want to see dead bodies of terrorists around Gaza. […] I am personally proud of the ruins of Gaza.",
    "numeric": false,
@@ -2608,7 +2637,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[42]",
+   "path": "items[43]",
    "label": "Galit Distel-Atbaryan",
    "value": "Erase all of Gaza from the face of the earth.",
    "numeric": false,
@@ -2623,7 +2652,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[43]",
+   "path": "items[44]",
    "label": "Meirav Ben-Ari",
    "value": "The children of Gaza have brought this upon themselves.",
    "numeric": false,
@@ -2638,7 +2667,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[44]",
+   "path": "items[45]",
    "label": "Almog Cohen",
    "value": "Destroy a neighborhood in Gaza everyday the abductees are in their hands. If we blink, we run out of global credit. Every day that the abductees are with them, a neighborhood must be destroyed on its inhabitants.",
    "numeric": false,
@@ -2652,7 +2681,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[45]",
+   "path": "items[46]",
    "label": "Tally Gotliv",
    "value": "Without hunger and thirst among the Gazan population, we will not succeed in recruiting collaborators, we will not succeed in recruiting intelligence, or in bribing people with food, drink, medicine, in order to obtain intelligence.",
    "numeric": false,
@@ -2667,7 +2696,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[46]",
+   "path": "items[47]",
    "label": "Ohad Tal",
    "value": "We cannot go back to the same conception… we need to exact a territorial price from them, including returning Jewish settlements at least to the north of Gaza Strip.",
    "numeric": false,
@@ -2681,7 +2710,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[47]",
+   "path": "items[48]",
    "label": "Benjamin Netanyahu",
    "value": "You must remember what Amalek did to you, says our Holy Bible. And we do remember.",
    "numeric": false,
@@ -2697,7 +2726,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[48]",
+   "path": "items[49]",
    "label": "Itamar Ben-Gvir",
    "value": "We will encourage voluntary transfer of all Gazan citizens. We will offer them the opportunity to move to other countries because that land belongs to us.",
    "numeric": false,
@@ -2712,7 +2741,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[49]",
+   "path": "items[50]",
    "label": "Bezalel Smotrich",
    "value": "There are no uninvolved civilians in Gaza.",
    "numeric": false,
@@ -2727,7 +2756,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[50]",
+   "path": "items[51]",
    "label": "Benjamin Netanyahu",
    "value": "This is the war between the sons of light and the sons of darkness. We will not let up on our mission until the light overcomes the darkness.",
    "numeric": false,
@@ -2742,7 +2771,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[51]",
+   "path": "items[52]",
    "label": "Amichai Eliyahu",
    "value": "[Asked whether Israel should drop a nuclear bomb on Gaza:] That's one way.",
    "numeric": false,
@@ -2757,7 +2786,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[52]",
+   "path": "items[53]",
    "label": "Yitzhak Kroizer",
    "value": "The Gaza Strip should be flattened, and there should be one sentence for everyone there — death. […] We have to wipe the Gaza Strip off the map. […] There are no innocents there.",
    "numeric": false,
@@ -2772,7 +2801,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[53]",
+   "path": "items[54]",
    "label": "Avi Dichter",
    "value": "[This is] Gaza Nakba 2023.",
    "numeric": false,
@@ -2787,7 +2816,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[54]",
+   "path": "items[55]",
    "label": "Benjamin Netanyahu",
    "value": "[Letter to Israeli soldiers invoking the biblical war of total annihilation.]",
    "numeric": false,
@@ -2802,7 +2831,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[55]",
+   "path": "items[56]",
    "label": "Maj. Gen. (res.) Giora Eiland",
    "value": "Severe epidemics in the south of the Gaza Strip will bring victory closer.",
    "numeric": false,
@@ -2817,7 +2846,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[56]",
+   "path": "items[57]",
    "label": "Shlomo Karhi",
    "value": "Starlink satellite units can only be operated in Israel with the approval of the Israeli Ministry of Communications, including the Gaza Strip.",
    "numeric": false,
@@ -2833,7 +2862,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[57]",
+   "path": "items[58]",
    "label": "Masha Gessen",
    "value": "For the last seventeen years, Gaza has been a hyperdensely populated, impoverished, walled-in compound where only a small fraction of the population had the right to leave for even a short amount of time — in other words, a ghetto.",
    "numeric": false,
@@ -2849,7 +2878,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[58]",
+   "path": "items[59]",
    "label": "Law for Palestine",
    "value": "500+ instances of Israeli incitement to genocide.",
    "numeric": false,
@@ -2865,7 +2894,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[59]",
+   "path": "items[60]",
    "label": "International Court of Justice",
    "value": "[Israel must] take all measures within its power to prevent and punish the direct and public incitement to commit genocide in relation to members of the Palestinian group in the Gaza Strip.",
    "numeric": false,
@@ -2879,7 +2908,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[60]",
+   "path": "items[61]",
    "label": "Jonathan Glazer",
    "value": "Right now we stand here as men who refute their Jewishness and the Holocaust being hijacked by an occupation, which has led to conflict for so many innocent people — whether the victims of October the 7th in Israel or the ongoing attack on…",
    "numeric": false,
@@ -2895,7 +2924,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[61]",
+   "path": "items[62]",
    "label": "Francesca Albanese",
    "value": "[There are reasonable grounds to believe that the threshold indicating Israel's commission of genocide has been met.]",
    "numeric": false,
@@ -2910,7 +2939,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[62]",
+   "path": "items[63]",
    "label": "Naomi Klein",
    "value": "Too many of our people are worshipping a false idol once again… That false idol is called Zionism. [It] has taken the idea of the promised land and turned it into a deed of sale for a militaristic ethnostate… [it] has betrayed every Jewish…",
    "numeric": false,
@@ -2925,7 +2954,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[63]",
+   "path": "items[64]",
    "label": "Al-Haq Forensic Architecture Investigation Unit",
    "value": "A Registry of Israeli Genocidal Statements on Gaza — over 1,000 instances of incitement and genocidal intent documented since 7 October 2023.",
    "numeric": false,
@@ -2939,7 +2968,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[64]",
+   "path": "items[65]",
    "label": "Gabor Maté",
    "value": "What Israel is doing in Gaza is energetically almost identical to what the Nazis did.",
    "numeric": false,
@@ -2955,7 +2984,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[65]",
+   "path": "items[66]",
    "label": "Amit Halevi",
    "value": "At the same time, 300 terrorists were born in the maternity ward. 300!",
    "numeric": false,
@@ -2971,7 +3000,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[66]",
+   "path": "items[67]",
    "label": "International Court of Justice",
    "value": "[Israel's legislation and measures] impose and serve to maintain a near-complete separation in the West Bank and East Jerusalem between the settler and Palestinian communities [and] constitute a breach of Article 3 of CERD.",
    "numeric": false,
@@ -2985,7 +3014,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[67]",
+   "path": "items[68]",
    "label": "Hanoch Milwidsky",
    "value": "Yes! If he is a Nukhba, everything is legitimate to do! Everything!",
    "numeric": false,
@@ -3001,7 +3030,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[68]",
+   "path": "items[69]",
    "label": "Anonymous IDF officer",
    "value": "In Gaza, human shields are used by Israeli soldiers at least six times a day… almost every platoon [keeps a Palestinian detainee for this purpose].",
    "numeric": false,
@@ -3015,7 +3044,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[69]",
+   "path": "items[70]",
    "label": "Bezalel Smotrich",
    "value": "[Calling for the] total annihilation [of Gaza, invoking the biblical injunction against Amalek.]",
    "numeric": false,
@@ -3030,7 +3059,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[70]",
+   "path": "items[71]",
    "label": "International Criminal Court, Pre-Trial Chamber I",
    "value": "[There are reasonable grounds to believe that Netanyahu and Gallant bear criminal responsibility for] the war crime of starvation as a method of warfare [and crimes against humanity of murder, persecution and other inhumane acts.]",
    "numeric": false,
@@ -3044,7 +3073,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[71]",
+   "path": "items[72]",
    "label": "Yesh Din",
    "value": "[Over 93 per cent of investigations into settler violence against Palestinians are closed without indictment.]",
    "numeric": false,
@@ -3058,7 +3087,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[72]",
+   "path": "items[73]",
    "label": "Moshe Ya'alon",
    "value": "The road we are being led down is conquest, annexation and ethnic cleansing.",
    "numeric": false,
@@ -3072,7 +3101,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[73]",
+   "path": "items[74]",
    "label": "Donald J. Trump",
    "value": "The US will take over the Gaza Strip, and we will do a job with it too… We'll own it… Level the site, and get rid of the destroyed buildings, level it out, create an economic development…",
    "numeric": false,
@@ -3089,7 +3118,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[74]",
+   "path": "items[75]",
    "label": "Geocartography Knowledge Group / Penn State University",
    "value": "82 per cent support the forced expulsion of the entire Palestinian population of Gaza; 47 per cent answered yes when asked whether the Israeli army should act as the biblical Israelites did under Joshua at Jericho — that is, kill all the i…",
    "numeric": false,
@@ -3107,7 +3136,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[75]",
+   "path": "items[76]",
    "label": "Hana Bendcowsky",
    "value": "Being the majority and having our own state comes with responsibilities.",
    "numeric": false,
@@ -3121,7 +3150,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[76]",
+   "path": "items[77]",
    "label": "Bezalel Smotrich",
    "value": "Read my lips: not a single grain of wheat will enter Gaza.",
    "numeric": false,
@@ -3138,7 +3167,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[77]",
+   "path": "items[78]",
    "label": "Breaking the Silence",
    "value": "We decided on a line which is the borderline, past which everyone is a suspect, but it's not clear to me how familiar Palestinians are with this line.",
    "numeric": false,
@@ -3152,7 +3181,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[78]",
+   "path": "items[79]",
    "label": "Alex Karp",
    "value": "Mostly terrorists, that's true.",
    "numeric": false,
@@ -3167,7 +3196,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[79]",
+   "path": "items[80]",
    "label": "Bezalel Smotrich",
    "value": "Gaza will be entirely destroyed [and Palestinians will] leave in great numbers to third countries.",
    "numeric": false,
@@ -3181,7 +3210,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[80]",
+   "path": "items[81]",
    "label": "Amit Halevi",
    "value": "There is no hungry person in Gaza, not even a single child.",
    "numeric": false,
@@ -3196,7 +3225,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[81]",
+   "path": "items[82]",
    "label": "Michal Waldiger",
    "value": "There are no uninvolved in Gaza. […] [Of the children:] Yes, they will also have to kill them, because there is no choice. […] It is a shame that what's been done in Gaza didn't get worse.",
    "numeric": false,
@@ -3210,7 +3239,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[82]",
+   "path": "items[83]",
    "label": "Benjamin Netanyahu",
    "value": "We are destroying more and more houses [so that Palestinians] have nowhere to return… the only obvious result will be Gazans choosing to emigrate outside of the Strip… but our main problem is finding countries to take them in.",
    "numeric": false,
@@ -3225,7 +3254,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[83]",
+   "path": "items[84]",
    "label": "Moshe Feiglin",
    "value": "The enemy is not Hamas… Every child, every baby in Gaza is an enemy. […] [Gaza must be] occupied as well as settled [and] not a single child should remain. […] Every child of this kind to whom you're giving milk now — in 15 years will rape…",
    "numeric": false,
@@ -3241,7 +3270,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[84]",
+   "path": "items[85]",
    "label": "Shlomo Karhi",
    "value": "'Voluntary' is at times a state you impose [on someone] until they give their consent.",
    "numeric": false,
@@ -3255,7 +3284,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[85]",
+   "path": "items[86]",
    "label": "Avi Shlaim",
    "value": "Israel refuses to allow humanitarian aid to civilians and uses starvation as a weapon of war. If that’s not genocide, I don’t know what is.",
    "numeric": false,
@@ -3271,7 +3300,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[86]",
+   "path": "items[87]",
    "label": "Israeli public opinion",
    "value": "65 per cent of Jewish Israelis believe the IDF is held back from achieving its military objectives by adherence to the principle of minimising unnecessary killing and harm to civilians.",
    "numeric": false,
@@ -3285,7 +3314,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[87]",
+   "path": "items[88]",
    "label": "Israel Katz",
    "value": "[The military is to prepare a] humanitarian city [on the ruins of Rafah; an initial 600,000 displaced Palestinians from al-Mawasi would enter within 60 days of a ceasefire, and eventually the whole population of Gaza. Those admitted] would…",
    "numeric": false,
@@ -3302,7 +3331,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[88]",
+   "path": "items[89]",
    "label": "Ehud Olmert",
    "value": "It is a concentration camp. I am sorry. … If they will be deported into the new 'humanitarian city', then you can say that this is part of an ethnic cleansing.",
    "numeric": false,
@@ -3319,7 +3348,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[89]",
+   "path": "items[90]",
    "label": "Yair Lapid",
    "value": "I don't prefer to describe a humanitarian city as a concentration camp, but if exiting it is prohibited, then it is a concentration camp.",
    "numeric": false,
@@ -3335,7 +3364,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[90]",
+   "path": "items[91]",
    "label": "Physicians for Human Rights Israel",
    "value": "[Israel's systematic destruction of Gaza's health system constitutes an act of genocide.]",
    "numeric": false,
@@ -3350,7 +3379,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[91]",
+   "path": "items[92]",
    "label": "Lieutenant General Eyal Zamir",
    "value": "[The army] does not impose forced population expulsions inside or outside the Gaza Strip.",
    "numeric": false,
@@ -3367,7 +3396,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[92]",
+   "path": "items[93]",
    "label": "Yuli Novak",
    "value": "Nothing prepares you for the realization that you are part of a society committing genocide.",
    "numeric": false,
@@ -3381,7 +3410,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[93]",
+   "path": "items[94]",
    "label": "aChord Center, Hebrew University of Jerusalem",
    "value": "76 per cent of Jewish Israelis agree or partially agree that there are no innocents in Gaza.",
    "numeric": false,
@@ -3396,7 +3425,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[94]",
+   "path": "items[95]",
    "label": "Maj. Gen. Aharon Haliva",
    "value": "For everything that happened on October 7, for every one person on October 7, 50 Palestinians must die. […] The fact that there are already 50,000 dead in Gaza is necessary and required for future generations. […] There is no choice — ever…",
    "numeric": false,
@@ -3412,7 +3441,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[95]",
+   "path": "items[96]",
    "label": "International Association of Genocide Scholars",
    "value": "[Israel's actions in Gaza meet the legal definition of genocide under the 1948 Convention.]",
    "numeric": false,
@@ -3426,7 +3455,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[96]",
+   "path": "items[97]",
    "label": "Bezalel Smotrich",
    "value": "The overriding principle for applying sovereignty [to the West Bank] is maximum territory with minimum Arabs… There will never, and can never be, a Palestinian state in our land.",
    "numeric": false,
@@ -3441,7 +3470,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[97]",
+   "path": "items[98]",
    "label": "Hannah Einbinder",
    "value": "It is my obligation as a Jewish person to distinguish Jews from the state of Israel. Our religion and our culture is really separate to this sort of ethnonationalist state.",
    "numeric": false,
@@ -3457,7 +3486,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[98]",
+   "path": "items[99]",
    "label": "Itamar Ben-Gvir",
    "value": "Sovereignty, and also encouraging [Palestinian] voluntary emigration, which we should do also in Judea and Samaria.",
    "numeric": false,
@@ -3471,7 +3500,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[99]",
+   "path": "items[100]",
    "label": "UN Independent International Commission of Inquiry on the OPT",
    "value": "On incitement to genocide, the Commission concludes that Israeli President Isaac Herzog, Prime Minister Benjamin Netanyahu and then Defence Minister Yoav Gallant, have incited the commission of genocide and that Israeli authorities have fa…",
    "numeric": false,
@@ -3485,7 +3514,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[100]",
+   "path": "items[101]",
    "label": "Sadiq Khan",
    "value": "I think it's inescapable to draw the conclusion in Gaza we are seeing before our very eyes a genocide.",
    "numeric": false,
@@ -3499,7 +3528,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[101]",
+   "path": "items[102]",
    "label": "Yitzhak Wasserlauf",
    "value": "The Land of Israel belongs exclusively to the people of Israel — there is no Palestinian people and no Palestinian state.",
    "numeric": false,
@@ -3513,7 +3542,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[102]",
+   "path": "items[103]",
    "label": "Richard Tice",
    "value": "I have seen enough with my own eyes… to be convinced that this is simply untrue.",
    "numeric": false,
@@ -3529,7 +3558,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[103]",
+   "path": "items[104]",
    "label": "Moshe Ya'alon",
    "value": "Yeshayahu Leibowitz was right, and I was wrong.",
    "numeric": false,
@@ -3543,7 +3572,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[104]",
+   "path": "items[105]",
    "label": "Jewish Federations of North America / Burson",
    "value": "Approximately one third of American Jews identify as Zionist and 7 per cent as anti-Zionist, rising to 14 per cent among those aged 18–34, while nearly nine in ten support Israel’s existence as a Jewish and democratic state and 71 per cent…",
    "numeric": false,
@@ -3561,7 +3590,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[105]",
+   "path": "items[106]",
    "label": "Bezalel Smotrich",
    "value": "[Beirut's southern suburb of Dahiyeh will] soon resemble Khan Younis.",
    "numeric": false,
@@ -3576,7 +3605,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[106]",
+   "path": "items[107]",
    "label": "Israel Katz",
    "value": "[The IDF will demolish all homes in Lebanese border villages] in accordance with the Rafah and Beit Hanoun model in Gaza.",
    "numeric": false,
@@ -3591,7 +3620,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[107]",
+   "path": "items[108]",
    "label": "Itamar Ben-Gvir",
    "value": "Today, the State of Israel changes the rules of the game: anyone who murders Jews will no longer breathe freely or enjoy prison privileges. This is a day of justice for the victims and a day of deterrence for our enemies. No more revolving…",
    "numeric": false,
@@ -3606,7 +3635,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[108]",
+   "path": "items[109]",
    "label": "Rossing Center for Education and Dialogue (Federica Sasso)",
    "value": "Year by year, we're noticing a growing normalization of this behavior in public spaces.",
    "numeric": false,
@@ -3620,7 +3649,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[109]",
+   "path": "items[110]",
    "label": "UN Committee on the Elimination of Racial Discrimination",
    "value": "The law marks a grave human rights retrogression and constitutes racial discrimination and segregation against Palestinians, and must be repealed.",
    "numeric": false,
@@ -3634,7 +3663,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[110]",
+   "path": "items[111]",
    "label": "Maj. Gen. Avi Bluth",
    "value": "[On why Palestinian stone-throwers are shot dead while Jewish settlers who throw stones at IDF forces are not:] Soldiers' firing on Jews has profound sociological consequences. […] [Asked directly whether this constitutes discrimination:]…",
    "numeric": false,
@@ -3649,7 +3678,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[111]",
+   "path": "items[112]",
    "label": "Bezalel Smotrich",
    "value": "The time has come to finally erase the lines that separate Areas A, B, and C.",
    "numeric": false,
@@ -3664,7 +3693,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[112]",
+   "path": "items[113]",
    "label": "Benjamin Netanyahu",
    "value": "At this point, we are fully in control of 60 percent of the territory of the Gaza Strip… My directive is to move to [70 percent]… Wait, let's go in order. First 70 percent. Let's start with that.",
    "numeric": false,
@@ -3681,7 +3710,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[113]",
+   "path": "items[114]",
    "label": "Andy Burnham",
    "value": "I can't judge things of that enormity from where I am as mayor of Greater Manchester.",
    "numeric": false,
@@ -3696,7 +3725,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[114]",
+   "path": "items[115]",
    "label": "Ehud Olmert",
    "value": "The State of Israel is conducting an organized, systematic, state-funded campaign of ethnic cleansing and crimes against humanity [in the West Bank]. […] These are unprecedented and harsh accusations against the Israeli government and the…",
    "numeric": false,
@@ -3710,7 +3739,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[115]",
+   "path": "items[116]",
    "label": "Itamar Ben-Gvir",
    "value": "For every tear of an Israeli mother, a thousand Lebanese mothers must weep. All of Lebanon must burn! […] In the Middle East, you don't win with measured responses and restraint — you need to go berserk. To obliterate. To crush the terror.",
    "numeric": false,
@@ -3728,7 +3757,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[116]",
+   "path": "items[117]",
    "label": "UN Independent International Commission of Inquiry on the OPT",
    "value": "Israeli authorities and security forces have deliberately targeted Palestinian children, amounting to genocide and atrocity crimes in the Gaza Strip and war crimes in the West Bank.",
    "numeric": false,
@@ -3743,7 +3772,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[117]",
+   "path": "items[118]",
    "label": "Genocide Watch",
    "value": "[Gaza is at Stage 8 (Persecution), Stage 9 (Extermination) and Stage 10 (Denial) simultaneously.]",
    "numeric": false,
@@ -3757,7 +3786,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[118]",
+   "path": "items[119]",
    "label": "Nachala settler movement march — 28 ministers and MKs",
    "value": "Returning home after 21 years.",
    "numeric": false,
@@ -3773,7 +3802,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[119]",
+   "path": "items[120]",
    "label": "Wes Streeting",
    "value": "I also hold Israel, as a friend and ally, to the same standard that we hold ourselves to… That is the standard that I think, I fear, they have fallen short of.",
    "numeric": false,
@@ -3787,7 +3816,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[120]",
+   "path": "items[121]",
    "label": "Itamar Ben-Gvir",
    "value": "The assassinations in Gaza must continue, the encouragement of emigration must happen. Israel must win.",
    "numeric": false,
@@ -3805,7 +3834,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[121]",
+   "path": "items[122]",
    "label": "Jewish Council of Australia",
    "value": "We the undersigned call on governments and institutions around the country to reject the IHRA definition of antisemitism.",
    "numeric": false,
@@ -3817,7 +3846,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[122]",
+   "path": "items[123]",
    "label": "Itamar Ben-Gvir",
    "value": "I think targeted assassinations should be carried out in Gaza, taking down 30 to 40 every night… There are people there who are not worthy of life. They shouldn't live. They're not even people.",
    "numeric": false,
@@ -3835,7 +3864,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[123]",
+   "path": "items[124]",
    "label": "Supreme Court of New South Wales (Fagan J)",
    "value": "The IHRA proposal is detached from the reality of the common usage and understanding of antisemitism in this country.",
    "numeric": false,
@@ -3847,7 +3876,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[124]",
+   "path": "items[125]",
    "label": "Lemkin Institute for Genocide Prevention",
    "value": "[Ben-Gvir's call for the deliberate killing of “30 to 40” Palestinians nightly] must be identified as direct incitement to commit genocide under Article III(c) of the 1948 Genocide Convention.",
    "numeric": false,
@@ -3861,7 +3890,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[125]",
+   "path": "items[126]",
    "label": "Israel Katz",
    "value": "In the end, there is no real solution for Gaza without this migration… [Israel is prepared to achieve it] by sea, by air, and by every way possible… [Trump] has not canceled it; he has frozen it.",
    "numeric": false,
@@ -3876,7 +3905,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[126]",
+   "path": "items[127]",
    "label": "Itamar Ben-Gvir",
    "value": "Instead of illusions of peace now, we need actions of emigration now.",
    "numeric": false,
@@ -3890,7 +3919,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[127]",
+   "path": "items[128]",
    "label": "OHCHR",
    "value": "[The displacement is] large-scale, long-term and systematic [raising serious concerns of the crime against humanity of forcible transfer.]",
    "numeric": false,
@@ -3904,7 +3933,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[128]",
+   "path": "items[129]",
    "label": "Mike Huckabee",
    "value": "Crime is crime, terror is terror. […] [There must be] severe consequences.",
    "numeric": false,
@@ -3919,7 +3948,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[129]",
+   "path": "items[130]",
    "label": "Ed Miliband",
    "value": "That means a double prohibition on arms sales.",
    "numeric": false,
@@ -3935,7 +3964,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[130]",
+   "path": "items[131]",
    "label": "Peter Beinart",
    "value": "There's a very legitimate debate about whether you can support a state like that and still have progressive [values].",
    "numeric": false,
@@ -3949,7 +3978,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[131]",
+   "path": "items[132]",
    "label": "Ehud Olmert",
    "value": "[Events in the West Bank amount to] no less than attempted ethnic cleansing by a group of murderous criminal terrorists [operating] to harm, steal, destroy, burn and kill Palestinians.",
    "numeric": false,
@@ -3964,7 +3993,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[132]",
+   "path": "items[133]",
    "label": "Yuval Abraham",
    "value": "The Israeli intelligence officers we spoke with talked to us about how this mass killing is systemic: not by accident, but by design.",
    "numeric": false,
@@ -3979,7 +4008,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[133]",
+   "path": "items[134]",
    "label": "Miki Zohar",
    "value": "I will act immediately to revoke the Israeli citizenship of these despicable creators for betraying the state.",
    "numeric": false,
@@ -3995,7 +4024,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[134]",
+   "path": "items[135]",
    "label": "Benjamin Netanyahu",
    "value": "We are fighting global anti-Semitic incitement, and when it comes from within us it is intolerable.",
    "numeric": false,
@@ -4009,7 +4038,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[135]",
+   "path": "items[136]",
    "label": "Miki Zohar",
    "value": "Investigate how the materials were obtained, who is behind them.",
    "numeric": false,
@@ -4024,7 +4053,7 @@
   },
   {
    "file": "statements.json",
-   "path": "items[136]",
+   "path": "items[137]",
    "label": "Lieutenant General Eyal Zamir",
    "value": "It is based on blood libels, deliberate distortion of reality, and false and serious accusations.",
    "numeric": false,
@@ -4040,7 +4069,22 @@
   },
   {
    "file": "statements.json",
-   "path": "items[137]",
+   "path": "items[138]",
+   "label": "130 lawyers and legal academics",
+   "value": "The measures fall far short of the United Kingdom's obligations under international law.",
+   "numeric": false,
+   "ref": "",
+   "date": "15 September 2026",
+   "source_text": "Novara Media, 15 September 2026; Law Society Gazette; Middle East Eye; Arab News, September 2026.",
+   "sources": [
+    "mee",
+    "trade-press"
+   ],
+   "id": "statements-130-lawyers-and-legal-academics"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[139]",
    "label": "Hanoch Milwidsky",
    "value": "We are not like everyone else, and therefore all the laws that apply to everyone cannot apply to us.",
    "numeric": false,
