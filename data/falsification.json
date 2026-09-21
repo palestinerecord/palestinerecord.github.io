@@ -5,15 +5,15 @@
   "source": "data/provenance.json; data/statements.json",
   "repo": "palestinerecord/palestinerecord.github.io",
   "label": "challenge",
-  "entries": 401,
+  "entries": 403,
   "kinds": {
    "figure": 127,
-   "statement": 140,
+   "statement": 142,
    "record": 134
   },
-  "single_origin": 260,
+  "single_origin": 262,
   "exposed": 224,
-  "claims": 459
+  "claims": 461
  },
  "conditions": [
   {
@@ -148,6 +148,10 @@
    "name": "Al Jazeera",
    "origin": "media"
   },
+  "mee": {
+   "name": "Middle East Eye",
+   "origin": "media"
+  },
   "remember-children": {
    "name": "Remember These Children",
    "origin": "data-project"
@@ -155,10 +159,6 @@
   "haaretz": {
    "name": "Haaretz",
    "origin": "israeli-media"
-  },
-  "mee": {
-   "name": "Middle East Eye",
-   "origin": "media"
   },
   "un-coi": {
    "name": "UN Commission of Inquiry on the OPT",
@@ -356,6 +356,10 @@
    "name": "BADIL Resource Center",
    "origin": "palestinian-ngo"
   },
+  "bbc": {
+   "name": "BBC",
+   "origin": "media"
+  },
   "breaking-silence": {
    "name": "Breaking the Silence",
    "origin": "israeli-ngo"
@@ -415,10 +419,6 @@
   "972": {
    "name": "+972 Magazine and Local Call",
    "origin": "israeli-media"
-  },
-  "bbc": {
-   "name": "BBC",
-   "origin": "media"
   },
   "cst": {
    "name": "Community Security Trust",
@@ -634,7 +634,7 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 415,
+   "stands": 417,
    "falls": 30,
    "share": 93.3
   },
@@ -648,9 +648,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 370,
+   "stands": 372,
    "falls": 75,
-   "share": 83.1
+   "share": 83.2
   },
   {
    "id": "no-un",
@@ -659,9 +659,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 378,
+   "stands": 380,
    "falls": 67,
-   "share": 84.9
+   "share": 85.0
   },
   {
    "id": "no-ngo",
@@ -672,9 +672,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 341,
+   "stands": 343,
    "falls": 104,
-   "share": 76.6
+   "share": 76.7
   },
   {
    "id": "israeli-western-only",
@@ -687,9 +687,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 248,
+   "stands": 250,
    "falls": 197,
-   "share": 55.7
+   "share": 55.9
   }
  ],
  "entries": [
@@ -5885,6 +5885,23 @@
    "statement": 80
   },
   {
+   "id": "statements-david-lammy",
+   "claim": "David Lammy",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "bbc"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "17 March 2025",
+   "attribution": "Hansard, HC Deb 17 March 2025; Sky News, 17 March 2025; BBC News, 18 March 2025.",
+   "statement": 140
+  },
+  {
    "id": "statements-donald-j-trump",
    "claim": "Donald J. Trump",
    "kind": "statement",
@@ -6009,6 +6026,24 @@
    "date": "3 September 2026",
    "attribution": "Al Arabiya; Irish Times; Al Jazeera, 3 September 2026.",
    "statement": 127
+  },
+  {
+   "id": "statements-jared-kushner",
+   "claim": "Jared Kushner",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "aljazeera",
+    "mee"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "15 February 2024",
+   "attribution": "Harvard Kennedy School, Middle East Initiative, 15 February 2024; widely reported, including by Middle East Eye and Al Jazeera.",
+   "statement": 141
   },
   {
    "id": "statements-michal-waldiger",

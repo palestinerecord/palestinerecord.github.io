@@ -2,7 +2,7 @@
  "meta": {
   "title": "Provenance graph",
   "description": "Every curated claim on this site, joined to the bodies it rests on. Source strings are normalised to entities with stable identifiers, and each entity is classified by origin so that a whole class of source can be removed and the remainder recounted.",
-  "generated": "2026-09-20",
+  "generated": "2026-09-21",
   "origins": [
    {
     "id": "palestinian-official",
@@ -74,7 +74,7 @@
     "id": "media",
     "label": "International press",
     "sources": 22,
-    "claims": 76
+    "claims": 78
    },
    {
     "id": "data-project",
@@ -91,12 +91,12 @@
   ]
  },
  "summary": {
-  "claims": 459,
-  "attributed": 445,
+  "claims": 461,
+  "attributed": 447,
   "unattributed": 14,
   "sources": 127,
   "origins": 14,
-  "multi_source": 173,
+  "multi_source": 174,
   "independent": 146
  },
  "switches": [
@@ -108,7 +108,7 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 415,
+   "stands": 417,
    "falls": 30,
    "share": 93.3
   },
@@ -122,9 +122,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 370,
+   "stands": 372,
    "falls": 75,
-   "share": 83.1
+   "share": 83.2
   },
   {
    "id": "no-un",
@@ -133,9 +133,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 378,
+   "stands": 380,
    "falls": 67,
-   "share": 84.9
+   "share": 85.0
   },
   {
    "id": "no-ngo",
@@ -146,9 +146,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 341,
+   "stands": 343,
    "falls": 104,
-   "share": 76.6
+   "share": 76.7
   },
   {
    "id": "israeli-western-only",
@@ -161,9 +161,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 248,
+   "stands": 250,
    "falls": 197,
-   "share": 55.7
+   "share": 55.9
   }
  ],
  "sources": [
@@ -229,7 +229,15 @@
    "kind": "press",
    "origin": "media",
    "origin_label": "International press",
-   "claims": 22
+   "claims": 23
+  },
+  {
+   "id": "mee",
+   "name": "Middle East Eye",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 17
   },
   {
    "id": "remember-children",
@@ -245,14 +253,6 @@
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
-   "claims": 16
-  },
-  {
-   "id": "mee",
-   "name": "Middle East Eye",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
    "claims": 16
   },
   {
@@ -648,6 +648,14 @@
    "claims": 3
   },
   {
+   "id": "bbc",
+   "name": "BBC",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 3
+  },
+  {
    "id": "breaking-silence",
    "name": "Breaking the Silence",
    "kind": "ngo",
@@ -765,14 +773,6 @@
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
-   "claims": 2
-  },
-  {
-   "id": "bbc",
-   "name": "BBC",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
    "claims": 2
   },
   {
@@ -1191,7 +1191,7 @@
   },
   {
    "file": "statements.json",
-   "claims": 140
+   "claims": 142
   },
   {
    "file": "elements.json",
@@ -4096,6 +4096,35 @@
     "mee"
    ],
    "id": "statements-hanoch-milwidsky-2"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[140]",
+   "label": "David Lammy",
+   "value": "I did say in my contribution that Israel is in breach of international humanitarian law.",
+   "numeric": false,
+   "ref": "",
+   "date": "17 March 2025",
+   "source_text": "Hansard, HC Deb 17 March 2025; Sky News, 17 March 2025; BBC News, 18 March 2025.",
+   "sources": [
+    "bbc"
+   ],
+   "id": "statements-david-lammy"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[141]",
+   "label": "Jared Kushner",
+   "value": "Gaza's waterfront property, it could be very valuable, if people would focus on building up livelihoods… I would do my best to move the people out and then clean it up.",
+   "numeric": false,
+   "ref": "",
+   "date": "15 February 2024",
+   "source_text": "Harvard Kennedy School, Middle East Initiative, 15 February 2024; widely reported, including by Middle East Eye and Al Jazeera.",
+   "sources": [
+    "aljazeera",
+    "mee"
+   ],
+   "id": "statements-jared-kushner"
   },
   {
    "file": "elements.json",

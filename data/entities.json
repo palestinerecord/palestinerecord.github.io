@@ -3,8 +3,8 @@
   "title": "The accountability ledger",
   "note": "Persons and companies named in the record, with what a court, a government or a shareholder has actually done about them. Statements are joined from the statements file, the sections are found in the report itself, and the sanctions are the measures on the world-positions file. Nothing on this page is asserted that is not already somewhere else on this site.",
   "source": "report-final.md; data/statements.json; data/world-positions.json; Rome Statute of the International Criminal Court, Articles 86, 89(1) and 127(1)",
-  "persons": 81,
-  "companies": 12,
+  "persons": 83,
+  "companies": 15,
   "warrants": 3,
   "sanctioned": 10,
   "parties": 125
@@ -1119,7 +1119,7 @@
      "id": "156-the-board-of-peace---gaza-reconstruction-plan-and-its-contradictions",
      "title": "15.6 The \"Board of Peace\" - Gaza Reconstruction Plan and Its Contradictions",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 6
+     "n": 9
     },
     {
      "id": "86-the-2026-usisrael-war-on-iran",
@@ -1176,7 +1176,7 @@
      "n": 1
     }
    ],
-   "sections": 35,
+   "sections": 38,
    "warrant": null,
    "sanctions": []
   },
@@ -1246,6 +1246,39 @@
      "title": "24.2 The Four Limbs of the Case",
      "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
      "n": 2
+    }
+   ],
+   "sections": 13,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "jared-kushner",
+   "name": "Jared Kushner",
+   "role": "Senior adviser, first Trump administration (2017–2021); founder, Affinity Partners",
+   "class": "allied",
+   "tier": "Allied adviser",
+   "statements": [
+    141
+   ],
+   "mentions": [
+    {
+     "id": "156-the-board-of-peace---gaza-reconstruction-plan-and-its-contradictions",
+     "title": "15.6 The \"Board of Peace\" - Gaza Reconstruction Plan and Its Contradictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 7
+    },
+    {
+     "id": "610-the-30-july-2026-disarmament-agreement-and-its-immediate-rejection",
+     "title": "6.10 The 30 July 2026 Disarmament Agreement and Its Immediate Rejection",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 5
+    },
+    {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
     }
    ],
    "sections": 13,
@@ -1471,6 +1504,33 @@
     }
    ],
    "sections": 5,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "david-lammy",
+   "name": "David Lammy",
+   "role": "Foreign Secretary, United Kingdom",
+   "class": "allied",
+   "tier": "Allied government",
+   "statements": [
+    140
+   ],
+   "mentions": [
+    {
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    },
+    {
+     "id": "139-lawfare-against-humanitarian-organisations-the-attempt-to-proscribe-médecins",
+     "title": "13.9 Lawfare Against Humanitarian Organisations: The Attempt to Proscribe Médecins Sans Frontières",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    }
+   ],
+   "sections": 4,
    "warrant": null,
    "sanctions": []
   },
@@ -2423,7 +2483,7 @@
    "name": "Elbit Systems",
    "country": "Israel",
    "sector": "arms",
-   "supplies": "Israel's largest weapons manufacturer, supplying drones, artillery systems and munitions used in the campaign, with research and production sites in the United Kingdom.",
+   "supplies": "Israel's largest weapons manufacturer, supplying around 80% of Israeli land forces' weapons and equipment and 85% of air force combat drones, with research and production sites in the United Kingdom that the company markets as \"combat proven.\"",
    "note": "On 4 February 2026 a jury acquitted six Palestine Action defendants on every count, including aggravated burglary, arising from the August 2024 action at Elbit's Filton site in Bristol. They had been held on remand for seventeen months and argued they acted to prevent the facility's output being used in the conduct this report documents.",
    "ref": "§13.8",
    "mentions": [
@@ -2431,7 +2491,7 @@
      "id": "138-corporate-and-platform-complicity",
      "title": "13.8 Corporate and Platform Complicity",
      "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 3
+     "n": 4
     },
     {
      "id": "139b-a-jurys-answer-on-protest-the-churchill-statue-acquittal-15-september-2026",
@@ -2538,19 +2598,85 @@
    "divestment": []
   },
   {
-   "id": "microsoft",
-   "name": "Microsoft",
+   "id": "google",
+   "name": "Google",
    "country": "United States",
    "sector": "technology",
-   "supplies": "A $125.4 million software agreement with the Israeli state entered in 2024, disclosed only inside a budget-execution report; separately, Azure was used by Unit 8200 to store recordings of millions of Palestinian phone calls.",
-   "note": "Middle East Eye revealed the contract in September 2026; the Guardian, +972 Magazine and Local Call revealed the Azure storage in August 2025. Microsoft said it had nothing to add.",
+   "supplies": "Co-holder, with Amazon, of the $1.2 billion Project Nimbus cloud contract with the Israeli government, under terms that forbid restricting military use even where it breaches the company's own terms of service.",
+   "note": "An internal Google risk assessment, reported by The Intercept on 12 May 2025, found the company knew before signing that it could not control military use of the technology; its own consultant recommended withholding machine-learning and AI tools from the Israeli military. Google supplied the full suite regardless and said \"nothing has changed.\"",
    "ref": "§13.8",
    "mentions": [
     {
      "id": "138-corporate-and-platform-complicity",
      "title": "13.8 Corporate and Platform Complicity",
      "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 7
+     "n": 9
+    },
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "amazon",
+   "name": "Amazon",
+   "country": "United States",
+   "sector": "technology",
+   "supplies": "Co-holder of the Project Nimbus cloud contract; activated its Israeli cloud region on 1 August 2023.",
+   "note": "Under the leaked contract terms reported on 29 October 2025, Amazon cannot deny cloud service to any Israeli government entity, including the military, and two state-owned Israeli arms manufacturers are contractually required to buy their cloud computing from Amazon or Google.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 5
+    },
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "meta",
+   "name": "Meta",
+   "country": "United States",
+   "sector": "technology",
+   "supplies": "Owner of Instagram and Facebook, the platforms on which Palestinian civilian-harm documentation is disproportionately removed or suppressed.",
+   "note": "Human Rights Watch's \"Meta's Broken Promises\" (December 2023) documented systematic removal and shadow-banning of Palestine-related content; 7amleh's \"Hashtag Palestine 2024\" recorded over 25,000 violations against Palestinian digital content in 2024, with 86.8% of surveyed users reporting suppression of posts documenting civilian casualties.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    }
+   ],
+   "divestment": []
+  },
+  {
+   "id": "microsoft",
+   "name": "Microsoft",
+   "country": "United States",
+   "sector": "technology",
+   "supplies": "A $125.4 million software agreement with the Israeli state entered in 2024, disclosed only inside a budget-execution report; separately, Azure was used by Unit 8200 to store recordings of millions of Palestinian phone calls.",
+   "note": "Middle East Eye revealed the contract in September 2026; the Guardian, +972 Magazine and Local Call revealed the Azure storage in August 2025, after which Microsoft disabled a set of services for the unit under review on 25 September 2025. An external review published 4 June 2026 confirmed a breach of Microsoft's terms of service but did not examine the content of the stored data itself.",
+   "ref": "§13.8",
+   "mentions": [
+    {
+     "id": "138-corporate-and-platform-complicity",
+     "title": "13.8 Corporate and Platform Complicity",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 11
     }
    ],
    "divestment": []
@@ -2585,14 +2711,14 @@
    "country": "United Kingdom",
    "sector": "finance",
    "supplies": "Holds and trades shares in defence companies supplying Israel, and in September 2026 approved a supplier of Israeli drone components as a client.",
-   "note": "Barclays states publicly that it does not itself invest in the nine defence companies campaigners have identified, and characterises its role as trading shares on behalf of clients.",
+   "note": "Barclays states publicly that it does not itself invest in the nine defence companies campaigners have identified, and characterises its role as trading shares on behalf of clients. It has not underwritten an Israeli government bond since January 2024, and its reported Elbit Systems shareholding fell to zero between two consecutive 2024 SEC filings; put to a UN report on the financial sector at its 7 May 2026 AGM, chair Nigel Higgins said \"we don't agree with the characterisation.\"",
    "ref": "§13.8",
    "mentions": [
     {
      "id": "138-corporate-and-platform-complicity",
      "title": "13.8 Corporate and Platform Complicity",
      "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 6
+     "n": 8
     },
     {
      "id": "1512b-withdrawal-as-a-method-the-documented-record-of-artist-refusals-2024-2026",
