@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://palestinerecord.github.io/sitemap.xml
 Sitemap: https://palestinerecord.github.io/sitemap-pages.xml
+Sitemap: https://palestinerecord.github.io/sitemap.txt

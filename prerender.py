@@ -503,6 +503,15 @@ def sitemap(base, urls, lastmod):
     # what the site contains; delete this and the robots.txt line together if
     # the error ever clears for good.
     (ROOT / 'sitemap-pages.xml').write_text(body, encoding='utf-8')
+    # And the same list again as a plain-text sitemap: one URL per line, which
+    # the protocol allows and Google documents. It is here because it fails
+    # differently. It is served as text/plain rather than application/xml and
+    # is read by a line reader rather than an XML parser, so whatever in the
+    # sitemap subsystem reports "Couldn't fetch" against the XML - while the
+    # URL Inspection tool fetches the identical bytes and prints them - has a
+    # route that does not involve any of it.
+    (ROOT / 'sitemap.txt').write_text(
+        '\n'.join(url for url, _priority in urls) + '\n', encoding='utf-8')
     return len(urls)
 
 
