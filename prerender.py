@@ -600,6 +600,54 @@ def stamp_json_ld(generated):
     return n
 
 
+CRAWL_START = '<!-- crawl-sections:start -->'
+CRAWL_END = '<!-- crawl-sections:end -->'
+
+
+def crawl_links(titles, routes):
+    """Write the crawlable index of the static pages into index.html.
+
+    The site navigates by fragment (#/statements), and a fragment is not a URL:
+    a crawler that reads index.html finds one followable link into the whole
+    record, the one to snapshot/. Every route is also published as a static
+    page, so the links exist already; what was missing was a path to them from
+    the page a crawler actually starts on. Generated from the same route list
+    that produced the pages, so a route added or removed cannot leave a link
+    here pointing at a page that is not there.
+    """
+    path = ROOT / 'index.html'
+    html = path.read_text(encoding='utf-8')
+    if CRAWL_START not in html or CRAWL_END not in html:
+        raise SystemExit('prerender: crawl-sections markers missing from index.html')
+
+    def label(slug):
+        title = (titles.get(slug) or ('', ''))[0]
+        # The page titles carry the site name after an em-dash separator; the
+        # link wants the part that distinguishes one page from another.
+        name = re.split(r'\s+[·—-]\s+', title)[0].strip() if title else ''
+        return name or slug.replace('-', ' ')
+
+    items = ['<a href="snapshot/index.html">All sections</a>']
+    for slug, _route in routes:
+        items.append('<a href="snapshot/%s.html">%s</a>' % (slug, html_escape(label(slug))))
+    block = (
+        '    <nav class="footer-sections" aria-label="Every section, text-only">\n'
+        '      <b>Text-only:</b>\n      %s\n'
+        '    </nav>' % '\n      &middot; '.join(items)
+    )
+    start = html.index(CRAWL_START) + len(CRAWL_START)
+    end = html.index(CRAWL_END)
+    new = html[:start] + '\n' + block + '\n    ' + html[end:]
+    if new != html:
+        path.write_text(new, encoding='utf-8')
+    return len(items)
+
+
+def html_escape(s):
+    return (s.replace('&', '&amp;').replace('<', '&lt;')
+             .replace('>', '&gt;').replace('"', '&quot;'))
+
+
 # ---------------------------------------------------------------- main
 
 def head_of(html, pattern):
@@ -657,6 +705,7 @@ def main():
         (SNAPSHOT_DIR / 'index.html').write_text(
             snapshot_index(titles, routes, base, generated), encoding='utf-8')
         print('  snapshot/index.html written')
+        print('  crawl links:     %d followable links written into index.html' % crawl_links(titles, routes))
 
     if not args.no_cards:
         for slug, route in routes:

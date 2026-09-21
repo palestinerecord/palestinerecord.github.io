@@ -988,6 +988,15 @@ tbody td strong { color: var(--text); }
 .footer-links { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 .footer-links a { color: var(--muted); }
 .footer-links a:hover { color: var(--accent); }
+/* The crawlable index of the static pages. Set smaller and quieter than the
+   footer links above it: its job is to be followed by a crawler and to be
+   available to a reader who wants the text-only copy, not to compete with
+   the navigation. */
+.footer-sections { font-family: var(--mono); font-size: 11.5px; color: var(--muted); margin-top: 16px; line-height: 2; opacity: .85; }
+.footer-sections a { color: var(--muted); }
+.footer-sections a:hover { color: var(--accent); }
+.footer-sections b { font-weight: 600; color: var(--muted); }
+
 .footer-flag { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
 .footer-flag .flag-ps { width: 34px; }
 .footer-flag .flag-rule { flex: 1 1 auto; opacity: .5; }
