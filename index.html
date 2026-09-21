@@ -33,8 +33,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="assets/favicon.svg?v=117" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/flag-palestine.svg?v=117">
+<link rel="icon" href="assets/favicon.svg?v=118" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/flag-palestine.svg?v=118">
 <link rel="canonical" href="https://palestinerecord.github.io/">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="alternate" type="application/atom+xml" title="The Documented Record — revisions" href="feed.xml">
@@ -52,8 +52,8 @@
 <meta name="twitter:title" content="The Documented Record — Israel and the Occupied Territories, 1917–2026">
 <meta name="twitter:description" content="Every figure carries its source. A forensic survey of state conduct, alleged violations of international law, and the documented record — 1917 to 2026.">
 <meta name="twitter:image" content="assets/share-card.png">
-<link rel="preload" href="css/style.css?v=117" as="style">
-<link rel="stylesheet" href="css/style.css?v=117">
+<link rel="preload" href="css/style.css?v=118" as="style">
+<link rel="stylesheet" href="css/style.css?v=118">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -259,7 +259,7 @@
 
 <div id="boot">
   <div class="boot-inner">
-    <img class="flag-ps boot-flag" src="assets/flag-palestine.svg?v=117" alt="Flag of Palestine" fetchpriority="high">
+    <img class="flag-ps boot-flag" src="assets/flag-palestine.svg?v=118" alt="Flag of Palestine" fetchpriority="high">
     <div class="boot-mark">FORENSIC RECORD</div>
     <div class="boot-bar"><span></span></div>
     <div class="boot-status">Loading documented record…</div>
@@ -272,7 +272,7 @@
 
 <header class="topbar">
   <a class="brand" href="#/overview">
-    <img class="brand-mark flag-ps" src="assets/flag-palestine.svg?v=117" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="assets/flag-palestine.svg?v=118" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -336,7 +336,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="assets/flag-palestine.svg?v=117" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="assets/flag-palestine.svg?v=118" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
@@ -414,10 +414,10 @@
   </div>
 </div>
 
-<script defer src="js/charts.js?v=117"></script>
-<script defer src="js/share.js?v=117"></script>
-<script defer src="js/views.js?v=117"></script>
-<script defer src="js/app.js?v=117"></script>
+<script defer src="js/charts.js?v=118"></script>
+<script defer src="js/share.js?v=118"></script>
+<script defer src="js/views.js?v=118"></script>
+<script defer src="js/app.js?v=118"></script>
 <!-- Loaded dynamically so ?prerender=1 never builds the 24,000-point WebGL field:
      prerender.py dumps the text of a route, and software WebGL would spend the
      whole budget on a scene no snapshot can contain. -->
@@ -433,7 +433,7 @@
     const conn = navigator.connection || {};
     if (conn.saveData) return;
     if (/(^|-)2g$/.test(conn.effectiveType || '')) return;
-    const go = () => import('./js/scene.js?v=117');
+    const go = () => import('./js/scene.js?v=118');
     if (document.readyState === 'complete') setTimeout(go, 200);
     else addEventListener('load', () => setTimeout(go, 200), { once: true });
   })();
