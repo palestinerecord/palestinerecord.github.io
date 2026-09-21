@@ -491,7 +491,18 @@ def sitemap(base, urls, lastmod):
                   '    <priority>%.1f</priority>' % priority,
                   '  </url>']
     lines.append('</urlset>')
-    (ROOT / 'sitemap.xml').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    body = '\n'.join(lines) + '\n'
+    (ROOT / 'sitemap.xml').write_text(body, encoding='utf-8')
+    # The same document under a second name, and the reason is Search Console
+    # rather than the protocol. Google's sitemap processor can hold a failure
+    # against a path - it reported "Temporary processing error" for
+    # /sitemap.xml on 21 September 2026 while its own live test of that exact
+    # URL returned "Page fetch: Successful" and "Crawl allowed: Yes" - and a
+    # path it has no history with is the one lever a publisher has. Written
+    # from the same string as sitemap.xml, so the two cannot disagree about
+    # what the site contains; delete this and the robots.txt line together if
+    # the error ever clears for good.
+    (ROOT / 'sitemap-pages.xml').write_text(body, encoding='utf-8')
     return len(urls)
 
 
