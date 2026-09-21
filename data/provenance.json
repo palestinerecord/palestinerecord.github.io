@@ -80,7 +80,7 @@
     "id": "data-project",
     "label": "Open datasets and derived figures",
     "sources": 4,
-    "claims": 60
+    "claims": 61
    },
    {
     "id": "archive",
@@ -264,19 +264,19 @@
    "claims": 15
   },
   {
-   "id": "hrw",
-   "name": "Human Rights Watch",
-   "kind": "ngo",
-   "origin": "international-ngo",
-   "origin_label": "International human rights organisations",
-   "claims": 13
-  },
-  {
    "id": "tfp",
    "name": "Tech For Palestine open datasets",
    "kind": "dataset",
    "origin": "data-project",
    "origin_label": "Open datasets and derived figures",
+   "claims": 14
+  },
+  {
+   "id": "hrw",
+   "name": "Human Rights Watch",
+   "kind": "ngo",
+   "origin": "international-ngo",
+   "origin_label": "International human rights organisations",
    "claims": 13
   },
   {
@@ -1587,14 +1587,15 @@
    "file": "figures.json",
    "path": "starvation.items[0]",
    "label": "Starvation deaths recorded",
-   "value": 440,
+   "value": 463,
    "numeric": true,
    "ref": "",
    "date": "",
-   "source_text": "IPC / Gaza MoH",
+   "source_text": "Gaza Ministry of Health series via Tech For Palestine; IPC",
    "sources": [
     "gaza-moh",
-    "ipc"
+    "ipc",
+    "tfp"
    ],
    "id": "figures-starvation-deaths-recorded"
   },

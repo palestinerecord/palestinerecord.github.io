@@ -607,9 +607,9 @@
   "items": [
    {
     "label": "Starvation deaths recorded",
-    "value": 440,
-    "note": "including 147 children, by Sept 2025 — a significant undercount",
-    "source": "IPC / Gaza MoH"
+    "value": 463,
+    "note": "including 157 children, as at 21 September 2026 - a significant undercount, since a death is recorded only where the person reached a functioning medical facility",
+    "source": "Gaza Ministry of Health series via Tech For Palestine; IPC"
    },
    {
     "label": "Facing severe hunger",

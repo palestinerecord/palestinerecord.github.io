@@ -164,13 +164,13 @@
    "name": "UN Commission of Inquiry on the OPT",
    "origin": "un"
   },
-  "hrw": {
-   "name": "Human Rights Watch",
-   "origin": "international-ngo"
-  },
   "tfp": {
    "name": "Tech For Palestine open datasets",
    "origin": "data-project"
+  },
+  "hrw": {
+   "name": "Human Rights Watch",
+   "origin": "international-ngo"
   },
   "euromed": {
    "name": "Euro-Mediterranean Human Rights Monitor",
@@ -4548,27 +4548,6 @@
    "attribution": "Gaza MoH / OCHA"
   },
   {
-   "id": "figures-starvation-deaths-recorded",
-   "claim": "Starvation deaths recorded",
-   "kind": "figure",
-   "file": "figures.json",
-   "sources": [
-    "gaza-moh",
-    "ipc"
-   ],
-   "origins": [
-    "palestinian-official",
-    "un"
-   ],
-   "independence": 2,
-   "falls": [
-    "israeli-western-only"
-   ],
-   "value": 440,
-   "attribution": "IPC / Gaza MoH",
-   "context": "Starvation and siege"
-  },
-  {
    "id": "conduct-record-total-blockade",
    "claim": "Total blockade",
    "kind": "figure",
@@ -4917,6 +4896,29 @@
    "value": 100,
    "attribution": "WHO; Palestinian Ministry of Health in Gaza, May 2026; Human Rights Watch, 19 May 2026",
    "context": "Aid entering Gaza against the requirement"
+  },
+  {
+   "id": "figures-starvation-deaths-recorded",
+   "claim": "Starvation deaths recorded",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "gaza-moh",
+    "ipc",
+    "tfp"
+   ],
+   "origins": [
+    "data-project",
+    "palestinian-official",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "value": 463,
+   "attribution": "Gaza Ministry of Health series via Tech For Palestine; IPC",
+   "context": "Starvation and siege"
   },
   {
    "id": "children-2024",
