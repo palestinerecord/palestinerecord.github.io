@@ -286,7 +286,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-20"
+      "updated": "2026-09-21"
     },
     {
       "path": "data/names.json",
@@ -299,7 +299,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-20"
+      "updated": "2026-09-21"
     },
     {
       "path": "data/provenance.json",
@@ -411,7 +411,7 @@
         "press_killed_count",
         "demographics"
       ],
-      "updated": "2026-09-20"
+      "updated": "2026-09-21"
     },
     {
       "path": "data/war-record.json",
