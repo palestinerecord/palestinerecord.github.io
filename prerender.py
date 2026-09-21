@@ -650,6 +650,9 @@ def crawl_links(titles, routes):
     items = ['<a href="snapshot/index.html">All sections</a>']
     for slug, _route in routes:
         items.append('<a href="snapshot/%s.html">%s</a>' % (slug, html_escape(label(slug))))
+    import companion
+    for d in companion.DOCUMENTS:
+        items.append('<a href="%s">%s</a>' % (d['page'], html_escape(d['title'])))
     block = (
         '    <nav class="footer-sections" aria-label="Every section, text-only">\n'
         '      <b>Text-only:</b>\n      %s\n'
@@ -747,8 +750,13 @@ def main():
                         base.replace('https://', '').rstrip('/') + '/' + route)
             print('  card %-16s %5.1f KB' % (slug, size / 1024))
 
+    # The companion documents are pages of the site like any other: the record
+    # names them in its own text, so they belong in the sitemap rather than
+    # being reachable only by someone who already knew the filename.
+    import companion
     urls = ([(base, 1.0), ('%ssnapshot/' % base, 0.6)]
             + [('%ssnapshot/%s.html' % (base, slug), 0.8) for slug, _ in routes]
+            + [('%s%s' % (base, d['page']), 0.7) for d in companion.DOCUMENTS]
             + [('%slicence.html' % base, 0.3)])
     n = sitemap(base, urls, generated)
     print('sitemap.xml: %d URLs' % n)

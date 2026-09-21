@@ -26,4 +26,5 @@ https://palestinerecord.github.io/snapshot/mp.html
 https://palestinerecord.github.io/snapshot/method.html
 https://palestinerecord.github.io/snapshot/api.html
 https://palestinerecord.github.io/snapshot/changelog.html
+https://palestinerecord.github.io/nazi-comparison.html
 https://palestinerecord.github.io/licence.html
