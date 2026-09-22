@@ -1,0 +1,15 @@
+# The Python libraries the build scripts import that are not in the standard
+# library. Pinned exactly, for the same reason the front-end libraries are: a
+# build that resolves a different version than the workstation did is a build
+# whose output nobody has looked at.
+#
+# deps_check.py reads this file, so a script that starts importing something
+# new fails the check until the dependency is declared here. Run
+# `python3 deps_check.py` after adding an import, and `pip install -r
+# requirements.txt` after adding a line.
+#
+#   Markdown  companion.py  — the companion documents become HTML pages
+#   Pillow    prerender.py, build_icons.py — the share cards and the favicons
+
+Markdown==3.4.1
+Pillow==10.4.0

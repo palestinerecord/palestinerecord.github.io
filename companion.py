@@ -22,7 +22,13 @@ import pathlib
 import re
 import xml.sax.saxutils as saxutils
 
-import markdown
+# `markdown` is imported inside build() rather than here. prerender.py imports
+# this module only to read DOCUMENTS, which is a list of filenames and titles
+# and needs no library at all; importing a third-party package at module level
+# to hand over a constant meant that a runner without it could not write a
+# sitemap. The dependency is real, it is pinned in requirements.txt and
+# deps_check.py still sees it — it is simply not paid for by a caller that is
+# not converting anything.
 
 ROOT = pathlib.Path(__file__).resolve().parent
 SOURCE_DIR = ROOT.parent.parent / 'reports' / 'israel-palestine'
@@ -108,6 +114,8 @@ def site_base():
 
 
 def build():
+    import markdown
+
     base, v = site_base(), version()
     written = []
     for doc in DOCUMENTS:

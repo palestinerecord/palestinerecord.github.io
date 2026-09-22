@@ -1325,6 +1325,27 @@ def _next_day(iso):
     return (dt.date.fromisoformat(iso) + dt.timedelta(days=1)).isoformat()
 
 
+def check_dependencies():
+    """A library only the workstation has is a nightly build that fails at 05:17.
+
+    The scripts here run on a GitHub runner as well as on this machine, and the
+    runner starts with nothing but the standard library. deps_check.py works
+    out what is actually imported and compares it against requirements.txt, so
+    an undeclared dependency stops a publish here rather than surfacing later
+    as a refresh that quietly stopped writing the sitemap.
+    """
+    try:
+        import deps_check
+    except Exception as err:                     # pragma: no cover - defensive
+        fail('deps', 'deps_check.py could not be loaded: %s' % err)
+        return
+    problems = deps_check.audit()
+    for module, _files, problem in problems:
+        fail('deps', '%s: %s' % (module, problem))
+    note('dependencies: %d third-party imports, %d pinned, %d problems'
+         % (len(deps_check.imports()), len(deps_check.declared()), len(problems)))
+
+
 def check_chart_wiring():
     """A chapter that names a chart the registry does not hold renders an empty card."""
     charts = (HERE / 'js' / 'charts.js').read_text()
@@ -1537,6 +1558,7 @@ def main():
         check_falsification(files)
         check_constituency(files)
         check_figures_against_markdown(files)
+        check_dependencies()
         check_chart_wiring()
         check_cache_bust()
         check_service_worker()

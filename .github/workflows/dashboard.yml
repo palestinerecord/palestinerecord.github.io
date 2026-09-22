@@ -32,6 +32,11 @@ on:
       - 'validate.py'
       - 'fetch_timeseries.py'
       - 'sync_live.py'
+      - 'companion.py'
+      # A change to what the scripts depend on has to be able to reach the
+      # runner on its own, or the first run to need it would be a nightly one.
+      - 'deps_check.py'
+      - 'requirements.txt'
       # The refresh rebuilds whatever holds a copy of a figure it moved.
       - 'provenance.py'
       - 'falsify.py'
@@ -63,14 +68,54 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.txt
 
+      # The runner starts with the standard library and nothing else, so every
+      # third-party import the scripts make has to be installed here. It is
+      # pinned rather than latest for the same reason the front-end libraries
+      # are: a build that resolved a different version than the workstation did
+      # is a build nobody has looked at.
+      - name: Install the pinned Python libraries
+        run: |
+          set -o pipefail
+          python3 -m pip install --quiet --upgrade pip
+          python3 -m pip install --quiet --disable-pip-version-check -r requirements.txt
+          python3 -m pip list --format=freeze | tee "$RUNNER_TEMP/pip.log"
+
+      # This is the step that would have caught the failure this file was last
+      # fixed for. companion.py began importing `markdown` at module level,
+      # prerender.py imports companion for its list of documents, and the
+      # nightly refresh stopped being able to write a sitemap — on the runner
+      # only, and five steps in, long after the useful work had been done.
+      # deps_check.py compares what is actually imported against
+      # requirements.txt, and it runs before anything expensive.
+      - name: Check every third-party import is declared and installed
+        run: |
+          set -o pipefail
+          python3 deps_check.py | tee "$RUNNER_TEMP/deps.log"
+
+      # A transient upstream outage is not a broken build. The feed is tried
+      # three times with a widening wait, and if it is still unreachable the
+      # run falls back to the cached raw copies and carries on: the figures are
+      # then no newer than yesterday's, which validate.py is content with and
+      # which is plainly better than a red run and a site that stopped being
+      # rebuilt. Without pipefail, `python3 … | tee` would report tee's success
+      # and the fallback would never be reached at all.
       - name: Pull the live casualty series
-        if: ${{ inputs.skip_fetch != true }}
-        run: python3 fetch_timeseries.py | tee "$RUNNER_TEMP/fetch.log"
-
-      - name: Rebuild from the cached raw feeds
-        if: ${{ inputs.skip_fetch == true }}
-        run: python3 fetch_timeseries.py --offline | tee "$RUNNER_TEMP/fetch.log"
+        run: |
+          set -o pipefail
+          if [ "${{ inputs.skip_fetch }}" != 'true' ]; then
+            for attempt in 1 2 3; do
+              if python3 fetch_timeseries.py | tee "$RUNNER_TEMP/fetch.log"; then
+                exit 0
+              fi
+              echo "::warning::Upstream fetch failed (attempt $attempt of 3)."
+              sleep $(( attempt * 30 ))
+            done
+            echo '::warning::Upstream unreachable; rebuilding from the cached raw feeds.'
+          fi
+          python3 fetch_timeseries.py --offline | tee -a "$RUNNER_TEMP/fetch.log"
 
       # A handful of the curated figures are copies of a number in the feed and
       # say so, by naming the series they track. The moment the feed advances
@@ -237,7 +282,7 @@ jobs:
             echo
             echo "Data changed: **${{ steps.diff.outputs.changed || 'unknown' }}**"
             echo
-            for log in fetch sync validate prerender render; do
+            for log in deps fetch sync validate prerender render; do
               if [ -f "$RUNNER_TEMP/$log.log" ]; then
                 echo "### $log"
                 echo '```'
