@@ -207,6 +207,18 @@ A crawl can be weeks behind a change, so the nightly workflow also submits the s
 
 The hand-curated files are not regenerated and must be edited directly when the report gains a figure, a statement or a source. Keep their schemas exactly as they are — the chart registry reads those field names.
 
+## Dependencies
+
+Almost everything here is the standard library. The exceptions are pinned in `requirements.txt` — `Markdown`, which `companion.py` uses to turn a companion document into a page, and `Pillow`, which draws the share cards and the favicons — and installed with `python3 -m pip install -r requirements.txt`.
+
+```bash
+python3 deps_check.py       # every third-party import, declared and installed?
+```
+
+`deps_check.py` parses every `.py` file in the folder, works out which imported names are neither standard library nor a module of this folder, and compares that set against `requirements.txt`. It runs as the workflow's third step and as one of `validate.py`'s checks, which means an undeclared dependency stops a publish here rather than surfacing on the runner.
+
+That check exists because the alternative was demonstrated. The workstation has every library anyone has ever installed on it; the runner starts with nothing. When `companion.py` began importing `markdown` at module level, and `prerender.py` imports `companion` only to read its list of documents, every nightly refresh died in `crawl_links` after writing all twenty-six snapshots and before the sitemap, so the commit step never ran and the site quietly stopped being rebuilt. Nothing on the workstation could have noticed. Imports inside a function body are counted for the same reason: a deferred import fails just as hard, only later and further from the cause.
+
 ## Verifying
 
 ```bash
