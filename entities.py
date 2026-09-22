@@ -133,6 +133,7 @@ PERSON_CLASS = {
     'wes-streeting': 'allied',
     'andy-burnham': 'allied',
     'ed-miliband': 'allied',
+    'helen-mcentee': 'allied',
     'sadiq-khan': 'allied',
     'richard-tice': 'allied',
     'david-lammy': 'allied',

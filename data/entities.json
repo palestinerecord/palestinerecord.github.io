@@ -3,7 +3,7 @@
   "title": "The accountability ledger",
   "note": "Persons and companies named in the record, with what a court, a government or a shareholder has actually done about them. Statements are joined from the statements file, the sections are found in the report itself, and the sanctions are the measures on the world-positions file. Nothing on this page is asserted that is not already somewhere else on this site.",
   "source": "report-final.md; data/statements.json; data/world-positions.json; Rome Statute of the International Criminal Court, Articles 86, 89(1) and 127(1)",
-  "persons": 83,
+  "persons": 84,
   "companies": 15,
   "warrants": 3,
   "sanctioned": 10,
@@ -2077,6 +2077,27 @@
      "id": "35a-attacks-on-christians-and-christian-sites-in-jerusalem-2023-2026",
      "title": "3.5A Attacks on Christians and Christian Sites in Jerusalem (2023-2026)",
      "part": "PART III - THE 58-YEAR ILLEGAL OCCUPATION (1967–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "helen-mcentee",
+   "name": "Helen McEntee",
+   "role": "Minister for Foreign Affairs and Trade of Ireland",
+   "class": "allied",
+   "tier": "Serving foreign minister of an EU member state",
+   "statements": [
+    144
+   ],
+   "mentions": [
+    {
+     "id": "153d-a-member-state-acting-alone-and-its-foreign-minister-on-what-the-union-has-",
+     "title": "15.3D A Member State Acting Alone, and Its Foreign Minister on What the Union Has Not Done: Ireland's Settlement-Goods Act and the \"Erase a Population\" Characterisation (15-22 September 2026)",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 1
     }
    ],

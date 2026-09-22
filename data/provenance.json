@@ -91,9 +91,9 @@
   ]
  },
  "summary": {
-  "claims": 463,
+  "claims": 464,
   "attributed": 449,
-  "unattributed": 14,
+  "unattributed": 15,
   "sources": 127,
   "origins": 14,
   "multi_source": 176,
@@ -1191,7 +1191,7 @@
   },
   {
    "file": "statements.json",
-   "claims": 144
+   "claims": 145
   },
   {
    "file": "elements.json",
@@ -4157,6 +4157,18 @@
     "wapo"
    ],
    "id": "statements-andy-burnham-2"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[144]",
+   "label": "Helen McEntee",
+   "value": "We are seeing an attempt to erase a population.",
+   "numeric": false,
+   "ref": "",
+   "date": "22 September 2026",
+   "source_text": "RTE, 22 September 2026, as carried by Anadolu Agency, the Irish Star and the Irish Daily Mirror.",
+   "sources": [],
+   "id": "statements-helen-mcentee"
   },
   {
    "file": "elements.json",
@@ -7958,7 +7970,7 @@
    "numeric": false,
    "ref": "§15.4",
    "date": "",
-   "source_text": "Wikipedia, \"International recognition of Palestine\", retrieved 20 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there.",
+   "source_text": "Wikipedia, \"International recognition of Palestine\", retrieved 22 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there.",
    "sources": [
     "pal-mfa",
     "wikipedia"

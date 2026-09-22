@@ -5,15 +5,15 @@
   "source": "data/provenance.json; data/statements.json",
   "repo": "palestinerecord/palestinerecord.github.io",
   "label": "challenge",
-  "entries": 405,
+  "entries": 406,
   "kinds": {
    "figure": 127,
-   "statement": 144,
+   "statement": 145,
    "record": 134
   },
-  "single_origin": 263,
+  "single_origin": 264,
   "exposed": 225,
-  "claims": 463
+  "claims": 464
  },
  "conditions": [
   {
@@ -5239,6 +5239,19 @@
    "value": 670,
    "attribution": "The Nerve, 27 January 2026",
    "context": "One vendor, two states"
+  },
+  {
+   "id": "statements-helen-mcentee",
+   "claim": "Helen McEntee",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "22 September 2026",
+   "attribution": "RTE, 22 September 2026, as carried by Anadolu Agency, the Irish Star and the Irish Daily Mirror.",
+   "statement": 144
   },
   {
    "id": "statements-jewish-council-of-australia",
