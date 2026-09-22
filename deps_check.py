@@ -113,8 +113,26 @@ def installed(module):
         return False
 
 
+# The two ways this can be wrong are not the same kind of wrong, and the
+# callers need to tell them apart.
+#
+#   UNDECLARED  a script imports something requirements.txt does not name. That
+#               is a mistake in this repository. It is wrong on every machine,
+#               it will not fix itself, and it blocks a publish everywhere.
+#
+#   UNINSTALLED requirements.txt names it and the environment does not have it.
+#               On the workstation that means the install was never run and the
+#               build about to be published would crash. On a CI runner it means
+#               the install step flaked, which the workflow has already retried,
+#               and the only work that needs the library is the static layer,
+#               which that same run skips. So it blocks a publish from the
+#               workstation and is a warning on the runner.
+UNDECLARED = 'undeclared'
+UNINSTALLED = 'uninstalled'
+
+
 def audit():
-    """Return a list of (module, files, problem) for everything that is wrong."""
+    """Return a list of (module, files, problem, kind) for everything that is wrong."""
     pins = declared()
     problems = []
     for module, files in sorted(imports().items()):
@@ -123,12 +141,12 @@ def audit():
             problems.append((module, files,
                              'imported by %s but not declared in requirements.txt '
                              '(add the distribution that provides it, likely "%s")'
-                             % (', '.join(sorted(files)), dist)))
+                             % (', '.join(sorted(files)), dist), UNDECLARED))
         elif not installed(module):
             problems.append((module, files,
                              'declared in requirements.txt as "%s" but not installed '
                              '(run: python3 -m pip install -r requirements.txt)'
-                             % pins[dist]))
+                             % pins[dist], UNINSTALLED))
     return problems
 
 
@@ -150,8 +168,8 @@ def main():
         unused = set(pins) - {distribution_for(m) for m in used}
         for dist in sorted(unused):
             print('  note: "%s" is pinned but nothing imports it' % pins[dist])
-    for module, _files, problem in problems:
-        print('  FAIL [%s] %s' % (module, problem))
+    for module, _files, problem, kind in problems:
+        print('  FAIL [%s] %s: %s' % (kind, module, problem))
     print('deps_check: %d problems' % len(problems))
     return 1 if problems else 0
 

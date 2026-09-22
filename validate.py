@@ -36,6 +36,7 @@ be derived, rounded, or written differently in prose than in a table.
 import argparse
 import datetime as dt
 import json
+import os
 import pathlib
 import re
 import sys
@@ -1340,10 +1341,71 @@ def check_dependencies():
         fail('deps', 'deps_check.py could not be loaded: %s' % err)
         return
     problems = deps_check.audit()
-    for module, _files, problem in problems:
-        fail('deps', '%s: %s' % (module, problem))
+    # An undeclared import is a mistake in this repository and stops a publish
+    # anywhere. A declared library that did not install is a property of the
+    # machine, not of the data: on a runner the workflow has already retried the
+    # install and skipped the only step that needs the library, so failing here
+    # too would block a data refresh that is perfectly sound. It still fails on
+    # the workstation, where an uninstalled library means the build being
+    # published was never actually produced.
+    on_runner = os.environ.get('GITHUB_ACTIONS') == 'true'
+    for module, _files, problem, kind in problems:
+        if kind == deps_check.UNINSTALLED and on_runner:
+            warn('deps', '%s: %s' % (module, problem))
+        else:
+            fail('deps', '%s: %s' % (module, problem))
     note('dependencies: %d third-party imports, %d pinned, %d problems'
          % (len(deps_check.imports()), len(deps_check.declared()), len(problems)))
+
+
+def check_curated_duplicates(files):
+    """The same fact entered twice is a second source that does not exist.
+
+    The curated files are hand-edited, sometimes by two people or two sessions
+    on the same afternoon, and nothing about the schema stops the same event
+    being appended twice. It is not a cosmetic problem: the dashboard counts
+    these files, so a duplicated entry inflates the number of documented
+    statements and puts the same day in the chronology twice, which reads to
+    anyone checking as two independent records of one thing.
+
+    Matching is on the fields that identify the entry rather than on the whole
+    object, so a second copy that differs only in its note is still caught.
+    """
+    def norm(value):
+        return re.sub(r'\s+', ' ', str(value or '')).strip().lower()
+
+    checks = (
+        ('timeline-extra', 'items', lambda i: (norm(i.get('sort')), norm(i.get('event'))),
+         lambda i: '%s — %s' % (i.get('date'), i.get('event'))),
+        ('statements', 'items',
+         lambda i: (norm(i.get('speaker')), norm(i.get('sort')), norm(i.get('quote'))),
+         lambda i: '%s, %s' % (i.get('speaker'), i.get('date'))),
+    )
+    for name, key, identity, describe in checks:
+        blob = files.get(name)
+        if not blob:
+            continue
+        seen = {}
+        for item in blob.get(key, []):
+            ident = identity(item)
+            if ident in seen:
+                fail('duplicates', '%s.json holds the same entry twice: %s'
+                     % (name, describe(item)))
+            seen[ident] = item
+        note('%s: %d entries, %d distinct' % (name, len(blob.get(key, [])), len(seen)))
+
+    blob = files.get('sources')
+    if blob:
+        seen, total = set(), 0
+        for group in blob.get('groups', []):
+            for item in group.get('items', []):
+                total += 1
+                ident = (norm(item.get('url')), norm(item.get('title')))
+                if ident in seen:
+                    fail('duplicates', 'sources.json holds the same entry twice: %s'
+                         % item.get('title'))
+                seen.add(ident)
+        note('sources: %d entries, %d distinct' % (total, len(seen)))
 
 
 def check_chart_wiring():
@@ -1558,6 +1620,7 @@ def main():
         check_falsification(files)
         check_constituency(files)
         check_figures_against_markdown(files)
+        check_curated_duplicates(files)
         check_dependencies()
         check_chart_wiring()
         check_cache_bust()

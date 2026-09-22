@@ -14,11 +14,34 @@ name: Dashboard — refresh the data
 # from the parent directory, and that markdown lives with the documents rather
 # than on the published site. data/report.json changes only when the report
 # changes, and it is rebuilt and pushed from there by publish.py.
+#
+# The failure policy, which is the thing this file is really about:
+#
+#   Infrastructure is allowed to wobble and must never stop the refresh. A pip
+#   mirror that times out, an upstream feed that is down, a runner without a
+#   browser, a push that races another run — each of those is retried, then
+#   degraded around, and the data still gets updated.
+#
+#   Correctness is not allowed to wobble and always stops the publish.
+#   validate.py failing means the data does not hold together, so nothing is
+#   committed and the previously published figures stay live.
+#
+#   Neither case ends in a red run. A red run is a notification that arrives in
+#   an inbox and tells a person almost nothing about which of those two things
+#   happened. Instead, anything that needs a person opens or updates a single
+#   GitHub issue naming the step, and the run summary carries every log. The
+#   consequence to be aware of: a green tick here means the workflow completed,
+#   not that the data was published. The issue is the signal, not the colour.
 
 on:
   schedule:
     # 05:17 UTC daily. The upstream daily file is normally posted before 04:00.
     - cron: '17 5 * * *'
+    # A second attempt in the afternoon. GitHub drops scheduled runs when the
+    # cron minute is busy, and a dropped run is a day with no refresh that
+    # nothing reports. This one is a no-op when the morning run already worked:
+    # the data is unchanged, so there is nothing to commit.
+    - cron: '43 13 * * *'
   push:
     branches: [main]
     paths:
@@ -52,6 +75,7 @@ on:
 
 permissions:
   contents: write   # the nightly data commit
+  issues: write     # the one issue that reports a degraded or blocked run
 
 # One refresh at a time, and never cancel one half way through.
 concurrency:
@@ -66,6 +90,11 @@ jobs:
     # is a job that breaks on a night nobody is watching. Moving the pin is a
     # deliberate act, followed by a manual run.
     runs-on: ubuntu-24.04
+    # Well above the twelve minutes a full run takes. The point of the limit is
+    # that a hung step is cancelled as a step, by its own timeout below, rather
+    # than by GitHub cancelling the whole job six hours later and recording it
+    # as a failure.
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v5
 
@@ -80,12 +109,29 @@ jobs:
       # pinned rather than latest for the same reason the front-end libraries
       # are: a build that resolved a different version than the workstation did
       # is a build nobody has looked at.
+      #
+      # Installing is also the single most common way a run fails for a reason
+      # that has nothing to do with this site: an index that times out or
+      # returns a 503 for thirty seconds. Three attempts with a widening wait
+      # covers effectively all of it.
       - name: Install the pinned Python libraries
+        id: pip
+        continue-on-error: true
+        timeout-minutes: 10
         run: |
           set -o pipefail
-          python3 -m pip install --quiet --upgrade pip
-          python3 -m pip install --quiet --disable-pip-version-check -r requirements.txt
-          python3 -m pip list --format=freeze | tee "$RUNNER_TEMP/pip.log"
+          python3 -m pip install --quiet --upgrade pip || true
+          for attempt in 1 2 3; do
+            if python3 -m pip install --quiet --disable-pip-version-check \
+                 -r requirements.txt; then
+              python3 -m pip list --format=freeze | tee "$RUNNER_TEMP/pip.log"
+              exit 0
+            fi
+            echo "::warning::Installing the pinned libraries failed (attempt $attempt of 3)."
+            sleep $(( attempt * 20 ))
+          done
+          echo 'Could not install the pinned libraries after three attempts.' >&2
+          exit 1
 
       # This is the step that would have caught the failure this file was last
       # fixed for. companion.py began importing `markdown` at module level,
@@ -94,10 +140,27 @@ jobs:
       # only, and five steps in, long after the useful work had been done.
       # deps_check.py compares what is actually imported against
       # requirements.txt, and it runs before anything expensive.
+      #
+      # It distinguishes two problems that look alike and are not. A library
+      # that is declared but did not install is an installation that flaked, so
+      # it is worth installing again and re-checking. A library that is imported
+      # but not declared is a person's mistake in this repository, and it is not
+      # fixed by installing whatever the import happens to be named: an
+      # unreviewed name from a public index is exactly the way a build machine
+      # is compromised. That case is reported and the run carries on without the
+      # static layer, which is the only part that needs those libraries.
       - name: Check every third-party import is declared and installed
+        id: deps
+        continue-on-error: true
         run: |
           set -o pipefail
-          python3 deps_check.py | tee "$RUNNER_TEMP/deps.log"
+          if python3 deps_check.py | tee "$RUNNER_TEMP/deps.log"; then
+            exit 0
+          fi
+          echo '::warning::Dependency check failed; reinstalling the declared libraries and trying once more.'
+          python3 -m pip install --quiet --disable-pip-version-check \
+            --force-reinstall -r requirements.txt || true
+          python3 deps_check.py | tee -a "$RUNNER_TEMP/deps.log"
 
       # A transient upstream outage is not a broken build. The feed is tried
       # three times with a widening wait, and if it is still unreachable the
@@ -106,7 +169,15 @@ jobs:
       # which is plainly better than a red run and a site that stopped being
       # rebuilt. Without pipefail, `python3 … | tee` would report tee's success
       # and the fallback would never be reached at all.
+      #
+      # If the offline rebuild fails too, the run keeps the series that is
+      # already committed. That is the same data the site is serving now, so the
+      # remaining steps are still worth running and the refresh simply has
+      # nothing new to say today.
       - name: Pull the live casualty series
+        id: fetch
+        continue-on-error: true
+        timeout-minutes: 20
         run: |
           set -o pipefail
           if [ "${{ inputs.skip_fetch }}" != 'true' ]; then
@@ -119,7 +190,12 @@ jobs:
             done
             echo '::warning::Upstream unreachable; rebuilding from the cached raw feeds.'
           fi
-          python3 fetch_timeseries.py --offline | tee -a "$RUNNER_TEMP/fetch.log"
+          if python3 fetch_timeseries.py --offline | tee -a "$RUNNER_TEMP/fetch.log"; then
+            exit 0
+          fi
+          echo '::warning::The offline rebuild failed as well; keeping the committed series.'
+          git checkout -- data/ || true
+          exit 1
 
       # A handful of the curated figures are copies of a number in the feed and
       # say so, by naming the series they track. The moment the feed advances
@@ -129,10 +205,21 @@ jobs:
       # across in the one direction that is honest, and refuses a feed whose
       # numbers have collapsed rather than risen. Several derived files hold
       # their own copy of those figures, so they are rebuilt whenever it moved.
+      #
+      # A refusal here is the guard doing its job on a bad feed, not an error to
+      # route around. The working tree is put back to the committed data and
+      # validate.py runs against that, so the step records the problem without
+      # leaving a half-synced tree behind it.
       - name: Carry the series into the curated figures
+        id: sync
+        continue-on-error: true
         run: |
           set -o pipefail
-          python3 sync_live.py | tee "$RUNNER_TEMP/sync.log"
+          if ! python3 sync_live.py | tee "$RUNNER_TEMP/sync.log"; then
+            echo '::warning::sync_live.py refused the feed; restoring the committed data.'
+            git checkout -- data/
+            exit 1
+          fi
           if ! git diff --quiet -- data/; then
             {
               python3 provenance.py
@@ -142,11 +229,13 @@ jobs:
           fi
 
       - name: Validate the data
-        # validate.py exits non-zero on any failure, which stops the job before
-        # the commit, so the previously published data stays live rather than
-        # being replaced by something that does not hold together. It checks the
-        # data rather than the rendering: figure agreement across files, map
-        # joins, chart wiring, source attribution, canonical URLs.
+        id: validate
+        continue-on-error: true
+        # validate.py exits non-zero on any failure. It checks the data rather
+        # than the rendering: figure agreement across files, map joins, chart
+        # wiring, source attribution, canonical URLs. Its verdict decides
+        # whether anything is committed at all, further down — a failure here
+        # means the previously published data stays live, untouched.
         run: |
           set -o pipefail
           python3 validate.py | tee "$RUNNER_TEMP/validate.log"
@@ -174,14 +263,23 @@ jobs:
       # changed — each would overwrite the other for ever. A card changes only
       # when a route's title or description changes, and that arrives in a push
       # from the workstation, which builds the cards in the same pass.
+      #
+      # A runner without a browser is not a reason to withhold a data refresh.
+      # The snapshots are the static mirror of a site that works without them,
+      # so they are skipped with a warning and the data still goes out.
       - name: Rebuild the static snapshots and sitemap
         id: static
-        if: steps.diff.outputs.changed == 'true' || github.event_name != 'schedule'
+        continue-on-error: true
+        timeout-minutes: 15
+        if: >-
+          steps.validate.outcome == 'success' &&
+          steps.deps.outcome == 'success' &&
+          (steps.diff.outputs.changed == 'true' || github.event_name != 'schedule')
         run: |
           set -o pipefail
           CHROME="$(command -v google-chrome || command -v chromium-browser || true)"
           if [ -z "$CHROME" ]; then
-            echo 'No Chrome on the runner; the snapshots cannot be rendered.' >&2
+            echo '::warning::No Chrome on the runner; skipping the snapshots this run.'
             exit 1
           fi
           python3 prerender.py --chrome "$CHROME" --no-cards | tee "$RUNNER_TEMP/prerender.log"
@@ -189,24 +287,40 @@ jobs:
       # validate.py checks the data and prerender.py writes the snapshots, and
       # neither can tell whether a chart drew. A chart that throws leaves its
       # container empty rather than stopping the page, so this opens every route
-      # in the browser and fails the run if a container has no canvas in it, if
-      # anything fell back to the failure plate, or if the page logged an error.
-      # A run that stops here has published nothing: the commit is the step
-      # after this one.
+      # in the browser and fails if a container has no canvas in it, if anything
+      # fell back to the failure plate, or if the page logged an error.
       - name: Render every route
-        if: steps.diff.outputs.changed == 'true' || github.event_name != 'schedule'
+        id: render
+        continue-on-error: true
+        timeout-minutes: 20
+        if: steps.static.outcome == 'success'
         run: |
           set -o pipefail
           CHROME="$(command -v google-chrome || command -v chromium-browser || true)"
           if [ -z "$CHROME" ]; then
-            echo 'No Chrome on the runner; the routes cannot be rendered.' >&2
+            echo '::warning::No Chrome on the runner; skipping the render check.'
             exit 1
           fi
           python3 render_check.py --chrome "$CHROME" | tee "$RUNNER_TEMP/render.log"
 
+      # A rendering regression must not publish a broken static layer, and must
+      # not hold back a data refresh that validate.py passed. So the snapshots
+      # this run built are thrown away and the committed ones stay as they are,
+      # while data/ goes out on its own. The issue below names the step.
+      - name: Discard the rebuilt static layer if a route failed to render
+        if: steps.render.outcome == 'failure'
+        run: |
+          echo '::warning::A route failed to render; keeping the published snapshots.'
+          git checkout -- snapshot sitemap.xml feed.xml index.html 2>/dev/null || true
+          git clean -fd -- snapshot || true
+
       - name: Commit the refreshed data and static layer
         id: commit
-        if: steps.diff.outputs.changed == 'true' || steps.static.outcome == 'success'
+        # The gate is validate.py and nothing else. Everything above it may
+        # degrade; this may not.
+        if: >-
+          steps.validate.outcome == 'success' &&
+          (steps.diff.outputs.changed == 'true' || steps.static.outcome == 'success')
         # A push made with GITHUB_TOKEN does not itself start a workflow run, so
         # this commit cannot loop back into this workflow. Pages picks it up and
         # rebuilds the site from the branch.
@@ -222,19 +336,23 @@ jobs:
           git commit -m "Refresh dashboard data ($(date -u '+%d %B %Y'))"
           # Runs queue rather than cancel, so a run held behind another one
           # checked the branch out before that one pushed and its own push is
-          # then rejected. Rebase onto the tip and try again. The regenerated
-          # files win any conflict, since this run built them from the newest
-          # data: in a rebase `theirs` is the commit being replayed, which is
-          # the commit made above.
-          for attempt in 1 2 3; do
+          # then rejected. Fetch, rebase onto the tip and try again. The
+          # regenerated files win any conflict, since this run built them from
+          # the newest data: in a rebase `theirs` is the commit being replayed,
+          # which is the commit made above. Five attempts rather than three,
+          # because a workstation publish can land while this is retrying.
+          for attempt in 1 2 3 4 5; do
             if git push; then
               echo 'pushed=true' >> "$GITHUB_OUTPUT"
               exit 0
             fi
-            echo "Push rejected; rebasing onto the branch tip (attempt $attempt)."
-            git pull --rebase -X theirs origin main
+            echo "Push rejected; rebasing onto the branch tip (attempt $attempt of 5)."
+            git fetch origin main || true
+            git pull --rebase -X theirs origin main || git rebase --abort || true
+            sleep $(( attempt * 5 ))
           done
-          echo 'Could not push after three attempts.' >&2
+          echo 'pushed=false' >> "$GITHUB_OUTPUT"
+          echo 'Could not push after five attempts.' >&2
           exit 1
 
       # An independent timestamp of each published version. The record argues
@@ -244,6 +362,7 @@ jobs:
       - name: Ask the Internet Archive to keep a copy
         if: steps.commit.outputs.pushed == 'true' && github.ref == 'refs/heads/main'
         continue-on-error: true
+        timeout-minutes: 15
         run: |
           base='https://palestinerecord.github.io'
           for path in '/' '/snapshot/overview.html' '/snapshot/index.html' '/sitemap.xml' '/feed.xml'; do
@@ -261,6 +380,7 @@ jobs:
       - name: Tell IndexNow which pages changed
         if: steps.commit.outputs.pushed == 'true' && github.ref == 'refs/heads/main'
         continue-on-error: true
+        timeout-minutes: 5
         run: |
           python3 - <<'PY' > indexnow.json
           import json, re, pathlib
@@ -278,6 +398,82 @@ jobs:
           rm -f indexnow.json
           echo "indexnow: ${code}"
 
+      # The one place a person is told that something needs them. A single
+      # issue is reused rather than a new one per run, because a feed that has
+      # been down for three days is one problem and not three. It is closed
+      # automatically by the first run that is clean again, so an open issue
+      # always means the current state of the site, not a historical incident.
+      - name: Report anything that needs a person
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: 'Dashboard refresh needs attention'
+        run: |
+          PIP='${{ steps.pip.outcome }}'
+          DEPS='${{ steps.deps.outcome }}'
+          FETCH='${{ steps.fetch.outcome }}'
+          SYNC='${{ steps.sync.outcome }}'
+          VALIDATE='${{ steps.validate.outcome }}'
+          STATIC='${{ steps.static.outcome }}'
+          RENDER='${{ steps.render.outcome }}'
+          COMMIT='${{ steps.commit.outcome }}'
+
+          {
+            echo "Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            echo
+            echo "| Step | Outcome |"
+            echo "| --- | --- |"
+            echo "| Install the pinned libraries | ${PIP} |"
+            echo "| Dependency check | ${DEPS} |"
+            echo "| Pull the casualty series | ${FETCH} |"
+            echo "| Carry the series into the figures | ${SYNC} |"
+            echo "| Validate the data | ${VALIDATE} |"
+            echo "| Rebuild the static layer | ${STATIC} |"
+            echo "| Render every route | ${RENDER} |"
+            echo "| Commit and push | ${COMMIT} |"
+            echo
+          } > body.md
+
+          PROBLEM=no
+          if [ "$VALIDATE" != 'success' ]; then
+            PROBLEM=yes
+            {
+              echo '**The data did not validate, so nothing was published.** The'
+              echo 'figures currently on the site are the ones from the last good'
+              echo 'run and are unaffected. Reproduce it with `python3 validate.py`'
+              echo 'in the dashboard folder; the failing checks are in the run'
+              echo 'summary.'
+              echo
+            } >> body.md
+          fi
+          for pair in "pip:$PIP" "deps:$DEPS" "fetch:$FETCH" "sync:$SYNC" \
+                      "static:$STATIC" "render:$RENDER" "commit:$COMMIT"; do
+            name="${pair%%:*}"; outcome="${pair#*:}"
+            if [ "$outcome" = 'failure' ]; then
+              PROBLEM=yes
+              echo "- The \`${name}\` step degraded; its log is in the run summary." >> body.md
+            fi
+          done
+
+          NUMBER="$(gh issue list --state open --search "$TITLE in:title" \
+                      --json number,title \
+                      --jq "map(select(.title == \"$TITLE\")) | .[0].number // empty" || true)"
+
+          if [ "$PROBLEM" = 'no' ]; then
+            if [ -n "$NUMBER" ]; then
+              gh issue comment "$NUMBER" --body "Clean run; closing. $(cat body.md | head -1)" || true
+              gh issue close "$NUMBER" --reason completed || true
+            fi
+            echo 'Nothing to report.'
+            exit 0
+          fi
+
+          if [ -n "$NUMBER" ]; then
+            gh issue comment "$NUMBER" --body-file body.md || true
+          else
+            gh issue create --title "$TITLE" --body-file body.md || true
+          fi
+
       - name: Write the run summary
         if: always()
         run: |
@@ -285,8 +481,20 @@ jobs:
             echo '## Dashboard refresh'
             echo
             echo "Data changed: **${{ steps.diff.outputs.changed || 'unknown' }}**"
+            echo "Published: **${{ steps.commit.outputs.pushed || 'no' }}**"
             echo
-            for log in deps fetch sync validate prerender render; do
+            echo "| Step | Outcome |"
+            echo "| --- | --- |"
+            echo "| Install the pinned libraries | ${{ steps.pip.outcome }} |"
+            echo "| Dependency check | ${{ steps.deps.outcome }} |"
+            echo "| Pull the casualty series | ${{ steps.fetch.outcome }} |"
+            echo "| Carry the series into the figures | ${{ steps.sync.outcome }} |"
+            echo "| Validate the data | ${{ steps.validate.outcome }} |"
+            echo "| Rebuild the static layer | ${{ steps.static.outcome }} |"
+            echo "| Render every route | ${{ steps.render.outcome }} |"
+            echo "| Commit and push | ${{ steps.commit.outcome }} |"
+            echo
+            for log in pip deps fetch sync validate prerender render; do
               if [ -f "$RUNNER_TEMP/$log.log" ]; then
                 echo "### $log"
                 echo '```'
