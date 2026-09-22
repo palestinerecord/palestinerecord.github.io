@@ -2,7 +2,7 @@
   "killedInGazaListCount": 72835,
   "massacres": 12000,
   "killed": {
-    "total": 73917,
+    "total": 73919,
     "children": 20179,
     "women": 12500,
     "civilDefence": 140,
@@ -10,8 +10,8 @@
     "medical": 1701
   },
   "injured": {
-    "total": 174952
+    "total": 174977
   },
-  "dailyReportCount": 1081,
-  "lastDailyUpdate": "2026-09-21"
+  "dailyReportCount": 1082,
+  "lastDailyUpdate": "2026-09-22"
 }

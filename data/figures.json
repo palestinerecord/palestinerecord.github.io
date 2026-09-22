@@ -6,7 +6,7 @@
  "headline": [
   {
    "label": "Palestinians killed in Gaza",
-   "value": 73917,
+   "value": 73919,
    "suffix": "+",
    "note": "identified killed, Oct 2023 – Sept 2026",
    "source": "Gaza MoH / OCHA",
@@ -25,7 +25,7 @@
   },
   {
    "label": "Injured in Gaza",
-   "value": 174952,
+   "value": 174977,
    "note": "cumulative recorded injuries",
    "source": "Gaza MoH",
    "ref": "§6.3",
@@ -51,7 +51,7 @@
   },
   {
    "label": "Settler attacks recorded",
-   "value": 4625,
+   "value": 4655,
    "note": "West Bank, since Oct 2023",
    "source": "OCHA",
    "ref": "§9.2",
