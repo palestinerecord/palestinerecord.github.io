@@ -78,6 +78,7 @@ ORG_SPEAKERS = {
     'nachala-settler-movement-march-28-ministers-and-mks',
     'ohchr',
     'physicians-for-human-rights-israel',
+    'save-the-children',
     'rossing-center-for-education-and-dialogue-federica-sasso',
     'supreme-court-of-new-south-wales-fagan-j',
     'un-committee-on-the-elimination-of-racial-discrimination',

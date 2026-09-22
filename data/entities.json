@@ -59,12 +59,12 @@
    "class": "government",
    "tier": "Head of government",
    "statements": [
-    48,
-    51,
-    55,
-    83,
-    113,
-    135
+    49,
+    52,
+    56,
+    86,
+    116,
+    138
    ],
    "mentions": [
     {
@@ -169,8 +169,8 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    33,
-    37
+    34,
+    38
    ],
    "mentions": [
     {
@@ -271,13 +271,13 @@
    "tier": "Cabinet",
    "statements": [
     22,
-    50,
-    70,
-    77,
+    51,
+    72,
     80,
-    97,
-    106,
-    112
+    83,
+    100,
+    109,
+    115
    ],
    "mentions": [
     {
@@ -367,13 +367,13 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    49,
-    99,
-    108,
-    116,
-    121,
-    123,
-    127
+    50,
+    102,
+    111,
+    119,
+    124,
+    126,
+    130
    ],
    "mentions": [
     {
@@ -510,7 +510,7 @@
    "class": "accountability",
    "tier": "UN mandate holder",
    "statements": [
-    62
+    64
    ],
    "mentions": [
     {
@@ -808,10 +808,10 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    40,
-    88,
-    107,
-    126
+    41,
+    91,
+    110,
+    129
    ],
    "mentions": [
     {
@@ -857,9 +857,9 @@
    "tier": "Former head of government",
    "statements": [
     15,
-    89,
-    115,
-    132
+    92,
+    118,
+    135
    ],
    "mentions": [
     {
@@ -892,8 +892,8 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    92,
-    137
+    95,
+    140
    ],
    "mentions": [
     {
@@ -920,14 +920,66 @@
    "sanctions": []
   },
   {
+   "id": "andy-burnham",
+   "name": "Andy Burnham",
+   "role": "Prime Minister of the United Kingdom",
+   "class": "allied",
+   "tier": "Head of government",
+   "statements": [
+    117,
+    143
+   ],
+   "mentions": [
+    {
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    },
+    {
+     "id": "133-the-united-kingdom",
+     "title": "13.3 The United Kingdom",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "1510-british-public-opinion-the-gap-between-the-public-and-its-government",
+     "title": "15.10 British Public Opinion: The Gap Between the Public and Its Government",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "152-arms-embargoes",
+     "title": "15.2 Arms Embargoes",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "153b-the-measures-tested-the-legal-professions-assessment-the-enforcement-gap-an",
+     "title": "15.3B The Measures Tested: The Legal Profession's Assessment, the Enforcement Gap, and the State's Own Contracts",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
+     "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 7,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "moshe-ya-alon",
    "name": "Moshe Ya'alon",
    "role": "Former IDF Chief of Staff; Minister of Defence, 2013-2016",
    "class": "military",
    "tier": "Military",
    "statements": [
-    73,
-    104
+    75,
+    107
    ],
    "mentions": [
     {
@@ -949,7 +1001,7 @@
    "tier": "Israeli historian",
    "statements": [
     17,
-    86
+    89
    ],
    "mentions": [
     {
@@ -976,8 +1028,8 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    134,
-    136
+    137,
+    139
    ],
    "mentions": [
     {
@@ -1010,8 +1062,8 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    57,
-    85
+    58,
+    88
    ],
    "mentions": [
     {
@@ -1038,8 +1090,8 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    68,
-    139
+    70,
+    142
    ],
    "mentions": [
     {
@@ -1082,8 +1134,8 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    66,
-    81
+    68,
+    84
    ],
    "mentions": [],
    "sections": 0,
@@ -1097,8 +1149,8 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    30,
-    46
+    31,
+    47
    ],
    "mentions": [],
    "sections": 0,
@@ -1112,7 +1164,7 @@
    "class": "allied",
    "tier": "Allied head of state",
    "statements": [
-    74
+    76
    ],
    "mentions": [
     {
@@ -1193,7 +1245,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    111
+    114
    ],
    "mentions": [
     {
@@ -1220,7 +1272,7 @@
    "class": "government",
    "tier": "Head of state",
    "statements": [
-    41
+    42
    ],
    "mentions": [
     {
@@ -1265,7 +1317,7 @@
    "class": "allied",
    "tier": "Allied adviser",
    "statements": [
-    141
+    62
    ],
    "mentions": [
     {
@@ -1352,64 +1404,13 @@
    "sanctions": []
   },
   {
-   "id": "andy-burnham",
-   "name": "Andy Burnham",
-   "role": "Prime Minister of the United Kingdom (from 20 July 2026); then Mayor of Greater Manchester",
-   "class": "allied",
-   "tier": "Allied government",
-   "statements": [
-    114
-   ],
-   "mentions": [
-    {
-     "id": "133-the-united-kingdom",
-     "title": "13.3 The United Kingdom",
-     "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 1
-    },
-    {
-     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
-     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
-     "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 1
-    },
-    {
-     "id": "1510-british-public-opinion-the-gap-between-the-public-and-its-government",
-     "title": "15.10 British Public Opinion: The Gap Between the Public and Its Government",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
-    },
-    {
-     "id": "152-arms-embargoes",
-     "title": "15.2 Arms Embargoes",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
-    },
-    {
-     "id": "153b-the-measures-tested-the-legal-professions-assessment-the-enforcement-gap-an",
-     "title": "15.3B The Measures Tested: The Legal Profession's Assessment, the Enforcement Gap, and the State's Own Contracts",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
-    },
-    {
-     "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
-     "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
-     "n": 1
-    }
-   ],
-   "sections": 6,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
    "id": "ed-miliband",
    "name": "Ed Miliband",
    "role": "Secretary of State for Foreign, Commonwealth and Development Affairs, United Kingdom",
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    130
+    133
    ],
    "mentions": [
     {
@@ -1520,7 +1521,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    140
+    78
    ],
    "mentions": [
     {
@@ -1547,7 +1548,7 @@
    "class": "dissent",
    "tier": "Holocaust survivor",
    "statements": [
-    65
+    67
    ],
    "mentions": [
     {
@@ -1580,7 +1581,7 @@
    "class": "dissent",
    "tier": "Jewish public figure",
    "statements": [
-    98
+    101
    ],
    "mentions": [
     {
@@ -1607,7 +1608,7 @@
    "class": "dissent",
    "tier": "Jewish public figure",
    "statements": [
-    61
+    63
    ],
    "mentions": [
     {
@@ -1640,7 +1641,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    129
+    132
    ],
    "mentions": [
     {
@@ -1694,7 +1695,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    95
+    98
    ],
    "mentions": [
     {
@@ -1715,7 +1716,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    63
+    65
    ],
    "mentions": [
     {
@@ -1742,7 +1743,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    131
+    134
    ],
    "mentions": [
     {
@@ -1802,7 +1803,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    120
+    123
    ],
    "mentions": [
     {
@@ -1829,7 +1830,7 @@
    "class": "corporate",
    "tier": "Corporate",
    "statements": [
-    79
+    82
    ],
    "mentions": [
     {
@@ -1904,7 +1905,7 @@
    "class": "dissent",
    "tier": "Jewish writer",
    "statements": [
-    58
+    59
    ],
    "mentions": [
     {
@@ -1925,7 +1926,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    38
+    39
    ],
    "mentions": [
     {
@@ -1979,7 +1980,7 @@
    "class": "dissent",
    "tier": "Israeli journalist",
    "statements": [
-    133
+    136
    ],
    "mentions": [
     {
@@ -2069,7 +2070,7 @@
    "class": "dissent",
    "tier": "Israeli human rights organisation",
    "statements": [
-    76
+    79
    ],
    "mentions": [
     {
@@ -2090,7 +2091,7 @@
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    101
+    104
    ],
    "mentions": [
     {
@@ -2111,7 +2112,7 @@
    "class": "government",
    "tier": "Former head of government",
    "statements": [
-    90
+    93
    ],
    "mentions": [
     {
@@ -2132,7 +2133,7 @@
    "class": "dissent",
    "tier": "Israeli human rights organisation",
    "statements": [
-    93
+    96
    ],
    "mentions": [
     {
@@ -2153,7 +2154,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    45
+    46
    ],
    "mentions": [],
    "sections": 0,
@@ -2167,7 +2168,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    52
+    53
    ],
    "mentions": [],
    "sections": 0,
@@ -2181,7 +2182,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    31
+    32
    ],
    "mentions": [],
    "sections": 0,
@@ -2209,7 +2210,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    54
+    55
    ],
    "mentions": [],
    "sections": 0,
@@ -2223,7 +2224,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    39
+    40
    ],
    "mentions": [],
    "sections": 0,
@@ -2237,7 +2238,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    43
+    44
    ],
    "mentions": [],
    "sections": 0,
@@ -2265,7 +2266,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    56
+    57
    ],
    "mentions": [],
    "sections": 0,
@@ -2279,7 +2280,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    35
+    36
    ],
    "mentions": [],
    "sections": 0,
@@ -2293,7 +2294,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    42
+    43
    ],
    "mentions": [],
    "sections": 0,
@@ -2321,7 +2322,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    44
+    45
    ],
    "mentions": [],
    "sections": 0,
@@ -2349,7 +2350,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    82
+    85
    ],
    "mentions": [],
    "sections": 0,
@@ -2377,7 +2378,7 @@
    "class": "government",
    "tier": "Former legislator",
    "statements": [
-    84
+    87
    ],
    "mentions": [],
    "sections": 0,
@@ -2391,7 +2392,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    32
+    33
    ],
    "mentions": [],
    "sections": 0,
@@ -2405,7 +2406,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    47
+    48
    ],
    "mentions": [],
    "sections": 0,
@@ -2419,7 +2420,7 @@
    "class": "military",
    "tier": "Military",
    "statements": [
-    36
+    37
    ],
    "mentions": [],
    "sections": 0,
@@ -2433,7 +2434,7 @@
    "class": "allied",
    "tier": "Allied legislature",
    "statements": [
-    103
+    106
    ],
    "mentions": [],
    "sections": 0,
@@ -2447,7 +2448,7 @@
    "class": "government",
    "tier": "Legislature",
    "statements": [
-    53
+    54
    ],
    "mentions": [],
    "sections": 0,
@@ -2461,7 +2462,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    102
+    105
    ],
    "mentions": [],
    "sections": 0,
@@ -2475,7 +2476,7 @@
    "class": "government",
    "tier": "Cabinet",
    "statements": [
-    34
+    35
    ],
    "mentions": [],
    "sections": 0,

@@ -563,6 +563,21 @@
    "significance": "The objection to the definition is not advanced only from outside the community the definition exists to protect. The counter-record is stated alongside it at §21.9: a letter of 17 May 2023 signed by more than 160 Jewish communal and civil society organisations calls the definition “an indispensable tool to understand and fight antisemitism”, “one that can be used entirely consistently with fundamental human rights standards”."
   },
   {
+   "speaker": "Save the Children",
+   "role": "International child protection organisation, occupied Palestinian territory programme (Jason Lee, Country Director)",
+   "date": "18 September 2023",
+   "sort": "2023-09-18",
+   "cat": [
+    "children",
+    "findings"
+   ],
+   "tier": "NGO finding",
+   "quote": "We're facing the deadliest year in the West Bank, once again, with several months of 2023 to go.",
+   "context": "Released from Ramallah nineteen days before 7 October 2023, under the title “2023 marks deadliest year on record for children in the occupied West Bank”. At least 38 Palestinian children had been killed by Israeli forces in the West Bank since the start of that year, which the organisation described as making it the deadliest year since records began, at a rate of more than one Palestinian child killed per week. It was the second consecutive record year: Save the Children had reported 36 children killed in 2022, then the deadliest year in more than fifteen years. The count was drawn from OCHA's database, which recorded 36 children killed to 31 August 2023, plus two further deaths on 5 and 9 September recorded by the Palestinian Ministry of Health and Defense for Children International and confirmed by the UN as verified. At least six Israeli children were also killed in 2023.",
+   "source": "Save the Children International, 18 September 2023; OCHA Protection of Civilians database; Defense for Children International - Palestine.",
+   "significance": "A contemporaneous, pre-war statement of the West Bank child death toll, sourced to UN data and published nineteen days before 7 October 2023. It forecloses the account in which the post-2023 West Bank toll is a response to that day's attack: OCHA's closing figures for 2023 record 507 Palestinians killed in the West Bank including 81 children, of whom 208 and 42 respectively were killed before the war began. Recorded at §9.1A."
+  },
+  {
    "speaker": "Tally Gotliv",
    "role": "Member of Knesset (Likud)",
    "date": "7 October 2023",
@@ -1019,6 +1034,20 @@
    "significance": "The Court ordered Israel to punish incitement — an order that presupposes incitement was occurring. Under Bosnia v. Serbia (2007) the duty to prevent genocide binds every state party from the moment it learns of a serious risk; this order is that trigger date. The UN Commission of Inquiry found in September 2025 that Israeli authorities had failed to take action against Herzog, Netanyahu and Gallant — that is, that the order was not complied with."
   },
   {
+   "speaker": "Jared Kushner",
+   "role": "Senior adviser, first Trump administration (2017–2021); founder, Affinity Partners",
+   "date": "15 February 2024",
+   "sort": "2024-02-15",
+   "cat": [
+    "cleansing"
+   ],
+   "tier": "Allied adviser",
+   "quote": "Gaza's waterfront property, it could be very valuable, if people would focus on building up livelihoods… I would do my best to move the people out and then clean it up.",
+   "context": "Said at the Harvard Kennedy School's Middle East Initiative, interviewed by Tarek Masoud, roughly four months into the war. Kushner went on to become, with Steve Witkoff, the co-architect of the Trump administration's Gaza reconstruction plan and the \"Board of Peace\" it produced (§15.6), a body on which no Palestinian sits.",
+   "source": "Harvard Kennedy School, Middle East Initiative, 15 February 2024; widely reported, including by Middle East Eye and Al Jazeera.",
+   "significance": "A statement of intent to depopulate occupied coastal territory for its redevelopment value, from the man who a year later co-designed the internationally endorsed plan for Gaza's post-war governance and reconstruction. Directly comparable to Donald Trump's 4 February 2025 statement recorded elsewhere in this file (\"Level the site, and get rid of the destroyed buildings… We'll own it\"), made by the president Kushner advised."
+  },
+  {
    "speaker": "Jonathan Glazer",
    "role": "Director, The Zone of Interest; accepting the Academy Award for Best International Feature",
    "date": "10 March 2024",
@@ -1243,6 +1272,20 @@
    "context": "Also: 56 per cent support the expulsion of Arab citizens of Israel (up from 45 per cent in 2003); among Jewish Israelis under 40, 66 per cent support expelling Palestinian citizens and 58 per cent support repeating the Jericho conquest; only 2 per cent believe too much firepower has been used on Gaza.",
    "source": "Published in Haaretz; Geopolitical Economy Report, 30 May 2025; Middle East Eye; Genocide Watch; TRT World.",
    "significance": "Population-level evidence of specific intent, cross-tabulated by age, gender and political affiliation, collected during the events it measures. The generational figures indicate the consensus is strengthening, not decaying."
+  },
+  {
+   "speaker": "David Lammy",
+   "role": "Foreign Secretary, United Kingdom",
+   "date": "17 March 2025",
+   "sort": "2025-03-17",
+   "cat": [
+    "warcrimes"
+   ],
+   "tier": "Allied government",
+   "quote": "I did say in my contribution that Israel is in breach of international humanitarian law.",
+   "context": "Told the House of Commons this on 17 March 2025, retroactively attaching the conclusion to his own decision the previous September to suspend around 30 arms-export licences — \"the decision that I made back in September to suspend arms sales, which was largely because of that breach.\" The following day, 18 March, he said the remarks \"could have been clearer\", and Downing Street called it \"a matter for the court\". His original 2 September 2024 statement to the House had used the weaker formulation that a \"clear risk\" existed that arms might be used in a serious violation, while expressly exempting F-35 components (§13.3A).",
+   "source": "Hansard, HC Deb 17 March 2025; Sky News, 17 March 2025; BBC News, 18 March 2025.",
+   "significance": "A serving Foreign Secretary stating outright, on the floor of the House, that the state to which his government continued licensing arms exports was in breach of international humanitarian law — then softening the statement within twenty-four hours rather than acting on its legal consequence. Recorded at §13.3A."
   },
   {
    "speaker": "Hana Bendcowsky",
@@ -2194,32 +2237,18 @@
    "significance": "A serving legislator of the governing party asserting that international law does not bind Israel because of the distinctiveness of the Jewish people. Article 27 of the Vienna Convention on the Law of Treaties forecloses even the stronger claim, that internal law excuses non-performance of a treaty; the prohibitions of genocide, apartheid and torture are jus cogens and permit no derogation; Common Article 1 of the Geneva Conventions binds parties “in all circumstances”, and Article 2(2) of the Convention against Torture, ratified by Israel in 1991, admits “no exceptional circumstances whatsoever”. Recorded at §15.13A."
   },
   {
-   "speaker": "David Lammy",
-   "role": "Foreign Secretary, United Kingdom",
-   "date": "17 March 2025",
-   "sort": "2025-03-17",
+   "speaker": "Andy Burnham",
+   "role": "Prime Minister of the United Kingdom",
+   "date": "21 September 2026",
+   "sort": "2026-09-21",
    "cat": [
     "warcrimes"
    ],
-   "tier": "Allied government",
-   "quote": "I did say in my contribution that Israel is in breach of international humanitarian law.",
-   "context": "Told the House of Commons this on 17 March 2025, retroactively attaching the conclusion to his own decision the previous September to suspend around 30 arms-export licences — \"the decision that I made back in September to suspend arms sales, which was largely because of that breach.\" The following day, 18 March, he said the remarks \"could have been clearer\", and Downing Street called it \"a matter for the court\". His original 2 September 2024 statement to the House had used the weaker formulation that a \"clear risk\" existed that arms might be used in a serious violation, while expressly exempting F-35 components (§13.3A).",
-   "source": "Hansard, HC Deb 17 March 2025; Sky News, 17 March 2025; BBC News, 18 March 2025.",
-   "significance": "A serving Foreign Secretary stating outright, on the floor of the House, that the state to which his government continued licensing arms exports was in breach of international humanitarian law — then softening the statement within twenty-four hours rather than acting on its legal consequence. Recorded at §13.3A."
-  },
-  {
-   "speaker": "Jared Kushner",
-   "role": "Senior adviser, first Trump administration (2017–2021); founder, Affinity Partners",
-   "date": "15 February 2024",
-   "sort": "2024-02-15",
-   "cat": [
-    "cleansing"
-   ],
-   "tier": "Allied adviser",
-   "quote": "Gaza's waterfront property, it could be very valuable, if people would focus on building up livelihoods… I would do my best to move the people out and then clean it up.",
-   "context": "Said at the Harvard Kennedy School's Middle East Initiative, interviewed by Tarek Masoud, roughly four months into the war. Kushner went on to become, with Steve Witkoff, the co-architect of the Trump administration's Gaza reconstruction plan and the \"Board of Peace\" it produced (§15.6), a body on which no Palestinian sits.",
-   "source": "Harvard Kennedy School, Middle East Initiative, 15 February 2024; widely reported, including by Middle East Eye and Al Jazeera.",
-   "significance": "A statement of intent to depopulate occupied coastal territory for its redevelopment value, from the man who a year later co-designed the internationally endorsed plan for Gaza's post-war governance and reconstruction. Directly comparable to Donald Trump's 4 February 2025 statement recorded elsewhere in this file (\"Level the site, and get rid of the destroyed buildings… We'll own it\"), made by the president Kushner advised."
+   "tier": "Head of government",
+   "quote": "We have received a request from the Kingdom of Saudi Arabia for military support. On the advice of the Defence Secretary and the Foreign Secretary, last night I agreed to that request for defensive air-to-air refuelling.",
+   "context": "Speaking to reporters on the flight to the United Nations General Assembly, confirming the first significant military decision of a premiership that began on 20 July 2026. The deployment is a single RAF Voyager tanker refuelling Saudi aircraft on defensive sorties, described by officials as “time limited” and expected to run for weeks, in addition to the Sky Sabre air-defence system already in the kingdom; the stated scope is the defence of Saudi territory against drone and missile attack rather than support for strikes inside Yemen. Burnham said he was “acting to secure the interests of Britain and the wider region”. Jeremy Corbyn responded the same day: “Helping the US to bomb Iran. Now, helping Saudi Arabia to bomb Yemen. This is a terrible and shameful decision, which drags Britain further into conflict, deepens its complicity in Saudi war crimes, and proves that no lessons have been learned whatsoever.”",
+   "source": "Sky News; Washington Post; Associated Press; HuffPost UK, 21 September 2026; Corbyn's statement as issued on his own verified accounts, 21 September 2026.",
+   "significance": "Recorded here because of the chain that produced it rather than the Yemen theatre alone: the joint US-Israeli strikes on Iran of 28 February 2026 closed the Strait of Hormuz, the Houthi movement declared a naval blockade of Saudi Arabia on 20 July 2026 and took Mokha and Perim Island in September, and the request followed. The UN Group of Eminent Experts on Yemen found on 9 September 2020 that third-state arms supply “is only perpetuating the conflict”, and the Court of Appeal in R (CAAT) v Secretary of State for International Trade [2019] EWCA Civ 1020 held the licensing of exports to Saudi Arabia for use in Yemen irrational and unlawful for failure to assess past breaches of international humanitarian law. Recorded at §13.3A and §8.4."
   }
  ]
 }
