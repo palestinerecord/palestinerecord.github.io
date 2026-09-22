@@ -387,10 +387,34 @@ def commit(message, changes):
 
 
 def push():
+    """Push to main, rebasing onto anything the nightly job pushed meanwhile.
+
+    The refresh workflow commits the re-pulled series to the same branch, so
+    this clone falls behind on its own between one publish and the next and the
+    push is rejected with `fetch first`. That used to leave a commit made here
+    and nothing on the site, to be reconciled by hand. Rebasing onto the branch
+    tip and trying again is the whole fix: the two sides touch different files
+    (the bot writes data/ and the static layer, a publish writes whatever was
+    edited), and a genuine conflict still stops the run rather than being
+    resolved in either direction automatically.
+    """
     with Askpass() as helper:
         env = git_env()
         env['GIT_ASKPASS'] = str(helper)
-        out = run(['git', 'push', '--quiet', REMOTE, 'HEAD:main'], cwd=DEPLOY, env=env)
+        for attempt in (1, 2, 3):
+            out = run(['git', 'push', '--quiet', REMOTE, 'HEAD:main'],
+                      cwd=DEPLOY, env=env, check=False)
+            if 'rejected' not in out and 'failed to push' not in out:
+                break
+            if attempt == 3:
+                raise Stop('could not push after three attempts: %s' % out[:400])
+            say('push rejected; rebasing onto the branch tip (attempt %d)' % attempt)
+            run(['git', 'fetch', '--quiet', REMOTE, 'main'], cwd=DEPLOY, env=env)
+            rebase = run(['git', 'rebase', 'FETCH_HEAD'], cwd=DEPLOY, check=False)
+            if 'CONFLICT' in rebase or 'could not apply' in rebase:
+                run(['git', 'rebase', '--abort'], cwd=DEPLOY, check=False)
+                raise Stop('the branch tip conflicts with this publish; '
+                           'reconcile the two by hand:\n%s' % rebase[:400])
     say('pushed to %s/%s' % (OWNER, REPO))
     # What this run published, so a later mirroring run can tell whether the
     # clone has moved since. Inside .git/, so it is never itself published.
