@@ -61,7 +61,11 @@ concurrency:
 jobs:
   refresh:
     name: Refresh the data
-    runs-on: ubuntu-latest
+    # Pinned rather than ubuntu-latest. The label migrates to Ubuntu 26 from
+    # 19 October 2026, and a runner image that changes under a scheduled job
+    # is a job that breaks on a night nobody is watching. Moving the pin is a
+    # deliberate act, followed by a manual run.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
 
