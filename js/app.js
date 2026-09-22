@@ -231,8 +231,16 @@ const App = (function () {
 
   function sortKey(entry) {
     if (entry.sort) {
+      /* The day can carry a disambiguating suffix, as in "2026-09-08b", used to
+         order several entries falling on one date. Number() returns NaN for
+         those, and a NaN key compares false against everything, so the entry
+         dropped out of the sort and sat wherever the pass happened to leave it.
+         Nothing showed this while the list was flat; grouping it by period made
+         twelve entries appear under "Undated". parseInt reads the leading digits
+         and ignores the suffix, and the seq tiebreaker below keeps entries that
+         share a date in the order the file lists them. */
       const p = entry.sort.split('-');
-      return Number(p[0]) * 10000 + Number(p[1]) * 100 + Number(p[2]);
+      return Number(p[0]) * 10000 + Number(p[1]) * 100 + (parseInt(p[2], 10) || 0);
     }
     const d = String(entry.date || '');
     const year = entry.year || Number((d.match(/\b(1[89]|20)\d{2}\b/) || [0])[0]);
@@ -1044,6 +1052,11 @@ const App = (function () {
     const kind = document.getElementById('tl-kind');
     const count = document.getElementById('tl-count');
     const items = Array.prototype.slice.call(document.querySelectorAll('#tl-list .tl-item'));
+    /* The period headings are markers in the same list, not containers, so a
+       filter that hides entries would otherwise leave a heading standing over
+       nothing. Each heading is shown only while at least one entry under it
+       survives the filter. */
+    const periods = Array.prototype.slice.call(document.querySelectorAll('#tl-list .tl-period'));
 
     const inEra = (year, era) => {
       if (era === 'all') return true;
@@ -1071,6 +1084,11 @@ const App = (function () {
           if (noteEl && e.note) noteEl.innerHTML = highlight(e.note, term);
         }
       });
+      const live = {};
+      items.forEach((el) => {
+        if (el.style.display !== 'none') live[el.dataset.period] = true;
+      });
+      periods.forEach((h) => { h.style.display = live[h.dataset.period] ? '' : 'none'; });
       count.textContent = `${shown} of ${items.length} events`;
     }
 

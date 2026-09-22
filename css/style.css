@@ -737,6 +737,19 @@ tbody td strong { color: var(--text); }
   content: ""; position: absolute; left: 9px; top: 4px; bottom: 4px; width: 2px;
   background: linear-gradient(180deg, transparent, var(--line-hi) 6%, var(--line-hi) 94%, transparent);
 }
+/* The period markers. Sticky, because the point of them is to answer "where am
+   I" during a long scroll; the negative left margin pulls them back over the
+   spine so they read as divisions of the timeline rather than entries on it. */
+.tl-period {
+  position: sticky; top: 0; z-index: 3;
+  margin: 30px 0 16px -34px; padding: 7px 0 7px 34px;
+  font-family: var(--mono); font-size: 12.5px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+  background: linear-gradient(90deg, var(--bg) 78%, transparent);
+  border-bottom: 1px solid var(--line);
+}
+.tl-period:first-child { margin-top: 0; }
+
 .tl-item { position: relative; padding: 0 0 24px; }
 .tl-item::before {
   content: ""; position: absolute; left: -30px; top: 8px; width: 10px; height: 10px;

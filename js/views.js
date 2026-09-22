@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=118" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=119" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=118" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=119" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -1390,6 +1390,31 @@ const Views = (function () {
     return 'era-now';
   }
 
+  /* The timeline runs from 1915 to the present and is very unevenly filled: the
+     2020s carry more entries than the eleven decades before them put together,
+     and the current year carries more than any earlier decade. A single grouping
+     unit therefore cannot work. Decades would leave one heading holding more than
+     half the record, and months would produce a hundred headings holding one
+     entry each. The unit is chosen per period instead, so that each heading holds
+     a readable number of entries: decades while the record is sparse, years once
+     it thickens, months for the year under way.
+
+     The year and month come from the sort key app.js has already computed, so
+     the dates are parsed once rather than twice, and an entry whose month could
+     not be read falls back to its year rather than being dropped. */
+  const PERIOD_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+                         'July', 'August', 'September', 'October', 'November', 'December'];
+
+  function period(entry) {
+    const key = entry.key || 0;
+    const year = Math.floor(key / 10000);
+    const month = Math.floor(key / 100) % 100;
+    if (!year) return 'Undated';
+    if (year < 2020) return String(Math.floor(year / 10) * 10) + 's';
+    if (year < 2026) return String(year);
+    return month >= 1 && month <= 12 ? PERIOD_MONTHS[month - 1] + ' ' + year : String(year);
+  }
+
   function timelineView() {
     const t = D.timeline;
     const years = t.map((e) => e.year).filter(Boolean);
@@ -1416,11 +1441,20 @@ const Views = (function () {
           <span class="small muted" id="tl-count"></span>
         </div>
         <div class="tl" id="tl-list">
-          ${t.map((e, i) => `<div class="tl-item ${era(e.year)} tl-${e.kind}" id="tl-${i}" data-year="${e.year || ''}" data-i="${i}">
+          ${(() => {
+            let last = null;
+            return t.map((e, i) => {
+              const p = period(e);
+              const heading = p === last ? '' :
+                `<h3 class="tl-period" data-period="${esc(p)}">${esc(p)}</h3>`;
+              last = p;
+              return heading + `<div class="tl-item ${era(e.year)} tl-${e.kind}" id="tl-${i}" data-year="${e.year || ''}" data-period="${esc(p)}" data-i="${i}">
             <div class="tl-date">${esc(e.date)}</div>
             <div class="tl-text">${esc(e.event)}</div>
             ${e.note ? `<div class="tl-note">${esc(e.note)}</div>` : ''}
-          </div>`).join('')}
+          </div>`;
+            }).join('');
+          })()}
         </div>
         <p class="note small" style="margin-top:22px">The chronology is not exhaustive; it is the record the report anchors. Entries marked as context are compiled from the sources listed under <a href="#/sources">Sources</a> and are included to close the gaps between the massacres — a chronology of crimes alone would suggest the intervals were empty, and they were not.</p>
       </section>
