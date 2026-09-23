@@ -115,21 +115,36 @@ DESCRIPTIONS = {
     'constituency.json': (
         'The constituency ledger',
         'Every seat in the House of Commons, the member who holds it, and how that member voted '
-        'the three times the House divided on Gaza: the immediate-ceasefire amendment and the '
-        'humanitarian-pauses amendment of 15 November 2023, and the Order proscribing Palestine '
-        'Action of 2 July 2025. Each division carries the question as it was put, what a vote '
-        'for it meant, the published counts that identify it, and a link to its own division '
-        'list. Against each member the file also carries any entry in the Register of '
+        'each time the House divided on Palestine: the 2014 motion to recognise the State of '
+        'Palestine, the second and third readings of the 2023 Bill that would have barred public '
+        'bodies from boycotting Israel or the settlements, the immediate-ceasefire and '
+        'humanitarian-pauses amendments of 15 November 2023, and the Order proscribing Palestine '
+        'Action of 2 July 2025. Each division carries the question as it was put, what a vote for '
+        'it meant, the published counts that identify it, and a link to its own division list. '
+        'The file also carries every petition to Parliament on the subject that reached a '
+        'government response or a debate, with signatures counted seat by seat for petitions of '
+        'this Parliament; every Commons and Westminster Hall debate since 7 October 2023 in which a '
+        'member spoke about it, with the number of sitting members who did; published opinion '
+        'polls with their commissioners; and, against each member, any entry in the Register of '
         'Members\u2019 Financial Interests and any donation in the Electoral Commission\u2019s '
-        'register that the published search terms match, together with the constituency the '
-        'member sat for at the time of a vote taken before the 2024 boundaries. Money that '
-        'reached a party rather than a named member is aggregated to the party, because it '
-        'cannot honestly be attributed to any one of them. No email address is published here.',
+        'register that the published search terms match. Money that reached a party rather than a '
+        'named member is aggregated to the party, because it cannot honestly be attributed to any '
+        'one of them. No email address is published here.',
         'Built by constituency.py from members-api.parliament.uk, commonsvotes-api.parliament.uk, '
-        'interests-api.parliament.uk and search.electoralcommission.org.uk. The division subjects '
-        'are curated rather than machine-derived, because the House titles a division by its '
-        'procedural form; the published counts are re-checked against the pulled division on '
-        'every build.',
+        'hansard-api.parliament.uk, petition.parliament.uk, interests-api.parliament.uk and '
+        'search.electoralcommission.org.uk. The division subjects are curated rather than '
+        'machine-derived, because the House titles a division by its procedural form; the '
+        'published counts are re-checked against the pulled division on every build.',
+    ),
+    'constituency-speeches.json': (
+        'What each member said',
+        'For every sitting member who spoke about Gaza, Israel or Palestine in a Commons or '
+        'Westminster Hall debate since 7 October 2023, one entry per debate: the debate, the number '
+        'of their contributions to it, and a verbatim excerpt of the longest, taken from the '
+        'sentence that first names the subject. Indexed by member id; the debate index refers to '
+        'the debates list in constituency.json.',
+        'Hansard, via hansard-api.parliament.uk, under the Open Parliament Licence. Built by '
+        'constituency.py.',
     ),
     'falsification.json': (
         'The falsification register',

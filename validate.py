@@ -793,9 +793,11 @@ def check_constituency(files):
         fail('constituency', 'the file states %s members and carries %d'
              % (meta.get('members'), len(members)))
 
-    # A vote is one of six things. Anything else would render as a badge with
-    # no meaning, and would silently be counted as neither for nor against.
-    casts = {'aye', 'no', 'aye-teller', 'no-teller', 'absent', 'not-a-member'}
+    # A vote is one of seven things. Anything else would render as a badge with
+    # no meaning, and would silently be counted as neither for nor against. The
+    # seventh is a member who told for the side they opposed so that a vote
+    # could be held at all, and it may only appear where the division names them.
+    casts = {'aye', 'no', 'aye-teller', 'no-teller', 'absent', 'not-a-member', 'forced-teller'}
     ids = {str(d['id']) for d in divisions}
 
     if not divisions:
@@ -842,6 +844,11 @@ def check_constituency(files):
             if cast not in casts:
                 fail('constituency', '%s is recorded as "%s" in division %s, which is not a vote'
                      % (m['name'], cast, did))
+            if cast == 'forced-teller':
+                named = next((d.get('procedural_tellers') or {} for d in divisions if str(d['id']) == did), {})
+                if str(m.get('id')) not in named:
+                    fail('constituency', '%s is shown as having told for the other side in division %s, '
+                                         'which names no such teller' % (m['name'], did))
         # `since` is the start of the member's current unbroken service, so a
         # member sitting continuously since before a division must appear in
         # that division's list, as an aye, a no or a no-vote-recorded. The
@@ -862,6 +869,80 @@ def check_constituency(files):
                                      'it cannot be looked up' % m['name'])
             if not isinstance(g.get('value'), (int, float)) or g['value'] <= 0:
                 fail('constituency', 'a donation to %s carries no value' % m['name'])
+
+    # The petitions. A seat's count is a number the page puts beside a named
+    # member, so the counts for a petition must not add up to more than the
+    # petition's own total, and the ranks must be a clean one to n.
+    petitions = blob.get('petitions', [])
+    topics = {'recognition', 'arms', 'sanctions', 'ceasefire', 'humanitarian', 'accountability', 'other'}
+    if meta.get('petitions') != len(petitions):
+        fail('constituency', 'the file states %s petitions and carries %d' % (meta.get('petitions'), len(petitions)))
+    for pet in petitions:
+        pid = str(pet.get('id'))
+        if not str(pet.get('url', '')).startswith('https://petition.parliament.uk/'):
+            fail('constituency', 'petition %s does not link to the petitions site' % pid)
+        if not pet.get('action') or not pet.get('signatures'):
+            fail('constituency', 'petition %s carries no request or no signature count' % pid)
+        if pet.get('topic') not in topics:
+            fail('constituency', 'petition %s has the topic "%s", which the page has no filter for'
+                 % (pid, pet.get('topic')))
+        if pet.get('by_seat'):
+            counts = [m['signatures'][pid] for m in members if pid in (m.get('signatures') or {})]
+            if sum(n for n, _r in counts) > pet['signatures']:
+                fail('constituency', 'petition %s has more signatures by seat (%d) than in all (%d)'
+                     % (pid, sum(n for n, _r in counts), pet['signatures']))
+            if sorted(r for _n, r in counts) != list(range(1, len(counts) + 1)):
+                fail('constituency', 'petition %s ranks its seats with gaps or repeats' % pid)
+            if len(counts) != pet.get('seats'):
+                fail('constituency', 'petition %s states %s seats and %d rows carry it'
+                     % (pid, pet.get('seats'), len(counts)))
+        elif any(pid in (m.get('signatures') or {}) for m in members):
+            fail('constituency', 'petition %s is counted against seats but is not marked as joinable, '
+                                 'so a count on old boundaries may be shown against a new seat' % pid)
+
+    # The debates and the words. Every quotation is a named member's words, so
+    # each must point at a debate that exists, and the count on the row must
+    # be the number of debates the reader will find when they open it.
+    debates = blob.get('debates', [])
+    speeches = (files.get('constituency-speeches') or {}).get('by_member')
+    if meta.get('debates') != len(debates):
+        fail('constituency', 'the file states %s debates and carries %d' % (meta.get('debates'), len(debates)))
+    for d in debates:
+        if not str(d.get('url', '')).startswith('https://hansard.parliament.uk/'):
+            fail('constituency', 'the debate of %s does not link to Hansard' % d.get('date'))
+    if speeches is None:
+        fail('constituency', 'data/constituency-speeches.json is missing, so every "what they said" block '
+                             'would load nothing')
+    else:
+        ids = {str(m['id']): m for m in members}
+        for mid, entries in speeches.items():
+            m = ids.get(mid)
+            if not m:
+                fail('constituency', 'the speeches file quotes member %s, who holds no seat in the ledger' % mid)
+                continue
+            if m.get('spoke') != len(entries):
+                fail('constituency', '%s is shown as speaking in %s debates and %d are quoted'
+                     % (m['name'], m.get('spoke'), len(entries)))
+            for index, n, words in entries:
+                if not 0 <= index < len(debates):
+                    fail('constituency', 'a quotation of %s points at debate %s, which is not in the file'
+                         % (m['name'], index))
+                if not words.strip() or n < 1:
+                    fail('constituency', 'an empty quotation is recorded against %s' % m['name'])
+        spoke = sum(1 for m in members if m.get('spoke'))
+        if spoke != len(speeches) or spoke != meta.get('members_who_spoke'):
+            fail('constituency', '%d rows say the member spoke, %d members are quoted, and the file states %s'
+                 % (spoke, len(speeches), meta.get('members_who_spoke')))
+
+    for poll in blob.get('polls', []):
+        if not str(poll.get('source', '')).startswith('https://'):
+            fail('constituency', 'the %s poll of %s carries no source' % (poll.get('pollster'), poll.get('published')))
+        for label, pct in poll.get('findings', []):
+            if not isinstance(pct, (int, float)) or not 0 <= pct <= 100:
+                fail('constituency', 'the %s poll gives %r for "%s"' % (poll.get('pollster'), pct, label))
+
+    note('constituency: %d petitions, %d debates, %d members quoted, %d polls'
+         % (len(petitions), len(debates), len(speeches or {}), len(blob.get('polls', []))))
 
     # The postcode lookup joins a constituency name to this map and opens the
     # row it points at. An index out of range would open nothing and say nothing.

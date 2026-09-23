@@ -1247,7 +1247,9 @@ tbody td strong { color: var(--text); }
    Measure again rather than guessing if the bar changes: load index.html at a
    ladder of window widths with the collapse out of the way, sum the widths of
    the bar's children plus its gaps and padding, and read what the row needs. */
-@media (max-width: 1240px) {
+/* The bar's contents need about 1,290px at full size, so it starts to compact
+   above that rather than at 1,240px, where a 1,280px laptop scrolled sideways. */
+@media (max-width: 1320px) {
   .topbar { gap: 14px; }
   .nav a, .nav-head { padding: 8px 10px; font-size: 13px; }
   .fresh-label { display: none; }
@@ -2074,7 +2076,7 @@ tr.struck td { text-decoration: line-through; color: var(--red); }
 .mp-entry[open] { border-color: var(--line-hi); }
 .mp-entry > summary {
   list-style: none; cursor: pointer; padding: 11px 18px;
-  display: grid; grid-template-columns: 1fr auto minmax(0, 330px) auto; gap: 14px; align-items: center;
+  display: grid; grid-template-columns: 1fr auto minmax(0, 190px) minmax(0, 240px); gap: 14px; align-items: center;
 }
 .mp-entry > summary::-webkit-details-marker { display: none; }
 .mp-entry > summary:hover { background: var(--panel-hi); }
@@ -2086,11 +2088,13 @@ tr.struck td { text-decoration: line-through; color: var(--red); }
   border: 1px solid var(--line); border-left: 3px solid var(--party, var(--line-hi));
   border-radius: 4px; padding: 2px 7px; white-space: nowrap;
 }
-.mp-votes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-.mp-cell { min-width: 0; }
-/* The legend above the list names the three columns, so the per-badge name is
-   carried only where the badges stack and the columns stop existing. */
+.mp-votes { display: block; min-width: 0; }
+.mp-cell { min-width: 0; display: block; }
+/* A row shows the badge for the division chosen above the list, so the name of
+   the division is carried by the select and only repeated where the badge
+   stacks under the member's name on a phone. */
 .mp-cell > b { display: none; }
+.mp-cell[hidden], .mp-div[hidden], .mp-pet[hidden], .chips .chip[hidden] { display: none !important; }
 .mp-legend span b { color: var(--text-2); font-weight: 600; }
 .mp-vote {
   display: block; font-size: 11px; text-align: center; border-radius: 999px;
@@ -2102,6 +2106,82 @@ tr.struck td { text-decoration: line-through; color: var(--red); }
 .mp-vote.v-absent { color: var(--muted); border-style: dashed; }
 .mp-vote.v-not-a-member { color: var(--muted); opacity: .6; }
 .mp-flag { font-size: 11px; color: var(--accent); white-space: nowrap; }
+.mp-flag.spoke { color: var(--blue); }
+.mp-flags { display: flex; flex-wrap: wrap; gap: 4px 12px; justify-content: flex-end; }
+.mp-vote.v-forced { color: var(--accent); border-color: rgba(217, 164, 65, .45); }
+
+.mp-controls { display: flex; flex-wrap: wrap; gap: 12px 18px; margin: 0 0 14px; }
+.mp-control { display: grid; gap: 5px; flex: 1 1 300px; min-width: 0; }
+.mp-control > span {
+  font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600;
+}
+.mp-control select {
+  width: 100%; min-width: 0; background: var(--panel); color: var(--text);
+  border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px; font-size: 14px;
+}
+.mp-control select:focus { outline: none; border-color: var(--accent); }
+#mp-votes, #mp-also, #mp-parties { margin-bottom: 10px; }
+
+.mp-topic {
+  display: inline-block; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--accent); border: 1px solid rgba(217, 164, 65, .4); border-radius: 4px;
+  padding: 1px 6px; margin-right: 8px; vertical-align: 1px;
+}
+.mp-unrecorded { padding: 18px 24px; margin-top: 16px; border-style: dashed; }
+.mp-unrecorded h3 { margin: 0; font-family: var(--serif); font-size: 18px; color: var(--text); }
+
+.mp-allvotes { display: grid; gap: 8px; }
+.mp-voterow { display: grid; grid-template-columns: 1fr 190px; gap: 12px; align-items: center; }
+.mp-voterow-what { display: grid; gap: 1px; min-width: 0; }
+.mp-voterow-what b { font-size: 14px; color: var(--text-2); font-weight: 600; }
+.mp-voterow-what span { font-size: 11.5px; color: var(--muted); }
+
+.mp-sig { display: grid; grid-template-columns: 76px 1fr; gap: 12px; align-items: baseline; margin-bottom: 8px; }
+.mp-sig-n { font-family: var(--mono); font-size: 16px; color: var(--text); text-align: right; }
+.mp-sig a { color: var(--text-2); font-size: 14px; line-height: 1.5; }
+.mp-sig .mp-meta { display: block; }
+
+.mp-quote { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 12px; }
+.mp-quote:first-child { border-top: 0; padding-top: 0; margin-top: 0; }
+.mp-quote-title { display: inline-block; font-size: 14.5px; color: var(--text); margin: 2px 0 6px; }
+.mp-quote blockquote {
+  margin: 0 0 4px; padding: 8px 14px; border-left: 3px solid var(--blue);
+  background: var(--blue-soft); border-radius: 0 8px 8px 0;
+  font-size: 14.5px; line-height: 1.65; color: var(--text-2);
+}
+.mp-said-more { margin: 12px 0 4px; }
+
+.mp-timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+.mp-timeline li { position: relative; padding: 0 0 20px 22px; display: grid; gap: 4px; }
+.mp-timeline li::before {
+  content: ''; position: absolute; left: -6px; top: 4px; width: 10px; height: 10px;
+  border-radius: 50%; background: var(--accent);
+}
+.mp-tl-date { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+.mp-timeline li div { font-size: 14.5px; line-height: 1.65; color: var(--text-2); }
+.mp-timeline b { color: var(--text); }
+.mp-jump { margin-left: 6px; font-size: 12.5px; white-space: nowrap; }
+
+.mp-pet { padding: 18px 22px; display: grid; gap: 10px; align-content: start; }
+.mp-pet-head { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.mp-pet h3 { margin: 0; font-family: var(--serif); font-size: 18px; line-height: 1.35; }
+.mp-pet h3 a { color: var(--text); }
+.mp-pet-bar { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.mp-pet-bar span { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
+.mp-pet-n { margin: 0; font-size: 13.5px; color: var(--muted); }
+.mp-pet-n b { font-family: var(--mono); font-size: 18px; color: var(--text); }
+.mp-pet .led-quote { margin: 0; }
+.mp-pet-links { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: 13px; color: var(--muted); }
+
+.mp-debates > summary { cursor: pointer; font-size: 14.5px; color: var(--text-2); padding: 10px 0; }
+.mp-nowrap { white-space: nowrap; }
+
+.mp-poll { padding: 18px 22px; display: grid; gap: 10px; align-content: start; }
+.mp-poll-row { display: grid; grid-template-columns: minmax(0, 1fr) 120px 44px; gap: 10px; align-items: center; }
+.mp-poll-label { font-size: 13.5px; line-height: 1.45; color: var(--text-2); }
+.mp-poll-bar { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.mp-poll-bar span { display: block; height: 100%; background: var(--blue); border-radius: 999px; }
+.mp-poll-pct { font-family: var(--mono); font-size: 14px; color: var(--text); text-align: right; }
 
 .mp-body { padding: 4px 18px 18px; display: grid; gap: 16px; }
 .mp-block h4 {
@@ -2125,15 +2205,20 @@ tr.struck td { text-decoration: line-through; color: var(--red); }
 @media (max-width: 1080px) {
   .mp-entry > summary { grid-template-columns: 1fr auto; }
   .mp-votes { grid-column: 1 / -1; }
-  .mp-flag { grid-column: 1 / -1; }
+  .mp-flags { grid-column: 1 / -1; justify-content: flex-start; }
 }
 
 @media (max-width: 700px) {
   .mp-div { padding: 16px 16px; }
   .mp-div-head h3 { font-size: 17px; }
   .mp-entry > summary { padding: 11px 14px; }
-  .mp-votes { grid-template-columns: 1fr; }
   .mp-cell { display: grid; grid-template-columns: 92px 1fr; gap: 8px; align-items: center; }
+  .mp-voterow { grid-template-columns: 1fr; gap: 4px; }
+  .mp-voterow .mp-vote { justify-self: start; }
+  .mp-poll-row { grid-template-columns: 1fr 44px; }
+  .mp-poll-bar { grid-column: 1 / -1; grid-row: 2; }
+  .mp-pet, .mp-poll, .mp-unrecorded { padding: 16px; }
+  .mp-sig { grid-template-columns: 60px 1fr; }
   .mp-cell > b {
     display: block; font-size: 11px; font-weight: 600; color: var(--muted);
   }

@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 """Pull the raw UK parliamentary record for the constituency ledger.
 
-Five sources, all open and none of them requiring a key:
+Seven sources, all open and none of them requiring a key:
 
     api.postcodes.io            postcode to constituency (used in the browser,
                                 not here; recorded so the page can say where
                                 the lookup goes)
-    members-api.parliament.uk   every sitting MP and the seat they hold
+    members-api.parliament.uk   every sitting MP, the seat they hold, and when
+                                they have sat before
     commonsvotes-api...         who voted which way in a named division
+    hansard-api.parliament.uk   the divisions older than the votes API, and the
+                                debates, contribution by contribution
     interests-api.parliament.uk the Register of Members' Financial Interests
     search.electoralcommission  the register of political donations
+    petition.parliament.uk      the petitions, with signatures by constituency
 
 Everything is written to data/raw and nothing is interpreted here, because the
 interpretation belongs in constituency.py where it can be read beside what it
@@ -20,15 +24,24 @@ a URL.
     python3 fetch_constituency.py            # refresh every source
     python3 fetch_constituency.py --offline  # report what is already cached
 
+The debate transcripts are cached one file per debate under data/raw/hansard,
+which is not committed: it is tens of megabytes of text that the fetch can
+always rebuild, and only what constituency.py derives from it is published.
+A transcript already cached is not fetched again unless the sitting was in the
+last thirty days, since Hansard corrects the record for a few weeks and then
+stops.
+
 The register of interests is only ever the *current* register: the API does not
 serve entries a member has since removed, so the ledger states a position as it
 stands today and cannot state one that has been withdrawn.
 """
 
 import csv
+import datetime
 import io
 import json
 import os
+import re
 import sys
 import time
 import urllib.parse
@@ -36,6 +49,7 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(HERE, 'data', 'raw')
+HANSARD = os.path.join(RAW, 'hansard')
 
 AGENT = 'palestinerecord.github.io dashboard build (https://palestinerecord.github.io)'
 
@@ -45,7 +59,27 @@ AGENT = 'palestinerecord.github.io dashboard build (https://palestinerecord.gith
 # Address: Amendment (h)" and nothing in the machine record says otherwise. So
 # the subject is curated here, each with the published count that identifies it
 # beyond doubt, and the votes themselves are pulled rather than typed.
-DIVISIONS = [1665, 1666, 2078]
+DIVISIONS = [1586, 1665, 1666, 1705, 2078]
+
+# Divisions older than the votes API, which begins in 2016, are read from the
+# Hansard API by their external id. The 2014 motion to recognise the State of
+# Palestine is the only one this ledger carries.
+HANSARD_DIVISIONS = ['1410142000423']
+
+# What makes a petition or a debate part of this ledger. The petitions site and
+# Hansard both search their text loosely, so every result is tested against
+# this expression and kept only if it matches. Stated here, and printed on the
+# page, for the same reason as the donation terms: what the ledger cannot see
+# should be visible rather than guessed at.
+SUBJECT = re.compile(r'palestin|\bgaza|israel|west bank|\bzionis|\bhamas|netanyahu|'
+                     r'occupied territor|golan|\bunrwa\b|\brafah\b|\be1\b', re.I)
+
+PETITION_SEARCHES = ['Palestine', 'Palestinian', 'Gaza', 'Israel', 'ceasefire']
+# A petition is carried if the government had to answer it or MPs debated it.
+PETITION_THRESHOLD = 10000
+
+DEBATE_SEARCHES = ['Gaza', 'Israel', 'Palestine', 'Palestinian', 'Middle East', 'West Bank']
+DEBATES_SINCE = '2023-10-07'
 
 # What the donations register is searched for. The register has no subject
 # index, so an organisation that gives to a party under a name not on this list
@@ -119,6 +153,101 @@ def fetch_divisions():
     return write('uk_divisions.json', out)
 
 
+def fetch_hansard_divisions():
+    return write('uk_divisions_hansard.json',
+                 [get_json('https://hansard-api.parliament.uk/debates/division/%s.json' % ext)
+                  for ext in HANSARD_DIVISIONS])
+
+
+def fetch_history(members):
+    """Every earlier stretch of service for members whose current one is recent.
+
+    The votes API lists every sitting member in a division, voting or not, so
+    an absence there is exact. Hansard's older division records list only the
+    members who voted, so telling an absence from a later arrival needs the
+    member's own history: a member who sat in 2014, lost the seat and came back
+    at a by-election is absent from the 2014 list for a different reason from a
+    member first elected in 2024.
+    """
+    oldest = '2014-10-13'  # the oldest division the ledger carries
+    out = {}
+    for m in members:
+        since = ((m.get('latestHouseMembership') or {}).get('membershipStartDate') or '')[:10]
+        if since and since <= oldest:
+            continue
+        spells = get_json('https://members-api.parliament.uk/api/Members/%d/Biography' % m['id'])
+        out[str(m['id'])] = [
+            {'from': (h.get('startDate') or '')[:10], 'to': (h.get('endDate') or '')[:10],
+             'seat': h.get('name') or ''}
+            for h in (spells.get('value') or {}).get('houseMemberships') or []
+            if h.get('house') == 1]
+    return write('uk_member_history.json', out)
+
+
+def fetch_petitions():
+    """Every petition on the subject that reached a response or a debate."""
+    ids = {}
+    for kind, base in (('current', 'https://petition.parliament.uk/petitions.json'),
+                       ('archived', 'https://petition.parliament.uk/archived/petitions.json')):
+        for term in PETITION_SEARCHES:
+            for page in range(1, 40):
+                listing = get_json('%s?q=%s&state=all&page=%d' % (base, urllib.parse.quote(term), page))
+                for item in listing.get('data') or []:
+                    a = item['attributes']
+                    text = (a.get('action') or '') + ' ' + (a.get('background') or '')
+                    if not SUBJECT.search(text):
+                        continue
+                    if (a.get('signature_count') or 0) >= PETITION_THRESHOLD or a.get('debate'):
+                        ids[(kind, item['id'])] = True
+                if not (listing.get('links') or {}).get('next'):
+                    break
+    out = []
+    for kind, pid in sorted(ids):
+        url = ('https://petition.parliament.uk/%spetitions/%d.json'
+               % ('archived/' if kind == 'archived' else '', pid))
+        a = get_json(url)['data']['attributes']
+        # Country and region breakdowns are not used, and are most of the size.
+        for key in ('signatures_by_country', 'signatures_by_region'):
+            a.pop(key, None)
+        a['id'], a['parliament'] = pid, kind
+        out.append(a)
+    return write('uk_petitions.json', out)
+
+
+def fetch_debates():
+    """The Commons and Westminster Hall debates on the subject, one file each."""
+    os.makedirs(HANSARD, exist_ok=True)
+    today = datetime.date.today().isoformat()
+    found = {}
+    for term in DEBATE_SEARCHES:
+        for skip in range(0, 2000, 100):
+            url = ('https://hansard-api.parliament.uk/search/debates.json'
+                   '?queryParameters.searchTerm=%s&queryParameters.startDate=%s'
+                   '&queryParameters.endDate=%s&queryParameters.house=Commons'
+                   '&queryParameters.skip=%d&queryParameters.take=100'
+                   % (urllib.parse.quote(term), DEBATES_SINCE, today, skip))
+            results = get_json(url).get('Results') or []
+            for r in results:
+                if SUBJECT.search(r.get('Title') or '') or 'middle east' in (r.get('Title') or '').lower():
+                    found[r['DebateSectionExtId']] = (r.get('SittingDate') or '')[:10]
+            if len(results) < 100:
+                break
+    recent = (datetime.date.today() - datetime.timedelta(days=30)).isoformat()
+    fetched = 0
+    for ext, sitting in sorted(found.items(), key=lambda kv: kv[1]):
+        path = os.path.join(HANSARD, '%s.json' % ext)
+        if os.path.exists(path) and sitting < recent:
+            continue
+        blob = get_json('https://hansard-api.parliament.uk/debates/debate/%s.json' % ext)
+        with open(path, 'w') as fh:
+            fh.write(json.dumps(blob, ensure_ascii=False))
+        fetched += 1
+    index = [{'ext': ext, 'date': sitting} for ext, sitting in sorted(found.items(), key=lambda kv: kv[1])]
+    write('uk_debates.json', index)
+    print('  %d debates, %d fetched now, the rest cached' % (len(index), fetched))
+    return index
+
+
 def fetch_interests():
     url = 'https://interests-api.parliament.uk/api/v1/Interests?Skip=%d&Take=%d'
     return write('uk_interests.json', paged(url, 20, 8000))
@@ -139,7 +268,9 @@ def fetch_donations():
 
 def main():
     if '--offline' in sys.argv:
-        for name in ('uk_members.json', 'uk_divisions.json', 'uk_interests.json', 'uk_donations.json'):
+        for name in ('uk_members.json', 'uk_divisions.json', 'uk_divisions_hansard.json',
+                     'uk_member_history.json', 'uk_interests.json', 'uk_donations.json',
+                     'uk_petitions.json', 'uk_debates.json'):
             path = os.path.join(RAW, name)
             print('  %-28s %s' % (name, '%d bytes' % os.path.getsize(path)
                                   if os.path.exists(path) else 'missing'))
@@ -147,13 +278,20 @@ def main():
     print('members')
     members = fetch_members()
     print('divisions')
-    divisions = fetch_divisions()
+    divisions = fetch_divisions() + fetch_hansard_divisions()
+    print('history')
+    fetch_history(members)
+    print('petitions')
+    petitions = fetch_petitions()
+    print('debates')
+    debates = fetch_debates()
     print('interests')
     interests = fetch_interests()
     print('donations')
     donations = fetch_donations()
-    print('fetched %d sitting MPs, %d divisions, %d registered interests, %d reported donations'
-          % (len(members), len(divisions), len(interests), len(donations)))
+    print('fetched %d sitting MPs, %d divisions, %d petitions, %d debates, %d registered interests, '
+          '%d reported donations' % (len(members), len(divisions), len(petitions), len(debates),
+                                     len(interests), len(donations)))
 
 
 if __name__ == '__main__':

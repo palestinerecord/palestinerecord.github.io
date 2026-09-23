@@ -5,10 +5,17 @@ The scorecard on this site holds a row for the United Kingdom, and Part XIII.3
 of the report sets out what that row rests on. Both are addressed to a state.
 This file cuts the same record along the axis a reader in Britain can actually
 act on: the seat they live in, the member who holds it, how that member voted
-when the House divided on Gaza, what the Register of Members' Financial
-Interests records against their name, and what the Electoral Commission has
-published about money reaching their party from organisations that campaign on
-Israel's behalf.
+each time the House divided on Palestine, what they said when it debated it,
+how many people in the seat signed the petitions that reached Parliament, what
+the Register of Members' Financial Interests records against their name, and
+what the Electoral Commission has published about money reaching their party
+from organisations that campaign on Israel's behalf.
+
+It writes two files. data/constituency.json is everything the page needs to
+draw the list and filter it. data/constituency-speeches.json holds the words:
+an excerpt of every contribution a sitting member made to a debate on the
+subject, which is several times the size of the rest and is only fetched when a
+reader opens a member's row.
 
 Nothing here is an accusation. A registered interest is a disclosure the member
 made under the rules, and a reported donation is a lawful, published gift. What
@@ -16,7 +23,7 @@ the ledger does is put the disclosure beside the vote, which is the one thing
 the four registers cannot do for themselves because each is published on its
 own.
 
-    python3 constituency.py            # writes data/constituency.json
+    python3 constituency.py            # writes both files
     python3 constituency.py --report   # writes nothing, prints the joins
 
 Run fetch_constituency.py first; this file reads only the cache, so a build is
@@ -43,6 +50,7 @@ RAW = os.path.join(DATA, 'raw')
 DIVISIONS = [
     {
         'id': 1666,
+        'topic': 'ceasefire',
         'date': '2023-11-15',
         'title': 'An immediate ceasefire in Gaza',
         # A one-word name for the vote, so that a badge in a list of 649 rows
@@ -70,6 +78,7 @@ DIVISIONS = [
     },
     {
         'id': 1665,
+        'topic': 'ceasefire',
         'date': '2023-11-15',
         'title': 'Extended humanitarian pauses, short of a ceasefire',
         'short': 'Pauses',
@@ -91,6 +100,7 @@ DIVISIONS = [
     },
     {
         'id': 2078,
+        'topic': 'proscription',
         'date': '2025-07-02',
         'title': 'Proscribing Palestine Action as a terrorist organisation',
         'short': 'Proscription',
@@ -112,6 +122,246 @@ DIVISIONS = [
                 'says so rather than counting it as though it were clean.',
         'source': 'https://votes.parliament.uk/votes/commons/division/2078',
     },
+    {
+        'id': 'h2014',
+        'hansard': '1410142000423',
+        'topic': 'recognition',
+        'date': '2014-10-13',
+        'title': 'Recognising the State of Palestine alongside Israel',
+        'short': 'Recognition',
+        'in_sentence': 'recognising the State of Palestine alongside the State of Israel',
+        'formal': 'Palestine and Israel (Backbench Business motion), Division 54',
+        'moved': 'Moved by Grahame Morris, from the Labour back benches',
+        'question': 'That this House believes that the Government should recognise the state of '
+                    'Palestine alongside the state of Israel, as a contribution to securing a '
+                    'negotiated two state solution.',
+        'aye_means': 'for recognising the State of Palestine',
+        'no_means': 'against recognition',
+        'result': 'Agreed',
+        'ayes': 274,
+        'noes': 12,
+        'note': 'A backbench motion, which does not bind the government, and the government did not '
+                'act on it for eleven years: the United Kingdom recognised the State of Palestine on '
+                '21 September 2025. Those opposed to the motion declined to put up tellers, so two '
+                'of its supporters, Jeremy Corbyn and Mike Wood, told for the Noes so that the vote '
+                'could be recorded by name at all; Corbyn said so from the floor immediately '
+                'afterwards. The division list therefore names him on the side he opposed, and this '
+                'ledger shows him as a teller who forced the vote rather than as a vote against. '
+                'The votes API begins in 2016, so this division is read from Hansard, which lists '
+                'only those who voted; a member is shown as not voting only where their own record '
+                'of service puts them in the House that day.',
+        'source': 'https://hansard.parliament.uk/Commons/2014-10-13/debates/14101322000001/PalestineAndIsrael',
+        # Members who told for a side they did not hold, on the record, so that
+        # a division could take place. Keyed by member id.
+        'procedural_tellers': {185: 'Told for the Noes so that the vote could be recorded; supported the motion'},
+    },
+    {
+        'id': 1586,
+        'topic': 'boycott',
+        'date': '2023-07-03',
+        'title': 'The anti-boycott Bill: second reading',
+        'short': 'Boycott Bill',
+        'in_sentence': 'the second reading of the Economic Activity of Public Bodies (Overseas Matters) '
+                       'Bill, which would have barred public bodies from boycotting Israel or the '
+                       'settlements',
+        'formal': 'Economic Activity of Public Bodies (Overseas Matters) Bill: Second Reading',
+        'moved': 'Moved by the Conservative government',
+        'question': 'That the Bill be now read a second time.',
+        'aye_means': 'for the Bill',
+        'no_means': 'against the Bill',
+        'result': 'Agreed',
+        'ayes': 268,
+        'noes': 70,
+        'note': 'The Bill barred public bodies from purchasing and investment decisions influenced '
+                'by political or moral disapproval of a foreign state, and its clause 3(7) named '
+                'Israel, the Occupied Palestinian Territories and the occupied Golan Heights as the '
+                'only places a minister could not exempt by regulation. The vote was taken straight '
+                'after a reasoned amendment declining the Bill a second reading, moved '
+                'from the Labour benches, fell by 212 to 272. The Bill itself then passed by 268 to '
+                '70 because most Labour members did not vote on it: the division list records 184 '
+                'Labour members with no vote. On this division an absence was the party\u2019s '
+                'position rather than a member\u2019s own choice, and is weaker evidence of a view '
+                'than an absence on the others.',
+        'source': 'https://votes.parliament.uk/votes/commons/division/1586',
+    },
+    {
+        'id': 1705,
+        'topic': 'boycott',
+        'date': '2024-01-10',
+        'title': 'The anti-boycott Bill: third reading',
+        'short': 'Boycott Bill, 3rd',
+        'in_sentence': 'the third reading of the Economic Activity of Public Bodies (Overseas Matters) '
+                       'Bill',
+        'formal': 'Economic Activity of Public Bodies (Overseas Matters) Bill: Third Reading',
+        'moved': 'Moved by the Conservative government',
+        'question': 'That the Bill be now read the third time.',
+        'aye_means': 'for the Bill',
+        'no_means': 'against the Bill',
+        'result': 'Agreed',
+        'ayes': 282,
+        'noes': 235,
+        'note': 'The last Commons vote on the Bill, and the one on which the Labour front bench voted '
+                'against it. The Bill went to the Lords, was still in committee there when Parliament '
+                'was dissolved for the 2024 election, and was lost in the wash-up; it never became '
+                'law.',
+        'source': 'https://votes.parliament.uk/votes/commons/division/1705',
+    },
+]
+
+# The order the divisions are shown in: newest first, since the newest is the
+# one a sitting member is most likely to be asked about.
+DIVISION_ORDER = ['2078', '1666', '1665', '1705', '1586', 'h2014']
+
+# The one day the House was asked about a ceasefire and no division list exists.
+# Recorded so that the page does not imply that silence means no vote was held.
+UNRECORDED = [
+    {
+        'date': '2024-02-21',
+        'title': 'The SNP opposition day motion for an immediate ceasefire',
+        'note': 'Against the convention that only a government amendment is selected on an '
+                'opposition day, the Speaker selected a Labour amendment as well. The government '
+                'withdrew from the proceedings, the Labour amendment calling for an immediate '
+                'humanitarian ceasefire was agreed without a division, and the motion as amended was '
+                'then agreed without one, so the SNP\u2019s own wording was never voted on and no '
+                'member\u2019s position that day is on the record. The only division was a motion to '
+                'sit in private, moved in protest, which was not a vote on Gaza and is not carried here.',
+        'source': 'https://hansard.parliament.uk/Commons/2024-02-21/debates/610A4D12-A333-4885-9D0B-0A225C35C043/CeasefireInGaza',
+    },
+]
+
+# The same subject test the fetch applies, used here to decide which
+# contributions to a debate were about it: a "Middle East" statement in March
+# 2026 was mostly about Iran, and only the contributions that mention the
+# subject belong in this ledger.
+SUBJECT = re.compile(r'palestin|\bgaza|israel|west bank|\bzionis|\bhamas|netanyahu|'
+                     r'occupied territor|golan|\bunrwa\b|\brafah\b|\be1\b', re.I)
+
+# Words that mark a contribution from the chair rather than from a member.
+CHAIR = re.compile(r'speaker|in the chair|chairman|\bchair\b', re.I)
+
+# What a petition is about, for the filter on the page. First match wins, so
+# the order runs from the most specific to the least.
+PETITION_TOPICS = [
+    ('recognition', re.compile(r'recognis|recogniz|montevideo', re.I)),
+    ('arms', re.compile(r'\barms\b|weapon|military|f-35|embargo', re.I)),
+    ('sanctions', re.compile(r'sanction|trade|boycott|import|product|roadmap|sever', re.I)),
+    ('ceasefire', re.compile(r'ceasefire|cease-fire|surrender|hostage|neutral|withdraw support', re.I)),
+    ('humanitarian', re.compile(r'aid|humanitarian|blockade|visa|evacuat|refuge|children|family|'
+                                r'fuel|electricity|food|homes for|scholarship', re.I)),
+    ('accountability', re.compile(r'inquiry|condemn|genocide|execution|prisoner|apartheid|'
+                                  r'law|influence|racism|balfour', re.I)),
+]
+
+# Opinion polls, transcribed from the pollster or the commissioning body's own
+# publication. A poll is carried with its population, because a poll of Labour
+# members and a poll of the adult population are different instruments, and
+# with its commissioner, because who asked is part of what was asked.
+POLLS = [
+    {
+        'published': '2025-06-18',
+        'fieldwork': '4\u20135 June 2025',
+        'pollster': 'YouGov',
+        'commissioner': 'Action For Humanity and the International Centre of Justice for Palestinians',
+        'population': 'UK adults',
+        'sample': 2010,
+        'findings': [
+            ['Oppose Israel\u2019s actions in Gaza', 55],
+            ['Support them', 15],
+            ['Want the UK to enforce the ICC arrest warrant if Netanyahu visits', 65],
+            ['Recognise Palestine now', 30],
+            ['Recognise it eventually', 19],
+            ['Oppose recognition', 10],
+        ],
+        'source': 'https://www.middleeasteye.net/news/poll-nearly-half-uk-believe-israel-committing-genocide-gaza-two-thirds-support-arresting',
+        'note': 'Commissioned by organisations that campaign on the question, which offered more answer '
+                'options than the pollster\u2019s own series and is why the recognition figures are '
+                'split three ways.',
+    },
+    {
+        'published': '2025-07-29',
+        'fieldwork': '24\u201325 July 2025',
+        'pollster': 'YouGov',
+        'commissioner': 'The Times',
+        'population': 'GB adults',
+        'sample': 2013,
+        'findings': [
+            ['The UK should recognise Palestine as an independent state', 45],
+            ['It should not', 14],
+            ['Unsure', 41],
+        ],
+        'source': 'https://yougov.com/en-gb/articles/52679-britons-support-palestinian-statehood-by-45-to-14',
+        'note': 'Published the day the Prime Minister announced that the United Kingdom would '
+                'recognise Palestine in September unless conditions were met.',
+    },
+    {
+        'published': '2025-09-19',
+        'fieldwork': '17\u201318 September 2025',
+        'pollster': 'YouGov',
+        'commissioner': 'YouGov\u2019s own series',
+        'population': 'GB adults',
+        'sample': None,
+        'findings': [
+            ['The UK should recognise Palestine as an independent state', 44],
+            ['It should not', 18],
+            ['Unsure', 37],
+        ],
+        'source': 'https://yougov.com/en-gb/articles/53016-britons-support-recognising-palestinian-statehood-by-44-to-18',
+        'note': 'Taken in the week before recognition. Opposition rose by four points on July, most '
+                'of it among Conservative and Reform UK voters.',
+    },
+    {
+        'published': '2026-06-05',
+        'fieldwork': '22\u201326 May 2026',
+        'pollster': 'Survation',
+        'commissioner': 'Save the Children, Christian Aid and Medical Aid for Palestinians',
+        'population': 'Labour Party members (LabourList readers)',
+        'sample': 1036,
+        'findings': [
+            ['Support an arms embargo on Israel, including F-35 parts', 78],
+            ['Back a ban on trade with the illegal settlements', 87],
+            ['Back suspending the UK-Israel trade agreement', 68],
+            ['Disapprove of the government\u2019s approach to Palestine', 62],
+            ['Approve of it', 19],
+        ],
+        'source': 'https://labourlist.org/2026/06/palestine-labour-members-survation-polling/',
+        'note': 'A poll of one party\u2019s members, drawn from readers of a party website and '
+                'weighted to the party\u2019s own contests. It measures what the governing party\u2019s '
+                'membership wanted, not what the public did.',
+    },
+    {
+        'published': '2026-07-07',
+        'fieldwork': '2\u20133 July 2026',
+        'pollster': 'YouGov',
+        'commissioner': 'The Council for Arab-British Understanding (Caabu)',
+        'population': 'GB adults',
+        'sample': 2125,
+        'findings': [
+            ['Israel is committing genocide in Gaza', 50],
+            ['It is not', 17],
+            ['The UK should no longer consider Israel an ally', 55],
+            ['It should', 15],
+            ['Support a ban on trade with the settlements', 48],
+        ],
+        'source': 'https://caabu.org/news/press-release/caabu-press-release-50-british-population-believe-israel-committing-genocide',
+        'note': 'Among 2024 Labour voters, 67 per cent said Israel is committing genocide and 72 per cent '
+                'supported a full ban on arms exports to Israel. Recorded in the report at \u00a715.10.',
+    },
+]
+
+# What the United Kingdom did, as distinct from what the House voted for. The
+# division above and the petitions below are the rest of the recognition record.
+RECOGNITION_ACTS = [
+    {
+        'date': '2025-09-21',
+        'title': 'The United Kingdom recognises the State of Palestine',
+        'note': 'Announced by the Prime Minister, Keir Starmer, alongside Canada and Australia, eleven '
+                'years after the Commons voted 274 to 12 for it: “Today, to revive the hope of '
+                'peace for the Palestinians and Israelis, and a two state solution, the United Kingdom '
+                'formally recognizes the State of Palestine.” Recognition was on the basis of the '
+                'provisional 1967 borders. A decision of the government under the prerogative; the '
+                'House was not asked to vote on it.',
+        'source': 'https://www.gov.uk/government/speeches/pm-statement-on-the-recognition-of-palestine-21-september-2025',
+    },
 ]
 
 # What is looked for in the Register of Members' Financial Interests. The
@@ -127,6 +377,7 @@ DONATION_TERMS = re.compile(
 
 VOTE_ABSENT = 'absent'
 VOTE_AWAY = 'not-a-member'
+VOTE_FORCED = 'forced-teller'
 
 
 def load_raw(name):
@@ -164,6 +415,106 @@ def field(interest, name):
     return None
 
 
+def plain_text(html):
+    text = re.sub(r'<[^>]+>', ' ', html or '')
+    for a, b in (('&amp;', '&'), ('&quot;', '"'), ('&#39;', "'"), ('&lt;', '<'), ('&gt;', '>'),
+                 ('&nbsp;', ' ')):
+        text = text.replace(a, b)
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+# Abbreviations Hansard uses mid-sentence. A full stop after one of these does
+# not end the sentence, or "Does the hon. Member agree" is cut at "hon.".
+ABBREVIATIONS = re.compile(r'(?:\b(?:hon|Hon|Mr|Mrs|Ms|Dr|Rt|St|No|Nos|Gen|Lt|Col|Sgt|Prof|Rev|'
+                           r'Co|Ltd|vs|cf|al|approx|para|paras|Vol|Art|Arts|p|pp)|\b[A-Z])\.$')
+
+
+def split_sentences(text):
+    out, start = [], 0
+    for m in re.finditer(r'[.!?][\u201d"\')]*\s+(?=[\u201c"(A-Z0-9\u2018])', text):
+        piece = text[start:m.start() + 1]
+        if ABBREVIATIONS.search(piece):
+            continue
+        out.append(text[start:m.end()].strip())
+        start = m.end()
+    out.append(text[start:].strip())
+    return [s for s in out if s]
+
+
+def excerpt(text, limit=340):
+    """The part of a contribution that is about the subject, in the member's words.
+
+    The sentence that first names the subject, and the one after it if there is
+    room. Cut on a word and marked with an ellipsis where it is cut, so that a
+    shortened quotation never reads as a whole one.
+    """
+    sentences = split_sentences(text)
+    start = next((i for i, s in enumerate(sentences) if SUBJECT.search(s)), 0)
+    out = sentences[start]
+    if start + 1 < len(sentences) and len(out) + len(sentences[start + 1]) < limit:
+        out += ' ' + sentences[start + 1]
+    lead = '\u2026 ' if start else ''
+    if len(out) > limit:
+        out = out[:limit].rsplit(' ', 1)[0].rstrip(',;:') + ' \u2026'
+    return lead + out
+
+
+def hansard_url(date, ext, title):
+    words = re.findall(r'[A-Za-z0-9]+', title or '')
+    return 'https://hansard.parliament.uk/Commons/%s/debates/%s/%s' % (
+        date, ext, ''.join(w[:1].upper() + w[1:] for w in words))
+
+
+def debate_items(blob):
+    """Every contribution in a debate, including those in its sub-debates."""
+    out = list(blob.get('Items') or [])
+    for child in blob.get('ChildDebates') or []:
+        out += debate_items(child)
+    return out
+
+
+def petition_topic(action, background=''):
+    """The petition's own request decides its topic; its background only if that is silent."""
+    for text in (action, background):
+        for name, pattern in PETITION_TOPICS:
+            if pattern.search(text or ''):
+                return name
+    return 'other'
+
+
+def hansard_division(raw, spec, history):
+    """Read a Hansard division record into the shape of a votes-API one.
+
+    Hansard lists who voted and who told. It does not list who was in the House
+    and did not vote, so that is worked out from each member's record of
+    service, and a member who cannot be placed in the House on the day is
+    shown as not then a member rather than as absent.
+    """
+    ayes = [m for m in raw.get('AyeMembers') or [] if not m.get('IsTeller')]
+    noes = [m for m in raw.get('NoeMembers') or [] if not m.get('IsTeller')]
+    return {
+        'DivisionId': spec['id'],
+        'AyeCount': raw.get('AyesCount'),
+        'NoCount': raw.get('NoesCount'),
+        'Ayes': [{'MemberId': m['MemberId'], 'MemberFrom': m.get('MemberFrom') or ''} for m in ayes],
+        'Noes': [{'MemberId': m['MemberId'], 'MemberFrom': m.get('MemberFrom') or ''} for m in noes],
+        'AyeTellers': [{'MemberId': m['MemberId']} for m in raw.get('AyeMembers') or [] if m.get('IsTeller')],
+        'NoTellers': [{'MemberId': m['MemberId']} for m in raw.get('NoeMembers') or [] if m.get('IsTeller')],
+        'NoVoteRecorded': None,
+    }
+
+
+def sat_on(member, day, history):
+    """Whether a member was in the House on a given day, from their record."""
+    since = ((member.get('latestHouseMembership') or {}).get('membershipStartDate') or '')[:10]
+    if since and since <= day:
+        return True
+    for spell in history.get(str(member['id']), []):
+        if spell['from'] and spell['from'] <= day and (not spell['to'] or spell['to'] >= day):
+            return True
+    return False
+
+
 def interest_row(interest):
     """One registered interest, reduced to what the ledger states about it."""
     row = {
@@ -199,6 +550,15 @@ def donation_row(row):
 def build():
     members = load_raw('uk_members.json')
     divisions = {d['DivisionId']: d for d in load_raw('uk_divisions.json')}
+    history = load_raw('uk_member_history.json')
+    hansard = {d['ExternalId']: d for d in load_raw('uk_divisions_hansard.json')}
+    for spec in DIVISIONS:
+        if spec.get('hansard'):
+            if spec['hansard'] not in hansard:
+                raise SystemExit('Hansard division %s is not in the cache' % spec['hansard'])
+            divisions[spec['id']] = hansard_division(hansard[spec['hansard']], spec, history)
+    petitions_raw = load_raw('uk_petitions.json')
+    debate_index = load_raw('uk_debates.json')
     interests = load_raw('uk_interests.json')
     donations = load_raw('uk_donations.json')
     statements = load('statements.json')['items']
@@ -231,9 +591,20 @@ def build():
                 seats_then.setdefault((member['MemberId'], spec['id']), member.get('MemberFrom') or '')
         for teller_side, name in (('AyeTellers', 'aye'), ('NoTellers', 'no')):
             for member in got.get(teller_side) or []:
-                # A teller does not vote but is unambiguously on that side.
-                cast.setdefault(member['MemberId'], name + '-teller')
+                # A teller does not vote but is normally on that side. The
+                # exception is recorded against the division, by name, from the
+                # member's own statement in the House.
+                if member['MemberId'] in (spec.get('procedural_tellers') or {}):
+                    cast[member['MemberId']] = VOTE_FORCED
+                else:
+                    cast.setdefault(member['MemberId'], name + '-teller')
                 seats_then.setdefault((member['MemberId'], spec['id']), member.get('MemberFrom') or '')
+        if got.get('NoVoteRecorded') is None:
+            # A Hansard division: everyone in the House that day who is not in
+            # the lists above did not vote. Worked out member by member.
+            for member in members:
+                if member['id'] not in cast and sat_on(member, spec['date'], history):
+                    cast[member['id']] = VOTE_ABSENT
         votes[spec['id']] = cast
 
     by_member_interests = defaultdict(list)
@@ -263,6 +634,102 @@ def build():
             bucket['total'] += clean['value']
             bucket['count'] += 1
             bucket['donors'][clean['donor']] += clean['value']
+
+    # The petitions. Signatures by constituency are only joined to a seat for
+    # petitions of this Parliament: the petitions of 2019-2024 were counted on
+    # the old boundaries, and a count for a seat that no longer exists cannot
+    # honestly be given to the member for the seat that replaced it.
+    petitions = []
+    by_seat_signatures = defaultdict(dict)
+    seat_names = {slug((m.get('latestHouseMembership') or {}).get('membershipFrom') or ''): m['id']
+                  for m in members}
+    for a in sorted(petitions_raw, key=lambda a: -(a.get('signature_count') or 0)):
+        debate = a.get('debate') or {}
+        response = a.get('government_response') or {}
+        row = {
+            'id': a['id'],
+            'parliament': a['parliament'],
+            'action': (a.get('action') or '').strip(),
+            'background': (a.get('background') or '').strip(),
+            'signatures': a.get('signature_count') or 0,
+            'state': a.get('state') or '',
+            'opened': (a.get('opened_at') or '')[:10],
+            'closed': (a.get('closed_at') or '')[:10],
+            'topic': petition_topic(a.get('action'), a.get('background')),
+            'url': 'https://petition.parliament.uk/%spetitions/%d' % (
+                'archived/' if a['parliament'] == 'archived' else '', a['id']),
+        }
+        if response.get('summary'):
+            row['response'] = {'date': response.get('responded_on') or '',
+                               'summary': response['summary'].strip()}
+        if debate.get('debated_on'):
+            row['debate'] = {'date': debate['debated_on'], 'url': debate.get('transcript_url') or '',
+                             'video': debate.get('video_url') or '', 'pack': debate.get('debate_pack_url') or ''}
+            found = re.search(r'debates/([0-9A-Fa-f-]{36})', debate.get('transcript_url') or '')
+            if found:
+                row['debate']['ext'] = found.group(1).upper()
+        counts = a.get('signatures_by_constituency') or []
+        if a['parliament'] == 'current' and counts:
+            matched = [(seat_names.get(slug(c['name'])), c['signature_count']) for c in counts]
+            joined = [(mid, n) for mid, n in matched if mid]
+            # A petition whose constituency names do not join is on boundaries
+            # this ledger does not hold. Better no counts than wrong ones.
+            if len(joined) >= 0.97 * len(members):
+                ranked = sorted(joined, key=lambda x: -x[1])
+                for rank, (mid, n) in enumerate(ranked, 1):
+                    by_seat_signatures[mid][str(a['id'])] = [n, rank]
+                row['by_seat'] = True
+                row['seats'] = len(ranked)
+        petitions.append(row)
+
+    # The debates. A contribution belongs in the ledger if it is about the
+    # subject in its own words; the debate's title is not enough, because the
+    # "Middle East" statements of 2026 were mostly about Iran.
+    petition_debates = defaultdict(list)
+    for row in petitions:
+        if row.get('debate', {}).get('ext'):
+            petition_debates[row['debate']['ext']].append(row['id'])
+    debates = []
+    spoke = defaultdict(list)
+    ids_now = {m['id'] for m in members}
+    for entry in debate_index:
+        path = os.path.join(RAW, 'hansard', '%s.json' % entry['ext'])
+        if not os.path.exists(path):
+            continue
+        with open(path) as fh:
+            blob = json.load(fh)
+        overview = blob.get('Overview') or {}
+        title = re.sub(r'\s+', ' ', overview.get('Title') or '').strip()
+        said = defaultdict(list)
+        for item in debate_items(blob):
+            if item.get('ItemType') != 'Contribution' or not item.get('MemberId'):
+                continue
+            if CHAIR.search(item.get('AttributedTo') or ''):
+                continue
+            text = plain_text(item.get('Value'))
+            if len(text) < 40 or not SUBJECT.search(text):
+                continue
+            said[item['MemberId']].append(text)
+        if not said:
+            continue
+        index = len(debates)
+        ext = entry['ext'].upper()
+        debates.append({
+            'ext': ext,
+            'date': entry['date'],
+            'title': title,
+            'where': overview.get('Location') or '',
+            'url': hansard_url(entry['date'], entry['ext'], title),
+            'petitions': petition_debates.get(ext, []),
+            'members': sum(1 for mid in said if mid in ids_now),
+        })
+        for mid, texts in said.items():
+            if mid not in ids_now:
+                continue
+            # The longest contribution is the one most likely to state a view
+            # rather than ask a question or thank a colleague.
+            best = max(texts, key=len)
+            spoke[mid].append([index, len(texts), excerpt(best)])
 
     # A member who is quoted in the record is shown their own words. The join is
     # the speaker slug, the same one the statements route uses.
@@ -313,6 +780,11 @@ def build():
                 held = seats_then.get((member['id'], spec['id']), '')
                 if held and held != seat:
                     row.setdefault('seats_then', {})[str(spec['id'])] = held
+        if member['id'] in by_seat_signatures:
+            row['signatures'] = by_seat_signatures[member['id']]
+        if spoke.get(member['id']):
+            row['spoke'] = len(spoke[member['id']])
+            row['contributions'] = sum(n for _i, n, _x in spoke[member['id']])
         found = by_member_interests.get(member['id'])
         if found:
             row['interests'] = found
@@ -335,7 +807,12 @@ def build():
         counted = defaultdict(int)
         for row in sitting:
             counted[row['votes'][str(spec['id'])].replace('-teller', '')] += 1
-        tallies.append(dict(spec, sitting=len(sitting), still_here=dict(counted)))
+        clean = {k: v for k, v in spec.items() if k != 'procedural_tellers'}
+        if spec.get('procedural_tellers'):
+            clean['procedural_tellers'] = {str(k): v for k, v in spec['procedural_tellers'].items()}
+        tallies.append(dict(clean, id=str(spec['id']), sitting=len(sitting), still_here=dict(counted)))
+    order = {d: i for i, d in enumerate(DIVISION_ORDER)}
+    tallies.sort(key=lambda d: order.get(d['id'], 99))
 
     parties = sorted(({'name': name, 'total': round(v['total'], 2), 'donations': v['count'],
                        'donors': sorted(({'name': d, 'total': round(t, 2)}
@@ -369,8 +846,18 @@ def build():
             'party_total': round(sum(p['total'] for p in parties), 2),
             'register_terms': INTEREST_TERMS.pattern,
             'donation_terms': DONATION_TERMS.pattern,
+            'subject_terms': SUBJECT.pattern,
+            'petitions': len(petitions),
+            'petition_signatures': sum(p['signatures'] for p in petitions),
+            'debates': len(debates),
+            'members_who_spoke': sum(1 for r in rows if r.get('spoke')),
         },
         'divisions': tallies,
+        'unrecorded': UNRECORDED,
+        'petitions': petitions,
+        'debates': debates,
+        'polls': POLLS,
+        'recognition': RECOGNITION_ACTS,
         'members': rows,
         'seats': constituencies,
         'parties': parties,
@@ -378,11 +865,25 @@ def build():
 
     assert len({r['seat'] for r in rows}) == len(rows), 'two members hold the same seat'
     assert all(r['seat'] for r in rows), 'a member holds no named seat'
-    return data
+
+    # Newest first within each member, so the row opens on what they said last.
+    speeches = {
+        'meta': {
+            'note': 'An excerpt of each contribution a sitting member made to a Commons or Westminster '
+                    'Hall debate about Gaza, Israel or Palestine since 7 October 2023, taken verbatim '
+                    'from Hansard under the Open Parliament Licence. The excerpt is the part of the '
+                    'member\u2019s longest contribution to that debate that first names the subject; '
+                    'the link is to the whole debate.',
+            'subject_terms': SUBJECT.pattern,
+        },
+        'by_member': {str(mid): sorted(entries, key=lambda e: debates[e[0]]['date'], reverse=True)
+                      for mid, entries in spoke.items()},
+    }
+    return data, speeches
 
 
 def main():
-    data = build()
+    data, speeches = build()
     if '--report' in sys.argv:
         meta = data['meta']
         for spec in data['divisions']:
@@ -398,10 +899,15 @@ def main():
     path = os.path.join(DATA, 'constituency.json')
     with open(path, 'w') as fh:
         fh.write(json.dumps(data, ensure_ascii=False, indent=1) + '\n')
+    # Compact, because it is only ever read by the page and it is the large one.
+    with open(os.path.join(DATA, 'constituency-speeches.json'), 'w') as fh:
+        fh.write(json.dumps(speeches, ensure_ascii=False, separators=(',', ':')) + '\n')
     meta = data['meta']
-    print('constituency.json — %d seats, %d divisions, %d registered interests against %d members, '
-          '%d reported donations' % (meta['seats'], meta['divisions'], meta['interests'],
-                                     meta['members_with_interest'], meta['donations']))
+    print('constituency.json — %d seats, %d divisions, %d petitions, %d debates with %d members '
+          'speaking, %d registered interests against %d members, %d reported donations'
+          % (meta['seats'], meta['divisions'], meta['petitions'], meta['debates'],
+             meta['members_who_spoke'], meta['interests'], meta['members_with_interest'],
+             meta['donations']))
 
 
 if __name__ == '__main__':

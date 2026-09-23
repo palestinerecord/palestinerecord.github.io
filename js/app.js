@@ -1732,27 +1732,42 @@ const App = (function () {
      that "figures resting on one class of source that the hostile setting
      removes" is a view of the register rather than a search anyone has to
      construct. */
-  /* The constituency ledger. Three things happen on this page: a postcode is
-     turned into a seat, 649 rows are filtered, and a letter is written into the
-     clipboard. The first is the only one that leaves the browser, and it goes to
-     postcodes.io rather than here — this site has no server to receive it. */
+  /* The constituency ledger. Four things happen on this page: a postcode is
+     turned into a seat, 649 rows are filtered and ordered, a member's words are
+     fetched when their row is opened, and a letter is written into the
+     clipboard. The postcode is the only thing that leaves the browser for
+     another service, and it goes to postcodes.io rather than here — this site
+     has no server to receive it. */
   behaviours.mp = function () {
     const C = D.constituency;
+    const list = document.getElementById('mp-list');
     const rows = Array.prototype.slice.call(document.querySelectorAll('#mp-list .mp-entry'));
     const partyChips = Array.prototype.slice.call(document.querySelectorAll('#mp-parties .chip'));
     const voteChips = Array.prototype.slice.call(document.querySelectorAll('#mp-votes .chip'));
+    const alsoChips = Array.prototype.slice.call(document.querySelectorAll('#mp-also .chip'));
+    const divisionSelect = document.getElementById('mp-division');
+    const sortSelect = document.getElementById('mp-sort');
     const search = document.getElementById('mp-search');
     const count = document.getElementById('mp-count');
-    const ceasefire = C && C.divisions[0].id;
+    let division = divisionSelect ? divisionSelect.value : String(C.divisions[0].id);
     let party = 'all';
     let vote = 'all';
+    let also = 'all';
+
+    function passesAlso(el) {
+      if (also === 'spoke') return el.dataset.spoke !== '0';
+      if (also === 'silent') return el.dataset.spoke === '0';
+      if (also === 'register') return el.dataset.extra !== '0';
+      return true;
+    }
 
     function apply() {
       const q = (search && search.value || '').trim().toLowerCase();
       let shown = 0;
       rows.forEach((el) => {
         const ok = (party === 'all' || el.dataset.party === party)
-          && (vote === 'all' || el.dataset['v' + ceasefire] === vote)
+          && (vote === 'all' || el.dataset['v' + division] === vote)
+          && passesAlso(el)
           && (!q || (el.dataset.text || '').indexOf(q) >= 0);
         el.hidden = !ok;
         // A row filtered away while it was open would otherwise come back open.
@@ -1769,6 +1784,41 @@ const App = (function () {
       set();
     }
 
+    /* Choosing a division changes three things together: which badge each row
+       shows, what the vote chips count, and what they filter on. A vote filter
+       left set across the change would silently mean something else. */
+    function showDivision(id) {
+      division = String(id);
+      rows.forEach((el) => {
+        el.querySelectorAll('.mp-cell').forEach((cell) => { cell.hidden = cell.dataset.div !== division; });
+      });
+      const counts = Views.constituencyVoteCounts(division);
+      voteChips.forEach((chip, i) => {
+        const n = counts[chip.dataset.vote] || 0;
+        const span = chip.querySelector('span');
+        if (span) span.textContent = Views.fmt(n);
+        chip.hidden = chip.dataset.vote === 'forced' && !n;
+        chip.classList.toggle('active', i === 0);
+      });
+      vote = 'all';
+      apply();
+    }
+
+    /* Ordering moves the rows rather than rebuilding them, so a row that is
+       open stays open with its letter or its quotations intact. */
+    function order(key) {
+      const value = (el) => {
+        if (key === 'contrib') return -parseInt(el.dataset.contrib || '0', 10);
+        if (key && key.indexOf('sig') === 0) return -parseInt(el.dataset[key] || '0', 10);
+        return 0;
+      };
+      const sorted = rows.slice().sort((a, b) => (value(a) - value(b))
+        || (parseInt(a.dataset.order, 10) - parseInt(b.dataset.order, 10)));
+      const frag = document.createDocumentFragment();
+      sorted.forEach((el) => frag.appendChild(el));
+      list.appendChild(frag);
+    }
+
     partyChips.forEach((chip) => chip.addEventListener('click', () => {
       party = chip.dataset.party;
       pick(partyChips, chip, apply);
@@ -1777,7 +1827,69 @@ const App = (function () {
       vote = chip.dataset.vote;
       pick(voteChips, chip, apply);
     }));
+    alsoChips.forEach((chip) => chip.addEventListener('click', () => {
+      also = chip.dataset.also;
+      pick(alsoChips, chip, apply);
+    }));
+    if (divisionSelect) divisionSelect.addEventListener('change', () => showDivision(divisionSelect.value));
+    if (sortSelect) sortSelect.addEventListener('change', () => order(sortSelect.value));
     if (search) search.addEventListener('input', apply);
+
+    /* A petition card can rank the seats by its own signatures: set the order,
+       then take the reader to the list it just reordered. */
+    document.querySelectorAll('.mp-sort-by').forEach((btn) => btn.addEventListener('click', () => {
+      if (!sortSelect) return;
+      sortSelect.value = btn.dataset.sort;
+      order(sortSelect.value);
+      sortSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }));
+
+    /* The division cards and the petition cards each filter by topic. */
+    [['#mp-div-topics', '#mp-div-cards .mp-div'], ['#mp-pet-topics', '#mp-pet-cards .mp-pet']].forEach(([bar, sel]) => {
+      const chips = Array.prototype.slice.call(document.querySelectorAll(bar + ' .chip'));
+      const cards = Array.prototype.slice.call(document.querySelectorAll(sel));
+      chips.forEach((chip) => chip.addEventListener('click', () => {
+        chips.forEach((c) => c.classList.toggle('active', c === chip));
+        cards.forEach((card) => { card.hidden = chip.dataset.topic !== 'all' && card.dataset.topic !== chip.dataset.topic; });
+      }));
+    });
+
+    /* ---------- what they said ---------- */
+
+    /* The words are in a file of their own, several times the size of the rest
+       of the ledger, fetched the first time any row with words in it is
+       opened and kept for the rest of the visit. */
+    let speeches = null;
+    let speechesPromise = null;
+    function loadSpeeches() {
+      if (speeches) return Promise.resolve(speeches);
+      if (!speechesPromise) {
+        speechesPromise = fetch('data/constituency-speeches.json')
+          .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+          .then((json) => { speeches = json; return json; })
+          .catch((err) => { speechesPromise = null; throw err; });
+      }
+      return speechesPromise;
+    }
+    function fillSaid(block, all) {
+      const body = block.querySelector('.mp-said-body');
+      if (!body) return;
+      loadSpeeches().then((s) => {
+        body.innerHTML = Views.constituencySaid(block.dataset.member, s, all);
+        block.dataset.loaded = all ? 'all' : 'some';
+      }).catch((err) => {
+        body.innerHTML = `<p class="chart-note">The member’s words could not be loaded (${Views.esc(err.message)}). Each debate is in Hansard, linked from the list of debates below.</p>`;
+      });
+    }
+    rows.forEach((el) => el.addEventListener('toggle', () => {
+      if (!el.open) return;
+      const lazy = el.querySelector('.mp-lazy');
+      if (lazy && !lazy.dataset.built) {
+        lazy.outerHTML = Views.constituencyRowExtra(parseInt(lazy.dataset.member, 10));
+      }
+      const block = el.querySelector('.mp-said');
+      if (block && !block.dataset.loaded) fillSaid(block, false);
+    }));
 
     /* ---------- postcode to seat ---------- */
 
@@ -1807,9 +1919,11 @@ const App = (function () {
       // Clear any filter that would be hiding the row the reader just asked for.
       party = 'all';
       vote = 'all';
+      also = 'all';
       if (search) search.value = '';
       partyChips.forEach((c, i) => c.classList.toggle('active', i === 0));
       voteChips.forEach((c, i) => c.classList.toggle('active', i === 0));
+      alsoChips.forEach((c, i) => c.classList.toggle('active', i === 0));
       apply();
       el.open = true;
       el.classList.add('search-target');
@@ -1850,9 +1964,14 @@ const App = (function () {
     /* Built on demand, for one member at a time. Writing 649 letters into the
        markup would add well over a megabyte to a page that already carries the
        whole House. */
-    const list = document.getElementById('mp-list');
     if (list) {
       list.addEventListener('click', (ev) => {
+        const more = ev.target.closest && ev.target.closest('.mp-said-more');
+        if (more) {
+          const block = more.closest('.mp-said');
+          if (block) fillSaid(block, true);
+          return;
+        }
         const button2 = ev.target.closest && ev.target.closest('.mp-letter');
         if (!button2) return;
         const block = button2.parentNode;

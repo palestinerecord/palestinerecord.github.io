@@ -32,8 +32,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="../assets/favicon.svg?v=125" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=125">
+<link rel="icon" href="../assets/favicon.svg?v=127" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=127">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -66,8 +66,8 @@
 <meta name="twitter:title" content="Open data — the record as files · The Documented Record">
 <meta name="twitter:description" content="Every dataset behind these charts, published as plain JSON under no login and no key, with an embeddable address for each of the charts drawn from them.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/api.png">
-<link rel="preload" href="../css/style.css?v=125" as="style">
-<link rel="stylesheet" href="../css/style.css?v=125">
+<link rel="preload" href="../css/style.css?v=127" as="style">
+<link rel="stylesheet" href="../css/style.css?v=127">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -261,7 +261,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=125" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=127" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -323,7 +323,7 @@
     </div>
         <div class="grid c4">
           <div class="stat " data-tone="">
-      <div class="val" data-count="27">27</div>
+      <div class="val" data-count="28">28</div>
       <div class="lbl">Published datasets</div>
       <div class="note">each described, dated and addressable</div>
       
@@ -335,7 +335,7 @@
       
       
     </div><div class="stat " data-tone="">
-      <div class="val" data-count="5.3">5.3 MB</div>
+      <div class="val" data-count="6.4">6.4 MB</div>
       <div class="lbl">Of published data</div>
       <div class="note">the complete set, uncompressed, over plain HTTPS</div>
       
@@ -353,7 +353,7 @@
       <section class="section">
         <div class="section-head">
       <div class="eyebrow">The files</div>
-      <h2>27 datasets</h2>
+      <h2>28 datasets</h2>
       <p>Licensed for re-use with attribution to the sources named in each file. The figures are not ours to licence — they belong to the bodies that recorded them, and each record says which.</p>
     </div>
         <div class="ds-list">
@@ -419,16 +419,28 @@
             <div class="ds-fields">meta · aid · hunger · ceasefire · targeting · shields · hannibal · funding · remains · children · custody · nuclear</div>
           </div><div class="ds">
             <div>
-              <h3><a href="../data/constituency.json" target="_blank" rel="noopener">The constituency ledger</a>
-                <code>data/constituency.json</code></h3>
-              <p>Every seat in the House of Commons, the member who holds it, and how that member voted the three times the House divided on Gaza: the immediate-ceasefire amendment and the humanitarian-pauses amendment of 15 November 2023, and the Order proscribing Palestine Action of 2 July 2025. Each division carries the question as it was put, what a vote for it meant, the published counts that identify it, and a link to its own division list. Against each member the file also carries any entry in the Register of Members’ Financial Interests and any donation in the Electoral Commission’s register that the published search terms match, together with the constituency the member sat for at the time of a vote taken before the 2024 boundaries. Money that reached a party rather than a named member is aggregated to the party, because it cannot honestly be attributed to any one of them. No email address is published here.</p>
-              <div class="src">Built by constituency.py from members-api.parliament.uk, commonsvotes-api.parliament.uk, interests-api.parliament.uk and search.electoralcommission.org.uk. The division subjects are curated rather than machine-derived, because the House titles a division by its procedural form; the published counts are re-checked against the pulled division on every build.</div>
+              <h3><a href="../data/constituency-speeches.json" target="_blank" rel="noopener">What each member said</a>
+                <code>data/constituency-speeches.json</code></h3>
+              <p>For every sitting member who spoke about Gaza, Israel or Palestine in a Commons or Westminster Hall debate since 7 October 2023, one entry per debate: the debate, the number of their contributions to it, and a verbatim excerpt of the longest, taken from the sentence that first names the subject. Indexed by member id; the debate index refers to the debates list in constituency.json.</p>
+              <div class="src">Hansard, via hansard-api.parliament.uk, under the Open Parliament Licence. Built by constituency.py.</div>
             </div>
             <div class="ds-meta">
-              245 kB<br>2026-09-23
+              753 kB<br>2026-09-23
+              <a href="../data/constituency-speeches.json" download="">download ↓</a>
+            </div>
+            <div class="ds-fields">meta · by_member</div>
+          </div><div class="ds">
+            <div>
+              <h3><a href="../data/constituency.json" target="_blank" rel="noopener">The constituency ledger</a>
+                <code>data/constituency.json</code></h3>
+              <p>Every seat in the House of Commons, the member who holds it, and how that member voted each time the House divided on Palestine: the 2014 motion to recognise the State of Palestine, the second and third readings of the 2023 Bill that would have barred public bodies from boycotting Israel or the settlements, the immediate-ceasefire and humanitarian-pauses amendments of 15 November 2023, and the Order proscribing Palestine Action of 2 July 2025. Each division carries the question as it was put, what a vote for it meant, the published counts that identify it, and a link to its own division list. The file also carries every petition to Parliament on the subject that reached a government response or a debate, with signatures counted seat by seat for petitions of this Parliament; every Commons and Westminster Hall debate since 7 October 2023 in which a member spoke about it, with the number of sitting members who did; published opinion polls with their commissioners; and, against each member, any entry in the Register of Members’ Financial Interests and any donation in the Electoral Commission’s register that the published search terms match. Money that reached a party rather than a named member is aggregated to the party, because it cannot honestly be attributed to any one of them. No email address is published here.</p>
+              <div class="src">Built by constituency.py from members-api.parliament.uk, commonsvotes-api.parliament.uk, hansard-api.parliament.uk, petition.parliament.uk, interests-api.parliament.uk and search.electoralcommission.org.uk. The division subjects are curated rather than machine-derived, because the House titles a division by its procedural form; the published counts are re-checked against the pulled division on every build.</div>
+            </div>
+            <div class="ds-meta">
+              633 kB<br>2026-09-23
               <a href="../data/constituency.json" download="">download ↓</a>
             </div>
-            <div class="ds-fields">meta · divisions · members · seats · parties</div>
+            <div class="ds-fields">meta · divisions · unrecorded · petitions · debates · polls · recognition · members · seats · parties</div>
           </div><div class="ds">
             <div>
               <h3><a href="../data/elements.json" target="_blank" rel="noopener">The elements of the legal tests</a>
@@ -485,7 +497,7 @@
               <div class="src">A subset of figures.json, timeseries.json and report-meta.json; each figure keeps its own source field.</div>
             </div>
             <div class="ds-meta">
-              2 kB<br>2026-09-22
+              2 kB<br>2026-09-23
               <a href="../data/headline.json" download="">download ↓</a>
             </div>
             <div class="ds-fields">meta · title · headline · ratio · counts</div>
@@ -1260,7 +1272,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=125" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=127" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
@@ -1304,32 +1316,7 @@
     <nav class="footer-sections" aria-label="Every section, text-only">
       <b>Text-only:</b>
       <a href="snapshot/index.html">All sections</a>
-      · <a href="snapshot/overview.html">The Documented Record</a>
-      · <a href="snapshot/tour.html">Start here</a>
-      · <a href="snapshot/data-gaza.html">Gaza</a>
-      · <a href="snapshot/data-asymmetry.html">The asymmetry</a>
-      · <a href="snapshot/data-since-1948.html">Since 1948</a>
-      · <a href="snapshot/data-complicity.html">Complicity</a>
-      · <a href="snapshot/data-land.html">The land</a>
-      · <a href="snapshot/data-west-bank.html">The West Bank</a>
-      · <a href="snapshot/data-wars.html">Wars and 7 October</a>
-      · <a href="snapshot/data-world.html">The world</a>
-      · <a href="snapshot/data-tables.html">Source tables</a>
-      · <a href="snapshot/children.html">The children</a>
-      · <a href="snapshot/day.html">Said and done</a>
-      · <a href="snapshot/timeline.html">Timeline</a>
-      · <a href="snapshot/evidence.html">Evidence</a>
-      · <a href="snapshot/rebuttals.html">Rebuttals</a>
-      · <a href="snapshot/statements.html">Statements</a>
-      · <a href="snapshot/legal.html">Legal</a>
-      · <a href="snapshot/sources.html">Sources</a>
-      · <a href="snapshot/provenance.html">Provenance</a>
-      · <a href="snapshot/answer.html">Answer a claim</a>
-      · <a href="snapshot/ledger.html">Ledger</a>
       · <a href="snapshot/mp.html">The Documented Record</a>
-      · <a href="snapshot/method.html">Method</a>
-      · <a href="snapshot/api.html">Open data</a>
-      · <a href="snapshot/changelog.html">Changelog</a>
       · <a href="nazi-comparison.html">The Nazi comparison, examined</a>
     </nav>
     <!-- crawl-sections:end -->

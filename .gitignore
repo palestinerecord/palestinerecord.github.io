@@ -3,3 +3,7 @@ __pycache__/
 .DS_Store
 .code-review-graph/
 dashboard_*.md
+
+# Hansard transcripts, one file per debate. Rebuilt by fetch_constituency.py;
+# only what constituency.py derives from them is published.
+data/raw/hansard/

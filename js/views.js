@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=125" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=127" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=125" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=127" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -3214,8 +3214,10 @@ const Views = (function () {
      what that row rests on. Both are addressed to a state, and a state is not
      a thing a reader can write to. This view cuts the same record along the
      axis they can act on: the seat they live in, the member who holds it, how
-     that member voted when the House divided on Gaza, and what the two public
-     registers record against their name.
+     that member voted each time the House divided on Palestine, what they said
+     when it was debated, how many people in the seat signed the petitions that
+     reached Parliament, and what the two public registers record against their
+     name.
 
      Nothing here is an accusation. A registered interest is a disclosure the
      member made under the rules and a reported donation is a lawful, published
@@ -3227,21 +3229,64 @@ const Views = (function () {
   const VOTE_LABEL = {
     aye: 'Voted for', 'aye-teller': 'Teller for', no: 'Voted against',
     'no-teller': 'Teller against', absent: 'Did not vote', 'not-a-member': 'Not yet elected',
+    'forced-teller': 'Teller, to force the vote',
   };
+
+  const TOPIC_LABEL = {
+    recognition: 'Recognition', ceasefire: 'Ceasefire', boycott: 'Boycotts', proscription: 'Proscription',
+    arms: 'Arms', sanctions: 'Sanctions and trade', humanitarian: 'Humanitarian',
+    accountability: 'Accountability', other: 'Other',
+  };
+
+  function ordinal(n) {
+    const s = ['th', 'st', 'nd', 'rd'];
+    const v = n % 100;
+    return fmt(n) + (s[(v - 20) % 10] || s[v] || s[0]);
+  }
 
   function mpVote(cast) {
     const kind = (cast || '').replace('-teller', '');
     return `<span class="mp-vote v-${esc(kind)}">${esc(VOTE_LABEL[cast] || cast)}</span>`;
   }
 
+  /* How the members of this House split on one division, in the order the
+     filter chips offer them. A teller is counted with the side they told for,
+     except a member who told for the other side so that a vote could be held
+     at all, who is a category of their own. */
+  function mpVoteCounts(C, id) {
+    const out = { all: C.members.length, aye: 0, no: 0, absent: 0, 'not-a-member': 0, forced: 0 };
+    C.members.forEach((m) => {
+      const kind = (m.votes[String(id)] || '').replace('-teller', '');
+      if (kind in out) out[kind]++;
+    });
+    return out;
+  }
+
+  const VOTE_CHIPS = [
+    ['all', 'However they voted'],
+    ['aye', 'Voted for'],
+    ['no', 'Voted against'],
+    ['absent', 'Did not vote'],
+    ['not-a-member', 'Not then elected'],
+    ['forced', 'Told to force the vote'],
+  ];
+
+  function mpVoteChips(C, id) {
+    const counts = mpVoteCounts(C, id);
+    return VOTE_CHIPS.map((v, i) => `<button class="chip ${i === 0 ? 'active' : ''}" data-vote="${v[0]}"${
+      v[0] === 'forced' && !counts.forced ? ' hidden' : ''}>${v[1]}<span>${fmt(counts[v[0]])}</span></button>`).join('');
+  }
+
   function mpDivisionCard(d) {
     const still = d.still_here || {};
-    return `<div class="card mp-div" id="division-${d.id}">
+    const forced = still.forced
+      ? `, and <b>${fmt(still.forced)}</b> told for the other side so that the vote could be held` : '';
+    return `<div class="card mp-div" id="division-${esc(d.id)}" data-topic="${esc(d.topic || '')}">
       <div class="mp-div-head">
         <h3>${esc(d.title)}</h3>
         <span class="mp-div-date">${esc(longDay(d.date))}</span>
       </div>
-      <p class="mp-div-formal">${esc(d.formal)} · ${esc(d.moved)}</p>
+      <p class="mp-div-formal"><span class="mp-topic">${esc(TOPIC_LABEL[d.topic] || d.topic || '')}</span>${esc(d.formal)} · ${esc(d.moved)}</p>
       <blockquote class="led-quote"><p>${esc(d.question)}</p><cite>A vote for it meant: ${esc(d.aye_means)}</cite></blockquote>
       <div class="mp-tally">
         <span class="mp-count aye"><b>${fmt(d.ayes)}</b> for</span>
@@ -3251,25 +3296,29 @@ const Views = (function () {
       <p class="chart-note">${esc(d.note)}</p>
       <p class="mp-div-now">Of the ${fmt(d.sitting)} members who sat in that division and still hold a seat:
         <b>${fmt(still.aye || 0)}</b> voted for it, <b>${fmt(still.no || 0)}</b> against,
-        and <b>${fmt(still.absent || 0)}</b> did not vote.</p>
-      <a class="led-ref" href="${esc(d.source)}" target="_blank" rel="noopener noreferrer">The division list at votes.parliament.uk</a>
+        and <b>${fmt(still.absent || 0)}</b> did not vote${forced}.</p>
+      <a class="led-ref" href="${esc(d.source)}" target="_blank" rel="noopener noreferrer">${
+        d.hansard ? 'The division in Hansard' : 'The division list at votes.parliament.uk'}</a>
     </div>`;
   }
 
-  function mpRow(m, divisions, index) {
+  function mpRow(m, divisions, index, shown) {
     const extra = (m.interests || []).length + (m.donations || []).length;
     const badges = divisions.map((d) => {
       const cast = m.votes[String(d.id)];
-      return `<span class="mp-cell" title="${esc(d.title)}"><b>${esc(d.short)}</b>${mpVote(cast)}</span>`;
+      return `<span class="mp-cell" data-div="${esc(d.id)}"${String(d.id) === shown ? '' : ' hidden'} title="${esc(d.title)}"><b>${esc(d.short)}</b>${mpVote(cast)}</span>`;
     }).join('');
+    const flags = [];
+    if (m.spoke) flags.push(`<span class="mp-flag spoke">Spoke in ${fmt(m.spoke)} ${m.spoke === 1 ? 'debate' : 'debates'}</span>`);
+    if (extra) flags.push(`<span class="mp-flag">${extra} register ${extra === 1 ? 'entry' : 'entries'}</span>`);
     const summary = `<div class="mp-who">
         <b>${esc(m.name)}</b>
         <span class="mp-seat">${esc(m.seat)}</span>
       </div>
       <span class="mp-party" style="--party:#${esc(m.colour || '777777')}">${esc(m.abbr || m.party)}</span>
       <div class="mp-votes">${badges}</div>
-      ${extra ? `<span class="mp-flag">${extra} register ${extra === 1 ? 'entry' : 'entries'}</span>` : ''}`;
-    const blocks = [];
+      <div class="mp-flags">${flags.join('')}</div>`;
+    const blocks = [`<div class="mp-lazy" data-member="${index}"></div>`];
     if (m.seats_then) {
       blocks.push(`<div class="mp-block"><h4>The seat they held then</h4>
         ${divisions.filter((d) => m.seats_then[String(d.id)]).map((d) =>
@@ -3277,6 +3326,17 @@ const Views = (function () {
         <p class="chart-note">The 2024 election redrew the boundaries, so a vote cast before it was
           cast for a different seat, and in some cases for one that no longer exists. The ledger
           attributes a vote to the person who cast it, never to the constituency.</p></div>`);
+    }
+    if (m.spoke) {
+      blocks.push(`<div class="mp-block mp-said" data-member="${m.id}">
+        <h4>What they said — ${fmt(m.spoke)} ${m.spoke === 1 ? 'debate' : 'debates'}, ${fmt(m.contributions)} ${m.contributions === 1 ? 'contribution' : 'contributions'}</h4>
+        <div class="mp-said-body"><p class="chart-note">Their words are read from Hansard when this row is opened.</p></div>
+      </div>`);
+    } else {
+      blocks.push(`<div class="mp-block"><h4>What they said</h4>
+        <p class="chart-note">Hansard records no contribution from this member about Gaza, Israel or Palestine
+          to a Commons or Westminster Hall debate since 7 October 2023. Written questions, committee
+          sittings and anything said outside Parliament are not counted here.</p></div>`);
     }
     if (m.interests) {
       blocks.push(`<div class="mp-block"><h4>Registered interests</h4>
@@ -3300,12 +3360,76 @@ const Views = (function () {
         address. This site holds no email addresses and sends nothing.</span>
     </div>`);
     const text = [m.name, m.seat, m.party, m.abbr].join(' ').toLowerCase();
+    const sigs = m.signatures ? Object.keys(m.signatures).map((k) => `data-sig${k}="${m.signatures[k][0]}"`).join(' ') : '';
     return `<details class="mp-entry" id="seat-${esc(m.slug)}" data-party="${esc(m.abbr || m.party)}"
-        data-extra="${extra}" data-text="${esc(text)}"
-        ${divisions.map((d) => `data-v${d.id}="${esc((m.votes[String(d.id)] || '').replace('-teller', ''))}"`).join(' ')}>
+        data-extra="${extra}" data-spoke="${m.spoke || 0}" data-contrib="${m.contributions || 0}" data-order="${index}"
+        data-text="${esc(text)}" ${sigs}
+        ${divisions.map((d) => `data-v${esc(d.id)}="${esc((m.votes[String(d.id)] || '').replace('-teller', ''))}"`).join(' ')}>
       <summary>${summary}</summary>
       <div class="mp-body">${blocks.join('')}</div>
     </details>`;
+  }
+
+  /* The two blocks of a row that are the same shape for all 649 members — every
+     division, and the signatures from the seat — are built when the row is
+     opened. Written into every row up front they came to four megabytes of
+     markup, most of it repeating petition titles, for rows most readers never
+     open; the vote on each division is already in the row's badges. */
+  function mpRowExtra(index) {
+    const C = D.constituency;
+    const m = C.members[index];
+    const divisions = C.divisions;
+    const blocks = [];
+    blocks.push(`<div class="mp-block"><h4>Every division</h4>
+      <div class="mp-allvotes">${divisions.map((d) => {
+        const cast = m.votes[String(d.id)];
+        const why = cast === 'forced-teller' && d.procedural_tellers ? d.procedural_tellers[String(m.id)] : '';
+        return `<div class="mp-voterow">
+          <span class="mp-voterow-what"><b>${esc(d.title)}</b><span>${esc(longDay(d.date))}</span>${why ? `<span>${esc(why)}</span>` : ''}</span>
+          ${mpVote(cast)}
+        </div>`;
+      }).join('')}</div></div>`);
+    const signed = m.signatures ? C.petitions.filter((p) => m.signatures[String(p.id)]) : [];
+    if (signed.length) {
+      blocks.push(`<div class="mp-block"><h4>Signatures from this seat</h4>
+        ${signed.map((p) => {
+          const [n, rank] = m.signatures[String(p.id)];
+          return `<div class="mp-sig">
+            <span class="mp-sig-n">${fmt(n)}</span>
+            <span><a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.action)}</a>
+              <span class="mp-meta">${fmt(p.signatures)} signatures in all · this seat ${ordinal(rank)} of ${fmt(p.seats)}</span></span>
+          </div>`;
+        }).join('')}
+        <p class="chart-note">Counted by the petitions site from each signatory’s postcode. Petitions of the
+          2019–2024 Parliament were counted on the old boundaries and are not shown against a seat.</p></div>`);
+    }
+    return blocks.join('');
+  }
+
+  /* What a member said, drawn from the speeches file when their row is opened.
+     Newest first; the first few are shown and the rest are one click away,
+     because a member who spoke in forty debates would otherwise push every
+     other block in the row off the screen. */
+  function mpSaid(id, speeches, all) {
+    const C = D.constituency;
+    const list = ((speeches && speeches.by_member) || {})[String(id)] || [];
+    if (!list.length) return '<p class="chart-note">No contribution is recorded.</p>';
+    const LIMIT = 5;
+    const shown = all ? list : list.slice(0, LIMIT);
+    return shown.map(([i, n, words]) => {
+      const d = C.debates[i];
+      return `<div class="mp-quote">
+        <div class="mp-meta">${esc(longDay(d.date))} · ${esc(d.where)}${d.petitions.length ? ' · a petition debate' : ''}</div>
+        <a class="mp-quote-title" href="${esc(d.url)}" target="_blank" rel="noopener noreferrer">${esc(d.title)}</a>
+        <blockquote>${esc(words)}</blockquote>
+        ${n > 1 ? `<div class="mp-meta">${fmt(n)} contributions in this debate; the passage quoted is from the longest.</div>` : ''}
+      </div>`;
+    }).join('')
+      + (!all && list.length > LIMIT
+        ? `<button class="btn ghost mp-said-more" type="button" data-member="${esc(id)}">Show all ${fmt(list.length)} debates</button>` : '')
+      + '<p class="chart-note">Quoted verbatim from Hansard under the Open Parliament Licence. The passage is the part of '
+      + 'the member’s longest contribution to that debate that first names Gaza, Israel or Palestine, cut on a word '
+      + 'and marked where it is cut; the title links to the whole debate.</p>';
   }
 
   /* The letter is written here rather than in the behaviour because it is
@@ -3327,13 +3451,24 @@ const Views = (function () {
     lines.push('I am a constituent in ' + m.seat + '. I am writing about the position of the '
       + 'United Kingdom on Gaza, and about your own votes on it.');
     lines.push('');
-    divisions.forEach((d) => {
+    // Only the divisions the member sat in, oldest first: a letter that told a
+    // member elected in 2024 six times over that they were not yet elected
+    // would be read as padding.
+    const sat = divisions.filter((d) => m.votes[String(d.id)] !== 'not-a-member')
+      .slice().sort((a, b) => (a.date < b.date ? -1 : 1));
+    if (!sat.length) {
+      lines.push('You were elected after each of the divisions the House has held on this subject, so I am '
+        + 'writing about what you will do rather than about any vote of yours.');
+      lines.push('');
+    }
+    sat.forEach((d) => {
       const cast = m.votes[String(d.id)];
       const seat = (m.seats_then && m.seats_then[String(d.id)]) || m.seat;
       const how = {
         aye: 'you voted for it', 'aye-teller': 'you were a teller for it',
         no: 'you voted against it', 'no-teller': 'you were a teller against it',
-        absent: 'you did not vote', 'not-a-member': 'you were not then a member of the House',
+        absent: 'you did not vote',
+        'forced-teller': 'you told for the other side so that the vote could be recorded',
       }[cast] || 'the record does not show how you voted';
       lines.push('On ' + longDay(d.date) + ' the House divided on ' + d.in_sentence
         + '. The question was: "' + d.question + '" It was ' + d.result.toLowerCase()
@@ -3395,44 +3530,132 @@ const Views = (function () {
     return lines.join('\n');
   }
 
+  /* The recognition record in one sequence: what the House voted for, what the
+     public petitioned for and against, and what the government did. Built from
+     the division, the petitions and the government act, so nothing in it is
+     typed twice. */
+  function mpRecognition(C) {
+    const items = [];
+    C.divisions.filter((d) => d.topic === 'recognition').forEach((d) => items.push({
+      date: d.date,
+      html: `<b>The Commons votes ${fmt(d.ayes)} to ${fmt(d.noes)} for recognition.</b> ${esc(d.question)}
+        <a href="#division-${esc(d.id)}" class="mp-jump">The division</a>`,
+    }));
+    C.petitions.filter((p) => p.topic === 'recognition').forEach((p) => {
+      items.push({
+        date: p.opened,
+        html: `<b>A petition opens: “${esc(p.action)}”</b> — ${fmt(p.signatures)} signatures by its close.${
+          p.response ? ` The government replied on ${esc(longDay(p.response.date))}: “${esc(p.response.summary)}”` : ''}
+          <a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer" class="mp-jump">The petition</a>`,
+      });
+      if (p.debate) {
+        items.push({
+          date: p.debate.date,
+          html: `<b>MPs debate the petition “${esc(p.action)}”</b> in Westminster Hall. A petition debate ends without a vote.
+            ${p.debate.url ? `<a href="${esc(p.debate.url)}" target="_blank" rel="noopener noreferrer" class="mp-jump">The debate</a>` : ''}`,
+        });
+      }
+    });
+    (C.recognition || []).forEach((r) => items.push({
+      date: r.date,
+      html: `<b>${esc(r.title)}.</b> ${esc(r.note)}
+        <a href="${esc(r.source)}" target="_blank" rel="noopener noreferrer" class="mp-jump">The statement</a>`,
+    }));
+    items.sort((a, b) => (a.date < b.date ? -1 : 1));
+    return `<ol class="mp-timeline">${items.map((i) => `<li><span class="mp-tl-date">${esc(longDay(i.date))}</span><div>${i.html}</div></li>`).join('')}</ol>`;
+  }
+
+  function mpPetitionCard(p, max) {
+    const width = Math.max(2, Math.round(100 * p.signatures / max));
+    return `<div class="card mp-pet" data-topic="${esc(p.topic)}">
+      <div class="mp-pet-head">
+        <span class="mp-topic">${esc(TOPIC_LABEL[p.topic] || p.topic)}</span>
+        <span class="mp-meta">${p.parliament === 'current' ? 'This Parliament' : '2019–2024 Parliament'} · opened ${esc(longDay(p.opened))}${p.closed ? ` · closed ${esc(longDay(p.closed))}` : ''}</span>
+      </div>
+      <h3><a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.action)}</a></h3>
+      <div class="mp-pet-bar"><span style="width:${width}%"></span></div>
+      <p class="mp-pet-n"><b>${fmt(p.signatures)}</b> signatures${p.signatures >= 100000 ? ' — past the threshold for a debate' : ''}</p>
+      ${p.response ? `<blockquote class="led-quote"><p>${esc(p.response.summary)}</p><cite>The government’s response, ${esc(longDay(p.response.date))}</cite></blockquote>` : ''}
+      <div class="mp-pet-links">
+        ${p.debate ? `<span>Debated ${esc(longDay(p.debate.date))}:</span>
+          ${p.debate.url ? `<a href="${esc(p.debate.url)}" target="_blank" rel="noopener noreferrer">the transcript</a>` : ''}
+          ${p.debate.video ? `<a href="${esc(p.debate.video)}" target="_blank" rel="noopener noreferrer">the video</a>` : ''}
+          ${p.debate.pack ? `<a href="${esc(p.debate.pack)}" target="_blank" rel="noopener noreferrer">the Library’s debate pack</a>` : ''}` : ''}
+        ${p.by_seat ? `<button class="btn ghost mp-sort-by" type="button" data-sort="sig${p.id}">Rank the seats by it</button>` : ''}
+      </div>
+    </div>`;
+  }
+
+  function mpPoll(poll) {
+    return `<div class="card mp-poll">
+      <div class="mp-meta">${esc(poll.pollster)} for ${esc(poll.commissioner)} · fieldwork ${esc(poll.fieldwork)} · ${esc(poll.population)}${poll.sample ? `, ${fmt(poll.sample)} asked` : ''}</div>
+      ${poll.findings.map(([label, pct]) => `<div class="mp-poll-row">
+        <span class="mp-poll-label">${esc(label)}</span>
+        <span class="mp-poll-bar"><span style="width:${Math.max(1, pct)}%"></span></span>
+        <b class="mp-poll-pct">${fmt(pct)}%</b>
+      </div>`).join('')}
+      <p class="chart-note">${esc(poll.note)}</p>
+      <a class="led-ref" href="${esc(poll.source)}" target="_blank" rel="noopener noreferrer">Published ${esc(longDay(poll.published))}</a>
+    </div>`;
+  }
+
   function mpView() {
     const C = D.constituency;
     const M = C.meta;
     const divisions = C.divisions;
-    const ceasefire = divisions[0];
+    const shown = String((divisions.find((d) => String(d.id) === '1666') || divisions[0]).id);
     const parties = {};
     C.members.forEach((m) => { parties[m.abbr || m.party] = (parties[m.abbr || m.party] || 0) + 1; });
     const partyChips = [`<button class="chip active" data-party="all">Every seat<span>${M.members}</span></button>`]
       .concat(Object.keys(parties).sort((a, b) => parties[b] - parties[a])
         .map((p) => `<button class="chip" data-party="${esc(p)}">${esc(p)}<span>${parties[p]}</span></button>`)).join('');
-    const voteChips = [
-      ['all', 'However they voted'],
-      ['aye', 'Voted for the ceasefire'],
-      ['no', 'Voted against it'],
-      ['absent', 'Did not vote'],
-      ['not-a-member', 'Not then elected'],
-    ].map((v, i) => `<button class="chip ${i === 0 ? 'active' : ''}" data-vote="${v[0]}">${v[1]}<span>${
-      v[0] === 'all' ? M.members
-        : C.members.filter((m) => (m.votes[String(ceasefire.id)] || '').replace('-teller', '') === v[0]).length
-    }</span></button>`).join('');
+    const divisionOptions = divisions.map((d) => `<option value="${esc(d.id)}"${String(d.id) === shown ? ' selected' : ''}>${
+      esc(longDay(d.date))} — ${esc(d.title)}</option>`).join('');
+    const spokeCount = C.members.filter((m) => m.spoke).length;
+    const registerCount = C.members.filter((m) => (m.interests || []).length + (m.donations || []).length).length;
+    const alsoChips = [
+      ['all', 'Everyone', M.members],
+      ['spoke', 'Spoke in a debate on it', spokeCount],
+      ['silent', 'Never spoke in one', M.members - spokeCount],
+      ['register', 'Has a register entry', registerCount],
+    ].map((v, i) => `<button class="chip ${i === 0 ? 'active' : ''}" data-also="${v[0]}">${v[1]}<span>${fmt(v[2])}</span></button>`).join('');
+    const bySeat = C.petitions.filter((p) => p.by_seat);
+    const sortOptions = [`<option value="order">Constituency, A to Z</option>`,
+      `<option value="contrib">Most contributions to debates</option>`]
+      .concat(bySeat.map((p) => `<option value="sig${p.id}">Signatures: ${esc(p.action.length > 70 ? p.action.slice(0, 68) + '…' : p.action)}</option>`)).join('');
+    const topics = [...new Set(divisions.map((d) => d.topic))];
+    const divTopicChips = [`<button class="chip active" data-topic="all">Every division<span>${divisions.length}</span></button>`]
+      .concat(topics.map((t) => `<button class="chip" data-topic="${esc(t)}">${esc(TOPIC_LABEL[t] || t)}<span>${
+        divisions.filter((d) => d.topic === t).length}</span></button>`)).join('');
+    const petTopics = [...new Set(C.petitions.map((p) => p.topic))];
+    const petChips = [`<button class="chip active" data-topic="all">Every petition<span>${C.petitions.length}</span></button>`]
+      .concat(petTopics.map((t) => `<button class="chip" data-topic="${esc(t)}">${esc(TOPIC_LABEL[t] || t)}<span>${
+        C.petitions.filter((p) => p.topic === t).length}</span></button>`)).join('');
+    const maxSig = Math.max(...C.petitions.map((p) => p.signatures));
+    const petitionDebates = C.debates.filter((d) => d.petitions.length).length;
 
     const stats = [
       { value: M.members, label: 'Seats in the House of Commons', note: 'each with the member who holds it and how they voted' },
+      { value: M.divisions, label: 'Divisions on Palestine', note: 'every recorded vote the House has taken on the subject that this ledger could identify, from 2014' },
+      { value: M.members_who_spoke, label: 'Members who spoke about it', note: `in ${fmt(M.debates)} Commons and Westminster Hall debates since 7 October 2023` },
+      { value: M.petition_signatures, label: 'Petition signatures', note: `across the ${fmt(M.petitions)} petitions on the subject that reached a response or a debate` },
       { value: M.members_with_interest, label: 'Members with a registered interest', note: 'a visit, a gift or a role disclosed under the rules and matched by the search terms below' },
       { value: M.members_with_donation, label: 'Members with a reported donation', note: 'money the Electoral Commission records as reaching them directly' },
       { value: M.donations, label: 'Reported donations in the register', note: 'to members, to parties and to party units together' },
+      { value: C.polls.length, label: 'Opinion polls', note: 'of the public and of the governing party’s members, each with who commissioned it' },
     ];
 
     return `<div class="view wrap">
       <section class="section">
-        ${head('Constituency', `${M.members} seats, three divisions, four public registers`,
+        ${head('Constituency', `${M.members} seats, ${fmt(M.divisions)} divisions, ${fmt(M.petitions)} petitions, ${fmt(M.debates)} debates`,
           'The scorecard holds one row for the United Kingdom, and a state is not a thing anybody can write to. '
           + 'This page cuts the same record along the axis a reader can act on: the seat they live in, the member who holds it, '
-          + 'how that member voted when the House divided on Gaza, and what the two public registers record against their name. '
-          + 'Nothing here is an accusation. A registered interest is a disclosure made under the rules and a reported donation is a lawful, published gift; '
-          + 'what this page does is put the disclosure beside the vote, which none of the four registers does, because each is published on its own.')}
+          + 'how that member voted each time the House divided on Palestine, what they said when it debated it, how many people in the seat '
+          + 'signed the petitions that reached Parliament, and what the two public registers record against their name. '
+          + 'Nothing here is an accusation. A vote is a public act, a contribution to a debate is on the record, a registered interest is a disclosure made under the rules and a reported donation is a lawful, published gift; '
+          + 'what this page does is put them side by side, which none of the registers does, because each is published on its own.')}
         <div class="grid c4">
-          ${stats.map((x, i) => statCard(x, ['red', 'amber', 'blue', 'green'][i])).join('')}
+          ${stats.map((x, i) => statCard(x, ['red', 'amber', 'blue', 'green'][i % 4])).join('')}
         </div>
       </section>
 
@@ -3446,22 +3669,67 @@ const Views = (function () {
       </section>
 
       <section class="section">
-        ${head('The divisions', 'What the House was actually asked', 'Three times since October 2023 the Commons has divided on a question about Gaza. The subject of a division cannot be read off the machine record — the House titles a vote by its procedural form, so the vote on an immediate ceasefire is published as “Amendment (h)” and nothing in the data says otherwise — so each question is set out here in full, with the published counts that identify it and a link to the division list itself.')}
-        <div class="grid">${divisions.map(mpDivisionCard).join('')}</div>
+        ${head('The divisions', 'What the House was actually asked', `${fmt(divisions.length)} times the Commons has divided on a question about Palestine that this ledger can identify. The subject of a division cannot be read off the machine record — the House titles a vote by its procedural form, so the vote on an immediate ceasefire is published as “Amendment (h)” and nothing in the data says otherwise — so each question is set out here in full, with the published counts that identify it and a link to the division list itself.`)}
+        <div class="chips" id="mp-div-topics">${divTopicChips}</div>
+        <div class="grid" id="mp-div-cards">${divisions.map(mpDivisionCard).join('')}</div>
+        ${(C.unrecorded || []).map((u) => `<div class="card mp-unrecorded">
+          <div class="mp-div-head"><h3>${esc(u.title)}</h3><span class="mp-div-date">${esc(longDay(u.date))}</span></div>
+          <p class="chart-note"><b>No division list exists.</b> ${esc(u.note)}</p>
+          <a class="led-ref" href="${esc(u.source)}" target="_blank" rel="noopener noreferrer">The debate in Hansard</a>
+        </div>`).join('')}
       </section>
 
       <section class="section">
-        ${head('Every seat', 'The whole House, filterable', 'Search a name or a constituency, or filter by party and by how the member voted on the ceasefire amendment. A member who was not in the House in November 2023 is shown as not yet elected rather than as absent, because an absence is a choice and a later arrival is not.')}
+        ${head('Every seat', 'The whole House, filterable', 'Pick a division and see how every member voted on it, or narrow the list to the members who spoke in a debate on the subject, or rank the seats by how many of their constituents signed a petition. A member who was not in the House for a division is shown as not yet elected rather than as absent, because an absence is a choice and a later arrival is not.')}
+        <div class="mp-controls">
+          <label class="mp-control"><span>Division</span>
+            <select id="mp-division">${divisionOptions}</select></label>
+          <label class="mp-control"><span>Order</span>
+            <select id="mp-sort">${sortOptions}</select></label>
+        </div>
+        <div class="chips" id="mp-votes">${mpVoteChips(C, shown)}</div>
+        <div class="chips" id="mp-also">${alsoChips}</div>
         <div class="chips" id="mp-parties">${partyChips}</div>
-        <div class="chips" id="mp-votes">${voteChips}</div>
         <div class="tl-controls">
           <input type="search" id="mp-search" placeholder="Search a member or a constituency…" autocomplete="off">
           <span class="small muted" id="mp-count">${M.members} seats</span>
         </div>
-        <div class="mp-legend">${divisions.map((d) => `<span><b>${esc(d.short)}</b> ${esc(longDay(d.date))} — ${esc(d.title)}</span>`).join('')}</div>
         <div class="led-list" id="mp-list">
-          ${C.members.map((m, i) => mpRow(m, divisions, i)).join('')}
+          ${C.members.map((m, i) => mpRow(m, divisions, i, shown)).join('')}
         </div>
+      </section>
+
+      <section class="section">
+        ${head('Recognition', 'Eleven years from the vote to the act', 'The House voted to recognise the State of Palestine in October 2014. Petitions for it were debated in 2021 and 2024, a petition against it was answered in 2025, and the government recognised Palestine in September 2025 without a vote. The sequence is set out here from the records themselves.')}
+        ${mpRecognition(C)}
+      </section>
+
+      <section class="section">
+        ${head('Petitions', `${fmt(M.petitions)} petitions, ${fmt(M.petition_signatures)} signatures`, `Every petition to Parliament on the subject that reached ten thousand signatures, when the government must answer it, or was debated, from either direction. A petition is carried whatever it asks for; the ledger does not choose between them. ${fmt(petitionDebates)} of the debates below were held because a petition passed a hundred thousand signatures. For petitions of this Parliament the signatures are counted seat by seat, and the list above can be ranked by any of them.`)}
+        <div class="chips" id="mp-pet-topics">${petChips}</div>
+        <div class="grid c2" id="mp-pet-cards">${C.petitions.map((p) => mpPetitionCard(p, maxSig)).join('')}</div>
+      </section>
+
+      <section class="section">
+        ${head('The debates', `${fmt(M.debates)} debates, ${fmt(M.members_who_spoke)} members`, 'Every Commons and Westminster Hall debate since 7 October 2023 in which a member spoke about Gaza, Israel or Palestine. A contribution is counted only if its own words name the subject, because some of these debates were mostly about something else. Open a member’s row above to read what they said.')}
+        <details class="mp-debates">
+          <summary>All ${fmt(M.debates)} debates, newest first</summary>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Date</th><th>Debate</th><th>Where</th><th class="mp-money">Sitting members who spoke</th></tr></thead>
+            <tbody>${C.debates.slice().reverse().map((d) => `<tr>
+              <td class="mp-nowrap">${esc(longDay(d.date))}</td>
+              <td><a href="${esc(d.url)}" target="_blank" rel="noopener noreferrer">${esc(d.title)}</a>${d.petitions.length ? ' <span class="mp-topic">Petition</span>' : ''}</td>
+              <td>${esc(d.where)}</td>
+              <td class="mp-money">${fmt(d.members)}</td>
+            </tr>`).join('')}</tbody>
+          </table></div>
+        </details>
+        <p class="chart-note" style="margin-top:14px">Found through the Hansard API and kept where a contribution matches <code>${esc(M.subject_terms)}</code>. Contributions from the chair are left out. A member who has since left the House is not shown, because this ledger is of the House as it now sits.</p>
+      </section>
+
+      <section class="section">
+        ${head('The polls', 'What the public and the governing party’s members said', 'Published polls on recognition, arms and the characterisation of the conduct. Each carries its pollster, who commissioned it, and the population asked, because a poll of one party’s members and a poll of the adult population measure different things.')}
+        <div class="grid c2">${C.polls.map(mpPoll).join('')}</div>
       </section>
 
       <section class="section">
@@ -4405,6 +4673,9 @@ const Views = (function () {
       const C = D.constituency;
       return mpLetter(C.members[index], C.divisions);
     },
+    constituencySaid(id, speeches, all) { return mpSaid(id, speeches, all); },
+    constituencyRowExtra(index) { return mpRowExtra(index); },
+    constituencyVoteCounts(id) { return mpVoteCounts(D.constituency, id); },
     challengeUrl(entry, kind) { return fxChallengeUrl(D.falsify, entry, kind); },
   };
 })();
