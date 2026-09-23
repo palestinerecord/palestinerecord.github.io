@@ -1243,7 +1243,7 @@
    "file": "figures.json",
    "path": "headline[0]",
    "label": "Palestinians killed in Gaza",
-   "value": 73919,
+   "value": 73922,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
@@ -1273,7 +1273,7 @@
    "file": "figures.json",
    "path": "headline[2]",
    "label": "Injured in Gaza",
-   "value": 174977,
+   "value": 174995,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
@@ -7970,7 +7970,7 @@
    "numeric": false,
    "ref": "§15.4",
    "date": "",
-   "source_text": "Wikipedia, \"International recognition of Palestine\", retrieved 22 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there.",
+   "source_text": "Wikipedia, \"International recognition of Palestine\", retrieved 23 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there.",
    "sources": [
     "pal-mfa",
     "wikipedia"
