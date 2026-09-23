@@ -81,6 +81,9 @@ PETITION_THRESHOLD = 10000
 DEBATE_SEARCHES = ['Gaza', 'Israel', 'Palestine', 'Palestinian', 'Middle East', 'West Bank']
 DEBATES_SINCE = '2023-10-07'
 
+MOTION_SEARCHES = ['Gaza', 'Palestine', 'Palestinian', 'Israel', 'Israeli', 'West Bank', 'UNRWA',
+                   'Nakba', 'Rafah', 'Occupied', 'flotilla', 'Elbit', 'genocide', 'Hamas', 'Netanyahu']
+
 # What the donations register is searched for. The register has no subject
 # index, so an organisation that gives to a party under a name not on this list
 # is not in the ledger — which is why the page says the search terms out loud.
@@ -248,6 +251,52 @@ def fetch_debates():
     return index
 
 
+def fetch_motions():
+    """Every early day motion on the subject since 7 October 2023, with who signed it.
+
+    An early day motion is a statement a member puts their name to: it is almost
+    never debated, and signing one is the most direct record the House keeps of
+    what a backbencher says they want done. The API's search is loose, so each
+    result is kept only if its title or text matches SUBJECT, and amendments to a
+    motion are left out: the motion is what members signed.
+    """
+    base = 'https://oralquestionsandmotions-api.parliament.uk'
+    found = {}
+    for term in MOTION_SEARCHES:
+        for skip in range(0, 3000, 100):
+            url = ('%s/EarlyDayMotions/list?parameters.searchTerm=%s'
+                   '&parameters.tabledStartDate=%s&parameters.take=100&parameters.skip=%d'
+                   % (base, urllib.parse.quote(term), DEBATES_SINCE, skip))
+            results = get_json(url).get('Response') or []
+            for r in results:
+                if r.get('AmendmentToMotionId'):
+                    continue
+                if SUBJECT.search((r.get('Title') or '') + ' ' + (r.get('MotionText') or '')):
+                    found[r['Id']] = r
+            if len(results) < 100:
+                break
+    out = []
+    for mid, r in sorted(found.items()):
+        detail = get_json('%s/EarlyDayMotion/%d' % (base, mid)).get('Response') or {}
+        out.append({
+            'id': mid,
+            'date': (r.get('DateTabled') or '')[:10],
+            'title': r.get('Title') or '',
+            'text': r.get('MotionText') or '',
+            'sponsor': (r.get('PrimarySponsor') or {}).get('Name') or '',
+            # A withdrawn signature is kept apart with its date: constituency.py
+            # decides whether the withdrawal was the member's own.
+            'signed': sorted(s['MemberId'] for s in detail.get('Sponsors') or []
+                             if not s.get('IsWithdrawn')),
+            'withdrawn': sorted([s['MemberId'], (s.get('WithdrawnDate') or '')[:10]]
+                                for s in detail.get('Sponsors') or [] if s.get('IsWithdrawn')),
+        })
+        time.sleep(0.2)
+    write('uk_motions.json', out)
+    print('  %d motions, %d signatures' % (len(out), sum(len(m['signed']) for m in out)))
+    return out
+
+
 def fetch_interests():
     url = 'https://interests-api.parliament.uk/api/v1/Interests?Skip=%d&Take=%d'
     return write('uk_interests.json', paged(url, 20, 8000))
@@ -270,7 +319,7 @@ def main():
     if '--offline' in sys.argv:
         for name in ('uk_members.json', 'uk_divisions.json', 'uk_divisions_hansard.json',
                      'uk_member_history.json', 'uk_interests.json', 'uk_donations.json',
-                     'uk_petitions.json', 'uk_debates.json'):
+                     'uk_petitions.json', 'uk_debates.json', 'uk_motions.json'):
             path = os.path.join(RAW, name)
             print('  %-28s %s' % (name, '%d bytes' % os.path.getsize(path)
                                   if os.path.exists(path) else 'missing'))
@@ -285,13 +334,16 @@ def main():
     petitions = fetch_petitions()
     print('debates')
     debates = fetch_debates()
+    print('motions')
+    motions = fetch_motions()
     print('interests')
     interests = fetch_interests()
     print('donations')
     donations = fetch_donations()
-    print('fetched %d sitting MPs, %d divisions, %d petitions, %d debates, %d registered interests, '
-          '%d reported donations' % (len(members), len(divisions), len(petitions), len(debates),
-                                     len(interests), len(donations)))
+    print('fetched %d sitting MPs, %d divisions, %d petitions, %d debates, %d motions, '
+          '%d registered interests, %d reported donations'
+          % (len(members), len(divisions), len(petitions), len(debates), len(motions),
+             len(interests), len(donations)))
 
 
 if __name__ == '__main__':

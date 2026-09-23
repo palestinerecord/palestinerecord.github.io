@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=129" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=130" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=129" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=130" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -3275,6 +3275,34 @@ const Views = (function () {
     return 'mixed';
   }
 
+  /* The whole record in one bar, from the `lean` constituency.py computed:
+     [pro-Palestinian acts, acts against, chances]. An act is a counted vote
+     cast or a counted early day motion signed; the chances are every counted
+     division the member sat for and every counted motion tabled while they
+     were in the House. Green runs in from the left, red in from the right, and
+     the grey between is everything they neither voted for nor signed. */
+  function mpLean(m) {
+    const [pro, against, chances] = m.lean || [0, 0, 0];
+    const pc = (n) => (chances ? Math.max(n ? 1.5 : 0, (100 * n) / chances).toFixed(1) : 0);
+    const said = pro + against
+      ? `${fmt(pro)} of ${fmt(chances)} chances taken on the pro-Palestinian side${against ? `, ${fmt(against)} against` : ''}`
+      : `None of ${fmt(chances)} chances taken either way`;
+    return `<span class="mp-lean" title="${esc(said)}. Counted votes cast and early day motions signed.">
+      <span class="mp-lean-bar" role="img" aria-label="${esc(said)}"><i class="pro" style="width:${pc(pro)}%"></i><i class="con" style="width:${pc(against)}%"></i></span>
+      <span class="mp-lean-n">${pro + against
+        ? `<span class="mp-lean-pro">${fmt(pro)}</span> of ${fmt(chances)} pro-Palestinian${against ? ` · <em>${fmt(against)} against</em>` : ''}`
+        : 'No counted vote or motion'}</span>
+    </span>`;
+  }
+
+  /* Most pro-Palestinian first: the most acts on that side net of the acts
+     against it, then the most acts on that side, then the constituency. */
+  function mpLeanOrder(a, b) {
+    const [ap, aa] = a.lean || [0, 0];
+    const [bp, ba] = b.lean || [0, 0];
+    return ((bp - ba) - (ap - aa)) || (bp - ap) || a.seat.localeCompare(b.seat);
+  }
+
   const RECORD_CHIPS = [
     ['all', 'Everyone'],
     ['always', 'Pro-Palestinian on every counted vote'],
@@ -3343,15 +3371,12 @@ const Views = (function () {
       return `<span class="mp-cell" data-div="${esc(d.id)}"${String(d.id) === shown ? '' : ' hidden'} title="${esc(d.title)}"><b>${esc(d.short)}</b>${mpVote(cast)}</span>`;
     }).join('');
     const flags = [];
-    const [pro, against] = m.record || [0, 0];
-    if (pro + against) {
-      flags.push(`<span class="mp-flag rec rec-${mpRecordKind(m)}" title="Votes cast on the divisions that have a pro-Palestinian side">${fmt(pro)} of ${fmt(pro + against)} ${pro + against === 1 ? 'vote' : 'votes'} pro-Palestinian</span>`);
-    }
     if (m.spoke) flags.push(`<span class="mp-flag spoke">Spoke in ${fmt(m.spoke)} ${m.spoke === 1 ? 'debate' : 'debates'}</span>`);
     if (extra) flags.push(`<span class="mp-flag">${extra} register ${extra === 1 ? 'entry' : 'entries'}</span>`);
     const summary = `<div class="mp-who">
         <b>${esc(m.name)}</b>
         <span class="mp-seat">${esc(m.seat)}</span>
+        ${mpLean(m)}
       </div>
       <span class="mp-party" style="--party:#${esc(m.colour || '777777')}">${esc(m.abbr || m.party)}</span>
       <div class="mp-votes">${badges}</div>
@@ -3402,6 +3427,7 @@ const Views = (function () {
     return `<details class="mp-entry" id="seat-${esc(m.slug)}" data-party="${esc(m.abbr || m.party)}"
         data-extra="${extra}" data-spoke="${m.spoke || 0}" data-contrib="${m.contributions || 0}" data-order="${index}"
         data-record="${mpRecordKind(m)}" data-pro="${(m.record || [0])[0]}"
+        data-lean="${(m.lean || [0, 0])[0] - (m.lean || [0, 0])[1]}" data-lean-pro="${(m.lean || [0])[0]}"
         data-text="${esc(text)}" ${sigs}
         ${divisions.map((d) => `data-v${esc(d.id)}="${esc((m.votes[String(d.id)] || '').replace('-teller', ''))}"`).join(' ')}>
       <summary>${summary}</summary>
@@ -3419,6 +3445,24 @@ const Views = (function () {
     const m = C.members[index];
     const divisions = C.divisions;
     const blocks = [];
+    const [pro, against, chances] = m.lean || [0, 0, 0];
+    const [vPro, vAgainst] = m.record || [0, 0];
+    const vChances = divisions.filter((d) => d.pro_side && m.votes[String(d.id)] !== 'not-a-member').length;
+    const motions = (m.signed || []).map((i) => C.motions[i]);
+    const sPro = motions.filter((x) => x.side === 'pro').length;
+    blocks.push(`<div class="mp-block mp-stand"><h4>The bar, counted</h4>
+      <div class="mp-stand-grid">
+        <div><b>${fmt(vPro)}</b> of ${fmt(vChances)} counted ${vChances === 1 ? 'vote' : 'votes'} cast on the pro-Palestinian side${vAgainst ? `, <em>${fmt(vAgainst)} against it</em>` : ''}</div>
+        <div><b>${fmt(sPro)}</b> of ${fmt(chances - vChances)} counted early day motions signed in support${motions.length - sPro ? `, <em>${fmt(motions.length - sPro)} signed against</em>` : ''}</div>
+        <div class="mp-stand-sum"><b>${fmt(pro)}</b> of ${fmt(chances)} in all${against ? `, <em>${fmt(against)} against</em>` : ''}</div>
+      </div>
+      ${motions.length ? `<details class="mp-motions"><summary>The ${fmt(motions.length)} ${motions.length === 1 ? 'motion' : 'motions'} they signed</summary>
+        ${motions.slice().reverse().map((x) => `<p><span class="mp-sidemark ${x.side === 'pro' ? 'pro' : 'con'}">${x.side === 'pro' ? 'Pro-Palestinian' : 'Against'}</span>
+          <a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.title)}</a>
+          <span class="mp-meta">${esc(longDay(x.date))} · tabled by ${esc(x.sponsor)} · ${fmt(x.signatures)} signatures</span></p>`).join('')}
+      </details>` : ''}
+      <p class="chart-note">Not signing a motion is not counted against anyone: ministers and whips do not sign them, and many members never sign any. A member who is now a minister will show fewer signatures than their views might suggest.</p>
+    </div>`);
     blocks.push(`<div class="mp-block"><h4>Every division</h4>
       <div class="mp-allvotes">${divisions.map((d) => {
         const cast = m.votes[String(d.id)];
@@ -3658,6 +3702,8 @@ const Views = (function () {
     C.members.forEach((m) => { recordCounts[mpRecordKind(m)]++; });
     const recordChips = RECORD_CHIPS.map((v, i) => `<button class="chip ${i === 0 ? 'active' : ''}" data-record="${v[0]}">${v[1]}<span>${fmt(recordCounts[v[0]])}</span></button>`).join('');
     const counted = divisions.filter((d) => d.pro_side);
+    // The worked example in the key is the member at the top of the list.
+    const [topPro, , topChances] = C.members.slice().sort(mpLeanOrder)[0].lean;
     const spokeCount = C.members.filter((m) => m.spoke).length;
     const registerCount = C.members.filter((m) => (m.interests || []).length + (m.donations || []).length).length;
     const alsoChips = [
@@ -3667,7 +3713,8 @@ const Views = (function () {
       ['register', 'Has a register entry', registerCount],
     ].map((v, i) => `<button class="chip ${i === 0 ? 'active' : ''}" data-also="${v[0]}">${v[1]}<span>${fmt(v[2])}</span></button>`).join('');
     const bySeat = C.petitions.filter((p) => p.by_seat);
-    const sortOptions = [`<option value="order">Constituency, A to Z</option>`,
+    const sortOptions = [`<option value="lean" selected>Most pro-Palestinian first</option>`,
+      `<option value="order">Constituency, A to Z</option>`,
       `<option value="pro">Most votes on the pro-Palestinian side</option>`,
       `<option value="contrib">Most contributions to debates</option>`]
       .concat(bySeat.map((p) => `<option value="sig${p.id}">Signatures: ${esc(p.action.length > 70 ? p.action.slice(0, 68) + '…' : p.action)}</option>`)).join('');
@@ -3729,7 +3776,13 @@ const Views = (function () {
       </section>
 
       <section class="section">
-        ${head('Every seat', 'The whole House, filterable', 'Pick a division and see how every member voted on it, or narrow the list to the members who spoke in a debate on the subject, or rank the seats by how many of their constituents signed a petition. A member who was not in the House for a division is shown as not yet elected rather than as absent, because an absence is a choice and a later arrival is not.')}
+        ${head('Every seat', 'The whole House, most pro-Palestinian first', 'Pick a division and see how every member voted on it, or narrow the list to the members who spoke in a debate on the subject, or rank the seats by how many of their constituents signed a petition. A member who was not in the House for a division is shown as not yet elected rather than as absent, because an absence is a choice and a later arrival is not.')}
+        <div class="card mp-lean-key">
+          <h3>How the bar under each name is measured</h3>
+          <p>Two kinds of act, both on the public record. <b>Votes:</b> the ${fmt(counted.length)} divisions below that have a clear pro-Palestinian side. <b>Signed statements:</b> the ${fmt(M.motions)} early day motions tabled since 7 October 2023 that take a side, out of ${fmt(M.motions_reviewed)} on the subject that were each read in full. An early day motion is a short statement MPs sign to put their view on the record, such as calling for an arms embargo, for recognition or for a ceasefire. ${fmt(C.motions.filter((x) => x.side === 'pro').length)} take the Palestinian side and ${fmt(C.motions.filter((x) => x.side === 'against').length)} take the other.</p>
+          <p>A member’s figure is what they did with the chances they had: “${fmt(topPro)} of ${fmt(topChances)}” means ${fmt(topChances)} counted votes and motions came up while they were an MP and they took the pro-Palestinian side ${fmt(topPro)} times. The list is ordered by that count, less any acts against. Members first elected in 2024 have had fewer chances, so their second figure is smaller.</p>
+          <p class="chart-note">What is not counted: motions about Lebanon, Syria or Iran (${fmt(M.motions_not_counted['about Lebanon, Syria or Iran rather than Palestine'] || 0)}), motions about the hostages or antisemitism that take no position on Palestinians (${fmt(M.motions_not_counted['about the hostages or antisemitism, without a position on Palestinians'] || 0)}), tributes without a call for action (${fmt(M.motions_not_counted['a tribute or a commemoration without a call for action'] || 0)}), and motions on other subjects that only matched a search term (${fmt(M.motions_not_counted['on another subject, and matched only because it mentions one of the search terms'] || 0)}). Speeches are shown in each row but are not scored, because a program cannot reliably tell a speech for a ceasefire from one against it. Not signing a motion is never counted against anyone: ministers and whips do not sign them. A signature a member withdrew is not counted; ${(M.suspensions || []).map((x) => `the signatures the House itself withdrew when it suspended ${esc(x.name)} on ${esc(longDay(x.date))} <a href="${esc(x.source)}" target="_blank" rel="noopener noreferrer">are</a> still counted, because the withdrawal was not the member’s own act`).join('; ')}.</p>
+        </div>
         <div class="mp-controls">
           <label class="mp-control"><span>Division</span>
             <select id="mp-division">${divisionOptions}</select></label>
@@ -3760,11 +3813,12 @@ const Views = (function () {
             <dt>Not yet elected</dt><dd>The member was not an MP on the day, so they could not vote. This is never counted against anyone.</dd>
             <dt>Teller</dt><dd>One of the two members who count the votes for a side. Tellers do not vote themselves, but they are on the side they count for.</dd>
             <dt>Teller, to force the vote</dt><dd>In 2014 the opponents of recognition refused to provide tellers, which would have stopped the vote being recorded. Jeremy Corbyn counted for them anyway so that everyone’s vote went on the record; he supported recognition.</dd>
-            <dt>“N of N votes pro-Palestinian”</dt><dd>Of the votes with a pro-Palestinian side that this member actually cast, how many were on that side.</dd>
+            <dt>The bar under each name</dt><dd>“${fmt(topPro)} of ${fmt(topChances)} pro-Palestinian” means the member had ${fmt(topChances)} chances to act on the record and took ${fmt(topPro)} of them on the pro-Palestinian side. A chance is a counted vote held while they were an MP, or a counted early day motion tabled while they were an MP. Green is the share taken for, red the share taken against, and grey the rest. Open a row to see every vote and every motion behind it.</dd>
           </dl>
         </details>
         <div class="led-list" id="mp-list">
-          ${C.members.map((m, i) => mpRow(m, divisions, i, shown)).join('')}
+          ${C.members.map((m, i) => [m, i]).sort((a, b) => mpLeanOrder(a[0], b[0]))
+            .map(([m, i]) => mpRow(m, divisions, i, shown)).join('')}
         </div>
       </section>
 

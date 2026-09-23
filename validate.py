@@ -880,6 +880,24 @@ def check_constituency(files):
         if m.get('record') != [pro, against]:
             fail('constituency', '%s carries the tally %s but the votes give %s'
                  % (m['name'], m.get('record'), [pro, against]))
+        # The bar under the name, recomputed the same way: the counted votes
+        # plus the counted motions signed, out of chances that cannot be fewer
+        # than the divisions sat for and the motions signed.
+        motions = blob.get('motions', [])
+        signed = m.get('signed', [])
+        if any(not isinstance(i, int) or not 0 <= i < len(motions) for i in signed):
+            fail('constituency', '%s carries a signed motion index outside the list' % m['name'])
+        else:
+            s_pro = sum(1 for i in signed if motions[i]['side'] == 'pro')
+            sat = sum(1 for d in divisions if d.get('pro_side')
+                      and m['votes'].get(str(d['id'])) != 'not-a-member')
+            lean = m.get('lean') or [None, None, None]
+            if lean[:2] != [pro + s_pro, against + len(signed) - s_pro]:
+                fail('constituency', '%s carries the bar %s but the votes and motions give %s'
+                     % (m['name'], lean[:2], [pro + s_pro, against + len(signed) - s_pro]))
+            if not isinstance(lean[2], int) or lean[2] < sat + len(signed) or lean[2] > sat + len(motions):
+                fail('constituency', '%s has %s chances, outside %d to %d'
+                     % (m['name'], lean[2], sat + len(signed), sat + len(motions)))
         for i in m.get('interests', []):
             if not (i.get('summary') or '').strip():
                 fail('constituency', 'an interest against %s carries no summary' % m['name'])
@@ -889,6 +907,39 @@ def check_constituency(files):
                                      'it cannot be looked up' % m['name'])
             if not isinstance(g.get('value'), (int, float)) or g['value'] <= 0:
                 fail('constituency', 'a donation to %s carries no value' % m['name'])
+
+    # The early day motions behind the bar. Each is a link a reader can follow
+    # to the list of who signed it, and the signatures the page counts against
+    # members cannot exceed the motion's own total.
+    motions = blob.get('motions', [])
+    if meta.get('motions') != len(motions):
+        fail('constituency', 'the file states %s motions and carries %d' % (meta.get('motions'), len(motions)))
+    counted_sigs = {}
+    for m in members:
+        for i in m.get('signed', []):
+            if isinstance(i, int) and 0 <= i < len(motions):
+                counted_sigs[i] = counted_sigs.get(i, 0) + 1
+    for i, x in enumerate(motions):
+        if x.get('side') not in ('pro', 'against'):
+            fail('constituency', 'motion %s has no side' % x.get('id'))
+        if x.get('url') != 'https://edm.parliament.uk/early-day-motion/%s' % x.get('id'):
+            fail('constituency', 'motion %s does not link to its own page' % x.get('id'))
+        if not re.match(r'^\d{4}-\d{2}-\d{2}$', x.get('date') or '') or x['date'] < '2023-10-07':
+            fail('constituency', 'motion %s carries the date %r' % (x.get('id'), x.get('date')))
+        if counted_sigs.get(i, 0) > (x.get('signatures') or 0):
+            fail('constituency', 'motion %s is signed by %d sitting members but has %s signatures'
+                 % (x.get('id'), counted_sigs.get(i, 0), x.get('signatures')))
+    # Locally, where the raw fetch is present, every motion the search found
+    # must have been read and placed, so that a new one is not silently dropped.
+    raw_motions = DATA / 'raw' / 'uk_motions.json'
+    if raw_motions.exists():
+        sys.path.insert(0, str(HERE))
+        import constituency as ledger
+        placed = ledger.MOTIONS_PRO | ledger.MOTIONS_AGAINST | set().union(*ledger.MOTIONS_NOT_COUNTED.values())
+        unread = [x['id'] for x in json.loads(raw_motions.read_text()) if x['id'] not in placed]
+        if unread:
+            warn('constituency', '%d early day motions on the subject are not yet placed on a side in '
+                                 'constituency.py: %s' % (len(unread), ', '.join(map(str, unread[:10]))))
 
     # The petitions. A seat's count is a number the page puts beside a named
     # member, so the counts for a petition must not add up to more than the

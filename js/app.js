@@ -1827,6 +1827,9 @@ const App = (function () {
       const value = (el) => {
         if (key === 'contrib') return -parseInt(el.dataset.contrib || '0', 10);
         if (key === 'pro') return -parseInt(el.dataset.pro || '0', 10);
+        // Net acts first, then acts on the pro-Palestinian side, the order
+        // the list is drawn in.
+        if (key === 'lean') return -(parseInt(el.dataset.lean || '0', 10) * 10000 + parseInt(el.dataset.leanPro || '0', 10));
         if (key && key.indexOf('sig') === 0) return -parseInt(el.dataset[key] || '0', 10);
         return 0;
       };

@@ -424,6 +424,60 @@ RECOGNITION_ACTS = [
     },
 ]
 
+# Early day motions on the subject since 7 October 2023, each read in full and
+# placed on one side. A motion counts as pro-Palestinian when it takes the side
+# of Palestinians or of the people campaigning for them: it asks for a
+# ceasefire, aid, evacuation or visas, an end to arms sales or settlement trade,
+# recognition, sanctions, accountability under international law, or the
+# protection of Palestinian civilians, detainees, journalists, medics or
+# protesters, or it condemns conduct against them. It counts against when it
+# asks for the reverse: no refuge for Palestinians, no boycott of Israel or of
+# goods from its settlements, or the treatment of a Palestinian solidarity
+# slogan as evidence of a hate crime. Every other motion the search returns
+# is listed below it with the reason it is not counted, so that a new motion
+# is noticed rather than silently dropped (validate.py warns on one).
+MOTIONS_PRO = {
+    61423, 61430, 61466, 61468, 61526, 61630, 61654, 61661, 61714, 61735, 61736, 61746,
+    61749, 61755, 61769, 61771, 61800, 61804, 61810, 61815, 61833, 61869, 61873, 62001,
+    62002, 62029, 62214, 62247, 62251, 62252, 62324, 62330, 62346, 62347, 62372, 62386,
+    62454, 62538, 62551, 62671, 62678, 62681, 62704, 62777, 62795, 62906, 62928, 62950,
+    62984, 63037, 63055, 63122, 63125, 63158, 63224, 63231, 63311, 63321, 63425, 63568,
+    63607, 63644, 63689, 63690, 63768, 63775, 63809, 63843, 63862, 63888, 63973, 64020,
+    64079, 64142, 64152, 64154, 64205, 64210, 64212, 64218, 64252, 64272, 64279, 64295,
+    64387, 64589, 64733, 64800, 64865, 64879, 64922, 65017, 65057, 65236, 65286, 65406,
+    65474, 65488, 65491, 65566, 65580, 65614, 65741, 65742, 65753, 65769, 65865, 65886,
+    65892, 65964, 65965, 66053, 66183, 66186, 66221, 66235, 66252, 66364, 66371, 66384,
+    66469, 66565,
+}
+MOTIONS_AGAINST = {
+    63988,  # asks the government to refuse any resettlement of Palestinians from Gaza
+    64031,  # opposes Ireland's ban on goods from Israeli settlements
+    66163,  # asks that "From the river to the sea" be treated as evidence of antisemitic hostility
+    66489,  # condemns anti-Israel demonstrations in Derry
+    66503,  # condemns the withdrawal of Israeli athletes and asks that it never recur
+}
+MOTIONS_NOT_COUNTED = {
+    'about Lebanon, Syria or Iran rather than Palestine': {
+        62537, 62539, 62575, 62927, 63886, 63979, 64816, 64833, 65329, 65440, 65451, 65616,
+        65794},
+    'about the hostages or antisemitism, without a position on Palestinians': {
+        62034, 62709, 62874, 63225, 63526, 63646, 64550, 64941},
+    'a tribute or a commemoration without a call for action': {
+        62233, 62244, 63467, 63480, 63495, 63507, 64235, 64832, 65353},
+    'on another subject, and matched only because it mentions one of the search terms': {
+        61505, 61880, 61890, 61923, 61952, 62140, 62221, 62358, 62463, 62485, 62515,
+        63154, 63432, 63964, 64314, 65227, 65383, 66207},
+}
+MOTION_URL = 'https://edm.parliament.uk/early-day-motion/%d'
+
+# A signature withdrawn by the member is not counted. One withdrawn by the House
+# is: when the Speaker named and suspended Zarah Sultana on 20 April 2026, every
+# signature she had on the order paper was withdrawn the same day, 28 of them on
+# this subject alone, and none of them was withdrawn by the member's own act.
+SUSPENSIONS = {
+    4786: ('2026-04-20', 'https://www.lbc.co.uk/article/yourparty-mp-zarah-sultana-removed-from-commons-after-branding-starmer-a-bare-fa-5HjdY2g_2/'),
+}
+
 # What is looked for in the Register of Members' Financial Interests. The
 # register has no subject index, so this list is the whole of what the ledger
 # can see: an interest recorded under a name not matched here is not in it.
@@ -742,6 +796,21 @@ def build():
                 row['seats'] = len(ranked)
         petitions.append(row)
 
+    # The early day motions that count, oldest first. `_signed` is dropped
+    # before the file is written: the page reads signatures from each member.
+    motions = []
+    for m in sorted(load_raw('uk_motions.json'), key=lambda m: (m['date'], m['id'])):
+        side = ('pro' if m['id'] in MOTIONS_PRO else
+                'against' if m['id'] in MOTIONS_AGAINST else None)
+        if not side:
+            continue
+        signed = set(m['signed']) | {mid for mid, day in m.get('withdrawn', [])
+                                     if SUSPENSIONS.get(mid, ('',))[0] == day}
+        motions.append({'id': m['id'], 'date': m['date'], 'title': m['title'], 'side': side,
+                        'sponsor': m['sponsor'], 'signatures': len(signed),
+                        'url': MOTION_URL % m['id'], '_signed': signed})
+    motions_reviewed = len(load_raw('uk_motions.json'))
+
     # The debates. A contribution belongs in the ledger if it is about the
     # subject in its own words; the debate's title is not enough, because the
     # "Middle East" statements of 2026 were mostly about Iran.
@@ -861,6 +930,21 @@ def build():
             else:
                 against += 1
         row['record'] = [pro, against]
+        # The motions the member signed, and the whole of the record put
+        # together: pro-Palestinian acts, acts against, and the number of
+        # chances the member had, which is every counted division they sat for
+        # and every counted motion tabled while they were in the House. Not
+        # signing is not an act either way: ministers and whips do not sign
+        # motions, and many members sign none at all.
+        signed = [i for i, m in enumerate(motions) if member['id'] in m['_signed']]
+        if signed:
+            row['signed'] = signed
+        chances = sum(1 for spec in DIVISIONS if spec.get('pro_side')
+                      and row['votes'][str(spec['id'])] != VOTE_AWAY)
+        chances += sum(1 for i, m in enumerate(motions)
+                       if i in signed or sat_on(member, m['date'], history))
+        signed_pro = sum(1 for i in signed if motions[i]['side'] == 'pro')
+        row['lean'] = [pro + signed_pro, against + len(signed) - signed_pro, chances]
         found = by_member_interests.get(member['id'])
         if found:
             row['interests'] = found
@@ -927,7 +1011,14 @@ def build():
             'petition_signatures': sum(p['signatures'] for p in petitions),
             'debates': len(debates),
             'members_who_spoke': sum(1 for r in rows if r.get('spoke')),
+            'motions': len(motions),
+            'motions_reviewed': motions_reviewed,
+            'motions_not_counted': {why: len(ids) for why, ids in MOTIONS_NOT_COUNTED.items()},
+            'members_who_signed': sum(1 for r in rows if r.get('signed')),
+            'suspensions': [{'name': next((r['name'] for r in rows if r['id'] == mid), ''),
+                             'date': day, 'source': src} for mid, (day, src) in SUSPENSIONS.items()],
         },
+        'motions': [{k: v for k, v in m.items() if k != '_signed'} for m in motions],
         'divisions': tallies,
         'unrecorded': UNRECORDED,
         'petitions': petitions,
