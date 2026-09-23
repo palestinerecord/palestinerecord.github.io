@@ -5,6 +5,11 @@
    ============================================================ */
 
 const Charts = (function () {
+  /* Every data file is asked for with the build number this script was loaded
+     under, for the reason given at the same constant in app.js. */
+  const BUILD = ((document.currentScript && document.currentScript.src) || '').match(/[?&]v=(\d+)/);
+  const dataUrl = (path) => (BUILD ? `${path}?v=${BUILD[1]}` : path);
+
   /* index.html?still=1 stops the two 3D charts rotating. A headless render
      dumps the page once virtual time runs out, and virtual time advances one
      animation frame at a time, so a scene that asks for frames forever costs
@@ -3216,7 +3221,7 @@ const Charts = (function () {
 
   function geoMap(name) {
     if (!geoCache[name]) {
-      geoCache[name] = fetch(`data/geo/${name}.json`)
+      geoCache[name] = fetch(dataUrl(`data/geo/${name}.json`))
         .then((res) => {
           if (!res.ok) throw new Error(`data/geo/${name}.json — HTTP ${res.status}`);
           return res.json();
@@ -3238,7 +3243,7 @@ const Charts = (function () {
 
   function dataFile(name) {
     if (!fileCache[name]) {
-      fileCache[name] = fetch(`data/${name}.json`).then((res) => {
+      fileCache[name] = fetch(dataUrl(`data/${name}.json`)).then((res) => {
         if (!res.ok) throw new Error(`data/${name}.json — HTTP ${res.status}`);
         return res.json();
       });

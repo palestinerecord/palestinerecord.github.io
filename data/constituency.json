@@ -38,6 +38,9 @@
    "ayes": 385,
    "noes": 26,
    "note": "The Order did not put Palestine Action to the House on its own. It proscribed the group in one instrument with two violent neo-Nazi organisations, so that a member who objected to treating a non-violent direct-action group as terrorist could not say so without also voting to leave the other two unproscribed. A vote here is therefore weaker evidence of a view than a vote on the ceasefire, and the ledger says so rather than counting it as though it were clean.",
+   "plain": "This made it a crime to belong to or support Palestine Action, a direct-action group that broke into and damaged sites of Elbit Systems, Israel’s largest arms maker, and RAF aircraft at Brize Norton, using the same law as for terrorist groups. Since then, people holding signs in its support have been arrested under that law. Because two violent neo-Nazi groups were banned in the same vote, voting “against” also meant voting not to ban them.",
+   "pro_side": "no",
+   "pro_reason": "A vote against treating a Palestine solidarity direct-action group as terrorist. Weaker evidence than the others, because of the two groups banned with it.",
    "source": "https://votes.parliament.uk/votes/commons/division/2078",
    "sitting": 645,
    "still_here": {
@@ -61,7 +64,10 @@
    "result": "Defeated",
    "ayes": 125,
    "noes": 293,
-   "note": "The first time the House divided on a ceasefire. Fifty-six Labour members voted for the amendment against the whip and ten of them left the front bench to do it, which is why this division, rather than the one that followed it, is the one the parties have been answering for since.",
+   "note": "The first time the House divided on a ceasefire. Fifty-six Labour members voted for the amendment against a whip to abstain, and ten Labour frontbenchers left their posts over it: four shadow ministers resigned beforehand in order to vote for it, four were sacked afterwards, and two parliamentary aides stood down. That is why this division, rather than the one taken with it, is the one the parties have been answering for since.",
+   "plain": "MPs were asked whether the United Kingdom should call for an immediate ceasefire. A vote “for” was a vote for a ceasefire. It lost by 125 to 293, so the House of Commons did not call for one.",
+   "pro_side": "aye",
+   "pro_reason": "A vote for an immediate ceasefire.",
    "source": "https://votes.parliament.uk/votes/commons/division/1666",
    "sitting": 293,
    "still_here": {
@@ -85,7 +91,10 @@
    "result": "Defeated",
    "ayes": 183,
    "noes": 290,
-   "note": "Taken on the same afternoon as the ceasefire amendment and worded to stop short of one. It is in the ledger because the pair is the point: a member could vote for pauses and against a ceasefire on the same day, and 183 did.",
+   "note": "Taken on the same afternoon as the ceasefire amendment and worded to stop short of one. It is in the ledger because the pair is the point. Of the 183 members who voted for pauses, 62 also voted for the ceasefire and 121 did not vote on it; none voted against it. The 290 against pauses were almost all Conservatives voting down an opposition amendment, not members who wanted less aid.",
+   "plain": "Labour’s alternative to a ceasefire: longer pauses in the fighting so that more aid could get in. It also lost. Because supporters of a ceasefire and opponents of one both voted for it, a vote here does not show which side a member took on the war, and this ledger does not count it either way.",
+   "pro_side": null,
+   "pro_reason": "Not counted: ceasefire supporters and opponents voted on both sides of it.",
    "source": "https://votes.parliament.uk/votes/commons/division/1665",
    "sitting": 293,
    "still_here": {
@@ -110,6 +119,9 @@
    "ayes": 282,
    "noes": 235,
    "note": "The last Commons vote on the Bill, and the one on which the Labour front bench voted against it. The Bill went to the Lords, was still in committee there when Parliament was dissolved for the 2024 election, and was lost in the wash-up; it never became law.",
+   "plain": "The final Commons vote on the same anti-boycott Bill. It passed the Commons, then ran out of time in the House of Lords before the 2024 election, so it never became law.",
+   "pro_side": "no",
+   "pro_reason": "A vote against barring public bodies from boycotting Israel and the settlements.",
    "source": "https://votes.parliament.uk/votes/commons/division/1705",
    "sitting": 293,
    "still_here": {
@@ -134,6 +146,9 @@
    "ayes": 268,
    "noes": 70,
    "note": "The Bill barred public bodies from purchasing and investment decisions influenced by political or moral disapproval of a foreign state, and its clause 3(7) named Israel, the Occupied Palestinian Territories and the occupied Golan Heights as the only places a minister could not exempt by regulation. The vote was taken straight after a reasoned amendment declining the Bill a second reading, moved from the Labour benches, fell by 212 to 272. The Bill itself then passed by 268 to 70 because most Labour members did not vote on it: the division list records 184 Labour members with no vote. On this division an absence was the party’s position rather than a member’s own choice, and is weaker evidence of a view than an absence on the others.",
+   "plain": "The Bill would have stopped councils, universities, pension funds and other public bodies from refusing, on ethical grounds, to buy from or invest in Israel or the illegal settlements. A vote “for” supported that ban on boycotts.",
+   "pro_side": "no",
+   "pro_reason": "A vote against barring public bodies from boycotting Israel and the settlements.",
    "source": "https://votes.parliament.uk/votes/commons/division/1586",
    "sitting": 288,
    "still_here": {
@@ -158,7 +173,10 @@
    "result": "Agreed",
    "ayes": 274,
    "noes": 12,
-   "note": "A backbench motion, which does not bind the government, and the government did not act on it for eleven years: the United Kingdom recognised the State of Palestine on 21 September 2025. Those opposed to the motion declined to put up tellers, so two of its supporters, Jeremy Corbyn and Mike Wood, told for the Noes so that the vote could be recorded by name at all; Corbyn said so from the floor immediately afterwards. The division list therefore names him on the side he opposed, and this ledger shows him as a teller who forced the vote rather than as a vote against. The votes API begins in 2016, so this division is read from Hansard, which lists only those who voted; a member is shown as not voting only where their own record of service puts them in the House that day.",
+   "note": "A backbench motion, which does not bind the government, and the government did not act on it for eleven years: the United Kingdom recognised the State of Palestine on 21 September 2025. Those opposed to the motion declined to put up tellers, so two of its supporters, Jeremy Corbyn and Mike Wood, told for the Noes so that the vote could be recorded by name at all; Corbyn said so from the floor immediately afterwards. The division list therefore names him on the side he opposed, and this ledger shows him as a teller who forced the vote rather than as a vote against. The Commons votes service does not carry a division this old, so it is read from Hansard, which lists only those who voted; a member is shown as not voting only where their own record of service puts them in the House that day.",
+   "plain": "MPs told the government, by a large majority, that it should recognise Palestine as a state. The vote was advice, not law, so nothing changed until the government decided to do it itself eleven years later.",
+   "pro_side": "aye",
+   "pro_reason": "A vote for recognising the State of Palestine.",
    "source": "https://hansard.parliament.uk/Commons/2014-10-13/debates/14101322000001/PalestineAndIsrael",
    "procedural_tellers": {
     "185": "Told for the Noes so that the vote could be recorded; supported the motion"
@@ -177,6 +195,7 @@
    "date": "2024-02-21",
    "title": "The SNP opposition day motion for an immediate ceasefire",
    "note": "Against the convention that only a government amendment is selected on an opposition day, the Speaker selected a Labour amendment as well. The government withdrew from the proceedings, the Labour amendment calling for an immediate humanitarian ceasefire was agreed without a division, and the motion as amended was then agreed without one, so the SNP’s own wording was never voted on and no member’s position that day is on the record. The only division was a motion to sit in private, moved in protest, which was not a vote on Gaza and is not carried here.",
+   "plain": "The House of Commons did call for an immediate humanitarian ceasefire that day, but without a recorded vote, so there is no list of who supported it.",
    "source": "https://hansard.parliament.uk/Commons/2024-02-21/debates/610A4D12-A333-4885-9D0B-0A225C35C043/CeasefireInGaza"
   }
  ],
@@ -2377,7 +2396,8 @@
     ]
    ],
    "source": "https://www.middleeasteye.net/news/poll-nearly-half-uk-believe-israel-committing-genocide-gaza-two-thirds-support-arresting",
-   "note": "Commissioned by organisations that campaign on the question, which offered more answer options than the pollster’s own series and is why the recognition figures are split three ways."
+   "note": "Commissioned by organisations that campaign on the question, which offered more answer options than the pollster’s own series and is why the recognition figures are split three ways.",
+   "plain": "More than three times as many people opposed Israel’s actions in Gaza as supported them, and two in three wanted Netanyahu arrested if he came to the UK."
   },
   {
    "published": "2025-07-29",
@@ -2401,7 +2421,8 @@
     ]
    ],
    "source": "https://yougov.com/en-gb/articles/52679-britons-support-palestinian-statehood-by-45-to-14",
-   "note": "Published the day the Prime Minister announced that the United Kingdom would recognise Palestine in September unless conditions were met."
+   "note": "Published the day the Prime Minister announced that the United Kingdom would recognise Palestine in September unless conditions were met.",
+   "plain": "Supporters of recognition outnumbered opponents by about three to one; many people had no view."
   },
   {
    "published": "2025-09-19",
@@ -2425,7 +2446,8 @@
     ]
    ],
    "source": "https://yougov.com/en-gb/articles/53016-britons-support-recognising-palestinian-statehood-by-44-to-18",
-   "note": "Taken in the week before recognition. Opposition rose by four points on July, most of it among Conservative and Reform UK voters."
+   "note": "Taken in the week before recognition. Opposition rose by four points on July, and was highest among Conservative and Reform UK voters.",
+   "plain": "Just before the government acted, supporters of recognition still outnumbered opponents by more than two to one."
   },
   {
    "published": "2026-06-05",
@@ -2457,7 +2479,8 @@
     ]
    ],
    "source": "https://labourlist.org/2026/06/palestine-labour-members-survation-polling/",
-   "note": "A poll of one party’s members, drawn from readers of a party website and weighted to the party’s own contests. It measures what the governing party’s membership wanted, not what the public did."
+   "note": "A poll of one party’s members, drawn from readers of a party website and weighted to the party’s own contests. It measures what the governing party’s membership wanted, not what the public did.",
+   "plain": "Most members of the party in government wanted it to go further than it had: nearly four in five backed a full arms embargo."
   },
   {
    "published": "2026-07-07",
@@ -2489,7 +2512,8 @@
     ]
    ],
    "source": "https://caabu.org/news/press-release/caabu-press-release-50-british-population-believe-israel-committing-genocide",
-   "note": "Among 2024 Labour voters, 67 per cent said Israel is committing genocide and 72 per cent supported a full ban on arms exports to Israel. Recorded in the report at §15.10."
+   "note": "Among 2024 Labour voters, 67 per cent said Israel is committing genocide, 62 per cent backed the settlement trade ban and 72 per cent supported suspending arms sales to Israel. Recorded in the report at §15.10.",
+   "plain": "Half of British adults said Israel is committing genocide in Gaza; fewer than one in five said it is not."
   }
  ],
  "recognition": [
@@ -2498,6 +2522,12 @@
    "title": "The United Kingdom recognises the State of Palestine",
    "note": "Announced by the Prime Minister, Keir Starmer, alongside Canada and Australia, eleven years after the Commons voted 274 to 12 for it: “Today, to revive the hope of peace for the Palestinians and Israelis, and a two state solution, the United Kingdom formally recognizes the State of Palestine.” Recognition was on the basis of the provisional 1967 borders. A decision of the government under the prerogative; the House was not asked to vote on it.",
    "source": "https://www.gov.uk/government/speeches/pm-statement-on-the-recognition-of-palestine-21-september-2025"
+  },
+  {
+   "date": "2026-01-05",
+   "title": "Full diplomatic relations: the Palestinian mission in London becomes an embassy",
+   "note": "The second step, and the one often remembered as the date. The Palestinian Mission in London became the Embassy of the State of Palestine, headed by Husam Zomlot, and the Foreign Office minister Hamish Falconer said: “We welcome the establishment of full diplomatic relations with the state of Palestine.” The United Kingdom kept its own representation as a Consulate-General in Jerusalem rather than an embassy.",
+   "source": "https://www.thenationalnews.com/news/uk/2026/01/04/palestinians-celebrate-official-upgrade-as-embassy-in-london-to-open/"
   }
  ],
  "members": [
@@ -2557,7 +2587,11 @@
      6,
      613
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4357,
@@ -2611,7 +2645,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5450,
@@ -2663,7 +2701,11 @@
      25,
      121
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5280,
@@ -2717,7 +2759,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5200,
@@ -2771,7 +2817,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5173,
@@ -2825,7 +2875,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4358,
@@ -2879,7 +2933,11 @@
     ]
    },
    "spoke": 14,
-   "contributions": 18
+   "contributions": 18,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5196,
@@ -2933,7 +2991,11 @@
     ]
    },
    "spoke": 15,
-   "contributions": 23
+   "contributions": 23,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5159,
@@ -2987,7 +3049,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 1383,
@@ -3039,7 +3105,11 @@
      5,
      629
     ]
-   }
+   },
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 5107,
@@ -3093,7 +3163,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4736,
@@ -3153,7 +3227,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5449,
@@ -3207,7 +3285,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4371,
@@ -3267,7 +3349,11 @@
     ]
    },
    "spoke": 49,
-   "contributions": 57
+   "contributions": 57,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 4874,
@@ -3319,7 +3405,11 @@
      17,
      262
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 4743,
@@ -3372,6 +3462,10 @@
      631
     ]
    },
+   "record": [
+    0,
+    2
+   ],
    "donations": [
     {
      "ref": "V0557849",
@@ -3437,7 +3531,11 @@
      17,
      263
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4356,
@@ -3489,7 +3587,11 @@
      13,
      381
     ]
-   }
+   },
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5341,
@@ -3543,7 +3645,11 @@
     ]
    },
    "spoke": 22,
-   "contributions": 26
+   "contributions": 26,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5206,
@@ -3595,7 +3701,11 @@
      15,
      340
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5328,
@@ -3647,7 +3757,11 @@
      22,
      152
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5113,
@@ -3701,7 +3815,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5180,
@@ -3755,7 +3873,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4243,
@@ -3815,7 +3937,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 10
+   "contributions": 10,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4607,
@@ -3873,7 +3999,11 @@
      7,
      569
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5049,
@@ -3925,7 +4055,11 @@
      9,
      505
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4813,
@@ -3986,6 +4120,10 @@
    },
    "spoke": 3,
    "contributions": 3,
+   "record": [
+    0,
+    4
+   ],
    "donations": [
     {
      "ref": "V0598889",
@@ -4053,7 +4191,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5105,
@@ -4105,7 +4247,11 @@
      8,
      537
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4602,
@@ -4159,7 +4305,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5179,
@@ -4213,7 +4363,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4676,
@@ -4267,7 +4421,11 @@
     ]
    },
    "spoke": 24,
-   "contributions": 41
+   "contributions": 41,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4759,
@@ -4321,7 +4479,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 5132,
@@ -4375,7 +4537,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4598,
@@ -4429,7 +4595,11 @@
     ]
    },
    "spoke": 15,
-   "contributions": 17
+   "contributions": 17,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4360,
@@ -4481,7 +4651,11 @@
      7,
      587
     ]
-   }
+   },
+   "record": [
+    0,
+    2
+   ]
   },
   {
    "id": 4823,
@@ -4533,7 +4707,11 @@
      18,
      255
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4827,
@@ -4593,7 +4771,11 @@
     ]
    },
    "spoke": 7,
-   "contributions": 7
+   "contributions": 7,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 4245,
@@ -4645,7 +4827,11 @@
      11,
      471
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4368,
@@ -4699,7 +4885,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4608,
@@ -4754,6 +4944,10 @@
    },
    "spoke": 4,
    "contributions": 8,
+   "record": [
+    0,
+    3
+   ],
    "donations": [
     {
      "ref": "V0598893",
@@ -4827,7 +5021,11 @@
     ]
    },
    "spoke": 13,
-   "contributions": 13
+   "contributions": 13,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 1482,
@@ -4881,7 +5079,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 4860,
@@ -4941,7 +5143,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5184,
@@ -4993,7 +5199,11 @@
      10,
      480
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5346,
@@ -5048,6 +5258,10 @@
    },
    "spoke": 32,
    "contributions": 33,
+   "record": [
+    0,
+    0
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -5129,7 +5343,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4603,
@@ -5189,7 +5407,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4938,
@@ -5249,7 +5471,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4747,
@@ -5309,7 +5535,11 @@
     ]
    },
    "spoke": 26,
-   "contributions": 38
+   "contributions": 38,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 1171,
@@ -5369,7 +5599,11 @@
     ]
    },
    "spoke": 9,
-   "contributions": 10
+   "contributions": 10,
+   "record": [
+    3,
+    1
+   ]
   },
   {
    "id": 3914,
@@ -5427,7 +5661,11 @@
      23,
      134
     ]
-   }
+   },
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5234,
@@ -5481,7 +5719,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5357,
@@ -5536,6 +5778,10 @@
    },
    "spoke": 31,
    "contributions": 36,
+   "record": [
+    1,
+    0
+   ],
    "interests": [
     {
      "category": "Donations and other support (including loans) for activities as an MP",
@@ -5597,7 +5843,11 @@
      25,
      112
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4370,
@@ -5657,7 +5907,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 5108,
@@ -5711,7 +5965,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5231,
@@ -5765,7 +6023,11 @@
     ]
    },
    "spoke": 27,
-   "contributions": 33
+   "contributions": 33,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 449,
@@ -5823,7 +6085,11 @@
      18,
      234
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5232,
@@ -5877,7 +6143,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5025,
@@ -5929,7 +6199,11 @@
      6,
      594
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 3928,
@@ -5989,7 +6263,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4618,
@@ -6047,7 +6325,11 @@
      16,
      288
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4139,
@@ -6103,7 +6385,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    4,
+    0
+   ]
   },
   {
    "id": 5203,
@@ -6155,7 +6441,11 @@
      12,
      410
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5053,
@@ -6207,7 +6497,11 @@
      4,
      632
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5095,
@@ -6261,7 +6555,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 3924,
@@ -6321,7 +6619,11 @@
     ]
    },
    "spoke": 18,
-   "contributions": 22
+   "contributions": 22,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5128,
@@ -6375,7 +6677,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4397,
@@ -6427,7 +6733,11 @@
      7,
      572
     ]
-   }
+   },
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 5161,
@@ -6478,6 +6788,10 @@
    },
    "spoke": 8,
    "contributions": 9,
+   "record": [
+    0,
+    1
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -6542,7 +6856,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5202,
@@ -6594,7 +6912,11 @@
      23,
      135
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5165,
@@ -6648,7 +6970,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4394,
@@ -6702,7 +7028,11 @@
     ]
    },
    "spoke": 36,
-   "contributions": 41
+   "contributions": 41,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 4391,
@@ -6756,7 +7086,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4409,
@@ -6810,7 +7144,11 @@
     ]
    },
    "spoke": 17,
-   "contributions": 20
+   "contributions": 20,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4366,
@@ -6864,7 +7202,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 54
+   "contributions": 54,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5284,
@@ -6918,7 +7260,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 1489,
@@ -6978,7 +7324,11 @@
     ]
    },
    "spoke": 11,
-   "contributions": 12
+   "contributions": 12,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 146,
@@ -7038,7 +7388,11 @@
     ]
    },
    "spoke": 7,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    3,
+    1
+   ]
   },
   {
    "id": 4389,
@@ -7092,7 +7446,11 @@
     ]
    },
    "spoke": 10,
-   "contributions": 12
+   "contributions": 12,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4613,
@@ -7144,7 +7502,11 @@
      14,
      344
     ]
-   }
+   },
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 4572,
@@ -7204,7 +7566,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5101,
@@ -7256,7 +7622,11 @@
      10,
      481
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5169,
@@ -7309,6 +7679,10 @@
      506
     ]
    },
+   "record": [
+    0,
+    0
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -7376,7 +7750,11 @@
     ]
    },
    "spoke": 9,
-   "contributions": 10
+   "contributions": 10,
+   "record": [
+    1,
+    4
+   ]
   },
   {
    "id": 5276,
@@ -7428,7 +7806,11 @@
      34,
      45
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5314,
@@ -7482,7 +7864,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5102,
@@ -7536,7 +7922,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 1491,
@@ -7590,7 +7980,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 9
+   "contributions": 9,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5010,
@@ -7644,7 +8038,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4621,
@@ -7696,7 +8094,11 @@
      27,
      85
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4444,
@@ -7748,7 +8150,11 @@
      17,
      265
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4739,
@@ -7808,7 +8214,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 5209,
@@ -7861,6 +8271,10 @@
      213
     ]
    },
+   "record": [
+    0,
+    1
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -7935,6 +8349,10 @@
      345
     ]
    },
+   "record": [
+    0,
+    1
+   ],
    "donations": [
     {
      "ref": "V0587562",
@@ -8000,7 +8418,11 @@
      11,
      447
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5058,
@@ -8052,7 +8474,11 @@
      26,
      95
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5193,
@@ -8104,7 +8530,11 @@
      12,
      414
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5135,
@@ -8158,7 +8588,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5077,
@@ -8212,7 +8646,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 7
+   "contributions": 7,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4637,
@@ -8266,7 +8704,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 10
+   "contributions": 10,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4871,
@@ -8321,6 +8763,10 @@
    },
    "spoke": 7,
    "contributions": 8,
+   "record": [
+    0,
+    1
+   ],
    "donations": [
     {
      "ref": "V0495703",
@@ -8413,6 +8859,10 @@
    },
    "spoke": 9,
    "contributions": 10,
+   "record": [
+    0,
+    1
+   ],
    "donations": [
     {
      "ref": "V0833174",
@@ -8480,7 +8930,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4040,
@@ -8538,7 +8992,11 @@
      9,
      534
     ]
-   }
+   },
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4612,
@@ -8592,7 +9050,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5295,
@@ -8646,7 +9108,11 @@
     ]
    },
    "spoke": 9,
-   "contributions": 9
+   "contributions": 9,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5208,
@@ -8700,7 +9166,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4382,
@@ -8752,7 +9222,11 @@
      62,
      4
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5034,
@@ -8806,7 +9280,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4616,
@@ -8858,7 +9336,11 @@
      50,
      9
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4425,
@@ -8916,7 +9398,11 @@
      16,
      312
     ]
-   }
+   },
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4632,
@@ -8968,7 +9454,11 @@
      16,
      313
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4264,
@@ -9022,7 +9512,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 11
+   "contributions": 11,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 5175,
@@ -9074,7 +9568,11 @@
      11,
      477
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5094,
@@ -9126,7 +9624,11 @@
      9,
      507
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5083,
@@ -9178,7 +9680,11 @@
      11,
      449
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 3948,
@@ -9230,7 +9736,11 @@
      6,
      595
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5185,
@@ -9284,7 +9794,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 3935,
@@ -9336,7 +9850,11 @@
      35,
      39
     ]
-   }
+   },
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 5303,
@@ -9388,7 +9906,11 @@
      7,
      574
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4630,
@@ -9448,7 +9970,11 @@
     ]
    },
    "spoke": 10,
-   "contributions": 10
+   "contributions": 10,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5220,
@@ -9500,7 +10026,11 @@
      12,
      416
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5090,
@@ -9554,7 +10084,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5073,
@@ -9606,7 +10140,11 @@
      28,
      76
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5344,
@@ -9658,7 +10196,11 @@
      25,
      114
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5055,
@@ -9712,7 +10254,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4918,
@@ -9766,7 +10312,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 4976,
@@ -9824,7 +10374,11 @@
      16,
      290
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5241,
@@ -9878,7 +10432,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 3952,
@@ -9932,7 +10490,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 7
+   "contributions": 7,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5335,
@@ -9986,7 +10548,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 152,
@@ -10040,7 +10606,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 5239,
@@ -10092,7 +10662,11 @@
      23,
      137
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5282,
@@ -10146,7 +10720,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 467,
@@ -10198,7 +10776,11 @@
      10,
      483
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 242,
@@ -10250,7 +10832,11 @@
      9,
      508
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5257,
@@ -10304,7 +10890,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4753,
@@ -10358,7 +10948,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5091,
@@ -10410,7 +11004,11 @@
      8,
      539
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4764,
@@ -10470,7 +11068,11 @@
     ]
    },
    "spoke": 10,
-   "contributions": 10
+   "contributions": 10,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5181,
@@ -10522,7 +11124,11 @@
      20,
      207
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5104,
@@ -10574,7 +11180,11 @@
      16,
      314
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5183,
@@ -10628,7 +11238,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5042,
@@ -10682,7 +11296,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5317,
@@ -10736,7 +11354,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5324,
@@ -10790,7 +11412,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5315,
@@ -10842,7 +11468,11 @@
      14,
      346
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 1579,
@@ -10894,7 +11524,11 @@
      18,
      235
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4779,
@@ -10947,6 +11581,10 @@
      347
     ]
    },
+   "record": [
+    1,
+    1
+   ],
    "donations": [
     {
      "ref": "V0836283",
@@ -11014,7 +11652,11 @@
     ]
    },
    "spoke": 22,
-   "contributions": 30
+   "contributions": 30,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5240,
@@ -11068,7 +11710,11 @@
     ]
    },
    "spoke": 28,
-   "contributions": 37
+   "contributions": 37,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5029,
@@ -11120,7 +11766,11 @@
      7,
      575
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5345,
@@ -11172,7 +11822,11 @@
      19,
      215
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5273,
@@ -11224,7 +11878,11 @@
      15,
      322
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5119,
@@ -11276,7 +11934,11 @@
      24,
      125
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4503,
@@ -11330,7 +11992,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 4631,
@@ -11388,7 +12054,11 @@
      31,
      58
     ]
-   }
+   },
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5309,
@@ -11440,7 +12110,11 @@
      13,
      408
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5272,
@@ -11492,7 +12166,11 @@
      12,
      417
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5037,
@@ -11544,7 +12222,11 @@
      9,
      509
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5223,
@@ -11596,7 +12278,11 @@
      11,
      451
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4032,
@@ -11657,6 +12343,10 @@
    },
    "spoke": 1,
    "contributions": 2,
+   "record": [
+    0,
+    4
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -11716,7 +12406,11 @@
      24,
      126
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5176,
@@ -11770,7 +12464,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5342,
@@ -11822,7 +12520,11 @@
      20,
      192
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5268,
@@ -11877,6 +12579,10 @@
    },
    "spoke": 33,
    "contributions": 45,
+   "record": [
+    0,
+    0
+   ],
    "interests": [
     {
      "category": "Donations and other support (including loans) for activities as an MP",
@@ -11938,7 +12644,11 @@
      23,
      138
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5178,
@@ -11990,7 +12700,11 @@
      9,
      510
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5233,
@@ -12042,7 +12756,11 @@
      3,
      638
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 1510,
@@ -12097,6 +12815,10 @@
    },
    "spoke": 2,
    "contributions": 49,
+   "record": [
+    1,
+    0
+   ],
    "statements": [
     133
    ]
@@ -12153,7 +12875,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5266,
@@ -12207,7 +12933,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4407,
@@ -12266,6 +12996,10 @@
      292
     ]
    },
+   "record": [
+    0,
+    3
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -12327,7 +13061,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4510,
@@ -12381,7 +13119,11 @@
     ]
    },
    "spoke": 21,
-   "contributions": 26
+   "contributions": 26,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5358,
@@ -12435,7 +13177,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 1512,
@@ -12489,7 +13235,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 4403,
@@ -12549,7 +13299,11 @@
     ]
    },
    "spoke": 18,
-   "contributions": 22
+   "contributions": 22,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5275,
@@ -12603,7 +13357,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5141,
@@ -12655,7 +13413,11 @@
      17,
      266
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4521,
@@ -12709,7 +13471,11 @@
     ]
    },
    "spoke": 17,
-   "contributions": 17
+   "contributions": 17,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 4511,
@@ -12763,7 +13529,11 @@
     ]
    },
    "spoke": 14,
-   "contributions": 15
+   "contributions": 15,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4797,
@@ -12817,7 +13587,11 @@
     ]
    },
    "spoke": 7,
-   "contributions": 7
+   "contributions": 7,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5075,
@@ -12871,7 +13645,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 7
+   "contributions": 7,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5267,
@@ -12925,7 +13703,11 @@
     ]
    },
    "spoke": 11,
-   "contributions": 11
+   "contributions": 11,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 3973,
@@ -12975,7 +13757,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    5,
+    0
+   ]
   },
   {
    "id": 1593,
@@ -13030,6 +13816,10 @@
    },
    "spoke": 24,
    "contributions": 27,
+   "record": [
+    0,
+    3
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -13109,7 +13899,11 @@
      20,
      193
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 163,
@@ -13163,7 +13957,11 @@
     ]
    },
    "spoke": 8,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 3969,
@@ -13217,7 +14015,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5079,
@@ -13269,7 +14071,11 @@
      11,
      474
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 1409,
@@ -13323,7 +14129,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5076,
@@ -13377,7 +14187,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4806,
@@ -13429,7 +14243,11 @@
      17,
      267
     ]
-   }
+   },
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 5123,
@@ -13484,6 +14302,10 @@
    },
    "spoke": 9,
    "contributions": 9,
+   "record": [
+    0,
+    1
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -13552,6 +14374,10 @@
    },
    "spoke": 3,
    "contributions": 3,
+   "record": [
+    0,
+    4
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -13613,7 +14439,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5086,
@@ -13665,7 +14495,11 @@
      25,
      117
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5040,
@@ -13717,7 +14551,11 @@
      19,
      216
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5245,
@@ -13771,7 +14609,11 @@
     ]
    },
    "spoke": 8,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5188,
@@ -13825,7 +14667,11 @@
     ]
    },
    "spoke": 12,
-   "contributions": 14
+   "contributions": 14,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 3966,
@@ -13877,7 +14723,11 @@
      53,
      7
     ]
-   }
+   },
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 5212,
@@ -13931,7 +14781,11 @@
     ]
    },
    "spoke": 8,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4634,
@@ -13985,7 +14839,11 @@
     ]
    },
    "spoke": 11,
-   "contributions": 11
+   "contributions": 11,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4515,
@@ -14045,7 +14903,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4418,
@@ -14105,7 +14967,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 165,
@@ -14165,7 +15031,11 @@
     ]
    },
    "spoke": 13,
-   "contributions": 13
+   "contributions": 13,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 5182,
@@ -14217,7 +15087,11 @@
      26,
      98
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4822,
@@ -14271,7 +15145,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4853,
@@ -14331,7 +15209,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5336,
@@ -14385,7 +15267,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5044,
@@ -14437,7 +15323,11 @@
      7,
      576
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4820,
@@ -14491,7 +15381,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5299,
@@ -14545,7 +15439,11 @@
     ]
    },
    "spoke": 29,
-   "contributions": 37
+   "contributions": 37,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5064,
@@ -14597,7 +15495,11 @@
      29,
      68
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5347,
@@ -14649,7 +15551,11 @@
      23,
      140
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5110,
@@ -14701,7 +15607,11 @@
      15,
      338
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4475,
@@ -14762,6 +15672,10 @@
    },
    "spoke": 4,
    "contributions": 4,
+   "record": [
+    0,
+    2
+   ],
    "interests": [
     {
      "category": "Gifts, benefits and hospitality from UK sources",
@@ -14825,7 +15739,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4527,
@@ -14877,7 +15795,11 @@
      23,
      141
     ]
-   }
+   },
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 4253,
@@ -14931,7 +15853,11 @@
     ]
    },
    "spoke": 8,
-   "contributions": 9
+   "contributions": 9,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5261,
@@ -14983,7 +15909,11 @@
      6,
      610
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5306,
@@ -15037,7 +15967,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5204,
@@ -15089,7 +16023,11 @@
      39,
      25
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5067,
@@ -15143,7 +16081,11 @@
     ]
    },
    "spoke": 7,
-   "contributions": 7
+   "contributions": 7,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5323,
@@ -15195,7 +16137,11 @@
      19,
      218
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4846,
@@ -15249,7 +16195,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    4,
+    0
+   ]
   },
   {
    "id": 5286,
@@ -15304,6 +16254,10 @@
    },
    "spoke": 1,
    "contributions": 1,
+   "record": [
+    0,
+    0
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -15365,7 +16319,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 345,
@@ -15419,7 +16377,11 @@
     ]
    },
    "spoke": 17,
-   "contributions": 18
+   "contributions": 18,
+   "record": [
+    1,
+    4
+   ]
   },
   {
    "id": 5031,
@@ -15473,7 +16435,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5146,
@@ -15525,7 +16491,11 @@
      12,
      419
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5215,
@@ -15579,7 +16549,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5170,
@@ -15633,7 +16607,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5251,
@@ -15687,7 +16665,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 12
+   "contributions": 12,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5137,
@@ -15739,7 +16721,11 @@
      14,
      377
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5189,
@@ -15793,7 +16779,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5213,
@@ -15847,7 +16837,11 @@
     ]
    },
    "spoke": 8,
-   "contributions": 10
+   "contributions": 10,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5190,
@@ -15902,6 +16896,10 @@
    },
    "spoke": 24,
    "contributions": 34,
+   "record": [
+    0,
+    1
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -15968,7 +16966,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5253,
@@ -16022,7 +17024,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5349,
@@ -16076,7 +17082,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 1572,
@@ -16134,7 +17144,11 @@
      27,
      87
     ]
-   }
+   },
+   "record": [
+    0,
+    2
+   ]
   },
   {
    "id": 373,
@@ -16194,7 +17208,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    2
+   ]
   },
   {
    "id": 5311,
@@ -16246,7 +17264,11 @@
      8,
      566
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5447,
@@ -16298,7 +17320,11 @@
      21,
      171
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4008,
@@ -16352,7 +17378,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 4623,
@@ -16404,7 +17434,11 @@
      20,
      208
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4850,
@@ -16463,6 +17497,10 @@
      420
     ]
    },
+   "record": [
+    0,
+    4
+   ],
    "donations": [
     {
      "ref": "V0566320",
@@ -16530,7 +17568,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4464,
@@ -16582,7 +17624,11 @@
      6,
      596
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5158,
@@ -16634,7 +17680,11 @@
      11,
      454
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4520,
@@ -16686,7 +17736,11 @@
      27,
      88
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5313,
@@ -16738,7 +17792,11 @@
      18,
      236
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 172,
@@ -16792,7 +17850,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    4,
+    0
+   ]
   },
   {
    "id": 1524,
@@ -16846,7 +17908,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5238,
@@ -16900,7 +17966,11 @@
     ]
    },
    "spoke": 16,
-   "contributions": 17
+   "contributions": 17,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5224,
@@ -16952,7 +18022,11 @@
      11,
      455
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4803,
@@ -17013,6 +18087,10 @@
    },
    "spoke": 1,
    "contributions": 1,
+   "record": [
+    0,
+    4
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -17078,7 +18156,11 @@
      11,
      475
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 1516,
@@ -17138,7 +18220,11 @@
     ]
    },
    "spoke": 41,
-   "contributions": 49
+   "contributions": 49,
+   "record": [
+    3,
+    1
+   ]
   },
   {
    "id": 4518,
@@ -17198,7 +18284,11 @@
     ]
    },
    "spoke": 8,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4679,
@@ -17258,7 +18348,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 7
+   "contributions": 7,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5237,
@@ -17310,7 +18404,11 @@
      9,
      511
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5201,
@@ -17363,6 +18461,10 @@
      219
     ]
    },
+   "record": [
+    0,
+    0
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -17422,7 +18524,11 @@
      9,
      512
     ]
-   }
+   },
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4005,
@@ -17476,7 +18582,11 @@
     ]
    },
    "spoke": 40,
-   "contributions": 42
+   "contributions": 42,
+   "record": [
+    0,
+    5
+   ]
   },
   {
    "id": 177,
@@ -17530,7 +18640,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 5045,
@@ -17584,7 +18698,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 40,
@@ -17638,7 +18756,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5192,
@@ -17692,7 +18814,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4484,
@@ -17744,7 +18870,11 @@
      12,
      422
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 178,
@@ -17798,7 +18928,11 @@
     ]
    },
    "spoke": 32,
-   "contributions": 35
+   "contributions": 35,
+   "record": [
+    5,
+    0
+   ]
   },
   {
    "id": 5070,
@@ -17852,7 +18986,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5348,
@@ -17906,7 +19044,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5360,
@@ -17960,7 +19102,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5296,
@@ -18014,7 +19160,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 3991,
@@ -18066,7 +19216,11 @@
      19,
      220
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 87,
@@ -18126,7 +19280,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5187,
@@ -18178,7 +19336,11 @@
      15,
      325
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4441,
@@ -18233,6 +19395,10 @@
    },
    "spoke": 7,
    "contributions": 7,
+   "record": [
+    0,
+    3
+   ],
    "interests": [
     {
      "category": "Miscellaneous",
@@ -18294,7 +19460,11 @@
     ]
    },
    "spoke": 8,
-   "contributions": 10
+   "contributions": 10,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5084,
@@ -18348,7 +19518,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5115,
@@ -18403,6 +19577,10 @@
    },
    "spoke": 11,
    "contributions": 11,
+   "record": [
+    0,
+    1
+   ],
    "donations": [
     {
      "ref": "V0836303",
@@ -18498,7 +19676,11 @@
      10,
      488
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5000,
@@ -18557,7 +19739,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4942,
@@ -18617,7 +19803,11 @@
     ]
    },
    "spoke": 32,
-   "contributions": 35
+   "contributions": 35,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 4647,
@@ -18669,7 +19859,11 @@
      9,
      513
     ]
-   }
+   },
+   "record": [
+    0,
+    2
+   ]
   },
   {
    "id": 4523,
@@ -18729,7 +19923,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 40
+   "contributions": 40,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5329,
@@ -18783,7 +19981,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4046,
@@ -18835,7 +20037,11 @@
      6,
      597
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4505,
@@ -18893,7 +20099,11 @@
      60,
      5
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5289,
@@ -18947,7 +20157,11 @@
     ]
    },
    "spoke": 9,
-   "contributions": 9
+   "contributions": 9,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5089,
@@ -19002,6 +20216,10 @@
    },
    "spoke": 2,
    "contributions": 2,
+   "record": [
+    0,
+    1
+   ],
    "donations": [
     {
      "ref": "V0587560",
@@ -19069,7 +20287,11 @@
     ]
    },
    "spoke": 10,
-   "contributions": 12
+   "contributions": 12,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4504,
@@ -19122,6 +20344,10 @@
      101
     ]
    },
+   "record": [
+    0,
+    0
+   ],
    "donations": [
     {
      "ref": "V0836281",
@@ -19192,7 +20418,11 @@
     ]
    },
    "spoke": 11,
-   "contributions": 12
+   "contributions": 12,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5129,
@@ -19244,7 +20474,11 @@
      12,
      444
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5362,
@@ -19296,7 +20530,11 @@
      29,
      73
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5131,
@@ -19348,7 +20586,11 @@
      20,
      199
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5255,
@@ -19400,7 +20642,11 @@
      10,
      489
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5144,
@@ -19454,7 +20700,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 185,
@@ -19508,7 +20758,11 @@
     ]
    },
    "spoke": 60,
-   "contributions": 74
+   "contributions": 74,
+   "record": [
+    4,
+    0
+   ]
   },
   {
    "id": 1536,
@@ -19562,7 +20816,11 @@
     ]
    },
    "spoke": 24,
-   "contributions": 28
+   "contributions": 28,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4783,
@@ -19620,7 +20878,11 @@
      6,
      598
     ]
-   }
+   },
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4861,
@@ -19680,7 +20942,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 1560,
@@ -19734,7 +21000,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    2
+   ]
   },
   {
    "id": 5229,
@@ -19788,7 +21058,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5331,
@@ -19840,7 +21114,11 @@
      10,
      491
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5043,
@@ -19894,7 +21172,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 188,
@@ -19948,7 +21230,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4030,
@@ -20000,7 +21286,11 @@
      3,
      639
     ]
-   }
+   },
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 1533,
@@ -20060,7 +21350,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4645,
@@ -20120,7 +21414,11 @@
     ]
    },
    "spoke": 9,
-   "contributions": 9
+   "contributions": 9,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4384,
@@ -20180,7 +21478,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5038,
@@ -20232,7 +21534,11 @@
      14,
      353
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5125,
@@ -20284,7 +21590,11 @@
      5,
      627
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4436,
@@ -20345,6 +21655,10 @@
    },
    "spoke": 9,
    "contributions": 12,
+   "record": [
+    2,
+    0
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -20412,7 +21726,11 @@
     ]
    },
    "spoke": 16,
-   "contributions": 17
+   "contributions": 17,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4493,
@@ -20466,7 +21784,11 @@
     ]
    },
    "spoke": 44,
-   "contributions": 47
+   "contributions": 47,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 415,
@@ -20518,7 +21840,11 @@
      27,
      89
     ]
-   }
+   },
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5260,
@@ -20570,7 +21896,11 @@
      8,
      543
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 413,
@@ -20630,7 +21960,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 5166,
@@ -20685,6 +22019,10 @@
    },
    "spoke": 4,
    "contributions": 4,
+   "record": [
+    0,
+    1
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -20776,7 +22114,11 @@
      12,
      426
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5068,
@@ -20828,7 +22170,11 @@
      21,
      174
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5120,
@@ -20882,7 +22228,11 @@
     ]
    },
    "spoke": 40,
-   "contributions": 47
+   "contributions": 47,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4026,
@@ -20934,7 +22284,11 @@
      19,
      222
     ]
-   }
+   },
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4673,
@@ -20986,7 +22340,11 @@
      5,
      620
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5265,
@@ -21040,7 +22398,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4698,
@@ -21094,7 +22456,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4491,
@@ -21154,7 +22520,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4620,
@@ -21214,7 +22584,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5054,
@@ -21268,7 +22642,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5126,
@@ -21320,7 +22698,11 @@
      5,
      621
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5148,
@@ -21374,7 +22756,11 @@
     ]
    },
    "spoke": 38,
-   "contributions": 532
+   "contributions": 532,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 483,
@@ -21432,7 +22818,11 @@
      22,
      155
     ]
-   }
+   },
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4824,
@@ -21492,7 +22882,11 @@
     ]
    },
    "spoke": 24,
-   "contributions": 26
+   "contributions": 26,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4651,
@@ -21550,7 +22944,11 @@
      11,
      457
     ]
-   }
+   },
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4828,
@@ -21610,7 +23008,11 @@
     ]
    },
    "spoke": 15,
-   "contributions": 16
+   "contributions": 16,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4831,
@@ -21670,7 +23072,11 @@
     ]
    },
    "spoke": 9,
-   "contributions": 9
+   "contributions": 9,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5167,
@@ -21724,7 +23130,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 1541,
@@ -21778,7 +23188,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 632,
@@ -21832,7 +23246,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 9
+   "contributions": 9,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5259,
@@ -21886,7 +23304,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4399,
@@ -21938,7 +23360,11 @@
      12,
      427
     ]
-   }
+   },
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 5156,
@@ -21990,7 +23416,11 @@
      11,
      458
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4777,
@@ -22044,7 +23474,11 @@
     ]
    },
    "spoke": 11,
-   "contributions": 13
+   "contributions": 13,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4873,
@@ -22104,7 +23538,11 @@
     ]
    },
    "spoke": 22,
-   "contributions": 25
+   "contributions": 25,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 5287,
@@ -22158,7 +23596,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5343,
@@ -22210,7 +23652,11 @@
      17,
      269
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4018,
@@ -22268,7 +23714,11 @@
      12,
      428
     ]
-   }
+   },
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 1427,
@@ -22321,6 +23771,10 @@
      647
     ]
    },
+   "record": [
+    1,
+    0
+   ],
    "donations": [
     {
      "ref": "V0836212",
@@ -22392,7 +23846,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 4263,
@@ -22444,7 +23902,11 @@
      16,
      296
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4671,
@@ -22504,7 +23966,11 @@
     ]
    },
    "spoke": 27,
-   "contributions": 29
+   "contributions": 29,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4456,
@@ -22564,7 +24030,11 @@
     ]
    },
    "spoke": 9,
-   "contributions": 11
+   "contributions": 11,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5194,
@@ -22618,7 +24088,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5214,
@@ -22672,7 +24146,11 @@
     ]
    },
    "spoke": 10,
-   "contributions": 12
+   "contributions": 12,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4362,
@@ -22732,7 +24210,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 4818,
@@ -22792,7 +24274,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 4501,
@@ -22850,7 +24336,11 @@
      7,
      591
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5100,
@@ -22902,7 +24392,11 @@
      11,
      459
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4778,
@@ -22963,6 +24457,10 @@
    },
    "spoke": 31,
    "contributions": 31,
+   "record": [
+    0,
+    3
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -23066,7 +24564,11 @@
      6,
      600
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5256,
@@ -23120,7 +24622,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5327,
@@ -23174,7 +24680,11 @@
     ]
    },
    "spoke": 17,
-   "contributions": 18
+   "contributions": 18,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5157,
@@ -23228,7 +24738,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5330,
@@ -23280,7 +24794,11 @@
      9,
      517
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4020,
@@ -23332,7 +24850,11 @@
      16,
      299
     ]
-   }
+   },
+   "record": [
+    0,
+    2
+   ]
   },
   {
    "id": 5283,
@@ -23386,7 +24908,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5153,
@@ -23438,7 +24964,11 @@
      9,
      528
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5121,
@@ -23492,7 +25022,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5147,
@@ -23546,7 +25080,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4269,
@@ -23606,7 +25144,11 @@
     ]
    },
    "spoke": 39,
-   "contributions": 50
+   "contributions": 50,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5114,
@@ -23658,7 +25200,11 @@
      18,
      256
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5139,
@@ -23712,7 +25258,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5118,
@@ -23764,7 +25314,11 @@
      12,
      429
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 193,
@@ -23816,7 +25370,11 @@
      17,
      270
     ]
-   }
+   },
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 5291,
@@ -23870,7 +25428,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5221,
@@ -23924,7 +25486,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 11
+   "contributions": 11,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5277,
@@ -23978,7 +25544,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5225,
@@ -24032,7 +25602,11 @@
     ]
    },
    "spoke": 9,
-   "contributions": 15
+   "contributions": 15,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 3909,
@@ -24086,7 +25660,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5246,
@@ -24140,7 +25718,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4480,
@@ -24198,7 +25780,11 @@
      9,
      535
     ]
-   }
+   },
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 54,
@@ -24252,7 +25838,11 @@
     ]
    },
    "spoke": 23,
-   "contributions": 23
+   "contributions": 23,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 55,
@@ -24306,7 +25896,11 @@
     ]
    },
    "spoke": 17,
-   "contributions": 19
+   "contributions": 19,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 4320,
@@ -24360,7 +25954,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 5310,
@@ -24414,7 +26012,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4124,
@@ -24474,7 +26076,11 @@
     ]
    },
    "spoke": 19,
-   "contributions": 23
+   "contributions": 23,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4126,
@@ -24534,7 +26140,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4125,
@@ -24588,7 +26198,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5168,
@@ -24642,7 +26256,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 1548,
@@ -24696,7 +26314,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4716,
@@ -24756,7 +26378,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5292,
@@ -24808,7 +26434,11 @@
      5,
      628
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5111,
@@ -24862,7 +26492,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5080,
@@ -24914,7 +26548,11 @@
      5,
      623
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 410,
@@ -24974,7 +26612,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5356,
@@ -25028,7 +26670,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5145,
@@ -25082,7 +26728,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 3912,
@@ -25142,7 +26792,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    1,
+    2
+   ]
   },
   {
    "id": 5350,
@@ -25196,7 +26850,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 249,
@@ -25256,7 +26914,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5138,
@@ -25308,7 +26970,11 @@
      8,
      548
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4494,
@@ -25363,6 +27029,10 @@
    },
    "spoke": 7,
    "contributions": 7,
+   "record": [
+    0,
+    2
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -25424,7 +27094,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5112,
@@ -25479,6 +27153,10 @@
    },
    "spoke": 5,
    "contributions": 8,
+   "record": [
+    0,
+    1
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -25564,7 +27242,11 @@
      14,
      355
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5258,
@@ -25618,7 +27300,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4765,
@@ -25672,7 +27358,11 @@
     ]
    },
    "spoke": 7,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5263,
@@ -25724,7 +27414,11 @@
      12,
      431
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5244,
@@ -25778,7 +27472,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 221,
@@ -25830,7 +27528,11 @@
      16,
      301
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5249,
@@ -25884,7 +27586,11 @@
     ]
    },
    "spoke": 36,
-   "contributions": 37
+   "contributions": 37,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5164,
@@ -25938,7 +27644,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5218,
@@ -25992,7 +27702,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4934,
@@ -26044,7 +27758,11 @@
      17,
      271
     ]
-   }
+   },
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5312,
@@ -26096,7 +27814,11 @@
      17,
      272
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5065,
@@ -26148,7 +27870,11 @@
      2,
      648
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5308,
@@ -26200,7 +27926,11 @@
      14,
      356
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4597,
@@ -26260,7 +27990,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 7
+   "contributions": 7,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4495,
@@ -26314,7 +28048,11 @@
     ]
    },
    "spoke": 49,
-   "contributions": 49
+   "contributions": 49,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5149,
@@ -26366,7 +28104,11 @@
      14,
      358
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4787,
@@ -26418,7 +28160,11 @@
      10,
      493
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5333,
@@ -26470,7 +28216,11 @@
      12,
      432
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5316,
@@ -26523,6 +28273,10 @@
      602
     ]
    },
+   "record": [
+    0,
+    1
+   ],
    "donations": [
     {
      "ref": "V0836294",
@@ -26590,7 +28344,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 7
+   "contributions": 7,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4500,
@@ -26644,7 +28402,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4869,
@@ -26698,7 +28460,11 @@
     ]
    },
    "spoke": 11,
-   "contributions": 14
+   "contributions": 14,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 4641,
@@ -26758,7 +28524,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4029,
@@ -26812,7 +28582,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5036,
@@ -26864,7 +28638,11 @@
      11,
      460
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4932,
@@ -26917,6 +28695,10 @@
      396
     ]
    },
+   "record": [
+    0,
+    4
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -26992,7 +28774,11 @@
     ]
    },
    "spoke": 34,
-   "contributions": 35
+   "contributions": 35,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4569,
@@ -27052,7 +28838,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 1442,
@@ -27106,7 +28896,11 @@
     ]
    },
    "spoke": 15,
-   "contributions": 15
+   "contributions": 15,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 4798,
@@ -27159,6 +28953,10 @@
      359
     ]
    },
+   "record": [
+    0,
+    4
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -27244,7 +29042,11 @@
      16,
      302
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4657,
@@ -27298,7 +29100,11 @@
     ]
    },
    "spoke": 10,
-   "contributions": 164
+   "contributions": 164,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4656,
@@ -27353,6 +29159,10 @@
    },
    "spoke": 25,
    "contributions": 31,
+   "record": [
+    3,
+    0
+   ],
    "interests": [
     {
      "category": "Miscellaneous",
@@ -27426,7 +29236,11 @@
      13,
      409
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5063,
@@ -27480,7 +29294,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5099,
@@ -27532,7 +29350,11 @@
      18,
      242
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5264,
@@ -27584,7 +29406,11 @@
      12,
      435
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5098,
@@ -27636,7 +29462,11 @@
      8,
      550
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5124,
@@ -27690,7 +29520,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 1440,
@@ -27748,7 +29582,11 @@
      23,
      151
     ]
-   }
+   },
+   "record": [
+    4,
+    0
+   ]
   },
   {
    "id": 5243,
@@ -27802,7 +29640,11 @@
     ]
    },
    "spoke": 16,
-   "contributions": 17
+   "contributions": 17,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5174,
@@ -27854,7 +29696,11 @@
      4,
      634
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4682,
@@ -27914,7 +29760,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 420,
@@ -27974,7 +29824,11 @@
     ]
    },
    "spoke": 8,
-   "contributions": 105
+   "contributions": 105,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4849,
@@ -28029,6 +29883,10 @@
    },
    "spoke": 2,
    "contributions": 2,
+   "record": [
+    1,
+    1
+   ],
    "donations": [
     {
      "ref": "V0836288",
@@ -28096,7 +29954,11 @@
     ]
    },
    "spoke": 7,
-   "contributions": 9
+   "contributions": 9,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4790,
@@ -28150,7 +30012,11 @@
     ]
    },
    "spoke": 30,
-   "contributions": 36
+   "contributions": 36,
+   "record": [
+    4,
+    0
+   ]
   },
   {
    "id": 5294,
@@ -28202,7 +30068,11 @@
      18,
      243
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4653,
@@ -28255,6 +30125,10 @@
      360
     ]
    },
+   "record": [
+    1,
+    1
+   ],
    "donations": [
     {
      "ref": "V0836270",
@@ -28320,7 +30194,11 @@
      17,
      274
     ]
-   }
+   },
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4788,
@@ -28374,7 +30252,11 @@
     ]
    },
    "spoke": 11,
-   "contributions": 14
+   "contributions": 14,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5305,
@@ -28426,7 +30308,11 @@
      28,
      81
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 400,
@@ -28486,7 +30372,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 1444,
@@ -28540,7 +30430,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 4654,
@@ -28598,7 +30492,11 @@
      36,
      38
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5337,
@@ -28650,7 +30548,11 @@
      17,
      275
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4449,
@@ -28702,7 +30604,11 @@
      7,
      582
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5109,
@@ -28754,7 +30660,11 @@
      8,
      552
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5297,
@@ -28806,7 +30716,11 @@
      14,
      361
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 1446,
@@ -28866,7 +30780,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5228,
@@ -28918,7 +30836,11 @@
      9,
      519
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4591,
@@ -28972,7 +30894,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 4483,
@@ -29032,7 +30958,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 131
+   "contributions": 131,
+   "record": [
+    0,
+    2
+   ]
   },
   {
    "id": 5071,
@@ -29086,7 +31016,11 @@
     ]
    },
    "spoke": 33,
-   "contributions": 37
+   "contributions": 37,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5298,
@@ -29138,7 +31072,11 @@
      10,
      494
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 1447,
@@ -29192,7 +31130,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4048,
@@ -29244,7 +31186,11 @@
      15,
      332
     ]
-   }
+   },
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 5134,
@@ -29296,7 +31242,11 @@
      13,
      398
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5082,
@@ -29348,7 +31298,11 @@
      6,
      604
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4267,
@@ -29402,7 +31356,11 @@
     ]
    },
    "spoke": 18,
-   "contributions": 19
+   "contributions": 19,
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5127,
@@ -29456,7 +31414,11 @@
     ]
    },
    "spoke": 13,
-   "contributions": 13
+   "contributions": 13,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4872,
@@ -29510,7 +31472,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5403,
@@ -29562,7 +31528,11 @@
      8,
      553
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4785,
@@ -29616,7 +31586,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5047,
@@ -29670,7 +31644,11 @@
     ]
    },
    "spoke": 7,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4998,
@@ -29729,7 +31707,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4805,
@@ -29789,7 +31771,11 @@
     ]
    },
    "spoke": 12,
-   "contributions": 12
+   "contributions": 12,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4396,
@@ -29847,7 +31833,11 @@
      6,
      605
     ]
-   }
+   },
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4051,
@@ -29901,7 +31891,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 5254,
@@ -29955,7 +31949,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4056,
@@ -30007,7 +32005,11 @@
      11,
      462
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4061,
@@ -30059,7 +32061,11 @@
      18,
      245
     ]
-   }
+   },
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4993,
@@ -30116,7 +32122,11 @@
      10,
      495
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4780,
@@ -30168,7 +32178,11 @@
      18,
      246
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 4571,
@@ -30228,7 +32242,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5142,
@@ -30282,7 +32300,11 @@
     ]
    },
    "spoke": 19,
-   "contributions": 20
+   "contributions": 20,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4864,
@@ -30342,7 +32364,11 @@
     ]
    },
    "spoke": 8,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4473,
@@ -30402,7 +32428,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 394,
@@ -30456,7 +32486,11 @@
     ]
    },
    "spoke": 17,
-   "contributions": 19
+   "contributions": 19,
+   "record": [
+    3,
+    1
+   ]
   },
   {
    "id": 5226,
@@ -30508,7 +32542,11 @@
      7,
      584
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5281,
@@ -30562,7 +32600,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5171,
@@ -30614,7 +32656,11 @@
      18,
      247
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5300,
@@ -30667,6 +32713,10 @@
      399
     ]
    },
+   "record": [
+    0,
+    1
+   ],
    "donations": [
     {
      "ref": "V0832988",
@@ -30732,7 +32782,11 @@
      28,
      82
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 4592,
@@ -30784,7 +32838,11 @@
      3,
      643
     ]
-   }
+   },
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 4638,
@@ -30838,7 +32896,11 @@
     ]
    },
    "spoke": 34,
-   "contributions": 36
+   "contributions": 36,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5059,
@@ -30890,7 +32952,11 @@
      9,
      520
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5197,
@@ -30942,7 +33008,11 @@
      16,
      303
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5319,
@@ -30996,7 +33066,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5361,
@@ -31048,7 +33122,11 @@
      7,
      585
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5078,
@@ -31102,7 +33180,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5352,
@@ -31156,7 +33238,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 12
+   "contributions": 12,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5150,
@@ -31210,7 +33296,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5216,
@@ -31264,7 +33354,11 @@
     ]
    },
    "spoke": 13,
-   "contributions": 15
+   "contributions": 15,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5217,
@@ -31316,7 +33410,11 @@
      26,
      107
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4636,
@@ -31368,7 +33466,11 @@
      9,
      529
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5353,
@@ -31420,7 +33522,11 @@
      23,
      145
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 350,
@@ -31472,7 +33578,11 @@
      6,
      606
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 4439,
@@ -31524,7 +33634,11 @@
      11,
      463
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5205,
@@ -31576,7 +33690,11 @@
      14,
      364
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5355,
@@ -31629,6 +33747,10 @@
      437
     ]
    },
+   "record": [
+    0,
+    0
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -31704,7 +33826,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4277,
@@ -31758,7 +33884,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    3,
+    1
+   ]
   },
   {
    "id": 4742,
@@ -31816,7 +33946,11 @@
      14,
      365
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 4519,
@@ -31868,7 +34002,11 @@
      18,
      248
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5301,
@@ -31921,6 +34059,10 @@
      277
     ]
    },
+   "record": [
+    0,
+    1
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -31994,7 +34136,11 @@
      24,
      129
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5338,
@@ -32046,7 +34192,11 @@
      11,
      464
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 1466,
@@ -32100,7 +34250,11 @@
     ]
    },
    "spoke": 20,
-   "contributions": 20
+   "contributions": 20,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5270,
@@ -32154,7 +34308,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5271,
@@ -32206,7 +34364,11 @@
      16,
      304
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5097,
@@ -32260,7 +34422,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5106,
@@ -32314,7 +34480,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4610,
@@ -32374,7 +34544,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5052,
@@ -32426,7 +34600,11 @@
      27,
      93
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5332,
@@ -32481,6 +34659,10 @@
    },
    "spoke": 1,
    "contributions": 1,
+   "record": [
+    0,
+    1
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -32562,7 +34744,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4769,
@@ -32614,7 +34800,11 @@
      21,
      180
     ]
-   }
+   },
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 5302,
@@ -32668,7 +34858,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5092,
@@ -32720,7 +34914,11 @@
      8,
      556
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4457,
@@ -32774,7 +34972,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 227,
@@ -32828,7 +35030,11 @@
     ]
    },
    "spoke": 20,
-   "contributions": 22
+   "contributions": 22,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5096,
@@ -32880,7 +35086,11 @@
      19,
      225
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5290,
@@ -32932,7 +35142,11 @@
      11,
      465
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4110,
@@ -32984,7 +35198,11 @@
      12,
      438
     ]
-   }
+   },
+   "record": [
+    0,
+    2
+   ]
   },
   {
    "id": 4119,
@@ -33036,7 +35254,11 @@
      16,
      305
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5051,
@@ -33090,7 +35312,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5155,
@@ -33144,7 +35370,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4811,
@@ -33198,7 +35428,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5116,
@@ -33250,7 +35484,11 @@
      9,
      522
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4844,
@@ -33309,6 +35547,10 @@
      523
     ]
    },
+   "record": [
+    0,
+    2
+   ],
    "donations": [
     {
      "ref": "V0598865",
@@ -33376,7 +35618,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5151,
@@ -33430,7 +35676,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5334,
@@ -33484,7 +35734,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4108,
@@ -33542,7 +35796,11 @@
      9,
      525
     ]
-   }
+   },
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 5293,
@@ -33597,6 +35855,10 @@
    },
    "spoke": 3,
    "contributions": 3,
+   "record": [
+    0,
+    1
+   ],
    "donations": [
     {
      "ref": "V0832983",
@@ -33665,6 +35927,10 @@
    },
    "spoke": 58,
    "contributions": 65,
+   "record": [
+    0,
+    5
+   ],
    "donations": [
     {
      "ref": "V0576345",
@@ -33732,7 +35998,11 @@
     ]
    },
    "spoke": 19,
-   "contributions": 21
+   "contributions": 21,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5122,
@@ -33786,7 +36056,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4268,
@@ -33844,7 +36118,11 @@
      28,
      83
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4979,
@@ -33898,7 +36176,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5030,
@@ -33953,6 +36235,10 @@
    },
    "spoke": 5,
    "contributions": 14,
+   "record": [
+    0,
+    0
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -34012,7 +36298,11 @@
      21,
      181
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5028,
@@ -34066,7 +36356,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5288,
@@ -34120,7 +36414,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4460,
@@ -34178,7 +36476,11 @@
      19,
      226
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 1211,
@@ -34232,7 +36534,11 @@
     ]
    },
    "spoke": 38,
-   "contributions": 453
+   "contributions": 453,
+   "record": [
+    0,
+    2
+   ]
   },
   {
    "id": 5103,
@@ -34286,7 +36592,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5069,
@@ -34338,7 +36648,11 @@
      19,
      233
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5035,
@@ -34392,7 +36706,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4038,
@@ -34444,7 +36762,11 @@
      15,
      334
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5001,
@@ -34496,7 +36818,11 @@
      9,
      526
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4084,
@@ -34548,7 +36874,11 @@
      16,
      307
     ]
-   }
+   },
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 5250,
@@ -34602,7 +36932,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5041,
@@ -34654,7 +36988,11 @@
      8,
      558
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5354,
@@ -34708,7 +37046,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 1576,
@@ -34762,7 +37104,11 @@
     ]
    },
    "spoke": 22,
-   "contributions": 22
+   "contributions": 22,
+   "record": [
+    0,
+    2
+   ]
   },
   {
    "id": 4474,
@@ -34814,7 +37160,11 @@
      17,
      278
     ]
-   }
+   },
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 5140,
@@ -34868,7 +37218,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5056,
@@ -34920,7 +37274,11 @@
      6,
      609
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5048,
@@ -34972,7 +37330,11 @@
      8,
      559
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5252,
@@ -35024,7 +37386,11 @@
      27,
      94
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4462,
@@ -35084,7 +37450,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 4573,
@@ -35138,7 +37508,11 @@
     ]
    },
    "spoke": 9,
-   "contributions": 10
+   "contributions": 10,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 5066,
@@ -35192,7 +37566,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4479,
@@ -35244,7 +37622,11 @@
      3,
      645
     ]
-   }
+   },
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 1508,
@@ -35302,7 +37684,11 @@
      19,
      228
     ]
-   }
+   },
+   "record": [
+    0,
+    2
+   ]
   },
   {
    "id": 206,
@@ -35357,6 +37743,10 @@
    },
    "spoke": 38,
    "contributions": 355,
+   "record": [
+    1,
+    0
+   ],
    "statements": [
     78
    ]
@@ -35413,7 +37803,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5219,
@@ -35467,7 +37861,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 6
+   "contributions": 6,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4776,
@@ -35522,6 +37920,10 @@
    },
    "spoke": 10,
    "contributions": 10,
+   "record": [
+    3,
+    0
+   ],
    "donations": [
     {
      "ref": "V0562093",
@@ -35589,7 +37991,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4857,
@@ -35643,7 +38049,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5339,
@@ -35697,7 +38107,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5039,
@@ -35749,7 +38163,11 @@
      18,
      259
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4870,
@@ -35809,7 +38227,11 @@
     ]
    },
    "spoke": 25,
-   "contributions": 27
+   "contributions": 27,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 4943,
@@ -35867,7 +38289,11 @@
      11,
      466
     ]
-   }
+   },
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 491,
@@ -35919,7 +38345,11 @@
      11,
      467
     ]
-   }
+   },
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4076,
@@ -35977,7 +38407,11 @@
      19,
      229
     ]
-   }
+   },
+   "record": [
+    3,
+    0
+   ]
   },
   {
    "id": 4088,
@@ -36031,7 +38465,11 @@
     ]
    },
    "spoke": 34,
-   "contributions": 35
+   "contributions": 35,
+   "record": [
+    3,
+    1
+   ]
   },
   {
    "id": 4799,
@@ -36085,7 +38523,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5154,
@@ -36137,7 +38579,11 @@
      19,
      230
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4617,
@@ -36192,6 +38638,10 @@
    },
    "spoke": 18,
    "contributions": 20,
+   "record": [
+    1,
+    1
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -36259,7 +38709,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5130,
@@ -36313,7 +38767,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5320,
@@ -36367,7 +38825,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5285,
@@ -36420,6 +38882,10 @@
      371
     ]
    },
+   "record": [
+    0,
+    1
+   ],
    "donations": [
     {
      "ref": "V0587599",
@@ -36485,7 +38951,11 @@
      10,
      500
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4089,
@@ -36537,7 +39007,11 @@
      38,
      30
     ]
-   }
+   },
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5061,
@@ -36589,7 +39063,11 @@
      29,
      72
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4601,
@@ -36642,6 +39120,10 @@
      258
     ]
    },
+   "record": [
+    0,
+    4
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -36703,7 +39185,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5326,
@@ -36757,7 +39243,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5057,
@@ -36811,7 +39301,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5211,
@@ -36865,7 +39359,11 @@
     ]
    },
    "spoke": 7,
-   "contributions": 10
+   "contributions": 10,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4981,
@@ -36917,7 +39415,11 @@
      12,
      440
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5062,
@@ -36971,7 +39473,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4697,
@@ -37023,7 +39529,11 @@
      8,
      563
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4107,
@@ -37077,7 +39587,11 @@
     ]
    },
    "spoke": 5,
-   "contributions": 5
+   "contributions": 5,
+   "record": [
+    0,
+    4
+   ]
   },
   {
    "id": 1591,
@@ -37132,6 +39646,10 @@
    },
    "spoke": 7,
    "contributions": 7,
+   "record": [
+    2,
+    0
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -37193,7 +39711,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 3997,
@@ -37253,7 +39775,11 @@
     ]
    },
    "spoke": 12,
-   "contributions": 12
+   "contributions": 12,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5033,
@@ -37305,7 +39831,11 @@
      9,
      527
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 429,
@@ -37363,7 +39893,11 @@
      10,
      501
     ]
-   }
+   },
+   "record": [
+    2,
+    1
+   ]
   },
   {
    "id": 4082,
@@ -37417,7 +39951,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 17
+   "contributions": 17,
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 5321,
@@ -37471,7 +40009,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5304,
@@ -37525,7 +40067,11 @@
     ]
    },
    "spoke": 4,
-   "contributions": 4
+   "contributions": 4,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5340,
@@ -37580,6 +40126,10 @@
    },
    "spoke": 3,
    "contributions": 4,
+   "record": [
+    0,
+    1
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -37642,6 +40192,10 @@
    },
    "spoke": 7,
    "contributions": 8,
+   "record": [
+    0,
+    1
+   ],
    "donations": [
     {
      "ref": "V0836293",
@@ -37710,6 +40264,10 @@
    },
    "spoke": 28,
    "contributions": 32,
+   "record": [
+    0,
+    3
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -37771,7 +40329,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5322,
@@ -37825,7 +40387,11 @@
     ]
    },
    "spoke": 6,
-   "contributions": 8
+   "contributions": 8,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5207,
@@ -37879,7 +40445,11 @@
     ]
    },
    "spoke": 3,
-   "contributions": 3
+   "contributions": 3,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5152,
@@ -37931,7 +40501,11 @@
      7,
      586
     ]
-   }
+   },
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 1587,
@@ -37983,7 +40557,11 @@
      5,
      626
     ]
-   }
+   },
+   "record": [
+    1,
+    0
+   ]
   },
   {
    "id": 5230,
@@ -38037,7 +40615,11 @@
     ]
    },
    "spoke": 17,
-   "contributions": 23
+   "contributions": 23,
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5087,
@@ -38089,7 +40671,11 @@
      11,
      470
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5242,
@@ -38141,7 +40727,11 @@
      15,
      336
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5307,
@@ -38193,7 +40783,11 @@
      13,
      405
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 5046,
@@ -38245,7 +40839,11 @@
      8,
      567
     ]
-   }
+   },
+   "record": [
+    0,
+    1
+   ]
   },
   {
    "id": 4077,
@@ -38297,7 +40895,11 @@
      14,
      372
     ]
-   }
+   },
+   "record": [
+    1,
+    1
+   ]
   },
   {
    "id": 4074,
@@ -38349,7 +40951,11 @@
      12,
      443
     ]
-   }
+   },
+   "record": [
+    0,
+    3
+   ]
   },
   {
    "id": 4316,
@@ -38401,7 +41007,11 @@
      17,
      282
     ]
-   }
+   },
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5191,
@@ -38455,7 +41065,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 5085,
@@ -38509,7 +41123,11 @@
     ]
    },
    "spoke": 2,
-   "contributions": 2
+   "contributions": 2,
+   "record": [
+    0,
+    0
+   ]
   },
   {
    "id": 4471,
@@ -38563,7 +41181,11 @@
     ]
    },
    "spoke": 37,
-   "contributions": 43
+   "contributions": 43,
+   "record": [
+    2,
+    0
+   ]
   },
   {
    "id": 5199,
@@ -38617,7 +41239,11 @@
     ]
    },
    "spoke": 1,
-   "contributions": 1
+   "contributions": 1,
+   "record": [
+    0,
+    1
+   ]
   }
  ],
  "seats": {

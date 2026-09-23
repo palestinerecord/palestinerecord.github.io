@@ -608,12 +608,14 @@ def stamp_share_tags(base, figures):
 def sitemap(base, urls, lastmod):
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for url, priority in urls:
+    # <changefreq> and <priority> are left out: Google documents that it ignores
+    # both, and the protocol makes them optional. <lastmod> is kept, because
+    # Google does use it, and it is the date the published data was generated,
+    # which is when the figures on every page last changed.
+    for url, _priority in urls:
         lines += ['  <url>',
                   '    <loc>%s</loc>' % saxutils.escape(url),
                   '    <lastmod>%s</lastmod>' % lastmod,
-                  '    <changefreq>weekly</changefreq>',
-                  '    <priority>%.1f</priority>' % priority,
                   '  </url>']
     lines.append('</urlset>')
     body = '\n'.join(lines) + '\n'
@@ -637,6 +639,21 @@ def sitemap(base, urls, lastmod):
     # route that does not involve any of it.
     (ROOT / 'sitemap.txt').write_text(
         '\n'.join(url for url, _priority in urls) + '\n', encoding='utf-8')
+    # And a sitemap index at a fourth address. Search Console held all three
+    # of the above at "Couldn't fetch" from their first submission on 21
+    # September 2026, while the same files validated against the sitemaps.org
+    # schema and returned 200 to a Googlebot user agent - the state Google's own
+    # advice says a renamed file can clear. An index is also a different
+    # document type from the three it points at, so it is read by a different
+    # path through Google's sitemap processor.
+    (ROOT / 'sitemap_index.xml').write_text('\n'.join([
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        '  <sitemap>',
+        '    <loc>%ssitemap.xml</loc>' % base,
+        '    <lastmod>%s</lastmod>' % lastmod,
+        '  </sitemap>',
+        '</sitemapindex>']) + '\n', encoding='utf-8')
     return len(urls)
 
 

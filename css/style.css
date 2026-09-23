@@ -2107,6 +2107,31 @@ tr.struck td { text-decoration: line-through; color: var(--red); }
 .mp-vote.v-not-a-member { color: var(--muted); opacity: .6; }
 .mp-flag { font-size: 11px; color: var(--accent); white-space: nowrap; }
 .mp-flag.spoke { color: var(--blue); }
+.mp-flag.rec-always { color: var(--green); }
+.mp-flag.rec-never { color: var(--red); }
+.mp-flag.rec-mixed { color: var(--text-2); }
+#mp-votes .chip em { font-style: normal; }
+.mp-chiphead {
+  font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  font-weight: 600; margin: 4px 0 6px;
+}
+.mp-record-note { margin: -2px 0 14px; max-width: 900px; }
+.mp-plain {
+  margin: 0 0 12px; padding: 10px 14px; border-radius: 8px;
+  background: var(--accent-soft); border: 1px solid rgba(217, 164, 65, .3);
+}
+.mp-plain b { display: block; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+.mp-plain p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--text); }
+.mp-side { font-size: 13.5px; line-height: 1.6; color: var(--text-2); margin: 0 0 10px; }
+.mp-sidemark { font-size: 11px; }
+.mp-sidemark.pro { color: var(--green); }
+.mp-sidemark.con { color: var(--red); }
+.mp-poll-plain { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--text); }
+.mp-glossary { margin: 0 0 14px; }
+.mp-glossary > summary { cursor: pointer; font-size: 13.5px; color: var(--text-2); padding: 4px 0; }
+.mp-glossary dl { display: grid; grid-template-columns: minmax(0, 220px) 1fr; gap: 8px 18px; margin: 10px 0 0; }
+.mp-glossary dt { font-size: 13.5px; font-weight: 600; color: var(--text); }
+.mp-glossary dd { margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--text-2); }
 .mp-flags { display: flex; flex-wrap: wrap; gap: 4px 12px; justify-content: flex-end; }
 .mp-vote.v-forced { color: var(--accent); border-color: rgba(217, 164, 65, .45); }
 
@@ -2214,6 +2239,8 @@ tr.struck td { text-decoration: line-through; color: var(--red); }
   .mp-entry > summary { padding: 11px 14px; }
   .mp-cell { display: grid; grid-template-columns: 92px 1fr; gap: 8px; align-items: center; }
   .mp-voterow { grid-template-columns: 1fr; gap: 4px; }
+  .mp-glossary dl { grid-template-columns: 1fr; gap: 2px; }
+  .mp-glossary dd { margin-bottom: 8px; }
   .mp-voterow .mp-vote { justify-self: start; }
   .mp-poll-row { grid-template-columns: 1fr 44px; }
   .mp-poll-bar { grid-column: 1 / -1; grid-row: 2; }

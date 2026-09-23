@@ -23,14 +23,18 @@
                    so a hit is a hit on exactly the right bytes.
 
    The shell cache is versioned and the old ones are deleted on
-   activation. The data cache is not versioned: a new build of the app
-   is no reason to throw away the record it reads.
+   activation. The data cache is not versioned, but the page asks for
+   data/x.json?v=N, N being its own build, so a new build of the app is
+   never handed a copy fetched for an older one: that is what broke the
+   constituency page for returning readers the day its data gained fields.
+   One copy of each file is kept, and an older build's copy is served only
+   when there is no network.
 
    Escape hatch: load the site with ?nosw=1 and index.html unregisters
    this worker and empties every cache it made.
    ============================================================ */
 
-const VERSION = 'v128';
+const VERSION = 'v129';
 const SHELL = 'record-shell-' + VERSION;
 const DATA = 'record-data';
 const MINE = /^record-(shell|data)/;
@@ -42,15 +46,15 @@ const MINE = /^record-(shell|data)/;
 const SHELL_FILES = [
   './',
   './index.html',
-  './css/style.css?v=128',
-  './js/charts.js?v=128',
-  './js/share.js?v=128',
-  './js/views.js?v=128',
-  './js/app.js?v=128',
-  './js/scene.js?v=128',
+  './css/style.css?v=129',
+  './js/charts.js?v=129',
+  './js/share.js?v=129',
+  './js/views.js?v=129',
+  './js/app.js?v=129',
+  './js/scene.js?v=129',
   './manifest.webmanifest',
-  './assets/flag-palestine.svg?v=128',
-  './assets/favicon.svg?v=128',
+  './assets/flag-palestine.svg?v=129',
+  './assets/favicon.svg?v=129',
   './assets/icon-192.png',
   './assets/icon-512.png',
 ];
@@ -116,9 +120,20 @@ async function networkFirst(request) {
    after a four-second wait, and the revalidation closes the gap anyway. */
 async function staleWhileRevalidate(request) {
   const cache = await caches.open(DATA);
+  // The page asks for data/x.json?v=N, N being the build it was loaded
+  // under, so the exact match is only ever a copy fetched for this build. A
+  // copy from an older build is never served while the network is there: the
+  // page that asks for it may expect fields that copy does not have.
   const cached = await cache.match(request);
-  const network = fetch(request).then((response) => {
-    if (response && response.ok) cache.put(request, response.clone());
+  const network = fetch(request).then(async (response) => {
+    if (response && response.ok) {
+      await cache.put(request, response.clone());
+      // One copy per file: drop the ones stored under earlier builds.
+      const path = new URL(request.url).pathname;
+      for (const key of await cache.keys()) {
+        if (new URL(key.url).pathname === path && key.url !== request.url) await cache.delete(key);
+      }
+    }
     return response;
   }).catch(() => null);
   if (cached) {
@@ -128,6 +143,10 @@ async function staleWhileRevalidate(request) {
   }
   const response = await network;
   if (response) return response;
+  // Offline, and nothing stored for this build: an older build's copy is
+  // better than no record at all.
+  const older = await cache.match(request, { ignoreSearch: true });
+  if (older) return older;
   throw new Error('offline and uncached: ' + request.url);
 }
 

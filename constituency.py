@@ -71,9 +71,15 @@ DIVISIONS = [
         'ayes': 125,
         'noes': 293,
         'note': 'The first time the House divided on a ceasefire. Fifty-six Labour members voted for '
-                'the amendment against the whip and ten of them left the front bench to do it, which '
-                'is why this division, rather than the one that followed it, is the one the parties '
-                'have been answering for since.',
+                'the amendment against a whip to abstain, and ten Labour frontbenchers left their posts '
+                'over it: four shadow ministers resigned beforehand in order to vote for it, four were '
+                'sacked afterwards, and two parliamentary aides stood down. That is why this division, '
+                'rather than the one taken with it, is the one the parties have been answering for since.',
+        'plain': 'MPs were asked whether the United Kingdom should call for an immediate ceasefire. A vote '
+                 '\u201cfor\u201d was a vote for a ceasefire. It lost by 125 to 293, so the House of '
+                 'Commons did not call for one.',
+        'pro_side': 'aye',
+        'pro_reason': 'A vote for an immediate ceasefire.',
         'source': 'https://votes.parliament.uk/votes/commons/division/1666',
     },
     {
@@ -94,8 +100,16 @@ DIVISIONS = [
         'ayes': 183,
         'noes': 290,
         'note': 'Taken on the same afternoon as the ceasefire amendment and worded to stop short of '
-                'one. It is in the ledger because the pair is the point: a member could vote for '
-                'pauses and against a ceasefire on the same day, and 183 did.',
+                'one. It is in the ledger because the pair is the point. Of the 183 members who voted '
+                'for pauses, 62 also voted for the ceasefire and 121 did not vote on it; none voted '
+                'against it. The 290 against pauses were almost all Conservatives voting down an '
+                'opposition amendment, not members who wanted less aid.',
+        'plain': 'Labour\u2019s alternative to a ceasefire: longer pauses in the fighting so that more aid '
+                 'could get in. It also lost. Because supporters of a ceasefire and opponents of one both '
+                 'voted for it, a vote here does not show which side a member took on the war, and this '
+                 'ledger does not count it either way.',
+        'pro_side': None,
+        'pro_reason': 'Not counted: ceasefire supporters and opponents voted on both sides of it.',
         'source': 'https://votes.parliament.uk/votes/commons/division/1665',
     },
     {
@@ -120,6 +134,15 @@ DIVISIONS = [
                 'say so without also voting to leave the other two unproscribed. A vote here is '
                 'therefore weaker evidence of a view than a vote on the ceasefire, and the ledger '
                 'says so rather than counting it as though it were clean.',
+        'plain': 'This made it a crime to belong to or support Palestine Action, a direct-action group '
+                 'that broke into and damaged sites of Elbit Systems, Israel\u2019s largest arms maker, and '
+                 'RAF aircraft at Brize Norton, using the same law as for terrorist groups. Since then, '
+                 'people holding signs in its support have been arrested under that law. Because two '
+                 'violent neo-Nazi groups were banned in the same vote, voting \u201cagainst\u201d also meant '
+                 'voting not to ban them.',
+        'pro_side': 'no',
+        'pro_reason': 'A vote against treating a Palestine solidarity direct-action group as terrorist. '
+                      'Weaker evidence than the others, because of the two groups banned with it.',
         'source': 'https://votes.parliament.uk/votes/commons/division/2078',
     },
     {
@@ -147,9 +170,14 @@ DIVISIONS = [
                 'could be recorded by name at all; Corbyn said so from the floor immediately '
                 'afterwards. The division list therefore names him on the side he opposed, and this '
                 'ledger shows him as a teller who forced the vote rather than as a vote against. '
-                'The votes API begins in 2016, so this division is read from Hansard, which lists '
-                'only those who voted; a member is shown as not voting only where their own record '
-                'of service puts them in the House that day.',
+                'The Commons votes service does not carry a division this old, so it is read from '
+                'Hansard, which lists only those who voted; a member is shown as not voting only where '
+                'their own record of service puts them in the House that day.',
+        'plain': 'MPs told the government, by a large majority, that it should recognise Palestine as a '
+                 'state. The vote was advice, not law, so nothing changed until the government decided '
+                 'to do it itself eleven years later.',
+        'pro_side': 'aye',
+        'pro_reason': 'A vote for recognising the State of Palestine.',
         'source': 'https://hansard.parliament.uk/Commons/2014-10-13/debates/14101322000001/PalestineAndIsrael',
         # Members who told for a side they did not hold, on the record, so that
         # a division could take place. Keyed by member id.
@@ -182,6 +210,11 @@ DIVISIONS = [
                 'Labour members with no vote. On this division an absence was the party\u2019s '
                 'position rather than a member\u2019s own choice, and is weaker evidence of a view '
                 'than an absence on the others.',
+        'plain': 'The Bill would have stopped councils, universities, pension funds and other public bodies '
+                 'from refusing, on ethical grounds, to buy from or invest in Israel or the illegal '
+                 'settlements. A vote \u201cfor\u201d supported that ban on boycotts.',
+        'pro_side': 'no',
+        'pro_reason': 'A vote against barring public bodies from boycotting Israel and the settlements.',
         'source': 'https://votes.parliament.uk/votes/commons/division/1586',
     },
     {
@@ -204,6 +237,10 @@ DIVISIONS = [
                 'against it. The Bill went to the Lords, was still in committee there when Parliament '
                 'was dissolved for the 2024 election, and was lost in the wash-up; it never became '
                 'law.',
+        'plain': 'The final Commons vote on the same anti-boycott Bill. It passed the Commons, then ran '
+                 'out of time in the House of Lords before the 2024 election, so it never became law.',
+        'pro_side': 'no',
+        'pro_reason': 'A vote against barring public bodies from boycotting Israel and the settlements.',
         'source': 'https://votes.parliament.uk/votes/commons/division/1705',
     },
 ]
@@ -225,6 +262,8 @@ UNRECORDED = [
                 'then agreed without one, so the SNP\u2019s own wording was never voted on and no '
                 'member\u2019s position that day is on the record. The only division was a motion to '
                 'sit in private, moved in protest, which was not a vote on Gaza and is not carried here.',
+        'plain': 'The House of Commons did call for an immediate humanitarian ceasefire that day, but '
+                 'without a recorded vote, so there is no list of who supported it.',
         'source': 'https://hansard.parliament.uk/Commons/2024-02-21/debates/610A4D12-A333-4885-9D0B-0A225C35C043/CeasefireInGaza',
     },
 ]
@@ -276,6 +315,8 @@ POLLS = [
         'note': 'Commissioned by organisations that campaign on the question, which offered more answer '
                 'options than the pollster\u2019s own series and is why the recognition figures are '
                 'split three ways.',
+        'plain': 'More than three times as many people opposed Israel\u2019s actions in Gaza as supported '
+                 'them, and two in three wanted Netanyahu arrested if he came to the UK.',
     },
     {
         'published': '2025-07-29',
@@ -292,6 +333,8 @@ POLLS = [
         'source': 'https://yougov.com/en-gb/articles/52679-britons-support-palestinian-statehood-by-45-to-14',
         'note': 'Published the day the Prime Minister announced that the United Kingdom would '
                 'recognise Palestine in September unless conditions were met.',
+        'plain': 'Supporters of recognition outnumbered opponents by about three to one; many people had '
+                 'no view.',
     },
     {
         'published': '2025-09-19',
@@ -306,8 +349,10 @@ POLLS = [
             ['Unsure', 37],
         ],
         'source': 'https://yougov.com/en-gb/articles/53016-britons-support-recognising-palestinian-statehood-by-44-to-18',
-        'note': 'Taken in the week before recognition. Opposition rose by four points on July, most '
-                'of it among Conservative and Reform UK voters.',
+        'note': 'Taken in the week before recognition. Opposition rose by four points on July, and '
+                'was highest among Conservative and Reform UK voters.',
+        'plain': 'Just before the government acted, supporters of recognition still outnumbered '
+                 'opponents by more than two to one.',
     },
     {
         'published': '2026-06-05',
@@ -327,6 +372,8 @@ POLLS = [
         'note': 'A poll of one party\u2019s members, drawn from readers of a party website and '
                 'weighted to the party\u2019s own contests. It measures what the governing party\u2019s '
                 'membership wanted, not what the public did.',
+        'plain': 'Most members of the party in government wanted it to go further than it had: nearly '
+                 'four in five backed a full arms embargo.',
     },
     {
         'published': '2026-07-07',
@@ -343,8 +390,11 @@ POLLS = [
             ['Support a ban on trade with the settlements', 48],
         ],
         'source': 'https://caabu.org/news/press-release/caabu-press-release-50-british-population-believe-israel-committing-genocide',
-        'note': 'Among 2024 Labour voters, 67 per cent said Israel is committing genocide and 72 per cent '
-                'supported a full ban on arms exports to Israel. Recorded in the report at \u00a715.10.',
+        'note': 'Among 2024 Labour voters, 67 per cent said Israel is committing genocide, 62 per cent '
+                'backed the settlement trade ban and 72 per cent supported suspending arms sales to Israel. '
+                'Recorded in the report at \u00a715.10.',
+        'plain': 'Half of British adults said Israel is committing genocide in Gaza; fewer than one in '
+                 'five said it is not.',
     },
 ]
 
@@ -361,6 +411,16 @@ RECOGNITION_ACTS = [
                 'provisional 1967 borders. A decision of the government under the prerogative; the '
                 'House was not asked to vote on it.',
         'source': 'https://www.gov.uk/government/speeches/pm-statement-on-the-recognition-of-palestine-21-september-2025',
+    },
+    {
+        'date': '2026-01-05',
+        'title': 'Full diplomatic relations: the Palestinian mission in London becomes an embassy',
+        'note': 'The second step, and the one often remembered as the date. The Palestinian Mission in '
+                'London became the Embassy of the State of Palestine, headed by Husam Zomlot, and the '
+                'Foreign Office minister Hamish Falconer said: \u201cWe welcome the establishment of full '
+                'diplomatic relations with the state of Palestine.\u201d The United Kingdom kept its own '
+                'representation as a Consulate-General in Jerusalem rather than an embassy.',
+        'source': 'https://www.thenationalnews.com/news/uk/2026/01/04/palestinians-celebrate-official-upgrade-as-embassy-in-london-to-open/',
     },
 ]
 
@@ -785,6 +845,22 @@ def build():
         if spoke.get(member['id']):
             row['spoke'] = len(spoke[member['id']])
             row['contributions'] = sum(n for _i, n, _x in spoke[member['id']])
+        # How often the member took the side each division's `pro_side` names,
+        # counting only the votes they actually cast. A teller counts with the
+        # side they told for; a member who told for the other side only so that
+        # a vote could be held counts with the side they held.
+        pro = against = 0
+        for spec in DIVISIONS:
+            side = spec.get('pro_side')
+            cast = row['votes'][str(spec['id'])]
+            if not side or cast in (VOTE_ABSENT, VOTE_AWAY):
+                continue
+            took = side if cast == VOTE_FORCED else cast.replace('-teller', '')
+            if took == side:
+                pro += 1
+            else:
+                against += 1
+        row['record'] = [pro, against]
         found = by_member_interests.get(member['id'])
         if found:
             row['interests'] = found

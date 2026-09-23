@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=128" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=129" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=128" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=129" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -3262,6 +3262,27 @@ const Views = (function () {
     return out;
   }
 
+  const cap = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
+
+  /* Where a member stands across the divisions that have a pro-Palestinian
+     side, from the tally constituency.py computed: every vote on that side,
+     none of them, some of each, or no counted vote cast at all. */
+  function mpRecordKind(m) {
+    const [pro, against] = m.record || [0, 0];
+    if (!pro && !against) return 'none';
+    if (!against) return 'always';
+    if (!pro) return 'never';
+    return 'mixed';
+  }
+
+  const RECORD_CHIPS = [
+    ['all', 'Everyone'],
+    ['always', 'Pro-Palestinian on every counted vote'],
+    ['mixed', 'Mixed'],
+    ['never', 'Never on the pro-Palestinian side'],
+    ['none', 'No counted vote cast'],
+  ];
+
   const VOTE_CHIPS = [
     ['all', 'However they voted'],
     ['aye', 'Voted for'],
@@ -3271,10 +3292,19 @@ const Views = (function () {
     ['forced', 'Told to force the vote'],
   ];
 
+  /* The two vote chips say what the vote meant rather than "for" and
+     "against", so that choosing one does not require knowing how the question
+     was worded: "Against an immediate ceasefire", not "Voted against". */
+  function mpVoteLabels(C, id) {
+    const d = C.divisions.find((x) => String(x.id) === String(id)) || {};
+    return { aye: cap(d.aye_means) || 'Voted for', no: cap(d.no_means) || 'Voted against' };
+  }
+
   function mpVoteChips(C, id) {
     const counts = mpVoteCounts(C, id);
+    const labels = mpVoteLabels(C, id);
     return VOTE_CHIPS.map((v, i) => `<button class="chip ${i === 0 ? 'active' : ''}" data-vote="${v[0]}"${
-      v[0] === 'forced' && !counts.forced ? ' hidden' : ''}>${v[1]}<span>${fmt(counts[v[0]])}</span></button>`).join('');
+      v[0] === 'forced' && !counts.forced ? ' hidden' : ''}><em>${esc(labels[v[0]] || v[1])}</em><span>${fmt(counts[v[0]])}</span></button>`).join('');
   }
 
   function mpDivisionCard(d) {
@@ -3293,6 +3323,10 @@ const Views = (function () {
         <span class="mp-count no"><b>${fmt(d.noes)}</b> against</span>
         <span class="mp-result">${esc(d.result)}</span>
       </div>
+      ${d.plain ? `<div class="mp-plain"><b>In plain terms</b><p>${esc(d.plain)}</p></div>` : ''}
+      <p class="mp-side">${d.pro_side
+        ? `<b>The pro-Palestinian side:</b> a vote <b>${d.pro_side === 'aye' ? 'for' : 'against'}</b>. ${esc(d.pro_reason || '')}`
+        : `<b>Not counted in the pro-Palestinian filter.</b> ${esc(d.pro_reason || '')}`}</p>
       <p class="chart-note">${esc(d.note)}</p>
       <p class="mp-div-now">Of the ${fmt(d.sitting)} members who sat in that division and still hold a seat:
         <b>${fmt(still.aye || 0)}</b> voted for it, <b>${fmt(still.no || 0)}</b> against,
@@ -3309,6 +3343,10 @@ const Views = (function () {
       return `<span class="mp-cell" data-div="${esc(d.id)}"${String(d.id) === shown ? '' : ' hidden'} title="${esc(d.title)}"><b>${esc(d.short)}</b>${mpVote(cast)}</span>`;
     }).join('');
     const flags = [];
+    const [pro, against] = m.record || [0, 0];
+    if (pro + against) {
+      flags.push(`<span class="mp-flag rec rec-${mpRecordKind(m)}" title="Votes cast on the divisions that have a pro-Palestinian side">${fmt(pro)} of ${fmt(pro + against)} ${pro + against === 1 ? 'vote' : 'votes'} pro-Palestinian</span>`);
+    }
     if (m.spoke) flags.push(`<span class="mp-flag spoke">Spoke in ${fmt(m.spoke)} ${m.spoke === 1 ? 'debate' : 'debates'}</span>`);
     if (extra) flags.push(`<span class="mp-flag">${extra} register ${extra === 1 ? 'entry' : 'entries'}</span>`);
     const summary = `<div class="mp-who">
@@ -3363,6 +3401,7 @@ const Views = (function () {
     const sigs = m.signatures ? Object.keys(m.signatures).map((k) => `data-sig${k}="${m.signatures[k][0]}"`).join(' ') : '';
     return `<details class="mp-entry" id="seat-${esc(m.slug)}" data-party="${esc(m.abbr || m.party)}"
         data-extra="${extra}" data-spoke="${m.spoke || 0}" data-contrib="${m.contributions || 0}" data-order="${index}"
+        data-record="${mpRecordKind(m)}" data-pro="${(m.record || [0])[0]}"
         data-text="${esc(text)}" ${sigs}
         ${divisions.map((d) => `data-v${esc(d.id)}="${esc((m.votes[String(d.id)] || '').replace('-teller', ''))}"`).join(' ')}>
       <summary>${summary}</summary>
@@ -3384,8 +3423,11 @@ const Views = (function () {
       <div class="mp-allvotes">${divisions.map((d) => {
         const cast = m.votes[String(d.id)];
         const why = cast === 'forced-teller' && d.procedural_tellers ? d.procedural_tellers[String(m.id)] : '';
+        const kind = cast === 'forced-teller' ? d.pro_side : (cast || '').replace('-teller', '');
+        const side = !d.pro_side || !['aye', 'no'].includes(kind) ? ''
+          : `<span class="mp-sidemark ${kind === d.pro_side ? 'pro' : 'con'}">${kind === d.pro_side ? 'The pro-Palestinian side' : 'Not the pro-Palestinian side'}</span>`;
         return `<div class="mp-voterow">
-          <span class="mp-voterow-what"><b>${esc(d.title)}</b><span>${esc(longDay(d.date))}</span>${why ? `<span>${esc(why)}</span>` : ''}</span>
+          <span class="mp-voterow-what"><b>${esc(d.title)}</b><span>${esc(longDay(d.date))}</span>${why ? `<span>${esc(why)}</span>` : ''}${side}</span>
           ${mpVote(cast)}
         </div>`;
       }).join('')}</div></div>`);
@@ -3589,6 +3631,7 @@ const Views = (function () {
   function mpPoll(poll) {
     return `<div class="card mp-poll">
       <div class="mp-meta">${esc(poll.pollster)} for ${esc(poll.commissioner)} · fieldwork ${esc(poll.fieldwork)} · ${esc(poll.population)}${poll.sample ? `, ${fmt(poll.sample)} asked` : ''}</div>
+      ${poll.plain ? `<p class="mp-poll-plain">${esc(poll.plain)}</p>` : ''}
       ${poll.findings.map(([label, pct]) => `<div class="mp-poll-row">
         <span class="mp-poll-label">${esc(label)}</span>
         <span class="mp-poll-bar"><span style="width:${Math.max(1, pct)}%"></span></span>
@@ -3611,6 +3654,10 @@ const Views = (function () {
         .map((p) => `<button class="chip" data-party="${esc(p)}">${esc(p)}<span>${parties[p]}</span></button>`)).join('');
     const divisionOptions = divisions.map((d) => `<option value="${esc(d.id)}"${String(d.id) === shown ? ' selected' : ''}>${
       esc(longDay(d.date))} — ${esc(d.title)}</option>`).join('');
+    const recordCounts = { all: C.members.length, always: 0, mixed: 0, never: 0, none: 0 };
+    C.members.forEach((m) => { recordCounts[mpRecordKind(m)]++; });
+    const recordChips = RECORD_CHIPS.map((v, i) => `<button class="chip ${i === 0 ? 'active' : ''}" data-record="${v[0]}">${v[1]}<span>${fmt(recordCounts[v[0]])}</span></button>`).join('');
+    const counted = divisions.filter((d) => d.pro_side);
     const spokeCount = C.members.filter((m) => m.spoke).length;
     const registerCount = C.members.filter((m) => (m.interests || []).length + (m.donations || []).length).length;
     const alsoChips = [
@@ -3621,6 +3668,7 @@ const Views = (function () {
     ].map((v, i) => `<button class="chip ${i === 0 ? 'active' : ''}" data-also="${v[0]}">${v[1]}<span>${fmt(v[2])}</span></button>`).join('');
     const bySeat = C.petitions.filter((p) => p.by_seat);
     const sortOptions = [`<option value="order">Constituency, A to Z</option>`,
+      `<option value="pro">Most votes on the pro-Palestinian side</option>`,
       `<option value="contrib">Most contributions to debates</option>`]
       .concat(bySeat.map((p) => `<option value="sig${p.id}">Signatures: ${esc(p.action.length > 70 ? p.action.slice(0, 68) + '…' : p.action)}</option>`)).join('');
     const topics = [...new Set(divisions.map((d) => d.topic))];
@@ -3636,7 +3684,7 @@ const Views = (function () {
 
     const stats = [
       { value: M.members, label: 'Seats in the House of Commons', note: 'each with the member who holds it and how they voted' },
-      { value: M.divisions, label: 'Divisions on Palestine', note: 'every recorded vote the House has taken on the subject that this ledger could identify, from 2014' },
+      { value: M.divisions, label: 'Recorded votes on Palestine', note: 'from the 2014 recognition motion to the 2025 proscription; four report-stage amendments to the 2023 anti-boycott Bill are not carried, because their wording could not be confirmed' },
       { value: M.members_who_spoke, label: 'Members who spoke about it', note: `in ${fmt(M.debates)} Commons and Westminster Hall debates since 7 October 2023` },
       { value: M.petition_signatures, label: 'Petition signatures', note: `across the ${fmt(M.petitions)} petitions on the subject that reached a response or a debate` },
       { value: M.members_with_interest, label: 'Members with a registered interest', note: 'a visit, a gift or a role disclosed under the rules and matched by the search terms below' },
@@ -3674,6 +3722,7 @@ const Views = (function () {
         <div class="grid" id="mp-div-cards">${divisions.map(mpDivisionCard).join('')}</div>
         ${(C.unrecorded || []).map((u) => `<div class="card mp-unrecorded">
           <div class="mp-div-head"><h3>${esc(u.title)}</h3><span class="mp-div-date">${esc(longDay(u.date))}</span></div>
+          ${u.plain ? `<div class="mp-plain"><b>In plain terms</b><p>${esc(u.plain)}</p></div>` : ''}
           <p class="chart-note"><b>No division list exists.</b> ${esc(u.note)}</p>
           <a class="led-ref" href="${esc(u.source)}" target="_blank" rel="noopener noreferrer">The debate in Hansard</a>
         </div>`).join('')}
@@ -3687,25 +3736,45 @@ const Views = (function () {
           <label class="mp-control"><span>Order</span>
             <select id="mp-sort">${sortOptions}</select></label>
         </div>
+        <div class="mp-chiphead">How they voted on the division chosen above</div>
         <div class="chips" id="mp-votes">${mpVoteChips(C, shown)}</div>
+        <div class="mp-chiphead">Across every vote with a pro-Palestinian side</div>
+        <div class="chips" id="mp-record">${recordChips}</div>
+        <p class="chart-note mp-record-note">Counted over the ${fmt(counted.length)} votes that have a clear pro-Palestinian side —
+          ${counted.map((d) => `${esc(d.short.toLowerCase())} (${d.pro_side === 'aye' ? 'for' : 'against'})`).join(', ')} — and only the votes each member actually cast.
+          The humanitarian-pauses vote is left out because people on both sides of the war voted for it.
+          Members elected in 2024 have had one counted vote, the proscription of Palestine Action, which is the weakest evidence of the five
+          because two neo-Nazi groups were banned in the same vote; each row says how many votes its count rests on.</p>
+        <div class="mp-chiphead">Anything else</div>
         <div class="chips" id="mp-also">${alsoChips}</div>
         <div class="chips" id="mp-parties">${partyChips}</div>
         <div class="tl-controls">
           <input type="search" id="mp-search" placeholder="Search a member or a constituency…" autocomplete="off">
           <span class="small muted" id="mp-count">${M.members} seats</span>
         </div>
+        <details class="mp-glossary">
+          <summary>What the labels mean</summary>
+          <dl>
+            <dt>Voted for / voted against</dt><dd>The member walked through that lobby. The chip says what the vote meant, because “for” an amendment and “for” a Bill can mean opposite things.</dd>
+            <dt>Did not vote</dt><dd>The member held a seat that day and is not on either list. That can be a deliberate abstention, a party instruction to abstain, illness or being elsewhere; the record does not say which.</dd>
+            <dt>Not yet elected</dt><dd>The member was not an MP on the day, so they could not vote. This is never counted against anyone.</dd>
+            <dt>Teller</dt><dd>One of the two members who count the votes for a side. Tellers do not vote themselves, but they are on the side they count for.</dd>
+            <dt>Teller, to force the vote</dt><dd>In 2014 the opponents of recognition refused to provide tellers, which would have stopped the vote being recorded. Jeremy Corbyn counted for them anyway so that everyone’s vote went on the record; he supported recognition.</dd>
+            <dt>“N of N votes pro-Palestinian”</dt><dd>Of the votes with a pro-Palestinian side that this member actually cast, how many were on that side.</dd>
+          </dl>
+        </details>
         <div class="led-list" id="mp-list">
           ${C.members.map((m, i) => mpRow(m, divisions, i, shown)).join('')}
         </div>
       </section>
 
       <section class="section">
-        ${head('Recognition', 'Eleven years from the vote to the act', 'The House voted to recognise the State of Palestine in October 2014. Petitions for it were debated in 2021 and 2024, a petition against it was answered in 2025, and the government recognised Palestine in September 2025 without a vote. The sequence is set out here from the records themselves.')}
+        ${head('Recognition', 'Eleven years from the vote to the act', 'MPs voted for recognition in October 2014, but a vote like that is advice to the government, not law. Petitions for it were debated in 2021 and 2024, a petition against it was answered in 2025, and the government recognised Palestine on 21 September 2025 without asking MPs to vote. Full diplomatic relations, with a Palestinian embassy in London, followed on 5 January 2026. The sequence is set out here from the records themselves.')}
         ${mpRecognition(C)}
       </section>
 
       <section class="section">
-        ${head('Petitions', `${fmt(M.petitions)} petitions, ${fmt(M.petition_signatures)} signatures`, `Every petition to Parliament on the subject that reached ten thousand signatures, when the government must answer it, or was debated, from either direction. A petition is carried whatever it asks for; the ledger does not choose between them. ${fmt(petitionDebates)} of the debates below were held because a petition passed a hundred thousand signatures. For petitions of this Parliament the signatures are counted seat by seat, and the list above can be ranked by any of them.`)}
+        ${head('Petitions', `${fmt(M.petitions)} petitions, ${fmt(M.petition_signatures)} signatures`, `How a petition works: at 10,000 signatures the government has to reply in writing, and at 100,000 MPs consider holding a debate on it. A petition debate ends without a vote, so it cannot change the law by itself; what it does is put the question on the record and make ministers answer it in public. This is every petition to Parliament on the subject that reached ten thousand signatures or was debated, from either direction. A petition is carried whatever it asks for; the ledger does not choose between them. ${fmt(petitionDebates)} of the debates below were held because a petition passed a hundred thousand signatures. For petitions of this Parliament the signatures are counted seat by seat, and the list above can be ranked by any of them.`)}
         <div class="chips" id="mp-pet-topics">${petChips}</div>
         <div class="grid c2" id="mp-pet-cards">${C.petitions.map((p) => mpPetitionCard(p, maxSig)).join('')}</div>
       </section>
@@ -3728,7 +3797,7 @@ const Views = (function () {
       </section>
 
       <section class="section">
-        ${head('The polls', 'What the public and the governing party’s members said', 'Published polls on recognition, arms and the characterisation of the conduct. Each carries its pollster, who commissioned it, and the population asked, because a poll of one party’s members and a poll of the adult population measure different things.')}
+        ${head('The polls', 'What the public and the governing party’s members said', 'What people told pollsters, each with a one-line summary. Published polls on recognition, arms and the characterisation of the conduct. Each carries its pollster, who commissioned it, and the population asked, because a poll of one party’s members and a poll of the adult population measure different things.')}
         <div class="grid c2">${C.polls.map(mpPoll).join('')}</div>
       </section>
 
@@ -4676,6 +4745,7 @@ const Views = (function () {
     constituencySaid(id, speeches, all) { return mpSaid(id, speeches, all); },
     constituencyRowExtra(index) { return mpRowExtra(index); },
     constituencyVoteCounts(id) { return mpVoteCounts(D.constituency, id); },
+    constituencyVoteLabels(id) { return mpVoteLabels(D.constituency, id); },
     challengeUrl(entry, kind) { return fxChallengeUrl(D.falsify, entry, kind); },
   };
 })();

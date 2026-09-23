@@ -804,12 +804,16 @@ def check_constituency(files):
         fail('constituency', 'the ledger carries no divisions, so every member row is empty')
     for d in divisions:
         for key in ('date', 'title', 'short', 'in_sentence', 'formal', 'moved', 'question',
-                    'aye_means', 'no_means', 'result', 'ayes', 'noes', 'note', 'source'):
+                    'aye_means', 'no_means', 'result', 'ayes', 'noes', 'note', 'source', 'plain',
+                    'pro_reason'):
             if not str(d.get(key, '')).strip():
                 fail('constituency', 'division %s carries no %s, and the page states each of them'
                      % (d.get('id'), key))
         if not str(d.get('source', '')).startswith('http'):
             fail('constituency', 'division %s does not link to its own division list' % d.get('id'))
+        if d.get('pro_side') not in ('aye', 'no', None):
+            fail('constituency', 'division %s names "%s" as its pro-Palestinian side, which is not a side'
+                 % (d.get('id'), d.get('pro_side')))
         # The published counts are what identify the division, since the House
         # titles it by procedural form and the title is curated here.
         cast = [m['votes'].get(str(d['id'])) for m in members]
@@ -860,6 +864,22 @@ def check_constituency(files):
             if cast == 'not-a-member' and m.get('since') and m['since'] <= d['date']:
                 fail('constituency', '%s has sat without a break since %s but is recorded as not a '
                                      'member in the division of %s' % (m['name'], m['since'], d['date']))
+        # The pro-Palestinian tally is shown on every row and drives a filter,
+        # so it is recomputed here from the votes rather than trusted.
+        pro = against = 0
+        for d in divisions:
+            side = d.get('pro_side')
+            cast = m['votes'].get(str(d['id']))
+            if not side or cast in ('absent', 'not-a-member', None):
+                continue
+            took = side if cast == 'forced-teller' else cast.replace('-teller', '')
+            if took == side:
+                pro += 1
+            else:
+                against += 1
+        if m.get('record') != [pro, against]:
+            fail('constituency', '%s carries the tally %s but the votes give %s'
+                 % (m['name'], m.get('record'), [pro, against]))
         for i in m.get('interests', []):
             if not (i.get('summary') or '').strip():
                 fail('constituency', 'an interest against %s carries no summary' % m['name'])
@@ -934,7 +954,13 @@ def check_constituency(files):
             fail('constituency', '%d rows say the member spoke, %d members are quoted, and the file states %s'
                  % (spoke, len(speeches), meta.get('members_who_spoke')))
 
+    for act in blob.get('recognition', []):
+        if not str(act.get('source', '')).startswith('https://'):
+            fail('constituency', 'the recognition step of %s carries no source' % act.get('date'))
     for poll in blob.get('polls', []):
+        if not poll.get('plain'):
+            fail('constituency', 'the %s poll of %s has no plain-language summary'
+                 % (poll.get('pollster'), poll.get('published')))
         if not str(poll.get('source', '')).startswith('https://'):
             fail('constituency', 'the %s poll of %s carries no source' % (poll.get('pollster'), poll.get('published')))
         for label, pct in poll.get('findings', []):

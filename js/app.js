@@ -8,6 +8,17 @@
    ============================================================ */
 
 const App = (function () {
+  /* Every data file is asked for with the build number this script was loaded
+     under. The service worker serves data from its cache first, and that
+     cache outlives a deploy, so without this a returning reader got the new
+     code with the previous build's data: the first visit to the constituency
+     page after its data gained the petitions failed on "C.petitions is
+     undefined". A new build asks for URLs the cache has never seen, so it
+     reaches the network once; between builds the cached copy is served as
+     before, and the nightly figures still arrive on the next view. */
+  const BUILD = ((document.currentScript && document.currentScript.src) || '').match(/[?&]v=(\d+)/);
+  const dataUrl = (path) => (BUILD ? `${path}?v=${BUILD[1]}` : path);
+
   const app = document.getElementById('app');
   const boot = document.getElementById('boot');
   const bootStatus = boot.querySelector('.boot-status');
@@ -68,11 +79,11 @@ const App = (function () {
     // The open-data manifest is written by manifest.py and describes the files
     // above. It is fetched separately and never fatally: a dashboard that will
     // not load because its own index of itself is missing would be absurd.
-    const manifest = fetch('data/index.json').then((r) => (r.ok ? r.json() : null)).catch(() => null);
+    const manifest = fetch(dataUrl('data/index.json')).then((r) => (r.ok ? r.json() : null)).catch(() => null);
     let done = 0;
     bootStatus.textContent = 'Loading the documented record…';
     const parts = await Promise.all(files.map(async ([key, path]) => {
-      const res = await fetch(path);
+      const res = await fetch(dataUrl(path));
       if (!res.ok) throw new Error(`${path} — HTTP ${res.status}`);
       const json = await res.json();
       done++;
@@ -104,7 +115,7 @@ const App = (function () {
     const key = spec[0];
     if (D && D[key]) return Promise.resolve(D[key]);
     if (!lazyPromises[name]) {
-      lazyPromises[name] = fetch(spec[1])
+      lazyPromises[name] = fetch(dataUrl(spec[1]))
         .then((r) => { if (!r.ok) throw new Error(`${spec[1]} — HTTP ${r.status}`); return r.json(); })
         .then((json) => {
           D[key] = json;
@@ -124,7 +135,7 @@ const App = (function () {
   function ensureReport() {
     if (D && D.report) return Promise.resolve(D.report);
     if (!reportPromise) {
-      reportPromise = fetch('data/report.json')
+      reportPromise = fetch(dataUrl('data/report.json'))
         .then((r) => { if (!r.ok) throw new Error(`data/report.json — HTTP ${r.status}`); return r.json(); })
         .then((json) => {
           D.report = json;
@@ -159,7 +170,7 @@ const App = (function () {
     if (location.hash && location.hash.indexOf('#/') !== 0) return false;
     if (currentRoute().name !== 'overview') return false;
     try {
-      const res = await fetch('data/headline.json');
+      const res = await fetch(dataUrl('data/headline.json'));
       if (!res.ok) return false;
       const h = await res.json();
       if (!boot.isConnected) return false;
@@ -195,7 +206,7 @@ const App = (function () {
 
   function bootNames() {
     if (!boot.isConnected) return;
-    fetch('data/names-boot.json').then((r) => (r.ok ? r.json() : null)).then((file) => {
+    fetch(dataUrl('data/names-boot.json')).then((r) => (r.ok ? r.json() : null)).then((file) => {
       if (!file || !file.people.length || !boot.isConnected) return;
       const wrap = document.getElementById('boot-names');
       const line = document.getElementById('boot-name');
@@ -1745,6 +1756,7 @@ const App = (function () {
     const partyChips = Array.prototype.slice.call(document.querySelectorAll('#mp-parties .chip'));
     const voteChips = Array.prototype.slice.call(document.querySelectorAll('#mp-votes .chip'));
     const alsoChips = Array.prototype.slice.call(document.querySelectorAll('#mp-also .chip'));
+    const recordChips = Array.prototype.slice.call(document.querySelectorAll('#mp-record .chip'));
     const divisionSelect = document.getElementById('mp-division');
     const sortSelect = document.getElementById('mp-sort');
     const search = document.getElementById('mp-search');
@@ -1753,6 +1765,7 @@ const App = (function () {
     let party = 'all';
     let vote = 'all';
     let also = 'all';
+    let record = 'all';
 
     function passesAlso(el) {
       if (also === 'spoke') return el.dataset.spoke !== '0';
@@ -1768,6 +1781,7 @@ const App = (function () {
         const ok = (party === 'all' || el.dataset.party === party)
           && (vote === 'all' || el.dataset['v' + division] === vote)
           && passesAlso(el)
+          && (record === 'all' || el.dataset.record === record)
           && (!q || (el.dataset.text || '').indexOf(q) >= 0);
         el.hidden = !ok;
         // A row filtered away while it was open would otherwise come back open.
@@ -1793,10 +1807,13 @@ const App = (function () {
         el.querySelectorAll('.mp-cell').forEach((cell) => { cell.hidden = cell.dataset.div !== division; });
       });
       const counts = Views.constituencyVoteCounts(division);
+      const labels = Views.constituencyVoteLabels(division);
       voteChips.forEach((chip, i) => {
         const n = counts[chip.dataset.vote] || 0;
         const span = chip.querySelector('span');
         if (span) span.textContent = Views.fmt(n);
+        const em = chip.querySelector('em');
+        if (em && labels[chip.dataset.vote]) em.textContent = labels[chip.dataset.vote];
         chip.hidden = chip.dataset.vote === 'forced' && !n;
         chip.classList.toggle('active', i === 0);
       });
@@ -1809,6 +1826,7 @@ const App = (function () {
     function order(key) {
       const value = (el) => {
         if (key === 'contrib') return -parseInt(el.dataset.contrib || '0', 10);
+        if (key === 'pro') return -parseInt(el.dataset.pro || '0', 10);
         if (key && key.indexOf('sig') === 0) return -parseInt(el.dataset[key] || '0', 10);
         return 0;
       };
@@ -1830,6 +1848,10 @@ const App = (function () {
     alsoChips.forEach((chip) => chip.addEventListener('click', () => {
       also = chip.dataset.also;
       pick(alsoChips, chip, apply);
+    }));
+    recordChips.forEach((chip) => chip.addEventListener('click', () => {
+      record = chip.dataset.record;
+      pick(recordChips, chip, apply);
     }));
     if (divisionSelect) divisionSelect.addEventListener('change', () => showDivision(divisionSelect.value));
     if (sortSelect) sortSelect.addEventListener('change', () => order(sortSelect.value));
@@ -1864,7 +1886,7 @@ const App = (function () {
     function loadSpeeches() {
       if (speeches) return Promise.resolve(speeches);
       if (!speechesPromise) {
-        speechesPromise = fetch('data/constituency-speeches.json')
+        speechesPromise = fetch(dataUrl('data/constituency-speeches.json'))
           .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
           .then((json) => { speeches = json; return json; })
           .catch((err) => { speechesPromise = null; throw err; });
@@ -1920,10 +1942,12 @@ const App = (function () {
       party = 'all';
       vote = 'all';
       also = 'all';
+      record = 'all';
       if (search) search.value = '';
       partyChips.forEach((c, i) => c.classList.toggle('active', i === 0));
       voteChips.forEach((c, i) => c.classList.toggle('active', i === 0));
       alsoChips.forEach((c, i) => c.classList.toggle('active', i === 0));
+      recordChips.forEach((c, i) => c.classList.toggle('active', i === 0));
       apply();
       el.open = true;
       el.classList.add('search-target');
