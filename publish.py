@@ -507,6 +507,83 @@ def check_live(expect_version=None):
     return not problems
 
 
+# ---------------------------------------------------------------- announce
+
+# A published change is only found as fast as the next crawl, and for a site
+# this size that can be weeks. Two things shorten it, and both are the same two
+# the refresh workflow does after its own pushes; they are here as well because
+# a publish from this machine never passed through that workflow.
+#
+# IndexNow hands the changed URLs to every search engine that takes part in it
+# (Bing, Yandex, Seznam, Naver, Yep) in one request. The key is the file of the
+# same name at the site root, public by design: a submission is accepted only
+# while that file is served and matches, which is what proves the submitter
+# controls the site. Google does not take part; it reads the sitemap, which
+# robots.txt names.
+#
+# The Internet Archive is asked for a copy of the entry points, which gives
+# every published version an independent timestamp that does not depend on
+# trusting this repository.
+#
+# Both are best effort. Neither can fail a publish, because by the time they
+# run the site is already live and correct, and a throttled archive is not a
+# reason to report otherwise.
+
+INDEXNOW = 'https://api.indexnow.org/IndexNow'
+ARCHIVE_PATHS = ('/', '/snapshot/index.html', '/snapshot/overview.html',
+                 '/sitemap.xml', '/feed.xml')
+
+
+def indexnow_key():
+    for path in HERE.glob('*.txt'):
+        if re.fullmatch(r'[0-9a-f]{8,128}', path.stem) and path.read_text().strip() == path.stem:
+            return path.stem
+    return None
+
+
+def sitemap_urls():
+    return re.findall(r'<loc>([^<]+)</loc>', (HERE / 'sitemap.xml').read_text(encoding='utf-8'))
+
+
+def announce():
+    urls = sitemap_urls()
+    key = indexnow_key()
+    if not key:
+        say('indexnow   skipped: no key file at the site root')
+    else:
+        host = SITE.replace('https://', '').rstrip('/')
+        body = json.dumps({'host': host, 'key': key,
+                           'keyLocation': '%s/%s.txt' % (SITE.rstrip('/'), key),
+                           'urlList': urls}).encode('utf-8')
+        request = urllib.request.Request(
+            INDEXNOW, data=body, method='POST',
+            headers={'Content-Type': 'application/json; charset=utf-8'})
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                # 200 is accepted; 202 is accepted with the key still being
+                # checked, which is the normal answer for a first submission.
+                say('indexnow   %s  %d URLs' % (response.status, len(urls)))
+        except urllib.error.HTTPError as exc:
+            say('indexnow   %s  not accepted: %s' % (exc.code, exc.read()[:200].decode('utf-8', 'replace')))
+        except urllib.error.URLError as exc:
+            say('indexnow   could not be reached: %s' % exc.reason)
+
+    import companion
+    paths = list(ARCHIVE_PATHS) + ['/' + d['page'] for d in companion.DOCUMENTS]
+    for i, path in enumerate(paths):
+        if i:
+            time.sleep(6)
+        request = urllib.request.Request('https://web.archive.org/save/' + SITE.rstrip('/') + path,
+                                         headers={'User-Agent': 'palestinerecord-publish/1.0'})
+        try:
+            with urllib.request.urlopen(request, timeout=120) as response:
+                say('archive    %s  %s' % (response.status, path))
+        except urllib.error.HTTPError as exc:
+            say('archive    %s  %s' % (exc.code, path))
+        except Exception as exc:  # a timeout surfaces as several exception types
+            say('archive    ---  %s  %s' % (path, exc))
+
+
 def local_version():
     versions = set(re.findall(r'\?v=(\d+)', (HERE / 'index.html').read_text()))
     return sorted(versions)[0] if len(versions) == 1 else None
@@ -524,7 +601,16 @@ def main():
     parser.add_argument('--render', action='store_true', help='also render every route')
     parser.add_argument('--warnings', action='store_true', help='show every validator warning')
     parser.add_argument('--no-wait', action='store_true', help='do not wait for the Pages build')
+    parser.add_argument('--no-announce', action='store_true',
+                        help='do not tell IndexNow or the Internet Archive about the publish')
+    parser.add_argument('--announce-only', action='store_true',
+                        help='only tell IndexNow and the Internet Archive about what is live now')
     args = parser.parse_args()
+
+    if args.announce_only:
+        print('announcing')
+        announce()
+        return 0
 
     try:
         print('validating')
@@ -557,6 +643,10 @@ def main():
             if version:
                 wait_for_edge(version)
         ok = check_live(version)
+        # Only a site that answered for itself is worth pointing a crawler at.
+        if ok and not args.no_announce:
+            print('announcing')
+            announce()
         print('published' if ok else 'published, but the live checks did not all pass')
         return 0 if ok else 1
     except Stop as stop:

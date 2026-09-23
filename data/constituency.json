@@ -1317,6 +1317,9 @@
      "summary": "International visit to Israel between 26 September 2025 and 30 September 2025",
      "registered": "2025-10-19"
     }
+   ],
+   "statements": [
+    106
    ]
   },
   {
@@ -3023,7 +3026,10 @@
     "1666": "absent",
     "1665": "aye",
     "2078": "absent"
-   }
+   },
+   "statements": [
+    133
+   ]
   },
   {
    "id": 5198,
@@ -5187,6 +5193,9 @@
      "nature": "",
      "purpose": "Meeting with Israeli health experts, health tech start-ups, politicians, academics and diplomats. Attending the BioMed Israel 2022 conference."
     }
+   ],
+   "statements": [
+    123
    ]
   },
   {
@@ -6170,6 +6179,10 @@
      "nature": "",
      "purpose": "Party of Parliamentary delegates"
     }
+   ],
+   "statements": [
+    117,
+    143
    ]
   },
   {
@@ -10184,7 +10197,10 @@
     "1666": "absent",
     "1665": "aye",
     "2078": "absent"
-   }
+   },
+   "statements": [
+    78
+   ]
   },
   {
    "id": 5279,

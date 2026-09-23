@@ -58,6 +58,19 @@ PAGE = """<!DOCTYPE html>
 <meta name="description" content="%(description)s">
 <meta name="robots" content="index, follow, max-snippet:-1">
 <link rel="canonical" href="%(base)s%(page)s">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Documented Record">
+<meta property="og:url" content="%(base)s%(page)s">
+<meta property="og:title" content="%(title)s">
+<meta property="og:description" content="%(description)s">
+<meta property="og:image" content="%(base)sassets/og/%(card)s.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="%(title)s">
+<meta name="twitter:description" content="%(description)s">
+<meta name="twitter:image" content="%(base)sassets/og/%(card)s.png">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css?v=%(version)s">
 <style>
@@ -113,6 +126,11 @@ def site_base():
     return m.group(1).split('#')[0].rstrip('/') + '/'
 
 
+def card_name(doc):
+    """The social card prerender.py draws for a companion page, named after it."""
+    return pathlib.Path(doc['page']).stem
+
+
 def build():
     import markdown
 
@@ -125,10 +143,11 @@ def build():
         md = markdown.Markdown(extensions=['tables', 'toc'])
         body = md.convert(src.read_text(encoding='utf-8'))
         page = PAGE % {
-            'title': saxutils.escape(doc['title']),
-            'description': saxutils.escape(doc['description']),
+            'title': saxutils.escape(doc['title'], {'"': '&quot;'}),
+            'description': saxutils.escape(doc['description'], {'"': '&quot;'}),
             'base': base,
             'page': doc['page'],
+            'card': card_name(doc),
             'version': v,
             'body': body,
         }

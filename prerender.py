@@ -4,8 +4,8 @@
 The dashboard is a hash-routed single-page application. A hash never reaches
 the server, so every route shares one URL as far as a crawler or a link
 preview is concerned: they all see index.html, which before any JavaScript
-runs is an empty `<main>`. Ninety-odd charts, a hundred and twenty-seven
-sections and forty thousand words of reproduced report are invisible.
+runs is an empty `<main>`. Ninety-odd charts, nearly two hundred sections
+and the whole of the reproduced report are invisible.
 
 This script renders each route in headless Chrome with `?prerender=1` (which
 turns off the charts, the scroll reveals, the counting numbers and the WebGL
@@ -15,8 +15,8 @@ Each snapshot is self-canonical and carries a link back to the interactive
 route it was taken from, so nothing here is served to a crawler that a reader
 is not also shown.
 
-It then draws a 1200x630 social card per route, writes `sitemap.xml`, and
-stamps the `dateModified` of the two JSON-LD blocks in index.html from the
+It then draws a 1200x630 social card per route and the home page's share
+card from figures.json, writes `sitemap.xml`, and stamps the `dateModified` of the two JSON-LD blocks in index.html from the
 generation date recorded in data/timeseries.json.
 
     python3 prerender.py                 # snapshots, cards, sitemap
@@ -60,6 +60,7 @@ MUTED = (125, 135, 156)
 AMBER = (217, 164, 65)
 RED = (210, 83, 76)
 GREEN = (79, 174, 130)
+BLUE = (86, 168, 224)
 RULE = (42, 50, 69)
 
 SERIF = '/System/Library/Fonts/Supplemental/Georgia.ttf'
@@ -478,6 +479,110 @@ def card(path, eyebrow, title, desc, footer):
     return path.stat().st_size
 
 
+# ------------------------------------------------------------ share card
+
+# The card a link to the home page unfurls into. It is the only card that
+# carries figures, and it used to be drawn by hand, which is how it came to
+# advertise a death toll 249 below the one on the page it pointed at. It is now
+# drawn from the same figures.json the overview reads, on every run, so the
+# image and the page cannot disagree for longer than one publish.
+
+SHARE_CARD = ROOT / 'assets' / 'share-card.png'
+
+# (label in figures.json, caption on the card, colour)
+SHARE_FIGURES = (
+    ('Palestinians killed in Gaza', 'killed in Gaza since 7 October 2023', RED),
+    ('Children killed in Gaza', 'of them children', AMBER),
+    ('States recognising Palestine', 'states recognising Palestine', BLUE),
+)
+
+
+def share_figures():
+    """The three card figures, looked up by label so a reordering cannot swap them."""
+    figures = json.loads((ROOT / 'data' / 'figures.json').read_text(encoding='utf-8'))
+    by_label = {f['label']: f for f in figures.get('headline', [])}
+    out = []
+    for label, caption, colour in SHARE_FIGURES:
+        if label not in by_label:
+            raise SystemExit('prerender: figures.json headline has no %r for the share card' % label)
+        out.append((int(by_label[label]['value']), caption, colour))
+    return out
+
+
+def share_card():
+    from PIL import ImageDraw
+    figures = share_figures()
+    stats = json.loads((ROOT / 'data' / 'report.json').read_text(encoding='utf-8')).get('stats') or {}
+
+    img = background()
+    d = ImageDraw.Draw(img)
+    for x in range(CARD_W):
+        t = x / (CARD_W - 1)
+        colour = blend(RED, AMBER, t / 0.5) if t < 0.5 else blend(AMBER, GREEN, (t - 0.5) / 0.5)
+        d.line([(x, 0), (x, 5)], fill=colour)
+
+    fx, fy, fw, fb = 72, 92, 132, 30
+    d.rectangle([fx, fy, fx + fw, fy + fb], fill=(0, 0, 0))
+    d.rectangle([fx, fy + fb, fx + fw, fy + 2 * fb], fill=(255, 255, 255))
+    d.rectangle([fx, fy + 2 * fb, fx + fw, fy + 3 * fb], fill=(0, 151, 54))
+    d.polygon([(fx, fy), (fx + 54, fy + 45), (fx, fy + 90)], fill=(238, 42, 53))
+
+    d.text((72, 176), 'The Documented Record', font=load_font(SERIF, 66), fill=INK)
+    d.text((72, 262), 'Israel and the Occupied Territories \u00b7 1917\u20132026',
+           font=load_font(SANS, 24), fill=INK_2)
+    d.line([(72, 322), (CARD_W - 72, 322)], fill=RULE)
+
+    value_font, caption_font = load_font(SANS_BOLD, 60), load_font(SANS, 21)
+    for (value, caption, colour), x in zip(figures, (72, 452, 806)):
+        d.text((x, 350), '{:,}'.format(value), font=value_font, fill=colour)
+        d.text((x, 420), caption, font=caption_font, fill=INK_2)
+
+    d.line([(72, 486), (CARD_W - 72, 486)], fill=RULE)
+    d.text((72, 512), STRAPLINE, font=load_font(SANS, 22), fill=INK)
+    footer = ['An interactive forensic survey']
+    if stats.get('sections'):
+        footer.append('{:,} sections'.format(int(stats['sections'])))
+    if stats.get('words'):
+        footer.append('{:,} words'.format(int(stats['words'])))
+    footer.append('all sources linked')
+    d.text((72, 552), ' \u00b7 '.join(footer), font=load_font(SANS, 18), fill=MUTED)
+
+    SHARE_CARD.parent.mkdir(parents=True, exist_ok=True)
+    img.save(SHARE_CARD, 'PNG', optimize=True)
+    return figures
+
+
+def stamp_share_tags(base, figures):
+    """Point the home page's og:image and twitter:image at the card, absolutely.
+
+    Absolute because the Open Graph protocol requires it and X will not resolve
+    a relative image at all. Versioned by the card's own bytes, because every
+    platform caches a preview image by URL: without a new URL a corrected card
+    would sit behind the old one for weeks. The alt text is written from the
+    same three figures the image was drawn from.
+    """
+    import hashlib
+    digest = hashlib.sha1(SHARE_CARD.read_bytes()).hexdigest()[:10]
+    url = '%sassets/share-card.png?h=%s' % (base, digest)
+    (killed, _, _), (children, _, _), (states, _, _) = figures
+    alt = ('The Documented Record \u2014 {:,} killed in Gaza since 7 October 2023, '
+           '{:,} of them children, {:,} states recognising Palestine.').format(killed, children, states)
+
+    path = ROOT / 'index.html'
+    html = path.read_text(encoding='utf-8')
+    new = html
+    for pattern, value in (
+            (r'(<meta property="og:image" content=")[^"]*(")', url),
+            (r'(<meta name="twitter:image" content=")[^"]*(")', url),
+            (r'(<meta property="og:image:alt" content=")[^"]*(")', alt)):
+        new, n = re.subn(pattern, lambda m: m.group(1) + html_escape(value) + m.group(2), new)
+        if n != 1:
+            raise SystemExit('prerender: expected one %s in index.html, found %d' % (pattern, n))
+    if new != html:
+        path.write_text(new, encoding='utf-8')
+    return url
+
+
 # ---------------------------------------------------------------- sitemap
 
 def sitemap(base, urls, lastmod):
@@ -749,6 +854,18 @@ def main():
             size = card(CARD_DIR / ('%s.png' % slug), eyebrow, headline, desc,
                         base.replace('https://', '').rstrip('/') + '/' + route)
             print('  card %-16s %5.1f KB' % (slug, size / 1024))
+
+    if not args.no_cards and not args.only:
+        # The companion pages unfurl into a card of their own, drawn the same
+        # way as a route's, so a shared link says which document it is.
+        import companion
+        for doc in companion.DOCUMENTS:
+            size = card(CARD_DIR / ('%s.png' % companion.card_name(doc)), 'The Documented Record',
+                        doc['title'], doc['description'],
+                        base.replace('https://', '').rstrip('/') + '/' + doc['page'])
+            print('  card %-16s %5.1f KB' % (companion.card_name(doc), size / 1024))
+        figures = share_card()
+        print('  share card       %s' % stamp_share_tags(base, figures))
 
     # The companion documents are pages of the site like any other: the record
     # names them in its own text, so they belong in the sitemap rather than
