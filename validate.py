@@ -1439,6 +1439,30 @@ def check_dependencies():
          % (len(deps_check.imports()), len(deps_check.declared()), len(problems)))
 
 
+def check_share_card(files):
+    """The home page's share card states three figures; they should be today's.
+
+    prerender.py draws the card and its alt text from figures.json, so the two
+    agree after every unfiltered prerender. This runs before prerender in the
+    refresh workflow, where the feed has just moved the figures and the card
+    has not been redrawn yet, so a disagreement is a warning and not a failure:
+    it says the card is behind, not that the data is wrong.
+    """
+    html = (HERE / 'index.html').read_text(encoding='utf-8')
+    alt = re.search(r'<meta property="og:image:alt" content="([^"]*)"', html)
+    if not alt:
+        fail('share-card', 'index.html carries no og:image:alt, so the card is unlabelled')
+        return
+    by_label = {f['label']: f['value'] for f in (files.get('figures') or {}).get('headline', [])}
+    for label in ('Palestinians killed in Gaza', 'Children killed in Gaza', 'States recognising Palestine'):
+        value = by_label.get(label)
+        if value is not None and '{:,}'.format(int(value)) not in alt.group(1):
+            warn('share-card', 'the share card does not carry the current %s (%s); run prerender.py'
+                 % (label.lower(), '{:,}'.format(int(value))))
+    if not re.search(r'<meta property="og:image" content="https://', html):
+        fail('share-card', 'og:image is not an absolute URL, which X and the Open Graph protocol require')
+
+
 def check_curated_duplicates(files):
     """The same fact entered twice is a second source that does not exist.
 
@@ -1702,6 +1726,7 @@ def main():
         check_constituency(files)
         check_figures_against_markdown(files)
         check_curated_duplicates(files)
+        check_share_card(files)
         check_dependencies()
         check_chart_wiring()
         check_cache_bust()

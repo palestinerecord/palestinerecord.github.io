@@ -63,10 +63,23 @@ GREEN = (79, 174, 130)
 BLUE = (86, 168, 224)
 RULE = (42, 50, 69)
 
-SERIF = '/System/Library/Fonts/Supplemental/Georgia.ttf'
-SERIF_BOLD = '/System/Library/Fonts/Supplemental/Georgia Bold.ttf'
-SANS = '/System/Library/Fonts/Supplemental/Arial.ttf'
-SANS_BOLD = '/System/Library/Fonts/Supplemental/Arial Bold.ttf'
+# The first font that exists is used. macOS carries Georgia and Arial; the
+# Ubuntu runner carries neither, but has DejaVu and, because Chrome depends on
+# them, the Liberation faces, which are metric-compatible with Arial. Without
+# the Linux entries a card drawn on the runner falls back to Pillow's bitmap
+# font, which is why the workflow used to skip the cards altogether.
+SERIF = ('/System/Library/Fonts/Supplemental/Georgia.ttf',
+         '/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf',
+         '/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf')
+SERIF_BOLD = ('/System/Library/Fonts/Supplemental/Georgia Bold.ttf',
+              '/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf',
+              '/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf')
+SANS = ('/System/Library/Fonts/Supplemental/Arial.ttf',
+        '/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf',
+        '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf')
+SANS_BOLD = ('/System/Library/Fonts/Supplemental/Arial Bold.ttf',
+             '/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf',
+             '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf')
 
 
 # ---------------------------------------------------------------- routes
@@ -374,12 +387,19 @@ same content as the interactive record with the charts, filters and search remov
 
 # ---------------------------------------------------------------- cards
 
-def load_font(path, size):
+def load_font(paths, size):
     from PIL import ImageFont
-    try:
-        return ImageFont.truetype(path, size)
-    except OSError:
-        return ImageFont.load_default()
+    for path in paths:
+        try:
+            return ImageFont.truetype(path, size)
+        except OSError:
+            continue
+    return ImageFont.load_default()
+
+
+def have_fonts():
+    return all(any(pathlib.Path(p).exists() for p in group)
+               for group in (SERIF, SERIF_BOLD, SANS, SANS_BOLD))
 
 
 def wrap(draw, text, font, width):
@@ -864,8 +884,17 @@ def main():
                         doc['title'], doc['description'],
                         base.replace('https://', '').rstrip('/') + '/' + doc['page'])
             print('  card %-16s %5.1f KB' % (companion.card_name(doc), size / 1024))
-        figures = share_card()
-        print('  share card       %s' % stamp_share_tags(base, figures))
+
+    # The share card is drawn on every unfiltered run, --no-cards or not,
+    # because it is the one card that carries figures: the nightly refresh
+    # passes --no-cards to save time on the route cards, and skipping this one
+    # too left it advertising the previous day's death toll.
+    if not args.only:
+        if have_fonts():
+            figures = share_card()
+            print('  share card       %s' % stamp_share_tags(base, figures))
+        else:
+            print('  share card       skipped: none of the card fonts is installed')
 
     # The companion documents are pages of the site like any other: the record
     # names them in its own text, so they belong in the sitemap rather than
