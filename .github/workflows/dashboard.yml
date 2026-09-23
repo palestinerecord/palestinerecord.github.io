@@ -311,23 +311,30 @@ jobs:
         if: steps.render.outcome == 'failure'
         run: |
           echo '::warning::A route failed to render; keeping the published snapshots.'
-          git checkout -- snapshot sitemap.xml feed.xml index.html 2>/dev/null || true
+          git checkout -- snapshot sitemap.xml feed.xml index.html assets/share-card.png 2>/dev/null || true
           git clean -fd -- snapshot || true
 
       - name: Commit the refreshed data and static layer
         id: commit
-        # The gate is validate.py and nothing else. Everything above it may
-        # degrade; this may not.
+        # The gate is validate.py and nothing else: nothing is committed unless
+        # it passed. A push that cannot land is infrastructure, not data, so it
+        # degrades like the rest: the previously published site stays live and
+        # the report step below opens the issue.
         if: >-
           steps.validate.outcome == 'success' &&
           (steps.diff.outputs.changed == 'true' || steps.static.outcome == 'success')
+        continue-on-error: true
         # A push made with GITHUB_TOKEN does not itself start a workflow run, so
         # this commit cannot loop back into this workflow. Pages picks it up and
         # rebuilds the site from the branch.
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ snapshot/ sitemap.xml feed.xml index.html
+          # The share card is drawn with the static layer and index.html names
+          # it by its hash, so the two are committed together or not at all.
+          # Anything else the run leaves in the tree is stashed across the
+          # rebase below, which otherwise refuses to start.
+          git add data/ snapshot/ sitemap.xml feed.xml index.html assets/share-card.png
           if git diff --cached --quiet; then
             echo 'Nothing staged; the rebuild was byte-identical.'
             echo 'pushed=false' >> "$GITHUB_OUTPUT"
@@ -348,7 +355,7 @@ jobs:
             fi
             echo "Push rejected; rebasing onto the branch tip (attempt $attempt of 5)."
             git fetch origin main || true
-            git pull --rebase -X theirs origin main || git rebase --abort || true
+            git pull --rebase --autostash -X theirs origin main || git rebase --abort || true
             sleep $(( attempt * 5 ))
           done
           echo 'pushed=false' >> "$GITHUB_OUTPUT"
