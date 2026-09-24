@@ -2,7 +2,7 @@
  "meta": {
   "title": "Claim patterns",
   "description": "The phrase index behind the answer engine. Each entry maps one of the twenty-three rebuttals in Part XVI of the report to the wording the claim is made in, so a pasted text can be matched to the answer it is asking for without a language model and without a network call. The patterns carry no evidence of their own: the answer is assembled at render time from the report, the live figures and the documented statements.",
-  "generated": "2026-09-24",
+  "generated": "2026-09-25",
   "figure_ids": [
    "killed",
    "children",

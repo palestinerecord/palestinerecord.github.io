@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=133" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=134" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=133" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=134" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -1182,6 +1182,82 @@ const Views = (function () {
       </section>`;
   };
 
+  /* Where each government stands on the word itself. The map carries the
+     position; the lists below it carry the words, the speaker and the link,
+     because a position asserted without the sentence behind it is not one a
+     reader can check. The last list is the complement of the first: every UN
+     member state whose government has not called it genocide, by reason. */
+  const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+    'September', 'October', 'November', 'December'];
+  const partialDate = (d) => {
+    const m = /^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?$/.exec(d || '');
+    if (!m) return d || '';
+    if (m[3]) return longDay(d);
+    return m[2] ? `${MONTH_NAMES[+m[2] - 1]} ${m[1]}` : m[1];
+  };
+  const GENOCIDE_ORDER = ['says', 'joint', 'reversed', 'defers', 'unclear', 'rejects'];
+
+  function genocideEntry(s) {
+    const words = s.quote ? `<q>${esc(s.quote)}</q>` : esc(s.summary || '');
+    return `<li class="gs-entry">
+      <b class="gs-name">${esc(s.name)}</b>${s.un ? '' : ' <span class="muted small">not a UN member</span>'}
+      <span class="gs-who">${esc(s.who)}${s.role ? `, ${esc(s.role)}` : ''} · ${esc(partialDate(s.date))}</span>
+      <span class="gs-words">${words} <a href="${esc(s.source)}" target="_blank" rel="noopener noreferrer">${esc(s.outlet || 'Source')}</a></span>
+      ${s.now ? `<span class="gs-now"><b>Now:</b> ${esc(s.now)} <a href="${esc(s.now_source)}" target="_blank" rel="noopener noreferrer">Source</a></span>` : ''}
+      ${s.note ? `<span class="gs-note">${esc(s.note)}</span>` : ''}
+    </li>`;
+  }
+
+  function genocideSection(p) {
+    const g = p.genocide;
+    const c = g.un_counts;
+    const by = (key) => g.states.filter((s) => s.position === key).sort((a, b) => a.name.localeCompare(b.name));
+    const said = (c.says || 0) + (c.joint || 0);
+    const notSaid = g.un_total - said;
+    const none = by('none').filter((s) => s.un);
+    const group = (key, open) => {
+      const list = by(key);
+      return `<details class="gs-group gs-${key}"${open ? ' open' : ''}>
+        <summary><span class="gs-swatch gs-${key}"></span>${esc(g.labels[key])} <span class="gs-count">${fmt(list.length)}</span></summary>
+        <ul class="gs-list">${list.map(genocideEntry).join('')}</ul>
+      </details>`;
+    };
+    return `${head('Genocide', 'Which governments have called it genocide, and which have not',
+      `<b>${fmt(c.says || 0)}</b> of the ${fmt(g.un_total)} UN member states have a government that has called Israel's conduct in Gaza genocide in its own words,
+       and <b>${fmt(c.joint || 0)}</b> more have put their name to a joint statement that does. That leaves <b>${fmt(notSaid)}</b> that have not:
+       ${fmt(c.reversed || 0)} whose previous government said it and whose present one has turned the other way, ${fmt(c.defers || 0)} that say it is for a court to decide,
+       ${fmt(c.unclear || 0)} whose position is unclear, ${fmt(c.rejects || 0)} that reject or dispute it, and <b>${fmt(c.none || 0)}</b> with no statement on the record at all.
+       Every entry below quotes the words and links to where they were said.`)}
+      <div class="grid">
+        ${chartCard('genocide-map', g.title,
+          `Hover any country for who said what, and when. ${esc(g.note)}`, g.ref, 'xtall')}
+      </div>
+      <div class="grid c4" style="margin-top:22px">
+        ${statCard({ label: 'Governments that have called it genocide', value: c.says || 0, suffix: ' of ' + g.un_total, note: 'In their own words: a head of state or government, a foreign minister or ministry, another minister, an official publication or a filing.', source: 'Report §15.1C' }, 'green')}
+        ${statCard({ label: 'Through a joint statement only', value: c.joint || 0, note: `The declaration of ${partialDate(g.joint.date)}, signed by 31 Arab and Islamic states, condemned “the crimes of Israeli aggression, genocide, and ethnic cleansing”.`, source: g.joint.outlet }, 'green')}
+        ${statCard({ label: 'Say it is for a court to decide', value: c.defers || 0, note: 'Much of northern and western Europe, the United Kingdom, Canada, Australia, New Zealand and Japan. The ICJ merits judgment is not expected before 2028.', source: 'Report §15.1C' }, 'blue')}
+        ${statCard({ label: 'Reject or dispute it', value: c.rejects || 0, note: 'Israel, the United States, Germany, Italy and others; three by filings at the ICJ.', source: 'Report §15.1C' }, 'red')}
+      </div>
+      <div class="gs-groups" style="margin-top:22px">
+        <h3 class="gs-h">Have called it genocide</h3>
+        ${group('says', false)}
+        ${group('joint', false)}
+        <h3 class="gs-h">Have not called it genocide: ${fmt(notSaid)} UN member states</h3>
+        ${group('reversed', true)}
+        ${group('defers', false)}
+        ${group('unclear', false)}
+        ${group('rejects', false)}
+        <details class="gs-group gs-none">
+          <summary><span class="gs-swatch gs-none"></span>${esc(g.labels.none)} <span class="gs-count">${fmt(none.length)}</span></summary>
+          <p class="gs-none-list">${none.map((s) => esc(s.name)).join(', ')}.</p>
+          <p class="chart-note">No statement by the government either way was found in the sources above or in a search of this week's General Assembly speeches.
+            That is not proof that none exists, and a state may appear here because it has said nothing, because its statements used other words, or because
+            this research missed one. Corrections with a source are welcome.</p>
+        </details>
+      </div>
+      <p class="chart-note" style="margin-top:12px">${esc(g.source)}</p>`;
+  }
+
   DATA_BODY['world'] = () => {
     const f = D.fig;
     const o = f.oct7;
@@ -1205,7 +1281,11 @@ const Views = (function () {
       </section>
 
       <section class="section">
-        ${head('International standing', 'Recognition and public opinion', 'Recognition of Palestine, and the gap that has opened between Western publics and their governments.')}
+        ${genocideSection(p)}
+      </section>
+
+      <section class="section">
+        ${head('International standing', 'Recognition and public opinion','Recognition of Palestine, and the gap that has opened between Western publics and their governments.')}
         <div class="grid wide-left">
           ${chartCard('opinion', f.opinion.title, `${esc(f.opinion.uk.poll)} · ${esc(f.opinion.us.poll)}`, f.opinion.ref, 'tall')}
           ${chartCard('recognition', f.recognition.title, `Among the G20, ${f.recognition.g20_recognise} of ${f.recognition.g20_total} member states recognise Palestine.`, f.recognition.ref, 'tall')}
@@ -1860,6 +1940,7 @@ const Views = (function () {
       const emb = embargo.find((x) => canon(x.country) === name);
       const sup = suppliers.find((x) => canon(x.country) === name);
       const measures = P.sanctions.measures.filter((m) => m.countries.some((c) => canon(c.name) === name));
+      const gen = (P.genocide.states.find((s) => s.name === name) || {}).position || 'none';
       const icj = P.icj.applicant.some((x) => canon(x.name) === name) ? 'applicant'
         : (P.icj.interveners.some((x) => canon(x.name) === name) ? 'intervened' : '');
       return {
@@ -1871,6 +1952,7 @@ const Views = (function () {
         armsNote: emb ? `${emb.date} — ${emb.detail}` : '',
         measures: measures.map((m) => ({ id: m.id, label: m.label, date: m.date })),
         icj,
+        genocide: gen,
         share: sup ? sup.share : null,
         shareNote: sup ? sup.note : '',
       };
@@ -1878,6 +1960,7 @@ const Views = (function () {
   }
 
   const ARMS_LABEL = { halted: 'Halted', partial: 'Restricted', continuing: 'Continuing' };
+  const GENOCIDE_CELL = { says: 'Says it', joint: 'Joint statement', reversed: 'Reversed', defers: 'For a court', unclear: 'Unclear', rejects: 'Rejects' };
 
   /* The measures carry their full titles in the data; the table has room for
      the target and nothing else, and the full title stays in the tooltip. */
@@ -1918,6 +2001,8 @@ const Views = (function () {
             ${cell(r.icj ? `<span class="chip static${r.icj === 'applicant' ? ' halted' : ''}">${
   r.icj === 'applicant' ? 'Applicant' : 'Intervened'}</span>` : '',
     r.icj === 'applicant' ? 2 : (r.icj ? 1 : 0))}
+            ${cell(GENOCIDE_CELL[r.genocide] ? `<span class="chip static gs-chip gs-${r.genocide}">${GENOCIDE_CELL[r.genocide]}</span>` : '',
+    ({ says: 6, joint: 5, reversed: 4, defers: 3, unclear: 2, rejects: 0 })[r.genocide] ?? 1, '', D.positions.genocide.labels[r.genocide])}
             ${cell(r.share == null ? '' : `<b>${r.share}%</b>`, r.share == null ? -1 : r.share, 'num', r.shareNote)}
           </tr>`).join('')}
         </tbody>

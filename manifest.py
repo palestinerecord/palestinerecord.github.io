@@ -210,8 +210,10 @@ DESCRIPTIONS = {
     'world-positions.json': (
         'State positions',
         'Recognition of Palestine, arms embargoes, ICJ interventions, sanctions and Security '
-        'Council vetoes, by state, with the date each position was taken.',
-        'UN records; national foreign ministry statements.',
+        'Council vetoes, by state, with the date each position was taken; and, for every UN member '
+        'state, whether its government has called the conduct in Gaza genocide, with the speaker, '
+        'date, words and source of each statement.',
+        'UN records; national foreign ministry statements; General Assembly addresses.',
     ),
     'war-record.json': (
         'The wars and 7 October',

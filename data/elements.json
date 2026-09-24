@@ -916,6 +916,11 @@
     "blurb": "Applicant in South Africa v Israel, or a declaration of intervention under Article 63."
    },
    {
+    "id": "genocide",
+    "label": "Genocide",
+    "blurb": "Whether the government has called it genocide, says it is for a court, or rejects it."
+   },
+   {
     "id": "supplies",
     "label": "Share of arms imports",
     "blurb": "Share of Israel’s major conventional arms imports, 2020–2024 (SIPRI)."

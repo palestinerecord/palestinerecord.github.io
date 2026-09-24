@@ -3344,6 +3344,56 @@ const Charts = (function () {
     });
   });
 
+  /* Whether each government has called it genocide, and in whose words */
+  R['genocide-map'] = () => geoMap('world').then(() => {
+    const g = data.positions.genocide;
+    // The same greens as the recognition map for the two ways of saying it,
+    // red for saying the opposite, and grey for silence, which is the largest
+    // group and must not read as a position.
+    const ORDER = [
+      { key: 'says', value: 7, colour: '#1d5a44' },
+      { key: 'joint', value: 6, colour: '#7ac9a2' },
+      { key: 'reversed', value: 5, colour: C.amber },
+      { key: 'defers', value: 4, colour: C.blue },
+      { key: 'unclear', value: 3, colour: C.violet },
+      { key: 'rejects', value: 2, colour: C.red },
+    ];
+    const valueOf = {};
+    ORDER.forEach((o) => { valueOf[o.key] = o.value; });
+    const by = {};
+    g.states.forEach((s) => { by[s.map] = s; });
+    const clean = (t) => String(t || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const clip = (t) => clean(t && t.length > 170 ? t.slice(0, 168) + '…' : t);
+    return Object.assign({}, base, {
+      legend: { show: false },
+      tooltip: Object.assign({}, base.tooltip, {
+        trigger: 'item',
+        formatter: (t) => {
+          const s = by[t.name];
+          if (!s) return `<b>${t.name}</b>${mapNote('Not on the list of states.')}`;
+          if (s.position === 'none') return `<b>${s.name}</b><br>${g.labels.none}`;
+          const words = s.quote ? `“${clip(s.quote)}”` : clip(s.summary);
+          return `<b>${clean(s.name)}</b><br><b>${g.labels[s.position]}</b><br>${clean(s.who)}${s.role ? ', ' + clean(s.role) : ''} · ${clean(s.date)}`
+            + mapNote(words)
+            + (s.now ? mapNote('Now: ' + clip(s.now)) : '')
+            + (s.un ? '' : mapNote('Not a member state of the United Nations.'));
+        },
+      }),
+      visualMap: {
+        type: 'piecewise',
+        left: 10, bottom: 8, itemWidth: 13, itemHeight: 10, itemGap: 6,
+        textStyle: { color: C.text2, fontSize: 11 },
+        pieces: ORDER.map((o) => ({ value: o.value, label: g.labels[o.key], color: o.colour }))
+          .concat([{ value: 0, label: g.labels.none, color: C.muted }]),
+      },
+      series: [Object.assign({}, MAP_BASE, {
+        map: 'world',
+        name: g.title,
+        data: g.states.map((s) => ({ name: s.map, value: valueOf[s.position] || 0 })),
+      })],
+    });
+  });
+
   /* What each state has actually done: arms, sanctions, the ICJ */
   R['pressure-map'] = () => geoMap('world').then((world) => {
     const c = data.long.complicity;

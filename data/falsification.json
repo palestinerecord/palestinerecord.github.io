@@ -5,15 +5,15 @@
   "source": "data/provenance.json; data/statements.json",
   "repo": "palestinerecord/palestinerecord.github.io",
   "label": "challenge",
-  "entries": 412,
+  "entries": 512,
   "kinds": {
    "figure": 129,
    "statement": 149,
-   "record": 134
+   "record": 234
   },
-  "single_origin": 267,
-  "exposed": 227,
-  "claims": 470
+  "single_origin": 366,
+  "exposed": 230,
+  "claims": 571
  },
  "conditions": [
   {
@@ -148,6 +148,10 @@
    "name": "Al Jazeera",
    "origin": "media"
   },
+  "icj": {
+   "name": "International Court of Justice",
+   "origin": "international-court"
+  },
   "haaretz": {
    "name": "Haaretz",
    "origin": "israeli-media"
@@ -188,9 +192,9 @@
    "name": "Defence for Children International – Palestine",
    "origin": "palestinian-ngo"
   },
-  "icj": {
-   "name": "International Court of Justice",
-   "origin": "international-court"
+  "reuters": {
+   "name": "Reuters",
+   "origin": "media"
   },
   "us-congress": {
    "name": "US Congress and the Congressional Research Service",
@@ -208,9 +212,21 @@
    "name": "The Guardian",
    "origin": "media"
   },
+  "ynet": {
+   "name": "Ynet and Yedioth Ahronoth",
+   "origin": "israeli-media"
+  },
   "amnesty": {
    "name": "Amnesty International",
    "origin": "international-ngo"
+  },
+  "cnn": {
+   "name": "CNN",
+   "origin": "media"
+  },
+  "france24": {
+   "name": "France 24 and Euronews",
+   "origin": "media"
   },
   "ipc": {
    "name": "IPC Famine Review Committee",
@@ -224,6 +240,10 @@
    "name": "Save the Children",
    "origin": "international-ngo"
   },
+  "un-ga": {
+   "name": "UN General Assembly",
+   "origin": "un"
+  },
   "un-sc": {
    "name": "UN Security Council",
    "origin": "un"
@@ -231,10 +251,6 @@
   "unicef": {
    "name": "UNICEF",
    "origin": "un"
-  },
-  "ynet": {
-   "name": "Ynet and Yedioth Ahronoth",
-   "origin": "israeli-media"
   },
   "addameer": {
    "name": "Addameer",
@@ -244,17 +260,9 @@
    "name": "Al-Haq",
    "origin": "palestinian-ngo"
   },
-  "cnn": {
-   "name": "CNN",
-   "origin": "media"
-  },
-  "france24": {
-   "name": "France 24 and Euronews",
-   "origin": "media"
-  },
-  "un-ga": {
-   "name": "UN General Assembly",
-   "origin": "un"
+  "icc": {
+   "name": "International Criminal Court",
+   "origin": "international-court"
   },
   "un-hrc": {
    "name": "UN Human Rights Council",
@@ -280,10 +288,6 @@
    "name": "International Association of Genocide Scholars",
    "origin": "international-ngo"
   },
-  "icc": {
-   "name": "International Criminal Court",
-   "origin": "international-court"
-  },
   "idf": {
    "name": "Israel Defense Forces",
    "origin": "israeli-official"
@@ -291,10 +295,6 @@
   "phr-israel": {
    "name": "Physicians for Human Rights Israel",
    "origin": "israeli-ngo"
-  },
-  "reuters": {
-   "name": "Reuters",
-   "origin": "media"
   },
   "sipri": {
    "name": "SIPRI",
@@ -311,6 +311,10 @@
   "unrwa": {
    "name": "UNRWA",
    "origin": "un"
+  },
+  "wafa": {
+   "name": "WAFA (Palestinian news agency)",
+   "origin": "palestinian-official"
   },
   "ap": {
    "name": "Associated Press",
@@ -347,10 +351,6 @@
   "un-sg": {
    "name": "UN Secretary-General",
    "origin": "un"
-  },
-  "wafa": {
-   "name": "WAFA (Palestinian news agency)",
-   "origin": "palestinian-official"
   },
   "yesh-din": {
    "name": "Yesh Din",
@@ -415,6 +415,10 @@
   "goldstone": {
    "name": "UN Goldstone Report (2009)",
    "origin": "un"
+  },
+  "wikipedia": {
+   "name": "Wikipedia (with its own cited sources)",
+   "origin": "data-project"
   },
   "972": {
    "name": "+972 Magazine and Local Call",
@@ -495,10 +499,6 @@
   "unesco": {
    "name": "UNESCO",
    "origin": "un"
-  },
-  "wikipedia": {
-   "name": "Wikipedia (with its own cited sources)",
-   "origin": "data-project"
   },
   "adalah": {
    "name": "Adalah",
@@ -634,9 +634,9 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 425,
-   "falls": 30,
-   "share": 93.4
+   "stands": 443,
+   "falls": 31,
+   "share": 93.5
   },
   {
    "id": "no-israeli",
@@ -648,9 +648,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 378,
-   "falls": 77,
-   "share": 83.1
+   "stands": 396,
+   "falls": 78,
+   "share": 83.5
   },
   {
    "id": "no-un",
@@ -659,9 +659,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 388,
+   "stands": 407,
    "falls": 67,
-   "share": 85.3
+   "share": 85.9
   },
   {
    "id": "no-ngo",
@@ -672,9 +672,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 351,
+   "stands": 370,
    "falls": 104,
-   "share": 77.1
+   "share": 78.1
   },
   {
    "id": "israeli-western-only",
@@ -687,9 +687,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 257,
-   "falls": 198,
-   "share": 56.5
+   "stands": 274,
+   "falls": 200,
+   "share": 57.8
   }
  ],
  "entries": [
@@ -3414,6 +3414,26 @@
    "attribution": "B'Tselem, Fatalities in the first Intifada (9 December 1987 – 28 September 2000)."
   },
   {
+   "id": "world-positions-tunisia",
+   "claim": "Tunisia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "wafa"
+   ],
+   "origins": [
+    "palestinian-official"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-palestinian",
+    "israeli-western-only"
+   ],
+   "date": "2024-05",
+   "attribution": "https://english.wafa.ps/Pages/Details/143881",
+   "context": "Has the government called it genocide?"
+  },
+  {
    "id": "elements-yesh-din-apartheid",
    "claim": "Yesh Din, apartheid",
    "kind": "record",
@@ -4260,6 +4280,25 @@
    "attribution": "Remember These Children."
   },
   {
+   "id": "world-positions-belarus",
+   "claim": "Belarus",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "ynet"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "2026-06-16",
+   "attribution": "https://www.ynetnews.com/article/b16xj00c11zx",
+   "context": "Has the government called it genocide?"
+  },
+  {
    "id": "conduct-record-complete-siege-then-intermittent-entry",
    "claim": "Complete siege, then intermittent entry",
    "kind": "record",
@@ -4752,6 +4791,26 @@
    "attribution": "Gaza Ministry of Health named list, via the Tech For Palestine open datasets."
   },
   {
+   "id": "world-positions-has-the-government-called-it-genocide",
+   "claim": "Has the government called it genocide?",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "un-ga",
+    "wikipedia"
+   ],
+   "origins": [
+    "data-project",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [
+    "israeli-western-only"
+   ],
+   "ref": "§15.1C",
+   "attribution": "Compiled from the statements cited in Wikipedia, \"Gaza genocide recognition\" (revision 1376504299), each linked to its own source here, corrected for the governments that have changed since and for the 81st General Assembly, 22–25 September 2026."
+  },
+  {
    "id": "legal-recognition-of-the-state-of-palestine",
    "claim": "Recognition of the State of Palestine",
    "kind": "record",
@@ -4789,7 +4848,7 @@
     "israeli-western-only"
    ],
    "ref": "§15.4",
-   "attribution": "Wikipedia, \"International recognition of Palestine\", retrieved 24 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there."
+   "attribution": "Wikipedia, \"International recognition of Palestine\", retrieved 25 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there."
   },
   {
    "id": "long-record-second-intifada",
@@ -5343,6 +5402,318 @@
    "attribution": "—"
   },
   {
+   "id": "world-positions-afghanistan",
+   "claim": "Afghanistan",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2023-10-18",
+   "attribution": "https://mfa.gov.af/en/the-ministry-of-foreign-affairs-of-the-islamic-emirate-of-afghanistan-condemns-in-the-strongest-terms-the-bombardment-of-the-al-mamadani-hospital-in-gaza-by-the-zionist-forces-and-deems-this-act-barba/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-angola",
+   "claim": "Angola",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-09-24",
+   "attribution": "https://gadebate.un.org/sites/default/files/gastatements/79/ao_en.pdf",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-antigua-and-barbuda",
+   "claim": "Antigua and Barbuda",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09",
+   "attribution": "https://gadebate.un.org/sites/default/files/gastatements/80/ag_en.pdf",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-australia",
+   "claim": "Australia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025",
+   "attribution": "https://www.foreignminister.gov.au/minister/penny-wong/transcript/radio-interview-triple-j-hack-dave-marchese",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-austria",
+   "claim": "Austria",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-07",
+   "attribution": "https://euobserver.com/eu-and-the-world/ar997fdd48",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-bahrain",
+   "claim": "Bahrain",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08-15",
+   "attribution": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-bangladesh",
+   "claim": "Bangladesh",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08-15",
+   "attribution": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-barbados",
+   "claim": "Barbados",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09",
+   "attribution": "https://gadebate.un.org/sites/default/files/gastatements/80/bb_en.pdf",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-belize",
+   "claim": "Belize",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2023-10-22",
+   "attribution": "https://lovefm.com/pm-briceno-dismisses-concerns-of-international-repercussions-for-israel-decision/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-bolivia",
+   "claim": "Bolivia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-02-21",
+   "attribution": "https://www.aljazeera.com/news/2024/2/21/colombia-bolivia-back-brazils-lula-in-israel-row-over-gaza-war-comments",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-brazil",
+   "claim": "Brazil",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2026-09-22",
+   "attribution": "https://www.middleeasteye.net/news/un-general-assembly-2026-war-iran-and-gaza-genocide-dominate",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-brunei",
+   "claim": "Brunei",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-08",
+   "attribution": "https://www.mfa.gov.bn/Lists/Press%20Room/news.aspx?id=1129",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-canada",
+   "claim": "Canada",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-17",
+   "attribution": "https://www.ipolitics.ca/2025/09/17/anand-condemns-israeli-military-offensive-in-gaza-but-stops-short-of-labelling-it-a-genocide/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-chad",
+   "claim": "Chad",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08-15",
+   "attribution": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-chile",
+   "claim": "Chile",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-09-25",
+   "attribution": "https://www.infobae.com/america/america-latina/2024/09/25/gabriel-boric-me-rebelo-ante-quienes-pretenden-que-elijamos-entre-el-terrorismo-de-hamas-y-el-genocidio-de-israel/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-china",
+   "claim": "China",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08-17",
+   "attribution": "http://download.china.cn/en/doc/20250817.doc",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-comoros",
+   "claim": "Comoros",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-24",
+   "attribution": "https://gadebate.un.org/sites/default/files/gastatements/80/km_fr.pdf",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-costa-rica",
+   "claim": "Costa Rica",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2026-07",
+   "attribution": "https://www.nacion.com/politica/manuel-tovar-niega-que-acciones-de-israel-en-gaza/4FEAUTIRBJCALJH4MB4KMQ233Y/story/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-czech-republic",
+   "claim": "Czech Republic",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-18",
+   "attribution": "https://www.expats.cz/czech-news/article/czech-news-in-brief-for-september-18-2025-thursday-top-headlines",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-denmark",
+   "claim": "Denmark",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09",
+   "attribution": "https://danishnews.cphpost.dk/article/c5c5b635-6b44-4193-b6c0-9dd1069b00b4",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-djibouti",
+   "claim": "Djibouti",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2023-11-11",
+   "attribution": "https://www.spa.gov.sa/en/N1995662",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-egypt",
+   "claim": "Egypt",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08-05",
+   "attribution": "https://www.aljazeera.com/video/newsfeed/2025/8/5/president-of-egypt-accuses-israel-of-systematic",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-finland",
+   "claim": "Finland",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-05",
+   "attribution": "https://yle.fi/a/74-20163319",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-france",
+   "claim": "France",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-07",
+   "attribution": "https://franceintheus.org/spip.php?article11722",
+   "context": "Has the government called it genocide?"
+  },
+  {
    "id": "children-from-the-occupation-to-the-first-intifada",
    "claim": "From the occupation to the first Intifada",
    "kind": "record",
@@ -5354,6 +5725,643 @@
    "attribution": "No published source covers this period systematically."
   },
   {
+   "id": "world-positions-gambia",
+   "claim": "Gambia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08-15",
+   "attribution": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-ghana",
+   "claim": "Ghana",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09",
+   "attribution": "https://westafricaweekly.com/what-is-going-on-in-gaza-is-genocide-says-ghanas-foreign-minister/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-greece",
+   "claim": "Greece",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-17",
+   "attribution": "https://www.news247.gr/politiki/mitsotakis-gia-gaza-varis-o-oros-genoktonia/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-guyana",
+   "claim": "Guyana",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-04",
+   "attribution": "https://www.thestkittsnevisobserver.com/nothing-short-of-genocide-says-guyanas-president-ali-as-he-calls-for-ceasefire-in-gaza/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-honduras",
+   "claim": "Honduras",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-09-25",
+   "attribution": "https://www.france24.com/es/medio-oriente/20240926-en-la-onu-los-l%C3%ADderes-alertan-sobre-el-peligro-de-la-escalada-del-conflicto-en-l%C3%ADbano",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-iceland",
+   "claim": "Iceland",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-16",
+   "attribution": "https://nyr.ruv.is/english/2025-09-16-fm-decision-on-joining-action-against-israel-to-be-made-next-month-453622",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-indonesia",
+   "claim": "Indonesia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08",
+   "attribution": "https://rri.co.id/en/international/1744359/ri-reaffirms-unwavering-support-for-palestine-amid-ongoing-crisis",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-iran",
+   "claim": "Iran",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09",
+   "attribution": "https://gadebate.un.org/sites/default/files/gastatements/80/ir_en.pdf",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-iraq",
+   "claim": "Iraq",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-05-08",
+   "attribution": "https://www.middleeastmonitor.com/20240508-israel-onslaught-on-gaza-amounts-to-genocide-iraq-prime-minister-says/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-ireland",
+   "claim": "Ireland",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-26",
+   "attribution": "https://www.gov.ie/en/department-of-the-taoiseach/speeches/national-statement-by-taoiseach-miche%c3%a1l-martin-to-the-80th-session-of-the-united-nations-general-assembly-26th-september-2025/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-israel",
+   "claim": "Israel",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2026-09-24",
+   "attribution": "https://time.com/article/2026/09/24/netanyahu-dismisses-gaza-genocide-allegations-as-dozens-of-u-n-delegates-walk-out/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-italy",
+   "claim": "Italy",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-01-11",
+   "attribution": "https://www.ansa.it/english/news/politics/2024/01/11/israel-has-hit-civilians-in-gaza-but-no-genocide-tajani_05247bb7-3385-42c9-a907-565bdba33c12.html",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-japan",
+   "claim": "Japan",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09",
+   "attribution": "https://www.mofa.go.jp/press/kaiken/kaikenwe_000001_00197.html",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-kuwait",
+   "claim": "Kuwait",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08-15",
+   "attribution": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-kyrgyzstan",
+   "claim": "Kyrgyzstan",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-03-18",
+   "attribution": "https://tass.ru/mezhdunarodnaya-panorama/20270189",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-lebanon",
+   "claim": "Lebanon",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-07-03",
+   "attribution": "https://www.middleeastmonitor.com/20240703-lebanon-calls-for-ending-israel-war-on-gaza/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-luxembourg",
+   "claim": "Luxembourg",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-01",
+   "attribution": "https://www.luxtimes.lu/luxembourg/bettel-refuses-to-back-genocide-case-against-israel-claims-neutrality/7296793.html",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-malaysia",
+   "claim": "Malaysia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-05-19",
+   "attribution": "https://www.aljazeera.com/program/talk-to-al-jazeera/2024/5/19/malaysian-pm-cant-deny-us-complicity-in-gaza-genocide",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-maldives",
+   "claim": "Maldives",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-09-24",
+   "attribution": "https://www.aljazeera.com/news/2024/9/24/maldives-leader-says-israel-must-be-held-to-account-for-genocide-in-gaza",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-malta",
+   "claim": "Malta",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-01",
+   "attribution": "https://timesofmalta.com/article/watch-pm-stops-short-defining-israel-assault-gaza-genocide.1078794",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-mauritania",
+   "claim": "Mauritania",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2023-11-11",
+   "attribution": "https://english.ahram.org.eg/News/512037.aspx",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-mexico",
+   "claim": "Mexico",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-22",
+   "attribution": "https://www.latimes.com/world-nation/story/2025-09-22/mexican-president-claudia-sheinbaum-calls-israeli-assault-on-gaza-a-genocide",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-morocco",
+   "claim": "Morocco",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08-15",
+   "attribution": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-namibia",
+   "claim": "Namibia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-24",
+   "attribution": "https://gadebate.un.org/sites/default/files/gastatements/80/na_en.pdf",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-netherlands",
+   "claim": "Netherlands",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-18",
+   "attribution": "https://nltimes.nl/2025/09/18/dutch-government-wont-label-gaza-war-genocide-un-report",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-new-zealand",
+   "claim": "New Zealand",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09",
+   "attribution": "https://www.rnz.co.nz/news/political/573334/nz-govt-will-not-respond-on-latest-accusation-of-genocide-in-gaza",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-niger",
+   "claim": "Niger",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09",
+   "attribution": "https://www.lesahel.org/80e-session-de-lassemblee-generale-des-nations-unies-a-new-york-discours-de-m-ali-mahaman-lamine-zeine-premier-ministre-ministre-de-leconomie-et-des-finan/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-nigeria",
+   "claim": "Nigeria",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08-15",
+   "attribution": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-norway",
+   "claim": "Norway",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-09-02",
+   "attribution": "https://www.utrop.no/nyheter/verden/358554/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-oman",
+   "claim": "Oman",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-05",
+   "attribution": "https://www.middleeasteye.net/live-blog/live-blog-update/oman-condemns-israeli-genocide-palestinian-people",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-pakistan",
+   "claim": "Pakistan",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-26",
+   "attribution": "https://gadebate.un.org/sites/default/files/gastatements/80/pk_en.pdf",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-palestine",
+   "claim": "Palestine",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2026-09-24",
+   "attribution": "https://www.cbc.ca/news/world/mahmoud-abbas-united-nations-general-assembly-9.7356711",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-paraguay",
+   "claim": "Paraguay",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-01-10",
+   "attribution": "https://www.ip.gov.py/ip/2024/01/10/paraguay-rejects-accusations-presented-against-israel-at-the-international-court-of-justice/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-poland",
+   "claim": "Poland",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-30",
+   "attribution": "https://www.polskieradio.pl/395/7785/artykul/3586746,fm-sikorski-calls-gaza-a-terrible-tragedy-stresses-careful-use-of-%E2%80%9Cgenocide",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-portugal",
+   "claim": "Portugal",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-05-13",
+   "attribution": "https://expresso.pt/politica/2024-05-13-paulo-rangel-recusa-que-israel-esteja-a-praticar-um-genocidio-em-gaza-mas-diz-que-catastrofe-humanitaria-exige-condenacao-a2dede0d",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-qatar",
+   "claim": "Qatar",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2026-09-22",
+   "attribution": "https://www.middleeasteye.net/news/un-general-assembly-2026-war-iran-and-gaza-genocide-dominate",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-russia",
+   "claim": "Russia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-10",
+   "attribution": "https://mid.ru/en/foreign_policy/news/2052617/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-sahrawi-republic",
+   "claim": "Sahrawi Republic",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-10-12",
+   "attribution": "https://www.spsrasd.info/en/2025/10/13/12311.html",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-saint-lucia",
+   "claim": "Saint Lucia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09",
+   "attribution": "https://gadebate.un.org/sites/default/files/gastatements/80/lc_en.pdf",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-saint-vincent-and-the-grenadines",
+   "claim": "Saint Vincent and the Grenadines",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-01-11",
+   "attribution": "https://pmoffice.gov.vc/pmoffice/images/PDF/press_release/Media_Release_-_SVGs_Support_for_South_Africas_Case_against_Israel_at_the_ICJ_on_Genocide_in_Gaza.pdf",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-saudi-arabia",
+   "claim": "Saudi Arabia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-07",
+   "attribution": "https://www.arabnews.com/node/2549146/saudi-arabia",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-senegal",
+   "claim": "Senegal",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-06",
+   "attribution": "https://nan.media/en/senegal-palestine-is-being-subjected-to-genocide-with-the-complicity-of-all-the-worlds-powers/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-sierra-leone",
+   "claim": "Sierra Leone",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-24",
+   "attribution": "https://gadebate.un.org/sites/default/files/gastatements/80/sl_en_0.pdf",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-singapore",
+   "claim": "Singapore",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09-22",
+   "attribution": "https://www.mfa.gov.sg/Newsroom/Press-Statements-Transcripts-and-Photos/2025/09/Ministerial-Statements-by-Minister-and-SMS-on-the-Situation-in-the-Middle-East-22-September-2025",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-slovenia",
+   "claim": "Slovenia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-05-21",
+   "attribution": "https://sloveniatimes.com/43569/president-calls-out-israel-for-genocide",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-spain",
+   "claim": "Spain",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2026-09-23",
+   "attribution": "https://www.aa.com.tr/en/europe/spanish-prime-minister-calls-for-un-security-council-reform-condemns-gaza-genocide/4067176",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-sudan",
+   "claim": "Sudan",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08-15",
+   "attribution": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-sweden",
+   "claim": "Sweden",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09",
+   "attribution": "https://www.svt.se/nyheter/utrikes/forskargrupp-anklagar-israel-for-folkmord-i-gaza",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-syria",
+   "claim": "Syria",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-11-11",
+   "attribution": "https://archive.sana.sy/en/?p=341467",
+   "context": "Has the government called it genocide?"
+  },
+  {
    "id": "children-the-nakba-and-the-years-after-it",
    "claim": "The Nakba and the years after it",
    "kind": "record",
@@ -5363,6 +6371,110 @@
    "independence": 0,
    "falls": [],
    "attribution": "No published source disaggregates children for this period."
+  },
+  {
+   "id": "world-positions-timor-leste",
+   "claim": "Timor-Leste",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-09",
+   "attribution": "https://gadebate.un.org/sites/default/files/gastatements/80/tl_en.pdf",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-turkey",
+   "claim": "Turkey",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2026-09-22",
+   "attribution": "https://www.aljazeera.com/news/2026/9/22/erdogan-slams-israels-genocidal-mindset-in-blistering-un-address",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-united-arab-emirates",
+   "claim": "United Arab Emirates",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-08-15",
+   "attribution": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-united-kingdom",
+   "claim": "United Kingdom",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2026-09-08",
+   "attribution": "https://hansard.parliament.uk/Commons/2026-09-08/debates/B9E48476-ADE4-4D56-8EA8-F76BBFF188E8/IsraelAndPalestine",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-uruguay",
+   "claim": "Uruguay",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2025-06",
+   "attribution": "https://ladiaria.com.uy/politica/articulo/2025/6/orsi-dijo-que-la-resolucion-del-fa-sobre-gaza-es-la-declaracion-de-una-fuerza-politica-y-afirmo-que-el-gobierno-es-otra-cosa/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-venezuela",
+   "claim": "Venezuela",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2023-10",
+   "attribution": "https://www.france24.com/es/medio-oriente/20231117-venezuela-arremete-contra-el-presidente-de-israel-por-cuestionar-su-postura-sobre-la-guerra-en-gaza",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-yemen",
+   "claim": "Yemen",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2023-10",
+   "attribution": "https://www.newarab.com/features/yemenis-put-aside-their-woes-unite-gaza-and-palestine",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-zimbabwe",
+   "claim": "Zimbabwe",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "2024-01-16",
+   "attribution": "https://www.heraldonline.co.zw/zanu-pf-hails-sa-suit-against-israeli-genocide/",
+   "context": "Has the government called it genocide?"
   },
   {
    "id": "war-record-all-military-aid-october-2023-to-september-2025-including-t",
@@ -6300,6 +7412,108 @@
    "context": "Where the land went"
   },
   {
+   "id": "world-positions-algeria",
+   "claim": "Algeria",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "icc"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2023-11-07",
+   "attribution": "https://www.middleeastmonitor.com/20231107-algeria-calls-on-icc-to-hold-israel-accountable-for-its-crimes-in-gaza/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-belgium",
+   "claim": "Belgium",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2025",
+   "attribution": "https://www.aljazeera.com/news/2025/12/23/belgium-joins-south-africas-genocide-case-against-israel-at-icj",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-bosnia-and-herzegovina",
+   "claim": "Bosnia and Herzegovina",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "france24"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2025-09-23",
+   "attribution": "https://www.euronews.ba/bosna-i-hercegovina/politika/36836/komsic-sa-beyanijem-prevencija-genocida-ne-smije-biti-politicko-pitanje",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-colombia",
+   "claim": "Colombia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2024-05-02",
+   "attribution": "https://www.icj-cij.org/case/192",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-cuba",
+   "claim": "Cuba",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2024-03-31",
+   "attribution": "https://www.timesofisrael.com/liveblog_entry/cuba-says-it-will-join-south-africas-icj-genocide-case-against-israel/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-fiji",
+   "claim": "Fiji",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2026-03-12",
+   "attribution": "https://www.icj-cij.org/node/206230",
+   "context": "Has the government called it genocide?"
+  },
+  {
    "id": "war-record-german-arms-export-licences-to-israel-by-year",
    "claim": "German arms export licences to Israel, by year",
    "kind": "record",
@@ -6317,6 +7531,40 @@
    "context": "The suppliers' own numbers"
   },
   {
+   "id": "world-positions-germany",
+   "claim": "Germany",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "reuters"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2025-09-18",
+   "attribution": "https://www.reuters.com/world/europe/merz-germany-still-decide-whether-back-sanctions-israel-2025-09-18/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-holy-see",
+   "claim": "Holy See",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "cnn"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2025-07",
+   "attribution": "https://edition.cnn.com/2025/09/18/europe/pope-leo-trump-interview-ai-intl",
+   "context": "Has the government called it genocide?"
+  },
+  {
    "id": "figures-home-office-protective-security-for-faith-sites-2026-27",
    "claim": "Home Office protective security for faith sites, 2026/27",
    "kind": "record",
@@ -6332,6 +7580,23 @@
    "ref": "§21.6, §22",
    "attribution": "Home Office, “Record funding to protect faith communities”, 19 February 2026",
    "context": "Antisemitic incidents in the UK, and what the series tracks"
+  },
+  {
+   "id": "world-positions-hungary",
+   "claim": "Hungary",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2026-03-12",
+   "attribution": "https://www.icj-cij.org/node/206230",
+   "context": "Has the government called it genocide?"
   },
   {
    "id": "elements-icc-arrest-warrants",
@@ -6442,6 +7707,108 @@
    "context": "What the findings rest on"
   },
   {
+   "id": "world-positions-jordan",
+   "claim": "Jordan",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "reuters"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2024-01-12",
+   "attribution": "https://www.reuters.com/world/middle-east/jordan-says-failure-curb-israel-endangers-wider-region-2024-01-12/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-libya",
+   "claim": "Libya",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2024-05-10",
+   "attribution": "https://www.jurist.org/news/2024/05/libya-files-intervention-in-icj-genocide-case-against-israel/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-nicaragua",
+   "claim": "Nicaragua",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "reuters"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2024-10-11",
+   "attribution": "https://www.reuters.com/world/americas/nicaragua-breaks-diplomatic-relations-with-israel-2024-10-11/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-north-korea",
+   "claim": "North Korea",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "reuters"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2023-10-26",
+   "attribution": "https://www.reuters.com/world/north-korea-says-israel-bombed-gaza-hospital-calls-us-accomplice-2023-10-26/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-somalia",
+   "claim": "Somalia",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2024-01",
+   "attribution": "https://web.mfa.gov.so/somalia-applauds-icj-decision-urges-swift-action-to-halt-gaza-genocide-by-israel/",
+   "context": "Has the government called it genocide?"
+  },
+  {
+   "id": "world-positions-south-africa",
+   "claim": "South Africa",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2023-12-29",
+   "attribution": "https://www.icj-cij.org/case/192",
+   "context": "Has the government called it genocide?"
+  },
+  {
    "id": "elements-the-duty-to-prevent-state-by-state",
    "claim": "The duty to prevent, state by state",
    "kind": "record",
@@ -6472,6 +7839,23 @@
    "date": "11 September 2026",
    "attribution": "J50 Declaration on Zionism and Antisemitism, issued on the eve of Rosh Hashanah 5787 and published by the European Jewish Congress",
    "context": "The definition, the declaration and the law"
+  },
+  {
+   "id": "world-positions-united-states",
+   "claim": "United States",
+   "kind": "record",
+   "file": "world-positions.json",
+   "sources": [
+    "icj"
+   ],
+   "origins": [
+    "international-court"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "2026-03-12",
+   "attribution": "https://www.icj-cij.org/sites/default/files/case-related/192/192-20260312-int-02-00-en.pdf",
+   "context": "Has the government called it genocide?"
   },
   {
    "id": "long-record-where-the-weapons-come-from",

@@ -2,13 +2,13 @@
  "meta": {
   "title": "Provenance graph",
   "description": "Every curated claim on this site, joined to the bodies it rests on. Source strings are normalised to entities with stable identifiers, and each entity is classified by origin so that a whole class of source can be removed and the remainder recounted.",
-  "generated": "2026-09-24",
+  "generated": "2026-09-25",
   "origins": [
    {
     "id": "palestinian-official",
     "label": "Palestinian official bodies",
     "sources": 5,
-    "claims": 36
+    "claims": 37
    },
    {
     "id": "palestinian-ngo",
@@ -38,19 +38,19 @@
     "id": "israeli-media",
     "label": "Israeli press",
     "sources": 9,
-    "claims": 83
+    "claims": 84
    },
    {
     "id": "un",
     "label": "United Nations bodies",
     "sources": 22,
-    "claims": 121
+    "claims": 122
    },
    {
     "id": "international-court",
     "label": "International courts",
     "sources": 2,
-    "claims": 16
+    "claims": 26
    },
    {
     "id": "international-ngo",
@@ -74,13 +74,13 @@
     "id": "media",
     "label": "International press",
     "sources": 22,
-    "claims": 83
+    "claims": 89
    },
    {
     "id": "data-project",
     "label": "Open datasets and derived figures",
     "sources": 4,
-    "claims": 61
+    "claims": 62
    },
    {
     "id": "archive",
@@ -91,13 +91,13 @@
   ]
  },
  "summary": {
-  "claims": 470,
-  "attributed": 455,
-  "unattributed": 15,
+  "claims": 571,
+  "attributed": 474,
+  "unattributed": 97,
   "sources": 127,
   "origins": 14,
-  "multi_source": 182,
-  "independent": 150
+  "multi_source": 183,
+  "independent": 151
  },
  "switches": [
   {
@@ -108,9 +108,9 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 425,
-   "falls": 30,
-   "share": 93.4
+   "stands": 443,
+   "falls": 31,
+   "share": 93.5
   },
   {
    "id": "no-israeli",
@@ -122,9 +122,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 378,
-   "falls": 77,
-   "share": 83.1
+   "stands": 396,
+   "falls": 78,
+   "share": 83.5
   },
   {
    "id": "no-un",
@@ -133,9 +133,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 388,
+   "stands": 407,
    "falls": 67,
-   "share": 85.3
+   "share": 85.9
   },
   {
    "id": "no-ngo",
@@ -146,9 +146,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 351,
+   "stands": 370,
    "falls": 104,
-   "share": 77.1
+   "share": 78.1
   },
   {
    "id": "israeli-western-only",
@@ -161,9 +161,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 257,
-   "falls": 198,
-   "share": 56.5
+   "stands": 274,
+   "falls": 200,
+   "share": 57.8
   }
  ],
  "sources": [
@@ -230,6 +230,14 @@
    "origin": "media",
    "origin_label": "International press",
    "claims": 23
+  },
+  {
+   "id": "icj",
+   "name": "International Court of Justice",
+   "kind": "court",
+   "origin": "international-court",
+   "origin_label": "International courts",
+   "claims": 20
   },
   {
    "id": "haaretz",
@@ -312,12 +320,12 @@
    "claims": 11
   },
   {
-   "id": "icj",
-   "name": "International Court of Justice",
-   "kind": "court",
-   "origin": "international-court",
-   "origin_label": "International courts",
-   "claims": 11
+   "id": "reuters",
+   "name": "Reuters",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 9
   },
   {
    "id": "us-congress",
@@ -352,11 +360,35 @@
    "claims": 8
   },
   {
+   "id": "ynet",
+   "name": "Ynet and Yedioth Ahronoth",
+   "kind": "press",
+   "origin": "israeli-media",
+   "origin_label": "Israeli press",
+   "claims": 8
+  },
+  {
    "id": "amnesty",
    "name": "Amnesty International",
    "kind": "ngo",
    "origin": "international-ngo",
    "origin_label": "International human rights organisations",
+   "claims": 7
+  },
+  {
+   "id": "cnn",
+   "name": "CNN",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 7
+  },
+  {
+   "id": "france24",
+   "name": "France 24 and Euronews",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
    "claims": 7
   },
   {
@@ -384,6 +416,14 @@
    "claims": 7
   },
   {
+   "id": "un-ga",
+   "name": "UN General Assembly",
+   "kind": "un",
+   "origin": "un",
+   "origin_label": "United Nations bodies",
+   "claims": 7
+  },
+  {
    "id": "un-sc",
    "name": "UN Security Council",
    "kind": "un",
@@ -397,14 +437,6 @@
    "kind": "un",
    "origin": "un",
    "origin_label": "United Nations bodies",
-   "claims": 7
-  },
-  {
-   "id": "ynet",
-   "name": "Ynet and Yedioth Ahronoth",
-   "kind": "press",
-   "origin": "israeli-media",
-   "origin_label": "Israeli press",
    "claims": 7
   },
   {
@@ -424,27 +456,11 @@
    "claims": 6
   },
   {
-   "id": "cnn",
-   "name": "CNN",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 6
-  },
-  {
-   "id": "france24",
-   "name": "France 24 and Euronews",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 6
-  },
-  {
-   "id": "un-ga",
-   "name": "UN General Assembly",
-   "kind": "un",
-   "origin": "un",
-   "origin_label": "United Nations bodies",
+   "id": "icc",
+   "name": "International Criminal Court",
+   "kind": "court",
+   "origin": "international-court",
+   "origin_label": "International courts",
    "claims": 6
   },
   {
@@ -496,14 +512,6 @@
    "claims": 5
   },
   {
-   "id": "icc",
-   "name": "International Criminal Court",
-   "kind": "court",
-   "origin": "international-court",
-   "origin_label": "International courts",
-   "claims": 5
-  },
-  {
    "id": "idf",
    "name": "Israel Defense Forces",
    "kind": "military",
@@ -517,14 +525,6 @@
    "kind": "ngo",
    "origin": "israeli-ngo",
    "origin_label": "Israeli human rights organisations",
-   "claims": 5
-  },
-  {
-   "id": "reuters",
-   "name": "Reuters",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
    "claims": 5
   },
   {
@@ -557,6 +557,14 @@
    "kind": "un",
    "origin": "un",
    "origin_label": "United Nations bodies",
+   "claims": 5
+  },
+  {
+   "id": "wafa",
+   "name": "WAFA (Palestinian news agency)",
+   "kind": "agency",
+   "origin": "palestinian-official",
+   "origin_label": "Palestinian official bodies",
    "claims": 5
   },
   {
@@ -629,14 +637,6 @@
    "kind": "un",
    "origin": "un",
    "origin_label": "United Nations bodies",
-   "claims": 4
-  },
-  {
-   "id": "wafa",
-   "name": "WAFA (Palestinian news agency)",
-   "kind": "agency",
-   "origin": "palestinian-official",
-   "origin_label": "Palestinian official bodies",
    "claims": 4
   },
   {
@@ -765,6 +765,14 @@
    "kind": "un",
    "origin": "un",
    "origin_label": "United Nations bodies",
+   "claims": 3
+  },
+  {
+   "id": "wikipedia",
+   "name": "Wikipedia (with its own cited sources)",
+   "kind": "reference",
+   "origin": "data-project",
+   "origin_label": "Open datasets and derived figures",
    "claims": 3
   },
   {
@@ -925,14 +933,6 @@
    "kind": "un",
    "origin": "un",
    "origin_label": "United Nations bodies",
-   "claims": 2
-  },
-  {
-   "id": "wikipedia",
-   "name": "Wikipedia (with its own cited sources)",
-   "kind": "reference",
-   "origin": "data-project",
-   "origin_label": "Open datasets and derived figures",
    "claims": 2
   },
   {
@@ -1231,7 +1231,7 @@
   },
   {
    "file": "world-positions.json",
-   "claims": 1
+   "claims": 102
   },
   {
    "file": "chronology.json",
@@ -8066,12 +8066,1263 @@
    "numeric": false,
    "ref": "§15.4",
    "date": "",
-   "source_text": "Wikipedia, \"International recognition of Palestine\", retrieved 24 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there.",
+   "source_text": "Wikipedia, \"International recognition of Palestine\", retrieved 25 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there.",
    "sources": [
     "pal-mfa",
     "wikipedia"
    ],
    "id": "world-positions-recognition-of-the-state-of-palestine"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide",
+   "label": "Has the government called it genocide?",
+   "value": "A position is what the government has said: the head of state or government, the foreign minister or ministry, another minister named as such, an official publication or a formal legal act. Parliaments, parties and opposition figures are n…",
+   "numeric": false,
+   "ref": "§15.1C",
+   "date": "",
+   "source_text": "Compiled from the statements cited in Wikipedia, \"Gaza genocide recognition\" (revision 1376504299), each linked to its own source here, corrected for the governments that have changed since and for the 81st General Assembly, 22–25 September 2026.",
+   "sources": [
+    "un-ga",
+    "wikipedia"
+   ],
+   "id": "world-positions-has-the-government-called-it-genocide"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.joint",
+   "label": "",
+   "value": "reiterate their rejection and condemnation of the crimes of Israeli aggression, genocide, and ethnic cleansing",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-15",
+   "source_text": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "sources": [],
+   "id": "world-positions"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[0]",
+   "label": "Algeria",
+   "value": "Where is the global conscience that has become absent regarding the genocide being committed?",
+   "numeric": false,
+   "ref": "",
+   "date": "2023-11-07",
+   "source_text": "https://www.middleeastmonitor.com/20231107-algeria-calls-on-icc-to-hold-israel-accountable-for-its-crimes-in-gaza/",
+   "sources": [
+    "icc"
+   ],
+   "id": "world-positions-algeria"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[1]",
+   "label": "Bahrain",
+   "value": "reiterate their rejection and condemnation of the crimes of Israeli aggression, genocide, and ethnic cleansing",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-15",
+   "source_text": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "sources": [],
+   "id": "world-positions-bahrain"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[2]",
+   "label": "Indonesia",
+   "value": "firmly rejects the genocide of the Palestinian people by Zionist Israel",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08",
+   "source_text": "https://rri.co.id/en/international/1744359/ri-reaffirms-unwavering-support-for-palestine-amid-ongoing-crisis",
+   "sources": [],
+   "id": "world-positions-indonesia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[3]",
+   "label": "Iraq",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-05-08",
+   "source_text": "https://www.middleeastmonitor.com/20240508-israel-onslaught-on-gaza-amounts-to-genocide-iraq-prime-minister-says/",
+   "sources": [],
+   "id": "world-positions-iraq"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[4]",
+   "label": "Kuwait",
+   "value": "reiterate their rejection and condemnation of the crimes of Israeli aggression, genocide, and ethnic cleansing",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-15",
+   "source_text": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "sources": [],
+   "id": "world-positions-kuwait"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[5]",
+   "label": "Libya",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-05-10",
+   "source_text": "https://www.jurist.org/news/2024/05/libya-files-intervention-in-icj-genocide-case-against-israel/",
+   "sources": [
+    "icj"
+   ],
+   "id": "world-positions-libya"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[6]",
+   "label": "Malaysia",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-05-19",
+   "source_text": "https://www.aljazeera.com/program/talk-to-al-jazeera/2024/5/19/malaysian-pm-cant-deny-us-complicity-in-gaza-genocide",
+   "sources": [],
+   "id": "world-positions-malaysia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[7]",
+   "label": "Mauritania",
+   "value": "carrying out genocide in front of the world",
+   "numeric": false,
+   "ref": "",
+   "date": "2023-11-11",
+   "source_text": "https://english.ahram.org.eg/News/512037.aspx",
+   "sources": [],
+   "id": "world-positions-mauritania"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[8]",
+   "label": "Morocco",
+   "value": "reiterate their rejection and condemnation of the crimes of Israeli aggression, genocide, and ethnic cleansing",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-15",
+   "source_text": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "sources": [],
+   "id": "world-positions-morocco"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[9]",
+   "label": "Somalia",
+   "value": "swift action to halt Gaza genocide by Israel",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-01",
+   "source_text": "https://web.mfa.gov.so/somalia-applauds-icj-decision-urges-swift-action-to-halt-gaza-genocide-by-israel/",
+   "sources": [
+    "icj"
+   ],
+   "id": "world-positions-somalia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[10]",
+   "label": "Tunisia",
+   "value": "war of genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-05",
+   "source_text": "https://english.wafa.ps/Pages/Details/143881",
+   "sources": [
+    "wafa"
+   ],
+   "id": "world-positions-tunisia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[11]",
+   "label": "Turkey",
+   "value": "a genocidal mindset that is never satisfied with killing",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-09-22",
+   "source_text": "https://www.aljazeera.com/news/2026/9/22/erdogan-slams-israels-genocidal-mindset-in-blistering-un-address",
+   "sources": [],
+   "id": "world-positions-turkey"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[12]",
+   "label": "Yemen",
+   "value": "the war crimes and genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2023-10",
+   "source_text": "https://www.newarab.com/features/yemenis-put-aside-their-woes-unite-gaza-and-palestine",
+   "sources": [],
+   "id": "world-positions-yemen"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[13]",
+   "label": "Afghanistan",
+   "value": "calling for the immediate end of the ongoing genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2023-10-18",
+   "source_text": "https://mfa.gov.af/en/the-ministry-of-foreign-affairs-of-the-islamic-emirate-of-afghanistan-condemns-in-the-strongest-terms-the-bombardment-of-the-al-mamadani-hospital-in-gaza-by-the-zionist-forces-and-deems-this-act-barba/",
+   "sources": [],
+   "id": "world-positions-afghanistan"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[14]",
+   "label": "Bangladesh",
+   "value": "reiterate their rejection and condemnation of the crimes of Israeli aggression, genocide, and ethnic cleansing",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-15",
+   "source_text": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "sources": [],
+   "id": "world-positions-bangladesh"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[15]",
+   "label": "Cuba",
+   "value": "Cuba demands that the genocide stop now.",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-03-31",
+   "source_text": "https://www.timesofisrael.com/liveblog_entry/cuba-says-it-will-join-south-africas-icj-genocide-case-against-israel/",
+   "sources": [
+    "icj"
+   ],
+   "id": "world-positions-cuba"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[16]",
+   "label": "Jordan",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-01-12",
+   "source_text": "https://www.reuters.com/world/middle-east/jordan-says-failure-curb-israel-endangers-wider-region-2024-01-12/",
+   "sources": [
+    "reuters"
+   ],
+   "id": "world-positions-jordan"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[18]",
+   "label": "Nicaragua",
+   "value": "Nicaragua applied to intervene in South Africa v. Israel in February 2024 and withdrew the application on 3 April 2025.",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-10-11",
+   "source_text": "https://www.reuters.com/world/americas/nicaragua-breaks-diplomatic-relations-with-israel-2024-10-11/",
+   "sources": [
+    "reuters"
+   ],
+   "id": "world-positions-nicaragua"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[19]",
+   "label": "Pakistan",
+   "value": "Israel's genocidal onslaught has unleashed unspeakable terror upon women and children",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-26",
+   "source_text": "https://gadebate.un.org/sites/default/files/gastatements/80/pk_en.pdf",
+   "sources": [],
+   "id": "world-positions-pakistan"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[20]",
+   "label": "Qatar",
+   "value": "genocide in the fullest sense of the word",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-09-22",
+   "source_text": "https://www.middleeasteye.net/news/un-general-assembly-2026-war-iran-and-gaza-genocide-dominate",
+   "sources": [],
+   "id": "world-positions-qatar"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[21]",
+   "label": "Saudi Arabia",
+   "value": "continued genocidal massacres against the Palestinian people at the hands of the Israeli war machine",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-07",
+   "source_text": "https://www.arabnews.com/node/2549146/saudi-arabia",
+   "sources": [],
+   "id": "world-positions-saudi-arabia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[22]",
+   "label": "United Arab Emirates",
+   "value": "reiterate their rejection and condemnation of the crimes of Israeli aggression, genocide, and ethnic cleansing",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-15",
+   "source_text": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "sources": [],
+   "id": "world-positions-united-arab-emirates"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[26]",
+   "label": "Brunei",
+   "value": "the ongoing genocide and aggression in the Gaza Strip",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-08",
+   "source_text": "https://www.mfa.gov.bn/Lists/Press%20Room/news.aspx?id=1129",
+   "sources": [],
+   "id": "world-positions-brunei"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[27]",
+   "label": "Djibouti",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2023-11-11",
+   "source_text": "https://www.spa.gov.sa/en/N1995662",
+   "sources": [],
+   "id": "world-positions-djibouti"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[29]",
+   "label": "Sudan",
+   "value": "reiterate their rejection and condemnation of the crimes of Israeli aggression, genocide, and ethnic cleansing",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-15",
+   "source_text": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "sources": [],
+   "id": "world-positions-sudan"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[31]",
+   "label": "Czech Republic",
+   "value": "The Babiš government, in office since December 2025, has not stated a view but has blocked EU sanctions on Israeli ministers.",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-18",
+   "source_text": "https://www.expats.cz/czech-news/article/czech-news-in-brief-for-september-18-2025-thursday-top-headlines",
+   "sources": [],
+   "id": "world-positions-czech-republic"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[33]",
+   "label": "Egypt",
+   "value": "systematic genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-05",
+   "source_text": "https://www.aljazeera.com/video/newsfeed/2025/8/5/president-of-egypt-accuses-israel-of-systematic",
+   "sources": [],
+   "id": "world-positions-egypt"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[34]",
+   "label": "Gambia",
+   "value": "reiterate their rejection and condemnation of the crimes of Israeli aggression, genocide, and ethnic cleansing",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-15",
+   "source_text": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "sources": [],
+   "id": "world-positions-gambia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[36]",
+   "label": "Nigeria",
+   "value": "reiterate their rejection and condemnation of the crimes of Israeli aggression, genocide, and ethnic cleansing",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-15",
+   "source_text": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "sources": [],
+   "id": "world-positions-nigeria"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[39]",
+   "label": "Namibia",
+   "value": "indeed, a genocide is being committed against the Palestinian people",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-24",
+   "source_text": "https://gadebate.un.org/sites/default/files/gastatements/80/na_en.pdf",
+   "sources": [],
+   "id": "world-positions-namibia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[40]",
+   "label": "Russia",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-10",
+   "source_text": "https://mid.ru/en/foreign_policy/news/2052617/",
+   "sources": [],
+   "id": "world-positions-russia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[41]",
+   "label": "Belarus",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-06-16",
+   "source_text": "https://www.ynetnews.com/article/b16xj00c11zx",
+   "sources": [
+    "ynet"
+   ],
+   "id": "world-positions-belarus"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[44]",
+   "label": "China",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-17",
+   "source_text": "http://download.china.cn/en/doc/20250817.doc",
+   "sources": [],
+   "id": "world-positions-china"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[46]",
+   "label": "Comoros",
+   "value": "amount[ing] to a genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-24",
+   "source_text": "https://gadebate.un.org/sites/default/files/gastatements/80/km_fr.pdf",
+   "sources": [],
+   "id": "world-positions-comoros"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[52]",
+   "label": "Senegal",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-06",
+   "source_text": "https://nan.media/en/senegal-palestine-is-being-subjected-to-genocide-with-the-complicity-of-all-the-worlds-powers/",
+   "sources": [],
+   "id": "world-positions-senegal"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[53]",
+   "label": "Hungary",
+   "value": "Filed by the Orbán government a month before it lost office. The government of Péter Magyar has not withdrawn it or stated a view of its own.",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-03-12",
+   "source_text": "https://www.icj-cij.org/node/206230",
+   "sources": [
+    "icj"
+   ],
+   "id": "world-positions-hungary"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[55]",
+   "label": "North Korea",
+   "value": "the U.S. is an accomplice who connived at and fostered Israel's genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2023-10-26",
+   "source_text": "https://www.reuters.com/world/north-korea-says-israel-bombed-gaza-hospital-calls-us-accomplice-2023-10-26/",
+   "sources": [
+    "reuters"
+   ],
+   "id": "world-positions-north-korea"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[56]",
+   "label": "Niger",
+   "value": "the Nigerien people unreservedly condemn the Israeli genocide in Gaza",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09",
+   "source_text": "https://www.lesahel.org/80e-session-de-lassemblee-generale-des-nations-unies-a-new-york-discours-de-m-ali-mahaman-lamine-zeine-premier-ministre-ministre-de-leconomie-et-des-finan/",
+   "sources": [],
+   "id": "world-positions-niger"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[60]",
+   "label": "Maldives",
+   "value": "the genocide by Israel in Gaza is a travesty of justice and the international system",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-09-24",
+   "source_text": "https://www.aljazeera.com/news/2024/9/24/maldives-leader-says-israel-must-be-held-to-account-for-genocide-in-gaza",
+   "sources": [],
+   "id": "world-positions-maldives"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[61]",
+   "label": "Ghana",
+   "value": "What is going on in Gaza is genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09",
+   "source_text": "https://westafricaweekly.com/what-is-going-on-in-gaza-is-genocide-says-ghanas-foreign-minister/",
+   "sources": [],
+   "id": "world-positions-ghana"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[63]",
+   "label": "Zimbabwe",
+   "value": "genocidal practices and tendencies",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-01-16",
+   "source_text": "https://www.heraldonline.co.zw/zanu-pf-hails-sa-suit-against-israeli-genocide/",
+   "sources": [],
+   "id": "world-positions-zimbabwe"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[64]",
+   "label": "Chad",
+   "value": "reiterate their rejection and condemnation of the crimes of Israeli aggression, genocide, and ethnic cleansing",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-08-15",
+   "source_text": "https://mofa.gov.qa/en/latest-articles/statements/31-arab--islamic-countries--arab-league--oic--gcc-condemn-so-called--greater-israel-vision",
+   "sources": [],
+   "id": "world-positions-chad"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[66]",
+   "label": "Sierra Leone",
+   "value": "A preventable genocide was not prevented.",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-24",
+   "source_text": "https://gadebate.un.org/sites/default/files/gastatements/80/sl_en_0.pdf",
+   "sources": [],
+   "id": "world-positions-sierra-leone"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[69]",
+   "label": "Angola",
+   "value": "everything it can to prevent the genocide that the world is witnessing live in the Gaza Strip",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-09-24",
+   "source_text": "https://gadebate.un.org/sites/default/files/gastatements/79/ao_en.pdf",
+   "sources": [],
+   "id": "world-positions-angola"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[73]",
+   "label": "Oman",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-05",
+   "source_text": "https://www.middleeasteye.net/live-blog/live-blog-update/oman-condemns-israeli-genocide-palestinian-people",
+   "sources": [],
+   "id": "world-positions-oman"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[74]",
+   "label": "Poland",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-30",
+   "source_text": "https://www.polskieradio.pl/395/7785/artykul/3586746,fm-sikorski-calls-gaza-a-terrible-tragedy-stresses-careful-use-of-%E2%80%9Cgenocide",
+   "sources": [],
+   "id": "world-positions-poland"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[83]",
+   "label": "Iran",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09",
+   "source_text": "https://gadebate.un.org/sites/default/files/gastatements/80/ir_en.pdf",
+   "sources": [],
+   "id": "world-positions-iran"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[94]",
+   "label": "Bosnia and Herzegovina",
+   "value": "genocide was committed in Bosnia and Herzegovina and, unfortunately, today we are witnessing its repetition in Gaza",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-23",
+   "source_text": "https://www.euronews.ba/bosna-i-hercegovina/politika/36836/komsic-sa-beyanijem-prevencija-genocida-ne-smije-biti-politicko-pitanje",
+   "sources": [
+    "france24"
+   ],
+   "id": "world-positions-bosnia-and-herzegovina"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[98]",
+   "label": "South Africa",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2023-12-29",
+   "source_text": "https://www.icj-cij.org/case/192",
+   "sources": [
+    "icj"
+   ],
+   "id": "world-positions-south-africa"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[99]",
+   "label": "Kyrgyzstan",
+   "value": "the madness and the genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-03-18",
+   "source_text": "https://tass.ru/mezhdunarodnaya-panorama/20270189",
+   "sources": [],
+   "id": "world-positions-kyrgyzstan"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[101]",
+   "label": "Timor-Leste",
+   "value": "the situation of famine and genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09",
+   "source_text": "https://gadebate.un.org/sites/default/files/gastatements/80/tl_en.pdf",
+   "sources": [],
+   "id": "world-positions-timor-leste"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[102]",
+   "label": "Paraguay",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-01-10",
+   "source_text": "https://www.ip.gov.py/ip/2024/01/10/paraguay-rejects-accusations-presented-against-israel-at-the-international-court-of-justice/",
+   "sources": [],
+   "id": "world-positions-paraguay"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[104]",
+   "label": "Costa Rica",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-07",
+   "source_text": "https://www.nacion.com/politica/manuel-tovar-niega-que-acciones-de-israel-en-gaza/4FEAUTIRBJCALJH4MB4KMQ233Y/story/",
+   "sources": [],
+   "id": "world-positions-costa-rica"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[105]",
+   "label": "Lebanon",
+   "value": "the ongoing genocide against the Palestinians, namely in Gaza",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-07-03",
+   "source_text": "https://www.middleeastmonitor.com/20240703-lebanon-calls-for-ending-israel-war-on-gaza/",
+   "sources": [],
+   "id": "world-positions-lebanon"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[107]",
+   "label": "Venezuela",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2023-10",
+   "source_text": "https://www.france24.com/es/medio-oriente/20231117-venezuela-arremete-contra-el-presidente-de-israel-por-cuestionar-su-postura-sobre-la-guerra-en-gaza",
+   "sources": [],
+   "id": "world-positions-venezuela"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[109]",
+   "label": "Brazil",
+   "value": "the genocide of women and children perpetrated by Netanyahu's government in Gaza",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-09-22",
+   "source_text": "https://www.middleeasteye.net/news/un-general-assembly-2026-war-iran-and-gaza-genocide-dominate",
+   "sources": [],
+   "id": "world-positions-brazil"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[111]",
+   "label": "Bolivia",
+   "value": "the truth about the genocide that is being committed against the brave Palestinian people",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-02-21",
+   "source_text": "https://www.aljazeera.com/news/2024/2/21/colombia-bolivia-back-brazils-lula-in-israel-row-over-gaza-war-comments",
+   "sources": [],
+   "id": "world-positions-bolivia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[113]",
+   "label": "Chile",
+   "value": "the genocide that Israel is carrying out in Palestine",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-09-25",
+   "source_text": "https://www.infobae.com/america/america-latina/2024/09/25/gabriel-boric-me-rebelo-ante-quienes-pretenden-que-elijamos-entre-el-terrorismo-de-hamas-y-el-genocidio-de-israel/",
+   "sources": [],
+   "id": "world-positions-chile"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[114]",
+   "label": "Guyana",
+   "value": "nothing short of genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-04",
+   "source_text": "https://www.thestkittsnevisobserver.com/nothing-short-of-genocide-says-guyanas-president-ali-as-he-calls-for-ceasefire-in-gaza/",
+   "sources": [],
+   "id": "world-positions-guyana"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[117]",
+   "label": "Uruguay",
+   "value": "The Vice-President, Carolina Cosse, said in October 2025 that it is genocide.",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-06",
+   "source_text": "https://ladiaria.com.uy/politica/articulo/2025/6/orsi-dijo-que-la-resolucion-del-fa-sobre-gaza-es-la-declaracion-de-una-fuerza-politica-y-afirmo-que-el-gobierno-es-otra-cosa/",
+   "sources": [],
+   "id": "world-positions-uruguay"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[120]",
+   "label": "Syria",
+   "value": "massacres, genocide and ethnic cleansing",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-11-11",
+   "source_text": "https://archive.sana.sy/en/?p=341467",
+   "sources": [],
+   "id": "world-positions-syria"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[123]",
+   "label": "Honduras",
+   "value": "an end to the genocide in Gaza",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-09-25",
+   "source_text": "https://www.france24.com/es/medio-oriente/20240926-en-la-onu-los-l%C3%ADderes-alertan-sobre-el-peligro-de-la-escalada-del-conflicto-en-l%C3%ADbano",
+   "sources": [],
+   "id": "world-positions-honduras"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[124]",
+   "label": "Saint Vincent and the Grenadines",
+   "value": "complicit in genocide before our very eyes",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-01-11",
+   "source_text": "https://pmoffice.gov.vc/pmoffice/images/PDF/press_release/Media_Release_-_SVGs_Support_for_South_Africas_Case_against_Israel_at_the_ICJ_on_Genocide_in_Gaza.pdf",
+   "sources": [],
+   "id": "world-positions-saint-vincent-and-the-grenadines"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[125]",
+   "label": "Belize",
+   "value": "committing genocide against the Palestinian people",
+   "numeric": false,
+   "ref": "",
+   "date": "2023-10-22",
+   "source_text": "https://lovefm.com/pm-briceno-dismisses-concerns-of-international-repercussions-for-israel-decision/",
+   "sources": [],
+   "id": "world-positions-belize"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[127]",
+   "label": "Antigua and Barbuda",
+   "value": "we condemn the forced removal of people in Gaza from their homeland and the genocide that has occurred there",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09",
+   "source_text": "https://gadebate.un.org/sites/default/files/gastatements/80/ag_en.pdf",
+   "sources": [],
+   "id": "world-positions-antigua-and-barbuda"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[129]",
+   "label": "Iceland",
+   "value": "this bears all the hallmarks of genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-16",
+   "source_text": "https://nyr.ruv.is/english/2025-09-16-fm-decision-on-joining-action-against-israel-to-be-made-next-month-453622",
+   "sources": [],
+   "id": "world-positions-iceland"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[133]",
+   "label": "Sweden",
+   "value": "await the assessments from an international court before we establish that it is a matter of genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09",
+   "source_text": "https://www.svt.se/nyheter/utrikes/forskargrupp-anklagar-israel-for-folkmord-i-gaza",
+   "sources": [],
+   "id": "world-positions-sweden"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[134]",
+   "label": "Saint Lucia",
+   "value": "the undeniable genocide that is being committed against the people of Palestine, especially in Gaza",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09",
+   "source_text": "https://gadebate.un.org/sites/default/files/gastatements/80/lc_en.pdf",
+   "sources": [],
+   "id": "world-positions-saint-lucia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[135]",
+   "label": "Colombia",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-05-02",
+   "source_text": "https://www.icj-cij.org/case/192",
+   "sources": [
+    "icj"
+   ],
+   "id": "world-positions-colombia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[137]",
+   "label": "Barbados",
+   "value": "the genocidal destruction taking place in Gaza",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09",
+   "source_text": "https://gadebate.un.org/sites/default/files/gastatements/80/bb_en.pdf",
+   "sources": [],
+   "id": "world-positions-barbados"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[141]",
+   "label": "Ireland",
+   "value": "There cannot be business as usual in the face of genocide.",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-26",
+   "source_text": "https://www.gov.ie/en/department-of-the-taoiseach/speeches/national-statement-by-taoiseach-miche%c3%a1l-martin-to-the-80th-session-of-the-united-nations-general-assembly-26th-september-2025/",
+   "sources": [],
+   "id": "world-positions-ireland"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[142]",
+   "label": "Norway",
+   "value": "leave it to the court to assess whether the accusation of genocide is correct",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-09-02",
+   "source_text": "https://www.utrop.no/nyheter/verden/358554/",
+   "sources": [],
+   "id": "world-positions-norway"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[143]",
+   "label": "Spain",
+   "value": "the genocide that Netanyahu is still perpetrating in Gaza",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-09-23",
+   "source_text": "https://www.aa.com.tr/en/europe/spanish-prime-minister-calls-for-un-security-council-reform-condemns-gaza-genocide/4067176",
+   "sources": [],
+   "id": "world-positions-spain"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[144]",
+   "label": "Slovenia",
+   "value": "We are witnessing genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-05-21",
+   "source_text": "https://sloveniatimes.com/43569/president-calls-out-israel-for-genocide",
+   "sources": [],
+   "id": "world-positions-slovenia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[146]",
+   "label": "Mexico",
+   "value": "Mexico intervened in South Africa v. Israel.",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-22",
+   "source_text": "https://www.latimes.com/world-nation/story/2025-09-22/mexican-president-claudia-sheinbaum-calls-israeli-assault-on-gaza-a-genocide",
+   "sources": [],
+   "id": "world-positions-mexico"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[147]",
+   "label": "Canada",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-17",
+   "source_text": "https://www.ipolitics.ca/2025/09/17/anand-condemns-israeli-military-offensive-in-gaza-but-stops-short-of-labelling-it-a-genocide/",
+   "sources": [],
+   "id": "world-positions-canada"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[148]",
+   "label": "Australia",
+   "value": "questions relating to genocide are matters where we respect the independence of international courts and tribunals",
+   "numeric": false,
+   "ref": "",
+   "date": "2025",
+   "source_text": "https://www.foreignminister.gov.au/minister/penny-wong/transcript/radio-interview-triple-j-hack-dave-marchese",
+   "sources": [],
+   "id": "world-positions-australia"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[149]",
+   "label": "United Kingdom",
+   "value": "final determinations made by competent courts before the British Government reach a conclusion",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-09-08",
+   "source_text": "https://hansard.parliament.uk/Commons/2026-09-08/debates/B9E48476-ADE4-4D56-8EA8-F76BBFF188E8/IsraelAndPalestine",
+   "sources": [],
+   "id": "world-positions-united-kingdom"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[150]",
+   "label": "Portugal",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-05-13",
+   "source_text": "https://expresso.pt/politica/2024-05-13-paulo-rangel-recusa-que-israel-esteja-a-praticar-um-genocidio-em-gaza-mas-diz-que-catastrofe-humanitaria-exige-condenacao-a2dede0d",
+   "sources": [],
+   "id": "world-positions-portugal"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[151]",
+   "label": "France",
+   "value": "has no position to take on the legal description of the facts",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-07",
+   "source_text": "https://franceintheus.org/spip.php?article11722",
+   "sources": [],
+   "id": "world-positions-france"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[153]",
+   "label": "Luxembourg",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-01",
+   "source_text": "https://www.luxtimes.lu/luxembourg/bettel-refuses-to-back-genocide-case-against-israel-claims-neutrality/7296793.html",
+   "sources": [],
+   "id": "world-positions-luxembourg"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[154]",
+   "label": "Malta",
+   "value": "I will leave it up to people to arrive at that conclusion on whether this is genocide",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-01",
+   "source_text": "https://timesofmalta.com/article/watch-pm-stops-short-defining-israel-assault-gaza-genocide.1078794",
+   "sources": [],
+   "id": "world-positions-malta"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[157]",
+   "label": "Sahrawi Republic",
+   "value": "perpetrators of crimes against humanity and genocide, such as the occupying Zionist entity",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-10-12",
+   "source_text": "https://www.spsrasd.info/en/2025/10/13/12311.html",
+   "sources": [],
+   "id": "world-positions-sahrawi-republic"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[158]",
+   "label": "Holy See",
+   "value": "Officially, the Holy See does not believe that we can make any declaration at this time",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-07",
+   "source_text": "https://edition.cnn.com/2025/09/18/europe/pope-leo-trump-interview-ai-intl",
+   "sources": [
+    "cnn"
+   ],
+   "id": "world-positions-holy-see"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[159]",
+   "label": "Austria",
+   "value": "one should be very careful with the term 'genocide' and it will ultimately be the [ICJ] that has to judge it",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-07",
+   "source_text": "https://euobserver.com/eu-and-the-world/ar997fdd48",
+   "sources": [],
+   "id": "world-positions-austria"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[160]",
+   "label": "Belgium",
+   "value": "something for the International Court of Justice to determine",
+   "numeric": false,
+   "ref": "",
+   "date": "2025",
+   "source_text": "https://www.aljazeera.com/news/2025/12/23/belgium-joins-south-africas-genocide-case-against-israel-at-icj",
+   "sources": [
+    "icj"
+   ],
+   "id": "world-positions-belgium"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[163]",
+   "label": "Denmark",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09",
+   "source_text": "https://danishnews.cphpost.dk/article/c5c5b635-6b44-4193-b6c0-9dd1069b00b4",
+   "sources": [],
+   "id": "world-positions-denmark"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[166]",
+   "label": "Fiji",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-03-12",
+   "source_text": "https://www.icj-cij.org/node/206230",
+   "sources": [
+    "icj"
+   ],
+   "id": "world-positions-fiji"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[167]",
+   "label": "Finland",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-05",
+   "source_text": "https://yle.fi/a/74-20163319",
+   "sources": [],
+   "id": "world-positions-finland"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[168]",
+   "label": "Germany",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-18",
+   "source_text": "https://www.reuters.com/world/europe/merz-germany-still-decide-whether-back-sanctions-israel-2025-09-18/",
+   "sources": [
+    "reuters"
+   ],
+   "id": "world-positions-germany"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[169]",
+   "label": "Greece",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-17",
+   "source_text": "https://www.news247.gr/politiki/mitsotakis-gia-gaza-varis-o-oros-genoktonia/",
+   "sources": [],
+   "id": "world-positions-greece"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[170]",
+   "label": "Israel",
+   "value": "the biggest lie of the century",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-09-24",
+   "source_text": "https://time.com/article/2026/09/24/netanyahu-dismisses-gaza-genocide-allegations-as-dozens-of-u-n-delegates-walk-out/",
+   "sources": [],
+   "id": "world-positions-israel"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[171]",
+   "label": "Italy",
+   "value": "genocide is something else",
+   "numeric": false,
+   "ref": "",
+   "date": "2024-01-11",
+   "source_text": "https://www.ansa.it/english/news/politics/2024/01/11/israel-has-hit-civilians-in-gaza-but-no-genocide-tajani_05247bb7-3385-42c9-a907-565bdba33c12.html",
+   "sources": [],
+   "id": "world-positions-italy"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[172]",
+   "label": "Japan",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09",
+   "source_text": "https://www.mofa.go.jp/press/kaiken/kaikenwe_000001_00197.html",
+   "sources": [],
+   "id": "world-positions-japan"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[182]",
+   "label": "Netherlands",
+   "value": "The Netherlands intervened in South Africa v. Israel in March 2026.",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-18",
+   "source_text": "https://nltimes.nl/2025/09/18/dutch-government-wont-label-gaza-war-genocide-un-report",
+   "sources": [],
+   "id": "world-positions-netherlands"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[183]",
+   "label": "New Zealand",
+   "value": "interested in what the international courts might say, and that's what we would wait for",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09",
+   "source_text": "https://www.rnz.co.nz/news/political/573334/nz-govt-will-not-respond-on-latest-accusation-of-genocide-in-gaza",
+   "sources": [],
+   "id": "world-positions-new-zealand"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[188]",
+   "label": "Singapore",
+   "value": "",
+   "numeric": false,
+   "ref": "",
+   "date": "2025-09-22",
+   "source_text": "https://www.mfa.gov.sg/Newsroom/Press-Statements-Transcripts-and-Photos/2025/09/Ministerial-Statements-by-Minister-and-SMS-on-the-Situation-in-the-Middle-East-22-September-2025",
+   "sources": [],
+   "id": "world-positions-singapore"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[194]",
+   "label": "United States",
+   "value": "the allegations of “genocide” against Israel are false",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-03-12",
+   "source_text": "https://www.icj-cij.org/sites/default/files/case-related/192/192-20260312-int-02-00-en.pdf",
+   "sources": [
+    "icj"
+   ],
+   "id": "world-positions-united-states"
+  },
+  {
+   "file": "world-positions.json",
+   "path": "genocide.states[195]",
+   "label": "Palestine",
+   "value": "genocidal war that has created an unprecedented humanitarian catastrophe",
+   "numeric": false,
+   "ref": "",
+   "date": "2026-09-24",
+   "source_text": "https://www.cbc.ca/news/world/mahmoud-abbas-united-nations-general-assembly-9.7356711",
+   "sources": [],
+   "id": "world-positions-palestine"
   },
   {
    "file": "chronology.json",

@@ -2314,3 +2314,32 @@ tr.struck td { text-decoration: line-through; color: var(--red); }
   .mp-find input { flex: 1 1 100%; }
   .mp-find .btn { width: 100%; }
 }
+
+/* Where each government stands on genocide: grouped lists under the map. */
+.gs-h { font-size: 15px; margin: 18px 0 8px; color: var(--text); }
+.gs-group { border: 1px solid var(--line); border-radius: 10px; margin: 0 0 8px; background: var(--panel); }
+.gs-group > summary { cursor: pointer; padding: 10px 14px; font-size: 14px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+.gs-count { margin-left: auto; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.gs-swatch { width: 12px; height: 12px; border-radius: 3px; flex: 0 0 12px; background: var(--muted); }
+.gs-swatch.gs-says { background: #1d5a44; }
+.gs-swatch.gs-joint { background: #7ac9a2; }
+.gs-swatch.gs-reversed { background: var(--accent); }
+.gs-swatch.gs-defers { background: var(--blue); }
+.gs-swatch.gs-unclear { background: var(--violet); }
+.gs-swatch.gs-rejects { background: var(--red); }
+.gs-list { list-style: none; margin: 0; padding: 0 14px 10px; display: grid; gap: 10px; }
+.gs-entry { display: grid; gap: 2px; padding-top: 8px; border-top: 1px solid var(--line); font-size: 13.5px; line-height: 1.5; }
+.gs-name { color: var(--text); font-size: 14px; }
+.gs-who { color: var(--muted); font-size: 12.5px; }
+.gs-words { color: var(--text-2); }
+.gs-words q { color: var(--text); }
+.gs-now { color: var(--text-2); }
+.gs-note { color: var(--muted); font-size: 12.5px; }
+.gs-none-list { padding: 0 14px; font-size: 13.5px; line-height: 1.7; color: var(--text-2); }
+.gs-none .chart-note { padding: 0 14px 10px; }
+.chip.static.gs-says { color: var(--green); background: rgba(79, 174, 130, .12); }
+.chip.static.gs-joint { color: var(--green); background: rgba(79, 174, 130, .07); }
+.chip.static.gs-reversed { color: var(--accent); background: var(--accent-soft); }
+.chip.static.gs-defers { color: var(--blue); background: var(--blue-soft); }
+.chip.static.gs-unclear { color: var(--violet); background: rgba(155, 127, 212, .12); }
+.chip.static.gs-rejects { color: var(--red); background: var(--red-soft); }

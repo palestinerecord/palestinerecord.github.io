@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Build data/world-positions.json — where every state stands, country by country.
 
-Three layers the rest of the curated data does not carry:
+Four layers the rest of the curated data does not carry:
 
   recognition  which states recognise the State of Palestine, and when
   sanctions    which states have sanctioned Israeli officials, settlers or
                settlement goods
   icj          which states are party to, or have intervened in, South Africa
                v. Israel at the International Court of Justice
+  genocide     where each state's government stands on whether the conduct in
+               Gaza is genocide (the curated list is in genocide_positions.py)
 
 The recognition list is parsed from the Wikipedia article "International
 recognition of Palestine", which cites the Palestinian Ministry of Foreign
@@ -30,6 +32,10 @@ import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
+
+from genocide_positions import JOINT_2025 as GENOCIDE_JOINT
+from genocide_positions import LABELS as GENOCIDE_LABELS
+from genocide_positions import POSITIONS as GENOCIDE
 
 ROOT = Path(__file__).resolve().parent
 RAW = ROOT / "data" / "raw"
@@ -118,13 +124,19 @@ ICJ = {
     "ref": "§15.1",
     "case": "South Africa v. Israel, Application of the Genocide Convention, ICJ",
     "applicant": ["South Africa"],
-    "interveners": ["Nicaragua", "Colombia", "Libya", "Mexico", "Spain", "Türkiye", "Chile",
-                    "Maldives", "Bolivia", "Ireland", "Cuba", "Brazil", "Belgium", "Namibia",
-                    "Iceland", "Paraguay", "Fiji", "Hungary", "Netherlands", "United States"],
+    # As listed on the Court's own page for the case (icj-cij.org/case/192/intervention),
+    # 25 September 2026. Nicaragua withdrew its application on 3 April 2025 and
+    # Colombia its declaration on 18 September 2026; neither is listed.
+    "interveners": ["Libya", "Mexico", "Spain", "Türkiye", "Chile", "Maldives", "Bolivia",
+                    "Ireland", "Cuba", "Belize", "Brazil", "Comoros", "Belgium", "Paraguay",
+                    "Netherlands", "Iceland", "Namibia", "United States", "Hungary", "Fiji"],
+    "withdrawn": [{"name": "Nicaragua", "date": "3 April 2025"},
+                  {"name": "Colombia", "date": "18 September 2026"}],
     "note": "A declaration of intervention under Article 63 of the Statute concerns the construction "
             "of the Genocide Convention. It is not, in itself, support for either party: the United "
             "States and Hungary filed alongside Namibia, Fiji, the Netherlands and Iceland in March 2026. "
-            "Palestine has also intervened and is not shown on the map as a third state.",
+            "Palestine has also intervened and is not shown on the map as a third state. Nicaragua "
+            "withdrew its application in April 2025 and Colombia its declaration in September 2026.",
 }
 
 # --------------------------------------------------------------- wikitext
@@ -264,6 +276,25 @@ def build(offline):
     icj["applicant"] = [{"name": c, "map": resolve(c)} for c in ICJ["applicant"]]
     icj["interveners"] = [{"name": c, "map": resolve(c)} for c in ICJ["interveners"]]
 
+    # Every state on the recognition list gets a position, "none" where the
+    # curated list has nothing, so the map and the "has not said it" list are
+    # the complement of each other and cannot drift apart. Palestine is added
+    # separately because it is not on a list of states recognising itself.
+    listed = {p["name"]: p for p in GENOCIDE}
+    unknown = sorted(set(listed) - {s["name"] for s in states} - {"Palestine"})
+    if unknown:
+        raise SystemExit("genocide positions for states not on the state list: %s" % ", ".join(unknown))
+    genocide_states = []
+    for s in states + [{"name": "Palestine", "un": False}]:
+        entry = dict(listed.get(s["name"], {"name": s["name"], "position": "none"}))
+        entry["map"] = resolve(s["name"])
+        entry["un"] = s["un"]
+        genocide_states.append(entry)
+    counts = {}
+    for e in genocide_states:
+        if e["un"]:
+            counts[e["position"]] = counts.get(e["position"], 0) + 1
+
     if unresolved:
         raise SystemExit("no shape in %s for these names (nearest match shown):\n%s"
                          % (GEO.name, "\n".join("  %-34s %s" % (k, v)
@@ -300,6 +331,25 @@ def build(offline):
             "measures": sanctions,
         },
         "icj": icj,
+        "genocide": {
+            "title": "Has the government called it genocide?",
+            "ref": "§15.1C",
+            "source": "Compiled from the statements cited in Wikipedia, \"Gaza genocide recognition\" "
+                      "(revision 1376504299), each linked to its own source here, corrected for the "
+                      "governments that have changed since and for the 81st General Assembly, "
+                      "22–25 September 2026.",
+            "note": "A position is what the government has said: the head of state or government, the "
+                    "foreign minister or ministry, another minister named as such, an official "
+                    "publication or a formal legal act. Parliaments, parties and opposition figures are "
+                    "not counted. A state keeps the strongest statement its governments have made unless "
+                    "a later government has reversed it. \"No statement on the record\" means none was "
+                    "found, not that none exists.",
+            "labels": GENOCIDE_LABELS,
+            "joint": GENOCIDE_JOINT,
+            "un_counts": counts,
+            "un_total": 193,
+            "states": genocide_states,
+        },
         "alias": ALIAS,
     }
 
@@ -313,6 +363,7 @@ def main(offline):
              len(data["sanctions"]["measures"]),
              len(data["icj"]["applicant"]) + len(data["icj"]["interveners"]),
              OUT.stat().st_size / 1024))
+    print("  genocide, UN members: %s" % ", ".join("%s %d" % kv for kv in sorted(data["genocide"]["un_counts"].items())))
 
 
 if __name__ == "__main__":

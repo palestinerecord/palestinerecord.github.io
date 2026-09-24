@@ -1553,6 +1553,54 @@ def check_dependencies():
          % (len(deps_check.imports()), len(deps_check.declared()), len(problems)))
 
 
+def check_genocide_positions(files):
+    """Every government position on the genocide question is sourced and dated.
+
+    The map colours a state by what its government has said, so an entry that
+    names a position without a speaker, a date, the words and a link would be
+    an assertion the page cannot back. The counts must also cover every UN
+    member state exactly once: the "has not said it" list is derived as the
+    complement, and a state missing from both would vanish silently.
+    """
+    g = (files.get('world-positions') or {}).get('genocide')
+    if not g:
+        fail('genocide', 'world-positions.json carries no genocide layer')
+        return
+    kinds = set(g.get('labels', {}))
+    un = [s for s in g['states'] if s.get('un')]
+    if len(un) != g.get('un_total'):
+        fail('genocide', '%d UN member states carry a position, not %s' % (len(un), g.get('un_total')))
+    counts = {}
+    for s in un:
+        counts[s['position']] = counts.get(s['position'], 0) + 1
+    if counts != g.get('un_counts'):
+        fail('genocide', 'the stated counts %s do not match the states %s' % (g.get('un_counts'), counts))
+    seen = set()
+    for s in g['states']:
+        name = s.get('name')
+        if name in seen:
+            fail('genocide', '%s appears twice' % name)
+        seen.add(name)
+        if s.get('position') not in kinds:
+            fail('genocide', '%s has the unknown position %r' % (name, s.get('position')))
+            continue
+        if s['position'] == 'none':
+            continue
+        if not s.get('who') or not s.get('date'):
+            fail('genocide', '%s has no speaker or no date' % name)
+        if not (s.get('quote') or s.get('summary')):
+            fail('genocide', '%s has neither the words nor a summary of them' % name)
+        if not re.match(r'^https?://', s.get('source') or ''):
+            fail('genocide', '%s has no source link' % name)
+        if not re.match(r'^\d{4}(-\d{2}(-\d{2})?)?$', s.get('date') or ''):
+            fail('genocide', '%s carries the date %r' % (name, s.get('date')))
+        elif s['date'] > TODAY.isoformat():
+            fail('genocide', '%s is dated in the future' % name)
+        if s['position'] == 'reversed' and not (s.get('now') and re.match(r'^https?://', s.get('now_source') or '')):
+            fail('genocide', '%s is marked reversed without a sourced account of the reversal' % name)
+    note('  genocide: %d UN member states, %s' % (len(un), ', '.join('%s %d' % kv for kv in sorted(counts.items()))))
+
+
 def check_share_card(files):
     """The home page's share card states three figures; they should be today's.
 
@@ -1840,6 +1888,7 @@ def main():
         check_constituency(files)
         check_figures_against_markdown(files)
         check_curated_duplicates(files)
+        check_genocide_positions(files)
         check_share_card(files)
         check_dependencies()
         check_chart_wiring()
