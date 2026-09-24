@@ -898,6 +898,43 @@ def check_constituency(files):
             if not isinstance(lean[2], int) or lean[2] < sat + len(signed) or lean[2] > sat + len(motions):
                 fail('constituency', '%s has %s chances, outside %d to %d'
                      % (m['name'], lean[2], sat + len(signed), sat + len(motions)))
+        # The score, recomputed from its published weights and parts.
+        sc = meta.get('score') or {}
+        score = m.get('score')
+        if not (isinstance(score, list) and len(score) == 5):
+            fail('constituency', '%s carries no score' % m['name'])
+        else:
+            vw = sc.get('vote_weights', {})
+            vp = vmax = 0
+            for d in divisions:
+                key = str(d['id'])
+                cast = m['votes'].get(key)
+                if key not in vw or cast == 'not-a-member':
+                    continue
+                vmax += vw[key]
+                if cast in ('absent', None):
+                    continue
+                took = d.get('pro_side') if cast == 'forced-teller' else cast.replace('-teller', '')
+                vp += vw[key] if took == d.get('pro_side') else -vw[key]
+            if score[1] != vp:
+                fail('constituency', '%s carries %s vote points but the votes give %s' % (m['name'], score[1], vp))
+            wp = (sc.get('word_points') or {}).get((m.get('genocide') or {}).get('stance'), 0)
+            if score[3] != wp:
+                fail('constituency', '%s carries %s word points but the stance gives %s' % (m['name'], score[3], wp))
+            credit = m.get('motion_credit') or [0, 0, 0, 0]
+            against = sum(1 for i in m.get('signed', []) if 0 <= i < len(motions) and motions[i]['side'] == 'against')
+            mp = (sc.get('motion_points', 0) * min(1.0, credit[0] / credit[1]) if credit[1] else 0) \
+                - sc.get('against_motion', 0) * against
+            if abs(score[2] - mp) > 0.6:
+                fail('constituency', '%s carries %s motion points but the credit gives %.1f' % (m['name'], score[2], mp))
+            if abs(score[0] - (score[1] + score[2] + score[3])) > 0.11:
+                fail('constituency', '%s has a score of %s that is not the sum of its parts' % (m['name'], score[0]))
+            most = vmax + (sc.get('motion_points', 0) if credit[1] else 0) + (sc.get('word_points') or {}).get('says', 0)
+            if score[4] != most:
+                fail('constituency', '%s has a possible score of %s, not %s' % (m['name'], score[4], most))
+            g = m.get('genocide')
+            if g and not (g.get('quote') and (g.get('url') or '').startswith('https://hansard.parliament.uk/')):
+                fail('constituency', '%s has a genocide statement with no quotation or Hansard link' % m['name'])
         for i in m.get('interests', []):
             if not (i.get('summary') or '').strip():
                 fail('constituency', 'an interest against %s carries no summary' % m['name'])

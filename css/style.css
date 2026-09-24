@@ -2158,8 +2158,39 @@ tr.struck td { text-decoration: line-through; color: var(--red); }
 .mp-motions > summary { cursor: pointer; font-size: 13.5px; color: var(--text-2); padding: 4px 0; }
 .mp-motions p { margin: 6px 0; font-size: 13.5px; line-height: 1.5; display: grid; gap: 1px; }
 .mp-motions a { color: var(--text); }
+/* The score bar: centred on zero, three shades for its three parts. */
+.mp-score-bar { position: relative; display: block; background: var(--line); }
+.mp-score-bar i { position: absolute; top: 0; bottom: 0; }
+.mp-score-bar i.votes.pro { background: #3f8f55; }
+.mp-score-bar i.motions.pro { background: #6aa876; }
+.mp-score-bar i.words.pro { background: #a6d3ac; }
+.mp-score-bar i.votes.con { background: #b8433c; }
+.mp-score-bar i.motions.con { background: #d2534c; }
+.mp-score-bar i.words.con { background: #e8948e; }
+.mp-score-zero { position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--muted); }
+.mp-score-total { font-weight: 600; color: var(--text-2); margin-right: 6px; font-variant-numeric: tabular-nums; }
+.mp-score-total.pro { color: var(--green); }
+.mp-score-total.con { color: var(--red); }
+.mp-score-parts { color: var(--muted); }
+.mp-key-list { margin: 4px 0 10px; padding: 0; list-style: none; display: grid; gap: 8px; max-width: 980px; }
+.mp-key-list li { font-size: 14px; line-height: 1.6; color: var(--text-2); padding-left: 22px; position: relative; }
+.mp-key { position: absolute; left: 0; top: 6px; width: 14px; height: 10px; border-radius: 2px; }
+.mp-key.votes { background: #3f8f55; }
+.mp-key.motions { background: #6aa876; }
+.mp-key.words { background: #a6d3ac; }
+.mp-stand-grid .mp-stand-part { display: grid; gap: 3px; padding: 8px 0; border-top: 1px solid var(--line); }
+.mp-stand-grid .mp-stand-part:first-child { border-top: 0; padding-top: 0; }
+.mp-part-h { color: var(--text) !important; font-size: 14.5px; }
+.mp-vote-points { list-style: none; margin: 2px 0; padding: 0; display: grid; gap: 2px; max-width: 460px; }
+.mp-vote-points li { display: flex; justify-content: space-between; gap: 12px; font-size: 13.5px; }
+.mp-vote-points li em { color: var(--muted); font-style: normal; }
+.mp-vote-points b { font-weight: 600; color: var(--muted); }
+.mp-vote-points b.pro { color: var(--green); }
+.mp-vote-points b.con { color: var(--red); }
+.mp-word-quote { margin: 4px 0; padding: 6px 12px; border-left: 3px solid var(--line-hi); color: var(--text); font-size: 14px; line-height: 1.55; }
 @media (max-width: 640px) {
   .mp-lean-bar { flex-basis: 110px; }
+  .mp-score-parts { display: block; }
   .mp-lean-n { white-space: normal; }
 }
 .mp-vote.v-forced { color: var(--accent); border-color: rgba(217, 164, 65, .45); }

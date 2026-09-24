@@ -1757,6 +1757,7 @@ const App = (function () {
     const voteChips = Array.prototype.slice.call(document.querySelectorAll('#mp-votes .chip'));
     const alsoChips = Array.prototype.slice.call(document.querySelectorAll('#mp-also .chip'));
     const recordChips = Array.prototype.slice.call(document.querySelectorAll('#mp-record .chip'));
+    const wordChips = Array.prototype.slice.call(document.querySelectorAll('#mp-words .chip'));
     const divisionSelect = document.getElementById('mp-division');
     const sortSelect = document.getElementById('mp-sort');
     const search = document.getElementById('mp-search');
@@ -1766,6 +1767,7 @@ const App = (function () {
     let vote = 'all';
     let also = 'all';
     let record = 'all';
+    let words = 'all';
 
     function passesAlso(el) {
       if (also === 'spoke') return el.dataset.spoke !== '0';
@@ -1782,6 +1784,8 @@ const App = (function () {
           && (vote === 'all' || el.dataset['v' + division] === vote)
           && passesAlso(el)
           && (record === 'all' || el.dataset.record === record)
+          && (words === 'all' || el.dataset.words === words
+            || (words === 'against' && (el.dataset.words === 'disputes' || el.dataset.words === 'denies')))
           && (!q || (el.dataset.text || '').indexOf(q) >= 0);
         el.hidden = !ok;
         // A row filtered away while it was open would otherwise come back open.
@@ -1830,6 +1834,8 @@ const App = (function () {
         // Net acts first, then acts on the pro-Palestinian side, the order
         // the list is drawn in.
         if (key === 'lean') return -(parseInt(el.dataset.lean || '0', 10) * 10000 + parseInt(el.dataset.leanPro || '0', 10));
+        if (key === 'score') return -parseFloat(el.dataset.score || '0');
+        if (key === 'share') return -parseFloat(el.dataset.share || '0');
         if (key && key.indexOf('sig') === 0) return -parseInt(el.dataset[key] || '0', 10);
         return 0;
       };
@@ -1851,6 +1857,10 @@ const App = (function () {
     alsoChips.forEach((chip) => chip.addEventListener('click', () => {
       also = chip.dataset.also;
       pick(alsoChips, chip, apply);
+    }));
+    wordChips.forEach((chip) => chip.addEventListener('click', () => {
+      words = chip.dataset.words;
+      pick(wordChips, chip, apply);
     }));
     recordChips.forEach((chip) => chip.addEventListener('click', () => {
       record = chip.dataset.record;
@@ -1946,11 +1956,13 @@ const App = (function () {
       vote = 'all';
       also = 'all';
       record = 'all';
+      words = 'all';
       if (search) search.value = '';
       partyChips.forEach((c, i) => c.classList.toggle('active', i === 0));
       voteChips.forEach((c, i) => c.classList.toggle('active', i === 0));
       alsoChips.forEach((c, i) => c.classList.toggle('active', i === 0));
       recordChips.forEach((c, i) => c.classList.toggle('active', i === 0));
+      wordChips.forEach((c, i) => c.classList.toggle('active', i === 0));
       apply();
       el.open = true;
       el.classList.add('search-target');

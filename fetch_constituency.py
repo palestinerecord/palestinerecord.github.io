@@ -290,6 +290,14 @@ def fetch_motions():
                              if not s.get('IsWithdrawn')),
             'withdrawn': sorted([s['MemberId'], (s.get('WithdrawnDate') or '')[:10]]
                                 for s in detail.get('Sponsors') or [] if s.get('IsWithdrawn')),
+            # The member who tabled the motion is first in the sponsoring
+            # order and up to five co-sponsors follow; everyone after them
+            # signed. Tabling or sponsoring a motion is a stronger act than
+            # adding a name to it, and constituency.py weighs it so.
+            'tabled_by': next((s['MemberId'] for s in detail.get('Sponsors') or []
+                               if s.get('SponsoringOrder') == 1), None),
+            'cosponsors': sorted(s['MemberId'] for s in detail.get('Sponsors') or []
+                                 if 2 <= (s.get('SponsoringOrder') or 0) <= 6 and not s.get('IsWithdrawn')),
         })
         time.sleep(0.2)
     write('uk_motions.json', out)

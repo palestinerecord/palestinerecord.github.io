@@ -29,6 +29,33 @@
    "on another subject, and matched only because it mentions one of the search terms": 18
   },
   "members_who_signed": 205,
+  "score": {
+   "vote_weights": {
+    "1666": 10,
+    "h2014": 10,
+    "1586": 6,
+    "1705": 6,
+    "2078": 4
+   },
+   "motion_points": 20,
+   "tabled_extra": 2,
+   "cosponsor_extra": 1,
+   "against_motion": 4,
+   "word_points": {
+    "says": 10,
+    "risk": 5,
+    "disputes": -5,
+    "denies": -10
+   },
+   "most": 66,
+   "words": {
+    "says": 47,
+    "risk": 36,
+    "disputes": 1,
+    "denies": 5
+   },
+   "words_read": 89
+  },
   "suspensions": [
    {
     "name": "Zarah Sultana",
@@ -3757,6 +3784,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -3831,6 +3871,19 @@
     11,
     0,
     131
+   ],
+   "score": [
+    17.5,
+    16,
+    1.5,
+    0,
+    56
+   ],
+   "motion_credit": [
+    9,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -3892,6 +3945,19 @@
     0,
     0,
     13
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    30
+   ],
+   "motion_credit": [
+    0,
+    10,
+    0,
+    0
    ]
   },
   {
@@ -3982,7 +4048,27 @@
     25,
     0,
     98
-   ]
+   ],
+   "score": [
+    15.9,
+    0,
+    5.9,
+    10,
+    34
+   ],
+   "motion_credit": [
+    27,
+    92,
+    0,
+    2
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Why do they not accept the conclusions of UK-based lawyers, including Supreme Court justices, who signed a letter to the Prime Minister in May last year to confirm that a genocide is being perpetrated?",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 5200,
@@ -4051,6 +4137,19 @@
     4,
     1,
     98
+   ],
+   "score": [
+    -3.1,
+    -4,
+    0.9,
+    0,
+    34
+   ],
+   "motion_credit": [
+    4,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -4114,6 +4213,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -4177,7 +4289,27 @@
     0,
     4,
     131
-   ]
+   ],
+   "score": [
+    -36.0,
+    -26,
+    0.0,
+    -10,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "denies",
+    "quote": "To conclude, although formal determination of genocide should be based on the final judgment of a competent court, the Conservative Government when in power were very clear that Israel’s actions in Gaza cannot be described as genocide—",
+    "date": "2025-02-12",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-02-12/debates/75D29B6C-6EDB-4A1C-99FB-CAA66A67DFDB/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 5196,
@@ -4286,7 +4418,27 @@
     44,
     0,
     98
-   ]
+   ],
+   "score": [
+    23.3,
+    0,
+    13.3,
+    10,
+    34
+   ],
+   "motion_credit": [
+    61,
+    92,
+    3,
+    11
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "The world is the witness of crimes against humanity, and while the UK Government are in denial about what constitutes a genocide, millions of our own citizens, Amnesty International—as mentioned before—and many nations from the international community are not.",
+    "date": "2025-02-12",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-02-12/debates/75D29B6C-6EDB-4A1C-99FB-CAA66A67DFDB/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 5159,
@@ -4349,6 +4501,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -4410,6 +4575,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -4473,7 +4651,27 @@
     0,
     1,
     98
-   ]
+   ],
+   "score": [
+    1.0,
+    -4,
+    0.0,
+    5,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Paragraph 8 of the resolution referred to the UN Human Rights Council’s finding that genocide was taking place, which the hon. Gentleman has mentioned, and it highlighted the obligation of all state parties to prevent genocide under article 1 of the UN convention.",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 4736,
@@ -4572,6 +4770,19 @@
     29,
     0,
     131
+   ],
+   "score": [
+    10.6,
+    6,
+    4.6,
+    0,
+    56
+   ],
+   "motion_credit": [
+    28,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -4638,7 +4849,27 @@
     1,
     0,
     13
-   ]
+   ],
+   "score": [
+    12.0,
+    0,
+    2.0,
+    10,
+    30
+   ],
+   "motion_credit": [
+    1,
+    10,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "I might be new to this House, but I have watched every single debate in this place on Palestine and Israel, not just for the last three years since the genocide but for years before that.",
+    "date": "2026-09-14",
+    "debate": "Israel and Palestine",
+    "url": "https://hansard.parliament.uk/Commons/2026-09-14/debates/91E6D250-A8AA-42DD-9A33-71CE446FEE13/IsraelAndPalestine"
+   }
   },
   {
    "id": 4371,
@@ -4747,7 +4978,27 @@
     41,
     0,
     131
-   ]
+   ],
+   "score": [
+    40.9,
+    22,
+    8.9,
+    10,
+    56
+   ],
+   "motion_credit": [
+    54,
+    122,
+    1,
+    14
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "The people can see that, by denying food and medicine to the starving and the dying, and repeatedly forcing the displacement of millions of civilians, Israel is, beyond any dispute, in flagrant breach of the genocide convention.",
+    "date": "2025-11-24",
+    "debate": "Gaza: Humanitarian Obligations",
+    "url": "https://hansard.parliament.uk/Commons/2025-11-24/debates/8BB76C8A-F2FE-4705-9BB5-563E49C2D641/GazaHumanitarianObligations"
+   }
   },
   {
    "id": 4874,
@@ -4808,6 +5059,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -4869,6 +5133,19 @@
     0,
     2,
     131
+   ],
+   "score": [
+    -16.0,
+    -16,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "donations": [
     {
@@ -4944,6 +5221,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -5005,6 +5295,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -5068,7 +5371,27 @@
     0,
     1,
     98
-   ]
+   ],
+   "score": [
+    1.0,
+    -4,
+    0.0,
+    5,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Fifteen international human rights organisations have now warned that the GHF may face legal consequences for “aiding and abetting, or otherwise being complicit, in crimes under international law, including war crimes, crimes against humanity, or genocide.”",
+    "date": "2025-06-24",
+    "debate": "Gaza: Humanitarian Situation",
+    "url": "https://hansard.parliament.uk/Commons/2025-06-24/debates/10E9E30F-407B-4D3C-BCAC-A6BA98BC6DA6/GazaHumanitarianSituation"
+   }
   },
   {
    "id": 5206,
@@ -5135,6 +5458,19 @@
     4,
     1,
     98
+   ],
+   "score": [
+    -3.1,
+    -4,
+    0.9,
+    0,
+    34
+   ],
+   "motion_credit": [
+    4,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -5196,6 +5532,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -5259,6 +5608,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -5322,6 +5684,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -5391,6 +5766,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -5458,6 +5846,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -5519,6 +5920,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -5588,6 +6002,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "donations": [
     {
@@ -5665,6 +6092,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -5726,6 +6166,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -5829,6 +6282,19 @@
     41,
     0,
     131
+   ],
+   "score": [
+    30.2,
+    22,
+    8.2,
+    0,
+    56
+   ],
+   "motion_credit": [
+    50,
+    122,
+    0,
+    12
    ]
   },
   {
@@ -5892,6 +6358,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -5965,6 +6444,19 @@
     10,
     1,
     131
+   ],
+   "score": [
+    13.3,
+    12,
+    1.3,
+    0,
+    56
+   ],
+   "motion_credit": [
+    8,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -6028,6 +6520,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -6091,6 +6596,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -6173,7 +6691,27 @@
     19,
     0,
     131
-   ]
+   ],
+   "score": [
+    24.0,
+    16,
+    3.0,
+    5,
+    56
+   ],
+   "motion_credit": [
+    18,
+    122,
+    0,
+    1
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Given the ICJ’s interim ruling that the risk of genocide in Gaza is plausible, will the Minister suspend UK arms sales to Israel to ensure that UK weapons are not used to kill innocent Palestinians?",
+    "date": "2024-01-29",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2024-01-29/debates/08A4F56A-BA86-4A9B-BAF8-854C100E498B/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 4360,
@@ -6237,6 +6775,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -14.0,
+    -10,
+    -4.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -6298,6 +6849,19 @@
     0,
     0,
     131
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -6419,6 +6983,19 @@
     53,
     0,
     131
+   ],
+   "score": [
+    32.2,
+    22,
+    10.2,
+    0,
+    56
+   ],
+   "motion_credit": [
+    62,
+    122,
+    0,
+    12
    ]
   },
   {
@@ -6480,6 +7057,19 @@
     0,
     0,
     132
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -6543,6 +7133,19 @@
     0,
     1,
     131
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -6606,6 +7209,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "donations": [
     {
@@ -6689,6 +7305,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -6752,6 +7381,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -6821,6 +7463,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -6882,6 +7537,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -6967,6 +7635,19 @@
     20,
     0,
     98
+   ],
+   "score": [
+    9.8,
+    0,
+    9.8,
+    0,
+    34
+   ],
+   "motion_credit": [
+    45,
+    92,
+    11,
+    3
    ],
    "interests": [
     {
@@ -7058,6 +7739,19 @@
     0,
     1,
     132
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -7127,6 +7821,19 @@
     0,
     1,
     131
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -7196,6 +7903,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -7285,7 +8005,27 @@
     21,
     0,
     131
-   ]
+   ],
+   "score": [
+    33.3,
+    20,
+    3.3,
+    10,
+    56
+   ],
+   "motion_credit": [
+    20,
+    122,
+    0,
+    2
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Will the Foreign Secretary send military personnel to protect Palestinians from the genocide being committed by the IDF?",
+    "date": "2025-07-21",
+    "debate": "Middle East",
+    "url": "https://hansard.parliament.uk/Commons/2025-07-21/debates/63777B96-419B-48EF-BFFE-A5668D51FEA9/MiddleEast"
+   }
   },
   {
    "id": 1171,
@@ -7359,6 +8099,19 @@
     6,
     1,
     132
+   ],
+   "score": [
+    22.5,
+    22,
+    0.5,
+    0,
+    66
+   ],
+   "motion_credit": [
+    3,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -7426,6 +8179,19 @@
     2,
     0,
     132
+   ],
+   "score": [
+    16.0,
+    16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -7489,6 +8255,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -7622,6 +8401,26 @@
     0,
     98
    ],
+   "score": [
+    33.1,
+    4,
+    19.1,
+    10,
+    34
+   ],
+   "motion_credit": [
+    88,
+    92,
+    4,
+    13
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "This Government’s approach, in saying that there is not a genocide, further emboldens Israel in what it is doing.",
+    "date": "2025-09-10",
+    "debate": "Occupied Palestinian Territories: Humanitarian Access",
+    "url": "https://hansard.parliament.uk/Commons/2025-09-10/debates/3526102F-E666-498A-A948-9F6D8373F657/OccupiedPalestinianTerritoriesHumanitarianAccess"
+   },
    "interests": [
     {
      "category": "Donations and other support (including loans) for activities as an MP",
@@ -7692,6 +8491,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -7764,7 +8576,27 @@
     3,
     1,
     131
-   ]
+   ],
+   "score": [
+    17.2,
+    12,
+    0.2,
+    5,
+    56
+   ],
+   "motion_credit": [
+    1,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "What will the Government do to insist that Israel abides by the ICJ’s ruling that it must investigate and “punish the direct and public incitement to genocide”?",
+    "date": "2024-01-29",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2024-01-29/debates/08A4F56A-BA86-4A9B-BAF8-854C100E498B/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 5108,
@@ -7831,6 +8663,19 @@
     2,
     1,
     98
+   ],
+   "score": [
+    -3.6,
+    -4,
+    0.4,
+    0,
+    34
+   ],
+   "motion_credit": [
+    2,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -7925,7 +8770,27 @@
     30,
     0,
     98
-   ]
+   ],
+   "score": [
+    22.0,
+    4,
+    8.0,
+    10,
+    34
+   ],
+   "motion_credit": [
+    37,
+    92,
+    1,
+    6
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Does my hon. Friend agree that allying with Israel while it carries out a genocide will bring about the end of the international world order as we know it?",
+    "date": "2025-03-18",
+    "debate": "Military Co-operation with Israel",
+    "url": "https://hansard.parliament.uk/Commons/2025-03-18/debates/C5900243-EC83-4C59-BABA-F3EDEE9D8E60/MilitaryCoOperationWithIsrael"
+   }
   },
   {
    "id": 449,
@@ -7992,6 +8857,19 @@
     1,
     1,
     132
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -8073,7 +8951,27 @@
     16,
     1,
     98
-   ]
+   ],
+   "score": [
+    4.5,
+    -4,
+    3.5,
+    5,
+    34
+   ],
+   "motion_credit": [
+    16,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "The view of many experts is that we are witnessing a genocide.",
+    "date": "2026-02-24",
+    "debate": "Gaza Healthcare System",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-24/debates/7CDE665D-72ED-46E6-B690-781FE687932D/GazaHealthcareSystem"
+   }
   },
   {
    "id": 5025,
@@ -8137,6 +9035,19 @@
     1,
     1,
     101
+   ],
+   "score": [
+    -3.8,
+    -4,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    95,
+    0,
+    0
    ]
   },
   {
@@ -8206,6 +9117,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -8273,6 +9197,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -8376,6 +9313,19 @@
     40,
     0,
     132
+   ],
+   "score": [
+    37.9,
+    32,
+    5.9,
+    0,
+    66
+   ],
+   "motion_credit": [
+    36,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -8437,6 +9387,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -8498,6 +9461,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -8561,6 +9537,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -8637,7 +9626,27 @@
     8,
     0,
     132
-   ]
+   ],
+   "score": [
+    36.8,
+    26,
+    0.8,
+    10,
+    66
+   ],
+   "motion_credit": [
+    5,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "What additional steps will the Foreign Secretary take to stave off this genocide?",
+    "date": "2025-05-20",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-20/debates/CD60AEFA-5138-47B1-A8B6-DC108014F0ED/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 5128,
@@ -8700,6 +9709,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -8761,6 +9783,19 @@
     2,
     1,
     131
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -8820,6 +9855,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "interests": [
     {
@@ -8894,6 +9942,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -8955,6 +10016,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -9018,6 +10092,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -9123,7 +10210,27 @@
     43,
     0,
     131
-   ]
+   ],
+   "score": [
+    39.3,
+    20,
+    9.3,
+    10,
+    56
+   ],
+   "motion_credit": [
+    57,
+    122,
+    1,
+    15
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Anything less is not just a failure of diplomacy; it is an absolute failure of moral leadership in the face of a genocide.",
+    "date": "2025-06-10",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-06-10/debates/C7FB0E3A-A89C-43B8-8BF3-EE295B851DA1/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 4391,
@@ -9186,6 +10293,19 @@
     2,
     0,
     131
+   ],
+   "score": [
+    16.0,
+    16,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -9255,7 +10375,27 @@
     6,
     0,
     131
-   ]
+   ],
+   "score": [
+    22.0,
+    16,
+    1.0,
+    5,
+    56
+   ],
+   "motion_credit": [
+    6,
+    122,
+    0,
+    2
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Does the Minister agree that it would be reckless to continue to grant weapons licences and to export weapons to Israel, as that could support a potential act of genocide and render UK Government officials complicit in genocide under article 25 of the Rome statute?",
+    "date": "2024-01-08",
+    "debate": "Israel and Palestine",
+    "url": "https://hansard.parliament.uk/Commons/2024-01-08/debates/AFB7B263-C4D4-4B7E-B7B3-EED39C534A63/IsraelAndPalestine"
+   }
   },
   {
    "id": 4366,
@@ -9318,6 +10458,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -9403,6 +10556,19 @@
     20,
     0,
     98
+   ],
+   "score": [
+    4.3,
+    0,
+    4.3,
+    0,
+    34
+   ],
+   "motion_credit": [
+    20,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -9488,6 +10654,19 @@
     17,
     0,
     131
+   ],
+   "score": [
+    24.3,
+    22,
+    2.3,
+    0,
+    56
+   ],
+   "motion_credit": [
+    14,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -9564,7 +10743,27 @@
     8,
     1,
     132
-   ]
+   ],
+   "score": [
+    23.8,
+    18,
+    0.8,
+    5,
+    66
+   ],
+   "motion_credit": [
+    5,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "If Mr Smotrich’s plan is carried out in the coming days, does my right hon. Friend agree that he will have to use a different word: genocide?",
+    "date": "2025-05-20",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-20/debates/CD60AEFA-5138-47B1-A8B6-DC108014F0ED/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 4389,
@@ -9627,6 +10826,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -9688,6 +10900,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -9757,6 +10982,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -9818,6 +11056,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -9879,6 +11130,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "interests": [
     {
@@ -9956,6 +11220,19 @@
     1,
     4,
     132
+   ],
+   "score": [
+    -16.0,
+    -16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -10017,6 +11294,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -10149,7 +11439,27 @@
     68,
     0,
     98
-   ]
+   ],
+   "score": [
+    30.3,
+    4,
+    16.3,
+    10,
+    34
+   ],
+   "motion_credit": [
+    75,
+    92,
+    0,
+    8
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "The UK can either reaffirm its commitment to human rights, as a nation that upholds democratic values, or it can continue to aid and abet a state whose human rights abuses now extend to genocidal actions—it cannot do both.",
+    "date": "2025-03-18",
+    "debate": "Military Co-operation with Israel",
+    "url": "https://hansard.parliament.uk/Commons/2025-03-18/debates/C5900243-EC83-4C59-BABA-F3EDEE9D8E60/MilitaryCoOperationWithIsrael"
+   }
   },
   {
    "id": 5102,
@@ -10273,7 +11583,27 @@
     60,
     0,
     98
-   ]
+   ],
+   "score": [
+    28.6,
+    4,
+    14.6,
+    10,
+    34
+   ],
+   "motion_credit": [
+    67,
+    92,
+    0,
+    8
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "To ensure that the UK is not complicit in Israel’s ongoing genocide, illegal occupation and system of apartheid, will the Minister immediately suspend the direct and indirect supply, sale or transfer—including transit and trans-shipment—to Israel of all weapons, munitions and other military and security equipment?",
+    "date": "2025-04-02",
+    "debate": "Gaza: Israeli Military Operations",
+    "url": "https://hansard.parliament.uk/Commons/2025-04-02/debates/349E0461-B542-4FA6-951C-2C4D7D1D2400/GazaIsraeliMilitaryOperations"
+   }
   },
   {
    "id": 1491,
@@ -10336,6 +11666,19 @@
     2,
     0,
     132
+   ],
+   "score": [
+    16.0,
+    16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -10399,6 +11742,19 @@
     0,
     1,
     105
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    99,
+    0,
+    0
    ]
   },
   {
@@ -10460,6 +11816,19 @@
     0,
     0,
     131
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -10521,6 +11890,19 @@
     0,
     1,
     131
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -10590,6 +11972,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -20.0,
+    -20,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -10651,6 +12046,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "interests": [
     {
@@ -10735,6 +12143,19 @@
     1,
     98
    ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
+   ],
    "donations": [
     {
      "ref": "V0587562",
@@ -10809,6 +12230,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -10870,6 +12304,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -10931,6 +12378,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -10994,6 +12454,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -11057,6 +12530,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -11120,6 +12606,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -11183,6 +12682,19 @@
     0,
     1,
     131
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "donations": [
     {
@@ -11285,6 +12797,26 @@
     1,
     98
    ],
+   "score": [
+    -14.0,
+    -4,
+    0.0,
+    -10,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "denies",
+    "quote": "Genocide is a quite specific crime, and frankly it is not my belief that this was the intent of the Israel Defence Forces.",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   },
    "donations": [
     {
      "ref": "V0833174",
@@ -11427,6 +12959,19 @@
     64,
     0,
     98
+   ],
+   "score": [
+    14.6,
+    0,
+    14.6,
+    0,
+    34
+   ],
+   "motion_credit": [
+    67,
+    92,
+    0,
+    3
    ]
   },
   {
@@ -11494,6 +13039,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -11581,6 +13139,19 @@
     24,
     0,
     131
+   ],
+   "score": [
+    19.9,
+    16,
+    3.9,
+    0,
+    56
+   ],
+   "motion_credit": [
+    24,
+    122,
+    0,
+    2
    ]
   },
   {
@@ -11644,6 +13215,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -11707,6 +13291,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -11768,6 +13365,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -11831,6 +13441,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -11892,6 +13515,19 @@
     0,
     0,
     131
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -11959,6 +13595,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -12020,6 +13669,19 @@
     0,
     1,
     131
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -12083,6 +13745,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -12144,6 +13819,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -12205,6 +13893,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -12269,6 +13970,19 @@
     1,
     0,
     98
+   ],
+   "score": [
+    0.2,
+    0,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -12330,6 +14044,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -12393,6 +14120,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -12454,6 +14194,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -20.0,
+    -20,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -12515,6 +14268,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -12676,6 +14442,19 @@
     93,
     0,
     131
+   ],
+   "score": [
+    39.4,
+    22,
+    17.4,
+    0,
+    56
+   ],
+   "motion_credit": [
+    106,
+    122,
+    0,
+    16
    ]
   },
   {
@@ -12737,6 +14516,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -12831,6 +14623,19 @@
     29,
     0,
     98
+   ],
+   "score": [
+    7.8,
+    0,
+    7.8,
+    0,
+    34
+   ],
+   "motion_credit": [
+    36,
+    92,
+    1,
+    5
    ]
   },
   {
@@ -12899,6 +14704,19 @@
     5,
     0,
     98
+   ],
+   "score": [
+    1.1,
+    0,
+    1.1,
+    0,
+    34
+   ],
+   "motion_credit": [
+    5,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -12960,6 +14778,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -13038,6 +14869,19 @@
     13,
     0,
     98
+   ],
+   "score": [
+    2.8,
+    0,
+    2.8,
+    0,
+    34
+   ],
+   "motion_credit": [
+    13,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -13119,6 +14963,19 @@
     19,
     0,
     131
+   ],
+   "score": [
+    24.6,
+    22,
+    2.6,
+    0,
+    56
+   ],
+   "motion_credit": [
+    16,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -13186,6 +15043,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -13249,6 +15119,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -13316,6 +15199,19 @@
     3,
     1,
     132
+   ],
+   "score": [
+    6.3,
+    6,
+    0.3,
+    0,
+    66
+   ],
+   "motion_credit": [
+    2,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -13409,6 +15305,19 @@
     28,
     0,
     98
+   ],
+   "score": [
+    7.6,
+    0,
+    7.6,
+    0,
+    34
+   ],
+   "motion_credit": [
+    35,
+    92,
+    0,
+    7
    ]
   },
   {
@@ -13472,6 +15381,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -20.0,
+    -20,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -13550,6 +15472,19 @@
     15,
     0,
     98
+   ],
+   "score": [
+    3.5,
+    0,
+    3.5,
+    0,
+    34
+   ],
+   "motion_credit": [
+    16,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -13613,6 +15548,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -13674,6 +15622,19 @@
     0,
     0,
     132
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -13735,6 +15696,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -13798,6 +15772,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -13900,7 +15887,27 @@
     39,
     0,
     131
-   ]
+   ],
+   "score": [
+    32.6,
+    16,
+    6.6,
+    10,
+    56
+   ],
+   "motion_credit": [
+    40,
+    122,
+    0,
+    3
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Civil society and communities in Gaza have led the efforts on the frontline in the face of two years of genocide and decades of Israeli siege, occupation and military violence.",
+    "date": "2025-11-18",
+    "debate": "Gaza and Sudan",
+    "url": "https://hansard.parliament.uk/Commons/2025-11-18/debates/60EB31A0-A9B0-4AC8-A011-71028D5E2975/GazaAndSudan"
+   }
   },
   {
    "id": 5091,
@@ -13961,6 +15968,19 @@
     0,
     1,
     95
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    89,
+    0,
+    0
    ]
   },
   {
@@ -14084,7 +16104,27 @@
     55,
     0,
     131
-   ]
+   ],
+   "score": [
+    40.5,
+    20,
+    10.5,
+    10,
+    56
+   ],
+   "motion_credit": [
+    64,
+    122,
+    1,
+    10
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "To many of us, it has always been abundantly clear that what is taking place in Palestine does indeed constitute a genocide.",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 5181,
@@ -14145,6 +16185,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -14206,6 +16259,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -14273,6 +16339,19 @@
     2,
     1,
     98
+   ],
+   "score": [
+    -3.3,
+    -4,
+    0.7,
+    0,
+    34
+   ],
+   "motion_credit": [
+    3,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -14336,6 +16415,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -14399,6 +16491,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -14462,6 +16567,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -14527,6 +16645,19 @@
     2,
     0,
     98
+   ],
+   "score": [
+    0.4,
+    0,
+    0.4,
+    0,
+    34
+   ],
+   "motion_credit": [
+    2,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -14588,6 +16719,19 @@
     0,
     1,
     99
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    44
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -14649,6 +16793,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "donations": [
     {
@@ -14771,7 +16928,27 @@
     46,
     0,
     131
-   ]
+   ],
+   "score": [
+    38.7,
+    20,
+    8.7,
+    10,
+    56
+   ],
+   "motion_credit": [
+    53,
+    122,
+    4,
+    2
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Whether directly or indirectly, arming a genocide is still arming a genocide.",
+    "date": "2026-09-08",
+    "debate": "Israel and Palestine",
+    "url": "https://hansard.parliament.uk/Commons/2026-09-08/debates/B9E48476-ADE4-4D56-8EA8-F76BBFF188E8/IsraelAndPalestine"
+   }
   },
   {
    "id": 5240,
@@ -14834,7 +17011,27 @@
     0,
     0,
     98
-   ]
+   ],
+   "score": [
+    5.0,
+    0,
+    0.0,
+    5,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Experts say that Israel is committing genocide in Gaza and working to ethnically cleanse the west bank.",
+    "date": "2026-05-21",
+    "debate": "Middle East",
+    "url": "https://hansard.parliament.uk/Commons/2026-05-21/debates/9A5F0C8A-FA18-4401-8206-992ADC68B499/MiddleEast"
+   }
   },
   {
    "id": 5029,
@@ -14895,6 +17092,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -14982,6 +17192,19 @@
     24,
     1,
     98
+   ],
+   "score": [
+    1.2,
+    -4,
+    5.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    24,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -15047,6 +17270,19 @@
     2,
     0,
     98
+   ],
+   "score": [
+    0.4,
+    0,
+    0.4,
+    0,
+    34
+   ],
+   "motion_credit": [
+    2,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -15108,6 +17344,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -15171,6 +17420,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -15238,6 +17500,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -15299,6 +17574,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -15365,6 +17653,19 @@
     3,
     1,
     98
+   ],
+   "score": [
+    -3.3,
+    -4,
+    0.7,
+    0,
+    34
+   ],
+   "motion_credit": [
+    3,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -15426,6 +17727,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -15487,6 +17801,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -15557,6 +17884,19 @@
     4,
     132
    ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -15625,6 +17965,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -15688,6 +18041,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -15749,6 +18115,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -15871,6 +18250,26 @@
     0,
     98
    ],
+   "score": [
+    27.0,
+    0,
+    17.0,
+    10,
+    34
+   ],
+   "motion_credit": [
+    78,
+    92,
+    8,
+    6
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "The current genocide in Gaza is just the latest in that process.",
+    "date": "2025-05-20",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-20/debates/CD60AEFA-5138-47B1-A8B6-DC108014F0ED/IsraelAndTheOccupiedPalestinianTerritories"
+   },
    "interests": [
     {
      "category": "Donations and other support (including loans) for activities as an MP",
@@ -15961,6 +18360,19 @@
     18,
     0,
     98
+   ],
+   "score": [
+    3.9,
+    0,
+    3.9,
+    0,
+    34
+   ],
+   "motion_credit": [
+    18,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -16022,6 +18434,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -16083,6 +18508,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -16146,6 +18584,19 @@
     1,
     0,
     132
+   ],
+   "score": [
+    10.0,
+    10,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "statements": [
     133
@@ -16236,6 +18687,19 @@
     22,
     0,
     98
+   ],
+   "score": [
+    4.8,
+    0,
+    4.8,
+    0,
+    34
+   ],
+   "motion_credit": [
+    22,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -16299,6 +18763,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -16366,6 +18843,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -20.0,
+    -20,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "interests": [
     {
@@ -16437,6 +18927,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -16500,6 +19003,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -16563,6 +19079,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -16626,6 +19155,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -20.0,
+    -20,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -16765,7 +19307,27 @@
     70,
     0,
     131
-   ]
+   ],
+   "score": [
+    38.8,
+    16,
+    12.8,
+    10,
+    56
+   ],
+   "motion_credit": [
+    78,
+    122,
+    2,
+    6
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "While the genocide continues in Gaza, the west bank is in an ongoing campaign of ethnic cleansing.",
+    "date": "2025-07-02",
+    "debate": "West Bank: Forced Displacement",
+    "url": "https://hansard.parliament.uk/Commons/2025-07-02/debates/DE09685B-147D-4332-985A-51451AB0F0A1/WestBankForcedDisplacement"
+   }
   },
   {
    "id": 5275,
@@ -16828,6 +19390,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -16889,6 +19464,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -17040,7 +19628,27 @@
     89,
     0,
     131
-   ]
+   ],
+   "score": [
+    44.2,
+    22,
+    17.2,
+    5,
+    56
+   ],
+   "motion_credit": [
+    105,
+    122,
+    1,
+    17
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "There is therefore a risk that we are witnesses to genocide.",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 4511,
@@ -17103,7 +19711,27 @@
     2,
     0,
     131
-   ]
+   ],
+   "score": [
+    21.0,
+    16,
+    0.0,
+    5,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Is this genocide, like Srebrenica and Rwanda?",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 4797,
@@ -17166,6 +19794,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -17229,6 +19870,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -17292,6 +19946,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -17381,6 +20048,19 @@
     33,
     0,
     132
+   ],
+   "score": [
+    41.7,
+    36,
+    5.7,
+    0,
+    66
+   ],
+   "motion_credit": [
+    35,
+    122,
+    1,
+    5
    ]
   },
   {
@@ -17448,6 +20128,19 @@
     1,
     4,
     132
+   ],
+   "score": [
+    -23.8,
+    -20,
+    -3.8,
+    0,
+    66
+   ],
+   "motion_credit": [
+    1,
+    122,
+    0,
+    0
    ],
    "interests": [
     {
@@ -17537,6 +20230,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -17606,6 +20312,19 @@
     7,
     0,
     132
+   ],
+   "score": [
+    26.7,
+    26,
+    0.7,
+    0,
+    66
+   ],
+   "motion_credit": [
+    4,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -17669,6 +20388,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -17730,6 +20462,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -17798,6 +20543,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -18.0,
+    -6,
+    -12.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -17861,6 +20619,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -17922,6 +20693,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -20.0,
+    -20,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -17985,6 +20769,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "interests": [
     {
@@ -18063,6 +20860,19 @@
     4,
     131
    ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -18133,6 +20943,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -18211,6 +21034,19 @@
     15,
     0,
     98
+   ],
+   "score": [
+    3.5,
+    0,
+    3.5,
+    0,
+    34
+   ],
+   "motion_credit": [
+    16,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -18300,6 +21136,19 @@
     26,
     0,
     98
+   ],
+   "score": [
+    5.9,
+    0,
+    5.9,
+    0,
+    34
+   ],
+   "motion_credit": [
+    27,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -18363,6 +21212,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -18440,6 +21302,19 @@
     12,
     1,
     98
+   ],
+   "score": [
+    -1.4,
+    -4,
+    2.6,
+    0,
+    34
+   ],
+   "motion_credit": [
+    12,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -18501,6 +21376,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -18564,6 +21452,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -18653,6 +21554,19 @@
     25,
     1,
     131
+   ],
+   "score": [
+    15.9,
+    16,
+    -0.1,
+    0,
+    56
+   ],
+   "motion_credit": [
+    24,
+    122,
+    0,
+    1
    ]
   },
   {
@@ -18731,7 +21645,27 @@
     9,
     0,
     131
-   ]
+   ],
+   "score": [
+    22.1,
+    16,
+    1.1,
+    5,
+    56
+   ],
+   "motion_credit": [
+    7,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Only this week, Omer Bartov, an Israeli-born historian and professor of holocaust and genocide studies at Brown University, warned that “Israel now has been conducting a war for weeks and weeks in which it has killed thousands and thousands of Palestinians.",
+    "date": "2023-12-12",
+    "debate": "Arms Export Licences: Israel",
+    "url": "https://hansard.parliament.uk/Commons/2023-12-12/debates/BF12F435-8E9A-44B0-AA34-ADA9D01616E0/ArmsExportLicencesIsrael"
+   }
   },
   {
    "id": 4418,
@@ -18800,6 +21734,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -18874,6 +21821,19 @@
     5,
     1,
     132
+   ],
+   "score": [
+    12.5,
+    12,
+    0.5,
+    0,
+    66
+   ],
+   "motion_credit": [
+    3,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -18960,6 +21920,19 @@
     23,
     0,
     98
+   ],
+   "score": [
+    5.7,
+    0,
+    5.7,
+    0,
+    34
+   ],
+   "motion_credit": [
+    26,
+    92,
+    0,
+    3
    ]
   },
   {
@@ -19023,6 +21996,19 @@
     0,
     1,
     131
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -19092,6 +22078,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -19181,6 +22180,19 @@
     24,
     0,
     98
+   ],
+   "score": [
+    7.0,
+    0,
+    7.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    32,
+    92,
+    0,
+    8
    ]
   },
   {
@@ -19242,6 +22254,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -19305,6 +22330,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -19390,7 +22428,27 @@
     20,
     0,
     98
-   ]
+   ],
+   "score": [
+    11.1,
+    0,
+    6.1,
+    5,
+    34
+   ],
+   "motion_credit": [
+    28,
+    92,
+    1,
+    6
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "There are already clear obligations on the Government to prevent genocide in Gaza arising from the ICJ’s January 2024 order.",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 5064,
@@ -19451,6 +22509,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -19512,6 +22583,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -19584,6 +22668,19 @@
     9,
     1,
     98
+   ],
+   "score": [
+    -2.0,
+    -4,
+    2.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    9,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -19653,6 +22750,19 @@
     0,
     2,
     131
+   ],
+   "score": [
+    -12.0,
+    -12,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "interests": [
     {
@@ -19726,6 +22836,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -19787,6 +22910,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -19850,6 +22986,19 @@
     2,
     0,
     132
+   ],
+   "score": [
+    16.0,
+    16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -19911,6 +23060,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -19974,6 +23136,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -20035,6 +23210,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -20102,7 +23290,27 @@
     2,
     1,
     98
-   ]
+   ],
+   "score": [
+    1.4,
+    -4,
+    0.4,
+    5,
+    34
+   ],
+   "motion_credit": [
+    2,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Given the UK’s commitment to a two-state solution, and given our obligations under international law, can he explain how the Government justify engaging in trade negotiations with Israel while the UN is warning us about genocide in Gaza, and does he agree that pursuing a trade deal in these circumstances would undermine both our ability to broker a two-state solution and our positive obligation to act to prevent violations of international law?",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 5323,
@@ -20163,6 +23371,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -20273,6 +23494,19 @@
     49,
     0,
     131
+   ],
+   "score": [
+    34.0,
+    26,
+    8.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    49,
+    122,
+    1,
+    2
    ]
   },
   {
@@ -20354,6 +23588,19 @@
     0,
     98
    ],
+   "score": [
+    3.9,
+    0,
+    3.9,
+    0,
+    34
+   ],
+   "motion_credit": [
+    18,
+    92,
+    0,
+    3
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -20424,6 +23671,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -20490,7 +23750,27 @@
     2,
     4,
     132
-   ]
+   ],
+   "score": [
+    -10.5,
+    -16,
+    0.5,
+    5,
+    66
+   ],
+   "motion_credit": [
+    3,
+    122,
+    1,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Is the Minister aware that many Friends of Israel worldwide, notwithstanding narrow legal definitions, are asking this moral question: when is genocide not genocide?",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 5031,
@@ -20553,6 +23833,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -20614,6 +23907,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -20680,6 +23986,19 @@
     1,
     0,
     98
+   ],
+   "score": [
+    0.2,
+    0,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -20743,6 +24062,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -20814,7 +24146,27 @@
     6,
     1,
     98
-   ]
+   ],
+   "score": [
+    7.3,
+    -4,
+    1.3,
+    10,
+    34
+   ],
+   "motion_credit": [
+    6,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "However, looking at the evidence that we have all seen—air attacks, ground attacks, displacement of people, targeting of health services, attacks on aid workers, access to food as a method of control, and deliberate and consistent blocking of humanitarian aid—it is difficult to see how those courts will not reach the decision that what we are now seeing is genocide.",
+    "date": "2025-09-10",
+    "debate": "Occupied Palestinian Territories: Humanitarian Access",
+    "url": "https://hansard.parliament.uk/Commons/2025-09-10/debates/3526102F-E666-498A-A948-9F6D8373F657/OccupiedPalestinianTerritoriesHumanitarianAccess"
+   }
   },
   {
    "id": 5137,
@@ -20879,6 +24231,19 @@
     2,
     1,
     98
+   ],
+   "score": [
+    -3.6,
+    -4,
+    0.4,
+    0,
+    34
+   ],
+   "motion_credit": [
+    2,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -20942,6 +24307,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -21010,6 +24388,19 @@
     3,
     0,
     98
+   ],
+   "score": [
+    1.1,
+    0,
+    1.1,
+    0,
+    34
+   ],
+   "motion_credit": [
+    5,
+    92,
+    1,
+    0
    ]
   },
   {
@@ -21091,6 +24482,26 @@
     1,
     98
    ],
+   "score": [
+    10.1,
+    -4,
+    4.1,
+    10,
+    34
+   ],
+   "motion_credit": [
+    19,
+    92,
+    2,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "While people starve or are killed while queuing for food, and while those sheltering in the Caritas Jerusalem shelter were bombed at the weekend, it really does begin to look as though there is genocide unfolding before our eyes.",
+    "date": "2025-07-21",
+    "debate": "Middle East",
+    "url": "https://hansard.parliament.uk/Commons/2025-07-21/debates/63777B96-419B-48EF-BFFE-A5668D51FEA9/MiddleEast"
+   },
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -21198,6 +24609,19 @@
     32,
     0,
     130
+   ],
+   "score": [
+    21.6,
+    16,
+    5.6,
+    0,
+    50
+   ],
+   "motion_credit": [
+    34,
+    122,
+    0,
+    4
    ]
   },
   {
@@ -21264,6 +24688,19 @@
     1,
     1,
     98
+   ],
+   "score": [
+    -3.8,
+    -4,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -21327,6 +24764,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -21394,6 +24844,19 @@
     0,
     2,
     132
+   ],
+   "score": [
+    -10.0,
+    -10,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -21463,6 +24926,19 @@
     0,
     2,
     132
+   ],
+   "score": [
+    -16.0,
+    -16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -21524,6 +25000,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -21605,6 +25094,19 @@
     18,
     0,
     31
+   ],
+   "score": [
+    15.7,
+    0,
+    15.7,
+    0,
+    30
+   ],
+   "motion_credit": [
+    22,
+    28,
+    0,
+    4
    ]
   },
   {
@@ -21668,6 +25170,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -20.0,
+    -20,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -21733,6 +25248,19 @@
     3,
     1,
     131
+   ],
+   "score": [
+    2.3,
+    2,
+    0.3,
+    0,
+    56
+   ],
+   "motion_credit": [
+    2,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -21800,6 +25328,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "donations": [
     {
@@ -21877,6 +25418,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -21938,6 +25492,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -22002,6 +25569,19 @@
     0,
     2,
     98
+   ],
+   "score": [
+    -8.0,
+    -4,
+    -4.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -22063,6 +25643,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -22146,6 +25739,19 @@
     20,
     0,
     98
+   ],
+   "score": [
+    5.0,
+    0,
+    5.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    23,
+    92,
+    0,
+    3
    ]
   },
   {
@@ -22253,6 +25859,19 @@
     46,
     0,
     132
+   ],
+   "score": [
+    38.4,
+    30,
+    8.4,
+    0,
+    66
+   ],
+   "motion_credit": [
+    51,
+    122,
+    0,
+    9
    ]
   },
   {
@@ -22316,6 +25935,19 @@
     2,
     0,
     132
+   ],
+   "score": [
+    16.0,
+    16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -22379,6 +26011,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -22440,6 +26085,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -22509,6 +26167,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "interests": [
     {
@@ -22584,6 +26255,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -22659,6 +26343,19 @@
     7,
     1,
     132
+   ],
+   "score": [
+    22.7,
+    22,
+    0.7,
+    0,
+    66
+   ],
+   "motion_credit": [
+    4,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -22728,6 +26425,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -22797,6 +26507,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -22858,6 +26581,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -22941,6 +26677,19 @@
     20,
     0,
     98
+   ],
+   "score": [
+    4.3,
+    0,
+    4.3,
+    0,
+    34
+   ],
+   "motion_credit": [
+    20,
+    92,
+    0,
+    0
    ],
    "interests": [
     {
@@ -23034,6 +26783,19 @@
     23,
     0,
     98
+   ],
+   "score": [
+    8.8,
+    4,
+    4.8,
+    0,
+    34
+   ],
+   "motion_credit": [
+    22,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -23102,6 +26864,19 @@
     0,
     8,
     132
+   ],
+   "score": [
+    -48.0,
+    -36,
+    -12.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -23165,6 +26940,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -23231,6 +27019,19 @@
     1,
     0,
     98
+   ],
+   "score": [
+    0.2,
+    0,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -23294,6 +27095,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -23357,6 +27171,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -23418,6 +27245,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -23560,7 +27400,27 @@
     82,
     0,
     132
-   ]
+   ],
+   "score": [
+    65.2,
+    36,
+    19.2,
+    10,
+    66
+   ],
+   "motion_credit": [
+    117,
+    122,
+    11,
+    18
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "There is also the number of journalists killed—more than 300—because part of this genocide is to prevent the reporting of the genocide.",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 5070,
@@ -23643,6 +27503,19 @@
     18,
     0,
     98
+   ],
+   "score": [
+    4.3,
+    0,
+    4.3,
+    0,
+    34
+   ],
+   "motion_credit": [
+    20,
+    92,
+    1,
+    0
    ]
   },
   {
@@ -23706,6 +27579,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -23769,6 +27655,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -23856,6 +27755,19 @@
     22,
     0,
     98
+   ],
+   "score": [
+    5.0,
+    0,
+    5.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    23,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -23917,6 +27829,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -23986,7 +27911,27 @@
     0,
     0,
     132
-   ]
+   ],
+   "score": [
+    10.0,
+    0,
+    0.0,
+    10,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "I think that the Foreign Secretary was right to say that genocide and war crimes—my words, not his—are not the way to get the hostages released.",
+    "date": "2025-05-20",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-20/debates/CD60AEFA-5138-47B1-A8B6-DC108014F0ED/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 5187,
@@ -24047,6 +27992,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -24111,6 +28069,26 @@
     3,
     131
    ],
+   "score": [
+    -25.0,
+    -20,
+    0.0,
+    -5,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "disputes",
+    "quote": "But does the Minister agree that we need to be very careful about the use of the word “genocide” and that we do not devalue the word?",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   },
    "interests": [
     {
      "category": "Miscellaneous",
@@ -24184,6 +28162,19 @@
     1,
     1,
     98
+   ],
+   "score": [
+    -3.8,
+    -4,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -24247,6 +28238,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -24310,6 +28314,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "donations": [
     {
@@ -24415,6 +28432,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -24483,6 +28513,19 @@
     1,
     0,
     128
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    50
+   ],
+   "motion_credit": [
+    0,
+    120,
+    0,
+    0
    ]
   },
   {
@@ -24575,7 +28618,27 @@
     24,
     0,
     131
-   ]
+   ],
+   "score": [
+    31.3,
+    22,
+    4.3,
+    5,
+    56
+   ],
+   "motion_credit": [
+    26,
+    122,
+    1,
+    3
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "I understand that the Government desire to defer to a competent court, but I note that it took nine years between the atrocities being carried out against the Yazidi people in 2014 and the recognition by the British Government in 2023 that Daesh had committed a genocide.",
+    "date": "2026-09-14",
+    "debate": "Israel and Palestine",
+    "url": "https://hansard.parliament.uk/Commons/2026-09-14/debates/91E6D250-A8AA-42DD-9A33-71CE446FEE13/IsraelAndPalestine"
+   }
   },
   {
    "id": 4647,
@@ -24636,6 +28699,19 @@
     0,
     2,
     131
+   ],
+   "score": [
+    -12.0,
+    -12,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -24705,6 +28781,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -24784,6 +28873,19 @@
     14,
     0,
     98
+   ],
+   "score": [
+    3.0,
+    0,
+    3.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    14,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -24845,6 +28947,19 @@
     1,
     1,
     132
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -24912,6 +29027,19 @@
     0,
     1,
     131
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -24975,6 +29103,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -25038,6 +29179,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "donations": [
     {
@@ -25115,6 +29269,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -25176,6 +29343,19 @@
     0,
     0,
     131
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "donations": [
     {
@@ -25260,7 +29440,27 @@
     2,
     0,
     98
-   ]
+   ],
+   "score": [
+    5.4,
+    0,
+    0.4,
+    5,
+    34
+   ],
+   "motion_credit": [
+    2,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Even though there is a growing consensus among genocide scholars that Israel’s actions in Gaza do meet the legal definition of a genocide, without access to information on what is happening, and until mainstream journalists are allowed in, we are left in the dark over the true extent of the horrors on the ground.",
+    "date": "2025-09-10",
+    "debate": "Occupied Palestinian Territories: Humanitarian Access",
+    "url": "https://hansard.parliament.uk/Commons/2025-09-10/debates/3526102F-E666-498A-A948-9F6D8373F657/OccupiedPalestinianTerritoriesHumanitarianAccess"
+   }
   },
   {
    "id": 5129,
@@ -25321,6 +29521,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -25420,6 +29633,19 @@
     36,
     0,
     98
+   ],
+   "score": [
+    7.8,
+    0,
+    7.8,
+    0,
+    34
+   ],
+   "motion_credit": [
+    36,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -25481,6 +29707,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -25542,6 +29781,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -25609,6 +29861,19 @@
     2,
     1,
     98
+   ],
+   "score": [
+    -3.6,
+    -4,
+    0.4,
+    0,
+    34
+   ],
+   "motion_credit": [
+    2,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -25746,7 +30011,27 @@
     76,
     0,
     132
-   ]
+   ],
+   "score": [
+    55.6,
+    30,
+    15.6,
+    10,
+    66
+   ],
+   "motion_credit": [
+    95,
+    122,
+    2,
+    19
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Home by home, hospital by hospital and generation by generation, we are not just witnessing a war; we are witnessing a genocide—this time being livestreamed all over the world.",
+    "date": "2025-06-04",
+    "debate": "Gaza (Independent Public Inquiry)",
+    "url": "https://hansard.parliament.uk/Commons/2025-06-04/debates/30BC4F6C-5B9E-4BA4-AD5C-E03DD2384251/GazaIndependentPublicInquiry"
+   }
   },
   {
    "id": 1536,
@@ -25809,7 +30094,27 @@
     2,
     0,
     132
-   ]
+   ],
+   "score": [
+    26.0,
+    16,
+    0.0,
+    10,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "I have to say, it looks like a genocide to me, but I am not a court.",
+    "date": "2025-10-30",
+    "debate": "Israel-Palestine Conflict: Government Response",
+    "url": "https://hansard.parliament.uk/Commons/2025-10-30/debates/70947485-0863-4946-B10A-E12BECB756CD/IsraelPalestineConflictGovernmentResponse"
+   }
   },
   {
    "id": 4783,
@@ -25901,6 +30206,19 @@
     25,
     0,
     131
+   ],
+   "score": [
+    19.8,
+    16,
+    3.8,
+    0,
+    56
+   ],
+   "motion_credit": [
+    23,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -25970,6 +30288,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -26033,6 +30364,19 @@
     0,
     2,
     132
+   ],
+   "score": [
+    -14.0,
+    -14,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -26096,6 +30440,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -26157,6 +30514,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -26224,6 +30594,19 @@
     2,
     1,
     98
+   ],
+   "score": [
+    -3.3,
+    -4,
+    0.7,
+    0,
+    34
+   ],
+   "motion_credit": [
+    3,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -26293,6 +30676,19 @@
     5,
     0,
     132
+   ],
+   "score": [
+    11.6,
+    10,
+    1.6,
+    0,
+    66
+   ],
+   "motion_credit": [
+    10,
+    122,
+    3,
+    0
    ]
   },
   {
@@ -26357,6 +30753,19 @@
     3,
     0,
     132
+   ],
+   "score": [
+    16.2,
+    16,
+    0.2,
+    0,
+    66
+   ],
+   "motion_credit": [
+    1,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -26426,6 +30835,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -26495,6 +30917,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -26564,6 +30999,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -26625,6 +31073,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -26712,6 +31173,19 @@
     24,
     0,
     98
+   ],
+   "score": [
+    5.7,
+    0,
+    5.7,
+    0,
+    34
+   ],
+   "motion_credit": [
+    26,
+    92,
+    0,
+    2
    ]
   },
   {
@@ -26815,6 +31289,19 @@
     0,
     131
    ],
+   "score": [
+    21.4,
+    16,
+    5.4,
+    0,
+    56
+   ],
+   "motion_credit": [
+    33,
+    122,
+    0,
+    2
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -26895,6 +31382,19 @@
     4,
     1,
     131
+   ],
+   "score": [
+    12.3,
+    12,
+    0.3,
+    0,
+    56
+   ],
+   "motion_credit": [
+    2,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -27023,7 +31523,27 @@
     66,
     0,
     131
-   ]
+   ],
+   "score": [
+    46.1,
+    20,
+    16.1,
+    10,
+    56
+   ],
+   "motion_credit": [
+    98,
+    122,
+    12,
+    11
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "I am sick and tired of coming back to this Chamber, asking the same questions and getting the same answers, when war crime after war crime is being committed and a genocide is taking place.",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 415,
@@ -27084,6 +31604,19 @@
     2,
     0,
     132
+   ],
+   "score": [
+    16.0,
+    16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -27145,6 +31678,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -27214,6 +31760,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -27277,6 +31836,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "interests": [
     {
@@ -27378,6 +31950,19 @@
     0,
     0,
     132
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -27439,6 +32024,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -27567,7 +32165,27 @@
     64,
     0,
     98
-   ]
+   ],
+   "score": [
+    32.7,
+    4,
+    18.7,
+    10,
+    34
+   ],
+   "motion_credit": [
+    86,
+    92,
+    6,
+    11
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Will the Foreign Secretary—who has repeatedly refused to call out the Israeli Government for the war crimes they are committing, refused to ban all arms sales, refused to acknowledge that a genocide is happening and refused even to consider economic sanctions, because £6.1 billion is too high a price to pay—accept the reality of the situation and accept that Trump and Netanyahu’s plan proposes ethnic cleansing of the Palestinian people in Gaza?",
+    "date": "2025-02-25",
+    "debate": "Palestinians in Gaza: US Policy",
+    "url": "https://hansard.parliament.uk/Commons/2025-02-25/debates/615012D1-92C9-4589-93C5-C361B233217C/PalestiniansInGazaUSPolicy"
+   }
   },
   {
    "id": 4026,
@@ -27628,6 +32246,19 @@
     1,
     0,
     132
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -27689,6 +32320,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -27779,6 +32423,19 @@
     25,
     0,
     98
+   ],
+   "score": [
+    7.2,
+    0,
+    7.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    33,
+    92,
+    1,
+    6
    ]
   },
   {
@@ -27842,6 +32499,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -27914,6 +32584,19 @@
     2,
     1,
     131
+   ],
+   "score": [
+    2.2,
+    2,
+    0.2,
+    0,
+    56
+   ],
+   "motion_credit": [
+    1,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -27983,6 +32666,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -28046,6 +32742,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -28107,6 +32816,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -28170,6 +32892,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -28237,6 +32972,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -28366,7 +33114,27 @@
     59,
     0,
     131
-   ]
+   ],
+   "score": [
+    25.0,
+    4,
+    11.0,
+    10,
+    56
+   ],
+   "motion_credit": [
+    67,
+    122,
+    0,
+    9
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "The ongoing genocide and the systematic destruction of medical facilities in the region mean that desperately sick and injured children are unable to access the medical attention they need, but I thank the Minister for meeting with Obaida and Mahmoud, two medically evacuated children hosted by the Prime Minister in No. 10 just before Christmas.",
+    "date": "2026-01-05",
+    "debate": "Middle East and North Africa",
+    "url": "https://hansard.parliament.uk/Commons/2026-01-05/debates/222D7FB9-6A32-4C16-8AB4-ACE8FA561838/MiddleEastAndNorthAfrica"
+   }
   },
   {
    "id": 4651,
@@ -28442,6 +33210,19 @@
     9,
     0,
     131
+   ],
+   "score": [
+    17.1,
+    16,
+    1.1,
+    0,
+    56
+   ],
+   "motion_credit": [
+    7,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -28517,7 +33298,27 @@
     6,
     1,
     131
-   ]
+   ],
+   "score": [
+    22.8,
+    12,
+    0.8,
+    10,
+    56
+   ],
+   "motion_credit": [
+    5,
+    122,
+    0,
+    1
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Given the genocide we are witnessing unfold before our eyes every single day, will the Government drop the 2030 road map for UK-Israel bilateral relations and impose economic and diplomatic sanctions to apply pressure on Israel to abide by its obligations under international law?",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 4831,
@@ -28640,7 +33441,27 @@
     55,
     0,
     131
-   ]
+   ],
+   "score": [
+    39.7,
+    20,
+    9.7,
+    10,
+    56
+   ],
+   "motion_credit": [
+    59,
+    122,
+    0,
+    7
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Considering that we are seeing the live-streaming of a genocide against the Palestinian people—F-35s are a crucial part of that, and are being used to bomb civilian camps and hospitals—are the Government considering whether Israel, given its actions, should be part of that global pool?",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 5167,
@@ -28703,6 +33524,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -28766,6 +33600,19 @@
     2,
     0,
     132
+   ],
+   "score": [
+    16.0,
+    16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -28829,6 +33676,19 @@
     1,
     1,
     99
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    44
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -28892,6 +33752,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -28953,6 +33826,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -29014,6 +33900,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -29077,7 +33976,27 @@
     2,
     1,
     131
-   ]
+   ],
+   "score": [
+    17.0,
+    12,
+    0.0,
+    5,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Their actions bear all the hallmarks of ethnic cleansing and plausible genocide.",
+    "date": "2025-06-10",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-06-10/debates/C7FB0E3A-A89C-43B8-8BF3-EE295B851DA1/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 4873,
@@ -29146,7 +34065,27 @@
     2,
     1,
     131
-   ]
+   ],
+   "score": [
+    17.0,
+    12,
+    0.0,
+    5,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "The UN has stated that action must be taken now to prevent genocide, so does the Minister understand that when our constituents hear a legal response, they remain so frustrated, and that they want to see tangible action?",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 5287,
@@ -29209,6 +34148,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -29292,6 +34244,19 @@
     20,
     0,
     98
+   ],
+   "score": [
+    4.6,
+    0,
+    4.6,
+    0,
+    34
+   ],
+   "motion_credit": [
+    21,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -29359,6 +34324,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -20.0,
+    -20,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -29421,6 +34399,19 @@
     0,
     14
    ],
+   "score": [
+    10.0,
+    10,
+    0.0,
+    0,
+    40
+   ],
+   "motion_credit": [
+    0,
+    10,
+    0,
+    0
+   ],
    "donations": [
     {
      "ref": "V0836212",
@@ -29437,7 +34428,8 @@
    ],
    "statements": [
     117,
-    143
+    143,
+    147
    ]
   },
   {
@@ -29501,6 +34493,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -29562,6 +34567,19 @@
     1,
     1,
     132
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -29639,7 +34657,27 @@
     8,
     0,
     131
-   ]
+   ],
+   "score": [
+    22.1,
+    16,
+    1.1,
+    5,
+    56
+   ],
+   "motion_credit": [
+    7,
+    122,
+    0,
+    1
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Senior representatives of Israel continue to use language endorsing genocide against Palestinians.",
+    "date": "2024-01-08",
+    "debate": "Israel and Palestine",
+    "url": "https://hansard.parliament.uk/Commons/2024-01-08/debates/AFB7B263-C4D4-4B7E-B7B3-EED39C534A63/IsraelAndPalestine"
+   }
   },
   {
    "id": 4456,
@@ -29708,6 +34746,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -29771,6 +34822,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -29860,7 +34924,27 @@
     24,
     0,
     98
-   ]
+   ],
+   "score": [
+    15.4,
+    0,
+    5.4,
+    10,
+    34
+   ],
+   "motion_credit": [
+    25,
+    92,
+    0,
+    1
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "The killing, the misery, the starvation and the genocide have gone on for far too long.",
+    "date": "2025-06-10",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-06-10/debates/C7FB0E3A-A89C-43B8-8BF3-EE295B851DA1/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 4362,
@@ -29929,6 +35013,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -29998,6 +35095,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -30065,6 +35175,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -30126,6 +35249,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -30195,6 +35331,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "interests": [
     {
@@ -30308,6 +35457,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -30371,6 +35533,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -30464,7 +35639,27 @@
     28,
     0,
     98
-   ]
+   ],
+   "score": [
+    16.7,
+    0,
+    6.7,
+    10,
+    34
+   ],
+   "motion_credit": [
+    31,
+    92,
+    1,
+    1
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Will the Minister join Ireland, South Africa and many other countries in clarifying that there has been a genocide and apartheid against the people of Palestine?",
+    "date": "2025-05-06",
+    "debate": "Middle East Update",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-06/debates/421CB823-07F7-4B25-B311-935622218237/MiddleEastUpdate"
+   }
   },
   {
    "id": 5157,
@@ -30554,7 +35749,27 @@
     25,
     0,
     98
-   ]
+   ],
+   "score": [
+    15.9,
+    0,
+    5.9,
+    10,
+    34
+   ],
+   "motion_credit": [
+    27,
+    92,
+    1,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "The Liberal Democrats are clear that the Israeli Government have committed a genocide in Gaza, and that those responsible must be held to account.",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 5330,
@@ -30615,6 +35830,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -30676,6 +35904,19 @@
     0,
     2,
     132
+   ],
+   "score": [
+    -16.0,
+    -16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -30756,6 +35997,19 @@
     15,
     0,
     98
+   ],
+   "score": [
+    3.3,
+    0,
+    3.3,
+    0,
+    34
+   ],
+   "motion_credit": [
+    15,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -30817,6 +36071,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -30883,6 +36150,19 @@
     1,
     1,
     98
+   ],
+   "score": [
+    -3.8,
+    -4,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -30949,6 +36229,19 @@
     1,
     1,
     98
+   ],
+   "score": [
+    -3.8,
+    -4,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -31060,7 +36353,27 @@
     43,
     0,
     132
-   ]
+   ],
+   "score": [
+    46.0,
+    26,
+    10.0,
+    10,
+    66
+   ],
+   "motion_credit": [
+    61,
+    122,
+    5,
+    11
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "The sight of a patient on an IV drip burning to death in the flames of an airstrike on the tents of refugees will be the abiding image of this genocide.",
+    "date": "2024-10-15",
+    "debate": "Gaza and Lebanon",
+    "url": "https://hansard.parliament.uk/Commons/2024-10-15/debates/F06AD760-7ECD-4216-B0A1-4C778C20927B/GazaAndLebanon"
+   }
   },
   {
    "id": 5114,
@@ -31121,6 +36434,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -31184,6 +36510,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -31245,6 +36584,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -31306,6 +36658,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -31369,6 +36734,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -31465,7 +36843,27 @@
     31,
     1,
     98
-   ]
+   ],
+   "score": [
+    13.4,
+    -4,
+    7.4,
+    10,
+    34
+   ],
+   "motion_credit": [
+    34,
+    92,
+    1,
+    1
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "The public are being told to trust our judgment on the weapons that this country is sending to a state conducting a genocide.",
+    "date": "2025-06-02",
+    "debate": "Arms and Military Cargo Export Controls: Israel",
+    "url": "https://hansard.parliament.uk/Commons/2025-06-02/debates/FB92D222-847B-432A-AE59-164433E63AC9/ArmsAndMilitaryCargoExportControlsIsrael"
+   }
   },
   {
    "id": 5277,
@@ -31561,7 +36959,27 @@
     31,
     0,
     98
-   ]
+   ],
+   "score": [
+    17.6,
+    0,
+    7.6,
+    10,
+    34
+   ],
+   "motion_credit": [
+    35,
+    92,
+    0,
+    4
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "For over two years, the UK Government have hidden behind legal sleight of hand while a genocide has unfolded in Gaza.",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 5225,
@@ -31624,6 +37042,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -31687,6 +37118,19 @@
     1,
     0,
     99
+   ],
+   "score": [
+    10.0,
+    10,
+    0.0,
+    0,
+    44
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -31750,7 +37194,27 @@
     0,
     1,
     98
-   ]
+   ],
+   "score": [
+    6.0,
+    -4,
+    0.0,
+    10,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "International experts have rightly described what is going on in Gaza as a genocide.",
+    "date": "2025-09-01",
+    "debate": "Middle East",
+    "url": "https://hansard.parliament.uk/Commons/2025-09-01/debates/F4B7ED0F-EB29-487C-BB9F-E098C5D27F48/MiddleEast"
+   }
   },
   {
    "id": 4480,
@@ -31817,6 +37281,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -31880,6 +37357,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -31947,6 +37437,19 @@
     2,
     3,
     132
+   ],
+   "score": [
+    -19.7,
+    -20,
+    0.3,
+    0,
+    66
+   ],
+   "motion_credit": [
+    2,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -32010,6 +37513,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -16.0,
+    -16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -32101,6 +37617,19 @@
     26,
     0,
     98
+   ],
+   "score": [
+    6.1,
+    0,
+    6.1,
+    0,
+    34
+   ],
+   "motion_credit": [
+    28,
+    92,
+    0,
+    2
    ]
   },
   {
@@ -32170,7 +37699,27 @@
     2,
     1,
     132
-   ]
+   ],
+   "score": [
+    17.0,
+    12,
+    0.0,
+    5,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Waging war on Palestinians’ ability to reproduce were termed ‘genocidal acts’.",
+    "date": "2025-04-30",
+    "debate": "Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-04-30/debates/DBF3934D-6077-4928-89E3-76AA76AA34B3/OccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 4126,
@@ -32251,6 +37800,19 @@
     12,
     1,
     132
+   ],
+   "score": [
+    13.6,
+    12,
+    1.6,
+    0,
+    66
+   ],
+   "motion_credit": [
+    10,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -32314,6 +37876,19 @@
     2,
     0,
     132
+   ],
+   "score": [
+    16.0,
+    16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -32380,6 +37955,19 @@
     1,
     1,
     98
+   ],
+   "score": [
+    -3.8,
+    -4,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -32443,6 +38031,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -32515,6 +38116,19 @@
     2,
     1,
     131
+   ],
+   "score": [
+    2.2,
+    2,
+    0.2,
+    0,
+    56
+   ],
+   "motion_credit": [
+    1,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -32576,6 +38190,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -32665,6 +38292,19 @@
     24,
     0,
     98
+   ],
+   "score": [
+    5.4,
+    0,
+    5.4,
+    0,
+    34
+   ],
+   "motion_credit": [
+    25,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -32726,6 +38366,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -32857,6 +38510,19 @@
     63,
     0,
     132
+   ],
+   "score": [
+    37.0,
+    26,
+    11.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    67,
+    122,
+    1,
+    5
    ]
   },
   {
@@ -32925,6 +38591,19 @@
     0,
     4,
     98
+   ],
+   "score": [
+    -16.0,
+    -4,
+    -12.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -32988,7 +38667,27 @@
     0,
     1,
     98
-   ]
+   ],
+   "score": [
+    6.0,
+    -4,
+    0.0,
+    10,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "I agree with the conclusion of the UN independent international commission of inquiry on the Occupied Palestinian Territory, including East Jerusalem, and Israel, which stated: “Israel has committed genocide against Palestinians in the Gaza Strip.”",
+    "date": "2025-11-24",
+    "debate": "Gaza: Humanitarian Obligations",
+    "url": "https://hansard.parliament.uk/Commons/2025-11-24/debates/8BB76C8A-F2FE-4705-9BB5-563E49C2D641/GazaHumanitarianObligations"
+   }
   },
   {
    "id": 3912,
@@ -33057,6 +38756,19 @@
     1,
     2,
     132
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -33142,6 +38854,19 @@
     20,
     0,
     98
+   ],
+   "score": [
+    4.3,
+    0,
+    4.3,
+    0,
+    34
+   ],
+   "motion_credit": [
+    20,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -33211,6 +38936,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -33293,6 +39031,19 @@
     19,
     0,
     98
+   ],
+   "score": [
+    4.3,
+    0,
+    4.3,
+    0,
+    34
+   ],
+   "motion_credit": [
+    20,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -33356,6 +39107,19 @@
     0,
     2,
     131
+   ],
+   "score": [
+    -16.0,
+    -16,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "interests": [
     {
@@ -33430,6 +39194,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    0,
+    -4.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -33496,6 +39273,19 @@
     0,
     2,
     98
+   ],
+   "score": [
+    -8.0,
+    -4,
+    -4.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "interests": [
     {
@@ -33591,6 +39381,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -33654,6 +39457,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -33752,6 +39568,19 @@
     36,
     0,
     131
+   ],
+   "score": [
+    29.2,
+    22,
+    7.2,
+    0,
+    56
+   ],
+   "motion_credit": [
+    44,
+    122,
+    1,
+    9
    ]
   },
   {
@@ -33832,6 +39661,19 @@
     17,
     0,
     98
+   ],
+   "score": [
+    3.7,
+    0,
+    3.7,
+    0,
+    34
+   ],
+   "motion_credit": [
+    17,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -33912,6 +39754,19 @@
     15,
     0,
     98
+   ],
+   "score": [
+    3.7,
+    0,
+    3.7,
+    0,
+    34
+   ],
+   "motion_credit": [
+    17,
+    92,
+    0,
+    2
    ]
   },
   {
@@ -33973,6 +39828,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -34120,7 +39988,27 @@
     83,
     0,
     98
-   ]
+   ],
+   "score": [
+    34.0,
+    4,
+    20.0,
+    10,
+    34
+   ],
+   "motion_credit": [
+    106,
+    92,
+    3,
+    18
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "The Green party has long been clear that the actions of the Israeli Government in Gaza constitute genocide, but I agree with the hon. Member for Clapham and Brixton Hill (Bell Ribeiro-Addy) that it is important to be clear about language, so I will make very specific arguments with respect to the genocide convention.",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 5164,
@@ -34195,6 +40083,19 @@
     10,
     0,
     98
+   ],
+   "score": [
+    2.2,
+    0,
+    2.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    10,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -34258,6 +40159,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -34342,6 +40256,19 @@
     24,
     0,
     131
+   ],
+   "score": [
+    25.4,
+    22,
+    3.4,
+    0,
+    56
+   ],
+   "motion_credit": [
+    21,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -34403,6 +40330,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -34464,6 +40404,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -34525,6 +40478,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -34594,6 +40560,19 @@
     0,
     1,
     131
+   ],
+   "score": [
+    -6.0,
+    -6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -34657,7 +40636,27 @@
     1,
     0,
     131
-   ]
+   ],
+   "score": [
+    11.0,
+    6,
+    0.0,
+    5,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "As other Members have said, I do not understand what the Government think the ICJ was doing when it ruled that there was a plausible case for genocide.",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 5149,
@@ -34718,6 +40717,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -34779,6 +40791,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -34840,6 +40865,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -34901,6 +40939,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "donations": [
     {
@@ -34978,6 +41029,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -35074,6 +41138,19 @@
     33,
     0,
     131
+   ],
+   "score": [
+    19.4,
+    14,
+    5.4,
+    0,
+    56
+   ],
+   "motion_credit": [
+    33,
+    122,
+    1,
+    0
    ]
   },
   {
@@ -35188,7 +41265,27 @@
     52,
     0,
     131
-   ]
+   ],
+   "score": [
+    39.2,
+    20,
+    9.2,
+    10,
+    56
+   ],
+   "motion_credit": [
+    56,
+    122,
+    0,
+    7
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "It is quite simple: there is a genocide in Gaza being committed by the Israeli Government.",
+    "date": "2025-06-04",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-06-04/debates/D2A51C58-0316-495D-96F7-5C91B83D3511/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 4641,
@@ -35257,6 +41354,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -35320,6 +41430,19 @@
     1,
     1,
     132
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -35381,6 +41504,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -35442,6 +41578,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "interests": [
     {
@@ -35535,7 +41684,27 @@
     8,
     1,
     132
-   ]
+   ],
+   "score": [
+    18.5,
+    12,
+    1.5,
+    5,
+    66
+   ],
+   "motion_credit": [
+    9,
+    122,
+    0,
+    3
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "The ICJ interim ruling stated that article II of the genocide convention must be upheld, including ensuring the provision of humanitarian assistance to civilians in Gaza.",
+    "date": "2024-01-29",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2024-01-29/debates/08A4F56A-BA86-4A9B-BAF8-854C100E498B/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 4569,
@@ -35604,6 +41773,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -35689,7 +41871,27 @@
     22,
     0,
     132
-   ]
+   ],
+   "score": [
+    25.1,
+    16,
+    4.1,
+    5,
+    66
+   ],
+   "motion_credit": [
+    25,
+    122,
+    0,
+    5
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Does the Minister accept that, where prima facie evidence of genocide exists, awaiting for the determination to be made formally by a court is not sufficient for us to meet the duty to prevent under the genocide convention?",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 4798,
@@ -35750,6 +41952,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "interests": [
     {
@@ -35845,6 +42060,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -35908,6 +42136,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -35999,6 +42240,19 @@
     0,
     131
    ],
+   "score": [
+    28.4,
+    22,
+    6.4,
+    0,
+    56
+   ],
+   "motion_credit": [
+    39,
+    122,
+    4,
+    6
+   ],
    "interests": [
     {
      "category": "Miscellaneous",
@@ -36081,6 +42335,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -36144,7 +42411,27 @@
     0,
     0,
     98
-   ]
+   ],
+   "score": [
+    5.0,
+    0,
+    0.0,
+    5,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "What practical measures will our Government take to prevent genocide, in line with our international legal obligations?",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 5099,
@@ -36205,6 +42492,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -36266,6 +42566,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -36327,6 +42640,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -36390,6 +42716,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -36483,6 +42822,19 @@
     28,
     0,
     132
+   ],
+   "score": [
+    36.1,
+    32,
+    4.1,
+    0,
+    66
+   ],
+   "motion_credit": [
+    25,
+    122,
+    0,
+    1
    ]
   },
   {
@@ -36546,6 +42898,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -36607,6 +42972,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -36676,6 +43054,19 @@
     0,
     1,
     131
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -36745,6 +43136,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -36808,6 +43212,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "donations": [
     {
@@ -36941,7 +43358,27 @@
     54,
     0,
     98
-   ]
+   ],
+   "score": [
+    25.7,
+    0,
+    15.7,
+    10,
+    34
+   ],
+   "motion_credit": [
+    72,
+    92,
+    0,
+    18
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Does my hon. Friend agree that these acts of genocide need to be recognised as such by the international courts and the UK Government?",
+    "date": "2025-03-18",
+    "debate": "Military Co-operation with Israel",
+    "url": "https://hansard.parliament.uk/Commons/2025-03-18/debates/C5900243-EC83-4C59-BABA-F3EDEE9D8E60/MilitaryCoOperationWithIsrael"
+   }
   },
   {
    "id": 4790,
@@ -37076,7 +43513,27 @@
     74,
     0,
     131
-   ]
+   ],
+   "score": [
+    45.8,
+    26,
+    14.8,
+    5,
+    56
+   ],
+   "motion_credit": [
+    90,
+    122,
+    1,
+    18
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Only an immediate ceasefire can protect civilians and implement the ICJ’s historic plausible genocide ruling.",
+    "date": "2024-02-27",
+    "debate": "Israel and Gaza",
+    "url": "https://hansard.parliament.uk/Commons/2024-02-27/debates/D05B7810-FB34-40B8-8AA9-28CDC3F36270/IsraelAndGaza"
+   }
   },
   {
    "id": 5294,
@@ -37137,6 +43594,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -37198,6 +43668,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "donations": [
     {
@@ -37276,6 +43759,19 @@
     3,
     1,
     132
+   ],
+   "score": [
+    12.2,
+    12,
+    0.2,
+    0,
+    66
+   ],
+   "motion_credit": [
+    1,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -37339,7 +43835,27 @@
     1,
     1,
     131
-   ]
+   ],
+   "score": [
+    7.0,
+    2,
+    0.0,
+    5,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "In the case of Gaza, the International Court of Justice ruled two years ago that there is a “real and imminent risk” of genocide.",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 5305,
@@ -37400,6 +43916,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -37469,6 +43998,19 @@
     2,
     0,
     132
+   ],
+   "score": [
+    16.0,
+    16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -37532,6 +44074,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -37599,6 +44154,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -37660,6 +44228,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -37721,6 +44302,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -37785,6 +44379,19 @@
     1,
     0,
     98
+   ],
+   "score": [
+    0.2,
+    0,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -37846,6 +44453,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -37915,6 +44535,19 @@
     1,
     0,
     132
+   ],
+   "score": [
+    10.0,
+    10,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -37976,6 +44609,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -38062,6 +44708,19 @@
     24,
     0,
     131
+   ],
+   "score": [
+    25.4,
+    22,
+    3.4,
+    0,
+    56
+   ],
+   "motion_credit": [
+    21,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -38131,7 +44790,27 @@
     0,
     2,
     131
-   ]
+   ],
+   "score": [
+    -26.0,
+    -16,
+    0.0,
+    -10,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "denies",
+    "quote": "While, of course, we respect the role and the independence of the ICJ, our view is that Israel’s actions in Gaza can simply not be described as a genocide, and that case is not helpful at all in achieving our goal of a sustainable and lasting ceasefire.",
+    "date": "2024-04-15",
+    "debate": "Iran-Israel Update",
+    "url": "https://hansard.parliament.uk/Commons/2024-04-15/debates/5B1C3E28-F71B-4513-B1D8-54205AF8D464/IranIsraelUpdate"
+   }
   },
   {
    "id": 5071,
@@ -38194,7 +44873,27 @@
     0,
     1,
     98
-   ]
+   ],
+   "score": [
+    1.0,
+    -4,
+    0.0,
+    5,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "He said: “For those killed and those whose voices are silenced: what more evidence do you need now?...Will you act—decisively—to prevent genocide?”",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 5298,
@@ -38255,6 +44954,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -38322,6 +45034,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -12.0,
+    -4,
+    -8.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -38383,6 +45108,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -38444,6 +45182,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -38505,6 +45256,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -38568,7 +45332,27 @@
     3,
     0,
     132
-   ]
+   ],
+   "score": [
+    36.0,
+    26,
+    0.0,
+    10,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "It is an organisation that is central to supporting the Palestinians facing starvation and dealing with the consequences of genocide.",
+    "date": "2025-10-14",
+    "debate": "Middle East",
+    "url": "https://hansard.parliament.uk/Commons/2025-10-14/debates/B7A30F91-D349-4697-8700-512DCF9074EA/MiddleEast"
+   }
   },
   {
    "id": 5127,
@@ -38631,6 +45415,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -38694,6 +45491,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -38755,6 +45565,19 @@
     0,
     1,
     69
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    63,
+    0,
+    0
    ]
   },
   {
@@ -38818,6 +45641,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -38881,6 +45717,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -38949,6 +45798,19 @@
     1,
     1,
     130
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    50
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -39018,6 +45880,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -39098,6 +45973,19 @@
     12,
     0,
     131
+   ],
+   "score": [
+    12.0,
+    10,
+    2.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    12,
+    122,
+    0,
+    1
    ]
   },
   {
@@ -39161,6 +46049,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -39224,6 +46125,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -39285,6 +46199,19 @@
     1,
     1,
     99
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    44
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -39346,6 +46273,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -39412,6 +46352,19 @@
     1,
     1,
     130
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    50
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -39473,6 +46426,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -39550,6 +46516,19 @@
     7,
     1,
     131
+   ],
+   "score": [
+    3.0,
+    2,
+    1.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    6,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -39642,7 +46621,27 @@
     27,
     0,
     98
-   ]
+   ],
+   "score": [
+    11.7,
+    0,
+    6.7,
+    5,
+    34
+   ],
+   "motion_credit": [
+    31,
+    92,
+    0,
+    4
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "What are we doing to satisfy our obligations under the Geneva convention to prevent a genocide from taking place, and why are we not sanctioning Minister Smotrich?",
+    "date": "2025-05-20",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-20/debates/CD60AEFA-5138-47B1-A8B6-DC108014F0ED/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 4864,
@@ -39736,6 +46735,19 @@
     24,
     0,
     131
+   ],
+   "score": [
+    9.8,
+    6,
+    3.8,
+    0,
+    56
+   ],
+   "motion_credit": [
+    23,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -39805,7 +46817,27 @@
     1,
     0,
     131
-   ]
+   ],
+   "score": [
+    16.0,
+    6,
+    0.0,
+    10,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "I recognise the Minister’s personal dedication to this issue and his efforts in achieving a ceasefire, but it is impossible to conclude that this is anything less than a genocide.",
+    "date": "2025-06-04",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-06-04/debates/D2A51C58-0316-495D-96F7-5C91B83D3511/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 394,
@@ -39881,6 +46913,19 @@
     14,
     1,
     132
+   ],
+   "score": [
+    23.8,
+    22,
+    1.8,
+    0,
+    66
+   ],
+   "motion_credit": [
+    11,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -39942,6 +46987,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -40005,6 +47063,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -40066,6 +47137,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -40127,6 +47211,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "donations": [
     {
@@ -40202,6 +47299,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -40263,6 +47373,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -20.0,
+    -20,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -40326,7 +47449,27 @@
     1,
     1,
     131
-   ]
+   ],
+   "score": [
+    7.0,
+    2,
+    0.0,
+    5,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "In its 2007 judgment, the ICJ made it clear that a nation’s duty to prevent genocide begins when it becomes aware that there is a serious risk.",
+    "date": "2025-06-04",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-06-04/debates/D2A51C58-0316-495D-96F7-5C91B83D3511/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 5059,
@@ -40387,6 +47530,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -40448,6 +47604,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -40514,6 +47683,19 @@
     0,
     2,
     98
+   ],
+   "score": [
+    -8.0,
+    -4,
+    -4.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -40578,6 +47760,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    0,
+    -4.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -40671,6 +47866,19 @@
     28,
     0,
     98
+   ],
+   "score": [
+    6.3,
+    0,
+    6.3,
+    0,
+    34
+   ],
+   "motion_credit": [
+    29,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -40760,6 +47968,19 @@
     24,
     0,
     98
+   ],
+   "score": [
+    6.3,
+    0,
+    6.3,
+    0,
+    34
+   ],
+   "motion_credit": [
+    29,
+    92,
+    0,
+    5
    ]
   },
   {
@@ -40823,6 +48044,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -40905,7 +48139,27 @@
     17,
     0,
     98
-   ]
+   ],
+   "score": [
+    8.9,
+    0,
+    3.9,
+    5,
+    34
+   ],
+   "motion_credit": [
+    18,
+    92,
+    0,
+    1
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Now the world’s leading genocide scholars state that Israel’s actions meet the legal definition of genocide.",
+    "date": "2025-09-01",
+    "debate": "Middle East",
+    "url": "https://hansard.parliament.uk/Commons/2025-09-01/debates/F4B7ED0F-EB29-487C-BB9F-E098C5D27F48/MiddleEast"
+   }
   },
   {
    "id": 5217,
@@ -40966,6 +48220,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -41027,6 +48294,19 @@
     0,
     0,
     131
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -41088,6 +48368,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -41149,6 +48442,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -41210,6 +48516,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -41271,6 +48590,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -41332,6 +48664,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "interests": [
     {
@@ -41420,6 +48765,19 @@
     1,
     1,
     98
+   ],
+   "score": [
+    -3.8,
+    -4,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -41487,6 +48845,19 @@
     5,
     1,
     132
+   ],
+   "score": [
+    22.3,
+    22,
+    0.3,
+    0,
+    66
+   ],
+   "motion_credit": [
+    2,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -41554,6 +48925,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -41615,6 +48999,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -41676,6 +49073,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "interests": [
     {
@@ -41759,6 +49169,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -41820,6 +49243,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -41883,6 +49319,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -41946,6 +49395,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -42007,6 +49469,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -42070,6 +49545,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -42133,6 +49621,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -42202,6 +49703,19 @@
     0,
     0,
     131
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -42263,6 +49777,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -42326,6 +49853,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "interests": [
     {
@@ -42417,6 +49957,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -42503,6 +50056,19 @@
     26,
     0,
     131
+   ],
+   "score": [
+    26.1,
+    22,
+    4.1,
+    0,
+    56
+   ],
+   "motion_credit": [
+    25,
+    122,
+    0,
+    2
    ]
   },
   {
@@ -42566,6 +50132,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -42627,6 +50206,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -42693,6 +50285,19 @@
     2,
     1,
     131
+   ],
+   "score": [
+    2.2,
+    2,
+    0.2,
+    0,
+    56
+   ],
+   "motion_credit": [
+    1,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -42825,7 +50430,27 @@
     69,
     0,
     99
-   ]
+   ],
+   "score": [
+    42.7,
+    14,
+    18.7,
+    10,
+    44
+   ],
+   "motion_credit": [
+    86,
+    92,
+    0,
+    19
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "The Prime Minister knows that he has the full support of the House when he says that he wants Lebanon included in the ceasefire, but surely he must accept that he could do a great deal more, first by ensuring that no UK arms components end up in the hands of the genocidal Netanyahu Government, and secondly by ensuring that there is absolutely no trade with the illegal settlements in the occupied Palestinian territories.",
+    "date": "2026-04-13",
+    "debate": "Middle East",
+    "url": "https://hansard.parliament.uk/Commons/2026-04-13/debates/73CF4013-F8C8-4F34-9A62-9B9617C0CCFD/MiddleEast"
+   }
   },
   {
    "id": 5096,
@@ -42905,6 +50530,19 @@
     17,
     0,
     98
+   ],
+   "score": [
+    3.7,
+    0,
+    3.7,
+    0,
+    34
+   ],
+   "motion_credit": [
+    17,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -42966,6 +50604,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -43027,6 +50678,19 @@
     0,
     2,
     132
+   ],
+   "score": [
+    -12.0,
+    -12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -43088,6 +50752,19 @@
     1,
     1,
     132
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -43151,6 +50828,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -43217,6 +50907,19 @@
     1,
     1,
     98
+   ],
+   "score": [
+    -3.8,
+    -4,
+    0.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -43280,6 +50983,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -43341,6 +51057,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -43408,6 +51137,19 @@
     0,
     2,
     131
+   ],
+   "score": [
+    -10.0,
+    -10,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "donations": [
     {
@@ -43485,6 +51227,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -43548,6 +51303,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -43611,6 +51379,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -43678,6 +51459,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -43762,6 +51556,26 @@
     1,
     98
    ],
+   "score": [
+    9.9,
+    -4,
+    3.9,
+    10,
+    34
+   ],
+   "motion_credit": [
+    18,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "This is not just a genocide; it is now ethnic cleansing.",
+    "date": "2025-07-21",
+    "debate": "Middle East",
+    "url": "https://hansard.parliament.uk/Commons/2025-07-21/debates/63777B96-419B-48EF-BFFE-A5668D51FEA9/MiddleEast"
+   },
    "donations": [
     {
      "ref": "V0832983",
@@ -43851,6 +51665,19 @@
     9,
     132
    ],
+   "score": [
+    -50.4,
+    -36,
+    -14.4,
+    0,
+    66
+   ],
+   "motion_credit": [
+    10,
+    122,
+    0,
+    4
+   ],
    "donations": [
     {
      "ref": "V0576345",
@@ -43927,7 +51754,27 @@
     0,
     0,
     98
-   ]
+   ],
+   "score": [
+    10.0,
+    0,
+    0.0,
+    10,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "We owe it to them to bear witness to this history, to this ongoing genocide, but also to continue to ensure that Britain plays its full part in the humanitarian assistance and rebuilding of Gaza.",
+    "date": "2025-11-24",
+    "debate": "Gaza: Humanitarian Obligations",
+    "url": "https://hansard.parliament.uk/Commons/2025-11-24/debates/8BB76C8A-F2FE-4705-9BB5-563E49C2D641/GazaHumanitarianObligations"
+   }
   },
   {
    "id": 5122,
@@ -44017,6 +51864,19 @@
     26,
     0,
     98
+   ],
+   "score": [
+    9.9,
+    4,
+    5.9,
+    0,
+    34
+   ],
+   "motion_credit": [
+    27,
+    92,
+    1,
+    0
    ]
   },
   {
@@ -44084,6 +51944,19 @@
     0,
     0,
     132
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -44147,6 +52020,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -44239,6 +52125,26 @@
     0,
     98
    ],
+   "score": [
+    10.9,
+    0,
+    5.9,
+    5,
+    34
+   ],
+   "motion_credit": [
+    27,
+    92,
+    0,
+    1
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "In fact, a UN commission found that the Israeli state had committed the crime of genocide through deliberate targeting of the Gazan healthcare system.",
+    "date": "2026-09-14",
+    "debate": "Israel and Palestine",
+    "url": "https://hansard.parliament.uk/Commons/2026-09-14/debates/91E6D250-A8AA-42DD-9A33-71CE446FEE13/IsraelAndPalestine"
+   },
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -44307,6 +52213,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -44370,6 +52289,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -44457,7 +52389,27 @@
     23,
     0,
     98
-   ]
+   ],
+   "score": [
+    19.4,
+    4,
+    5.4,
+    10,
+    34
+   ],
+   "motion_credit": [
+    25,
+    92,
+    0,
+    3
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Alongside global NGOs, aid organisations, Israeli human rights organisations and the UN commission of inquiry, we consider there to be credible evidence that the actions of the Israeli Government in Gaza during the military campaign have amounted to genocide.",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 4460,
@@ -44524,6 +52476,19 @@
     0,
     1,
     131
+   ],
+   "score": [
+    -6.0,
+    -6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -44587,7 +52552,27 @@
     0,
     2,
     132
-   ]
+   ],
+   "score": [
+    -22.0,
+    -12,
+    0.0,
+    -10,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "denies",
+    "quote": "Israel has the right to defend itself against Hamas, and we do not believe that Israel’s actions in Gaza can be described as a genocide.",
+    "date": "2024-01-29",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2024-01-29/debates/08A4F56A-BA86-4A9B-BAF8-854C100E498B/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 5103,
@@ -44672,6 +52657,19 @@
     21,
     0,
     98
+   ],
+   "score": [
+    8.6,
+    4,
+    4.6,
+    0,
+    34
+   ],
+   "motion_credit": [
+    21,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -44733,6 +52731,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -44796,6 +52807,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -44857,6 +52881,19 @@
     1,
     1,
     99
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    44
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -44921,6 +52958,19 @@
     2,
     1,
     128
+   ],
+   "score": [
+    2.2,
+    2,
+    0.2,
+    0,
+    50
+   ],
+   "motion_credit": [
+    1,
+    120,
+    0,
+    0
    ]
   },
   {
@@ -44982,6 +53032,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -45066,6 +53129,19 @@
     19,
     0,
     98
+   ],
+   "score": [
+    4.1,
+    0,
+    4.1,
+    0,
+    34
+   ],
+   "motion_credit": [
+    19,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -45127,6 +53203,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -45203,6 +53292,19 @@
     11,
     0,
     98
+   ],
+   "score": [
+    2.4,
+    0,
+    2.4,
+    0,
+    34
+   ],
+   "motion_credit": [
+    11,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -45266,6 +53368,19 @@
     0,
     2,
     132
+   ],
+   "score": [
+    -16.0,
+    -16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -45327,6 +53442,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -45412,6 +53540,19 @@
     20,
     0,
     98
+   ],
+   "score": [
+    4.3,
+    0,
+    4.3,
+    0,
+    34
+   ],
+   "motion_credit": [
+    20,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -45473,6 +53614,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -45534,6 +53688,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -45606,6 +53773,19 @@
     9,
     0,
     98
+   ],
+   "score": [
+    2.0,
+    0,
+    2.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    9,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -45675,6 +53855,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -45738,6 +53931,19 @@
     2,
     1,
     131
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -45824,6 +54030,19 @@
     21,
     0,
     98
+   ],
+   "score": [
+    5.2,
+    0,
+    5.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    24,
+    92,
+    0,
+    3
    ]
   },
   {
@@ -45885,6 +54104,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -45952,6 +54184,19 @@
     0,
     2,
     132
+   ],
+   "score": [
+    -16.0,
+    -16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -46015,6 +54260,19 @@
     1,
     0,
     132
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "statements": [
     78
@@ -46081,6 +54339,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -46159,6 +54430,19 @@
     13,
     0,
     98
+   ],
+   "score": [
+    3.3,
+    0,
+    3.3,
+    0,
+    34
+   ],
+   "motion_credit": [
+    15,
+    92,
+    0,
+    2
    ]
   },
   {
@@ -46251,6 +54535,26 @@
     0,
     131
    ],
+   "score": [
+    32.7,
+    22,
+    5.7,
+    5,
+    56
+   ],
+   "motion_credit": [
+    35,
+    122,
+    2,
+    5
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Does the Minister believe that Netanyahu’s Government are complying with the International Court of Justice’s provisional order, which states that Israel must ensure with immediate effect that its forces do not commit any of the acts prohibited by the genocide convention?",
+    "date": "2024-03-26",
+    "debate": "Israel and Gaza",
+    "url": "https://hansard.parliament.uk/Commons/2024-03-26/debates/6B11A5F8-EA36-4959-9A2D-E1CD21729F3E/IsraelAndGaza"
+   },
    "donations": [
     {
      "ref": "V0562093",
@@ -46327,6 +54631,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -46395,6 +54712,19 @@
     0,
     3,
     131
+   ],
+   "score": [
+    -12.0,
+    0,
+    -12.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -46458,6 +54788,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -46519,6 +54862,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -46588,7 +54944,27 @@
     1,
     0,
     131
-   ]
+   ],
+   "score": [
+    11.0,
+    6,
+    0.0,
+    5,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "Does the Minister agree that under the genocide convention, the UK as a state party has an obligation not only to prevent and punish genocide, but to avoid actions that may assist or enable genocidal acts?",
+    "date": "2025-05-14",
+    "debate": "Gaza: UK Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-14/debates/D0220F25-5BED-4AAF-9E15-0CDE142FCB47/GazaUKAssessment"
+   }
   },
   {
    "id": 4943,
@@ -46655,6 +55031,19 @@
     1,
     0,
     131
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -46716,6 +55105,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -46788,6 +55190,19 @@
     6,
     0,
     132
+   ],
+   "score": [
+    26.5,
+    26,
+    0.5,
+    0,
+    66
+   ],
+   "motion_credit": [
+    3,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -46851,6 +55266,19 @@
     3,
     1,
     132
+   ],
+   "score": [
+    22.0,
+    22,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -46917,6 +55345,19 @@
     2,
     1,
     131
+   ],
+   "score": [
+    2.2,
+    2,
+    0.2,
+    0,
+    56
+   ],
+   "motion_credit": [
+    1,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -46978,6 +55419,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -47042,6 +55496,26 @@
     1,
     131
    ],
+   "score": [
+    7.0,
+    2,
+    0.0,
+    5,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "After almost 23,000 civilian deaths, including almost 10,000 children, many observers are describing the atrocity in Gaza as a genocide.",
+    "date": "2024-01-08",
+    "debate": "Israel and Palestine",
+    "url": "https://hansard.parliament.uk/Commons/2024-01-08/debates/AFB7B263-C4D4-4B7E-B7B3-EED39C534A63/IsraelAndPalestine"
+   },
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -47118,6 +55592,19 @@
     1,
     0,
     132
+   ],
+   "score": [
+    10.0,
+    10,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -47181,6 +55668,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -47307,7 +55807,27 @@
     62,
     0,
     98
-   ]
+   ],
+   "score": [
+    28.3,
+    4,
+    14.3,
+    10,
+    34
+   ],
+   "motion_credit": [
+    66,
+    92,
+    0,
+    5
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "Does the Minister deny that that constitutes genocide in real time?",
+    "date": "2025-05-06",
+    "debate": "Middle East Update",
+    "url": "https://hansard.parliament.uk/Commons/2025-05-06/debates/421CB823-07F7-4B25-B311-935622218237/MiddleEastUpdate"
+   }
   },
   {
    "id": 5285,
@@ -47368,6 +55888,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "donations": [
     {
@@ -47443,6 +55976,19 @@
     0,
     1,
     105
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    99,
+    0,
+    0
    ]
   },
   {
@@ -47518,6 +56064,19 @@
     13,
     0,
     99
+   ],
+   "score": [
+    6.6,
+    4,
+    2.6,
+    0,
+    44
+   ],
+   "motion_credit": [
+    12,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -47579,6 +56138,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -47640,6 +56212,19 @@
     0,
     4,
     131
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "interests": [
     {
@@ -47711,6 +56296,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -47795,6 +56393,19 @@
     19,
     0,
     98
+   ],
+   "score": [
+    4.3,
+    0,
+    4.3,
+    0,
+    34
+   ],
+   "motion_credit": [
+    20,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -47870,6 +56481,19 @@
     10,
     1,
     98
+   ],
+   "score": [
+    -1.6,
+    -4,
+    2.4,
+    0,
+    34
+   ],
+   "motion_credit": [
+    11,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -47933,6 +56557,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -47994,6 +56631,19 @@
     1,
     1,
     131
+   ],
+   "score": [
+    2.0,
+    2,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -48057,7 +56707,27 @@
     0,
     0,
     98
-   ]
+   ],
+   "score": [
+    -10.0,
+    0,
+    0.0,
+    -10,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "denies",
+    "quote": "There is no genocide, as I heard an hon. Member claim earlier, and Hamas is a terrorist organisation that seeks to murder Jews and has brought nothing but destruction and disaster to the people of Gaza.",
+    "date": "2025-03-04",
+    "debate": "Gaza",
+    "url": "https://hansard.parliament.uk/Commons/2025-03-04/debates/F7756755-7D2A-4675-9266-0A73A6DEA9BE/Gaza"
+   }
   },
   {
    "id": 4697,
@@ -48118,6 +56788,19 @@
     0,
     0,
     131
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    56
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -48181,6 +56864,19 @@
     0,
     4,
     132
+   ],
+   "score": [
+    -26.0,
+    -26,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -48257,6 +56953,19 @@
     0,
     132
    ],
+   "score": [
+    17.6,
+    16,
+    1.6,
+    0,
+    66
+   ],
+   "motion_credit": [
+    10,
+    122,
+    0,
+    0
+   ],
    "interests": [
     {
      "category": "Visits outside the UK",
@@ -48327,6 +57036,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -48396,7 +57118,27 @@
     0,
     1,
     132
-   ]
+   ],
+   "score": [
+    -1.0,
+    -6,
+    0.0,
+    5,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "We have heard many conflicting reports of the things that may go on, some of which may well be genocidal acts.",
+    "date": "2025-09-10",
+    "debate": "Occupied Palestinian Territories: Humanitarian Access",
+    "url": "https://hansard.parliament.uk/Commons/2025-09-10/debates/3526102F-E666-498A-A948-9F6D8373F657/OccupiedPalestinianTerritoriesHumanitarianAccess"
+   }
   },
   {
    "id": 5033,
@@ -48457,6 +57199,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -48524,6 +57279,19 @@
     2,
     1,
     132
+   ],
+   "score": [
+    12.0,
+    12,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -48587,6 +57355,19 @@
     1,
     1,
     132
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -48669,6 +57450,19 @@
     17,
     0,
     98
+   ],
+   "score": [
+    3.9,
+    0,
+    3.9,
+    0,
+    34
+   ],
+   "motion_credit": [
+    18,
+    92,
+    0,
+    1
    ]
   },
   {
@@ -48756,6 +57550,19 @@
     22,
     0,
     98
+   ],
+   "score": [
+    6.1,
+    0,
+    6.1,
+    0,
+    34
+   ],
+   "motion_credit": [
+    28,
+    92,
+    0,
+    6
    ]
   },
   {
@@ -48822,6 +57629,19 @@
     0,
     2,
     98
+   ],
+   "score": [
+    -8.0,
+    -4,
+    -4.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "interests": [
     {
@@ -48893,6 +57713,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ],
    "donations": [
     {
@@ -48970,6 +57803,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -16.0,
+    -16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ],
    "interests": [
     {
@@ -49055,6 +57901,19 @@
     12,
     0,
     98
+   ],
+   "score": [
+    2.6,
+    0,
+    2.6,
+    0,
+    34
+   ],
+   "motion_credit": [
+    12,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -49146,6 +58005,19 @@
     26,
     0,
     98
+   ],
+   "score": [
+    7.2,
+    0,
+    7.2,
+    0,
+    34
+   ],
+   "motion_credit": [
+    33,
+    92,
+    2,
+    3
    ]
   },
   {
@@ -49241,6 +58113,19 @@
     30,
     0,
     98
+   ],
+   "score": [
+    7.0,
+    0,
+    7.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    32,
+    92,
+    0,
+    2
    ]
   },
   {
@@ -49302,6 +58187,19 @@
     0,
     0,
     98
+   ],
+   "score": [
+    0.0,
+    0,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -49363,6 +58261,19 @@
     1,
     0,
     132
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -49429,7 +58340,27 @@
     1,
     1,
     98
-   ]
+   ],
+   "score": [
+    1.2,
+    -4,
+    0.2,
+    5,
+    34
+   ],
+   "motion_credit": [
+    1,
+    92,
+    0,
+    0
+   ],
+   "genocide": {
+    "stance": "risk",
+    "quote": "When do we decide that enough innocent people have been killed and enough suffering has occurred for us to consider that an ally of ours, Israel, may be committing genocide under international law, and to take decisive, concrete action to prevent that genocide by the Israeli Government?",
+    "date": "2026-02-05",
+    "debate": "Occupied Palestinian Territories: Genocide Risk Assessment",
+    "url": "https://hansard.parliament.uk/Commons/2026-02-05/debates/FDBD7A6E-012C-4157-BD1F-52F9EF48C666/OccupiedPalestinianTerritoriesGenocideRiskAssessment"
+   }
   },
   {
    "id": 5087,
@@ -49490,6 +58421,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -49551,6 +58495,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -49612,6 +58569,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -49673,6 +58643,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -49734,6 +58717,19 @@
     1,
     1,
     99
+   ],
+   "score": [
+    6.0,
+    6,
+    0.0,
+    0,
+    44
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   },
   {
@@ -49795,6 +58791,19 @@
     0,
     3,
     132
+   ],
+   "score": [
+    -22.0,
+    -22,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -49856,6 +58865,19 @@
     2,
     0,
     132
+   ],
+   "score": [
+    16.0,
+    16,
+    0.0,
+    0,
+    66
+   ],
+   "motion_credit": [
+    0,
+    122,
+    0,
+    0
    ]
   },
   {
@@ -49942,6 +58964,19 @@
     21,
     0,
     98
+   ],
+   "score": [
+    5.0,
+    0,
+    5.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    23,
+    92,
+    0,
+    2
    ]
   },
   {
@@ -50072,7 +59107,27 @@
     65,
     0,
     98
-   ]
+   ],
+   "score": [
+    25.0,
+    0,
+    15.0,
+    10,
+    34
+   ],
+   "motion_credit": [
+    69,
+    92,
+    0,
+    4
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "We can all see that a genocide is happening in Gaza, and it is about time that this Government called it out for what it is.",
+    "date": "2025-06-04",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-06-04/debates/D2A51C58-0316-495D-96F7-5C91B83D3511/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 4471,
@@ -50226,7 +59281,27 @@
     91,
     0,
     131
-   ]
+   ],
+   "score": [
+    42.1,
+    16,
+    16.1,
+    10,
+    56
+   ],
+   "motion_credit": [
+    98,
+    122,
+    2,
+    5
+   ],
+   "genocide": {
+    "stance": "says",
+    "quote": "If the UK Government fail to recognise the state of Palestine next week, what message will it send to the perpetrators of this genocide and to the suffering Palestinians?",
+    "date": "2025-06-10",
+    "debate": "Israel and the Occupied Palestinian Territories",
+    "url": "https://hansard.parliament.uk/Commons/2025-06-10/debates/C7FB0E3A-A89C-43B8-8BF3-EE295B851DA1/IsraelAndTheOccupiedPalestinianTerritories"
+   }
   },
   {
    "id": 5199,
@@ -50289,6 +59364,19 @@
     0,
     1,
     98
+   ],
+   "score": [
+    -4.0,
+    -4,
+    0.0,
+    0,
+    34
+   ],
+   "motion_credit": [
+    0,
+    92,
+    0,
+    0
    ]
   }
  ],

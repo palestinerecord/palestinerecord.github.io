@@ -478,6 +478,136 @@ SUSPENSIONS = {
     4786: ('2026-04-20', 'https://www.lbc.co.uk/article/yourparty-mp-zarah-sultana-removed-from-commons-after-branding-starmer-a-bare-fa-5HjdY2g_2/'),
 }
 
+# The score under each member's name. Three parts, each on the public record,
+# weighted by how clearly the act shows a position, and published on the page
+# with the weights so that anyone can recompute it.
+#
+# Votes carry the most weight because a vote is binding and is cast on a
+# question put, not chosen. Each counted division is weighted by how cleanly it
+# separates the two positions: the ceasefire and recognition votes put the
+# question directly; the anti-boycott Bill's two readings put it through a Bill
+# about public procurement; the proscription Order bundled Palestine Action
+# with two neo-Nazi groups, so a vote on it is the weakest evidence of the five.
+# A vote on the pro-Palestinian side adds the weight, a vote against subtracts
+# it, and an absence or a vote held before the member was elected is nothing.
+VOTE_WEIGHTS = {'1666': 10, 'h2014': 10, '1586': 6, '1705': 6, '2078': 4}
+# Early day motions are scored by the share of the counted pro-Palestinian
+# motions tabled while the member sat that they put their name to, not by the
+# raw number, so that a member who signs hundreds of motions on every subject
+# is not ranked above one who votes on every division and signs fewer. Tabling
+# a motion counts as three signatures and co-sponsoring it as two, because
+# drafting and sponsoring is a stronger act than adding a name. The share is
+# capped at one. A motion against counts against, at a fixed rate.
+MOTION_POINTS = 20
+TABLED_EXTRA = 2
+COSPONSOR_EXTRA = 1
+AGAINST_MOTION = 4
+# What the member has said in the Commons or Westminster Hall about whether the
+# conduct in Gaza is genocide, read by hand from every contribution since
+# 7 October 2023 that uses the word, and classified on the member's own words:
+#   says      states in their own voice that it is genocide, or is happening   +10
+#   risk      speaks of the risk, the ICJ's plausibility finding or the duty
+#             to prevent, or adopts others' findings, without stating it        +5
+#   disputes  casts doubt on the characterisation without denying it           -5
+#   denies    states that it is not genocide                                  -10
+# A member who used the word only of Hamas, Iran or the 7 October attack, or a
+# minister restating the government's position that it is for a court, is not
+# scored; nor is any member who did not use the word, and silence is not a
+# position. Each entry is the member id and a fragment of the sentence relied
+# on, which the build finds in Hansard and links, and fails if it cannot.
+WORD_POINTS = {'says': 10, 'risk': 5, 'disputes': -5, 'denies': -10}
+GENOCIDE_WORDS = {
+    87: ('says', 'genocide and war crimes—my words, not his'),
+    5320: ('says', 'constitutes genocide in real time'),
+    5102: ('says', 'ongoing genocide, illegal occupation and system of apartheid'),
+    5249: ('says', 'The Green party has long been clear that the actions of the Israeli Government in Gaza constitute genocide'),
+    5314: ('says', 'now extend to genocidal actions'),
+    5357: ('says', 'saying that there is not a genocide, further emboldens Israel'),
+    5268: ('says', 'The current genocide in Gaza is just the latest in that process'),
+    5231: ('says', 'allying with Israel while it carries out a genocide'),
+    5120: ('says', 'refused to acknowledge that a genocide is happening'),
+    5214: ('says', 'The killing, the misery, the starvation and the genocide have gone on for far too long'),
+    5288: ('says', 'have amounted to genocide'),
+    5157: ('says', 'The Liberal Democrats are clear that the Israeli Government have committed a genocide in Gaza'),
+    5327: ('says', 'clarifying that there has been a genocide and apartheid against the people of Palestine'),
+    227: ('says', 'the genocidal Netanyahu Government'),
+    4269: ('says', 'will be the abiding image of this genocide'),
+    4764: ('says', 'does indeed constitute a genocide'),
+    5196: ('says', 'are in denial about what constitutes a genocide'),
+    5293: ('says', 'This is not just a genocide; it is now ethnic cleansing'),
+    1536: ('says', 'it looks like a genocide to me, but I am not a court'),
+    4831: ('says', 'live-streaming of a genocide against the Palestinian people'),
+    4394: ('says', 'failure of moral leadership in the face of a genocide'),
+    5145: ('says', 'Israel has committed genocide against Palestinians in the Gaza Strip'),
+    178: ('says', 'part of this genocide is to prevent the reporting of the genocide'),
+    4824: ('says', 'The ongoing genocide and the systematic destruction of medical facilities'),
+    4473: ('says', 'impossible to conclude that this is anything less than a genocide'),
+    4753: ('says', 'in the face of two years of genocide'),
+    4869: ('says', 'there is a genocide in Gaza being committed by the Israeli Government'),
+    5359: ('says', 'these acts of genocide need to be recognised as such'),
+    5190: ('says', 'begin to look as though there is genocide unfolding before our eyes'),
+    4828: ('says', 'Given the genocide we are witnessing unfold before our eyes'),
+    4471: ('says', 'the perpetrators of this genocide'),
+    4493: ('says', 'a genocide is taking place'),
+    4267: ('says', 'dealing with the consequences of genocide'),
+    5221: ('says', 'a state conducting a genocide'),
+    4747: ('says', 'from the genocide being committed by the IDF'),
+    5246: ('says', 'have rightly described what is going on in Gaza as a genocide'),
+    5278: ('says', 'to this ongoing genocide'),
+    3924: ('says', 'stave off this genocide'),
+    5085: ('says', 'We can all see that a genocide is happening in Gaza'),
+    4371: ('says', 'beyond any dispute, in flagrant breach'),
+    4403: ('says', 'While the genocide continues in Gaza'),
+    5277: ('says', 'while a genocide has unfolded in Gaza'),
+    5449: ('says', 'since the genocide but for years before that'),
+    5280: ('says', 'to confirm that a genocide is being perpetrated'),
+    185: ('says', 'we are not just witnessing a war; we are witnessing a genocide'),
+    4786: ('says', 'arming a genocide is still arming a genocide'),
+    5251: ('says', 'will not reach the decision that what we are now seeing is genocide'),
+    345: ('risk', 'when is genocide not genocide?'),
+    3997: ('risk', 'some of which may well be genocidal acts'),
+    4495: ('risk', 'what the Government think the ICJ was doing when it ruled that there was a plausible case for genocide'),
+    5216: ('risk', 'meet the legal definition of genocide'),
+    5299: ('risk', 'clear obligations on the Government to prevent genocide in Gaza'),
+    1442: ('risk', 'where prima facie evidence of genocide exists'),
+    4776: ('risk', 'do not commit any of the acts prohibited by the genocide'),
+    4942: ('risk', 'it took nine years between the atrocities being carried out against the Yazidi people'),
+    5142: ('risk', 'to prevent a genocide from taking place, and why are we not sanctioning Minister Smotrich'),
+    4671: ('risk', 'language endorsing genocide against Palestinians'),
+    4790: ('risk', 'implement the ICJ’s historic plausible genocide ruling'),
+    146: ('risk', 'he will have to use a different word: genocide'),
+    4124: ('risk', 'were termed ‘genocidal acts’'),
+    4212: ('risk', 'article II of the genocide convention must be upheld'),
+    4511: ('risk', 'Is this genocide, like Srebrenica and Rwanda?'),
+    5030: ('risk', 'had committed the crime of genocide through deliberate targeting of the Gazan healthcare system'),
+    4870: ('risk', 'to avoid actions that may assist or enable genocidal acts'),
+    5227: ('risk', 'meet the legal definition of a genocide'),
+    4370: ('risk', 'punish the direct and public incitement to genocide'),
+    5063: ('risk', 'What practical measures will our Government take to prevent genocide'),
+    4515: ('risk', 'professor of holocaust and genocide studies at Brown University'),
+    5341: ('risk', 'including war crimes, crimes against humanity, or genocide'),
+    5107: ('risk', 'finding that genocide was taking place'),
+    5232: ('risk', 'The view of many experts is that we are witnessing a genocide'),
+    4617: ('risk', 'many observers are describing the atrocity in Gaza as a genocide'),
+    5240: ('risk', 'Experts say that Israel is committing genocide in Gaza'),
+    4598: ('risk', 'the risk of genocide in Gaza is plausible'),
+    4638: ('risk', 'a nation’s duty to prevent genocide begins when it becomes aware that there is a serious risk'),
+    4409: ('risk', 'could support a potential act of genocide'),
+    5071: ('risk', 'Will you act—decisively—to prevent genocide?'),
+    4873: ('risk', 'action must be taken now to prevent genocide'),
+    4777: ('risk', 'the hallmarks of ethnic cleansing and plausible genocide'),
+    5067: ('risk', 'while the UN is warning us about genocide in Gaza'),
+    4788: ('risk', 'there is a “real and imminent risk” of genocide'),
+    5230: ('risk', 'may be committing genocide under international law'),
+    4521: ('risk', 'There is therefore a risk that we are witnesses to genocide'),
+    4441: ('disputes', 'we need to be very careful about the use of the word “genocide”'),
+    5062: ('denies', 'There is no genocide'),
+    4483: ('denies', 'can simply not be described as a genocide'),
+    1211: ('denies', 'we do not believe that Israel’s actions in Gaza can be described as a genocide'),
+    4358: ('denies', 'Israel’s actions in Gaza cannot be described as genocide'),
+    5163: ('denies', 'it is not my belief that this was the intent of the Israel Defence Forces'),
+}
+
 # What is looked for in the Register of Members' Financial Interests. The
 # register has no subject index, so this list is the whole of what the ledger
 # can see: an interest recorded under a name not matched here is not in it.
@@ -808,7 +938,8 @@ def build():
                                      if SUSPENSIONS.get(mid, ('',))[0] == day}
         motions.append({'id': m['id'], 'date': m['date'], 'title': m['title'], 'side': side,
                         'sponsor': m['sponsor'], 'signatures': len(signed),
-                        'url': MOTION_URL % m['id'], '_signed': signed})
+                        'url': MOTION_URL % m['id'], '_signed': signed,
+                        '_tabled': m.get('tabled_by'), '_cosponsors': set(m.get('cosponsors') or [])})
     motions_reviewed = len(load_raw('uk_motions.json'))
 
     # The debates. A contribution belongs in the ledger if it is about the
@@ -820,6 +951,7 @@ def build():
             petition_debates[row['debate']['ext']].append(row['id'])
     debates = []
     spoke = defaultdict(list)
+    word_found = {}
     ids_now = {m['id'] for m in members}
     for entry in debate_index:
         path = os.path.join(RAW, 'hansard', '%s.json' % entry['ext'])
@@ -836,6 +968,13 @@ def build():
             if CHAIR.search(item.get('AttributedTo') or ''):
                 continue
             text = plain_text(item.get('Value'))
+            # Read before the subject test: a sentence about genocide can sit
+            # in a contribution that names neither Gaza nor Israel.
+            words = GENOCIDE_WORDS.get(item['MemberId'])
+            if words and item['MemberId'] not in word_found and words[1] in text:
+                sentence = next((x for x in split_sentences(text) if words[1] in x), words[1])
+                word_found[item['MemberId']] = (entry['date'], sentence.strip(),
+                                                hansard_url(entry['date'], entry['ext'], title), title)
             if len(text) < 40 or not SUBJECT.search(text):
                 continue
             said[item['MemberId']].append(text)
@@ -859,6 +998,9 @@ def build():
             # rather than ask a question or thank a colleague.
             best = max(texts, key=len)
             spoke[mid].append([index, len(texts), excerpt(best)])
+
+    missing = sorted(set(GENOCIDE_WORDS) - set(word_found))
+    assert not missing, 'GENOCIDE_WORDS fragments not found in Hansard for members %s' % missing
 
     # A member who is quoted in the record is shown their own words. The join is
     # the speaker slug, the same one the statements route uses.
@@ -945,6 +1087,41 @@ def build():
                        if i in signed or sat_on(member, m['date'], history))
         signed_pro = sum(1 for i in signed if motions[i]['side'] == 'pro')
         row['lean'] = [pro + signed_pro, against + len(signed) - signed_pro, chances]
+        # The score: votes by weight, motions by share, words by stance.
+        vote_points = vote_max = 0
+        for spec in DIVISIONS:
+            key = str(spec['id'])
+            cast = row['votes'][key]
+            if key not in VOTE_WEIGHTS or cast == VOTE_AWAY:
+                continue
+            vote_max += VOTE_WEIGHTS[key]
+            if cast == VOTE_ABSENT:
+                continue
+            took = spec['pro_side'] if cast == VOTE_FORCED else cast.replace('-teller', '')
+            vote_points += VOTE_WEIGHTS[key] if took == spec['pro_side'] else -VOTE_WEIGHTS[key]
+        available = [i for i, m in enumerate(motions) if m['side'] == 'pro'
+                     and (i in signed or sat_on(member, m['date'], history))]
+        credit = 0
+        for i in available:
+            m = motions[i]
+            if member['id'] in m['_signed']:
+                credit += 1 + (TABLED_EXTRA if m['_tabled'] == member['id'] else
+                               COSPONSOR_EXTRA if member['id'] in m['_cosponsors'] else 0)
+        share = min(1.0, credit / len(available)) if available else 0.0
+        against_signed = sum(1 for i in signed if motions[i]['side'] == 'against')
+        motion_points = MOTION_POINTS * share - AGAINST_MOTION * against_signed
+        stance = GENOCIDE_WORDS.get(member['id'], (None,))[0]
+        word_points = WORD_POINTS.get(stance, 0)
+        row['score'] = [round(vote_points + motion_points + word_points, 1), vote_points,
+                        round(motion_points, 1), word_points,
+                        vote_max + (MOTION_POINTS if available else 0) + WORD_POINTS['says']]
+        tabled = sum(1 for i in available if motions[i]['_tabled'] == member['id'])
+        cosponsored = sum(1 for i in available if member['id'] in motions[i]['_cosponsors'])
+        row['motion_credit'] = [round(credit), len(available), tabled, cosponsored]
+        if stance:
+            day, sentence, url, where = word_found[member['id']]
+            row['genocide'] = {'stance': stance, 'quote': sentence, 'date': day,
+                               'debate': where, 'url': url}
         found = by_member_interests.get(member['id'])
         if found:
             row['interests'] = found
@@ -1015,10 +1192,17 @@ def build():
             'motions_reviewed': motions_reviewed,
             'motions_not_counted': {why: len(ids) for why, ids in MOTIONS_NOT_COUNTED.items()},
             'members_who_signed': sum(1 for r in rows if r.get('signed')),
+            'score': {'vote_weights': VOTE_WEIGHTS, 'motion_points': MOTION_POINTS,
+                      'tabled_extra': TABLED_EXTRA, 'cosponsor_extra': COSPONSOR_EXTRA,
+                      'against_motion': AGAINST_MOTION, 'word_points': WORD_POINTS,
+                      'most': sum(VOTE_WEIGHTS.values()) + MOTION_POINTS + WORD_POINTS['says'],
+                      'words': {k: sum(1 for r in rows if (r.get('genocide') or {}).get('stance') == k)
+                                for k in WORD_POINTS},
+                      'words_read': len(GENOCIDE_WORDS)},
             'suspensions': [{'name': next((r['name'] for r in rows if r['id'] == mid), ''),
                              'date': day, 'source': src} for mid, (day, src) in SUSPENSIONS.items()],
         },
-        'motions': [{k: v for k, v in m.items() if k != '_signed'} for m in motions],
+        'motions': [{k: v for k, v in m.items() if not k.startswith('_')} for m in motions],
         'divisions': tallies,
         'unrecorded': UNRECORDED,
         'petitions': petitions,
