@@ -5,15 +5,15 @@
   "source": "data/provenance.json; data/statements.json",
   "repo": "palestinerecord/palestinerecord.github.io",
   "label": "challenge",
-  "entries": 406,
+  "entries": 411,
   "kinds": {
-   "figure": 127,
-   "statement": 145,
+   "figure": 128,
+   "statement": 149,
    "record": 134
   },
-  "single_origin": 264,
-  "exposed": 225,
-  "claims": 464
+  "single_origin": 267,
+  "exposed": 227,
+  "claims": 469
  },
  "conditions": [
   {
@@ -124,6 +124,10 @@
    "name": "UN OCHA",
    "origin": "un"
   },
+  "times-of-israel": {
+   "name": "The Times of Israel",
+   "origin": "israeli-media"
+  },
   "trade-press": {
    "name": "Entertainment and trade press",
    "origin": "media"
@@ -136,10 +140,6 @@
    "name": "Gaza Ministry of Health",
    "origin": "palestinian-official"
   },
-  "times-of-israel": {
-   "name": "The Times of Israel",
-   "origin": "israeli-media"
-  },
   "israel-tv": {
    "name": "Israeli broadcast media",
    "origin": "israeli-media"
@@ -148,6 +148,10 @@
    "name": "Al Jazeera",
    "origin": "media"
   },
+  "haaretz": {
+   "name": "Haaretz",
+   "origin": "israeli-media"
+  },
   "mee": {
    "name": "Middle East Eye",
    "origin": "media"
@@ -155,10 +159,6 @@
   "remember-children": {
    "name": "Remember These Children",
    "origin": "data-project"
-  },
-  "haaretz": {
-   "name": "Haaretz",
-   "origin": "israeli-media"
   },
   "un-coi": {
    "name": "UN Commission of Inquiry on the OPT",
@@ -176,6 +176,10 @@
    "name": "Euro-Mediterranean Human Rights Monitor",
    "origin": "international-ngo"
   },
+  "jpost": {
+   "name": "The Jerusalem Post",
+   "origin": "israeli-media"
+  },
   "cia-archive": {
    "name": "Declassified state archives",
    "origin": "archive"
@@ -187,10 +191,6 @@
   "icj": {
    "name": "International Court of Justice",
    "origin": "international-court"
-  },
-  "jpost": {
-   "name": "The Jerusalem Post",
-   "origin": "israeli-media"
   },
   "us-congress": {
    "name": "US Congress and the Congressional Research Service",
@@ -248,6 +248,10 @@
    "name": "CNN",
    "origin": "media"
   },
+  "france24": {
+   "name": "France 24 and Euronews",
+   "origin": "media"
+  },
   "un-ga": {
    "name": "UN General Assembly",
    "origin": "un"
@@ -263,6 +267,10 @@
   "costs-of-war": {
    "name": "Brown University Costs of War",
    "origin": "academic"
+  },
+  "cbs": {
+   "name": "CBS News",
+   "origin": "media"
   },
   "genocide-watch": {
    "name": "Genocide Watch",
@@ -284,9 +292,17 @@
    "name": "Physicians for Human Rights Israel",
    "origin": "israeli-ngo"
   },
+  "reuters": {
+   "name": "Reuters",
+   "origin": "media"
+  },
   "sipri": {
    "name": "SIPRI",
    "origin": "academic"
+  },
+  "wapo": {
+   "name": "The Washington Post",
+   "origin": "media"
   },
   "un-sr": {
    "name": "UN Special Rapporteurs",
@@ -304,10 +320,6 @@
    "name": "Benny Morris and the Israeli New Historians",
    "origin": "academic"
   },
-  "cbs": {
-   "name": "CBS News",
-   "origin": "media"
-  },
   "documentary": {
    "name": "Documentary film and broadcast interviews",
    "origin": "media"
@@ -316,10 +328,6 @@
    "name": "Founding Zionist texts and primary documents",
    "origin": "archive"
   },
-  "france24": {
-   "name": "France 24 and Euronews",
-   "origin": "media"
-  },
   "pchr": {
    "name": "Palestinian Centre for Human Rights",
    "origin": "palestinian-ngo"
@@ -327,10 +335,6 @@
   "lancet": {
    "name": "The Lancet and Lancet Global Health",
    "origin": "academic"
-  },
-  "wapo": {
-   "name": "The Washington Post",
-   "origin": "media"
   },
   "uk-gov": {
    "name": "UK Government records",
@@ -396,10 +400,6 @@
    "name": "Peer-reviewed journals and university presses",
    "origin": "academic"
   },
-  "reuters": {
-   "name": "Reuters",
-   "origin": "media"
-  },
   "trt": {
    "name": "TRT World",
    "origin": "media"
@@ -419,6 +419,10 @@
   "972": {
    "name": "+972 Magazine and Local Call",
    "origin": "israeli-media"
+  },
+  "abc": {
+   "name": "ABC News",
+   "origin": "media"
   },
   "cst": {
    "name": "Community Security Trust",
@@ -448,6 +452,10 @@
    "name": "Max Planck Institute for Demographic Research",
    "origin": "academic"
   },
+  "nbc": {
+   "name": "NBC News",
+   "origin": "media"
+  },
   "npr": {
    "name": "NPR",
    "origin": "media"
@@ -476,6 +484,10 @@
    "name": "The Wall Street Journal",
    "origin": "media"
   },
+  "un-news": {
+   "name": "UN News",
+   "origin": "un"
+  },
   "un-special-cttee": {
    "name": "UN Special Committee on Israeli Practices",
    "origin": "un"
@@ -487,10 +499,6 @@
   "wikipedia": {
    "name": "Wikipedia (with its own cited sources)",
    "origin": "data-project"
-  },
-  "abc": {
-   "name": "ABC News",
-   "origin": "media"
   },
   "adalah": {
    "name": "Adalah",
@@ -560,10 +568,6 @@
    "name": "Médecins Sans Frontières",
    "origin": "international-ngo"
   },
-  "nbc": {
-   "name": "NBC News",
-   "origin": "media"
-  },
   "oxfam": {
    "name": "Oxfam",
    "origin": "international-ngo"
@@ -604,10 +608,6 @@
    "name": "UN ESCWA",
    "origin": "un"
   },
-  "un-news": {
-   "name": "UN News",
-   "origin": "un"
-  },
   "un-membership": {
    "name": "UN membership and treaty records",
    "origin": "un"
@@ -634,9 +634,9 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 419,
+   "stands": 424,
    "falls": 30,
-   "share": 93.3
+   "share": 93.4
   },
   {
    "id": "no-israeli",
@@ -648,9 +648,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 374,
-   "falls": 75,
-   "share": 83.3
+   "stands": 377,
+   "falls": 77,
+   "share": 83.0
   },
   {
    "id": "no-un",
@@ -659,9 +659,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 382,
+   "stands": 387,
    "falls": 67,
-   "share": 85.1
+   "share": 85.2
   },
   {
    "id": "no-ngo",
@@ -672,9 +672,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 345,
+   "stands": 350,
    "falls": 104,
-   "share": 76.8
+   "share": 77.1
   },
   {
    "id": "israeli-western-only",
@@ -687,9 +687,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 251,
+   "stands": 256,
    "falls": 198,
-   "share": 55.9
+   "share": 56.4
   }
  ],
  "entries": [
@@ -3577,6 +3577,27 @@
    "context": "Who is projected to die of hunger"
   },
   {
+   "id": "statements-andy-burnham-3",
+   "claim": "Andy Burnham",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "jpost",
+    "israel-tv"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "22 September 2026",
+   "attribution": "Jewish Chronicle; Jerusalem Post; Israel National News; Jewish News; Times of Israel, 22 September 2026; the i Paper, 23 September 2026.",
+   "statement": 147
+  },
+  {
    "id": "statements-anonymous-idf-officer",
    "claim": "Anonymous IDF officer",
    "kind": "statement",
@@ -3749,6 +3770,26 @@
    "date": "30 March 2026",
    "attribution": "The Times of Israel and The Jerusalem Post, 30 March 2026",
    "statement": 111
+  },
+  {
+   "id": "statements-king-abdullah-ii",
+   "claim": "King Abdullah II",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel",
+    "jpost"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "22 September 2026",
+   "attribution": "Anadolu Agency; Times of Israel; Jerusalem Post, 22 September 2026.",
+   "statement": 146
   },
   {
    "id": "statements-maj-gen-avi-bluth",
@@ -5978,6 +6019,25 @@
    "statement": 76
   },
   {
+   "id": "statements-donald-trump",
+   "claim": "Donald Trump",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "nbc",
+    "cbs",
+    "abc"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "22 September 2026",
+   "attribution": "Axios; NBC News; CBS News; ABC News; PBS NewsHour, 22 September 2026.",
+   "statement": 148
+  },
+  {
    "id": "statements-ilan-papp",
    "claim": "Ilan Pappé",
    "kind": "statement",
@@ -6599,6 +6659,27 @@
    "value": 1,
    "attribution": "1949 Armistice Agreements; United Nations Conciliation Commission for Palestine",
    "context": "1949"
+  },
+  {
+   "id": "figures-heavy-bombs-in-the-2-8-billion-package-proposed-in-september-2",
+   "claim": "Heavy bombs in the $2.8 billion package proposed in September 2026",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "haaretz",
+    "reuters",
+    "wapo",
+    "france24"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 40000,
+   "attribution": "Washington Post and Reuters via Euronews, 16 September 2026; Haaretz, 16 September 2026",
+   "context": "The supply relationship"
   },
   {
    "id": "long-record-israel",
@@ -8092,6 +8173,28 @@
    "date": "13 July 2025",
    "attribution": "The Guardian, 13 July 2025; CNN, 14 July 2025; The Times of Israel. Report §6.3A, §21.8.",
    "statement": 92
+  },
+  {
+   "id": "statements-emmanuel-macron",
+   "claim": "Emmanuel Macron",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "un-news",
+    "jpost",
+    "reuters",
+    "france24"
+   ],
+   "origins": [
+    "israeli-media",
+    "media",
+    "un"
+   ],
+   "independence": 3,
+   "falls": [],
+   "date": "22 September 2026",
+   "attribution": "Reuters via Yahoo News; France 24; UN News; Jerusalem Post, 22 September 2026; Euronews and France 24, 23 September 2026.",
+   "statement": 145
   },
   {
    "id": "statements-geocartography-knowledge-group-penn-state-university",

@@ -38,13 +38,13 @@
     "id": "israeli-media",
     "label": "Israeli press",
     "sources": 9,
-    "claims": 79
+    "claims": 83
    },
    {
     "id": "un",
     "label": "United Nations bodies",
     "sources": 22,
-    "claims": 120
+    "claims": 121
    },
    {
     "id": "international-court",
@@ -74,7 +74,7 @@
     "id": "media",
     "label": "International press",
     "sources": 22,
-    "claims": 79
+    "claims": 82
    },
    {
     "id": "data-project",
@@ -91,13 +91,13 @@
   ]
  },
  "summary": {
-  "claims": 464,
-  "attributed": 449,
+  "claims": 469,
+  "attributed": 454,
   "unattributed": 15,
   "sources": 127,
   "origins": 14,
-  "multi_source": 176,
-  "independent": 147
+  "multi_source": 181,
+  "independent": 149
  },
  "switches": [
   {
@@ -108,9 +108,9 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 419,
+   "stands": 424,
    "falls": 30,
-   "share": 93.3
+   "share": 93.4
   },
   {
    "id": "no-israeli",
@@ -122,9 +122,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 374,
-   "falls": 75,
-   "share": 83.3
+   "stands": 377,
+   "falls": 77,
+   "share": 83.0
   },
   {
    "id": "no-un",
@@ -133,9 +133,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 382,
+   "stands": 387,
    "falls": 67,
-   "share": 85.1
+   "share": 85.2
   },
   {
    "id": "no-ngo",
@@ -146,9 +146,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 345,
+   "stands": 350,
    "falls": 104,
-   "share": 76.8
+   "share": 77.1
   },
   {
    "id": "israeli-western-only",
@@ -161,9 +161,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 251,
+   "stands": 256,
    "falls": 198,
-   "share": 55.9
+   "share": 56.4
   }
  ],
  "sources": [
@@ -182,6 +182,14 @@
    "origin": "un",
    "origin_label": "United Nations bodies",
    "claims": 43
+  },
+  {
+   "id": "times-of-israel",
+   "name": "The Times of Israel",
+   "kind": "press",
+   "origin": "israeli-media",
+   "origin_label": "Israeli press",
+   "claims": 30
   },
   {
    "id": "trade-press",
@@ -208,20 +216,12 @@
    "claims": 28
   },
   {
-   "id": "times-of-israel",
-   "name": "The Times of Israel",
-   "kind": "press",
-   "origin": "israeli-media",
-   "origin_label": "Israeli press",
-   "claims": 28
-  },
-  {
    "id": "israel-tv",
    "name": "Israeli broadcast media",
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
-   "claims": 26
+   "claims": 27
   },
   {
    "id": "aljazeera",
@@ -230,6 +230,14 @@
    "origin": "media",
    "origin_label": "International press",
    "claims": 23
+  },
+  {
+   "id": "haaretz",
+   "name": "Haaretz",
+   "kind": "press",
+   "origin": "israeli-media",
+   "origin_label": "Israeli press",
+   "claims": 17
   },
   {
    "id": "mee",
@@ -246,14 +254,6 @@
    "origin": "data-project",
    "origin_label": "Open datasets and derived figures",
    "claims": 17
-  },
-  {
-   "id": "haaretz",
-   "name": "Haaretz",
-   "kind": "press",
-   "origin": "israeli-media",
-   "origin_label": "Israeli press",
-   "claims": 16
   },
   {
    "id": "un-coi",
@@ -288,6 +288,14 @@
    "claims": 12
   },
   {
+   "id": "jpost",
+   "name": "The Jerusalem Post",
+   "kind": "press",
+   "origin": "israeli-media",
+   "origin_label": "Israeli press",
+   "claims": 12
+  },
+  {
    "id": "cia-archive",
    "name": "Declassified state archives",
    "kind": "archive",
@@ -310,14 +318,6 @@
    "origin": "international-court",
    "origin_label": "International courts",
    "claims": 11
-  },
-  {
-   "id": "jpost",
-   "name": "The Jerusalem Post",
-   "kind": "press",
-   "origin": "israeli-media",
-   "origin_label": "Israeli press",
-   "claims": 9
   },
   {
    "id": "us-congress",
@@ -432,6 +432,14 @@
    "claims": 6
   },
   {
+   "id": "france24",
+   "name": "France 24 and Euronews",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 6
+  },
+  {
    "id": "un-ga",
    "name": "UN General Assembly",
    "kind": "un",
@@ -461,6 +469,14 @@
    "kind": "research",
    "origin": "academic",
    "origin_label": "Academic and peer-reviewed research",
+   "claims": 5
+  },
+  {
+   "id": "cbs",
+   "name": "CBS News",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
    "claims": 5
   },
   {
@@ -504,11 +520,27 @@
    "claims": 5
   },
   {
+   "id": "reuters",
+   "name": "Reuters",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 5
+  },
+  {
    "id": "sipri",
    "name": "SIPRI",
    "kind": "research",
    "origin": "academic",
    "origin_label": "Academic and peer-reviewed research",
+   "claims": 5
+  },
+  {
+   "id": "wapo",
+   "name": "The Washington Post",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
    "claims": 5
   },
   {
@@ -544,14 +576,6 @@
    "claims": 4
   },
   {
-   "id": "cbs",
-   "name": "CBS News",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 4
-  },
-  {
    "id": "documentary",
    "name": "Documentary film and broadcast interviews",
    "kind": "press",
@@ -568,14 +592,6 @@
    "claims": 4
   },
   {
-   "id": "france24",
-   "name": "France 24 and Euronews",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 4
-  },
-  {
    "id": "pchr",
    "name": "Palestinian Centre for Human Rights",
    "kind": "ngo",
@@ -589,14 +605,6 @@
    "kind": "journal",
    "origin": "academic",
    "origin_label": "Academic and peer-reviewed research",
-   "claims": 4
-  },
-  {
-   "id": "wapo",
-   "name": "The Washington Post",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
    "claims": 4
   },
   {
@@ -728,14 +736,6 @@
    "claims": 3
   },
   {
-   "id": "reuters",
-   "name": "Reuters",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 3
-  },
-  {
    "id": "trt",
    "name": "TRT World",
    "kind": "press",
@@ -773,6 +773,14 @@
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
+   "claims": 2
+  },
+  {
+   "id": "abc",
+   "name": "ABC News",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
    "claims": 2
   },
   {
@@ -832,6 +840,14 @@
    "claims": 2
   },
   {
+   "id": "nbc",
+   "name": "NBC News",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 2
+  },
+  {
    "id": "npr",
    "name": "NPR",
    "kind": "press",
@@ -888,6 +904,14 @@
    "claims": 2
   },
   {
+   "id": "un-news",
+   "name": "UN News",
+   "kind": "un",
+   "origin": "un",
+   "origin_label": "United Nations bodies",
+   "claims": 2
+  },
+  {
    "id": "un-special-cttee",
    "name": "UN Special Committee on Israeli Practices",
    "kind": "un",
@@ -910,14 +934,6 @@
    "origin": "data-project",
    "origin_label": "Open datasets and derived figures",
    "claims": 2
-  },
-  {
-   "id": "abc",
-   "name": "ABC News",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 1
   },
   {
    "id": "adalah",
@@ -1056,14 +1072,6 @@
    "claims": 1
   },
   {
-   "id": "nbc",
-   "name": "NBC News",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 1
-  },
-  {
    "id": "oxfam",
    "name": "Oxfam",
    "kind": "ngo",
@@ -1144,14 +1152,6 @@
    "claims": 1
   },
   {
-   "id": "un-news",
-   "name": "UN News",
-   "kind": "un",
-   "origin": "un",
-   "origin_label": "United Nations bodies",
-   "claims": 1
-  },
-  {
    "id": "un-membership",
    "name": "UN membership and treaty records",
    "kind": "un",
@@ -1187,11 +1187,11 @@
  "files": [
   {
    "file": "figures.json",
-   "claims": 55
+   "claims": 56
   },
   {
    "file": "statements.json",
-   "claims": 145
+   "claims": 149
   },
   {
    "file": "elements.json",
@@ -1846,6 +1846,23 @@
     "un-sc"
    ],
    "id": "figures-us-security-council-vetoes-cast-on-drafts-concerning-israel"
+  },
+  {
+   "file": "figures.json",
+   "path": "arms_supply.items[6]",
+   "label": "Heavy bombs in the $2.8 billion package proposed in September 2026",
+   "value": 40000,
+   "numeric": true,
+   "ref": "",
+   "date": "",
+   "source_text": "Washington Post and Reuters via Euronews, 16 September 2026; Haaretz, 16 September 2026",
+   "sources": [
+    "haaretz",
+    "reuters",
+    "wapo",
+    "france24"
+   ],
+   "id": "figures-heavy-bombs-in-the-2-8-billion-package-proposed-in-september-2"
   },
   {
    "file": "figures.json",
@@ -4169,6 +4186,70 @@
    "source_text": "RTE, 22 September 2026, as carried by Anadolu Agency, the Irish Star and the Irish Daily Mirror.",
    "sources": [],
    "id": "statements-helen-mcentee"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[145]",
+   "label": "Emmanuel Macron",
+   "value": "Some claim that peace has been achieved, but this has not opened up humanitarian deliveries. It is a spectacle that shames us all.",
+   "numeric": false,
+   "ref": "",
+   "date": "22 September 2026",
+   "source_text": "Reuters via Yahoo News; France 24; UN News; Jerusalem Post, 22 September 2026; Euronews and France 24, 23 September 2026.",
+   "sources": [
+    "un-news",
+    "jpost",
+    "reuters",
+    "france24"
+   ],
+   "id": "statements-emmanuel-macron"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[146]",
+   "label": "King Abdullah II",
+   "value": "The international community chose to manage the conflict, not confront it ... until temporary became permanent, and permanent became policy.",
+   "numeric": false,
+   "ref": "",
+   "date": "22 September 2026",
+   "source_text": "Anadolu Agency; Times of Israel; Jerusalem Post, 22 September 2026.",
+   "sources": [
+    "times-of-israel",
+    "jpost"
+   ],
+   "id": "statements-king-abdullah-ii"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[147]",
+   "label": "Andy Burnham",
+   "value": "We stand with Israel in the face of the ongoing threats, including from Iran, against Israel and Jewish people around the world. But this does not justify the Israeli government's actions in Gaza or the West Bank.",
+   "numeric": false,
+   "ref": "",
+   "date": "22 September 2026",
+   "source_text": "Jewish Chronicle; Jerusalem Post; Israel National News; Jewish News; Times of Israel, 22 September 2026; the i Paper, 23 September 2026.",
+   "sources": [
+    "times-of-israel",
+    "jpost",
+    "israel-tv"
+   ],
+   "id": "statements-andy-burnham-3"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[148]",
+   "label": "Donald Trump",
+   "value": "Do I annihilate the Islamic Republic and do it quickly, never giving them a chance to kill and destroy people and countries again? Do I drive them into hell with no chance of survival and no hope of future greatness or generations?",
+   "numeric": false,
+   "ref": "",
+   "date": "22 September 2026",
+   "source_text": "Axios; NBC News; CBS News; ABC News; PBS NewsHour, 22 September 2026.",
+   "sources": [
+    "nbc",
+    "cbs",
+    "abc"
+   ],
+   "id": "statements-donald-trump"
   },
   {
    "file": "elements.json",

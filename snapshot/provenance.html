@@ -32,8 +32,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="../assets/favicon.svg?v=130" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=130">
+<link rel="icon" href="../assets/favicon.svg?v=131" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=131">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -66,8 +66,8 @@
 <meta name="twitter:title" content="Provenance — pull the thread · The Documented Record">
 <meta name="twitter:description" content="Every claim joined to the bodies it rests on, with a switch that rejects a whole class of source and recounts what still stands without it.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/provenance.png">
-<link rel="preload" href="../css/style.css?v=130" as="style">
-<link rel="stylesheet" href="../css/style.css?v=130">
+<link rel="preload" href="../css/style.css?v=131" as="style">
+<link rel="stylesheet" href="../css/style.css?v=131">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -82,7 +82,7 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <!-- The first screen is painted from this one file; the request should be in
      flight while the parser is still in the head. -->
-<link rel="preload" href="../data/headline.json?v=130" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
+<link rel="preload" href="../data/headline.json?v=131" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
 
 
 
@@ -105,7 +105,7 @@
   "url": "https://palestinerecord.github.io/",
   "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
   "image": "https://palestinerecord.github.io/assets/share-card.png",
-  "wordCount": 195170,
+  "wordCount": 197895,
   "dateModified": "2026-09-24",
   "temporalCoverage": "1917/2026",
   "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
@@ -261,7 +261,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=130" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=131" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -323,7 +323,7 @@
     </div>
         <div class="grid c4">
           <div class="stat blue" data-tone="blue">
-      <div class="val" data-count="464">464</div>
+      <div class="val" data-count="469">469</div>
       <div class="lbl">Curated claims</div>
       <div class="note">every figure, statement, determination and record entry that carries a source, across 13 data files</div>
       
@@ -335,15 +335,15 @@
       
       
     </div><div class="stat green" data-tone="green">
-      <div class="val" data-count="147">147</div>
+      <div class="val" data-count="149">149</div>
       <div class="lbl">Claims on two or more classes of source</div>
       <div class="note">a figure attested by bodies with no common controller does not fall when one of them is rejected</div>
       
       
     </div><div class="stat amber" data-tone="amber">
-      <div class="val" data-count="55.9">55.9<span class="suffix">%</span></div>
+      <div class="val" data-count="56.4">56.4<span class="suffix">%</span></div>
       <div class="lbl">Still standing at the hardest setting</div>
-      <div class="note">keep only israeli and western sources — 251 of 449 attributed claims</div>
+      <div class="note">keep only israeli and western sources — 256 of 454 attributed claims</div>
       
       
     </div>
@@ -357,8 +357,8 @@
       <p>The commonest objection to a record like this one is not that a figure is wrong. It is that a class of source cannot be trusted. The answer here is not to defend the source but to remove it. Each setting deletes every body of that class and recounts what is left: a claim stands if it still has one source outside the classes removed, and falls if it does not. Nothing else on the page changes.</p>
     </div>
         <div class="chips" id="prov-switch"></div>
-        <div class="card prov-panel" id="prov-panel"><p class="prov-panel-lede">Every source in place. <b>449</b> of
-          464 claims carry at least one; 147 of them rest on
+        <div class="card prov-panel" id="prov-panel"><p class="prov-panel-lede">Every source in place. <b>454</b> of
+          469 claims carry at least one; 149 of them rest on
           two or more classes of source at once.</p></div>
         <div class="card chart-card" id="chart-provenance-switch" data-chart-card="provenance-switch" data-title="What survives each rejection" data-source="data/provenance.json" data-note="The share of attributed claims that still rest on at least one source outside the class removed.">
       <div class="chart-head">
@@ -411,11 +411,11 @@
     </tr><tr data-origin="israeli-media">
       <td>Israeli press</td>
       <td class="num">9</td>
-      <td class="num">79</td>
+      <td class="num">83</td>
     </tr><tr data-origin="un">
       <td>United Nations bodies</td>
       <td class="num">22</td>
-      <td class="num">120</td>
+      <td class="num">121</td>
     </tr><tr data-origin="international-court">
       <td>International courts</td>
       <td class="num">2</td>
@@ -435,7 +435,7 @@
     </tr><tr data-origin="media">
       <td>International press</td>
       <td class="num">22</td>
-      <td class="num">79</td>
+      <td class="num">82</td>
     </tr><tr data-origin="data-project">
       <td>Open datasets and derived figures</td>
       <td class="num">4</td>
@@ -487,6 +487,10 @@
       <td>UN OCHA</td>
       <td class="muted">United Nations bodies</td>
       <td class="num">43</td>
+    </tr><tr class="prov-src" data-origin="israeli-media" data-name="the times of israel israeli press">
+      <td>The Times of Israel</td>
+      <td class="muted">Israeli press</td>
+      <td class="num">30</td>
     </tr><tr class="prov-src" data-origin="media" data-name="entertainment and trade press international press">
       <td>Entertainment and trade press</td>
       <td class="muted">International press</td>
@@ -499,18 +503,18 @@
       <td>Gaza Ministry of Health</td>
       <td class="muted">Palestinian official bodies</td>
       <td class="num">28</td>
-    </tr><tr class="prov-src" data-origin="israeli-media" data-name="the times of israel israeli press">
-      <td>The Times of Israel</td>
-      <td class="muted">Israeli press</td>
-      <td class="num">28</td>
     </tr><tr class="prov-src" data-origin="israeli-media" data-name="israeli broadcast media israeli press">
       <td>Israeli broadcast media</td>
       <td class="muted">Israeli press</td>
-      <td class="num">26</td>
+      <td class="num">27</td>
     </tr><tr class="prov-src" data-origin="media" data-name="al jazeera international press">
       <td>Al Jazeera</td>
       <td class="muted">International press</td>
       <td class="num">23</td>
+    </tr><tr class="prov-src" data-origin="israeli-media" data-name="haaretz israeli press">
+      <td>Haaretz</td>
+      <td class="muted">Israeli press</td>
+      <td class="num">17</td>
     </tr><tr class="prov-src" data-origin="media" data-name="middle east eye international press">
       <td>Middle East Eye</td>
       <td class="muted">International press</td>
@@ -519,10 +523,6 @@
       <td>Remember These Children</td>
       <td class="muted">Open datasets and derived figures</td>
       <td class="num">17</td>
-    </tr><tr class="prov-src" data-origin="israeli-media" data-name="haaretz israeli press">
-      <td>Haaretz</td>
-      <td class="muted">Israeli press</td>
-      <td class="num">16</td>
     </tr><tr class="prov-src" data-origin="un" data-name="un commission of inquiry on the opt united nations bodies">
       <td>UN Commission of Inquiry on the OPT</td>
       <td class="muted">United Nations bodies</td>
@@ -539,6 +539,10 @@
       <td>Euro-Mediterranean Human Rights Monitor</td>
       <td class="muted">International human rights organisations</td>
       <td class="num">12</td>
+    </tr><tr class="prov-src" data-origin="israeli-media" data-name="the jerusalem post israeli press">
+      <td>The Jerusalem Post</td>
+      <td class="muted">Israeli press</td>
+      <td class="num">12</td>
     </tr><tr class="prov-src" data-origin="archive" data-name="declassified state archives declassified archives">
       <td>Declassified state archives</td>
       <td class="muted">Declassified archives</td>
@@ -551,10 +555,6 @@
       <td>International Court of Justice</td>
       <td class="muted">International courts</td>
       <td class="num">11</td>
-    </tr><tr class="prov-src" data-origin="israeli-media" data-name="the jerusalem post israeli press">
-      <td>The Jerusalem Post</td>
-      <td class="muted">Israeli press</td>
-      <td class="num">9</td>
     </tr><tr class="prov-src" data-origin="western-state" data-name="us congress and the congressional research service western states and parliaments">
       <td>US Congress and the Congressional Research Service</td>
       <td class="muted">Western states and parliaments</td>
@@ -611,6 +611,10 @@
       <td>CNN</td>
       <td class="muted">International press</td>
       <td class="num">6</td>
+    </tr><tr class="prov-src" data-origin="media" data-name="france 24 and euronews international press">
+      <td>France 24 and Euronews</td>
+      <td class="muted">International press</td>
+      <td class="num">6</td>
     </tr><tr class="prov-src" data-origin="un" data-name="un general assembly united nations bodies">
       <td>UN General Assembly</td>
       <td class="muted">United Nations bodies</td>
@@ -626,6 +630,10 @@
     </tr><tr class="prov-src" data-origin="academic" data-name="brown university costs of war academic and peer-reviewed research">
       <td>Brown University Costs of War</td>
       <td class="muted">Academic and peer-reviewed research</td>
+      <td class="num">5</td>
+    </tr><tr class="prov-src" data-origin="media" data-name="cbs news international press">
+      <td>CBS News</td>
+      <td class="muted">International press</td>
       <td class="num">5</td>
     </tr><tr class="prov-src" data-origin="international-ngo" data-name="genocide watch international human rights organisations">
       <td>Genocide Watch</td>
@@ -647,9 +655,17 @@
       <td>Physicians for Human Rights Israel</td>
       <td class="muted">Israeli human rights organisations</td>
       <td class="num">5</td>
+    </tr><tr class="prov-src" data-origin="media" data-name="reuters international press">
+      <td>Reuters</td>
+      <td class="muted">International press</td>
+      <td class="num">5</td>
     </tr><tr class="prov-src" data-origin="academic" data-name="sipri academic and peer-reviewed research">
       <td>SIPRI</td>
       <td class="muted">Academic and peer-reviewed research</td>
+      <td class="num">5</td>
+    </tr><tr class="prov-src" data-origin="media" data-name="the washington post international press">
+      <td>The Washington Post</td>
+      <td class="muted">International press</td>
       <td class="num">5</td>
     </tr><tr class="prov-src" data-origin="un" data-name="un special rapporteurs united nations bodies">
       <td>UN Special Rapporteurs</td>
@@ -667,10 +683,6 @@
       <td>Benny Morris and the Israeli New Historians</td>
       <td class="muted">Academic and peer-reviewed research</td>
       <td class="num">4</td>
-    </tr><tr class="prov-src" data-origin="media" data-name="cbs news international press">
-      <td>CBS News</td>
-      <td class="muted">International press</td>
-      <td class="num">4</td>
     </tr><tr class="prov-src" data-origin="media" data-name="documentary film and broadcast interviews international press">
       <td>Documentary film and broadcast interviews</td>
       <td class="muted">International press</td>
@@ -679,10 +691,6 @@
       <td>Founding Zionist texts and primary documents</td>
       <td class="muted">Declassified archives</td>
       <td class="num">4</td>
-    </tr><tr class="prov-src" data-origin="media" data-name="france 24 and euronews international press">
-      <td>France 24 and Euronews</td>
-      <td class="muted">International press</td>
-      <td class="num">4</td>
     </tr><tr class="prov-src" data-origin="palestinian-ngo" data-name="palestinian centre for human rights palestinian human rights organisations">
       <td>Palestinian Centre for Human Rights</td>
       <td class="muted">Palestinian human rights organisations</td>
@@ -690,10 +698,6 @@
     </tr><tr class="prov-src" data-origin="academic" data-name="the lancet and lancet global health academic and peer-reviewed research">
       <td>The Lancet and Lancet Global Health</td>
       <td class="muted">Academic and peer-reviewed research</td>
-      <td class="num">4</td>
-    </tr><tr class="prov-src" data-origin="media" data-name="the washington post international press">
-      <td>The Washington Post</td>
-      <td class="muted">International press</td>
       <td class="num">4</td>
     </tr><tr class="prov-src" data-origin="western-state" data-name="uk government records western states and parliaments">
       <td>UK Government records</td>
@@ -759,10 +763,6 @@
       <td>Peer-reviewed journals and university presses</td>
       <td class="muted">Academic and peer-reviewed research</td>
       <td class="num">3</td>
-    </tr><tr class="prov-src" data-origin="media" data-name="reuters international press">
-      <td>Reuters</td>
-      <td class="muted">International press</td>
-      <td class="num">3</td>
     </tr><tr class="prov-src" data-origin="media" data-name="trt world international press">
       <td>TRT World</td>
       <td class="muted">International press</td>
@@ -782,6 +782,10 @@
     </tr><tr class="prov-src" data-origin="israeli-media" data-name="+972 magazine and local call israeli press">
       <td>+972 Magazine and Local Call</td>
       <td class="muted">Israeli press</td>
+      <td class="num">2</td>
+    </tr><tr class="prov-src" data-origin="media" data-name="abc news international press">
+      <td>ABC News</td>
+      <td class="muted">International press</td>
       <td class="num">2</td>
     </tr><tr class="prov-src" data-origin="international-ngo" data-name="community security trust international human rights organisations">
       <td>Community Security Trust</td>
@@ -811,6 +815,10 @@
       <td>Max Planck Institute for Demographic Research</td>
       <td class="muted">Academic and peer-reviewed research</td>
       <td class="num">2</td>
+    </tr><tr class="prov-src" data-origin="media" data-name="nbc news international press">
+      <td>NBC News</td>
+      <td class="muted">International press</td>
+      <td class="num">2</td>
     </tr><tr class="prov-src" data-origin="media" data-name="npr international press">
       <td>NPR</td>
       <td class="muted">International press</td>
@@ -839,6 +847,10 @@
       <td>The Wall Street Journal</td>
       <td class="muted">International press</td>
       <td class="num">2</td>
+    </tr><tr class="prov-src" data-origin="un" data-name="un news united nations bodies">
+      <td>UN News</td>
+      <td class="muted">United Nations bodies</td>
+      <td class="num">2</td>
     </tr><tr class="prov-src" data-origin="un" data-name="un special committee on israeli practices united nations bodies">
       <td>UN Special Committee on Israeli Practices</td>
       <td class="muted">United Nations bodies</td>
@@ -851,10 +863,6 @@
       <td>Wikipedia (with its own cited sources)</td>
       <td class="muted">Open datasets and derived figures</td>
       <td class="num">2</td>
-    </tr><tr class="prov-src" data-origin="media" data-name="abc news international press">
-      <td>ABC News</td>
-      <td class="muted">International press</td>
-      <td class="num">1</td>
     </tr><tr class="prov-src" data-origin="israeli-ngo" data-name="adalah israeli human rights organisations">
       <td>Adalah</td>
       <td class="muted">Israeli human rights organisations</td>
@@ -923,10 +931,6 @@
       <td>Médecins Sans Frontières</td>
       <td class="muted">International human rights organisations</td>
       <td class="num">1</td>
-    </tr><tr class="prov-src" data-origin="media" data-name="nbc news international press">
-      <td>NBC News</td>
-      <td class="muted">International press</td>
-      <td class="num">1</td>
     </tr><tr class="prov-src" data-origin="international-ngo" data-name="oxfam international human rights organisations">
       <td>Oxfam</td>
       <td class="muted">International human rights organisations</td>
@@ -967,10 +971,6 @@
       <td>UN ESCWA</td>
       <td class="muted">United Nations bodies</td>
       <td class="num">1</td>
-    </tr><tr class="prov-src" data-origin="un" data-name="un news united nations bodies">
-      <td>UN News</td>
-      <td class="muted">United Nations bodies</td>
-      <td class="num">1</td>
     </tr><tr class="prov-src" data-origin="un" data-name="un membership and treaty records united nations bodies">
       <td>UN membership and treaty records</td>
       <td class="muted">United Nations bodies</td>
@@ -995,13 +995,13 @@
       <section class="section">
         <div class="section-head">
       <div class="eyebrow">The claims</div>
-      <h2>464 claims, each with its chain</h2>
+      <h2>469 claims, each with its chain</h2>
       <p>Every curated record that carries a source, with the source text it was written with and the entities that text resolves to. Filter by where the claim lives, search the text, or set the switch above and watch the claims that fall grey out.</p>
     </div>
         <div class="chips" id="prov-files"></div>
         <div class="tl-controls">
           <input type="search" id="prov-search" placeholder="Search claims, values and source text…" autocomplete="off">
-          <span class="small muted" id="prov-count">464 of 464 claims</span>
+          <span class="small muted" id="prov-count">469 of 469 claims</span>
         </div>
         <ul class="prov-claims" id="prov-claims"><li class="prov-claim" data-origins="palestinian-official un" data-file="figures.json" data-text="palestinians killed in gaza 73,922 gaza moh / ocha gaza ministry of health un ocha gaza-moh ocha" id="prov-figures-palestinians-killed-in-gaza">
         <div class="prov-claim-head">
@@ -1390,6 +1390,15 @@
         <div class="prov-value">51</div>
         <div class="prov-chain"><span class="prov-chip" data-origin="un">UN Security Council</span></div>
         <div class="prov-src-text">United Nations Security Council veto list</div>
+      </li><li class="prov-claim" data-origins="israeli-media media" data-file="figures.json" data-text="heavy bombs in the $2.8 billion package proposed in september 2026 40,000 washington post and reuters via euronews, 16 september 2026; haaretz, 16 september 2026 haaretz reuters the washington post france 24 and euronews haaretz reuters wapo france24" id="prov-figures-heavy-bombs-in-the-2-8-billion-package-proposed-in-september-2">
+        <div class="prov-claim-head">
+          <a href="../index.html#/data" class="prov-label">Heavy bombs in the $2.8 billion package proposed in September 2026</a>
+          
+          
+        </div>
+        <div class="prov-value">40,000</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">Haaretz</span><span class="prov-chip" data-origin="media">Reuters</span><span class="prov-chip" data-origin="media">The Washington Post</span><span class="prov-chip" data-origin="media">France 24 and Euronews</span></div>
+        <div class="prov-src-text">Washington Post and Reuters via Euronews, 16 September 2026; Haaretz, 16 September 2026</div>
       </li><li class="prov-claim" data-origins="archive media" data-file="figures.json" data-text="raf and contractor surveillance flights identified over or near gaza 623 action on armed violence / declassified uk, 2025 declassified state archives entertainment and trade press cia-archive trade-press" id="prov-figures-raf-and-contractor-surveillance-flights-identified-over-or-nea">
         <div class="prov-claim-head">
           <a href="../index.html#/data" class="prov-label">RAF and contractor surveillance flights identified over or near Gaza</a>
@@ -2803,6 +2812,42 @@
         <div class="prov-value">We are seeing an attempt to erase a population.</div>
         <div class="prov-chain"><span class="prov-chip none">no source recorded</span></div>
         <div class="prov-src-text">RTE, 22 September 2026, as carried by Anadolu Agency, the Irish Star and the Irish Daily Mirror.</div>
+      </li><li class="prov-claim" data-origins="un israeli-media media" data-file="statements.json" data-text="emmanuel macron some claim that peace has been achieved, but this has not opened up humanitarian deliveries. it is a spectacle that shames us all. reuters via yahoo news; france 24; un news; jerusalem post, 22 september 2026; euronews and france 24, 23 september 2026. un news the jerusalem post reuters france 24 and euronews un-news jpost reuters france24" id="prov-statements-emmanuel-macron">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">Emmanuel Macron</a>
+          <span class="prov-date">22 September 2026</span>
+          
+        </div>
+        <div class="prov-value">Some claim that peace has been achieved, but this has not opened up humanitarian deliveries. It is a spectacle that shames us all.</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="un">UN News</span><span class="prov-chip" data-origin="israeli-media">The Jerusalem Post</span><span class="prov-chip" data-origin="media">Reuters</span><span class="prov-chip" data-origin="media">France 24 and Euronews</span></div>
+        <div class="prov-src-text">Reuters via Yahoo News; France 24; UN News; Jerusalem Post, 22 September 2026; Euronews and France 24, 23 September 2026.</div>
+      </li><li class="prov-claim" data-origins="israeli-media" data-file="statements.json" data-text="king abdullah ii the international community chose to manage the conflict, not confront it ... until temporary became permanent, and permanent became policy. anadolu agency; times of israel; jerusalem post, 22 september 2026. the times of israel the jerusalem post times-of-israel jpost" id="prov-statements-king-abdullah-ii">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">King Abdullah II</a>
+          <span class="prov-date">22 September 2026</span>
+          
+        </div>
+        <div class="prov-value">The international community chose to manage the conflict, not confront it ... until temporary became permanent, and permanent became policy.</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">The Times of Israel</span><span class="prov-chip" data-origin="israeli-media">The Jerusalem Post</span></div>
+        <div class="prov-src-text">Anadolu Agency; Times of Israel; Jerusalem Post, 22 September 2026.</div>
+      </li><li class="prov-claim" data-origins="israeli-media" data-file="statements.json" data-text="andy burnham we stand with israel in the face of the ongoing threats, including from iran, against israel and jewish people around the world. but this does not justify the israeli government's actions in gaza or the west bank. jewish chronicle; jerusalem post; israel national news; jewish news; times of israel, 22 september 2026; the i paper, 23 september 2026. the times of israel the jerusalem post israeli broadcast media times-of-israel jpost israel-tv" id="prov-statements-andy-burnham-3">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">Andy Burnham</a>
+          <span class="prov-date">22 September 2026</span>
+          
+        </div>
+        <div class="prov-value">We stand with Israel in the face of the ongoing threats, including from Iran, against Israel and Jewish people around the world. But this does not justify the Israeli government's actions in Gaza or the West Bank.</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">The Times of Israel</span><span class="prov-chip" data-origin="israeli-media">The Jerusalem Post</span><span class="prov-chip" data-origin="israeli-media">Israeli broadcast media</span></div>
+        <div class="prov-src-text">Jewish Chronicle; Jerusalem Post; Israel National News; Jewish News; Times of Israel, 22 September 2026; the i Paper, 23 September 2026.</div>
+      </li><li class="prov-claim" data-origins="media" data-file="statements.json" data-text="donald trump do i annihilate the islamic republic and do it quickly, never giving them a chance to kill and destroy people and countries again? do i drive them into hell with no chance of survival and no hope of future greatness or generations? axios; nbc news; cbs news; abc news; pbs newshour, 22 september 2026. nbc news cbs news abc news nbc cbs abc" id="prov-statements-donald-trump">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">Donald Trump</a>
+          <span class="prov-date">22 September 2026</span>
+          
+        </div>
+        <div class="prov-value">Do I annihilate the Islamic Republic and do it quickly, never giving them a chance to kill and destroy people and countries again? Do I drive them into hell with no chance of survival and no hope of future greatness or generations?</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="media">NBC News</span><span class="prov-chip" data-origin="media">CBS News</span><span class="prov-chip" data-origin="media">ABC News</span></div>
+        <div class="prov-src-text">Axios; NBC News; CBS News; ABC News; PBS NewsHour, 22 September 2026.</div>
       </li><li class="prov-claim" data-origins="international-court" data-file="elements.json" data-text="icj, the wall  international court of justice international court of justice icj" id="prov-elements-icj-the-wall">
         <div class="prov-claim-head">
           <a href="../index.html#/legal" class="prov-label">ICJ, the Wall</a>
@@ -5188,13 +5233,13 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=130" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=131" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
             evidentiary standards to all actors. Every heading, paragraph, list and table it contains is
             reproduced in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">195,170 words · 36 parts · 188 sections · 14 tables · 410 chronology entries · 145 documented statements · 315 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
+    <p class="muted" id="footer-stats">197,895 words · 36 parts · 189 sections · 14 tables · 412 chronology entries · 149 documented statements · 325 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-09.</p>
     <!-- A record meant to be used in an argument has to be citable in one.
          Filled in by app.js with the route on screen and the date of the data
          it is showing, so a citation copied from here names the version the

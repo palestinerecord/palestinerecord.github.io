@@ -2265,6 +2265,67 @@
    "context": "Speaking to RTE in New York ahead of the United Nations General Assembly, one week after signing the orders commencing the Israeli Settlements in the Occupied Palestinian Territory (Prohibition of Importation of Goods) Act 2026. She added that \"we are seeing an attempt to prevent a two-state solution from ever being a possibility into the future\", said of the European Union that \"we need to act collectively, we are failing here, to be quite honest\" and that \"our credibility is gone on this issue\", and called for an EU-wide prohibition covering Israeli goods and services. Asked about the ICC arrest warrant during Netanyahu’s General Assembly visit, she said she did not expect him to be arrested in the United States.",
    "source": "RTE, 22 September 2026, as carried by Anadolu Agency, the Irish Star and the Irish Daily Mirror.",
    "significance": "A characterisation of intent directed at a group as such, spoken by the serving foreign minister of a European Union member state that has formally intervened in South Africa v Israel. It is not a determination under Article II of the Genocide Convention and is not recorded as one: the word genocide was not used and no legal finding was purported. Its evidential weight is that a member of the Council of the European Union described the conduct in the register of destruction rather than of humanitarian deterioration, and did so while conceding that her own state’s enacted measure — a goods-only import ban covering under one million euro of trade over five years — \"is not enough\"."
+  },
+  {
+   "speaker": "Emmanuel Macron",
+   "role": "President of the French Republic",
+   "date": "22 September 2026",
+   "sort": "2026-09-22",
+   "cat": [
+    "annexation",
+    "starvation",
+    "findings"
+   ],
+   "tier": "Allied government",
+   "quote": "Some claim that peace has been achieved, but this has not opened up humanitarian deliveries. It is a spectacle that shames us all.",
+   "context": "The last address of his presidency to the UN General Assembly, hours after President Trump described his Gaza plan as a diplomatic triumph. On the West Bank he said: \"Look at what is happening in the West Bank, where there are violations every day. In the name of what? Hamas has never struck in the West Bank. This every day makes it more impossible to achieve respect for the Palestinian people's legitimate right to exist.\" Israel's Prime Minister's office called the statement a \"grotesque absurdity\", citing the killing of Netanel Shukrun near Neve Tzuf on 20 September; a French diplomatic source said the French sentence meant that Hamas has never governed the West Bank.",
+   "source": "Reuters via Yahoo News; France 24; UN News; Jerusalem Post, 22 September 2026; Euronews and France 24, 23 September 2026.",
+   "significance": "A head of state of a permanent member of the Security Council, which led the 2025 wave of recognitions, stating from the Assembly's podium that the humanitarian routes have not reopened under the declared peace and that West Bank conduct bears on the Palestinian people's right to exist. It is a characterisation, not a legal finding; the disputed sentence on Hamas is recorded with both readings in §15.3E."
+  },
+  {
+   "speaker": "King Abdullah II",
+   "role": "King of the Hashemite Kingdom of Jordan",
+   "date": "22 September 2026",
+   "sort": "2026-09-22",
+   "cat": [
+    "cleansing",
+    "annexation",
+    "findings"
+   ],
+   "tier": "Allied government",
+   "quote": "The international community chose to manage the conflict, not confront it ... until temporary became permanent, and permanent became policy.",
+   "context": "Address to the 81st UN General Assembly. He described settlement expansion, settler violence and displacement in the West Bank as one policy of forced displacement amounting to a war crime, described conduct in Gaza as an attempt to \"erase Palestinian life and impose a new territorial reality\", and accused the Israeli government of obstructing the United States' own efforts to reach an agreement.",
+   "source": "Anadolu Agency; Times of Israel; Jerusalem Post, 22 September 2026.",
+   "significance": "The head of state of a treaty partner of Israel since 1994, holding custodial standing over the holy sites of Jerusalem, characterising West Bank policy as forced displacement and a war crime. Recorded as a characterisation at the weight of a head of state's address, not as a determination."
+  },
+  {
+   "speaker": "Andy Burnham",
+   "role": "Prime Minister of the United Kingdom",
+   "date": "22 September 2026",
+   "sort": "2026-09-22",
+   "cat": [
+    "annexation",
+    "findings"
+   ],
+   "tier": "Head government",
+   "quote": "We stand with Israel in the face of the ongoing threats, including from Iran, against Israel and Jewish people around the world. But this does not justify the Israeli government's actions in Gaza or the West Bank.",
+   "context": "First address to the UN General Assembly. He said construction in the E1 area \"cannot be allowed to happen\" and that Britain had acted \"by banning trade in goods with illegal settlements, recognising that the Israeli occupation of the Palestinian territory is unlawful, and sanctioning those taking part in the construction of illegal settlements\". At a press conference with President Trump the same day, asked about the settlement ban, he said: \"you have to have meaning behind your words; otherwise, trust in politics further evaporates.\"",
+   "source": "Jewish Chronicle; Jerusalem Post; Israel National News; Jewish News; Times of Israel, 22 September 2026; the i Paper, 23 September 2026.",
+   "significance": "The supplier-side head of government adopting, as government position from the Assembly's podium, the holding of the July 2024 Advisory Opinion that the occupation is unlawful. It is recorded beside the military record in §13.3A, which the address did not change, and his June 2026 refusal to characterise Gaza."
+  },
+  {
+   "speaker": "Donald Trump",
+   "role": "President of the United States",
+   "date": "22 September 2026",
+   "sort": "2026-09-22",
+   "cat": [
+    "beyond"
+   ],
+   "tier": "Allied government",
+   "quote": "Do I annihilate the Islamic Republic and do it quickly, never giving them a chance to kill and destroy people and countries again? Do I drive them into hell with no chance of survival and no hope of future greatness or generations?",
+   "context": "Address to the 81st UN General Assembly, nearly seven months into the war that began with joint US-Israeli strikes on Iran on 28 February 2026. He opened with \"I have a big decision to make\" and predicted a deal after the US midterm elections.",
+   "source": "Axios; NBC News; CBS News; ABC News; PBS NewsHour, 22 September 2026.",
+   "significance": "A threat of force made from the Assembly's podium, in a Charter whose Article 2(4) prohibits the threat as well as the use of force, by the head of the state supplying the munitions in §13.10. Recorded for the regional extension of the war, not as a statement of intent against Palestinians."
   }
  ]
 }
