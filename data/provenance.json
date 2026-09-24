@@ -74,7 +74,7 @@
     "id": "media",
     "label": "International press",
     "sources": 22,
-    "claims": 82
+    "claims": 83
    },
    {
     "id": "data-project",
@@ -86,18 +86,18 @@
     "id": "archive",
     "label": "Declassified archives",
     "sources": 2,
-    "claims": 15
+    "claims": 16
    }
   ]
  },
  "summary": {
-  "claims": 469,
-  "attributed": 454,
+  "claims": 470,
+  "attributed": 455,
   "unattributed": 15,
   "sources": 127,
   "origins": 14,
-  "multi_source": 181,
-  "independent": 149
+  "multi_source": 182,
+  "independent": 150
  },
  "switches": [
   {
@@ -108,7 +108,7 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 424,
+   "stands": 425,
    "falls": 30,
    "share": 93.4
   },
@@ -122,9 +122,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 377,
+   "stands": 378,
    "falls": 77,
-   "share": 83.0
+   "share": 83.1
   },
   {
    "id": "no-un",
@@ -133,9 +133,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 387,
+   "stands": 388,
    "falls": 67,
-   "share": 85.2
+   "share": 85.3
   },
   {
    "id": "no-ngo",
@@ -146,7 +146,7 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 350,
+   "stands": 351,
    "falls": 104,
    "share": 77.1
   },
@@ -161,9 +161,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 256,
+   "stands": 257,
    "falls": 198,
-   "share": 56.4
+   "share": 56.5
   }
  ],
  "sources": [
@@ -184,20 +184,20 @@
    "claims": 43
   },
   {
+   "id": "trade-press",
+   "name": "Entertainment and trade press",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 30
+  },
+  {
    "id": "times-of-israel",
    "name": "The Times of Israel",
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
    "claims": 30
-  },
-  {
-   "id": "trade-press",
-   "name": "Entertainment and trade press",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 29
   },
   {
    "id": "site-derived",
@@ -280,6 +280,14 @@
    "claims": 13
   },
   {
+   "id": "cia-archive",
+   "name": "Declassified state archives",
+   "kind": "archive",
+   "origin": "archive",
+   "origin_label": "Declassified archives",
+   "claims": 12
+  },
+  {
    "id": "euromed",
    "name": "Euro-Mediterranean Human Rights Monitor",
    "kind": "ngo",
@@ -294,14 +302,6 @@
    "origin": "israeli-media",
    "origin_label": "Israeli press",
    "claims": 12
-  },
-  {
-   "id": "cia-archive",
-   "name": "Declassified state archives",
-   "kind": "archive",
-   "origin": "archive",
-   "origin_label": "Declassified archives",
-   "claims": 11
   },
   {
    "id": "dci-p",
@@ -1187,7 +1187,7 @@
  "files": [
   {
    "file": "figures.json",
-   "claims": 56
+   "claims": 57
   },
   {
    "file": "statements.json",
@@ -1909,6 +1909,21 @@
   {
    "file": "figures.json",
    "path": "uk_complicity.items[3]",
+   "label": "Licences revoked or suspended under the September 2026 \"double lock\"",
+   "value": 0,
+   "numeric": true,
+   "ref": "",
+   "date": "",
+   "source_text": "UK Parliament, Written Questions 29276 and 29277, answered 16 September 2026; Declassified UK, 24 September 2026",
+   "sources": [
+    "cia-archive",
+    "trade-press"
+   ],
+   "id": "figures-licences-revoked-or-suspended-under-the-september-2026-double-"
+  },
+  {
+   "file": "figures.json",
+   "path": "uk_complicity.items[4]",
    "label": "Single-issue arms licences approved, October to December 2024",
    "value": 127.6,
    "numeric": true,
@@ -1920,7 +1935,7 @@
   },
   {
    "file": "figures.json",
-   "path": "uk_complicity.items[4]",
+   "path": "uk_complicity.items[5]",
    "label": "British military flights to Israel in the new government's first six weeks",
    "value": 10,
    "numeric": true,
@@ -1934,7 +1949,7 @@
   },
   {
    "file": "figures.json",
-   "path": "uk_complicity.items[5]",
+   "path": "uk_complicity.items[6]",
    "label": "Donations to the Defence Secretary from donors connected to Palantir and to licensed exporters to Israel",
    "value": 51750,
    "numeric": true,
@@ -1948,7 +1963,7 @@
   },
   {
    "file": "figures.json",
-   "path": "uk_complicity.items[6]",
+   "path": "uk_complicity.items[7]",
    "label": "Lawyers and legal academics who told the Prime Minister the settlement measures fall short of the UK's legal obligations",
    "value": 130,
    "numeric": true,
@@ -8051,7 +8066,7 @@
    "numeric": false,
    "ref": "§15.4",
    "date": "",
-   "source_text": "Wikipedia, \"International recognition of Palestine\", retrieved 23 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there.",
+   "source_text": "Wikipedia, \"International recognition of Palestine\", retrieved 24 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there.",
    "sources": [
     "pal-mfa",
     "wikipedia"

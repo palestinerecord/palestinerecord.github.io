@@ -5,15 +5,15 @@
   "source": "data/provenance.json; data/statements.json",
   "repo": "palestinerecord/palestinerecord.github.io",
   "label": "challenge",
-  "entries": 411,
+  "entries": 412,
   "kinds": {
-   "figure": 128,
+   "figure": 129,
    "statement": 149,
    "record": 134
   },
   "single_origin": 267,
   "exposed": 227,
-  "claims": 469
+  "claims": 470
  },
  "conditions": [
   {
@@ -124,13 +124,13 @@
    "name": "UN OCHA",
    "origin": "un"
   },
-  "times-of-israel": {
-   "name": "The Times of Israel",
-   "origin": "israeli-media"
-  },
   "trade-press": {
    "name": "Entertainment and trade press",
    "origin": "media"
+  },
+  "times-of-israel": {
+   "name": "The Times of Israel",
+   "origin": "israeli-media"
   },
   "site-derived": {
    "name": "Derived within this record",
@@ -172,6 +172,10 @@
    "name": "Human Rights Watch",
    "origin": "international-ngo"
   },
+  "cia-archive": {
+   "name": "Declassified state archives",
+   "origin": "archive"
+  },
   "euromed": {
    "name": "Euro-Mediterranean Human Rights Monitor",
    "origin": "international-ngo"
@@ -179,10 +183,6 @@
   "jpost": {
    "name": "The Jerusalem Post",
    "origin": "israeli-media"
-  },
-  "cia-archive": {
-   "name": "Declassified state archives",
-   "origin": "archive"
   },
   "dci-p": {
    "name": "Defence for Children International – Palestine",
@@ -634,7 +634,7 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 424,
+   "stands": 425,
    "falls": 30,
    "share": 93.4
   },
@@ -648,9 +648,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 377,
+   "stands": 378,
    "falls": 77,
-   "share": 83.0
+   "share": 83.1
   },
   {
    "id": "no-un",
@@ -659,9 +659,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 387,
+   "stands": 388,
    "falls": 67,
-   "share": 85.2
+   "share": 85.3
   },
   {
    "id": "no-ngo",
@@ -672,7 +672,7 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 350,
+   "stands": 351,
    "falls": 104,
    "share": 77.1
   },
@@ -687,9 +687,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 256,
+   "stands": 257,
    "falls": 198,
-   "share": 56.4
+   "share": 56.5
   }
  ],
  "entries": [
@@ -4789,7 +4789,7 @@
     "israeli-western-only"
    ],
    "ref": "§15.4",
-   "attribution": "Wikipedia, \"International recognition of Palestine\", retrieved 23 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there."
+   "attribution": "Wikipedia, \"International recognition of Palestine\", retrieved 24 September 2026, which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents for each entry. Dates are as given there."
   },
   {
    "id": "long-record-second-intifada",
@@ -6718,6 +6718,25 @@
    "value": 78,
    "attribution": "Oslo II Interim Agreement, September 1995; B'Tselem; United Nations OCHA",
    "context": "Today"
+  },
+  {
+   "id": "figures-licences-revoked-or-suspended-under-the-september-2026-double-",
+   "claim": "Licences revoked or suspended under the September 2026 \"double lock\"",
+   "kind": "figure",
+   "file": "figures.json",
+   "sources": [
+    "cia-archive",
+    "trade-press"
+   ],
+   "origins": [
+    "archive",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "value": 0,
+   "attribution": "UK Parliament, Written Questions 29276 and 29277, answered 16 September 2026; Declassified UK, 24 September 2026",
+   "context": "The United Kingdom's own record"
   },
   {
    "id": "figures-raf-and-contractor-surveillance-flights-identified-over-or-nea",
