@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-25",
-  "total_bytes": 7149753,
+  "total_bytes": 7149824,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -192,7 +192,7 @@
         "recognition",
         "opinion"
       ],
-      "updated": "2026-09-24"
+      "updated": "2026-09-25"
     },
     {
       "path": "data/headline.json",
@@ -261,7 +261,7 @@
         "recognition",
         "land"
       ],
-      "updated": "2026-09-23"
+      "updated": "2026-09-25"
     },
     {
       "path": "data/maps.json",
@@ -418,7 +418,7 @@
       "title": "Daily and monthly casualty series",
       "description": "Killed and injured in Gaza and the West Bank, day by day and aggregated by month, with the reporting gaps left as gaps rather than interpolated.",
       "source": "Tech For Palestine, from Gaza Ministry of Health and OCHA reporting (public domain).",
-      "bytes": 96803,
+      "bytes": 96874,
       "records": null,
       "fields": [
         "meta",
