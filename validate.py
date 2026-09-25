@@ -1601,6 +1601,25 @@ def check_genocide_positions(files):
     note('  genocide: %d UN member states, %s' % (len(un), ', '.join('%s %d' % kv for kv in sorted(counts.items()))))
 
 
+def check_world_projection():
+    """Every world map is drawn equal-area.
+
+    ECharts plots longitude and latitude as a flat grid unless told otherwise,
+    which drew Greenland at 3.7 times and Russia at twice their true size
+    relative to Brazil. The projection is set once, in WORLD, and a world map
+    that names the geometry directly would silently fall back to the flat grid.
+    """
+    src = (HERE / 'js' / 'charts.js').read_text(encoding='utf-8')
+    direct = len(re.findall(r"map:\s*'world'", src))
+    if "const WORLD = { map: 'world', projection: EQUAL_EARTH }" not in src:
+        fail('projection', 'charts.js no longer defines the equal-area WORLD map settings')
+    elif direct != 1:
+        fail('projection', "%d world maps name the geometry directly instead of using WORLD, "
+                           "and would be drawn on the flat grid" % (direct - 1))
+    else:
+        note('  projection: %d world maps drawn equal-area' % src.count('MAP_BASE, WORLD'))
+
+
 def check_share_card(files):
     """The home page's share card states three figures; they should be today's.
 
@@ -1889,6 +1908,7 @@ def main():
         check_figures_against_markdown(files)
         check_curated_duplicates(files)
         check_genocide_positions(files)
+        check_world_projection()
         check_share_card(files)
         check_dependencies()
         check_chart_wiring()

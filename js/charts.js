@@ -3267,6 +3267,44 @@ const Charts = (function () {
     emphasis: { itemStyle: { areaColor: C.ink(.40) }, label: { show: false } },
   };
 
+  /* Every world map is drawn on the Equal Earth projection (Šavrič, Patterson
+     and Jenny, 2018), which is equal-area: a country takes up the share of the
+     map that it takes up of the Earth. ECharts otherwise plots longitude and
+     latitude as a flat grid, which inflates land by the secant of its latitude,
+     so that Greenland was drawn 3.7 times, Norway 2.7 times and Russia and
+     Canada twice their size relative to Brazil, and the high-latitude north,
+     where most of the states that defer or reject sit, looked larger than the
+     rest of the world. The polynomial is the published one; the inverse, which
+     ECharts needs to pan and to place the tooltip, solves for the parametric
+     latitude by Newton's method. */
+  const EQUAL_EARTH = (() => {
+    const A1 = 1.340264, A2 = -0.081106, A3 = 0.000893, A4 = 0.003796;
+    const M = Math.sqrt(3) / 2;
+    const RAD = Math.PI / 180;
+    const deriv = (t) => { const t2 = t * t, t6 = t2 * t2 * t2; return A1 + 3 * A2 * t2 + t6 * (7 * A3 + 9 * A4 * t2); };
+    const yOf = (t) => { const t2 = t * t, t6 = t2 * t2 * t2; return t * (A1 + A2 * t2 + t6 * (A3 + A4 * t2)); };
+    return {
+      project: ([lon, lat]) => {
+        const t = Math.asin(M * Math.sin(lat * RAD));
+        // Screen coordinates run downwards, so north is negated.
+        return [2 * Math.sqrt(3) * lon * RAD * Math.cos(t) / (3 * deriv(t)), -yOf(t)];
+      },
+      unproject: ([x, y]) => {
+        const target = -y;
+        let t = target / A1;
+        for (let i = 0; i < 12; i++) {
+          const step = (yOf(t) - target) / deriv(t);
+          t -= step;
+          if (Math.abs(step) < 1e-9) break;
+        }
+        const lon = 3 * x * deriv(t) / (2 * Math.sqrt(3) * Math.cos(t));
+        const lat = Math.asin(Math.max(-1, Math.min(1, Math.sin(t) / M)));
+        return [lon / RAD, lat / RAD];
+      },
+    };
+  })();
+  const WORLD = { map: 'world', projection: EQUAL_EARTH };
+
   const mapNote = (s) => `<span style="color:${C.muted};display:block;max-width:320px;white-space:normal;margin-top:2px">${s}</span>`;
 
   /* The slider under every map that steps through dates. Shared because four
@@ -3332,8 +3370,7 @@ const Charts = (function () {
         pieces: bands.map((b) => ({ min: b.min, max: b.max, label: b.label, color: b.colour }))
           .concat([{ value: 0, label: 'Does not recognise', color: C.red }]),
       },
-      series: [Object.assign({}, MAP_BASE, {
-        map: 'world',
+      series: [Object.assign({}, MAP_BASE, WORLD, {
         name: 'Recognition of Palestine',
         data: r.states.map((s) => ({
           name: s.map,
@@ -3386,8 +3423,7 @@ const Charts = (function () {
         pieces: ORDER.map((o) => ({ value: o.value, label: g.labels[o.key], color: o.colour }))
           .concat([{ value: 0, label: g.labels.none, color: C.muted }]),
       },
-      series: [Object.assign({}, MAP_BASE, {
-        map: 'world',
+      series: [Object.assign({}, MAP_BASE, WORLD, {
         name: g.title,
         data: g.states.map((s) => ({ name: s.map, value: valueOf[s.position] || 0 })),
       })],
@@ -3473,7 +3509,7 @@ const Charts = (function () {
           .map((x) => ({ value: x.value, label: x.label, color: x.colour }))
           .concat([{ value: 0, label: 'No documented measure', color: C.ink(.07) }]),
       },
-      series: [Object.assign({}, MAP_BASE, { map: 'world', name: 'Measures taken', data: rows })],
+      series: [Object.assign({}, MAP_BASE, WORLD, { name: 'Measures taken', data: rows })],
     });
   });
 
@@ -3505,8 +3541,7 @@ const Charts = (function () {
           { min: 3, label: 'Three or four', color: '#8ecbf0' },
         ],
       },
-      series: [Object.assign({}, MAP_BASE, {
-        map: 'world',
+      series: [Object.assign({}, MAP_BASE, WORLD, {
         name: 'J50 signatories',
         data: j.countries.map((c) => ({ name: onMap(c.name), value: c.orgs.length })),
       })],
@@ -3569,8 +3604,7 @@ const Charts = (function () {
           { value: REFUSED, label: 'Acted to defeat the warrant', color: C.red },
         ],
       },
-      series: [Object.assign({}, MAP_BASE, {
-        map: 'world',
+      series: [Object.assign({}, MAP_BASE, WORLD, {
         name: 'Obligation to arrest',
         data: rows,
       })],

@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=134" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=135" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=134" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=135" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -1230,7 +1230,7 @@ const Views = (function () {
        Every entry below quotes the words and links to where they were said.`)}
       <div class="grid">
         ${chartCard('genocide-map', g.title,
-          `Hover any country for who said what, and when. ${esc(g.note)}`, g.ref, 'xtall')}
+          `Hover any country for who said what, and when. Drawn on an equal-area projection, so each country covers the share of the map it covers of the Earth and no region looks larger than it is. ${esc(g.note)}`, g.ref, 'xtall')}
       </div>
       <div class="grid c4" style="margin-top:22px">
         ${statCard({ label: 'Governments that have called it genocide', value: c.says || 0, suffix: ' of ' + g.un_total, note: 'In their own words: a head of state or government, a foreign minister or ministry, another minister, an official publication or a filing.', source: 'Report §15.1C' }, 'green')}
@@ -1272,7 +1272,7 @@ const Views = (function () {
            settlement goods, or filed at the International Court of Justice. Recognition is a statement. The second map is the ledger of acts.`)}
         <div class="grid">
           ${chartCard('recognition-map', 'Recognition of the State of Palestine, by date of recognition',
-            `Hover any country for the date. Two recognitions are contested and are marked as such in the tooltip; territories on neither list are left blank rather than counted as refusals. The base map is Natural Earth, a cartographic base and not an adjudication of any boundary. Dates from ${esc(p.recognition.source)}`,
+            `Hover any country for the date. Two recognitions are contested and are marked as such in the tooltip; territories on neither list are left blank rather than counted as refusals. The base map is Natural Earth, a cartographic base and not an adjudication of any boundary, drawn on the Equal Earth projection so that every country appears at its true size relative to every other. Dates from ${esc(p.recognition.source)}`,
             p.recognition.ref, 'xtall')}
           ${chartCard('pressure-map', 'What each state has actually done',
             'Strongest measure shown where a state has taken more than one; the tooltip lists them all. A declaration of intervention under Article 63 of the ICJ Statute concerns the construction of the Genocide Convention and is not, in itself, support for either party — the United States and Hungary filed alongside Namibia, Fiji, the Netherlands and Iceland in March 2026. Grey is not neutrality: it is the absence of any measure on the record.',
@@ -2034,6 +2034,7 @@ const Views = (function () {
         ${chartCard('findings-time', 'Every determination on one axis', 'One dot per finding, placed on the date it was published. Institutions that have made a determination without a single dated report are counted in the chart below but not plotted here.', '§15.8', 'tall')}
         ${chartCard('findings-class', 'Determinations by class of institution', 'Counting institutions, not statements. The roster crosses courts, the UN\'s own machinery, the genocide-scholarship field, and Israeli, Palestinian and Jewish organisations.', '§15.8', '')}
         <p class="note small">The determination is not a fringe position and it is not a single body\'s view. It has been reached by the UN\'s own investigative machinery, the world\'s principal genocide-scholars\' association, the three leading global human-rights organisations, Israeli and Jewish bodies, Palestinian human-rights institutions, and major faith and humanitarian organisations. The open question is not whether serious institutions have made the finding — they have, repeatedly and independently — but whether states will act on the duty to prevent that the finding triggers.</p>
+        <p class="note small">These are findings by courts, investigators and scholars. Where each <i>government</i> stands on the word is recorded separately, state by state with the words and the source, on the <a href="#/data/world">world page</a>: ${fmt(D.positions.genocide.un_counts.says || 0)} UN member states have called it genocide in their own words, and ${fmt(D.positions.genocide.un_counts.none || 0)} have said nothing on the record either way.</p>
       </section>
 
       <section class="section">
