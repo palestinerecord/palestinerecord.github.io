@@ -72,7 +72,7 @@
      "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
      "title": "18.7 Prior Intelligence Knowledge: The \"Jericho Wall\" Document and the Surveillance Failure",
      "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
-     "n": 32
+     "n": 34
     },
     {
      "id": "111-israel-funded-hamas",
@@ -153,7 +153,7 @@
      "n": 2
     }
    ],
-   "sections": 94,
+   "sections": 96,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -408,6 +408,12 @@
      "n": 3
     },
     {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 3
+    },
+    {
      "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
      "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
      "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
@@ -454,15 +460,9 @@
      "title": "24.2A The Witnesses: Israeli, Jewish, and International",
      "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
      "n": 1
-    },
-    {
-     "id": "610-the-30-july-2026-disarmament-agreement-and-its-immediate-rejection",
-     "title": "6.10 The 30 July 2026 Disarmament Agreement and Its Immediate Rejection",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
-     "n": 1
     }
    ],
-   "sections": 37,
+   "sections": 39,
    "warrant": null,
    "sanctions": [
     {
@@ -963,6 +963,12 @@
      "n": 5
     },
     {
+     "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
+     "title": "18.7 Prior Intelligence Knowledge: The \"Jericho Wall\" Document and the Surveillance Failure",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 3
+    },
+    {
      "id": "141d-the-turn-to-investigation---the-prime-minister-the-chief-of-the-general-sta",
      "title": "14.1D The Turn to Investigation - The Prime Minister, the Chief of the General Staff, and the Search for the Sources (14 September 2026)",
      "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
@@ -975,7 +981,7 @@
      "n": 1
     }
    ],
-   "sections": 8,
+   "sections": 11,
    "warrant": null,
    "sanctions": []
   },
@@ -2225,6 +2231,27 @@
    "sanctions": []
   },
   {
+   "id": "moshe-feiglin",
+   "name": "Moshe Feiglin",
+   "role": "Leader of the Zehut party; former Deputy Speaker of the Knesset",
+   "class": "government",
+   "tier": "Former legislator",
+   "statements": [
+    87
+   ],
+   "mentions": [
+    {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 1
+    }
+   ],
+   "sections": 1,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "sadiq-khan",
    "name": "Sadiq Khan",
    "role": "Mayor of London",
@@ -2505,20 +2532,6 @@
    "tier": "Cabinet",
    "statements": [
     9
-   ],
-   "mentions": [],
-   "sections": 0,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "moshe-feiglin",
-   "name": "Moshe Feiglin",
-   "role": "Leader of the Zehut party; former Deputy Speaker of the Knesset",
-   "class": "government",
-   "tier": "Former legislator",
-   "statements": [
-    87
    ],
    "mentions": [],
    "sections": 0,
