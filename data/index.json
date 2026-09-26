@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-09-26",
-  "total_bytes": 7180996,
+  "total_bytes": 7228401,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -54,9 +54,9 @@
     {
       "path": "data/claim-patterns.json",
       "title": "The claim patterns behind the answer engine",
-      "description": "The phrase index that maps a claim as it is actually made in public to the rebuttal that answers it: twenty-three entries, each with the wordings it recognises. It carries no evidence of its own — the answer is assembled at render time from the report, the live figures and the documented statements — so this file is the whole of what the #/answer route knows.",
+      "description": "The phrase index that maps a claim as it is actually made in public to the rebuttal that answers it: twenty-six entries, each with the wordings it recognises. It carries no evidence of its own — the answer is assembled at render time from the report, the live figures and the documented statements — so this file is the whole of what the #/answer route knows.",
       "source": "Written by patterns.py; the answers themselves are Part XVI of the report.",
-      "bytes": 16114,
+      "bytes": 17903,
       "records": null,
       "fields": [
         "meta",
@@ -360,7 +360,7 @@
       "title": "The source report, parsed",
       "description": "Every part, section, paragraph, list, table, chronology entry and bibliography entry of the report, converted losslessly by build.py and checked by verify.py. This is the whole document as structured data.",
       "source": "The report — A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026).",
-      "bytes": 1685143,
+      "bytes": 1714699,
       "records": null,
       "fields": [
         "title",
@@ -378,7 +378,7 @@
       "title": "The linked source library",
       "description": "The evidentiary base grouped by kind: courts and tribunals, UN bodies, human rights organisations, open datasets, academic work, Israeli sources, journalism and archives.",
       "source": "Each entry links to the publisher.",
-      "bytes": 161324,
+      "bytes": 172255,
       "records": null,
       "fields": [
         "meta",
@@ -405,8 +405,8 @@
       "title": "The contextual chronology",
       "description": "The legal and political steps between the massacres recorded in Appendix B — mandates, partitions, laws, plans, rulings, resolutions and admissions.",
       "source": "Primary documents as cited per entry.",
-      "bytes": 150824,
-      "records": 276,
+      "bytes": 155953,
+      "records": 293,
       "fields": [
         "meta",
         "items"
@@ -462,7 +462,7 @@
         "genocide",
         "alias"
       ],
-      "updated": "2026-09-25"
+      "updated": "2026-09-26"
     }
   ]
 }

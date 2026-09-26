@@ -94,7 +94,7 @@ DESCRIPTIONS = {
     'claim-patterns.json': (
         'The claim patterns behind the answer engine',
         'The phrase index that maps a claim as it is actually made in public to the '
-        'rebuttal that answers it: twenty-three entries, each with the wordings it recognises. '
+        'rebuttal that answers it: twenty-six entries, each with the wordings it recognises. '
         'It carries no evidence of its own — the answer is assembled at render time from the '
         'report, the live figures and the documented statements — so this file is the whole '
         'of what the #/answer route knows.',

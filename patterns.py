@@ -5,7 +5,7 @@ The patterns are the wording of the claim as it is actually made in public, not
 the wording of the rebuttal. Nothing here is evidence: every fact the route
 states is read at render time out of the report, the live figures and the
 statements, so this file can never disagree with the record. What it decides is
-only which of the twenty-three answers a pasted text is asking for.
+only which of the twenty-six answers a pasted text is asking for.
 """
 import json
 import datetime
@@ -22,9 +22,8 @@ CLAIMS = [
 
     (2, 'Human shields', ['human shields', 'human shield', 'hides behind civilians'], [
         'human shields', 'human shield', 'hamas hides', 'hides behind civilians', 'hides among civilians',
-        'hamas uses civilians', 'tunnels under hospitals', 'command centre under', 'command center under',
-        'blame hamas for', 'blood is on hamas', 'hamas is responsible for the deaths', 'if hamas surrendered',
-        'embedded in civilian', 'operates from hospitals', 'operating out of schools',
+        'hamas uses civilians', 'blame hamas for', 'blood is on hamas', 'hamas is responsible for the deaths', 'if hamas surrendered',
+        'embedded in civilian', 'operating out of schools',
     ], ['children', 'killed'], ['dehumanisation', 'warcrimes']),
 
     (3, 'Inflated numbers', ['hamas-run health ministry', 'hamas run health ministry',
@@ -52,7 +51,7 @@ CLAIMS = [
 
     (6, 'The UN is biased', ['un is biased'], [
         'un is biased', 'biased against israel', 'anti-israel body', 'un obsession with israel',
-        'human rights council is', 'unrwa is hamas', 'un resolutions against israel', 'kangaroo court',
+        'human rights council is', 'un resolutions against israel', 'kangaroo court',
         'the un hates israel', 'united nations is biased', 'un is antisemitic',
     ], ['recognising'], ['findings']),
 
@@ -170,6 +169,27 @@ CLAIMS = [
         'cannot be colonialism', 'not settler colonialism', 'not a colonial', 'jews are not white',
         'returning to their homeland', 'archaeology proves',
     ], ['settlers', 'wb-killed'], ['historic', 'annexation']),
+
+    (24, 'UNRWA is Hamas', ['unrwa is hamas', 'unrwa staff', 'unrwa employees'], [
+        'unrwa is hamas', 'unrwa staff', 'unrwa employees', 'unrwa workers', 'unrwa is a front',
+        'front for hamas', 'unrwa teachers', 'defund unrwa', 'funding unrwa', 'money to unrwa',
+        'unrwa funding', 'unrwa took part', 'unrwa terrorists', 'our money to gaza', 'funds terror',
+        'funding terror', 'aid money to gaza', 'confirmed as participants',
+    ], ['killed'], ['findings']),
+
+    (25, 'Hospitals as command centres', ['command centre under', 'command center under', 'al-shifa'], [
+        'command centre under', 'command center under', 'al-shifa', 'al shifa', 'shifa hospital',
+        'tunnels under hospitals', 'operates from hospitals', 'hamas hospitals', 'hides in hospitals',
+        'hide in hospitals', 'rantisi', 'guard list', 'hostages were held in the hospital',
+        'command and control centre', 'command and control center',
+    ], ['killed'], ['warcrimes']),
+
+    (26, 'The IDF has explained', ['warning shots', 'approached suspiciously', 'perceived threat'], [
+        'warning shots', 'approached suspiciously', 'perceived threat', 'the idf said', 'the idf says',
+        'according to the idf', 'idf denied', 'israel denied', 'stampede', 'no evidence of execution',
+        'without headlights', 'hamas staged', 'staged by hamas', 'the army has explained',
+        'posed a threat to the troops',
+    ], ['killed'], ['warcrimes']),
 ]
 
 # The ids a pattern may name, resolved to live values by views.js at render
@@ -182,7 +202,7 @@ out = {
         'title': 'Claim patterns',
         'description': (
             'The phrase index behind the answer engine. Each entry maps one of the '
-            'twenty-three rebuttals in Part XVI of the report to the wording the claim is '
+            'twenty-six rebuttals in Part XVI of the report to the wording the claim is '
             'made in, so a pasted text can be matched to the answer it is asking for '
             'without a language model and without a network call. The patterns carry no '
             'evidence of their own: the answer is assembled at render time from the '

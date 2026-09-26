@@ -101,6 +101,13 @@
      "date": "22 October 2025",
      "url": "https://www.icj-cij.org/case/196/advisory-opinions",
      "note": "Advisory Opinion, General List No. 196 (UN doc. A/80/502), requested by General Assembly resolution 79/232. Unanimous on most findings, ten to one on the rest. Holds that Article 59 of the Fourth Geneva Convention obliges the occupying power to agree to and facilitate relief, that it must use all means at its disposal to see relief distributed fairly, and that UNRWA's capacity cannot be replicated or replaced on short notice. Recorded at §15.1A."
+    },
+    {
+     "title": "Obligations of Israel in relation to the Presence and Activities of the United Nations, Other International Organizations and Third States in and in relation to the Occupied Palestinian Territory",
+     "org": "International Court of Justice",
+     "date": "22 October 2025",
+     "url": "https://www.icj-cij.org/case/196",
+     "note": "Advisory Opinion (General List No. 196). Found that \"Israel has not substantiated its allegations that a significant part of UNRWA's employees are 'members of Hamas … or other terrorist factions'\" and that the information before it was \"not sufficient to establish UNRWA's lack of neutrality\". Report Rebuttal 24 and §15.1A."
     }
    ]
   },
@@ -283,6 +290,34 @@
      "date": "24 September 2026",
      "url": "https://news.un.org/en/story/2026/09/1168431",
      "note": "Netanyahu's address, including the settler-violence claims. Report §15.3E."
+    },
+    {
+     "title": "Investigation completed: allegations on UNRWA staff participation in the 7 October attacks",
+     "org": "UNRWA / UN Office of Internal Oversight Services",
+     "date": "5 August 2024",
+     "url": "https://www.unrwa.org/newsroom/official-statements/investigation-completed-allegations-unrwa-staff-participation-7-october",
+     "note": "OIOS on nineteen staff: no evidence in one case, insufficient evidence in nine, and in nine evidence that \"if authenticated and corroborated\" could indicate they \"may have been involved\". OIOS could not independently authenticate most of the information held by the Israeli authorities. Rebuttal 24."
+    },
+    {
+     "title": "Independent Review of Mechanisms and Procedures to Ensure Adherence by UNRWA to the Humanitarian Principle of Neutrality (the Colonna review), as reported",
+     "org": "NPR",
+     "date": "22 April 2024",
+     "url": "https://www.npr.org/2024/04/23/1246613547/unrwa-israel-hamas-gaza-war",
+     "note": "Led by former French Foreign Minister Catherine Colonna: Israel \"made public claims that a significant number of UNRWA employees are members of terrorist organizations. However, Israel has yet to provide supporting evidence of this\"; Israel had raised no concern about UNRWA staff lists since 2011. Rebuttal 24."
+    },
+    {
+     "title": "UNRWA decision to terminate the employment of 70 staff members",
+     "org": "UNRWA",
+     "date": "11 June 2026",
+     "url": "https://www.un.org/unispal/document/unrwa-decision-to-terminate-the-employment-of-70-staff-members/",
+     "note": "Acting Commissioner-General Christian Saunders: the dismissals are \"not part of a disciplinary process and [do] not constitute in any way a validation of the claims made against them\"; Israel had not answered repeated requests for evidence. Rebuttal 24."
+    },
+    {
+     "title": "Treatment of detainees and hostages and attacks on medical facilities and personnel (A/79/232)",
+     "org": "UN Independent International Commission of Inquiry",
+     "date": "11 September 2024",
+     "url": "https://www.un.org/unispal/document/report-of-the-independent-international-commission-of-inquiry-on-the-occupied-palestinian-territory-including-east-jerusalem-and-israel-11sep24/",
+     "note": "Records credible information that hostages held in Gaza were subjected to sexual and gender-based violence, including sexualised torture, alongside widespread and systematic abuse of Palestinian detainees. Cited in the §18.8 accuracy note."
     }
    ]
   },
@@ -612,6 +647,13 @@
      "date": "18 September 2023",
      "url": "https://www.savethechildren.net/news/2023-marks-deadliest-year-record-children-occupied-west-bank",
      "note": "At least 38 Palestinian children killed by Israeli forces in the West Bank in 2023 to 18 September, a second consecutive record year, sourced to OCHA's database with two further deaths verified by the UN. Published nineteen days before 7 October 2023. Cited at §9.1A."
+    },
+    {
+     "title": "The Massacre of Aid Workers in Tel al-Sultan",
+     "org": "Forensic Architecture and Earshot",
+     "date": "24 February 2026",
+     "url": "https://forensic-architecture.org/investigation/the-massacre-of-aid-workers-in-tel-al-sultan",
+     "note": "Reconstruction of the killing of fifteen aid workers on 23 March 2025: at least 910 gunshots over some two hours, at least eight at very close range, with no threat or exchange of fire. Rebuttal 26."
     }
    ]
   },
@@ -2131,6 +2173,97 @@
      "date": "21 September 2026",
      "url": "https://www.timesofisrael.com/official-israeli-map-website-reveals-location-of-idf-bases-in-gaza/",
      "note": "Unblurred govmap imagery of northern Gaza. Report §6.7."
+    },
+    {
+     "title": "Israel's evidence of UNRWA Hamas allegations examined",
+     "org": "Channel 4 News",
+     "date": "5 February 2024",
+     "url": "https://www.channel4.com/news/israels-evidence-of-unrwa-hamas-allegations-examined",
+     "note": "The six-page Israeli dossier \"provides no evidence to support its explosive new claim\". Rebuttal 24."
+    },
+    {
+     "title": "US intel has 'low confidence' in Israel's UNRWA claims",
+     "org": "Responsible Statecraft",
+     "date": "23 February 2024",
+     "url": "https://responsiblestatecraft.org/us-intel-unrwa-israel/",
+     "note": "Reports the National Intelligence Council assessment, first reported by the Wall Street Journal on 22 February 2024: \"low confidence\" that UNRWA staff took part in the attack; Israel had not shared the raw intelligence. Rebuttal 24."
+    },
+    {
+     "title": "Journal still can't confirm January story about UN agency for Palestinians",
+     "org": "Semafor",
+     "date": "4 August 2024",
+     "url": "https://www.semafor.com/article/08/04/2024/journal-still-cant-confirm-january-story-about-un-agency-for-palestinians",
+     "note": "The Wall Street Journal's chief news editor, in an internal email: \"The fact that the Israeli claims haven't been backed up by solid evidence doesn't mean our reporting was inaccurate or misleading.\" Rebuttal 24."
+    },
+    {
+     "title": "Investigating the assault on al-Shifa, Gaza's largest hospital",
+     "org": "The Washington Post",
+     "date": "21 December 2023",
+     "url": "https://www.washingtonpost.com/world/2023/12/21/al-shifa-hospital-gaza-hamas-israel/",
+     "note": "Israel's evidence \"falls short\" of a Hamas command and control centre: no sign of military use in the rooms found, none of the five named buildings connected to the tunnels, no access from the wards. Rebuttal 25."
+    },
+    {
+     "title": "IDF found a calendar in Arabic, not a Hamas 'names list' at hospital",
+     "org": "France 24 (Truth or Fake)",
+     "date": "16 November 2023",
+     "url": "https://www.france24.com/en/tv-shows/truth-or-fake/20231116-idf-claims-to-find-list-of-hamas-names-but-it-s-the-days-of-the-week-in-arabic",
+     "note": "The Rantisi hospital \"guard list\" presented by IDF spokesman Daniel Hagari was a calendar of the days of the week. Rebuttal 25."
+    },
+    {
+     "title": "Israeli intel confirms Gaza health ministry stats 'reliable'",
+     "org": "The New Arab, reporting Local Call",
+     "date": "25 January 2024",
+     "url": "https://www.newarab.com/news/israeli-intel-confirms-gaza-health-ministry-stats-reliable",
+     "note": "Israeli intelligence sources to Local Call (Yuval Abraham): the army examined the ministry's figures and uses them in briefings; \"I trust the Health Ministry in Gaza more than the IDF for these statistics.\" Rebuttal 3."
+    },
+    {
+     "title": "IDF accepts Gaza Health Ministry death toll of over 71,000 Palestinians killed during the war",
+     "org": "Haaretz",
+     "date": "29 January 2026",
+     "url": "https://www.haaretz.com/israel-news/2026-01-29/ty-article/.premium/idf-accepts-gaza-health-ministry-estimate-of-over-70-000-palestinians-killed-in-the-war/0000019c-0918-dec4-adfd-fd5dde830000",
+     "note": "The Israeli military accepts the ministry's count, which excludes the missing under the rubble. Rebuttal 3."
+    },
+    {
+     "title": "Dying for a bag of flour: videos and eyewitness accounts cast doubt on Israel's timeline of deadly Gaza aid delivery",
+     "org": "CNN",
+     "date": "9 April 2024",
+     "url": "https://www.cnn.com/2024/04/09/middleeast/gaza-food-aid-convoy-deaths-eyewitness-intl-investigation-cmd/index.html",
+     "note": "22 eyewitnesses and dozens of videos: heavy automatic fire began before the time the IDF gave for its warning shots; Israel declined to release its unedited drone footage. Rebuttal 26."
+    },
+    {
+     "title": "Admitting 'errors', IDF fires officer over killing of 15 rescue workers in Gaza's Rafah",
+     "org": "The Times of Israel",
+     "date": "20 April 2025",
+     "url": "https://www.timesofisrael.com/idf-ousts-officer-over-killing-of-15-rescue-workers-in-gazas-rafah/",
+     "note": "The IDF inquiry finds \"professional failures\" after video recovered from a paramedic's phone contradicted its first account. Rebuttal 26."
+    },
+    {
+     "title": "White House says Biden's remark on photos of children was intended to 'underscore the utter depravity' of Hamas attack",
+     "org": "CNN",
+     "date": "12 October 2023",
+     "url": "https://www.cnn.com/2023/10/12/politics/joe-biden-photos-children-hamas-israel/index.html",
+     "note": "Neither the President nor the administration had seen pictures or confirmed reports of beheaded children. §18.8."
+    },
+    {
+     "title": "Smotrich says returning hostages 'not the most important thing,' sparking fierce backlash",
+     "org": "The Times of Israel",
+     "date": "21 April 2025",
+     "url": "https://www.timesofisrael.com/smotrich-says-returning-hostages-not-the-most-important-thing-sparking-fierce-backlash/",
+     "note": "\"We have to say the truth, returning the hostages is not the most important thing.\" Rebuttal 10."
+    },
+    {
+     "title": "Netanyahu's appearance on popular Nelk Boys podcast draws criticism from right and left online",
+     "org": "NBC News",
+     "date": "22 July 2025",
+     "url": "https://www.nbcnews.com/tech/tech-news/netanyahu-appearance-nelk-boys-podcast-draws-criticism-rcna220399",
+     "note": "The Full Send interview in which the aid-theft claim was repeated, days before the USAID review and the Israeli officials' account to The New York Times were reported. Rebuttal 12."
+    },
+    {
+     "title": "Debunked! Israel's Top 10 Lies on Gaza",
+     "org": "Zeteo (Mehdi Hasan)",
+     "date": "3 August 2025",
+     "url": "https://zeteo.com/p/debunked-israels-top-10-lies-on-gaza",
+     "note": "A three-minute compilation of ten official claims. Each is tested against the record, including where the video goes further than the evidence, in the section following Rebuttal 26."
     }
    ]
   },
@@ -2264,6 +2397,20 @@
      "date": "1944",
      "url": "https://ipn.gov.pl/en",
      "note": "The massacre of staff and patients at the Wola and St Lazarus hospitals on 5 August 1944, the Karol and Maria Children's Hospital the following day, and the burning alive of wounded patients in the liquidation of the Old Town insurgent hospitals. The documentary basis on which the Preamble rejects the claim that the Nazi state did not attack hospitals."
+    },
+    {
+     "title": "Investigative summary: continuing investigation leads to referral of over 100 current and former UNRWA staff",
+     "org": "USAID Office of Inspector General",
+     "date": "5 June 2026",
+     "url": "https://oig.usaid.gov/node/8155",
+     "note": "Referred 101 current or former UNRWA staff for suspension or debarment for participation in 7 October and/or Qassam Brigades affiliation, 108 in all. The detailed findings are not published. Rebuttal 24."
+    },
+    {
+     "title": "UK announces major package of support for humanitarian relief and early recovery in Gaza",
+     "org": "Foreign, Commonwealth and Development Office (GOV.UK)",
+     "date": "24 September 2026",
+     "url": "https://www.gov.uk/government/news/uk-announces-major-package-of-support-for-humanitarian-relief-and-early-recovery-in-gaza",
+     "note": "The £88 million announced by Foreign Secretary Ed Miliband at the General Assembly: healthcare, water, sanitation, waste management and protection in Gaza and the West Bank, including support previously announced through UNRWA and the UN Horizon Fund. Not an UNRWA grant. Rebuttal 24."
     }
    ]
   },

@@ -1,7 +1,7 @@
 {
  "meta": {
   "title": "Claim patterns",
-  "description": "The phrase index behind the answer engine. Each entry maps one of the twenty-three rebuttals in Part XVI of the report to the wording the claim is made in, so a pasted text can be matched to the answer it is asking for without a language model and without a network call. The patterns carry no evidence of their own: the answer is assembled at render time from the report, the live figures and the documented statements.",
+  "description": "The phrase index behind the answer engine. Each entry maps one of the twenty-six rebuttals in Part XVI of the report to the wording the claim is made in, so a pasted text can be matched to the answer it is asking for without a language model and without a network call. The patterns carry no evidence of their own: the answer is assembled at render time from the report, the live figures and the documented statements.",
   "generated": "2026-09-26",
   "figure_ids": [
    "killed",
@@ -72,15 +72,11 @@
     "hides behind civilians",
     "hides among civilians",
     "hamas uses civilians",
-    "tunnels under hospitals",
-    "command centre under",
-    "command center under",
     "blame hamas for",
     "blood is on hamas",
     "hamas is responsible for the deaths",
     "if hamas surrendered",
     "embedded in civilian",
-    "operates from hospitals",
     "operating out of schools"
    ],
    "figures": [
@@ -201,7 +197,6 @@
     "anti-israel body",
     "un obsession with israel",
     "human rights council is",
-    "unrwa is hamas",
     "un resolutions against israel",
     "kangaroo court",
     "the un hates israel",
@@ -734,6 +729,105 @@
    "statement_cats": [
     "historic",
     "annexation"
+   ]
+  },
+  {
+   "rebuttal": 24,
+   "label": "UNRWA is Hamas",
+   "strong": [
+    "unrwa is hamas",
+    "unrwa staff",
+    "unrwa employees"
+   ],
+   "phrases": [
+    "unrwa is hamas",
+    "unrwa staff",
+    "unrwa employees",
+    "unrwa workers",
+    "unrwa is a front",
+    "front for hamas",
+    "unrwa teachers",
+    "defund unrwa",
+    "funding unrwa",
+    "money to unrwa",
+    "unrwa funding",
+    "unrwa took part",
+    "unrwa terrorists",
+    "our money to gaza",
+    "funds terror",
+    "funding terror",
+    "aid money to gaza",
+    "confirmed as participants"
+   ],
+   "figures": [
+    "killed"
+   ],
+   "statement_cats": [
+    "findings"
+   ]
+  },
+  {
+   "rebuttal": 25,
+   "label": "Hospitals as command centres",
+   "strong": [
+    "command centre under",
+    "command center under",
+    "al-shifa"
+   ],
+   "phrases": [
+    "command centre under",
+    "command center under",
+    "al-shifa",
+    "al shifa",
+    "shifa hospital",
+    "tunnels under hospitals",
+    "operates from hospitals",
+    "hamas hospitals",
+    "hides in hospitals",
+    "hide in hospitals",
+    "rantisi",
+    "guard list",
+    "hostages were held in the hospital",
+    "command and control centre",
+    "command and control center"
+   ],
+   "figures": [
+    "killed"
+   ],
+   "statement_cats": [
+    "warcrimes"
+   ]
+  },
+  {
+   "rebuttal": 26,
+   "label": "The IDF has explained",
+   "strong": [
+    "warning shots",
+    "approached suspiciously",
+    "perceived threat"
+   ],
+   "phrases": [
+    "warning shots",
+    "approached suspiciously",
+    "perceived threat",
+    "the idf said",
+    "the idf says",
+    "according to the idf",
+    "idf denied",
+    "israel denied",
+    "stampede",
+    "no evidence of execution",
+    "without headlights",
+    "hamas staged",
+    "staged by hamas",
+    "the army has explained",
+    "posed a threat to the troops"
+   ],
+   "figures": [
+    "killed"
+   ],
+   "statement_cats": [
+    "warcrimes"
    ]
   }
  ]

@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=136" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=137" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=136" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=137" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -1578,8 +1578,8 @@ const Views = (function () {
 
   /* ---------- rebuttals ---------- */
 
-  /* Part XVI answers the twenty-three defences that come up in every argument
-     about Gaza. Inside Evidence they are twenty-three sections a long way down a very long
+  /* Part XVI answers the twenty-six defences that come up in every argument
+     about Gaza. Inside Evidence they are twenty-six sections a long way down a very long
      document. Here each one is a claim you can open, the report's own answer
      reproduced verbatim, the charts that carry that answer, and a button that
      puts the whole thing on the clipboard — which is what the page is for. */
@@ -2579,7 +2579,7 @@ const Views = (function () {
 
   /* The rebuttals page answers a claim a reader has already identified. This
      route answers one they have only been handed: paste the post, the comment
-     or the press line, and it says which of the twenty-three answers it is
+     or the press line, and it says which of the twenty-six answers it is
      asking for and assembles a sourced reply.
 
      There is no language model behind it and no network call. Every phrase it
