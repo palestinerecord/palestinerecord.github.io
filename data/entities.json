@@ -64,14 +64,15 @@
     56,
     86,
     116,
-    138
+    138,
+    149
    ],
    "mentions": [
     {
      "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
      "title": "18.7 Prior Intelligence Knowledge: The \"Jericho Wall\" Document and the Surveillance Failure",
      "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
-     "n": 28
+     "n": 32
     },
     {
      "id": "111-israel-funded-hamas",
@@ -100,6 +101,12 @@
     {
      "id": "153-sanctions-on-israeli-officials",
      "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 4
+    },
+    {
+     "id": "153e-the-eighty-first-general-assembly-what-was-said-from-the-podium-22-septembe",
+     "title": "15.3E The Eighty-First General Assembly: What Was Said From the Podium (22 September 2026)",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 4
     },
@@ -144,15 +151,9 @@
      "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 2
-    },
-    {
-     "id": "151c-where-governments-stand-on-the-word-a-state-by-state-record-to-25-september",
-     "title": "15.1C Where Governments Stand on the Word: A State-by-State Record (to 25 September 2026)",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 2
     }
    ],
-   "sections": 88,
+   "sections": 94,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -1423,6 +1424,33 @@
    "sanctions": []
   },
   {
+   "id": "david-lammy",
+   "name": "David Lammy",
+   "role": "Foreign Secretary, United Kingdom",
+   "class": "allied",
+   "tier": "Allied government",
+   "statements": [
+    78
+   ],
+   "mentions": [
+    {
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 4
+    },
+    {
+     "id": "139-lawfare-against-humanitarian-organisations-the-attempt-to-proscribe-médecins",
+     "title": "13.9 Lawfare Against Humanitarian Organisations: The Attempt to Proscribe Médecins Sans Frontières",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 2
+    }
+   ],
+   "sections": 6,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "ed-miliband",
    "name": "Ed Miliband",
    "role": "Secretary of State for Foreign, Commonwealth and Development Affairs, United Kingdom",
@@ -1575,33 +1603,6 @@
     }
    ],
    "sections": 5,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "david-lammy",
-   "name": "David Lammy",
-   "role": "Foreign Secretary, United Kingdom",
-   "class": "allied",
-   "tier": "Allied government",
-   "statements": [
-    78
-   ],
-   "mentions": [
-    {
-     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
-     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
-     "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 2
-    },
-    {
-     "id": "139-lawfare-against-humanitarian-organisations-the-attempt-to-proscribe-médecins",
-     "title": "13.9 Lawfare Against Humanitarian Organisations: The Attempt to Proscribe Médecins Sans Frontières",
-     "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 2
-    }
-   ],
-   "sections": 4,
    "warrant": null,
    "sanctions": []
   },
@@ -2703,7 +2704,7 @@
      "id": "137-the-militarisation-of-uk-higher-education-and-the-suppression-of-dissent",
      "title": "13.7 The Militarisation of UK Higher Education and the Suppression of Dissent",
      "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 2
+     "n": 5
     },
     {
      "id": "1512b-withdrawal-as-a-method-the-documented-record-of-artist-refusals-2024-2026",

@@ -1077,6 +1077,13 @@
    "note": "2023 was already the deadliest year on record in the West Bank before the war began (OCHA)."
   },
   {
+   "date": "7 October 2023",
+   "year": 2023,
+   "sort": "2023-10-07",
+   "event": "A reported Qatari offer to release the civilian hostages",
+   "note": "On the account of the Eldar-Yuval book excerpted in Haaretz (September 2026), Qatar's Prime Minister told the Mossad Director that evening that Hamas was ready to release all civilian hostages through Qatari mediation, and was told Israel was not prepared to speak with Hamas. Disputed by Barnea's associates; not confirmed by an Israeli official (report §18.7)."
+  },
+  {
    "date": "11 October 2023",
    "year": 2023,
    "sort": "2023-10-11",
@@ -1870,6 +1877,13 @@
   {
    "date": "21 September 2026",
    "year": 2026,
+   "sort": "2026-09-21",
+   "event": "Israel's official map briefly shows northern Gaza unblurred",
+   "note": "govmap.gov.il exposes 2025 imagery of at least 11 military sites inside the buffer zone and the destruction of Beit Hanoun before partially re-blurring it."
+  },
+  {
+   "date": "21 September 2026",
+   "year": 2026,
    "sort": "2026-09-21d",
    "event": "New York's mayor says the ICC warrant should be honoured, and that the city cannot enforce it",
    "note": "Interviewed by Christiane Amanpour on CNN on the eve of the General Assembly, Zohran Mamdani described Netanyahu as “a war criminal and an architect of a horrific genocide of the Palestinian people” and said the ICC warrant “is something that should be honored”, while stating that a review of every avenue under applicable law had found New York City has no independent authority to enforce it. The legal conclusion moved; the characterisation did not. Recorded at §15.5."
@@ -1901,6 +1915,27 @@
    "sort": "2026-09-22c",
    "event": "The General Assembly's first day: Macron, King Abdullah, Burnham",
    "note": "Macron calls the declared peace in Gaza \"a spectacle that shames us all\"; King Abdullah II says the world chose to \"manage the conflict, not confront it\"; Andy Burnham states that the occupation is unlawful and defends the settlement ban beside President Trump. Israel's Prime Minister's office calls Macron's remarks a \"grotesque absurdity\" the next day."
+  },
+  {
+   "date": "24 September 2026",
+   "year": 2026,
+   "sort": "2026-09-24",
+   "event": "Thirteen UK universities discussed campus protest with BAE Systems",
+   "note": "Liberty Investigates and Al Jazeera publish emails showing a Sheffield investigator spoke to BAE before disciplining four students; the same night Channel 4 Dispatches discloses the Foreign Office assessments behind the licensing decisions of 2023-24."
+  },
+  {
+   "date": "24 September 2026",
+   "year": 2026,
+   "sort": "2026-09-24",
+   "event": "Netanyahu tells the UN settler violence is 'a handful of juvenile delinquents'",
+   "note": "After a walkout, he calls the genocide allegation 'the biggest lie of the century' and puts settler-violence casualties at 'maybe two or three' a year; UN figures cited in coverage record 81 Palestinians killed in the West Bank in 2026 by September."
+  },
+  {
+   "date": "25 September 2026",
+   "year": 2026,
+   "sort": "2026-09-25",
+   "event": "The New York Times confirms the UAE warning before 7 October",
+   "note": "Two sources confirm that Mohammed bin Zayed warned Netanyahu of a 'major attack' by Hamas shortly before 7 October 2023."
   }
  ]
 }

@@ -38,13 +38,13 @@
     "id": "israeli-media",
     "label": "Israeli press",
     "sources": 9,
-    "claims": 84
+    "claims": 85
    },
    {
     "id": "un",
     "label": "United Nations bodies",
     "sources": 22,
-    "claims": 122
+    "claims": 123
    },
    {
     "id": "international-court",
@@ -74,7 +74,7 @@
     "id": "media",
     "label": "International press",
     "sources": 22,
-    "claims": 89
+    "claims": 90
    },
    {
     "id": "data-project",
@@ -91,13 +91,13 @@
   ]
  },
  "summary": {
-  "claims": 571,
-  "attributed": 474,
+  "claims": 573,
+  "attributed": 476,
   "unattributed": 97,
   "sources": 127,
   "origins": 14,
-  "multi_source": 183,
-  "independent": 151
+  "multi_source": 184,
+  "independent": 152
  },
  "switches": [
   {
@@ -108,7 +108,7 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 443,
+   "stands": 445,
    "falls": 31,
    "share": 93.5
   },
@@ -122,9 +122,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 396,
+   "stands": 398,
    "falls": 78,
-   "share": 83.5
+   "share": 83.6
   },
   {
    "id": "no-un",
@@ -133,7 +133,7 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 407,
+   "stands": 409,
    "falls": 67,
    "share": 85.9
   },
@@ -146,9 +146,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 370,
+   "stands": 372,
    "falls": 104,
-   "share": 78.1
+   "share": 78.2
   },
   {
    "id": "israeli-western-only",
@@ -161,9 +161,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 274,
+   "stands": 276,
    "falls": 200,
-   "share": 57.8
+   "share": 58.0
   }
  ],
  "sources": [
@@ -184,19 +184,19 @@
    "claims": 43
   },
   {
-   "id": "trade-press",
-   "name": "Entertainment and trade press",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 30
-  },
-  {
    "id": "times-of-israel",
    "name": "The Times of Israel",
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
+   "claims": 31
+  },
+  {
+   "id": "trade-press",
+   "name": "Entertainment and trade press",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
    "claims": 30
   },
   {
@@ -229,7 +229,7 @@
    "kind": "press",
    "origin": "media",
    "origin_label": "International press",
-   "claims": 23
+   "claims": 24
   },
   {
    "id": "icj",
@@ -768,6 +768,14 @@
    "claims": 3
   },
   {
+   "id": "un-news",
+   "name": "UN News",
+   "kind": "un",
+   "origin": "un",
+   "origin_label": "United Nations bodies",
+   "claims": 3
+  },
+  {
    "id": "wikipedia",
    "name": "Wikipedia (with its own cited sources)",
    "kind": "reference",
@@ -909,14 +917,6 @@
    "kind": "press",
    "origin": "media",
    "origin_label": "International press",
-   "claims": 2
-  },
-  {
-   "id": "un-news",
-   "name": "UN News",
-   "kind": "un",
-   "origin": "un",
-   "origin_label": "United Nations bodies",
    "claims": 2
   },
   {
@@ -1187,11 +1187,11 @@
  "files": [
   {
    "file": "figures.json",
-   "claims": 57
+   "claims": 58
   },
   {
    "file": "statements.json",
-   "claims": 149
+   "claims": 150
   },
   {
    "file": "elements.json",
@@ -1974,6 +1974,20 @@
     "trade-press"
    ],
    "id": "figures-lawyers-and-legal-academics-who-told-the-prime-minister-the-se"
+  },
+  {
+   "file": "figures.json",
+   "path": "uk_complicity.items[8]",
+   "label": "UK universities that discussed pro-Palestine protest with BAE Systems",
+   "value": 13,
+   "numeric": true,
+   "ref": "",
+   "date": "",
+   "source_text": "Liberty Investigates and Al Jazeera, 24 September 2026",
+   "sources": [
+    "aljazeera"
+   ],
+   "id": "figures-uk-universities-that-discussed-pro-palestine-protest-with-bae-"
   },
   {
    "file": "figures.json",
@@ -4265,6 +4279,21 @@
     "abc"
    ],
    "id": "statements-donald-trump"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[149]",
+   "label": "Benjamin Netanyahu",
+   "value": "A handful of young juvenile delinquents, about 150 in number, go and throw stones, chop down olive trees and occasionally set fires ... The number of casualties a year is maybe two or three.",
+   "numeric": false,
+   "ref": "",
+   "date": "24 September 2026",
+   "source_text": "UN News; Times of Israel; Mother Jones, 24 September 2026.",
+   "sources": [
+    "un-news",
+    "times-of-israel"
+   ],
+   "id": "statements-benjamin-netanyahu-7"
   },
   {
    "file": "elements.json",
