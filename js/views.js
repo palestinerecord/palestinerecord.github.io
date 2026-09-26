@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=138" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=139" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=138" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=139" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -1235,7 +1235,7 @@ const Views = (function () {
       <div class="grid c4" style="margin-top:22px">
         ${statCard({ label: 'Governments that have called it genocide', value: c.says || 0, suffix: ' of ' + g.un_total, note: 'In their own words: a head of state or government, a foreign minister or ministry, another minister, an official publication or a filing.', source: 'Report §15.1C' }, 'green')}
         ${statCard({ label: 'Through a joint statement only', value: c.joint || 0, note: `The declaration of ${partialDate(g.joint.date)}, signed by 31 Arab and Islamic states, condemned “the crimes of Israeli aggression, genocide, and ethnic cleansing”.`, source: g.joint.outlet }, 'green')}
-        ${statCard({ label: 'Say it is for a court to decide', value: c.defers || 0, note: 'Much of northern and western Europe, the United Kingdom, Canada, Australia, New Zealand and Japan. The ICJ merits judgment is not expected before 2028.', source: 'Report §15.1C' }, 'blue')}
+        ${statCard({ label: 'Say it is for a court to decide', value: c.defers || 0, note: 'Much of northern and western Europe, the United Kingdom, Canada, Australia, New Zealand and Japan. The ICJ merits judgment cannot come before Israel’s Rejoinder, due on 22 May 2029.', source: 'Report §15.1C' }, 'blue')}
         ${statCard({ label: 'Reject or dispute it', value: c.rejects || 0, note: 'Israel, the United States, Germany, Italy and others; three by filings at the ICJ.', source: 'Report §15.1C' }, 'red')}
       </div>
       <div class="gs-groups" style="margin-top:22px">
@@ -1804,7 +1804,7 @@ const Views = (function () {
 
     return `<div class="view wrap">
       <section class="section">
-        ${head('Statements', `${items.length} statements on the record of intent`, esc(S.meta.description) + ' They carry particular evidentiary weight in the assessment of intent. Contested attributions are marked as contested and are not relied on.')}
+        ${head('Statements', `${items.length} statements and findings on the record`, esc(S.meta.description) + ' Contested attributions are marked as contested and are not relied on.')}
         <div class="grid c4">
           ${[
             { value: items.length, label: 'Statements catalogued here', note: 'each with speaker, role, date, verbatim quotation, context, source and legal significance' },
@@ -2021,7 +2021,7 @@ const Views = (function () {
         ${head('Legal', 'The findings and the instruments they rest on', 'The parts of the report that state the legal case: genocide, apartheid, the comprehensive synthesis, the international verdict, the assessment of Hamas\'s conduct on 7 October under the same standards, and the instruments cited throughout. The full text of each appears here; every other part is in <a href="#/evidence">Evidence</a>.')}
         <div class="grid c4" style="margin-bottom:38px">
           ${[
-            { label: 'ICJ provisional measures', value: 3, note: '26 January, 28 March and 24 May 2024 — binding orders on the plausible risk of genocide' },
+            { label: 'ICJ provisional measures', value: 3, note: '26 January, 28 March and 24 May 2024 — binding orders under the Genocide Convention' },
             { label: 'ICC arrest warrants', value: 2, note: 'Netanyahu and Gallant, 21 November 2024 — starvation as a method of warfare' },
             { label: 'Institutions finding genocide', value: D.legal.determinations.length, note: 'courts, UN mechanisms, genocide scholars, human-rights organisations, and Israeli, Palestinian and Jewish bodies (§15.8)' },
             { label: 'States recognising Palestine', value: 157, note: 'of 193 UN member states — 81% of the international community' },
@@ -2777,7 +2777,7 @@ const Views = (function () {
 
   const PROV_FILE_LABELS = {
     'figures.json': 'Headline figures',
-    'statements.json': 'Statements of intent',
+    'statements.json': 'Statements and findings',
     'elements.json': 'Legal elements',
     'legal.json': 'Determinations',
     'conduct-record.json': 'Conduct of the war',
@@ -3163,7 +3163,7 @@ const Views = (function () {
         + 'and with the figures that settle it.',
     },
     statements: {
-      title: 'Statements — the documented record of intent',
+      title: 'Statements — the documented record',
       desc: 'Statements by named officials, each with speaker, role, date, the verbatim quote, and the '
         + 'legal significance of what was said.',
     },
@@ -3705,8 +3705,8 @@ const Views = (function () {
     lines.push('The figures I am asking you to act on are these. '
       + (killed ? killed + ' Palestinians have been killed in Gaza since October 2023, ' : '')
       + (children ? children + ' of them children. ' : '')
-      + 'The International Court of Justice found on 26 January 2024 that it is plausible that the '
-      + 'conduct complained of falls within the Genocide Convention, and ordered provisional measures. '
+      + 'The International Court of Justice found on 26 January 2024 that the Palestinians’ right to protection '
+      + 'from acts of genocide was plausible and at real and imminent risk, and ordered provisional measures. '
       + 'The United Nations Independent International Commission of Inquiry on the Occupied Palestinian '
       + 'Territory found on 16 September 2025 that genocide is being committed, and on 23 June 2026 that '
       + 'children are being deliberately targeted.');
@@ -4223,7 +4223,7 @@ const Views = (function () {
         'Article II of the Genocide Convention requires proof of an intent to destroy a protected group in whole or in part \u2014 the <i>dolus specialis</i> \u2014 and tribunals have consistently treated that specific-intent element as the hardest to establish, provable either by the perpetrator\u2019s own statements or by inference from a pattern of conduct. A record of a genocide allegation that omitted the statements of the officials directing the conduct would not be more analytical; it would have omitted the element the charge turns on. The statements are drawn overwhelmingly from the accused party\u2019s own public record \u2014 the Knesset plenum, Israeli broadcast media, ministerial accounts, recorded briefings \u2014 which is the method Robert H. Jackson set out at Nuremberg on 21 November 1945: <q>We will not ask you to convict these men on the testimony of their foes. There is no count in the Indictment that cannot be proved by books and records.</q>',
         'See <a href="#/statements">Statements</a> and \u00a76.2.'],
       ['\u201cListing who has called it genocide is an argument from authority.\u201d',
-        'In part, yes, and the objection is conceded to that extent. A roster of institutions does not by itself establish a fact, and the finding does not rest on one. The evidentiary work is done in Part VI, from the conduct, the casualty record, the destruction of the means of life and the statements of intent. The roster does a narrower job: it establishes that the determination has been reached independently, by bodies with published and materially different methodologies, and therefore cannot be attributed to the bias of any single institution. The same Part records what cuts against \u2014 the ICJ has made no merits finding, its 26 January 2024 order established a plausible risk and nothing more, its merits judgment is not expected before 2028, and the states and analysts rejecting the characterisation are named rather than omitted.',
+        'In part, yes, and the objection is conceded to that extent. A roster of institutions does not by itself establish a fact, and the finding does not rest on one. The evidentiary work is done in Part VI, from the conduct, the casualty record, the destruction of the means of life and the statements of intent. The roster does a narrower job: it establishes that the determination has been reached independently, by bodies with published and materially different methodologies, and therefore cannot be attributed to the bias of any single institution. The same Part records what cuts against \u2014 the ICJ has made no merits finding, its 26 January 2024 order found the Palestinians’ rights under the Convention plausible and at real risk, and nothing more, its merits judgment cannot come before Israel’s Rejoinder, due on 22 May 2029, and the states and analysts rejecting the characterisation are named rather than omitted.',
         'See <a href="#/legal">Legal</a>.'],
       ['\u201cThe cultural and celebrity material is not forensic.\u201d',
         'Correct, and it is labelled accordingly. \u00a715.12 records public and professional reaction to the war. It is not evidence of state conduct and it carries no weight in any legal conclusion. It is retained because the direction and scale of public response is itself a documented fact about the period, and because the parties themselves repeatedly make it an issue. Nothing in Parts I\u2013XIV or XVI\u2013XVIII depends on it.',
@@ -4272,8 +4272,8 @@ const Views = (function () {
         <div class="card" style="padding:26px">
           <p><b>Article I</b> of the Genocide Convention binds its <b>150-plus</b> states parties <q>to prevent and to punish</q> genocide. The duty to prevent is a distinct primary obligation, and its trigger was settled by the only case in which the ICJ has ruled directly on it, <i>Bosnia and Herzegovina v. Serbia and Montenegro</i> (26 February 2007). The Court held that the obligation to prevent, and the corresponding duty to act, <q>arise at the instant that the State learns of, or should normally have learned of, the existence of a serious risk that genocide will be committed</q> — not when genocide is proven, and not when a tribunal has delivered a final judgment.</p>
           <p>It is an obligation of <b>conduct, not result</b>. A state breaches it if it <q>manifestly failed to take all measures to prevent genocide which were within its power</q>, and the Court was explicit that it is <b>irrelevant</b> whether those measures would in fact have succeeded. The obligation is owed <i>erga omnes partes</i>, by each state party to every other, which is why South Africa had standing to bring its case at all.</p>
-          <p>The trigger the 2007 judgment describes, knowledge of a serious risk, was met on the highest available authority on <b>26 January 2024</b>, when the ICJ found a plausible risk of genocide in Gaza and ordered binding provisional measures to prevent it. From that date the duty has been live for every state party, and continuing to arm, supply or shield the party under those measures is not a neutral posture awaiting clarity but a failure to act on a duty already triggered.</p>
-          <p>This is why the recurring official position — that no final determination of genocide has been made — <b>inverts</b> the obligation rather than exercising caution under it. The duty exists precisely for the interval <i>before</i> a determination, because that is the only interval in which prevention remains possible. The ICJ’s merits judgment is not expected before <b>2028</b>. A duty that activated only once a genocide had been judicially confirmed would be a duty to acknowledge rather than to prevent, and the instrument Raphael Lemkin drafted after losing his own family in the Holocaust was built to let the world act in time. Read as a licence to wait for the verdict, it is turned against its own purpose.</p>
+          <p>The trigger the 2007 judgment describes, knowledge of a serious risk, was met on the highest available authority on <b>26 January 2024</b>, when the ICJ found a real and imminent risk of irreparable harm to the Palestinians’ plausible right to protection from genocide, and ordered binding provisional measures to prevent it. From that date the duty has been live for every state party, and continuing to arm, supply or shield the party under those measures is not a neutral posture awaiting clarity but a failure to act on a duty already triggered.</p>
+          <p>This is why the recurring official position — that no final determination of genocide has been made — <b>inverts</b> the obligation rather than exercising caution under it. The duty exists precisely for the interval <i>before</i> a determination, because that is the only interval in which prevention remains possible. The ICJ’s merits judgment cannot come before Israel’s Rejoinder, due on <b>22 May 2029</b>. A duty that activated only once a genocide had been judicially confirmed would be a duty to acknowledge rather than to prevent, and the instrument Raphael Lemkin drafted after losing his own family in the Holocaust was built to let the world act in time. Read as a licence to wait for the verdict, it is turned against its own purpose.</p>
           <p class="src">ICJ, <i>Bosnia and Herzegovina v. Serbia and Montenegro</i>, Judgment of 26 February 2007, paras 430–431; ICJ, <i>South Africa v. Israel</i>, Order of 26 January 2024; Convention on the Prevention and Punishment of the Crime of Genocide, Article I. See §13.5 and <a href="#/legal">Legal</a>.</p>
         </div>
       </section>

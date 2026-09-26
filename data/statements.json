@@ -1,7 +1,7 @@
 {
  "meta": {
-  "title": "The Record of Intent",
-  "description": "A curated register of statements bearing on intent: genocide, ethnic cleansing, apartheid, annexation, starvation and war crimes. Every entry is verbatim, attributed to a named speaker with role and date, and carries the source and a note on evidentiary significance. Statements by serving officials are admissions, not allegations.",
+  "title": "The Record of Statements",
+  "description": "A curated register of statements and findings bearing on the record: genocide, ethnic cleansing, apartheid, annexation, starvation and war crimes. Every entry is verbatim, attributed to a named speaker with role and date, and carries the source and a note on evidentiary significance. The register is wider than the question of intent: it also holds the findings of courts and UN bodies, dissent, historical context and speakers with no authority over the conduct, and each entry is marked by tier. On the question of intent under Article II of the Genocide Convention, the weight is carried by the statements of Israeli officials who directed the conduct (head of state, head of government, cabinet and military command), read with the conduct they directed; statements by legislators and commentators go to the climate and to the failure to punish incitement. Statements by serving officials are admissions, not allegations.",
   "compiled": "2026-09-15",
   "primary_databases": [
    {
@@ -530,7 +530,7 @@
    "quote": "[Israeli authorities are committing] the crimes against humanity of apartheid and persecution.",
    "context": "Report “A Threshold Crossed: Israeli Authorities and the Crimes of Apartheid and Persecution”, the first of the three major apartheid findings by internationally mandated organisations (with B'Tselem, January 2021, and Amnesty International, February 2022).",
    "source": "Human Rights Watch, “A Threshold Crossed”, 27 April 2021.",
-   "significance": "Establishes the two-element test applied since: an intent to maintain domination by one racial group over another, plus systematic oppression and inhumane acts. HRW reached the genocide determination in December 2024 and called the ICJ's July 2024 findings on apartheid “a wake-up call”."
+   "significance": "Establishes the two-element test applied since: an intent to maintain domination by one racial group over another, plus systematic oppression and inhumane acts. HRW found extermination and acts of genocide in December 2024 and called the ICJ's July 2024 findings on apartheid “a wake-up call”."
   },
   {
    "speaker": "Amnesty International",
@@ -730,7 +730,7 @@
   },
   {
    "speaker": "Israel Katz",
-   "role": "Economy Minister (later Foreign Minister, then Defence Minister)",
+   "role": "Minister of Energy and Infrastructure (later Foreign Minister, then Defence Minister)",
    "date": "12 October 2023",
    "sort": "2023-10-12",
    "cat": [
@@ -1029,7 +1029,7 @@
    ],
    "tier": "Court",
    "quote": "[Israel must] take all measures within its power to prevent and punish the direct and public incitement to commit genocide in relation to members of the Palestinian group in the Gaza Strip.",
-   "context": "Provisional measures order in South Africa v. Israel, finding it plausible that the acts complained of fall within the Genocide Convention. Measures were strengthened on 28 March and 24 May 2024.",
+   "context": "Provisional measures order in South Africa v. Israel, finding the right of Palestinians in Gaza to be protected from acts of genocide plausible, and a real and imminent risk of irreparable harm to it. Measures were strengthened on 28 March and 24 May 2024.",
    "source": "ICJ, Order of 26 January 2024, South Africa v. Israel.",
    "significance": "The Court ordered Israel to punish incitement — an order that presupposes incitement was occurring. Under Bosnia v. Serbia (2007) the duty to prevent genocide binds every state party from the moment it learns of a serious risk; this order is that trigger date. The UN Commission of Inquiry found in September 2025 that Israeli authorities had failed to take action against Herzog, Netanyahu and Gallant — that is, that the order was not complied with."
   },

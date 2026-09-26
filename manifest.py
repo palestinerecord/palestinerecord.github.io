@@ -79,7 +79,7 @@ DESCRIPTIONS = {
         'Each record carries its own source field.',
     ),
     'statements.json': (
-        'Documented statements of intent',
+        'Documented statements and findings',
         'Statements by named officials with speaker, role, date, the verbatim quotation, its '
         'context, its evidentiary categories, its tier and its legal significance. Contested '
         'attributions are marked contested.',
