@@ -3,7 +3,7 @@
   "description": "Every dataset behind the charts at palestinerecord.github.io, as plain JSON over HTTPS, with no login and no key.",
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
-  "generated": "2026-09-25",
+  "generated": "2026-09-26",
   "total_bytes": 7149824,
   "datasets": [
     {
@@ -305,7 +305,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-25"
+      "updated": "2026-09-26"
     },
     {
       "path": "data/names.json",
@@ -318,7 +318,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-25"
+      "updated": "2026-09-26"
     },
     {
       "path": "data/provenance.json",
@@ -335,7 +335,7 @@
         "files",
         "claims"
       ],
-      "updated": "2026-09-25"
+      "updated": "2026-09-26"
     },
     {
       "path": "data/report-meta.json",
@@ -430,7 +430,7 @@
         "press_killed_count",
         "demographics"
       ],
-      "updated": "2026-09-25"
+      "updated": "2026-09-26"
     },
     {
       "path": "data/war-record.json",
