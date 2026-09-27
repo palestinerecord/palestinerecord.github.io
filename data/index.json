@@ -3,8 +3,8 @@
   "description": "Every dataset behind the charts at palestinerecord.github.io, as plain JSON over HTTPS, with no login and no key.",
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
-  "generated": "2026-09-26",
-  "total_bytes": 7278986,
+  "generated": "2026-09-27",
+  "total_bytes": 7279126,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -169,7 +169,7 @@
         "switches",
         "entries"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-27"
     },
     {
       "path": "data/figures.json",
@@ -192,7 +192,7 @@
         "recognition",
         "opinion"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-27"
     },
     {
       "path": "data/headline.json",
@@ -261,7 +261,7 @@
         "recognition",
         "land"
       ],
-      "updated": "2026-09-25"
+      "updated": "2026-09-27"
     },
     {
       "path": "data/maps.json",
@@ -305,7 +305,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-27"
     },
     {
       "path": "data/names.json",
@@ -318,7 +318,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-27"
     },
     {
       "path": "data/provenance.json",
@@ -335,7 +335,7 @@
         "files",
         "claims"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-27"
     },
     {
       "path": "data/report-meta.json",
@@ -418,7 +418,7 @@
       "title": "Daily and monthly casualty series",
       "description": "Killed and injured in Gaza and the West Bank, day by day and aggregated by month, with the reporting gaps left as gaps rather than interpolated.",
       "source": "Tech For Palestine, from Gaza Ministry of Health and OCHA reporting (public domain).",
-      "bytes": 96874,
+      "bytes": 97014,
       "records": null,
       "fields": [
         "meta",
@@ -430,7 +430,7 @@
         "press_killed_count",
         "demographics"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-27"
     },
     {
       "path": "data/war-record.json",
