@@ -6,7 +6,7 @@
   "headline": [
     {
       "label": "Palestinians killed in Gaza",
-      "value": 74016,
+      "value": 74022,
       "suffix": "+",
       "note": "identified killed, Oct 2023 – Sept 2026",
       "source": "Gaza MoH / OCHA",
@@ -25,7 +25,7 @@
     },
     {
       "label": "Injured in Gaza",
-      "value": 175068,
+      "value": 175098,
       "note": "cumulative recorded injuries",
       "source": "Gaza MoH",
       "ref": "§6.3",

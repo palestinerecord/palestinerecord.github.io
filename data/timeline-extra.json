@@ -1898,6 +1898,13 @@
     {
       "date": "15 September 2026",
       "year": 2026,
+      "sort": "2026-09-15b",
+      "event": "Van Hollen leads 24 senators introducing Senate Resolution 852",
+      "note": "Requires a State Department report on the killing of nine Americans in the West Bank since 2022; a Data for Progress/IMEU poll finds 84% voter support including a Republican majority (§15.5)."
+    },
+    {
+      "date": "15 September 2026",
+      "year": 2026,
       "sort": "2026-09-15d",
       "event": "Ireland's settlement-goods import ban comes into force",
       "note": "The Israeli Settlements in the Occupied Palestinian Territory (Prohibition of Importation of Goods) Act 2026 commences, making the importation of goods originating in designated settlement postal codes an offence under section 14 of the Customs Act 2015. The first EU member state to convert the ICJ Advisory Opinion’s duty of non-assistance into a domestic criminal prohibition. Goods only; services excluded."
@@ -2132,6 +2139,27 @@
       "sort": "2026-09-25b",
       "event": "The Atlantic reports Egypt's pre-7 October warning in person",
       "note": "Officials from seven countries attest to Abbas Kamel's visit of 26 September 2023 and to Egyptian warnings continuing to 5 October (§18.7)."
+    },
+    {
+      "date": "27 September 2026",
+      "year": 2026,
+      "sort": "2026-09-27b",
+      "event": "Netanyahu makes an undisclosed visit to the UAE",
+      "note": "Reported to have asked bin Zayed to deny the earlier account of a pre-7 October warning call, a month before Israel's 27 October election (§18.7)."
+    },
+    {
+      "date": "27-28 September 2026",
+      "year": 2026,
+      "sort": "2026-09-27c",
+      "event": "UN Commission of Inquiry reports war crimes finding to the 81st General Assembly",
+      "note": "Finds Israeli authorities responsible for extermination, murder, starvation as a method of war and forcible transfer; four of five Genocide Convention acts established (§10.7A)."
+    },
+    {
+      "date": "28 September 2026",
+      "year": 2026,
+      "sort": "2026-09-28b",
+      "event": "Ed Miliband tells Labour conference Gaza is 'a stain on the conscience of the world'",
+      "note": "Andy Burnham reported as saying he has 'reset our approach'; no new licensing or embargo measure accompanied the statement (§13.3A)."
     }
   ]
 }
