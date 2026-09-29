@@ -176,7 +176,7 @@
       "title": "The curated statistics",
       "description": "The headline figures and the topic groups behind them — each with its label, its value, the note that qualifies it, and the report section it came from.",
       "source": "Each record carries its own source field.",
-      "bytes": 47471,
+      "bytes": 42844,
       "records": null,
       "fields": [
         "meta",
@@ -246,7 +246,7 @@
       "title": "The long record, 1917–2026",
       "description": "Dispossession, detention, demolition, recognition and complicity across the whole period, as series rather than as single figures.",
       "source": "Each record carries its own source field.",
-      "bytes": 56104,
+      "bytes": 52457,
       "records": null,
       "fields": [
         "meta",
