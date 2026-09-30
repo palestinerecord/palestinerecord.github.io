@@ -2,7 +2,7 @@
  "meta": {
   "title": "Provenance graph",
   "description": "Every curated claim on this site, joined to the bodies it rests on. Source strings are normalised to entities with stable identifiers, and each entity is classified by origin so that a whole class of source can be removed and the remainder recounted.",
-  "generated": "2026-09-30",
+  "generated": "2026-10-01",
   "origins": [
    {
     "id": "palestinian-official",
@@ -38,7 +38,7 @@
     "id": "israeli-media",
     "label": "Israeli press",
     "sources": 9,
-    "claims": 85
+    "claims": 86
    },
    {
     "id": "un",
@@ -74,7 +74,7 @@
     "id": "media",
     "label": "International press",
     "sources": 22,
-    "claims": 90
+    "claims": 91
    },
    {
     "id": "data-project",
@@ -91,13 +91,13 @@
   ]
  },
  "summary": {
-  "claims": 573,
-  "attributed": 476,
+  "claims": 574,
+  "attributed": 477,
   "unattributed": 97,
   "sources": 127,
   "origins": 14,
-  "multi_source": 184,
-  "independent": 152
+  "multi_source": 185,
+  "independent": 153
  },
  "switches": [
   {
@@ -108,7 +108,7 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 445,
+   "stands": 446,
    "falls": 31,
    "share": 93.5
   },
@@ -122,7 +122,7 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 398,
+   "stands": 399,
    "falls": 78,
    "share": 83.6
   },
@@ -133,9 +133,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 409,
+   "stands": 410,
    "falls": 67,
-   "share": 85.9
+   "share": 86.0
   },
   {
    "id": "no-ngo",
@@ -146,7 +146,7 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 372,
+   "stands": 373,
    "falls": 104,
    "share": 78.2
   },
@@ -161,9 +161,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 276,
+   "stands": 277,
    "falls": 200,
-   "share": 58.0
+   "share": 58.1
   }
  ],
  "sources": [
@@ -189,7 +189,7 @@
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
-   "claims": 31
+   "claims": 32
   },
   {
    "id": "trade-press",
@@ -229,7 +229,7 @@
    "kind": "press",
    "origin": "media",
    "origin_label": "International press",
-   "claims": 24
+   "claims": 25
   },
   {
    "id": "icj",
@@ -336,6 +336,14 @@
    "claims": 9
   },
   {
+   "id": "ynet",
+   "name": "Ynet and Yedioth Ahronoth",
+   "kind": "press",
+   "origin": "israeli-media",
+   "origin_label": "Israeli press",
+   "claims": 9
+  },
+  {
    "id": "israel-hcj",
    "name": "High Court of Justice (Israel)",
    "kind": "court",
@@ -357,14 +365,6 @@
    "kind": "press",
    "origin": "media",
    "origin_label": "International press",
-   "claims": 8
-  },
-  {
-   "id": "ynet",
-   "name": "Ynet and Yedioth Ahronoth",
-   "kind": "press",
-   "origin": "israeli-media",
-   "origin_label": "Israeli press",
    "claims": 8
   },
   {
@@ -1191,7 +1191,7 @@
   },
   {
    "file": "statements.json",
-   "claims": 150
+   "claims": 151
   },
   {
    "file": "elements.json",
@@ -1243,7 +1243,7 @@
    "file": "figures.json",
    "path": "headline[0]",
    "label": "Palestinians killed in Gaza",
-   "value": 74023,
+   "value": 74032,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
@@ -1273,7 +1273,7 @@
    "file": "figures.json",
    "path": "headline[2]",
    "label": "Injured in Gaza",
-   "value": 175111,
+   "value": 175142,
    "numeric": true,
    "ref": "§6.3",
    "date": "",
@@ -4294,6 +4294,22 @@
     "times-of-israel"
    ],
    "id": "statements-benjamin-netanyahu-7"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[150]",
+   "label": "Bezalel Smotrich",
+   "value": "I think we need to go to war in Judea and Samaria, to do there what we did in Gaza, to dismantle the Palestinian Authority, which is a terror authority. … I would very much like to annex at least up to the Yellow Line in Gaza and up to the…",
+   "numeric": false,
+   "ref": "",
+   "date": "27 September 2026",
+   "source_text": "Ynet; The Times of Israel; Al Jazeera, 27 September 2026 (§6.2)",
+   "sources": [
+    "times-of-israel",
+    "ynet",
+    "aljazeera"
+   ],
+   "id": "statements-bezalel-smotrich-9"
   },
   {
    "file": "elements.json",
