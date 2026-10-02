@@ -1744,6 +1744,22 @@ tr.row-partial td { opacity: .72; }
    three are carried by class, not by inline style, so the switch can be set
    and unset without the markup being rebuilt. */
 .prov-panel { padding: 22px 24px; margin-bottom: 26px; }
+
+/* Tests — one card per pre-registered hypothesis */
+.test-list { display: grid; gap: 16px; margin-top: 18px; }
+.test-card { padding: 20px 22px; }
+.test-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.test-head h3 { margin: 0; font-size: 16px; flex: 1 1 260px; }
+.test-id { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+.test-result { font-size: 12px; padding: 2px 10px; border-radius: 999px; border: 1px solid var(--line, rgba(255,255,255,.14)); color: var(--text-2); }
+.test-result.rejected { border-color: var(--red); color: var(--red); }
+.test-result.muted { color: var(--muted); }
+.test-reading { margin: 0 0 12px; line-height: 1.55; }
+.test-facts { display: grid; grid-template-columns: 130px 1fr; gap: 6px 14px; margin: 0; font-size: 13px; color: var(--text-2); }
+.test-facts dt { color: var(--muted); }
+.test-facts dd { margin: 0; }
+.test-facts ul { margin: 0; padding-left: 18px; }
+@media (max-width: 640px) { .test-facts { grid-template-columns: 1fr; } .test-facts dt { margin-top: 6px; } }
 .prov-panel-lede { font-size: 16px; color: var(--text-2); margin: 0 0 12px; }
 .prov-panel-lede b { font-family: var(--serif); font-size: 30px; color: var(--accent); margin-right: 4px; }
 .prov-panel-note { font-size: 14px; color: var(--muted); margin: 10px 0 0; }

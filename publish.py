@@ -92,7 +92,7 @@ LIVE_CHECKS = ('/', '/data/figures.json', '/data/report.json', '/js/charts.js',
 # them. The `data/` ids are the chapter ids in js/views.js; a name that is not
 # one of them renders an empty chapter, which is why they are kept in step.
 ROUTES = ('overview', 'tour', 'timeline', 'evidence', 'rebuttals', 'statements',
-          'legal', 'sources', 'api', 'changelog',
+          'legal', 'sources', 'tests', 'api', 'changelog',
           'data/gaza', 'data/asymmetry', 'data/since-1948', 'data/complicity',
           'data/land', 'data/west-bank', 'data/wars', 'data/world', 'data/tables')
 

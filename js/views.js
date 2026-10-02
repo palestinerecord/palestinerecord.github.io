@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=154" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=155" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=154" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=155" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2918,6 +2918,82 @@ const Views = (function () {
     </div>`;
   }
 
+  /* ---------- tests ---------- */
+
+  /* The pre-registered hypothesis tests. Everything on the page is read out of
+     data/tests.json, which analysis/run_tests.py writes; nothing is computed
+     here, so the page, the file and the PDF cannot disagree. */
+
+  const pText = (p) => (p === null || p === undefined ? '—' : p < 0.001 ? '< 0.001' : p.toFixed(3));
+  const sig = (x) => (Math.abs(x) >= 100 ? Math.round(x).toString() : Number(x).toPrecision(3));
+
+  function testCard(t) {
+    const e = t.effect || {};
+    const tone = t.status === 'not testable' ? '' : /not rejected/.test(t.result || '') ? 'muted' : 'rejected';
+    const sens = (t.sensitivity || []).map((s) => `<li>${esc(s.name)}: ${sig(s.value)}${s.ci ? ` (95% CI ${sig(s.ci[0])} to ${sig(s.ci[1])})` : ''}${s.p !== undefined ? `, p ${pText(s.p)}` : ''}</li>`).join('');
+    const sources = (t.sources || []).map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.title)}</a> — ${esc(s.org)}, ${esc(s.date)}</li>`).join('');
+    return `<article class="card test-card" id="test-${esc(t.id)}">
+      <div class="test-head">
+        <span class="test-id">${esc(t.id)}</span>
+        <h3>${esc(t.title)}</h3>
+        <span class="test-result ${tone}">${esc(t.result || t.status)}</span>
+      </div>
+      <p class="test-reading">${esc(t.reading || '')}</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>${esc(t.null)}</dd>
+        <dt>Data</dt><dd>${esc(t.data)}</dd>
+        <dt>Test</dt><dd>${esc(t.test)}</dd>
+        ${e.name ? `<dt>Effect</dt><dd>${esc(e.name)}: <b>${sig(e.value)}</b>${e.ci ? ` (95% CI ${sig(e.ci[0])} to ${sig(e.ci[1])})` : ''}</dd>` : ''}
+        <dt>p</dt><dd>${pText(t.p)}${t.p_adjusted !== undefined ? ` · adjusted for false discovery ${pText(t.p_adjusted)}` : ''}</dd>
+        ${sens ? `<dt>Sensitivity</dt><dd><ul>${sens}</ul></dd>` : ''}
+        ${sources ? `<dt>Sources</dt><dd><ul>${sources}</ul></dd>` : ''}
+        <dt>Report</dt><dd>${esc(t.ref || '')}</dd>
+      </dl>
+    </article>`;
+  }
+
+  function testsView() {
+    const T = D.tests;
+    const M = T.meta;
+    const run = T.tests.filter((t) => t.p !== null && t.p !== undefined);
+    const rejected = run.filter((t) => t.result === 'null rejected' || /fabrication benchmark is rejected/.test(t.result));
+    const groups = Object.keys(T.groups).map((g) => `<section class="section">
+        ${head(g, T.groups[g], '')}
+        <div class="test-list">${T.tests.filter((t) => t.group === g).map(testCard).join('')}</div>
+      </section>`).join('');
+
+    return `<div class="view wrap">
+      <section class="section">
+        ${head('Tests', 'The record, put to statistical test',
+          'Hypothesis tests on the data this site publishes: whether the dead are confined to men of fighting age, whether killing continued through the ceasefires, '
+          + 'whether the ICJ orders changed the daily death rate, what happened in the West Bank after 7 October 2023, and whether the Ministry of Health\u2019s named list of the dead is genuine. '
+          + 'Each test is stated with its null hypothesis, its data, its effect size and its confidence interval, and every figure on this page is read out of the published data file.')}
+        <div class="grid c4">
+          ${statCard({ value: T.tests.length, label: 'Tests', note: 'each with its null hypothesis, data, effect size and interval' }, 'blue')}
+          ${statCard({ value: 72835, label: 'Identity numbers checked', note: 'every one passes the Population Registry check digit' }, 'green')}
+          ${statCard({ value: rejected.length, label: 'Nulls rejected', note: 'after correction for multiple testing' }, 'red')}
+          ${statCard({ value: run.length - rejected.length, label: 'ICJ orders with no detectable fall', note: 'in the daily death rate after the order' }, 'amber')}
+        </div>
+        <p class="chart-note" style="margin-top:18px"><a href="${esc(M.report)}" class="btn">Download the written report (PDF)</a>
+          &nbsp; <a href="data/tests.json">data/tests.json</a> · ${esc(M.correction)} ${esc(M.caution)}</p>
+      </section>
+
+      <section class="section">
+        ${head('The rates', 'Every rate ratio on one axis',
+          'The ceasefires, the ICJ orders and the West Bank, each as a ratio of the rate after to the rate before, with its 95% interval. A ratio of 1 is no change. Green is a fall that survives the correction, red a rise, grey no detectable change.')}
+        ${chartCard('tests-rates', 'Rate ratios with 95% intervals', 'Log scale. Each line is the interval; the dot is the estimate.', 'data/tests.json · H2–H4', 'tall')}
+      </section>
+
+      ${groups}
+
+      <section class="section">
+        ${head('Notes', 'Notes on the data', 'Where a test needed data the daily series does not hold, what was used instead and why.')}
+        ${T.departures.map((d) => `<div class="card test-card"><div class="test-head"><span class="test-id">${esc(d.test)}</span></div><p>${esc(d.text)}</p></div>`).join('')}
+        <p class="chart-note" style="margin-top:18px">Generated by analysis/run_tests.py on ${esc(M.generated)}. A change at a dated event is an association, not proof that the event caused it.</p>
+      </section>
+    </div>`;
+  }
+
   /* ---------- the accountability ledger ----------
 
      States are what the rest of this site counts, and states are not what
@@ -3206,6 +3282,11 @@ const Views = (function () {
       title: 'Said and done — the war, one day at a time',
       desc: 'One scrubbable axis of days. Pick any day of the war and read the toll it added, what was said that '
         + 'day, what had been ordered, what was happening, and what was allowed across the crossings.',
+    },
+    tests: {
+      title: 'Tests — the record, put to statistical test',
+      desc: 'Hypothesis tests on the data this site publishes: the named list of the dead, who is killed, the ceasefires, '
+        + 'the ICJ orders and the West Bank, each with its effect size and confidence interval.',
     },
     method: {
       title: 'Method — impartial, not neutral',
@@ -4913,7 +4994,7 @@ const Views = (function () {
     tour: tourView, api: apiView, changelog: changelogView, embed: embedView,
     method: methodView, children: childrenView, day: dayView,
     provenance: provenanceView, answer: answerView, ledger: ledgerView,
-    mp: mpView,
+    mp: mpView, tests: testsView,
   };
 
   return {

@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tests — the record, put to statistical test · The Documented Record</title>
+<meta name="description" content="Hypothesis tests on the data this site publishes: the named list of the dead, who is killed, the ceasefires, the ICJ orders and the West Bank, each with its effect size and confidence interval.">
+<meta name="theme-color" content="#0b0f17">
+<meta name="author" content="Dr. Usman Kayani">
+<!-- Index everything, and let the large share cards and the full snippet
+     through: this record is only useful if the figure a reader searched for is
+     the thing they are shown. -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<!-- Ownership proof for Google Search Console, which reports what people
+     searched for to reach this record and which pages Google could not read.
+     It is a token, not a tracker: it sends nothing, runs nothing, and is
+     inert to anyone who is not Google verifying the property. The same proof
+     is also served as the file google8cbf6aea08d3b76d.html at the root.
+     Removing either one un-verifies the property, so both stay. -->
+<meta name="google-site-verification" content="40JF9wP9oaaFDPt9eTuIqBsedf1rn15n1tfVJXyRlJQ">
+<!-- Everything here is served from this origin except the charting and
+     animation libraries, which come from one pinned CDN with integrity hashes,
+     and the live casualty series. Nothing is posted anywhere and there is no
+     tracker to allow, so the work this policy does is the source allowlist:
+     script can only come from here or from jsdelivr, whatever else gets onto
+     the page. Declared in a meta tag rather than a header because GitHub Pages
+     serves no headers of our choosing.
+
+     'unsafe-eval' is here for one reason: echarts-gl compiles its GLSL shaders
+     by evaluating the preprocessor expressions with `new Function`, and without
+     it the 3-D chart of the Gaza dead fails with "Invalid expression" and
+     leaves an empty container. 'unsafe-inline' is needed for the theme script
+     that has to run before first paint. Neither widens the set of origins
+     script may be fetched from, which is the part that matters here. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
+<link rel="icon" href="../assets/favicon.svg?v=155" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=155">
+<style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
+  border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
+  border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
+.snapshot-note a { color: #d9a441; }
+.chart-missing { margin: 0; padding: 18px 20px; border: 1px dashed rgba(255,255,255,.16);
+  border-radius: 12px; color: #7d879c; font-size: 13.5px; }
+.snapshot-links { max-width: 1280px; margin: 48px auto 0; padding: 24px 20px;
+  border-top: 1px solid rgba(255,255,255,.12); }
+.snapshot-links h2 { font-size: 15px; letter-spacing: .04em; text-transform: uppercase;
+  color: #7d879c; margin: 0 0 14px; }
+.snapshot-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.snapshot-links a { color: #d9a441; text-decoration: none; }
+.snapshot-links a:hover { text-decoration: underline; }
+.snapshot-links p { margin: 4px 0 0; color: #7d879c; font-size: 13px; line-height: 1.55; }</style>
+<link rel="canonical" href="https://palestinerecord.github.io/snapshot/tests.html">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="The Documented Record — revisions" href="feed.xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://palestinerecord.github.io/snapshot/tests.html">
+<meta property="og:site_name" content="The Documented Record">
+<meta property="og:title" content="Tests — the record, put to statistical test · The Documented Record">
+<meta property="og:description" content="Hypothesis tests on the data this site publishes: the named list of the dead, who is killed, the ceasefires, the ICJ orders and the West Bank, each with its effect size and confidence interval.">
+<meta property="og:image" content="https://palestinerecord.github.io/assets/og/tests.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tests — the record, put to statistical test · The Documented Record — a card carrying the title of this section of the record.">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tests — the record, put to statistical test · The Documented Record">
+<meta name="twitter:description" content="Hypothesis tests on the data this site publishes: the named list of the dead, who is killed, the ceasefires, the ICJ orders and the West Bank, each with its effect size and confidence interval.">
+<meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/tests.png">
+<link rel="preload" href="../css/style.css?v=155" as="style">
+<link rel="stylesheet" href="../css/style.css?v=155">
+<!-- Before the stylesheet paints anything: a reader who chose the light theme
+     should not be shown the dark one first. Inline and synchronous by
+     necessity; a deferred script runs too late to prevent the flash. -->
+
+<!-- The libraries and the local scripts are all deferred: none of them paints
+     the first screen, and a synchronous script in the head blocks the parser
+     until it has been fetched, parsed and run. Document order is preserved, so
+     ECharts and GSAP are still in place before charts.js and app.js run.
+     echarts-gl is not here at all — charts.js injects it, with the same
+     integrity hash, only if a reader opens one of the two 3-D charts. -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<!-- The first screen is painted from this one file; the request should be in
+     flight while the parser is still in the head. -->
+<link rel="preload" href="../data/headline.json?v=155" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
+
+
+
+
+<!-- Structured data. The article describes report-final.md, which the Evidence route
+     reproduces in full; the dataset describes the JSON under data/, which is a public
+     API in all but name. Both dateModified values are stamped by prerender.py from
+     data/timeseries.json, so neither can drift from the data actually shipped. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://palestinerecord.github.io/#report",
+  "headline": "The Documented Record — Israel and the Occupied Territories, 1917–2026",
+  "alternativeHeadline": "A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026)",
+  "description": "A source-anchored survey of state conduct in Israel and the occupied Palestinian territories, applying identical evidentiary and legal standards to every actor. Every figure carries its source.",
+  "author": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "publisher": { "@type": "Person", "name": "Dr. Usman Kayani" },
+  "inLanguage": "en-GB",
+  "url": "https://palestinerecord.github.io/",
+  "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
+  "image": "https://palestinerecord.github.io/assets/share-card.png",
+  "wordCount": 231354,
+  "dateModified": "2026-10-02",
+  "temporalCoverage": "1917/2026",
+  "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
+  "about": [
+    { "@type": "Thing", "name": "Israeli–Palestinian conflict" },
+    { "@type": "Thing", "name": "International humanitarian law" },
+    { "@type": "Thing", "name": "Occupied Palestinian territories" }
+  ],
+  "citation": "South Africa v. Israel (Application of the Convention on the Prevention and Punishment of the Crime of Genocide in the Gaza Strip), International Court of Justice, Order of 26 January 2024"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://palestinerecord.github.io/#dataset",
+  "name": "The Documented Record — casualty, land and conduct series, 1948–2026",
+  "description": "The machine-readable base of the dashboard: daily and monthly Gaza casualty series since October 2023, the long death toll from 1948, West Bank killings, demolitions and detention, land transfer and settlement figures, the 1948 village depopulations, documented statements and findings, and the recorded position of every state. Each figure carries the source it was taken from.",
+  "url": "https://palestinerecord.github.io/#/data",
+  "creator": {
+    "@type": "Person",
+    "name": "Dr. Usman Kayani"
+  },
+  "license": "https://palestinerecord.github.io/licence.html",
+  "inLanguage": "en-GB",
+  "dateModified": "2026-10-02",
+  "temporalCoverage": "1948/2026",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Israel and the occupied Palestinian territories"
+  },
+  "keywords": [
+    "Gaza casualties",
+    "West Bank",
+    "settlements",
+    "demolitions",
+    "administrative detention",
+    "Nakba",
+    "arms transfers",
+    "recognition of Palestine"
+  ],
+  "isBasedOn": [
+    {
+      "@type": "Dataset",
+      "name": "Tech For Palestine open datasets (Gaza Ministry of Health, OCHA, UN)",
+      "url": "https://data.techforpalestine.org/",
+      "description": "Daily and cumulative casualty series for Gaza and the West Bank, compiled from Gaza Ministry of Health, OCHA and UN reporting and published as open JSON and CSV endpoints.",
+      "creator": {
+        "@type": "Organization",
+        "name": "Tech For Palestine",
+        "url": "https://techforpalestine.org/"
+      },
+      "license": "https://unlicense.org/"
+    },
+    {
+      "@type": "Dataset",
+      "name": "OCHA State of Palestine subnational administrative boundaries (Common Operational Dataset)",
+      "url": "https://data.humdata.org/dataset/cod-ab-pse",
+      "description": "Administrative level 0 to 2 boundaries for the State of Palestine, the Common Operational Dataset used here to draw governorate and territory geography.",
+      "creator": {
+        "@type": "Organization",
+        "name": "United Nations Office for the Coordination of Humanitarian Affairs, Field Information Services Section",
+        "url": "https://www.unocha.org/"
+      },
+      "license": "http://creativecommons.org/licenses/by/3.0/igo/legalcode"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Cumulative Palestinians killed in Gaza, by reporting day"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Children killed in Gaza, by reporting month"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Palestinians and Israelis killed, by period since 1948"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Palestinian structures demolished, by year"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Palestinians held in administrative detention, by snapshot"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Villages depopulated in 1947–1950, by month, sub-district and recorded cause"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "States recognising Palestine, by date of recognition"
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "The manifest: every published file, described and dated",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://palestinerecord.github.io/data/index.json"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Daily and monthly casualty series",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://palestinerecord.github.io/data/timeseries.json"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Curated headline figures, each with its source",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://palestinerecord.github.io/data/figures.json"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "The long record, 1948–2026",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://palestinerecord.github.io/data/long-record.json"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Documented statements and findings",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://palestinerecord.github.io/data/statements.json"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Villages depopulated 1947–1950",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://palestinerecord.github.io/data/nakba.json"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "The recorded position of every state",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://palestinerecord.github.io/data/world-positions.json"
+    }
+  ]
+}
+</script>
+</head>
+<body data-view="tests" style="">
+
+<a class="skip-link" href="#app">Skip to the record</a>
+
+
+
+
+
+
+<header class="topbar">
+  <a class="brand" href="../index.html#/overview">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=155" alt="Flag of Palestine">
+    <span class="brand-text">
+      <strong>The Documented Record</strong>
+      <em>Israel &amp; the Occupied Territories · 1917–2026</em>
+    </span>
+  </a>
+  <!-- Nineteen routes will not fit in a bar, and fourteen of them in a flat row
+       said nothing about how they relate: the charts, the children and the
+       single day are one record at three grains, and the four ways of using it
+       against a claim were scattered between them. They are grouped instead.
+       Every destination is a plain anchor in the markup, hidden by CSS until
+       its group is open, so a crawler, a reader with no JavaScript and the
+       prerenderer all see the same set of links a mouse does. Below the bar's
+       breakpoint the groups become labelled blocks in the menu panel, with
+       nothing to open. -->
+  <nav class="nav" id="nav">
+    <a href="../index.html#/overview" data-view="overview">Overview</a>
+    <a href="../index.html#/tour/1" data-view="tour">Start here</a>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/data" data-view="data">The charts<em>Nine chapters, every figure plotted</em></a>
+        <a href="../index.html#/children" data-view="children">Children<em>The cohort, named and counted</em></a>
+        <a href="../index.html#/day" data-view="day">Day by day<em>Any single day of the record</em></a>
+        <a href="../index.html#/timeline" data-view="timeline">Timeline<em>The chronology, 1917–2026</em></a>
+      </div>
+    </div>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/evidence" data-view="evidence">Evidence<em>The report in full, nothing omitted</em></a>
+        <a href="../index.html#/statements" data-view="statements">Statements<em>Intent, in the speaker’s own words</em></a>
+        <a href="../index.html#/sources" data-view="sources">Sources<em>Every source, linked at origin</em></a>
+        <a href="../index.html#/provenance" data-view="provenance">Provenance<em>Pull the thread behind a figure</em></a>
+        <a href="../index.html#/tests" data-view="tests" class="active">Tests<em>The record, put to statistical test</em></a>
+      </div>
+    </div>
+    <div class="nav-group">
+      
+      <div class="nav-menu">
+        <a href="../index.html#/legal" data-view="legal">Legal<em>The findings and the instruments</em></a>
+        <a href="../index.html#/ledger" data-view="ledger">Ledger<em>The persons and companies named</em></a>
+        <a href="../index.html#/mp" data-view="mp">Constituency<em>All 649 seats, and how yours voted</em></a>
+        <a href="../index.html#/rebuttals" data-view="rebuttals">Rebuttals<em>Every defence, answered</em></a>
+        <a href="../index.html#/answer" data-view="answer">Answer a claim<em>Paste one, and read the record</em></a>
+      </div>
+    </div>
+  </nav>
+  <div class="freshness" id="freshness" title="Casualty time-series last updated 1 October 2026 (1 days ago). Report and curated figures compiled 2 October 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>1 October 2026</b></span></div>
+  
+  
+  
+</header>
+
+<main id="app" tabindex="-1"><div class="snapshot-note"><strong>This is a static snapshot</strong>, generated on 2 October 2026 so that this section of the record can be read, linked and indexed without JavaScript. The charts, maps, filters and search are in the <a href="https://palestinerecord.github.io/#/tests">interactive version of this page</a>.</div><div class="view wrap">
+      <section class="section">
+        <div class="section-head">
+      <div class="eyebrow">Tests</div>
+      <h2>The record, put to statistical test</h2>
+      <p>Hypothesis tests on the data this site publishes: whether the dead are confined to men of fighting age, whether killing continued through the ceasefires, whether the ICJ orders changed the daily death rate, what happened in the West Bank after 7 October 2023, and whether the Ministry of Health’s named list of the dead is genuine. Each test is stated with its null hypothesis, its data, its effect size and its confidence interval, and every figure on this page is read out of the published data file.</p>
+    </div>
+        <div class="grid c4">
+          <div class="stat blue" data-tone="blue">
+      <div class="val" data-count="12">12</div>
+      <div class="lbl">Tests</div>
+      <div class="note">each with its null hypothesis, data, effect size and interval</div>
+      
+      
+    </div>
+          <div class="stat green" data-tone="green">
+      <div class="val" data-count="72835">73k</div>
+      <div class="lbl">Identity numbers checked</div>
+      <div class="note">every one passes the Population Registry check digit</div>
+      
+      
+    </div>
+          <div class="stat red" data-tone="red">
+      <div class="val" data-count="8">8</div>
+      <div class="lbl">Nulls rejected</div>
+      <div class="note">after correction for multiple testing</div>
+      
+      
+    </div>
+          <div class="stat amber" data-tone="amber">
+      <div class="val" data-count="3">3</div>
+      <div class="lbl">ICJ orders with no detectable fall</div>
+      <div class="note">in the daily death rate after the order</div>
+      
+      
+    </div>
+        </div>
+        <p class="chart-note" style="margin-top:18px"><a href="statistical-tests.pdf" class="btn">Download the written report (PDF)</a>
+          &nbsp; <a href="../data/tests.json">data/tests.json</a> · p-values are adjusted for the false discovery rate (Benjamini-Hochberg, 5%) across all 15 tests run in the analysis. A change in a series at a dated event is an association, not proof that the event caused it. Tests on the named list inherit any bias in who has been identified.</p>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+      <div class="eyebrow">The rates</div>
+      <h2>Every rate ratio on one axis</h2>
+      <p>The ceasefires, the ICJ orders and the West Bank, each as a ratio of the rate after to the rate before, with its 95% interval. A ratio of 1 is no change. Green is a fall that survives the correction, red a rise, grey no detectable change.</p>
+    </div>
+        <div class="card chart-card" id="chart-tests-rates" data-chart-card="tests-rates" data-title="Rate ratios with 95% intervals" data-source="data/tests.json · H2–H4" data-note="Log scale. Each line is the interval; the dot is the estimate.">
+      <div class="chart-head">
+        <div><h3>Rate ratios with 95% intervals</h3><p>Log scale. Each line is the interval; the dot is the estimate.</p></div>
+        <div class="chart-tools">
+          <span class="chart-ref">data/tests.json · H2–H4</span>
+          
+          
+          
+          
+          
+          
+        </div>
+      </div>
+      <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/tests&chart=tests-rates">open it in the live record</a>.</p>
+      <div class="chart-table" hidden=""></div>
+    </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H1</div>
+      <h2>Who is killed: age and sex against the population</h2>
+      
+    </div>
+        <div class="test-list"><article class="card test-card" id="test-H1b">
+      <div class="test-head">
+        <span class="test-id">H1b</span>
+        <h3>Age and sex of the dead: pattern confined to men of fighting age</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">52.1% of the identified dead (95% CI 51.7% to 52.5%) are women, children under 18 or people aged 60 and over, against 75.5% of the population. More than half of the dead fall outside the group from which armed men are drawn: the dead are not confined to men of fighting age.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>The identified dead are confined to men aged 18-59.</dd>
+        <dt>Data</dt><dd>Ministry of Health named list, 72,835 identified dead; PCBS/UNFPA Gaza Strip population 2023 (2,226,544).</dd>
+        <dt>Test</dt><dd>Exact binomial test of the share of women, children and people aged 60 and over against zero</dd>
+        <dt>Effect</dt><dd>Share of dead who are women, children under 18 or aged 60+: <b>0.521</b> (95% CI 0.517 to 0.525)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        
+        <dt>Report</dt><dd>§6.1</dd>
+      </dl>
+    </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H2</div>
+      <h2>The ceasefires</h2>
+      
+    </div>
+        <div class="test-list"><article class="card test-card" id="test-H2a">
+      <div class="test-head">
+        <span class="test-id">H2a</span>
+        <h3>The November 2023 pause and the daily killing rate</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Reported killings fell from 284.4 a day in the fortnight before the pause to 0.71 a day during it (rate ratio 0.0025, 95% CI 0.0013 to 0.0047). Killing did not stop: at least 5 people were reported killed in the 7 days. Against the upper bound of 40 deaths the ratio is 0.0201, still a fall of about 98%.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>The daily rate of killing during the pause of 24-30 November 2023 equalled the rate in the 14 days before it.</dd>
+        <dt>Data</dt><dd>Comparison window: Ministry of Health / Government Media Office daily series (Tech For Palestine), 10-23 November 2023. Pause: killings reported incident by incident (OCHA Flash Updates #49-#55; AP; Al Jazeera).</dd>
+        <dt>Test</dt><dd>Negative binomial regression on a pause indicator, Newey-West errors (lag 7)</dd>
+        <dt>Effect</dt><dd>Rate ratio, pause against the 14 days before: <b>0.00250</b> (95% CI 0.00135 to 0.00468)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        <dt>Sensitivity</dt><dd><ul><li>Exact conditional Poisson test: 0.00250 (95% CI 0.000815 to 0.00587), p &lt; 0.001</li><li>Against the upper bound of 40 deaths during the pause: 0.0201 (95% CI 0.0143 to 0.0274), p &lt; 0.001</li></ul></dd>
+        <dt>Sources</dt><dd><ul><li><a href="https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-49" rel="noopener">Hostilities in the Gaza Strip and Israel - Flash Update #49</a> — OCHA, 24 November 2023</li><li><a href="https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-51" rel="noopener">Hostilities in the Gaza Strip and Israel - Flash Update #51</a> — OCHA, 26 November 2023</li><li><a href="https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-53" rel="noopener">Hostilities in the Gaza Strip and Israel - Flash Update #53</a> — OCHA, 28 November 2023</li><li><a href="https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-55" rel="noopener">Hostilities in the Gaza Strip and Israel - Flash Update #55</a> — OCHA, 30 November 2023</li><li><a href="https://www.pbs.org/newshour/world/israeli-troops-fire-at-palestinians-attempting-to-return-to-northern-gaza-during-cease-fire" rel="noopener">Israeli troops fire at Palestinians attempting to return to northern Gaza during cease-fire</a> — Associated Press (PBS NewsHour), 24 November 2023</li><li><a href="https://www.aljazeera.com/news/2023/11/24/displaced-people-attempt-to-return-home-across-gaza-as-truce-sets-in" rel="noopener">'The war is not over': Israel blocks Palestinians' return to northern Gaza</a> — Al Jazeera, 24 November 2023</li></ul></dd>
+        <dt>Report</dt><dd>§13</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H2b">
+      <div class="test-head">
+        <span class="test-id">H2b</span>
+        <h3>The January-March 2025 ceasefire and the daily killing rate</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">New killings fell from 48.8 a day in the 60 days before to 7.28 a day during the ceasefire (rate ratio 0.149, 95% CI 0.051 to 0.44). Killing continued throughout: 422 new killings were reported in 58 days (95% CI 6.6 to 8.0 a day).</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>The daily rate of new killings during the ceasefire (19 Jan 2025 to 17 Mar 2025) equalled the rate in the 60 days before it.</dd>
+        <dt>Data</dt><dd>Ministry of Health daily series (Tech For Palestine). Ceasefire days count new killings only where the Ministry separates them from bodies recovered.</dd>
+        <dt>Test</dt><dd>Negative binomial regression on a ceasefire indicator, Newey-West errors (lag 7)</dd>
+        <dt>Effect</dt><dd>Rate ratio, ceasefire against the 60 days before: <b>0.149</b> (95% CI 0.0506 to 0.440)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        <dt>Sensitivity</dt><dd><ul><li>Weekly totals: 0.152 (95% CI 0.0654 to 0.355), p &lt; 0.001</li><li>New killings only in both windows: 0.180 (95% CI 0.0652 to 0.496), p &lt; 0.001</li></ul></dd>
+        
+        <dt>Report</dt><dd>§13</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H2c">
+      <div class="test-head">
+        <span class="test-id">H2c</span>
+        <h3>The October 2025 ceasefire and the daily killing rate</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">New killings fell from 96.1 a day in the 60 days before to 3.74 a day during the ceasefire (rate ratio 0.039, 95% CI 0.027 to 0.055). Killing continued throughout: 1,336 new killings were reported in 357 days (95% CI 3.54 to 3.95 a day).</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>The daily rate of new killings during the ceasefire (10 Oct 2025 to 01 Oct 2026) equalled the rate in the 60 days before it.</dd>
+        <dt>Data</dt><dd>Ministry of Health daily series (Tech For Palestine). Ceasefire days count new killings only where the Ministry separates them from bodies recovered.</dd>
+        <dt>Test</dt><dd>Negative binomial regression on a ceasefire indicator, Newey-West errors (lag 7)</dd>
+        <dt>Effect</dt><dd>Rate ratio, ceasefire against the 60 days before: <b>0.0390</b> (95% CI 0.0274 to 0.0553)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        <dt>Sensitivity</dt><dd><ul><li>Weekly totals: 0.0370 (95% CI 0.0234 to 0.0576), p &lt; 0.001</li><li>New killings only in both windows: 0.0610 (95% CI 0.0465 to 0.0800), p &lt; 0.001</li></ul></dd>
+        
+        <dt>Report</dt><dd>§13</dd>
+      </dl>
+    </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H3</div>
+      <h2>The ICJ provisional measures orders</h2>
+      
+    </div>
+        <div class="test-list"><article class="card test-card" id="test-H3a">
+      <div class="test-head">
+        <span class="test-id">H3a</span>
+        <h3>The ICJ order of 26 January 2024 and the daily killing rate</h3>
+        <span class="test-result muted">null not rejected</span>
+      </div>
+      <p class="test-reading">No detectable change in the level or the trend of daily deaths at the order (level rate ratio 1.006, 95% CI 0.81 to 1.3; joint test p = 0.99). The order was not followed by a measurable fall in the rate of killing. This is the absence of a detectable change, not proof that the order had no effect on any conduct.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>No change in the level or the slope of daily deaths at the order of 26 January 2024.</dd>
+        <dt>Data</dt><dd>Ministry of Health daily series (Tech For Palestine), 1 December 2023 to 31 July 2024.</dd>
+        <dt>Test</dt><dd>Segmented negative binomial regression (trend, and a level and slope change at each order), Newey-West errors; joint Wald test of level and slope</dd>
+        <dt>Effect</dt><dd>Rate ratio, level change at the order: <b>1.01</b> (95% CI 0.808 to 1.25)</dd>
+        <dt>p</dt><dd>0.989 · adjusted for false discovery 0.989</dd>
+        
+        
+        <dt>Report</dt><dd>§13</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H3b">
+      <div class="test-head">
+        <span class="test-id">H3b</span>
+        <h3>The ICJ order of 28 March 2024 and the daily killing rate</h3>
+        <span class="test-result muted">null not rejected</span>
+      </div>
+      <p class="test-reading">No detectable change in the level or the trend of daily deaths at the order (level rate ratio 0.819, 95% CI 0.65 to 1; joint test p = 0.16). The order was not followed by a measurable fall in the rate of killing. This is the absence of a detectable change, not proof that the order had no effect on any conduct.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>No change in the level or the slope of daily deaths at the order of 28 March 2024.</dd>
+        <dt>Data</dt><dd>Ministry of Health daily series (Tech For Palestine), 1 December 2023 to 31 July 2024.</dd>
+        <dt>Test</dt><dd>Segmented negative binomial regression (trend, and a level and slope change at each order), Newey-West errors; joint Wald test of level and slope</dd>
+        <dt>Effect</dt><dd>Rate ratio, level change at the order: <b>0.819</b> (95% CI 0.645 to 1.04)</dd>
+        <dt>p</dt><dd>0.157 · adjusted for false discovery 0.181</dd>
+        
+        
+        <dt>Report</dt><dd>§13</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H3c">
+      <div class="test-head">
+        <span class="test-id">H3c</span>
+        <h3>The ICJ order of 24 May 2024 and the daily killing rate</h3>
+        <span class="test-result muted">null not rejected</span>
+      </div>
+      <p class="test-reading">No detectable change in the level or the trend of daily deaths at the order (level rate ratio 1.115, 95% CI 0.7 to 1.8; joint test p = 0.81). The order was not followed by a measurable fall in the rate of killing. This is the absence of a detectable change, not proof that the order had no effect on any conduct.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>No change in the level or the slope of daily deaths at the order of 24 May 2024.</dd>
+        <dt>Data</dt><dd>Ministry of Health daily series (Tech For Palestine), 1 December 2023 to 31 July 2024.</dd>
+        <dt>Test</dt><dd>Segmented negative binomial regression (trend, and a level and slope change at each order), Newey-West errors; joint Wald test of level and slope</dd>
+        <dt>Effect</dt><dd>Rate ratio, level change at the order: <b>1.11</b> (95% CI 0.703 to 1.77)</dd>
+        <dt>p</dt><dd>0.812 · adjusted for false discovery 0.870</dd>
+        
+        
+        <dt>Report</dt><dd>§13</dd>
+      </dl>
+    </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H4</div>
+      <h2>The West Bank before and after 7 October 2023</h2>
+      
+    </div>
+        <div class="test-list"><article class="card test-card" id="test-H4a">
+      <div class="test-head">
+        <span class="test-id">H4a</span>
+        <h3>West Bank killings before and after 7 October 2023</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Palestinians were killed in the West Bank at 3.48 a day after 7 October 2023 against 0.75 before it, 4.66 times the rate (95% CI 3.89 to 5.59), in a year that was already the deadliest on record before the war began.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>The daily rate of Palestinians killed in the West Bank was the same after 7 October 2023 as before it, within 2023.</dd>
+        <dt>Data</dt><dd>OCHA via the report: 208 killed in 279 days (1 January-6 October 2023); 299 in 86 days (7 October-31 December 2023).</dd>
+        <dt>Test</dt><dd>Exact conditional test of two Poisson rates</dd>
+        <dt>Effect</dt><dd>Rate ratio, after against before: <b>4.66</b> (95% CI 3.89 to 5.59)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        
+        <dt>Report</dt><dd>§11</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H4b">
+      <div class="test-head">
+        <span class="test-id">H4b</span>
+        <h3>Settler incidents against Palestinians, 2024 against 2022</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Settler incidents ran at 3.5 times the 2022 rate in 2024 (95% CI 3.22 to 3.81), and at 2.6 times even at the rounding bounds least favourable to the finding.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>The rate of settler incidents against Palestinians was the same in 2024 as in 2022.</dd>
+        <dt>Data</dt><dd>OCHA daily averages via the report: 2 a day in 2022, 7 a day in 2024.</dd>
+        <dt>Test</dt><dd>Exact conditional test of two Poisson rates on annual counts reconstructed from the daily averages</dd>
+        <dt>Effect</dt><dd>Rate ratio, 2024 against 2022: <b>3.50</b> (95% CI 3.22 to 3.81)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        <dt>Sensitivity</dt><dd><ul><li>At the rounding bounds least favourable to rejection (2.5 and 6.5 a day): 2.60 (95% CI 2.41 to 2.81), p &lt; 0.001</li></ul></dd>
+        
+        <dt>Report</dt><dd>§11</dd>
+      </dl>
+    </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H6</div>
+      <h2>Is the named list genuine?</h2>
+      
+    </div>
+        <div class="test-list"><article class="card test-card" id="test-H6a">
+      <div class="test-head">
+        <span class="test-id">H6a</span>
+        <h3>The identity numbers on the named list</h3>
+        <span class="test-result muted">validity not rejected; the 10% fabrication benchmark is rejected</span>
+      </div>
+      <p class="test-reading">All 72,835 of the 72,835 identity numbers pass the Population Registry check digit, where fabricated numbers would pass about one time in ten. There are 0 duplicate identity numbers and 0 duplicate name-and-birth-date pairs, and the stated age agrees with the date of birth in 72,835 of 72,835 records. The list as published is consistent with registry data. These tests cannot detect a real identity number attached to someone who did not die; that question needs matching against other records.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>The identity numbers are valid Population Registry numbers (pass the check digit).</dd>
+        <dt>Data</dt><dd>Ministry of Health named list, 72,835 records.</dd>
+        <dt>Test</dt><dd>Share passing the check digit, with its interval; exact binomial test against the 10% expected of fabricated numbers; decision rule: validity rejected if under 99% pass</dd>
+        <dt>Effect</dt><dd>Share of identity numbers with a valid check digit: <b>1.00</b> (95% CI 1.00 to 1.00)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        
+        <dt>Report</dt><dd>§6.1</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H6b">
+      <div class="test-head">
+        <span class="test-id">H6b</span>
+        <h3>Age heaping on the named list</h3>
+        <span class="test-result rejected">highly accurate</span>
+      </div>
+      <p class="test-reading">No age heaping: Whipple's index is 100.0 and Myers' index 0.85, against the 2017 census's 100 and 2.4. Ages on the list follow from registry dates of birth rather than estimates, which is what a list built from identity records, and not from guesses, should show.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>Age reporting shows no more heaping on ages ending in 0 and 5 than a registry-based list would.</dd>
+        <dt>Data</dt><dd>As H6a.</dd>
+        <dt>Test</dt><dd>Whipple's index (ages 23-62) on the UN scale, and Myers' blended index (ages 10-89), against the PCBS 2017 census</dd>
+        <dt>Effect</dt><dd>Whipple's index: <b>100</b></dd>
+        <dt>p</dt><dd>—</dd>
+        
+        
+        <dt>Report</dt><dd>§6.1</dd>
+      </dl>
+    </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H8</div>
+      <h2>What states have done</h2>
+      
+    </div>
+        <div class="test-list"><article class="card test-card" id="test-H8b">
+      <div class="test-head">
+        <span class="test-id">H8b</span>
+        <h3>Recognition of Palestine and calling it genocide</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">50 of 157 recognising states have a government that has called it genocide; none of the 36 non-recognising states has (odds ratio 34.29, with a correction for the empty cell).</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>Whether a UN member state government has called it genocide is independent of whether it recognises Palestine.</dd>
+        <dt>Data</dt><dd>World positions dataset, 193 UN member states.</dd>
+        <dt>Test</dt><dd>Fisher's exact test (interval with Haldane correction for a zero cell)</dd>
+        <dt>Effect</dt><dd>Odds ratio: <b>34.3</b> (95% CI 2.06 to 570)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        
+        <dt>Report</dt><dd>§15.4</dd>
+      </dl>
+    </article></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+      <div class="eyebrow">Notes</div>
+      <h2>Notes on the data</h2>
+      <p>Where a test needed data the daily series does not hold, what was used instead and why.</p>
+    </div>
+        <div class="card test-card"><div class="test-head"><span class="test-id">H2a</span></div><p>The Ministry of Health daily series cannot be used for the pause: the Ministry had stopped reporting on 11 November, the Government Media Office issued no total during the pause, and the series records zero for every day of it, which are missing reports and not days without deaths. As directed by the editor, the pause-period count was reconstructed from the killings reported incident by incident in OCHA's flash updates and by the Associated Press and Al Jazeera (five deaths in seven days, a lower bound, since OCHA also reports shootings with 'several casualties' it does not break down). The comparison window is the 14 days before the pause, from the daily series. Because the two windows are measured differently, the test is repeated against an upper bound of 40 deaths, the rise in the Government Media Office total during the pause less the 160 bodies recovered from the rubble.</p></div>
+        <p class="chart-note" style="margin-top:18px">Generated by analysis/run_tests.py on 2026-10-02. A change at a dated event is an association, not proof that the event caused it.</p>
+      </section>
+    </div><nav class="snapshot-links" aria-label="Other sections"><h2>Every other section, without JavaScript</h2><ul><li><a href="overview.html">The Documented Record — Israel and the Occupied Territories, 1917–2026</a></li><li><a href="tour.html">Start here — the case in eight steps</a></li><li><a href="data-gaza.html">Gaza — the toll since 7 October 2023</a></li><li><a href="data-asymmetry.html">The asymmetry — Palestinians and Israelis killed</a></li><li><a href="data-since-1948.html">Since 1948 — seventy-eight years of the toll</a></li><li><a href="data-complicity.html">Complicity — who supplies the war</a></li><li><a href="data-land.html">The land — six per cent to seventy-eight</a></li><li><a href="data-west-bank.html">The West Bank — before and after October 2023</a></li><li><a href="data-wars.html">Wars and 7 October — seventy-five years of operations</a></li><li><a href="data-world.html">The world — recognition, embargoes and vetoes</a></li><li><a href="data-tables.html">Source tables — every table in the report</a></li><li><a href="children.html">The children — every child the record can count</a></li><li><a href="day.html">Said and done — the war, one day at a time</a></li><li><a href="timeline.html">Timeline — a dated chronology, 1917–2026</a></li><li><a href="evidence.html">Evidence — the complete report</a></li><li><a href="rebuttals.html">Rebuttals — every defence, answered</a></li><li><a href="statements.html">Statements — the documented record</a></li><li><a href="legal.html">Legal — the findings and the instruments they rest on</a></li><li><a href="sources.html">Sources — what the record rests on</a></li><li><a href="provenance.html">Provenance — pull the thread</a></li><li><a href="answer.html">Answer a claim — paste it, and read what the record says</a></li><li><a href="ledger.html">Ledger — the persons and companies named in the record</a></li><li><a href="mp.html">The Documented Record — Israel and the Occupied Territories, 1917–2026</a></li><li><a href="method.html">Method — impartial, not neutral</a></li><li><a href="api.html">Open data — the record as files</a></li><li><a href="changelog.html">Changelog — every revision, dated</a></li></ul></nav></main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-flag">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=155" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <span class="flag-rule"></span>
+    </div>
+    <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
+            evidentiary standards to all actors. Every heading, paragraph, list and table it contains is
+            reproduced in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
+    <p class="muted" id="footer-stats">231,354 words · 36 parts · 205 sections · 15 tables · 469 chronology entries · 151 documented statements · 428 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-10.</p>
+    <!-- A record meant to be used in an argument has to be citable in one.
+         Filled in by app.js with the route on screen and the date of the data
+         it is showing, so a citation copied from here names the version the
+         reader actually read. -->
+    <details class="cite" id="cite">
+      <summary>Cite this record</summary>
+      <div class="cite-body">
+        <p class="small muted" id="cite-note">This is a living document. The figures below were compiled on 2 October 2026; the casualty series runs to 1 October 2026. Cite the date you read it, not only the year.</p>
+        <div class="cite-row" data-style="apa"><b>APA</b><code id="cite-apa">Kayani, U. (2026). The Documented Record — Israel and the Occupied Territories, 1917–2026 (Tests section) [Data set and report]. Retrieved 2 October 2026, from https://palestinerecord.github.io/#/tests</code></div>
+        <div class="cite-row" data-style="harvard"><b>Harvard</b><code id="cite-harvard">Kayani, U. (2026) The Documented Record — Israel and the Occupied Territories, 1917–2026 (Tests section). Available at: https://palestinerecord.github.io/#/tests (Accessed: 2 October 2026).</code></div>
+        <div class="cite-row" data-style="bibtex"><b>BibTeX</b><code id="cite-bibtex">@misc{palestinerecord2026,
+  author       = {Kayani, Usman},
+  title        = {{The Documented Record: Israel and the Occupied Territories, 1917--2026}, Tests section},
+  year         = {2026},
+  howpublished = {\url{https://palestinerecord.github.io/#/tests}},
+  note         = {Data compiled 2 October 2026; accessed 2 October 2026}
+}</code></div>
+      </div>
+    </details>
+    <p class="footer-links">
+      <a href="../index.html#/method">Method</a> · <a href="../index.html#/tests">Tests</a> · <a href="../index.html#/api">Open data</a> · <a href="../index.html#/changelog">Changelog</a> ·
+      <a href="snapshot/">Text-only versions</a> ·
+      <a href="../data/index.json">data/index.json</a> · <a href="sitemap.xml">Sitemap</a> ·
+      <a href="feed.xml">Feed</a> ·
+      <a href="licence.html">Terms of re-use</a>
+    </p>
+    <!-- Every route on this site also exists as a static page under snapshot/.
+         These are the crawlable links to them. The navigation everywhere else
+         is hash-routed, and a search engine follows none of it: a fragment is
+         not a URL, so without this list the whole record hangs off the single
+         "Text-only versions" link above, with the sitemap as its only backup.
+         Regenerated from the route list by prerender.py, between the markers,
+         so it cannot fall out of step with the pages that actually exist. -->
+    <!-- crawl-sections:start -->
+    <nav class="footer-sections" aria-label="Every section, text-only">
+      <b>Text-only:</b>
+      <a href="snapshot/index.html">All sections</a>
+      · <a href="snapshot/overview.html">The Documented Record</a>
+      · <a href="snapshot/tour.html">Start here</a>
+      · <a href="snapshot/data-gaza.html">Gaza</a>
+      · <a href="snapshot/data-asymmetry.html">The asymmetry</a>
+      · <a href="snapshot/data-since-1948.html">Since 1948</a>
+      · <a href="snapshot/data-complicity.html">Complicity</a>
+      · <a href="snapshot/data-land.html">The land</a>
+      · <a href="snapshot/data-west-bank.html">The West Bank</a>
+      · <a href="snapshot/data-wars.html">Wars and 7 October</a>
+      · <a href="snapshot/data-world.html">The world</a>
+      · <a href="snapshot/data-tables.html">Source tables</a>
+      · <a href="snapshot/children.html">The children</a>
+      · <a href="snapshot/day.html">Said and done</a>
+      · <a href="snapshot/timeline.html">Timeline</a>
+      · <a href="snapshot/evidence.html">Evidence</a>
+      · <a href="snapshot/rebuttals.html">Rebuttals</a>
+      · <a href="snapshot/statements.html">Statements</a>
+      · <a href="snapshot/legal.html">Legal</a>
+      · <a href="snapshot/sources.html">Sources</a>
+      · <a href="snapshot/provenance.html">Provenance</a>
+      · <a href="snapshot/answer.html">Answer a claim</a>
+      · <a href="snapshot/ledger.html">Ledger</a>
+      · <a href="snapshot/mp.html">The Documented Record</a>
+      · <a href="snapshot/tests.html">Tests</a>
+      · <a href="snapshot/method.html">Method</a>
+      · <a href="snapshot/api.html">Open data</a>
+      · <a href="snapshot/changelog.html">Changelog</a>
+      · <a href="nazi-comparison.html">The Nazi comparison, examined</a>
+    </nav>
+    <!-- crawl-sections:end -->
+  </div>
+</footer>
+
+
+
+
+
+
+
+<!-- Loaded dynamically so ?prerender=1 never builds the 24,000-point WebGL field:
+     prerender.py dumps the text of a route, and software WebGL would spend the
+     whole budget on a scene no snapshot can contain. -->
+
+<!-- The offline worker. Registered after load so it never competes with the
+     record for the network, and never during a prerender pass. ?nosw=1 is the
+     way out: it unregisters the worker and empties its caches, so a bad
+     deployment of sw.js can be undone from the address bar. -->
+
+
+
+</body></html>

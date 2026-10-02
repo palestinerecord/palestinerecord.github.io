@@ -3027,6 +3027,51 @@ const Charts = (function () {
     });
   };
 
+  /* Tests — every rate ratio, with its interval, on one log axis
+
+     Read out of data/tests.json as analysis/run_tests.py wrote it. A ratio of 1
+     is no change; the interval is the 95% one the test reported. */
+  const testById = (id) => data.tests.tests.find((t) => t.id === id);
+
+  R['tests-rates'] = () => {
+    const rows = ['H2a', 'H2b', 'H2c', 'H3a', 'H3b', 'H3c', 'H4a', 'H4b'].map(testById).filter((t) => t && t.effect).reverse();
+    const tone = (t) => (t.result === 'null rejected' ? (t.effect.value < 1 ? C.green : C.red) : C.muted);
+    return Object.assign({}, base, {
+      grid: { left: 250, right: 40, top: 10, bottom: 50 },
+      tooltip: Object.assign({}, base.tooltip, {
+        formatter: (p) => {
+          const t = rows[p.dataIndex];
+          return `<b>${t.id}. ${t.title}</b><br>${t.effect.name}: ${t.effect.value} `
+            + `(95% CI ${t.effect.ci[0].toPrecision(3)} to ${t.effect.ci[1].toPrecision(3)})<br>`
+            + `<span style="color:${C.muted}">adjusted p ${t.p_adjusted < 0.001 ? '< 0.001' : t.p_adjusted.toFixed(3)} · ${t.result}</span>`;
+        },
+      }),
+      xAxis: { type: 'log', min: 0.001, max: 10, name: 'rate ratio (log scale; 1 = no change)', nameLocation: 'middle', nameGap: 30,
+        nameTextStyle: { color: C.muted, fontSize: 11 }, axisLabel: { color: C.muted, fontSize: 11 },
+        splitLine: { lineStyle: { color: C.line } } },
+      yAxis: axisX({ data: rows.map((t) => t.id + '. ' + t.title), axisLabel: { color: C.text2, fontSize: 11, width: 240, overflow: 'truncate' } }),
+      series: [
+        {
+          type: 'custom',
+          renderItem: (params, api) => {
+            const lo = api.coord([api.value(0), api.value(2)]);
+            const hi = api.coord([api.value(1), api.value(2)]);
+            return { type: 'line', shape: { x1: lo[0], y1: lo[1], x2: hi[0], y2: hi[1] }, style: { stroke: api.visual('color'), lineWidth: 2 } };
+          },
+          encode: { x: [0, 1], y: 2 },
+          data: rows.map((t, i) => ({ value: [t.effect.ci[0], t.effect.ci[1], i], itemStyle: { color: tone(t) } })),
+          z: 1,
+        },
+        {
+          type: 'scatter', symbolSize: 10, z: 2,
+          data: rows.map((t, i) => ({ value: [t.effect.value, i], itemStyle: { color: tone(t) } })),
+          markLine: { silent: true, symbol: 'none', data: [{ xAxis: 1 }], lineStyle: { color: C.ink(0.4), type: 'dashed' }, label: { show: false } },
+        },
+      ],
+    });
+  };
+
+
   /* Sources — the evidentiary base by class */
   R['sources-groups'] = () => {
     const g = data.sources.groups.map((x) => ({ label: x.label, n: x.items.length, blurb: x.blurb }))

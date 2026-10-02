@@ -172,6 +172,15 @@ DESCRIPTIONS = {
         'Derived by provenance.py from the source field of every curated record; each claim '
         'keeps the source text it was written with.',
     ),
+    'tests.json': (
+        'Statistical tests on the record',
+        'Hypothesis tests on the published data: whether the identified dead are confined to men of '
+        'fighting age, the ceasefires and the ICJ orders against the daily death rate, the West Bank '
+        'before and after 7 October 2023, the integrity of the Ministry of Health named list, and '
+        'recognition of Palestine against governments calling it genocide. Each with its null, test, '
+        'effect size, interval, raw and adjusted p-value and sensitivity analyses.',
+        'Written by analysis/run_tests.py in the source repository from the files in data/ and data/raw/.',
+    ),
     'children.json': (
         'The children\u2019s record, 1948 to the present',
         'Every child this record can count, on both sides, period by period and year by year: '

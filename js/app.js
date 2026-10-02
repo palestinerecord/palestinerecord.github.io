@@ -35,7 +35,7 @@ const App = (function () {
   if (window.gsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
   const VIEWS = ['overview', 'tour', 'data', 'children', 'day', 'timeline', 'evidence', 'rebuttals', 'statements',
-    'legal', 'sources', 'provenance', 'answer', 'ledger', 'mp', 'method', 'api', 'changelog', 'embed'];
+    'legal', 'sources', 'provenance', 'answer', 'ledger', 'mp', 'tests', 'method', 'api', 'changelog', 'embed'];
 
   /* index.html?prerender=1 renders the text and nothing else: no charts, no
      scroll reveals, no counting numbers, no WebGL scene. prerender.py uses it
@@ -75,6 +75,7 @@ const App = (function () {
       ['patterns', 'data/claim-patterns.json'],
       ['entities', 'data/entities.json'],
       ['falsify', 'data/falsification.json'],
+      ['tests', 'data/tests.json'],
     ];
     // The open-data manifest is written by manifest.py and describes the files
     // above. It is fetched separately and never fatally: a dashboard that will
