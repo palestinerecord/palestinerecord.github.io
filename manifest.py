@@ -174,12 +174,13 @@ DESCRIPTIONS = {
     ),
     'tests.json': (
         'Statistical tests on the record',
-        'Hypothesis tests on the published data: whether the identified dead are confined to men of '
-        'fighting age, the ceasefires and the ICJ orders against the daily death rate, the West Bank '
-        'before and after 7 October 2023, the integrity of the Ministry of Health named list, and '
-        'recognition of Palestine against governments calling it genocide. Each with its null, test, '
-        'effect size, interval, raw and adjusted p-value and sensitivity analyses.',
-        'Written by analysis/run_tests.py in the source repository from the files in data/ and data/raw/.',
+        'Hypothesis tests on the published data and on public datasets: who is killed, the ceasefires and '
+        'the ICJ orders against the daily death rate, the West Bank, the integrity of the named list, '
+        'settler prosecutions, Area C permits and demolitions, food prices under blockade, administrative '
+        'detention, journalists killed, the destruction of buildings and earlier Gaza wars. Each with its '
+        'null, test, effect size, interval, raw and adjusted p-value, sources and the plotted series.',
+        'Written by analysis/run_tests.py in the source repository from data/, data/raw/ and the external '
+        'datasets it names (PCBS, UNOSAT, B\u2019Tselem, Yesh Din, CPJ, Peace Now).',
     ),
     'children.json': (
         'The children\u2019s record, 1948 to the present',

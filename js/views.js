@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=157" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=158" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=157" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=158" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2962,6 +2962,14 @@ const Views = (function () {
         'Grey is the daily increase in the reported total. Inside each shaded ceasefire, green is new killings alone, with bodies recovered from the rubble taken out. Log scale; drag the slider to zoom.', 'data/tests.json · H2', 'tall'),
       H3: chartCard('tests-h3', 'Daily deaths and the three ICJ provisional measures orders',
         'Grey is daily deaths, December 2023 to July 2024. Blue is the segmented model fitted to them, which allows a change in level and in trend at each order. No step down follows any of the three.', 'data/tests.json · H3'),
+      H11: chartCard('tests-h11', 'Food prices in Gaza against their pre-war level',
+        'The geometric mean of each food item\u2019s monthly price divided by its price before 7 October 2023. PCBS, November 2023 to August 2026.', 'data/tests.json · H11'),
+      H13: chartCard('tests-h13', 'Palestinians held without charge or trial, at each year end',
+        'Administrative detainees and those held under the Unlawful Combatants Law, Israel Prison Service figures compiled by B\u2019Tselem. 2026 is 30 June.', 'data/tests.json · H13'),
+      H14: chartCard('tests-h14', 'Journalists killed a year, by war',
+        'Committee to Protect Journalists. The Gaza figure is CPJ\u2019s count after its June 2026 review, the lowest it has published.', 'data/tests.json · H14'),
+      H15: chartCard('tests-h15', 'Structures destroyed in Gaza at each satellite assessment',
+        'UNOSAT comprehensive damage assessments, by imagery date. \u201cDamaged or destroyed\u201d includes the \u201cpossibly damaged\u201d category UNOSAT added in May 2024.', 'data/tests.json · H15'),
       H6: chartCard('tests-h6', 'Single-year ages on the named list of the dead',
         'Ages ending in 0 or 5 in red. A list built from guesses piles up on those ages; this one shows no heaping, because the ages follow from registry dates of birth.', 'data/tests.json · H6'),
     };
@@ -2974,14 +2982,14 @@ const Views = (function () {
     return `<div class="view wrap">
       <section class="section">
         ${head('Tests', 'The record, put to statistical test',
-          'Hypothesis tests on the data this site publishes: whether the dead are confined to men of fighting age, whether killing continued through the ceasefires, '
-          + 'whether the ICJ orders changed the daily death rate, what happened in the West Bank after 7 October 2023, and whether the Ministry of Health\u2019s named list of the dead is genuine. '
+          'Hypothesis tests on the data this site publishes and on public datasets from the UN, the Palestinian Central Bureau of Statistics, the Israel Prison Service, B\u2019Tselem, Yesh Din and the Committee to Protect Journalists: '
+          + 'who is killed, the ceasefires, the ICJ orders, the West Bank, the named list of the dead, settler impunity, Area C, food prices, detention without charge, journalists and the destruction of buildings. '
           + 'Each test is stated with its null hypothesis, its data, its effect size and its confidence interval, and every figure on this page is read out of the published data file.')}
         <div class="grid c4">
           ${statCard({ value: T.tests.length, label: 'Tests', note: 'each with its null hypothesis, data, effect size and interval' }, 'blue')}
           ${statCard({ value: 72835, label: 'Identity numbers checked', note: 'every one passes the Population Registry check digit' }, 'green')}
           ${statCard({ value: rejected.length, label: 'Nulls rejected', note: 'after correction for multiple testing' }, 'red')}
-          ${statCard({ value: run.length - rejected.length, label: 'ICJ orders with no detectable fall', note: 'in the daily death rate after the order' }, 'amber')}
+          ${statCard({ value: 3, label: 'ICJ orders with no detectable fall', note: 'in the daily death rate after the order' }, 'amber')}
         </div>
       </section>
 
@@ -2995,8 +3003,8 @@ const Views = (function () {
 
       <section class="section">
         ${head('The rates', 'Every rate ratio on one axis',
-          'The ceasefires, the ICJ orders and the West Bank, each as a ratio of the rate after to the rate before, with its 95% interval. A ratio of 1 is no change. Green is a fall that survives the correction, red a rise, grey no detectable change.')}
-        ${chartCard('tests-rates', 'Rate ratios with 95% intervals', 'Log scale. Each line is the interval; the dot is the estimate.', 'data/tests.json · H2–H4', 'tall')}
+          'The ceasefires, the ICJ orders, the West Bank, food prices under blockade, detention without charge and journalists killed, each as a ratio with its 95% interval. A ratio of 1 is no change. Green is a fall that survives the correction, red a rise, grey no detectable change.')}
+        ${chartCard('tests-rates', 'Ratios with 95% intervals', 'Log scale. Each line is the interval; the dot is the estimate.', 'data/tests.json', 'tall')}
       </section>
 
       ${groups}

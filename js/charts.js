@@ -3034,7 +3034,7 @@ const Charts = (function () {
   const testById = (id) => data.tests.tests.find((t) => t.id === id);
 
   R['tests-rates'] = () => {
-    const rows = ['H2a', 'H2b', 'H2c', 'H3a', 'H3b', 'H3c', 'H4a', 'H4b'].map(testById).filter((t) => t && t.effect).reverse();
+    const rows = ['H2a', 'H2b', 'H2c', 'H3a', 'H3b', 'H3c', 'H4a', 'H4b', 'H11a', 'H13', 'H14a', 'H14b'].map(testById).filter((t) => t && t.effect).reverse();
     const tone = (t) => (t.result === 'null rejected' ? (t.effect.value < 1 ? C.green : C.red) : C.muted);
     return Object.assign({}, base, {
       grid: { left: 250, right: 40, top: 10, bottom: 50 },
@@ -3046,7 +3046,7 @@ const Charts = (function () {
             + `<span style="color:${C.muted}">adjusted p ${t.p_adjusted < 0.001 ? '< 0.001' : t.p_adjusted.toFixed(3)} · ${t.result}</span>`;
         },
       }),
-      xAxis: { type: 'log', min: 0.001, max: 10, name: 'rate ratio (log scale; 1 = no change)', nameLocation: 'middle', nameGap: 30,
+      xAxis: { type: 'log', min: 0.001, max: 100, name: 'ratio (log scale; 1 = no change)', nameLocation: 'middle', nameGap: 30,
         nameTextStyle: { color: C.muted, fontSize: 11 }, axisLabel: { color: C.muted, fontSize: 11 },
         splitLine: { lineStyle: { color: C.line } } },
       yAxis: axisX({ data: rows.map((t) => t.id + '. ' + t.title), axisLabel: { color: C.text2, fontSize: 11, width: 240, overflow: 'truncate' } }),
@@ -3218,6 +3218,82 @@ const Charts = (function () {
         type: 'bar', barCategoryGap: '12%',
         data: ages.map((v, i) => ({ value: v, itemStyle: { color: hexToRgba(i % 5 === 0 ? C.red : C.muted, i % 5 === 0 ? 0.9 : 0.55) } })),
       }],
+    });
+  };
+
+  /* Tests — H11, the food price index in Gaza against its pre-war level */
+  R['tests-h11'] = () => {
+    const s = data.tests.series.h11;
+    const band = (from, to, name) => [{ name, xAxis: from }, { xAxis: to }];
+    return Object.assign({}, base, {
+      grid: { left: 56, right: 20, top: 34, bottom: 46 },
+      tooltip: Object.assign({}, base.tooltip, { trigger: 'axis',
+        formatter: (ps) => `<b>${ps[0].axisValue}</b><br>Food costs ${ps[0].value[1].toFixed(2)}× its pre-war price` }),
+      xAxis: axisX({ data: s.months, axisLabel: { color: C.muted, fontSize: 11, interval: 5 } }),
+      yAxis: axisY({ name: '× pre-war price', nameTextStyle: { color: C.muted, fontSize: 11 } }),
+      series: [{
+        type: 'line', smooth: false, showSymbol: false, data: s.months.map((m, i) => [m, s.index[i]]),
+        lineStyle: { color: C.amber, width: 2 }, areaStyle: { color: areaFill(C.amber) },
+        markLine: { silent: true, symbol: 'none', data: [{ yAxis: 1 }], lineStyle: { color: C.ink(0.4), type: 'dashed' },
+          label: { color: C.muted, formatter: 'pre-war price', position: 'insideEndTop' } },
+        markArea: { silent: true, itemStyle: { color: hexToRgba(C.red, 0.12) }, label: { color: C.red, fontSize: 10.5 },
+          data: [band('2025-03', '2025-05', 'Total blockade')] },
+      }],
+    });
+  };
+
+  /* Tests — H13, administrative detainees at each year end */
+  R['tests-h13'] = () => {
+    const s = data.tests.series.h13;
+    return Object.assign({}, base, {
+      grid: { left: 56, right: 20, top: 34, bottom: 46 },
+      legend: Object.assign({}, base.legend, { top: 0 }),
+      tooltip: Object.assign({}, base.tooltip, { trigger: 'axis' }),
+      xAxis: axisX({ data: s.years.map((y) => (y === '2026' ? 'Jun 2026' : y)) }),
+      yAxis: axisY(),
+      series: [
+        { name: 'Administrative detainees', type: 'bar', stack: 'held', data: s.admin,
+          itemStyle: { color: hexToRgba(C.red, 0.85) } },
+        { name: 'Held as “unlawful combatants”', type: 'bar', stack: 'held', data: s.combatants,
+          itemStyle: { color: hexToRgba(C.violet, 0.75), borderRadius: [3, 3, 0, 0] } },
+      ],
+    });
+  };
+
+  /* Tests — H14, journalists killed a year, by war */
+  R['tests-h14'] = () => {
+    const rows = data.tests.series.h14.slice().reverse();
+    return Object.assign({}, base, {
+      grid: { left: 250, right: 70, top: 10, bottom: 46 },
+      tooltip: Object.assign({}, base.tooltip, {
+        formatter: (p) => `<b>${rows[p.dataIndex].name}</b><br>${rows[p.dataIndex].killed} killed in ${rows[p.dataIndex].years} years` }),
+      xAxis: axisY({ name: 'journalists killed a year', nameLocation: 'middle', nameGap: 30, nameTextStyle: { color: C.muted, fontSize: 11 } }),
+      yAxis: axisX({ data: rows.map((r) => r.name), axisLabel: { color: C.text2, fontSize: 11.5, width: 240, overflow: 'break' } }),
+      series: [{
+        type: 'bar', barMaxWidth: 22,
+        data: rows.map((r, i) => ({ value: r.per_year, itemStyle: { color: hexToRgba(i === rows.length - 1 ? C.red : C.muted, 0.85), borderRadius: [0, 4, 4, 0] } })),
+        label: { show: true, position: 'right', color: C.text, fontSize: 11.5 },
+      }],
+    });
+  };
+
+  /* Tests — H15, structures destroyed at each UNOSAT assessment */
+  R['tests-h15'] = () => {
+    const s = data.tests.series.h15;
+    return Object.assign({}, base, {
+      grid: { left: 64, right: 20, top: 34, bottom: 46 },
+      legend: Object.assign({}, base.legend, { top: 0 }),
+      tooltip: Object.assign({}, base.tooltip, { trigger: 'axis' }),
+      xAxis: { type: 'time', axisLine: { lineStyle: { color: C.ink(.16) } }, axisLabel: { color: C.muted, fontSize: 11 }, splitLine: { show: false } },
+      yAxis: axisY(),
+      series: [
+        { name: 'Destroyed', type: 'line', data: s.dates.map((d, i) => [d, s.destroyed[i]]), symbolSize: 7,
+          lineStyle: { color: C.red, width: 2 }, itemStyle: { color: C.red },
+          markLine: { silent: true, symbol: 'none', lineStyle: { color: C.green, type: 'dashed' },
+            label: { color: C.green, fontSize: 10.5, formatter: 'ceasefire' }, data: [{ xAxis: '2025-10-10' }] } },
+        { name: 'Damaged or destroyed', type: 'line', data: s.dates.map((d, i) => [d, s.affected[i]]), symbolSize: 5,
+          lineStyle: { color: C.amber, width: 1.5, type: 'dashed' }, itemStyle: { color: C.amber } },
+      ],
     });
   };
 

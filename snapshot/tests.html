@@ -32,8 +32,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="../assets/favicon.svg?v=157" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=157">
+<link rel="icon" href="../assets/favicon.svg?v=158" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=158">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -66,8 +66,8 @@
 <meta name="twitter:title" content="Tests — the record, put to statistical test · The Documented Record">
 <meta name="twitter:description" content="Hypothesis tests on the data this site publishes: the named list of the dead, who is killed, the ceasefires, the ICJ orders and the West Bank, each with its effect size and confidence interval.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/tests.png">
-<link rel="preload" href="../css/style.css?v=157" as="style">
-<link rel="stylesheet" href="../css/style.css?v=157">
+<link rel="preload" href="../css/style.css?v=158" as="style">
+<link rel="stylesheet" href="../css/style.css?v=158">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -82,7 +82,7 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <!-- The first screen is painted from this one file; the request should be in
      flight while the parser is still in the head. -->
-<link rel="preload" href="../data/headline.json?v=157" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
+<link rel="preload" href="../data/headline.json?v=158" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
 
 
 
@@ -261,7 +261,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=157" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=158" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -320,11 +320,11 @@
         <div class="section-head">
       <div class="eyebrow">Tests</div>
       <h2>The record, put to statistical test</h2>
-      <p>Hypothesis tests on the data this site publishes: whether the dead are confined to men of fighting age, whether killing continued through the ceasefires, whether the ICJ orders changed the daily death rate, what happened in the West Bank after 7 October 2023, and whether the Ministry of Health’s named list of the dead is genuine. Each test is stated with its null hypothesis, its data, its effect size and its confidence interval, and every figure on this page is read out of the published data file.</p>
+      <p>Hypothesis tests on the data this site publishes and on public datasets from the UN, the Palestinian Central Bureau of Statistics, the Israel Prison Service, B’Tselem, Yesh Din and the Committee to Protect Journalists: who is killed, the ceasefires, the ICJ orders, the West Bank, the named list of the dead, settler impunity, Area C, food prices, detention without charge, journalists and the destruction of buildings. Each test is stated with its null hypothesis, its data, its effect size and its confidence interval, and every figure on this page is read out of the published data file.</p>
     </div>
         <div class="grid c4">
           <div class="stat blue" data-tone="blue">
-      <div class="val" data-count="12">12</div>
+      <div class="val" data-count="25">25</div>
       <div class="lbl">Tests</div>
       <div class="note">each with its null hypothesis, data, effect size and interval</div>
       
@@ -338,7 +338,7 @@
       
     </div>
           <div class="stat red" data-tone="red">
-      <div class="val" data-count="8">8</div>
+      <div class="val" data-count="20">20</div>
       <div class="lbl">Nulls rejected</div>
       <div class="note">after correction for multiple testing</div>
       
@@ -367,7 +367,14 @@
             <p class="test-reading"><b>Every ceasefire cut the rate of killing, and none stopped it.</b> Killings continued through the November 2023 pause, the January to March 2025 ceasefire and the ceasefire in force since October 2025. <span class="test-id">H2c</span></p></div><div class="card test-card test-finding">
             <p class="test-reading"><b>The three ICJ provisional measures orders of 2024 were not followed by any detectable fall in the daily death rate.</b>  <span class="test-id">H3a</span></p></div><div class="card test-card test-finding">
             <p class="test-reading"><b>In the West Bank, Palestinians were killed at more than four times the earlier rate after 7 October 2023,</b> and settler incidents in 2024 ran at about three and a half times the 2022 rate. <span class="test-id">H4a</span></p></div><div class="card test-card test-finding">
-            <p class="test-reading"><b>No state that withholds recognition of Palestine has a government that has called the conduct in Gaza genocide;</b> 50 recognising states do. <span class="test-id">H8b</span></p></div>
+            <p class="test-reading"><b>No state that withholds recognition of Palestine has a government that has called the conduct in Gaza genocide;</b> 50 recognising states do. <span class="test-id">H8b</span></p></div><div class="card test-card test-finding">
+            <p class="test-reading"><b>Settlers who attack Palestinians are rarely convicted.</b> Only 3% of the police files Yesh Din followed ended in a conviction, and an indicted settler is convicted about half the time, against 99.7% for Palestinians in the military courts. <span class="test-id">H9a</span></p></div><div class="card test-card test-finding">
+            <p class="test-reading"><b>In Area C, under 1% of Palestinian building applications are approved,</b> and an unpermitted Palestinian structure is about two and a half times as likely to be demolished as a settler's. <span class="test-id">H10b</span></p></div><div class="card test-card test-finding">
+            <p class="test-reading"><b>Food prices rose by about 30% during the total blockade of 2025,</b> and across the war food has cost about three times its pre-war price. <span class="test-id">H11a</span></p></div><div class="card test-card test-finding">
+            <p class="test-reading"><b>Administrative detention without charge is nearly eight times its 2008-2022 level.</b>  <span class="test-id">H13</span></p></div><div class="card test-card test-finding">
+            <p class="test-reading"><b>Journalists have been killed at more than four times the rate of the Iraq war and seven times that of Syria's,</b> on CPJ's lowest count. <span class="test-id">H14a</span></p></div><div class="card test-card test-finding">
+            <p class="test-reading"><b>Destroyed buildings rose at every satellite assessment, and about 11,000 more were recorded destroyed after the October 2025 ceasefire.</b>  <span class="test-id">H15b</span></p></div><div class="card test-card test-finding">
+            <p class="test-reading"><b>In the 2008-09 and 2014 Gaza wars, most of those killed took no part in the hostilities, on B'Tselem's case-by-case count.</b>  <span class="test-id">H16c</span></p></div>
         </div>
       </section>
 
@@ -375,13 +382,13 @@
         <div class="section-head">
       <div class="eyebrow">The rates</div>
       <h2>Every rate ratio on one axis</h2>
-      <p>The ceasefires, the ICJ orders and the West Bank, each as a ratio of the rate after to the rate before, with its 95% interval. A ratio of 1 is no change. Green is a fall that survives the correction, red a rise, grey no detectable change.</p>
+      <p>The ceasefires, the ICJ orders, the West Bank, food prices under blockade, detention without charge and journalists killed, each as a ratio with its 95% interval. A ratio of 1 is no change. Green is a fall that survives the correction, red a rise, grey no detectable change.</p>
     </div>
-        <div class="card chart-card" id="chart-tests-rates" data-chart-card="tests-rates" data-title="Rate ratios with 95% intervals" data-source="data/tests.json · H2–H4" data-note="Log scale. Each line is the interval; the dot is the estimate.">
+        <div class="card chart-card" id="chart-tests-rates" data-chart-card="tests-rates" data-title="Ratios with 95% intervals" data-source="data/tests.json" data-note="Log scale. Each line is the interval; the dot is the estimate.">
       <div class="chart-head">
-        <div><h3>Rate ratios with 95% intervals</h3><p>Log scale. Each line is the interval; the dot is the estimate.</p></div>
+        <div><h3>Ratios with 95% intervals</h3><p>Log scale. Each line is the interval; the dot is the estimate.</p></div>
         <div class="chart-tools">
-          <span class="chart-ref">data/tests.json · H2–H4</span>
+          <span class="chart-ref">data/tests.json</span>
           
           
           
@@ -545,7 +552,7 @@
         <dt>Data</dt><dd>Ministry of Health daily series (Tech For Palestine), 1 December 2023 to 31 July 2024.</dd>
         <dt>Test</dt><dd>Segmented negative binomial regression (trend, and a level and slope change at each order), Newey-West errors; joint Wald test of level and slope</dd>
         <dt>Effect</dt><dd>Rate ratio, level change at the order: <b>0.819</b> (95% CI 0.645 to 1.04)</dd>
-        <dt>p</dt><dd>0.157 · adjusted for false discovery 0.181</dd>
+        <dt>p</dt><dd>0.157 · adjusted for false discovery 0.175</dd>
         
         
         <dt>Report</dt><dd>§13</dd>
@@ -562,7 +569,7 @@
         <dt>Data</dt><dd>Ministry of Health daily series (Tech For Palestine), 1 December 2023 to 31 July 2024.</dd>
         <dt>Test</dt><dd>Segmented negative binomial regression (trend, and a level and slope change at each order), Newey-West errors; joint Wald test of level and slope</dd>
         <dt>Effect</dt><dd>Rate ratio, level change at the order: <b>1.11</b> (95% CI 0.703 to 1.77)</dd>
-        <dt>p</dt><dd>0.812 · adjusted for false discovery 0.870</dd>
+        <dt>p</dt><dd>0.812 · adjusted for false discovery 0.840</dd>
         
         
         <dt>Report</dt><dd>§13</dd>
@@ -692,6 +699,343 @@
         <dt>Report</dt><dd>§15.4</dd>
       </dl>
     </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H9</div>
+      <h2>Settler violence and the courts</h2>
+      
+    </div>
+        
+        <div class="test-list"><article class="card test-card" id="test-H9a">
+      <div class="test-head">
+        <span class="test-id">H9a</span>
+        <h3>Settlers and Palestinians before Israeli courts in the West Bank</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Of Israelis indicted for offences against Palestinians in the West Bank, 49% were convicted in full or in part (95% CI 39% to 58%); of Palestinians tried in the military courts, 99.74% were. Only 3% of the police files Yesh Din followed ended in any conviction. The two figures come from different years and different courts, and a partial conviction is counted as a conviction on both sides.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>An Israeli indicted for an offence against Palestinians in the West Bank is as likely to be convicted as a Palestinian tried in the military courts.</dd>
+        <dt>Data</dt><dd>Yesh Din, 1,701 police files on offences by Israelis against Palestinians, 2005-2024 (109 indictments, 53 full or partial convictions); Israeli military courts' 2010 annual report as reported by Haaretz (9,542 cases, 25 full acquittals).</dd>
+        <dt>Test</dt><dd>Fisher's exact test of two proportions</dd>
+        <dt>Effect</dt><dd>Odds ratio, settler conviction against Palestinian conviction: <b>0.00250</b> (95% CI 0.00144 to 0.00428)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        <dt>Sources</dt><dd><ul><li><a href="https://www.yesh-din.org/en/data-sheet-law-enforcement-on-israeli-civilians-in-the-west-bank-settler-violence-2005-2024/" rel="noopener">Data Sheet: Law Enforcement on Israeli Civilians in the West Bank, 2005-2024</a> — Yesh Din, 16 January 2025</li><li><a href="https://www.haaretz.com/2011-11-29/ty-article/nearly-100-of-all-military-court-cases-in-west-bank-end-in-conviction-haaretz-learns/0000017f-e7c4-da9b-a1ff-efef7ad70000" rel="noopener">Nearly 100% of all military court cases in West Bank end in conviction</a> — Haaretz, 29 November 2011</li></ul></dd>
+        <dt>Report</dt><dd>§11</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H9b">
+      <div class="test-head">
+        <span class="test-id">H9b</span>
+        <h3>Palestinian victims of settler violence who do not complain to the police</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">In 66% of the attacks Yesh Din documented in 2024, the Palestinian victims chose not to complain to the Israeli police, most citing distrust of the investigation or fear of reprisal. The prosecution figures in H9a therefore start from a minority of the attacks.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>No more than half of Palestinian victims of settler violence decline to file a police complaint.</dd>
+        <dt>Data</dt><dd>Yesh Din, incidents it documented in 2024: in 101 of 153 the victims chose not to complain.</dd>
+        <dt>Test</dt><dd>Exact binomial test against one half (one-sided)</dd>
+        <dt>Effect</dt><dd>Share of victims not filing a complaint: <b>0.660</b> (95% CI 0.592 to 1.00)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        
+        <dt>Report</dt><dd>§11</dd>
+      </dl>
+    </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H10</div>
+      <h2>Building and demolition in Area C</h2>
+      
+    </div>
+        
+        <div class="test-list"><article class="card test-card" id="test-H10a">
+      <div class="test-head">
+        <span class="test-id">H10a</span>
+        <h3>Building permits for Palestinians in Area C</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Between 2016 and 2020, 24 of 2,550 Palestinian applications for building permits in Area C were approved: 0.9% (95% CI up to 1.3%). The Civil Administration told the Knesset that 60-70% of settlement plans are approved. The units differ (permits against plans), but the gap is more than sixty-fold.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>Palestinian applications for building permits in Area C are approved at the rate settlers' plans are approved (at least 60%).</dd>
+        <dt>Data</dt><dd>Civil Administration and Bimkom figures, 2016-2020: 24 of 2,550 Palestinian applications approved; the Civil Administration's own statement that 60-70% of settlement plans submitted are approved (Knesset, 19 July 2023).</dd>
+        <dt>Test</dt><dd>Exact binomial test against the lower bound of the settler approval rate (one-sided)</dd>
+        <dt>Effect</dt><dd>Share of Palestinian applications approved: <b>0.00940</b> (95% CI 0.00 to 0.0132)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        <dt>Sources</dt><dd><ul><li><a href="https://peacenow.org.il/en/the-civil-administration-acknowledges-extreme-discrimination-in-building-permits-and-law-enforcement-between-palestinians-and-settlers" rel="noopener">The Civil Administration acknowledges extreme discrimination in building permits and law enforcement between Palestinians and settlers</a> — Peace Now, 10 August 2023</li></ul></dd>
+        <dt>Report</dt><dd>§12</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H10b">
+      <div class="test-head">
+        <span class="test-id">H10b</span>
+        <h3>Demolition of unpermitted structures: Palestinian and settler</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Of structures the Civil Administration identified as built without a permit in 2022 and the first half of 2023, 30% of Palestinian structures were demolished against 14% of settler structures: the odds of demolition were 2.48 times higher for a Palestinian structure (95% CI 1.9 to 3.2).</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>An unpermitted Palestinian structure in Area C is as likely to be demolished as an unpermitted settler structure.</dd>
+        <dt>Data</dt><dd>Civil Administration figures, 2022 to mid-2023: 770 of 2,600 Palestinian structures identified as unpermitted demolished, against 88 of 606 settler structures.</dd>
+        <dt>Test</dt><dd>Fisher's exact test of two proportions</dd>
+        <dt>Effect</dt><dd>Odds ratio, Palestinian against settler: <b>2.48</b> (95% CI 1.95 to 3.15)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        
+        <dt>Report</dt><dd>§12</dd>
+      </dl>
+    </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H11</div>
+      <h2>Food prices in Gaza</h2>
+      
+    </div>
+        <div class="card chart-card" id="chart-tests-h11" data-chart-card="tests-h11" data-title="Food prices in Gaza against their pre-war level" data-source="data/tests.json · H11" data-note="The geometric mean of each food item’s monthly price divided by its price before 7 October 2023. PCBS, November 2023 to August 2026.">
+      <div class="chart-head">
+        <div><h3>Food prices in Gaza against their pre-war level</h3><p>The geometric mean of each food item’s monthly price divided by its price before 7 October 2023. PCBS, November 2023 to August 2026.</p></div>
+        <div class="chart-tools">
+          <span class="chart-ref">data/tests.json · H11</span>
+          
+          
+          
+          
+          
+          
+        </div>
+      </div>
+      <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/tests&chart=tests-h11">open it in the live record</a>.</p>
+      <div class="chart-table" hidden=""></div>
+    </div>
+        <div class="test-list"><article class="card test-card" id="test-H11a">
+      <div class="test-head">
+        <span class="test-id">H11a</span>
+        <h3>The total blockade of March to May 2025 and food prices in Gaza</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">During the total blockade of March to May 2025, food prices in Gaza rose 30% above the three months before (95% CI 13% to 50%), from 3.89 to 4.88 times their pre-war level.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>Food prices in the total blockade (March-May 2025) were the same as in the three months before (December 2024-February 2025).</dd>
+        <dt>Data</dt><dd>PCBS monthly prices in Gaza of 32 food items with a complete series (COICOP division 01), November 2023 to August 2026.</dd>
+        <dt>Test</dt><dd>Regression of log price on a period indicator with item fixed effects, errors clustered by item</dd>
+        <dt>Effect</dt><dd>Price ratio, after against before: <b>1.30</b> (95% CI 1.13 to 1.50)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        <dt>Sources</dt><dd><ul><li><a href="https://data.humdata.org/dataset/state-of-palestine-price-of-basic-commodities-in-gaza" rel="noopener">State of Palestine: Prices of Basic Commodities in Gaza</a> — Palestinian Central Bureau of Statistics (HDX), updated 13 September 2026</li></ul></dd>
+        <dt>Report</dt><dd>§6.3</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H11c">
+      <div class="test-head">
+        <span class="test-id">H11c</span>
+        <h3>Food prices in Gaza against their pre-war level</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Across the 34 months of data, food in Gaza cost on average 3.16 times its pre-war price (95% CI 2.6 to 3.9), and was above its pre-war price in 34 of 34 months. At the peak, in 2025-06, it cost 11.8 times as much.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>Food prices in Gaza during the war were at their pre-war level.</dd>
+        <dt>Data</dt><dd>As H11a; each month's index is the geometric mean of the 32 items' prices relative to their average before 7 October 2023.</dd>
+        <dt>Test</dt><dd>One-sample t-test of the monthly log index against zero</dd>
+        <dt>Effect</dt><dd>Mean price level against pre-war (geometric): <b>3.16</b> (95% CI 2.60 to 3.85)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        
+        <dt>Report</dt><dd>§6.3</dd>
+      </dl>
+    </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H13</div>
+      <h2>Detention without charge</h2>
+      
+    </div>
+        <div class="card chart-card" id="chart-tests-h13" data-chart-card="tests-h13" data-title="Palestinians held without charge or trial, at each year end" data-source="data/tests.json · H13" data-note="Administrative detainees and those held under the Unlawful Combatants Law, Israel Prison Service figures compiled by B’Tselem. 2026 is 30 June.">
+      <div class="chart-head">
+        <div><h3>Palestinians held without charge or trial, at each year end</h3><p>Administrative detainees and those held under the Unlawful Combatants Law, Israel Prison Service figures compiled by B’Tselem. 2026 is 30 June.</p></div>
+        <div class="chart-tools">
+          <span class="chart-ref">data/tests.json · H13</span>
+          
+          
+          
+          
+          
+          
+        </div>
+      </div>
+      <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/tests&chart=tests-h13">open it in the live record</a>.</p>
+      <div class="chart-table" hidden=""></div>
+    </div>
+        <div class="test-list"><article class="card test-card" id="test-H13">
+      <div class="test-head">
+        <span class="test-id">H13</span>
+        <h3>Administrative detention, without charge or trial, before and after 7 October 2023</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Israel held on average 3,283 Palestinians in administrative detention, without charge or trial, at each year end since October 2023, against 418 in 2008-2022: 7.85 times as many (95% CI 6.17 to 9.99). Every figure since 2023 is more than four times the highest year before it (784). These figures exclude those held as 'unlawful combatants'.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>The number of Palestinians held in administrative detention was the same after October 2023 as in 2008-2022.</dd>
+        <dt>Data</dt><dd>Israel Prison Service figures compiled by B'Tselem, end of each year 2008-2025 and 30 June 2026.</dd>
+        <dt>Test</dt><dd>Negative binomial regression of the yearly count on a post-October-2023 indicator, Newey-West errors (lag 1)</dd>
+        <dt>Effect</dt><dd>Ratio, after against 2008-2022: <b>7.85</b> (95% CI 6.17 to 9.99)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        <dt>Sources</dt><dd><ul><li><a href="https://www.btselem.org/statistics/detainees_and_prisoners" rel="noopener">Statistics on Palestinians in Israeli custody</a> — B'Tselem, June 2026</li></ul></dd>
+        <dt>Report</dt><dd>§11</dd>
+      </dl>
+    </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H14</div>
+      <h2>Journalists killed</h2>
+      
+    </div>
+        <div class="card chart-card" id="chart-tests-h14" data-chart-card="tests-h14" data-title="Journalists killed a year, by war" data-source="data/tests.json · H14" data-note="Committee to Protect Journalists. The Gaza figure is CPJ’s count after its June 2026 review, the lowest it has published.">
+      <div class="chart-head">
+        <div><h3>Journalists killed a year, by war</h3><p>Committee to Protect Journalists. The Gaza figure is CPJ’s count after its June 2026 review, the lowest it has published.</p></div>
+        <div class="chart-tools">
+          <span class="chart-ref">data/tests.json · H14</span>
+          
+          
+          
+          
+          
+          
+        </div>
+      </div>
+      <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/tests&chart=tests-h14">open it in the live record</a>.</p>
+      <div class="chart-table" hidden=""></div>
+    </div>
+        <div class="test-list"><article class="card test-card" id="test-H14a">
+      <div class="test-head">
+        <span class="test-id">H14a</span>
+        <h3>Journalists killed a year: the Gaza war against the Iraq war</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Journalists were killed by Israel in the Gaza war at 76.6 a year, against 17.2 a year in the Iraq war: 4.46 times the rate (95% CI 3.6 to 5.54). The Gaza figure is the lowest CPJ has published, after its June 2026 review removed names.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>Journalists were killed at the same rate in the Gaza war as in the Iraq war.</dd>
+        <dt>Data</dt><dd>Committee to Protect Journalists: 209 journalists killed by Israel in the Gaza war to 30 June 2026 (CPJ's count after its June 2026 review, the lowest it has published) over 2.73 years; Iraq war: as counted by CPJ.</dd>
+        <dt>Test</dt><dd>Exact conditional test of two Poisson rates</dd>
+        <dt>Effect</dt><dd>Rate ratio, Gaza war against the Iraq war: <b>4.46</b> (95% CI 3.60 to 5.54)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        <dt>Sources</dt><dd><ul><li><a href="https://cpj.org/issue/israel-gaza-war/" rel="noopener">Israel-Gaza war</a> — Committee to Protect Journalists, 2026</li><li><a href="https://cpj.org/2013/03/iraq-war-and-news-media-a-look-inside-the-death-to/" rel="noopener">Iraq war and news media: a look inside the death toll</a> — Committee to Protect Journalists, March 2013</li></ul></dd>
+        <dt>Report</dt><dd>§10</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H14b">
+      <div class="test-head">
+        <span class="test-id">H14b</span>
+        <h3>Journalists killed a year: the Gaza war against the Syrian civil war</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Journalists were killed by Israel in the Gaza war at 76.6 a year, against 10.3 a year in the Syrian civil war: 7.46 times the rate (95% CI 6 to 9.3). The Gaza figure is the lowest CPJ has published, after its June 2026 review removed names.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>Journalists were killed at the same rate in the Gaza war as in the Syrian civil war.</dd>
+        <dt>Data</dt><dd>Committee to Protect Journalists: 209 journalists killed by Israel in the Gaza war to 30 June 2026 (CPJ's count after its June 2026 review, the lowest it has published) over 2.73 years; Syrian civil war: as counted by CPJ.</dd>
+        <dt>Test</dt><dd>Exact conditional test of two Poisson rates</dd>
+        <dt>Effect</dt><dd>Rate ratio, Gaza war against the Syrian civil war: <b>7.46</b> (95% CI 6.00 to 9.30)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        <dt>Sources</dt><dd><ul><li><a href="https://cpj.org/issue/israel-gaza-war/" rel="noopener">Israel-Gaza war</a> — Committee to Protect Journalists, 2026</li><li><a href="https://cpj.org/2013/03/iraq-war-and-news-media-a-look-inside-the-death-to/" rel="noopener">Iraq war and news media: a look inside the death toll</a> — Committee to Protect Journalists, March 2013</li></ul></dd>
+        <dt>Report</dt><dd>§10</dd>
+      </dl>
+    </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H15</div>
+      <h2>The destruction of buildings</h2>
+      
+    </div>
+        <div class="card chart-card" id="chart-tests-h15" data-chart-card="tests-h15" data-title="Structures destroyed in Gaza at each satellite assessment" data-source="data/tests.json · H15" data-note="UNOSAT comprehensive damage assessments, by imagery date. “Damaged or destroyed” includes the “possibly damaged” category UNOSAT added in May 2024.">
+      <div class="chart-head">
+        <div><h3>Structures destroyed in Gaza at each satellite assessment</h3><p>UNOSAT comprehensive damage assessments, by imagery date. “Damaged or destroyed” includes the “possibly damaged” category UNOSAT added in May 2024.</p></div>
+        <div class="chart-tools">
+          <span class="chart-ref">data/tests.json · H15</span>
+          
+          
+          
+          
+          
+          
+        </div>
+      </div>
+      <p class="chart-missing">Interactive chart — <a href="https://palestinerecord.github.io/#/tests&chart=tests-h15">open it in the live record</a>.</p>
+      <div class="chart-table" hidden=""></div>
+    </div>
+        <div class="test-list"><article class="card test-card" id="test-H15a">
+      <div class="test-head">
+        <span class="test-id">H15a</span>
+        <h3>Destroyed buildings in Gaza across twelve satellite assessments</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Destroyed structures rose at every one of the twelve UNOSAT assessments, from 6,583 in November 2023 to 134,422 in June 2026 (Kendall's tau 1.0). The destruction was not a single episode; it continued through every phase of the war.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>The number of destroyed structures shows no monotonic trend across the assessments.</dd>
+        <dt>Data</dt><dd>UNOSAT comprehensive damage assessments, 12 imagery dates from 2023-11-07 to 2026-06-16.</dd>
+        <dt>Test</dt><dd>Kendall's tau (Mann-Kendall trend test)</dd>
+        <dt>Effect</dt><dd>Kendall's tau: <b>1.00</b></dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        <dt>Sources</dt><dd><ul><li><a href="https://unosat.org/products/4165" rel="noopener">Gaza Strip Comprehensive Damage Assessment</a> — UNOSAT, 2023-2026</li></ul></dd>
+        <dt>Report</dt><dd>§6.4</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H15b">
+      <div class="test-head">
+        <span class="test-id">H15b</span>
+        <h3>Buildings destroyed during the October 2025 ceasefire</h3>
+        <span class="test-result rejected">run</span>
+      </div>
+      <p class="test-reading">10,958 more structures were recorded as destroyed between the October 2025 ceasefire and June 2026, about 44 a day for 248 days. Some will be buildings damaged earlier that later collapsed or were cleared; the satellite count cannot separate those from new demolitions.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>No further structures were destroyed in Gaza between the ceasefire of October 2025 and June 2026.</dd>
+        <dt>Data</dt><dd>UNOSAT: 123,464 structures destroyed at 11 October 2025, 134,422 at 16 June 2026.</dd>
+        <dt>Test</dt><dd>Count of newly destroyed structures, with an exact Poisson interval for the daily rate</dd>
+        <dt>Effect</dt><dd>Structures destroyed a day during the ceasefire: <b>44.2</b> (95% CI 43.4 to 45.0)</dd>
+        <dt>p</dt><dd>—</dd>
+        
+        
+        <dt>Report</dt><dd>§6.4</dd>
+      </dl>
+    </article></div>
+      </section><section class="section">
+        <div class="section-head">
+      <div class="eyebrow">H16</div>
+      <h2>Earlier Gaza wars: who was killed</h2>
+      
+    </div>
+        
+        <div class="test-list"><article class="card test-card" id="test-H16a">
+      <div class="test-head">
+        <span class="test-id">H16a</span>
+        <h3>Palestinians killed who took no part in hostilities: Cast Lead, 2008-09</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Of those killed whose status B'Tselem could determine, 57% took no part in the hostilities (95% CI from 55%). This counts the police officers killed on the first day as taking part, the reading least favourable to the finding.</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>No more than half of the Palestinians killed by Israeli forces, of those whose status B'Tselem could determine, took no part in the hostilities.</dd>
+        <dt>Data</dt><dd>B'Tselem: 773 took no part, 330 took part, 248 police officers (counted here as taking part), 36 undetermined (left out).</dd>
+        <dt>Test</dt><dd>Exact binomial test against one half (one-sided)</dd>
+        <dt>Effect</dt><dd>Share who took no part in hostilities: <b>0.572</b> (95% CI 0.550 to 1.00)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        <dt>Sensitivity</dt><dd><ul><li>Police officers left out rather than counted as taking part: 0.701 (95% CI 0.677 to 1.00), p &lt; 0.001</li></ul></dd>
+        <dt>Sources</dt><dd><ul><li><a href="https://www.btselem.org/press_releases/20090909" rel="noopener">Fatality figures</a> — B'Tselem, </li></ul></dd>
+        <dt>Report</dt><dd>§10</dd>
+      </dl>
+    </article><article class="card test-card" id="test-H16c">
+      <div class="test-head">
+        <span class="test-id">H16c</span>
+        <h3>Palestinians killed who took no part in hostilities: Protective Edge, 2014</h3>
+        <span class="test-result rejected">null rejected</span>
+      </div>
+      <p class="test-reading">Of those killed whose status B'Tselem could determine, 64% took no part in the hostilities (95% CI from 63%).</p>
+      <dl class="test-facts">
+        <dt>Null hypothesis</dt><dd>No more than half of the Palestinians killed by Israeli forces, of those whose status B'Tselem could determine, took no part in the hostilities.</dd>
+        <dt>Data</dt><dd>B'Tselem: 1,391 took no part, 765 took part, 46 undetermined (left out).</dd>
+        <dt>Test</dt><dd>Exact binomial test against one half (one-sided)</dd>
+        <dt>Effect</dt><dd>Share who took no part in hostilities: <b>0.645</b> (95% CI 0.628 to 1.00)</dd>
+        <dt>p</dt><dd>&lt; 0.001 · adjusted for false discovery &lt; 0.001</dd>
+        
+        
+        <dt>Report</dt><dd>§10</dd>
+      </dl>
+    </article></div>
       </section>
 
       <section class="section">
@@ -702,7 +1046,7 @@
     </div>
         <div class="card test-card">
           <dl class="test-facts test-method">
-            <dt>Tests</dt><dd>Counts are modelled as negative binomial, after a likelihood-ratio test rejected the Poisson model in every series where it was applied. Time series use Newey-West standard errors with a lag of seven days. Rates are compared with the exact conditional test for two Poisson rates. Two-by-two tables use Fisher's exact test.</dd><dt>Multiple testing</dt><dd>p-values are adjusted for the false discovery rate (Benjamini-Hochberg, 5%) across all the 15 tests with a p-value. Both raw and adjusted p-values are reported.</dd><dt>Caution</dt><dd>A change in a series at a dated event is an association, not proof that the event caused it. Tests on the named list inherit any bias in who has been identified.</dd><dt>What the tests are not</dt><dd>A test of a ceasefire or a court order measures whether the death rate changed around a date, not why. A test on the named list measures the list as published, not the deaths it does not contain: the 1,205 counted dead who have not been identified, and the dead still under the rubble, are outside it.</dd><dt>Limits</dt><dd>The tests are only as good as the data. The Ministry of Health's daily series changed source during the war (to the Government Media Office from 11 November 2023, and back), carries days on which no report was issued, and, from 2025, separates new killings from bodies recovered only on some days. The named list covers the identified dead only. The population baseline is the PCBS projection for 2023, before the war. Where a test depends on one of these weaknesses, its entry says so, and a sensitivity analysis tests whether the result survives it.</dd>
+            <dt>Tests</dt><dd>Counts are modelled as negative binomial, after a likelihood-ratio test rejected the Poisson model in every series where it was applied. Time series use Newey-West standard errors with a lag of seven days. Rates are compared with the exact conditional test for two Poisson rates. Two-by-two tables use Fisher's exact test.</dd><dt>Multiple testing</dt><dd>p-values are adjusted for the false discovery rate (Benjamini-Hochberg, 5%) across all the 30 tests with a p-value. Both raw and adjusted p-values are reported.</dd><dt>Caution</dt><dd>A change in a series at a dated event is an association, not proof that the event caused it. Tests on the named list inherit any bias in who has been identified.</dd><dt>What the tests are not</dt><dd>A test of a ceasefire or a court order measures whether the death rate changed around a date, not why. A test on the named list measures the list as published, not the deaths it does not contain: the 1,205 counted dead who have not been identified, and the dead still under the rubble, are outside it.</dd><dt>Limits</dt><dd>The tests are only as good as the data. The Ministry of Health's daily series changed source during the war (to the Government Media Office from 11 November 2023, and back), carries days on which no report was issued, and, from 2025, separates new killings from bodies recovered only on some days. The named list covers the identified dead only. The population baseline is the PCBS projection for 2023, before the war. Where a test depends on one of these weaknesses, its entry says so, and a sensitivity analysis tests whether the result survives it.</dd>
           </dl>
         </div>
         <p class="chart-note" style="margin-top:18px"><a href="../data/tests.json">data/tests.json</a> · generated 2026-10-02.</p>
@@ -712,7 +1056,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=157" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=158" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
