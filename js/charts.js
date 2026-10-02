@@ -3154,6 +3154,73 @@ const Charts = (function () {
     });
   };
 
+  /* Tests — H2, daily deaths with the ceasefire periods shaded
+
+     Grey is the daily increase in the reported total; green, inside each
+     ceasefire, is new killings alone, with bodies recovered from the rubble
+     taken out. Log scale, so the ceasefire rates are visible at all. */
+  R['tests-h2'] = () => {
+    const s = data.tests.series.h2;
+    const log = (v) => (v === null ? null : Math.max(v, 0.5));
+    return Object.assign({}, base, {
+      grid: { left: 56, right: 20, top: 34, bottom: 56 },
+      legend: Object.assign({}, base.legend, { top: 0 }),
+      tooltip: Object.assign({}, base.tooltip, { trigger: 'axis',
+        formatter: (ps) => `<b>${ps[0].axisValue}</b>` + ps.filter((p) => p.value[1] !== null)
+          .map((p) => `<br>${p.seriesName}: ${fmt(s[p.seriesIndex === 0 ? 'total' : 'new'][p.dataIndex])}`).join('') }),
+      dataZoom: [{ type: 'inside' }, { type: 'slider', height: 16, bottom: 8, borderColor: 'transparent' }],
+      xAxis: { type: 'time', axisLine: { lineStyle: { color: C.ink(.16) } }, axisLabel: { color: C.muted, fontSize: 11 }, splitLine: { show: false } },
+      yAxis: { type: 'log', min: 0.5, logBase: 10, name: 'deaths per day (log)', nameTextStyle: { color: C.muted, fontSize: 11 },
+        axisLabel: { color: C.muted, fontSize: 11, formatter: (v) => (v < 1 ? '0' : fmt(v)) }, splitLine: { lineStyle: { color: C.line } } },
+      series: [
+        { name: 'Daily increase in the reported total', type: 'line', showSymbol: false, sampling: 'lttb',
+          data: s.dates.map((d, i) => [d, log(s.total[i])]), lineStyle: { color: C.ink(0.35), width: 1 },
+          markArea: { silent: true, itemStyle: { color: hexToRgba(C.green, 0.12) },
+            label: { color: C.green, fontSize: 10.5, position: 'insideTop' },
+            data: s.periods.map((p) => [{ name: p.label.replace(' ceasefire', '').replace('November 2023 ', 'Nov 2023 '), xAxis: p.from }, { xAxis: p.to }]) } },
+        { name: 'New killings during a ceasefire', type: 'line', showSymbol: false, connectNulls: false,
+          data: s.dates.map((d, i) => [d, log(s.new[i])]), lineStyle: { color: C.green, width: 1.3 } },
+      ],
+    });
+  };
+
+  /* Tests — H3, daily deaths and the segmented model around the three ICJ orders */
+  R['tests-h3'] = () => {
+    const s = data.tests.series.h3;
+    return Object.assign({}, base, {
+      grid: { left: 56, right: 20, top: 34, bottom: 46 },
+      legend: Object.assign({}, base.legend, { top: 0 }),
+      tooltip: Object.assign({}, base.tooltip, { trigger: 'axis' }),
+      xAxis: { type: 'time', axisLine: { lineStyle: { color: C.ink(.16) } }, axisLabel: { color: C.muted, fontSize: 11 }, splitLine: { show: false } },
+      yAxis: axisY({ name: 'deaths per day', nameTextStyle: { color: C.muted, fontSize: 11 } }),
+      series: [
+        { name: 'Daily deaths', type: 'line', showSymbol: false, data: s.dates.map((d, i) => [d, s.observed[i]]),
+          lineStyle: { color: C.ink(0.35), width: 1 },
+          markLine: { silent: true, symbol: 'none', lineStyle: { color: C.red, type: 'dashed' },
+            label: { color: C.red, fontSize: 10.5, formatter: (p) => p.name },
+            data: s.orders.map((o) => ({ name: 'ICJ ' + o.date.slice(5).split('-').reverse().join('/'), xAxis: o.date })) } },
+        { name: 'Segmented model', type: 'line', showSymbol: false, data: s.dates.map((d, i) => [d, s.fitted[i]]),
+          lineStyle: { color: C.blue, width: 2.2 } },
+      ],
+    });
+  };
+
+  /* Tests — H6, single-year ages on the named list, ages ending in 0 or 5 marked */
+  R['tests-h6'] = () => {
+    const ages = data.tests.series.h6.ages.slice(0, 91);
+    return Object.assign({}, base, {
+      grid: { left: 56, right: 20, top: 20, bottom: 46 },
+      tooltip: Object.assign({}, base.tooltip, { formatter: (p) => `Aged ${p.dataIndex}: ${fmt(p.value)} identified dead` }),
+      xAxis: axisX({ data: ages.map((_, i) => i), name: 'age', nameLocation: 'middle', nameGap: 28, nameTextStyle: { color: C.muted, fontSize: 11 },
+        axisLabel: { color: C.muted, fontSize: 11, interval: 9 } }),
+      yAxis: axisY(),
+      series: [{
+        type: 'bar', barCategoryGap: '12%',
+        data: ages.map((v, i) => ({ value: v, itemStyle: { color: hexToRgba(i % 5 === 0 ? C.red : C.muted, i % 5 === 0 ? 0.9 : 0.55) } })),
+      }],
+    });
+  };
+
   /* Which finding rests on which instrument.
 
      A circular layout rather than a force layout: with thirty-seven nodes a

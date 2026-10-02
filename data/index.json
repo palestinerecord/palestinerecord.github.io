@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-10-02",
-  "total_bytes": 7434136,
+  "total_bytes": 7463858,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -405,12 +405,12 @@
       "title": "Statistical tests on the record",
       "description": "Hypothesis tests on the published data: whether the identified dead are confined to men of fighting age, the ceasefires and the ICJ orders against the daily death rate, the West Bank before and after 7 October 2023, the integrity of the Ministry of Health named list, and recognition of Palestine against governments calling it genocide. Each with its null, test, effect size, interval, raw and adjusted p-value and sensitivity analyses.",
       "source": "Written by analysis/run_tests.py in the source repository from the files in data/ and data/raw/.",
-      "bytes": 17751,
+      "bytes": 47473,
       "records": null,
       "fields": [
         "meta",
+        "series",
         "groups",
-        "departures",
         "tests"
       ],
       "updated": "2026-10-02"

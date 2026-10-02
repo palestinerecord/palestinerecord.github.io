@@ -1759,6 +1759,9 @@ tr.row-partial td { opacity: .72; }
 .test-facts dt { color: var(--muted); }
 .test-facts dd { margin: 0; }
 .test-facts ul { margin: 0; padding-left: 18px; }
+.test-finding .test-reading { margin: 0; }
+.test-finding .test-id { font-size: 12px; margin-left: 4px; }
+.test-method { grid-template-columns: 170px 1fr; gap: 10px 18px; }
 @media (max-width: 640px) { .test-facts { grid-template-columns: 1fr; } .test-facts dt { margin-top: 6px; } }
 .prov-panel-lede { font-size: 16px; color: var(--text-2); margin: 0 0 12px; }
 .prov-panel-lede b { font-family: var(--serif); font-size: 30px; color: var(--accent); margin-right: 4px; }
