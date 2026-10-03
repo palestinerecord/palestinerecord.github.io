@@ -185,7 +185,7 @@ The footer of every page generates a citation in APA, Harvard and BibTeX form. E
 
 - [`#/changelog`](https://palestinerecord.github.io/#/changelog) lists every dated revision.
 - [`feed.xml`](https://palestinerecord.github.io/feed.xml) is an Atom feed of the same revisions for feed readers.
-- Each nightly refresh that publishes new data also asks the Internet Archive's Wayback Machine to save a copy. That gives an independent timestamp for anyone who does not want to rely on this repository's history.
+- Every publication, whether the nightly refresh or a change pushed by hand, asks the Internet Archive's Wayback Machine to save a copy. That gives an independent timestamp for anyone who does not want to rely on this repository's history.
 
 ### Offline use and installing
 
