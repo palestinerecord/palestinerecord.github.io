@@ -1,336 +1,434 @@
-# Dashboard — report-final.md, visualised
+# The Documented Record
 
-An interactive reading of `../report-final.md`: every statistic plotted, every part and section reproduced without omission, and the casualty record graphed over time by war, period and place.
+**Israel and the Occupied Territories, 1917–2026: an interactive forensic survey of state conduct, alleged violations of international law, and the documented record.**
 
-No build step. Open it over HTTP:
+**Live site: https://palestinerecord.github.io/**
 
-```bash
-python3 -m http.server 8777
-open http://localhost:8777/index.html
+The Documented Record is a free, open website that sets out the record of Israel's conduct towards the Palestinian people from the British Mandate to the present. It holds every figure, finding, statement and source in that record, and it shows each one with the body that recorded it. Each figure is plotted, each quotation names its speaker, and each finding names the court, commission or organisation that made it. The data behind every chart is published as plain JSON that anyone can download.
+
+The record rests on a written survey: *The State of Israel and Occupied Territories: A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026)*. As of October 2026 it runs to about 231,000 words in 36 parts and 205 sections, with 15 tables and a bibliography of 101 works. The site reproduces it in full and builds everything else on it: 108 charts and maps, 29 datasets, a chronology of nearly 470 dated entries and a catalogue of 151 statements and findings.
+
+The casualty figures refresh automatically every night from the public feeds they come from. Everything else is revised by hand as courts, commissions and monitoring bodies publish.
+
+This repository *is* the website. GitHub Pages serves the `main` branch as it stands, with no build step.
+
+---
+
+## Contents
+
+- [What is on the site](#what-is-on-the-site)
+- [The standard the record holds itself to](#the-standard-the-record-holds-itself-to)
+- [Using the record](#using-the-record): open data, embedding charts, citing, following changes, offline use
+- [Terms of re-use](#terms-of-re-use)
+- [Challenging a claim](#challenging-a-claim)
+- [Running the site locally](#running-the-site-locally)
+- [How the site is built](#how-the-site-is-built)
+- [The data pipeline](#the-data-pipeline)
+- [Checks](#checks)
+- [Automation](#automation)
+- [Publishing](#publishing)
+- [Base data and credits](#base-data-and-credits)
+
+---
+
+## What is on the site
+
+The site is a single page with a hash router. Every route below can be linked to directly, and every route also exists as a static, script-free snapshot under `snapshot/`.
+
+| Route | What it holds |
+|---|---|
+| [`#/overview`](https://palestinerecord.github.io/#/overview) | The headline figures, the ratio of Palestinians to Israelis killed since 7 October 2023, and a field of points with one point per counted death. A **Name the points** control repaints the field from the Ministry of Health identification list, so hovering a point gives that person's name, age and sex. |
+| [`#/tour/1`](https://palestinerecord.github.io/#/tour/1) | *Start here.* The case in eight steps: the toll, the asymmetry, the stated intent, the law it engages, and what states have and have not done. Each step has its own address, `#/tour/1` to `#/tour/8`. |
+| [`#/data`](https://palestinerecord.github.io/#/data/gaza) | Every figure in the record, plotted, in nine chapters (see below). |
+| [`#/children`](https://palestinerecord.github.io/#/children) | A unit chart of the children killed on both sides, period by period, one figure per child. Years no one counted are shown as gaps. |
+| [`#/day`](https://palestinerecord.github.io/#/day) | *Said and done.* One axis of days you can scrub through. Pick any day of the war to see the deaths recorded that day, what was said and ordered, what was happening, and what crossed into Gaza. |
+| [`#/timeline`](https://palestinerecord.github.io/#/timeline) | Two chronologies, 1917–2026: the recorded crimes and massacres, and between them the mandates, laws, plans, rulings and admissions. |
+| [`#/evidence`](https://palestinerecord.github.io/#/evidence) | The complete survey, reproduced without omission: every part, section, list and table. |
+| [`#/rebuttals`](https://palestinerecord.github.io/#/rebuttals) | Each argument made in defence of the documented conduct, answered on its own legal terms with the figures that settle it. |
+| [`#/statements`](https://palestinerecord.github.io/#/statements) | Statements by named officials, each with speaker, role, date, verbatim quotation, context, evidentiary tier and legal significance. |
+| [`#/legal`](https://palestinerecord.github.io/#/legal) | The ICJ proceedings, the ICC warrants and the findings under the Genocide, Fourth Geneva and Apartheid Conventions. It also holds the element matrices (each element of genocide and of apartheid set against the evidence for it), a graph of which finding rests on which instrument, and a sortable state-by-state duty-to-prevent scorecard. |
+| [`#/ledger`](https://palestinerecord.github.io/#/ledger) | The persons and companies named in the record: office held, statements made, arrest warrants and their status, sanctions imposed and by whom, and what each firm supplies. |
+| [`#/mp`](https://palestinerecord.github.io/#/mp) | *The constituency ledger*, for readers in Britain. Enter a postcode to find your MP. The page shows how they voted in every Commons division on Palestine, the early day motions they signed, what they have said in Parliament (including whether they called the conduct in Gaza genocide), petition signatures in the seat, and what the Register of Members' Financial Interests and the Electoral Commission record against their name. |
+| [`#/answer`](https://palestinerecord.github.io/#/answer) | *Answer a claim.* Paste a post or a quotation. The page marks each claim it recognises and builds the answer from the report, the live figures and the documented statements. |
+| [`#/provenance`](https://palestinerecord.github.io/#/provenance) | Every claim joined to the bodies it rests on, with switches that remove a whole class of source (all Palestinian sources, all Israeli sources, the UN, every human rights organisation) and recount what still stands. |
+| [`#/tests`](https://palestinerecord.github.io/#/tests) | Statistical hypothesis tests on the published data, each with its null hypothesis, test, effect size, interval and adjusted p-value. |
+| [`#/method`](https://palestinerecord.github.io/#/method) | The standard of proof: why the method is impartial but the conclusions are not neutral, three objections answered, the conditions under which the findings would fail, and the falsification register. |
+| [`#/sources`](https://palestinerecord.github.io/#/sources) | The evidence base, every item linked: courts and tribunals, UN bodies, human rights organisations, open datasets, academic work, Israeli sources, journalism and archives. |
+| [`#/api`](https://palestinerecord.github.io/#/api) | The open-data page: every dataset with its download link, and every chart with its embed address. |
+| [`#/changelog`](https://palestinerecord.github.io/#/changelog) | Every dated revision to the record, newest first. |
+| `#/embed/<chart>` | One chart alone, with its caption and source, for use in an iframe (see [Embedding charts](#embedding-charts)). |
+
+The nine data chapters:
+
+| Chapter | Covers |
+|---|---|
+| `#/data/gaza` | The Gaza death toll day by day: children, aid seekers, deaths from starvation, the famine classification, the hospitals |
+| `#/data/asymmetry` | Palestinian and Israeli deaths side by side, period by period, and the ratio between them since 1948 |
+| `#/data/since-1948` | The long toll from 1948 to 2026, and the periods no one counted |
+| `#/data/complicity` | Arms transfers, trade, Security Council vetoes, and the companies in the UN database of businesses in the settlements |
+| `#/data/land` | Where the land went, from the 1947 partition to the settlements of 2026, with the 456 villages depopulated in 1947–50 mapped one by one |
+| `#/data/west-bank` | Killings, settler attacks, demolitions, displacement, and Palestinian children in Israeli military courts |
+| `#/data/wars` | Each Gaza campaign and what inquiries found, the wars in Lebanon, Syria, Yemen and Iran, and the documented record of 7 October 2023 |
+| `#/data/world` | Recognition of Palestine, arms embargoes, sanctions, ICJ interventions, vetoes, and which governments have called the conduct in Gaza genocide |
+| `#/data/tables` | Every table in the survey, reproduced exactly, with the part and section it belongs to |
+
+Two standalone pages sit alongside the app. [`nazi-comparison.html`](https://palestinerecord.github.io/nazi-comparison.html) is a companion essay on the Nazi comparison: who makes it, the documented parallels, the strongest objection, and the arguments for it that this record rejects. [`licence.html`](https://palestinerecord.github.io/licence.html) sets out the terms of re-use.
+
+The search box (`/` or `Ctrl`/`⌘`+`K`) searches the whole record from any page. A sun/moon button switches between the dark and light themes, and the choice is remembered.
+
+---
+
+## The standard the record holds itself to
+
+- **Every figure names its source.** Each curated figure, statement, finding and record row carries the body that recorded it, the date, and the section of the survey it comes from. A figure without an attribution fails the build.
+- **Disputes are shown, not settled quietly.** Where an attribution is contested, the record marks it contested. Where a widely shared paraphrase differs from the sourced wording, both are given and the difference is stated.
+- **Gaps stay gaps.** Days with no report are left empty, not interpolated. Periods no one counted are published as gaps, not estimates. Estimates that the record makes itself are labelled as estimates, with their method.
+- **Impartial, not neutral.** The same evidential standard applies to every party. The record includes Hamas's crimes of 7 October 2023, and Part XIX of the survey sets out the counter-evidence and the limits of the analysis. Impartial method does not oblige the record to reach a balanced conclusion. The [method page](https://palestinerecord.github.io/#/method) sets out this distinction.
+- **Removing a class of source.** The provenance graph joins each claim to the bodies it rests on and sorts those bodies by who controls them. Its switches show how much of the record survives without each class. As of 3 October 2026, 93.5 per cent of attributed claims still stand with every Palestinian source removed, 86.0 per cent without the United Nations, 83.6 per cent without Israeli sources, and 78.2 per cent without any human rights organisation.
+- **Stating what would make it wrong.** The falsification register has one entry for each claim a reader could check for themselves, ordered weakest first. Each entry names the claim, what it rests on, how many independent kinds of source support it, and what evidence would break it. The record states four conditions under which it would fail:
+  1. a load-bearing figure is shown to be wrong by a source of equal or better standing;
+  2. a quotation is shown to be fabricated, mistranslated or materially taken out of context;
+  3. the body that issued a finding withdraws or reverses it;
+  4. the ICJ rules on the merits in *South Africa v. Israel*. The record does not pre-empt that judgment.
+- **Testing the record statistically.** The [tests page](https://palestinerecord.github.io/#/tests) puts the data to hypothesis tests:
+  - the integrity of the named list of the dead (identity-number check digits, duplicates, ages against dates of birth);
+  - who is killed;
+  - whether each ceasefire and each ICJ order changed the daily death rate;
+  - the West Bank before and after October 2023;
+  - settler prosecutions, Area C permits and demolitions, food prices under blockade, administrative detention, journalists killed and destroyed buildings.
+
+  p-values are adjusted for the false discovery rate (Benjamini–Hochberg, 5 per cent) across every test run. A change at a dated event is reported as an association, not as proof of cause.
+
+---
+
+## Using the record
+
+### Open data
+
+Every dataset behind the site is published as plain JSON over HTTPS, with no login and no key. Responses carry `Access-Control-Allow-Origin: *`, so a page on any other site can fetch them directly.
+
+```
+https://palestinerecord.github.io/data/<file>.json
 ```
 
-It must be served over HTTP — the views `fetch()` their data, so opening `index.html` from the filesystem fails on CORS.
+The manifest at [`data/index.json`](https://palestinerecord.github.io/data/index.json) lists each dataset with a title, description, source, size in bytes, top-level fields, record count and last-updated date. It is the machine-readable entry point, and the [`#/api`](https://palestinerecord.github.io/#/api) page shows it in readable form.
 
-## Architecture
+```bash
+curl -s https://palestinerecord.github.io/data/index.json | python3 -m json.tool
+curl -s https://palestinerecord.github.io/data/timeseries.json -o timeseries.json
+```
 
-Layered separation, following the `web3d-integration-patterns` skill: each library owns one layer and no property is animated by more than one of them.
+| File | Contents | Source |
+|---|---|---|
+| `timeseries.json` | Killed and injured in Gaza and the West Bank, daily and monthly, plus infrastructure damage. Reporting gaps are left as gaps. **Refreshed nightly.** | Tech For Palestine, from Gaza Ministry of Health and OCHA reporting (public domain) |
+| `names.json` | The Ministry of Health identification list: name in Arabic and English, age and sex. Every third record (24,279 people, about 2 MB). | Gaza Ministry of Health, via Tech For Palestine (public domain) |
+| `names-boot.json` | 260 records spread evenly through that list, shown on the loading screen | as above |
+| `headline.json` | The eight headline figures, the current ratio and the record's counts, in one small file | subset of `figures.json`, `timeseries.json`, `report-meta.json` |
+| `figures.json` | The curated statistics in topic groups, each with label, value, qualifying note, source and survey section. Also holds the three competing definitions of antisemitism, the J50 Declaration and the British judgments on the question. | per record |
+| `statements.json` | 151 statements and findings by named officials: speaker, role, date, verbatim quotation, context, categories, tier, legal significance. Contested attributions are marked. | primary reporting, cited per record |
+| `chronology.json` | 142 dated crimes and massacres | the survey, Appendix B |
+| `timeline-extra.json` | 327 entries giving the legal and political context: mandates, partitions, laws, plans, rulings, resolutions, admissions | primary documents, cited per entry |
+| `legal.json` | ICJ cases and orders, ICC warrants, treaty provisions engaged, findings under the Genocide, Fourth Geneva and Apartheid Conventions | ICJ, ICC, UN Commission of Inquiry |
+| `elements.json` | The element matrices for genocide and apartheid, the instrument graph, and the duty-to-prevent scorecard definitions | the conventions and the findings made under them |
+| `children.json` | Children killed on both sides, period by period and year by year, with uncounted periods published as gaps | B'Tselem, DCI–Palestine, OCHA, Gaza MoH, Israel National Council for the Child and others; named per row |
+| `history.json` | The pre-October-2023 baseline, and how far the count falls short of the true toll (Lancet capture–recapture estimate, Gaza Mortality Survey, bodies under rubble) | B'Tselem, OCHA, *The Lancet*, Gaza Mortality Survey |
+| `long-record.json` | 1917–2026 as series: the long toll, the asymmetry ledger, the accountability gap, dispossession, detention, complicity, divestment, vetoes, recognition, land | per record |
+| `conduct-record.json` | Conduct of the war: aid against need, hunger, what remains of infrastructure, AI targeting systems, human-shields investigations, the Hannibal Directive, child detention and deaths in custody, and other topics | WHO, UNRWA, UNESCO, OCHA, CPJ, Physicians for Human Rights and others |
+| `war-record.json` | Arms transfers by supplier and year, the Lebanese toll 1982–2026, and operations in Lebanon, Syria, Yemen and Iran | UN Commission of Inquiry, OCHA, B'Tselem, government records |
+| `world-positions.json` | For every state: recognition of Palestine and its date, sanctions, ICJ interventions, and whether its government has called the conduct in Gaza genocide (with speaker, date, words and source) | UN records, foreign ministries, General Assembly addresses |
+| `nakba.json` | The 456 towns and villages depopulated in 1947–50: sub-district, date, 1948 population and land area, the military operation, what happened there, what stands on the site now, coordinates | Salman Abu Sitta, *Atlas of Palestine 1917–1966* |
+| `maps.json` | Governorate-level figures: Gaza on the IPC famine scale at each round since famine was confirmed, and the West Bank settler-attack and displacement series | IPC, OCHA |
+| `entities.json` | The accountability ledger: named persons and companies, warrants, sanctions, and the 125 states parties to the Rome Statute with their duty to cooperate | joined from `statements.json`, `report.json`, `world-positions.json` |
+| `constituency.json` | Every Commons seat and its MP: votes on Palestine, early day motions, words on genocide, petition signatures by seat, polls, registered interests and donations, and a stated score | UK Parliament APIs, Electoral Commission |
+| `constituency-speeches.json` | A verbatim excerpt of each sitting MP's contributions to every debate on the subject since 7 October 2023 | Hansard (Open Parliament Licence) |
+| `provenance.json` | The provenance graph: each claim, the source bodies it rests on, how each body is classified, and the results of the switches | derived from every record's `source` field |
+| `falsification.json` | The falsification register, ordered weakest first | derived from `provenance.json` and `statements.json` |
+| `tests.json` | The statistical tests: null hypothesis, test, effect size, interval, raw and adjusted p-value, sources and the series plotted | `data/`, plus PCBS, UNOSAT, B'Tselem, Yesh Din, CPJ, Peace Now |
+| `claim-patterns.json` | The phrase index behind `#/answer`: how each claim is worded in public, mapped to the rebuttal that answers it | the survey, Part XVI |
+| `chart-events.json` | Dated events that can be drawn on the time series: ceasefires, ICJ orders, ICC warrants, the total blockade, the famine declaration, closures of crossings | OCHA and contemporaneous reporting |
+| `sources.json` | The linked source library, grouped by kind | each entry links to its publisher |
+| `report.json` | The whole survey as structured data: every part, section, paragraph, list, table, chronology entry and bibliography entry | the survey |
+| `report-meta.json` | The survey's title, counts and full bibliography, without the text | the survey |
 
-| Layer | Owner | File |
-|-------|-------|------|
-| 3D scene, camera, render loop | Three.js (ESM via importmap) | `js/scene.js` |
-| Scroll-driven state | GSAP + ScrollTrigger, writing only to a plain `state` object | `js/app.js` |
-| Charts | ECharts + echarts-gl, each on its own canvas | `js/charts.js` |
-| Markup and overlay | Plain DOM strings | `js/views.js`, `css/style.css` |
+The map geometry under `data/geo/` (`world.json`, `palestine.json`, `governorates.json`) is published as well. Each dataset's `meta` block records when it was generated and what it covers.
 
-Libraries load from CDN as UMD scripts (echarts 5.5.1, echarts-gl 2.0.9, gsap 3.12.5 and its ScrollTrigger plugin), each pinned with a subresource-integrity hash and `crossorigin="anonymous"`. Three 0.160.0 loads as an ES module through an import map, which carries its own `integrity` map for the same file, so every third-party byte on the site is pinned by hash. Browsers that do not yet honour import-map integrity fall back to the pinned version without the check.
+### Embedding charts
 
-### Routing
+Every chart can be placed on another site, together with its title, caption and source. The `embed` button on any chart copies a ready-made snippet:
 
-A hash router over twelve routes: `#/overview`, `#/tour`, `#/data`, `#/timeline`, `#/evidence`, `#/rebuttals`, `#/statements`, `#/legal`, `#/sources`, `#/api`, `#/changelog`, `#/embed`. The data route is split into nine chapters, each its own sub-route: `#/data/gaza`, `#/data/asymmetry`, `#/data/since-1948`, `#/data/complicity`, `#/data/land`, `#/data/west-bank`, `#/data/wars`, `#/data/world`, `#/data/tables`. The tour takes a step number the same way — `#/tour/1` to `#/tour/8` — so a single step of the guided path can be linked to on its own. In-page anchors (`#part-…`, `#sec-…`) are deliberately **not** routes — `route()` scrolls to them rather than re-rendering, so a link into the middle of the evidence browser lands where it points.
+```html
+<iframe src="https://palestinerecord.github.io/#/embed/gaza-monthly"
+        width="100%" height="460" loading="lazy" frameborder="0"
+        title="Palestinians killed in Gaza, per month"></iframe>
+```
 
-### Crawlability and sharing
+An embedded chart keeps drawing from the live data, so it stays current, and the attribution goes wherever the chart goes. Add `?theme=light` before the `#` for a light page. Every chart's embed address is listed on [`#/api`](https://palestinerecord.github.io/#/api).
 
-A hash never reaches the server, so to a crawler or a link preview every route is the same URL — `index.html`, which before any JavaScript runs is an empty `<main>`. Two mechanisms fix that without abandoning hash routing.
+Each chart card also has these tools:
 
-**The head is rewritten per route.** `Views.meta(name, sub)` holds a title and a description for each of the nineteen crawled routes, and `setHead()` in `js/app.js` writes them into `document.title`, the description, the canonical link and the whole og/twitter block on every render, pointing the card at `assets/og/<slug>.png`. The base URL comes from the canonical tag rather than from `location`, so a page rendered on localhost still advertises the public URL. An embed URL takes its title from the chart it carries and borrows the overview's card, since a chromeless iframe is not a page anyone should be landing on from a search result.
+- `link`: a deep link to the chart in place, such as `#/data/gaza&chart=gaza-monthly`
+- `png`: a downloadable image of the chart
+- `csv`: the plotted values
+- `table`: the same values as an accessible table
 
-**Each route is also written out as a static page.** `prerender.py` renders every route in headless Chrome with `?prerender=1` — a flag that turns off the charts, the scroll reveals, the counting numbers and the WebGL field, so the dump catches the text at rest rather than a page frozen mid-animation — and writes `snapshot/<slug>.html`. The snapshots keep the text, the tables, the links and the source references, and drop everything that cannot work without script: the scripts themselves, every `<button>`, the canvases and the search overlay. `<details>` stays, because the rebuttals open without JavaScript. Each empty chart container becomes a line of prose linking to the live chart through the app's own deep-link form, `#/data/gaza&chart=gaza-monthly`.
-
-Snapshots are **self-canonical**. A canonical pointing back at a fragment URL would collapse to the site root for every search engine and leave eighteen of the nineteen routes unindexed, which is the problem the snapshots exist to solve. Nothing is served to a crawler that a reader is not also shown: each snapshot opens with a visible note saying what it is, when it was generated, and where the interactive version is.
-
-`#/embed` is the one route that is deliberately never crawled: `UNCRAWLED` in `prerender.py` skips it, because a chromeless single chart has no text of its own and a snapshot of one would compete in search with the chapter it came from.
-
-Structured data lives in two JSON-LD blocks in `index.html` — a `ScholarlyArticle` describing the report, and a `Dataset` describing the JSON under `data/` with its distributions and measured variables, so it can be found through Google Dataset Search. `prerender.py` stamps both `dateModified` values from `data/timeseries.json`, and fails if it cannot find exactly two, so the structured data cannot drift from the data actually shipped.
-
-### Chart registry
-
-A view emits `<div class="chart" data-chart="name">`; `Charts.init(root, data)` scans the rendered DOM, looks each name up in the registry `R` (93 charts), and builds it. Each build is wrapped in its own `try`/`catch`, so one failing WebGL chart cannot abort the page, and charts fade in on an IntersectionObserver rather than all at once.
-
-To add a chart: add `R['my-chart'] = () => ({ ...echarts option })` in `js/charts.js`, then `chartCard('my-chart', title, note, ref, cls)` in `js/views.js`. A name must be unique on the page it appears on — `chartCard()` emits `id="chart-<name>"`, and the PNG, CSV and table tools resolve the chart through that id.
-
-A builder may also return a promise of an option; `init()` awaits it before calling `setOption`. The maps use this to fetch their geometry on first use. A builder that rejects leaves a note in the card rather than an empty box.
-
-### Chart tools
-
-Every card carries `link`, `png`, `csv`, `embed` and `table`. Charts listed in `EVENTED` in `js/charts.js` carry a sixth, `events`, which draws the dated turning points in `data/chart-events.json` across the series as a `markLine`. The layer is off by default so the shape of the series is read first; `Charts.toggleEvents(name)` flips it and rebuilds the chart with `{ notMerge: true }`, which is what actually removes the markers again — a merged `setOption` would leave the previous `markLine` in place. The 11 October 2025 ceasefire is not part of that layer: it is drawn on every dated series unconditionally, which is why both it and the optional events are built by one `seriesMarks()` call. A series may hold only one `markLine`, so they cannot be separate.
-
-### Embeds
-
-`#/embed/<chart>` renders one chart and nothing else: no topbar, no subnav, no hero, no footer, just the card with its title, its note and its source line, sized to the frame. The `embed` tool on every card copies the snippet that produces it, with the site's own origin read from the canonical tag rather than from `location`, so a snippet copied on localhost still points at the live site.
-
-The route exists so the charts can travel. A journalist, a campaign or a teaching page can carry the figure with its attribution attached and its source named, which a screenshot cannot do, and the chart stays current because it is still being drawn from the data here. The frame accepts `?theme=light` for a page that is not dark.
-
-`Views.charts()` is the index behind it, and it is derived rather than curated: it renders every route once into a string, scans the markup for `data-chart-card` and the title, source and note attributes the card already carries, and caches the result. A hand-kept second list of charts would go stale the first time one was renamed; this one cannot disagree with what the page draws, because it is read out of what the page draws. It currently indexes all 93.
+Dated series also carry an `events` toggle, which overlays the turning points from `chart-events.json`.
 
 ### Share cards
 
-`js/share.js` draws a 1080×1080 PNG for any statement and any headline figure, on a canvas, with no network call and no dependency: the flag is drawn rather than fetched, and the text is laid out by `wrap()` and `fitted()`, which shrinks the type to make a long quotation fit rather than truncating it — a quotation cut off mid-sentence is a misquotation.
+Every statement and every headline figure has a `card` button. It draws a 1080×1080 image in the browser, with no network request, carrying the speaker, date, source and the site's address. A long quotation is set in smaller type rather than cut short.
 
-Every statement card and every `.stat` block carries a `card` button. The button is invisible until the card is hovered or focused, and permanently visible under `@media (hover: none)`, where there is no hover to reveal it.
+### Citing
 
-The text is read out of the rendered DOM rather than out of the data — the quote from the `<blockquote>`, the speaker from `.who`, the role, date and source from their own elements; the figure from `.val`, `.lbl`, `.note` and `.src`. That is the whole point: an image generated from a second copy of the data can drift from the page it claims to represent, and an image that misquotes the record is worse than no image. Every card carries the speaker, the date, the source and the site's own URL, so the figure arrives attributable.
+The footer of every page generates a citation in APA, Harvard and BibTeX form. Each citation names the route and the date of the data on screen. The site also carries `ScholarlyArticle` and `Dataset` structured data, so the datasets can be found through Google Dataset Search.
 
-### The open-data route
+### Following changes
 
-`manifest.py` writes `data/index.json`: every published dataset with a title, a description, its source, its size, its top-level fields and a record count, plus the generation date. `#/api` renders it as the open-data page, listing the eighteen datasets with their download links and all 93 charts with their embed URLs.
+- [`#/changelog`](https://palestinerecord.github.io/#/changelog) lists every dated revision.
+- [`feed.xml`](https://palestinerecord.github.io/feed.xml) is an Atom feed of the same revisions for feed readers.
+- Each nightly refresh that publishes new data also asks the Internet Archive's Wayback Machine to save a copy. That gives an independent timestamp for anyone who does not want to rely on this repository's history.
 
-The manifest fails hard rather than shipping an incomplete index: a file in `data/` with no entry in `DESCRIPTIONS` stops the build, and so does a described file that no longer exists. `--check` compares only the dataset list, not the date, so it can be used as a gate without the timestamp making every run dirty.
+### Offline use and installing
 
-### Light theme
+The site is a progressive web app, so it can be installed to a phone's home screen. A service worker (`sw.js`) keeps a copy of everything already loaded, so the record still opens on a poor connection or none.
 
-`data-theme="light"` on `<html>` switches the palette. The choice is stored in `localStorage` under `record-theme` and applied by a small inline script in the head, before first paint, so a reader who chose light does not get a dark flash on every load; with nothing stored it follows `prefers-color-scheme`. `?theme=light` forces it, which is what the embeds use.
+- Pages are fetched from the network first and fall back to the cached copy.
+- Data files are served from the cache at once and refreshed in the background.
+- Versioned assets are served from the cache.
 
-The charts are not given a second palette. `readTheme()` in `js/charts.js` reads the colours — including `--red`, `--accent`, `--blue`, `--green` and `--violet` — from the CSS custom properties at build time, so a theme switch costs a re-render and nothing else, and the two palettes cannot drift apart. Anything that captures a colour at module load would freeze the palette it was loaded under; that is why `eventTone()` is a function rather than the `EVENT_TONE` table it replaced.
+Load any page with `?nosw=1` to unregister the worker and clear its caches.
 
-The light palette is chosen for contrast, not for a lighter look: the chart hues meet 4.5:1 against white, which the dark palette's red does not.
+---
 
-### Changelog
+## Terms of re-use
 
-`#/changelog` is the revision history, read out of Appendix F of `report.json` rather than kept separately: it takes the paragraphs whose text opens with a dated `Update (…)` or `Enhanced edition (…)` prefix, strips the prefix, and sorts newest first. Fifty revisions, each dated. The report records its own history, so the page that publishes the report can publish that history without a second file to keep in step.
+There are two layers, and they carry different terms. [`licence.html`](https://palestinerecord.github.io/licence.html) has the full text.
 
-### The names
+- **The compilation:** the selection and arrangement of the record, the written survey, the derived JSON under `data/` and the charts drawn from it. You may copy, quote, redistribute and build on it for any purpose, including commercial use, with attribution to *The Documented Record* (https://palestinerecord.github.io/). No permission is needed.
+- **The underlying figures** are not ours to licence. Each record names the body that recorded it, and that body's terms govern the figure. The two external datasets the site is built on are Tech For Palestine's casualty series (public domain, under the Unlicense) and OCHA's subnational boundaries for the State of Palestine (CC BY 3.0 IGO).
 
-The hero field draws one point per counted death and, by itself, says nothing about who any of them were. Two controls make it say something.
+---
 
-The boot screen cycles `names-boot.json` at 450 ms a name — Arabic, transliteration and age — and states what reading the whole list at that pace would cost: nine hours and six minutes for 72,835 names. Under `prefers-reduced-motion` it shows one name and does not cycle.
+## Challenging a claim
 
-The overview carries a **Name the points** button. Turning it on fetches `names.json`, repaints the field from the list rather than from the proportional sample it starts as — amber for a person under 18, red for an adult — and raycasts the points on `pointermove` so hovering one gives that person's name, age and sex. The list is shorter than the field by roughly the share of the dead who have never been identified, and those surplus points are painted grey and say so on hover: *Counted in the toll; no name on the register.* The count in the note is computed, not written: on a display drawing 24,557 points, 24,279 carry a record, none of them twice, and the remaining 278 stand for the 835 unidentified dead. The layer turns itself off when the reader leaves the overview.
+The record is meant to be tested. To challenge a figure, quotation or finding, open an issue in this repository with the `challenge` label. Each entry in the falsification register, on the [method page](https://palestinerecord.github.io/#/method), has a button that opens a pre-filled issue naming the entry, its published value, its date and the sources it rests on.
 
-Two constraints shaped the implementation. The field's own colouring puts all the child-coloured points first, while the list is in publication order, so colour and size must be repainted from each point's own record or the label would contradict the point. And the scroll displacement used to live in the vertex shader, where a CPU raycaster cannot see it — it is now applied to `field.position.y`, so the point a reader is pointing at is the point the hit test returns. A Y-translation is unchanged by the field's Y-rotation, so the visual result is identical.
+A challenge succeeds on evidence, and the register states what evidence would settle each kind of claim. A superseding figure from a source of equal or better standing replaces the old one. A quotation shown to be fabricated or materially taken out of context is withdrawn. A finding withdrawn by the body that made it is removed. The correction is dated in the changelog.
 
-### The elements, the instruments and the states
+Corrections to errors in the site itself (broken charts, accessibility problems, wrong links) are welcome as ordinary issues, using the `bug` or `accessibility` labels.
 
-The legal route closes with three blocks built from `data/elements.json`, all three answering the same objection: that a crime has not been made out because one part of it has not been shown.
+---
 
-**The element matrices** set each crime out as its instrument defines it — the five acts of Genocide Convention Article II, then the three elements of the crime of apartheid — and place the evidence that answers each part beside it under three columns: what the record counts, who has found it, and what was said. Every cell names the report section it came from and, where the figure is plotted, links to the chart through the app's deep-link form. They are HTML tables rather than drawn grids: the cells carry sentences and links, which a canvas cannot hold, and a screen reader reads a table of elements against evidence in the order the argument runs. Where nothing in the record supplies a cell, the cell says so — Article II(d) carries no statement directed at births as such, and the matrix records that rather than reaching for something adjacent.
+## Running the site locally
 
-**The instrument graph** (`R['instrument-graph']`) draws which finding rests on which instrument: thirteen instruments on one arc of a ring, the twenty-four bodies that relied on them around the rest, coloured by class, and forty-seven edges each carrying the article cited. The layout is `circular` rather than force-directed on purpose — a force simulation settles somewhere different on every load, which would make the picture uncitable and the static snapshots irreproducible.
-
-**The scorecard** is the duty-to-prevent tracker the legal page's closing note calls for: one row per state, sortable by any column, showing whether it recognises Palestine and when, whether it has halted or restricted arms, what sanctions it has imposed, whether it is party to the ICJ case, and what share of Israel's arms imports it supplies. The rows are derived at render time rather than curated — the union of the G20, the ICJ applicant and interveners, every state on the embargo list and every state that sanctioned Israeli ministers in June 2025 — so a state added to any of those datasets appears here without a second edit. The four datasets name a handful of states differently (Türkiye and Turkey, Czechia and the Czech Republic), so `scorecardRows()` resolves every name through the alias table and the 195-entry recognition list before keying on it, or the same state would appear twice with half its record in each row. Sorting is `behaviours.legal` in `js/app.js`: cells carry a numeric `data-sort` so *Halted* sorts above *Restricted* above *Continuing* rather than alphabetically. Article 63 intervention concerns the construction of the Convention and is not support for either party — the United States and Hungary both filed, and the note under the table says so.
-
-### The definition, the declaration and the law
-
-The world chapter closes with the block built from `figures.json`'s `definitions` key, which holds four records that only make sense read together: the three competing definitions of antisemitism (IHRA 2016, the Jerusalem Declaration 2021, the Nexus Document 2021 revised 2024), the J50 Declaration of 11 September 2026 with its full signatory list, the two British judgments that have actually decided the question, and the counter-evidence stated at its strongest.
-
-`R['j50-map']` is the only chart in the block. It is a choropleth of the forty countries whose Jewish communal organisations signed, shaded by the number of signatory bodies in each — one, two, or three to four — and by nothing else: it is not a population, a share, or a measure of opinion, and the card note says so, because a map of institutions reads as a map of people unless it is stopped from doing it. The tooltip names every signatory body in the country, since the list is the evidence for the declaration's claim to breadth. Country names are resolved through the same `data.positions.alias` crosswalk the other two world maps use, so the curated names match the Natural Earth geometry.
-
-Everything else in the block is HTML rather than canvas, for the same reason the element matrices are: the cells carry citations, quotations and holdings. The J50 totals are stated as counted from the primary text — seven global and regional organisations, fifty-two national and community organisations, forty countries, fifty-nine signatories in total — and the same count is what the record shows for the forum that drafted it. The two judgments are given with their citations and their limits, including that the belief held protected in *Miller* was the bounded formulation advanced in that case rather than anti-Zionism at large, and the block ends with the counter-evidence rather than with the argument it answers.
-
-### Cache-busting
-
-Every local asset URL carries `?v=N` — ten in `index.html`, and one in `js/views.js`, where the overview hero writes the flag `<img>` from a template string. Bump them together on every change, or returning visitors keep the old JS and CSS:
+Nothing needs building. Clone the repository and serve the folder over HTTP:
 
 ```bash
-python3 - <<'PY'
-import re, pathlib
-n = max(int(m) for m in re.findall(r'\?v=(\d+)', pathlib.Path('index.html').read_text())) + 1
-for f in ('index.html', 'js/views.js'):
-    p = pathlib.Path(f); p.write_text(re.sub(r'\?v=\d+', f'?v={n}', p.read_text()))
-print('cache-bust now v=%d' % n)
-PY
+git clone https://github.com/palestinerecord/palestinerecord.github.io.git
+cd palestinerecord.github.io
+python3 -m http.server 8777
+open http://localhost:8777/          # or visit it in any browser
 ```
 
-## Data
+The site must be served over HTTP. Opening `index.html` straight from the filesystem fails, because the views `fetch()` their data and browsers block that for `file://` pages.
 
-| File | Generated by | Contents |
-|------|--------------|----------|
-| `data/report.json` | `build.py` | The whole report: parts, sections, blocks, all 13 tables, the Appendix B chronology, the bibliography |
-| `data/timeseries.json` | `fetch_timeseries.py` | Monthly Gaza / West Bank casualty series and infrastructure damage, from the Tech For Palestine daily datasets |
-| `data/raw/` | `fetch_timeseries.py` | The raw upstream JSON, cached so `--offline` can rebuild without the network |
-| `data/names.json` | `fetch_timeseries.py` | Every third record of the Ministry of Health identification list, in published order — Arabic name, transliteration, age, sex, and nothing else (24,279 records, 2.0 MB, 565 KB gzipped). One record per point the hero field draws |
-| `data/names-boot.json` | `fetch_timeseries.py` | 260 of those records, evenly spaced through the list, for the boot screen to cycle (22 KB). A separate file so the loading screen never waits on the large one |
-| `data/figures.json` | hand-curated | ~100 statistics grouped by topic, each with its note, source and originating report section. The last group, `definitions`, is not statistics: it holds the three competing definitions of antisemitism, the J50 Declaration with its forty-country signatory list, the two British judgments on the question and the counter-evidence |
-| `data/statements.json` | hand-curated | Documented statements of intent: speaker, role, date, verbatim quote, context, categories, tier, legal significance |
-| `data/sources.json` | hand-curated | The linked source library, grouped by kind |
-| `data/history.json` | hand-curated | The pre-October-2023 baseline and the undercount layer (Lancet capture–recapture, the Gaza Mortality Survey, bodies under the rubble) |
-| `data/timeline-extra.json` | hand-curated | The contextual chronology — the legal and political steps between the massacres in Appendix B |
-| `data/legal.json` | hand-curated | The proceedings: ICJ orders and the advisory opinion, ICC warrants, the treaty obligations each one turns on |
-| `data/long-record.json` | hand-curated | The 1948–2026 layer: the long toll by period, the asymmetry ledger, the accountability gap, displacement and demolition, mass detention, the complicity ledger, the veto record and where the land went. Constructed estimates are labelled as such and carry their method |
-| `data/world-positions.json` | `build_positions.py` | Where each state stands: recognition of Palestine and its date, sanctions measures, ICJ applicant and interveners. Every country also carries the Natural Earth name the map geometry uses |
-| `data/war-record.json` | hand-curated | What the suppliers authorised and what the wars beyond Gaza cost: German, US and UK arms transfers by year with the German embargo's dates and the composition of the €800m tranche; the Lebanese toll by episode 1982–2026; and every documented operation on the sovereign territory of Lebanon, Syria, Yemen and Iran. The two values no government has published — the German 2022 baseline and the Twelve-Day War toll — carry `estimate: true` and their derivation |
-| `data/conduct-record.json` | hand-curated | The conduct layer the other files do not hold: the aid requirement against what crossed, the hunger caseload, what is left of Gaza's infrastructure, the AI targeting systems, who investigated the human-shields allegation and what each found, the Hannibal Directive on 7 October, the policy of keeping Hamas funded, child detention and deaths in custody, the NPT exception, the coverage and the two UK monitoring series. Every block names the report section it comes from, and each derived value carries `estimate: true` |
-| `data/elements.json` | hand-curated | The legal page's three structured blocks: the two element matrices (Genocide Convention Article II(a)–(e) and the three elements of the crime of apartheid, each row carrying the evidence that answers it under three headings — what the record counts, who has found it, what was said — with the report section and, where one exists, the chart); the instrument graph (13 instruments, 24 findings, 47 citations, each node carrying its full title, date and holding); and the row set and column definitions for the duty-to-prevent scorecard. Where nothing in the record supplies a cell, the cell says so rather than being left blank |
-| `data/chart-events.json` | hand-curated | The dated events the Gaza series can be annotated with: the siege order, the ICJ orders and advisory opinion, the ICC warrants, the two massacres at aid and displacement sites, the total blockade, the famine declaration, the two Commission of Inquiry findings and the closure of the last crossings. Each carries the tooltip text and the report section it comes from |
-| `data/nakba.json` | `build_nakba.py` | Every town and village depopulated in 1947–50, one record each: name, sub-district, date, 1948 population and land area, the Israeli operation it fell to, what the atlas records happened there, what stands on the site now, and coordinates (456 villages, 438 placed, 95 KB). Also the monthly, sub-district, cause and site-condition tallies the charts read |
-| `data/maps.json` | hand-curated | The governorate-level figures neither `build.py` nor the timeseries can derive: Gaza on the IPC scale at each of the three rounds published since the famine was confirmed, and the West Bank settler-attack, displacement, annual and Operation Iron Wall series. Every governorate is keyed by its OCHA name; a governorate no body has published a figure for is left out of the series and drawn as unreported, never given a value |
-| `data/index.json` | `manifest.py` | The open-data manifest `#/api` is built from: every published dataset with its title, description, source, byte size, top-level fields and record count, and the date the set was generated |
-| `data/geo/world.json` | `build_geo.py` | Natural Earth 1:50m country polygons (241 features, 302 KB) for the two world choropleths |
-| `data/geo/palestine.json` | `build_geo.py` | Natural Earth 1:10m polygons for Israel, the West Bank and Gaza, plus the Mandate outline derived from them |
-| `data/geo/governorates.json` | `build_geo.py` | The sixteen governorates of the West Bank and Gaza Strip from the OCHA Common Operational Dataset (2,027 points, 38 KB), each carrying its P-code, its region and its area |
+These URL flags are useful during development:
 
-`app.js` fetches the fourteen non-geometry files together rather than one after another, so the boot time is the slowest single file and not the sum of all fourteen. The geometry, the names, `nakba.json` and `maps.json` are all outside that payload: `charts.js` fetches a map or data file the first time a chart needs it and keeps the promise, so the two world maps share one request, the three governorate charts share one download of `maps.json`, a reader who never opens a map chapter never pays the 302 KB, and `scene.js` fetches `names.json` only when the reader asks for it. `names-boot.json` is fetched on its own alongside the fourteen and never blocks them — if it is slow or missing, the boot screen simply does not show a name. `index.json` is fetched the same way and is equally non-fatal: it feeds one route, and a reader who came for the charts should not be held at the boot screen by the manifest.
+| Flag | Effect |
+|---|---|
+| `?nosw=1` | Unregisters the service worker and clears its caches. Use this if you keep seeing old files. |
+| `?theme=light` / `?theme=dark` | Forces a theme |
+| `?still=1` | Stops the 3D charts rotating (used by headless checks) |
+| `?prerender=1` | Renders text only: no charts, animations or WebGL. `prerender.py` uses this to take snapshots. |
 
-`app.js` merges `report.json`'s Appendix B chronology with `timeline-extra.json` into one ordered array (`D.timeline`), tagging each entry `record` or `context` so the two remain distinguishable in the UI. Appendix B entries carry no sort key, so one is derived from the date string.
+---
 
-## Regenerating
+## How the site is built
+
+### Front end
+
+The front end is plain HTML, CSS and JavaScript, with no bundler and no framework. Each library owns one layer, and no property is animated by more than one of them:
+
+| Layer | Library | File |
+|---|---|---|
+| 3D scene, camera, render loop | Three.js 0.160.0 (ES module via an import map) | `js/scene.js` |
+| Scroll-driven state | GSAP 3.12.5 and ScrollTrigger, writing only to a plain `state` object | `js/app.js` |
+| Charts and maps | ECharts 5.5.1 and ECharts-GL 2.0.9, each chart on its own canvas | `js/charts.js` |
+| Markup | Plain DOM strings | `js/views.js`, `css/style.css` |
+| Share cards | Canvas, no dependencies | `js/share.js` |
+
+Every third-party script loads from jsDelivr at an exact version, with a subresource-integrity hash and `crossorigin="anonymous"`. Three.js is pinned through the import map's own `integrity` field. A Content-Security-Policy restricts scripts to the site itself and jsDelivr. Network requests may only go to the site, jsDelivr, the Tech For Palestine feed and `api.postcodes.io`, which handles the MP page's postcode lookup.
+
+**Routing.** `js/app.js` holds the hash router, with the route list in `VIEWS`. In-page anchors (`#part-…`, `#sec-…`) are not routes: the router scrolls to them rather than re-rendering, so a link into the middle of the survey lands where it points.
+
+**Charts.** A view writes `<div class="chart" data-chart="name">`. `Charts.init()` then finds each name in the registry `R` in `js/charts.js` and builds the chart. Each build is wrapped in its own `try`/`catch`, so one failing chart cannot take down the page; a failed chart leaves a note in its card. A builder may return a promise, which is how the maps fetch their geometry on first use. To add a chart:
+
+1. Register it: `R['my-chart'] = () => ({ /* ECharts option */ })` in `js/charts.js`.
+2. Place it: `chartCard('my-chart', title, note, ref)` in `js/views.js`. The name must be unique on its page.
+
+The embed index (`Views.charts()`) is built by scanning what the views actually render, not from a separate list, so it cannot fall out of step with the page.
+
+**Themes.** `data-theme="light"` on `<html>` switches the palette. A small inline script applies the stored choice before first paint. The charts read their colours from CSS custom properties when they are built, so both themes come from a single palette definition. The light palette meets 4.5:1 contrast against white.
+
+**Making the site visible to search engines.** A URL hash never reaches the server, so every route looks like the same empty page to a crawler. Two mechanisms deal with this:
+
+- `setHead()` rewrites the title, description, canonical link and Open Graph/Twitter tags for each route.
+- `prerender.py` writes a static, script-free snapshot of every route to `snapshot/`, plus a 1200×630 social card per route in `assets/og/`.
+
+Each snapshot links to itself as canonical, opens with a visible note saying what it is, and links back to the interactive version. Crawlers are never shown anything a reader is not. `sitemap.xml` lists every snapshot, and each nightly publish notifies IndexNow (Bing, Yandex, Seznam, Naver). The hex-named `.txt` file at the root is the IndexNow key and must not be renamed. `google8cbf6aea08d3b76d.html` verifies the site for Search Console.
+
+**Cache-busting.** Local asset URLs carry `?v=N`, in `index.html`, `js/views.js` and `sw.js`, and `sw.js` also declares `const VERSION = 'vN'`. Bump all of them together on every front-end change; `validate.py` fails if they disagree. Do it **before** running `prerender.py`, because the snapshots embed the stylesheet URL.
+
+### Repository layout
+
+```
+index.html            the app shell: CSP, pinned libraries, JSON-LD, theme script
+js/                   app.js (router, loading, behaviour), views.js (every page),
+                      charts.js (chart registry), scene.js (3D field), share.js (cards)
+css/style.css         all styles, both themes
+data/                 the published datasets (see "Open data")
+data/geo/             map geometry
+data/raw/             cached upstream downloads, so builds can run offline
+snapshot/             static, script-free copy of every route
+assets/               icons, the flag, share and social cards (assets/og/)
+sw.js                 service worker (offline support)
+feed.xml              Atom feed of revisions
+sitemap.xml           every snapshot, for search engines
+licence.html          terms of re-use
+nazi-comparison.html  companion essay, generated by companion.py
+*.py                  the build, check and publish scripts (below)
+.github/workflows/    nightly data refresh; monthly dependency check
+```
+
+---
+
+## The data pipeline
+
+Most of the published data is built by scripts in this repository from open upstream sources. The rest is curated by hand and edited directly.
+
+### Generated files
+
+| Script | Writes | From |
+|---|---|---|
+| `fetch_timeseries.py` | `timeseries.json`, `names.json`, `names-boot.json` | Tech For Palestine daily datasets. `--offline` rebuilds from `data/raw/`. The names files are rewritten only when the list was actually downloaded. |
+| `sync_live.py` | updates curated figures marked `"live": true` | `timeseries.json`. It copies a refreshed figure into the curated files, and stops rather than publish a series that has fallen by more than a few per cent, which would mean a truncated or broken download. |
+| `fetch_constituency.py` | `data/raw/` | UK Parliament members, votes, Hansard, interests and petitions APIs, and the Electoral Commission register. No API keys are needed. |
+| `constituency.py` | `constituency.json`, `constituency-speeches.json` | the cached parliamentary record. `--report` prints the joins and writes nothing. |
+| `build_positions.py` | `world-positions.json` | Wikipedia's recognition list (which cites the Palestinian foreign ministry and UN documents), the curated genocide positions in `genocide_positions.py`, and the sanctions and ICJ lists. It checks that the result covers exactly 193 UN member states. |
+| `build_nakba.py` | `nakba.json` | Abu Sitta's village table, checked against the table's own totals |
+| `build_geo.py` | `data/geo/*.json` | Natural Earth 1:50m and 1:10m, and the OCHA Common Operational Dataset (it asserts exactly 16 governorates) |
+| `entities.py` | `entities.json` | joins statements, the survey and state positions; no new claims are added here |
+| `patterns.py` | `claim-patterns.json` | the phrase index for `#/answer` |
+| `provenance.py` | `provenance.json` | the `source` field of every curated record |
+| `falsify.py` | `falsification.json` | the provenance graph and the statements |
+| `manifest.py` | `index.json` | every file in `data/`. It fails if a file has no description or a description has no file. `--check` compares without rewriting. |
+| `prerender.py` | `snapshot/`, `assets/og/`, `sitemap.xml`, JSON-LD dates | the running site in headless Chrome. `--only <slug>` re-renders named routes (never write the sitemap from a filtered run), `--no-cards` skips Pillow, `--budget N` gives a slow machine more time. |
+| `companion.py` | `nazi-comparison.html` | a companion essay in Markdown |
+| `build_icons.py` | `assets/icon-*.png` | draws the flag; only needs rerunning if the mark changes |
+
+`data/report.json` and `data/report-meta.json` come from the survey's source manuscript, and `data/tests.json` from the statistical analysis. Both are kept in a separate, private working repository. `build.py` (in this repository) converts the manuscript into `report.json` losslessly, and `verify.py` checks that every line of the manuscript reached the JSON. Both scripts read the manuscript from that working repository, so they only run where it is checked out, never in the nightly job. Everything else in the pipeline runs from this repository alone.
+
+### Curated files
+
+`figures.json`, `statements.json`, `sources.json`, `history.json`, `timeline-extra.json`, `legal.json`, `long-record.json`, `war-record.json`, `conduct-record.json`, `elements.json`, `children.json`, `chart-events.json` and `maps.json` are edited by hand when the record gains a figure, statement, finding or source. Keep their field names exactly as they are, because the views and charts read them by name. Every record needs a `source` field, and a `§` reference where it comes from the survey.
+
+### Regenerating after a change
 
 ```bash
-python3 build.py            # report-final.md  →  data/report.json
-python3 verify.py           # asserts no source line was lost; must print "missing fragments: 0"
-python3 fetch_timeseries.py # live casualty series and the named dead (--offline rebuilds from data/raw)
+python3 fetch_timeseries.py   # the live series (--offline to use the cache)
+python3 sync_live.py          # carry it into the curated figures
+python3 provenance.py         # then rebuild everything that holds a copy
+python3 falsify.py
+python3 validate.py           # must report 0 failures
+python3 manifest.py
+# bump ?v=N and the service-worker VERSION here if the front end changed
+python3 prerender.py          # unfiltered, so the sitemap keeps every route
+python3 render_check.py
 ```
 
-If `verify.py` reports missing fragments, a new markdown construct has defeated the parser. Fix `build.py`; do not ship a lossy dashboard.
+---
 
-`fetch_timeseries.py` writes three files: `timeseries.json` on every run, and `names.json` and `names-boot.json` only when the identification list was actually downloaded. Under `--offline` it leaves the existing pair in place rather than emitting an empty one, so a rebuild without the network cannot silently empty the hero field of its names.
+## Checks
 
-Two further generators are run only when their upstream source changes, not on every pass:
+The checks test the facts first and the rendering second, because a chart can draw a wrong number perfectly.
+
+- **`validate.py`** controls publication: failures block it, warnings do not. It reads the data, never the rendered page, and checks:
+  - **Provenance:** every figure, statement, source and finding has an attribution, and every section reference points to a section that exists.
+  - **Agreement:** headline figures match the live series, and monthly series add up to their cumulative series.
+  - **Map joins:** every country and governorate named in the data resolves to a shape on the map. Otherwise ECharts silently drops it.
+  - **Arithmetic:** declared totals equal the lists they count.
+  - **Dates:** nothing is dated in the future, and sorted records are actually sorted.
+  - **Wiring:** every registered chart is drawn by some view.
+  - **Cache-busting:** the version number is the same everywhere.
+
+  `--quiet` prints only failures; `--warnings` prints everything.
+- **`render_check.py`** opens every route in headless Chrome. It fails if a chart container has no canvas in it, if a chart fell back to its failure note, or if the page logged an error. `--only <route> …` checks a subset.
+- **`deps_check.py`** compares every third-party Python import in the repository with `requirements.txt`, so an undeclared dependency is caught on a workstation before it breaks the nightly run on a clean machine.
+- **`manifest.py --check`** confirms that the open-data index matches the files in `data/`.
+
+Two things still need a person to look:
+
+- **Maps:** a choropleth whose data has not matched its shapes draws as a uniformly grey map, which a DOM check cannot catch. Screenshot `#/data/world` and `#/data/land` after any change to country names or geometry.
+- **The duty-to-prevent scorecard:** a state whose name did not match across datasets appears as two half-rows. Check `#/legal` for duplicate rows.
+
+### Requirements
+
+- Python 3; the CI runner uses 3.12. Almost everything uses only the standard library. The two exceptions are pinned in `requirements.txt`: `Markdown==3.4.1` for `companion.py`, and `Pillow==10.4.0` for the share cards and icons.
+- Google Chrome, for `prerender.py` and `render_check.py`.
 
 ```bash
-python3 build_geo.py        # Natural Earth and the OCHA COD  →  data/geo/*.json
-python3 build_positions.py  # recognition, sanctions and ICJ filings  →  data/world-positions.json
-python3 build_nakba.py      # Abu Sitta's village list  →  data/nakba.json
+python3 -m pip install -r requirements.txt
+python3 deps_check.py
 ```
 
-`build_geo.py` downloads the Natural Earth vector files (public domain), keeps only the fields the maps read, rounds the coordinates and drops the smallest rings, which is what takes the world file from several megabytes to 302 KB. It also derives the Mandatory Palestine outline from the Israeli and Palestinian parts rather than carrying a hand-drawn polygon — every ring of both, as one multipolygon. That is a visual outline, not a topological union, and the land map does not draw it: painting the three parts one colour gives the same shape without a fourth polygon sitting on top of them and swallowing their tooltips. The governorate file comes from a different source, the OCHA Common Operational Dataset, because that is the boundary set the UN agencies report against and so the only one whose names join the published figures without a crosswalk; the script asserts it found exactly sixteen governorates. Both territories sit in one file, and since ECharts cannot draw part of a registered map, a chart that wants one of them registers its own filtered copy from the same download.
+---
 
-`build_positions.py` parses the recognition list from the Wikipedia article "International recognition of Palestine", which cites the Palestinian Ministry of Foreign Affairs list and the underlying UN documents entry by entry; the sanctions and ICJ layers are transcribed from the report, each naming the section it came from. Every country name is resolved to the name Natural Earth uses, and the script raises rather than emitting an entry that would silently fail to draw. It also asserts that the recognising and non-recognising lists sum to exactly the 193 UN member states, so a parser that half-reads a table fails loudly.
+## Automation
 
-`build_nakba.py` parses the table in the Wikipedia article "List of towns and villages depopulated in the 1948 Palestine war", which is a transcription of Salman Abu Sitta's *Atlas of Palestine 1917–1966*, pp. 108–115. It raises on an unknown sub-district rather than skipping the row, and it checks the population and land-area totals it computes against the total row the table carries for itself — they agree to within four thousandths of one per cent. A village is classified as a massacre site only where the atlas uses that word; "atrocity" is the atlas's own separate term and is counted separately.
+**Nightly data refresh** (`.github/workflows/dashboard.yml`) runs at 05:17 UTC, again at 13:43 UTC in case GitHub drops the first run, and on any push that touches the data, front end or build scripts. In order, it:
 
-All three scripts take `--offline` to rebuild from the cached raw download in `data/raw/`.
+1. installs the pinned libraries and runs the dependency check;
+2. pulls the casualty series, retrying three times and falling back to the cached copy;
+3. runs `sync_live.py`, then rebuilds the provenance graph, the falsification register and the manifest if anything moved;
+4. runs `validate.py`;
+5. rebuilds the snapshots and sitemap, and runs `render_check.py`;
+6. commits and pushes, with the commit itself serving as the deployment;
+7. asks the Internet Archive to save a copy and notifies IndexNow.
 
-Last, after any change to the routes, the data or the copy, regenerate the manifest and the static layer:
+The failure policy works as follows:
 
-```bash
-python3 manifest.py         # data/*.json  →  data/index.json   (--check compares without rewriting)
-python3 prerender.py        # snapshot/*.html, assets/og/*.png, sitemap.xml
-```
+- **Infrastructure problems never stop a refresh.** A slow package index, an upstream outage, a runner without Chrome or a push race are retried, then worked around, and the data still goes out.
+- **Wrong data always stops a refresh.** If `validate.py` fails, nothing is committed and the last good figures stay live.
+- **If the snapshots fail to render,** they are thrown away and the validated data is published on its own.
+- **Runs do not end red.** Anything that needs a person opens or updates a single issue titled *Dashboard refresh needs attention*, and the next clean run closes it. A green tick means the workflow completed, not that data was published. An open issue is the signal that something needs attention.
 
-`manifest.py` raises rather than emitting a partial index: a data file with no entry in `DESCRIPTIONS`, or an entry whose file has gone, stops the run. A published open-data index that is missing a dataset is worse than no index, because it is believed.
+**Monthly dependency check** (`.github/workflows/dependencies.yml`) runs on the first of each month. It compares each pinned front-end library with its latest release on jsDelivr and opens an issue if one has moved. Updating a pin is left to a person, because it means recomputing the integrity hash, bumping the cache version and re-rendering every route.
 
-It serves the folder on a free port itself, so nothing need be running, and it touches the network not at all. `--only <slug> …` re-renders named routes, `--no-cards` skips the Pillow step, `--no-snapshots` redraws the cards from the snapshots already on disk, and `--budget N` raises the virtual-time budget on a slower machine. The script fails loudly rather than shipping a hole: an empty DOM, a route reporting a data load failure, a loading screen still up when the budget expired, or a `VIEWS`/`DATA_CHAPTERS` list it could not parse all stop the run. That last check is why the route list is read out of `js/app.js` and `js/views.js` rather than kept here — a chapter cannot be added and then silently never crawled.
-
-`sitemap.xml` lists the site root and every snapshot. `--only` filters the sitemap as well as the snapshots, so a run that regenerates one route must not be the run that writes the sitemap — regenerate unfiltered after adding a route. GitHub Pages only honours `robots.txt` at a domain root, so for a project site the sitemap has to be submitted directly in Search Console rather than advertised from a `Sitemap:` line.
-
-A crawl can be weeks behind a change, so the nightly workflow also submits the sitemap's URLs to IndexNow after a successful push. The key is the hex-named `.txt` file at the repository root, whose contents are its own name; a submission is accepted only while that file is served and matches, so the file must not be renamed or removed. Bing, Yandex, Seznam and Naver read IndexNow. Google does not, which is what Search Console and the sitemap are for.
-
-The hand-curated files are not regenerated and must be edited directly when the report gains a figure, a statement or a source. Keep their schemas exactly as they are — the chart registry reads those field names.
-
-## Dependencies
-
-Almost everything here is the standard library. The exceptions are pinned in `requirements.txt` — `Markdown`, which `companion.py` uses to turn a companion document into a page, and `Pillow`, which draws the share cards and the favicons — and installed with `python3 -m pip install -r requirements.txt`.
-
-```bash
-python3 deps_check.py       # every third-party import, declared and installed?
-```
-
-`deps_check.py` parses every `.py` file in the folder, works out which imported names are neither standard library nor a module of this folder, and compares that set against `requirements.txt`. It runs as the workflow's third step and as one of `validate.py`'s checks, which means an undeclared dependency stops a publish here rather than surfacing on the runner.
-
-That check exists because the alternative was demonstrated. The workstation has every library anyone has ever installed on it; the runner starts with nothing. When `companion.py` began importing `markdown` at module level, and `prerender.py` imports `companion` only to read its list of documents, every nightly refresh died in `crawl_links` after writing all twenty-six snapshots and before the sitemap, so the commit step never ran and the site quietly stopped being rebuilt. Nothing on the workstation could have noticed. Imports inside a function body are counted for the same reason: a deferred import fails just as hard, only later and further from the cause.
-
-## Verifying
-
-```bash
-python3 render_check.py                       # every route, in a real browser
-python3 render_check.py --only day data-gaza  # one or two of them
-```
-
-`render_check.py` is the check to run, and the nightly workflow runs it before it commits anything. It reads the route list from `js/app.js` and `js/views.js` the way `prerender.py` does, serves the folder on a free port, opens each route in headless Chrome, and fails the run on any route where a chart container has no canvas inside it, where a chart fell back to its failure plate, or where the page itself logged an error. Chrome's own complaints about display links and sandbox policy are not the page and are filtered out; only lines the renderer tags `CONSOLE` are treated as the site talking.
-
-The loop below is the same check written out by hand, kept because it explains what the script is doing and why each flag is there:
-
-```bash
-for r in overview timeline evidence rebuttals statements legal sources api changelog \
-         data/gaza data/asymmetry data/since-1948 data/complicity data/land \
-         data/west-bank data/wars data/world data/tables; do
-  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-    --headless=new --no-sandbox --disable-gpu --disable-software-rasterizer \
-    --virtual-time-budget=12000 --dump-dom "http://localhost:8777/index.html?still=1#/$r" 2>/dev/null \
-  | python3 -c "import sys,re; h=sys.stdin.read(); c=len(re.findall(r'data-chart=',h)); v=len(re.findall(r'<canvas',h)); g=h.count('map geometry could not'); w=h.count('needs WebGL'); print('$r','bytes=%d'%len(h),'charts=%d'%c,'canvas=%d'%v,'geomfail=%d'%g,'webglfail=%d'%w,'FAIL' if (len(h)<5000 or v<c or g or w or 'Could not load' in h) else 'ok')"
-done
-```
-
-`canvas` must be at least `charts` on every route, and `geomfail` and `webglfail` must both be `0` — a chart that fails to build leaves a note in its container rather than throwing, so the counts are the only honest check.
-
-`bytes` is in the line for a reason, and the failure condition tests it first. If Chrome is killed, or exits before the route has rendered, `--dump-dom` emits nothing at all; a check that only looks for the words `Could not load` then reads that empty stream as zero charts, zero canvases and no error, and prints `ok`. A DOM under 5,000 bytes is not a passing route, it is an absent one.
-
-The GL flags matter more than the budget. Under `--use-gl=swiftshader` the one heavy chapter never finishes: `data/gaza` carries twenty charts, the software renderer stalls in `ReadPixels`, and virtual time does not advance while it waits, so the route writes zero bytes whatever it is given — 1,200 ms of virtual time and ninety seconds of wall clock produce an empty file, exactly the case the byte count exists to catch. With no GL backend at all the same route settles in 2.4 seconds and all nineteen settle under three. Nothing is lost by dropping it: ECharts instantiates the canvas either way, and what a GPU paints inside that canvas was never something a headless count could prove. `?still=1` is in the URL for the same reason — it stops the two 3D charts rotating, and an animation that never stops is an animation that keeps consuming the clock. Never run two headless instances against the same Chrome profile at once.
-
-The maps need a visual check as well as a count: the DOM check confirms a canvas exists, not that the choropleth joined. Screenshot the two chapters that carry one:
-
-```bash
-for r in data/world data/land; do
-  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-    --headless=new --no-sandbox --use-gl=swiftshader --enable-unsafe-swiftshader \
-    --virtual-time-budget=14000 --window-size=1440,2600 \
-    --screenshot="$(basename $r).png" "http://localhost:8777/index.html#/$r"
-done
-```
-
-A choropleth that has lost its join renders as a uniformly grey world, which is indistinguishable from a successful render in the DOM. This one keeps the software GL flags, because a screenshot of a page with no GL backend is a screenshot of what the maps are not; neither of these two chapters is the one that wedges under it.
-
-The static layer has its own check. Every snapshot must carry its own title and canonical, hold no script, button or canvas, and still contain the prose — a snapshot that came out of Chrome before the route rendered is a valid HTML file with nothing in it:
-
-```bash
-python3 - <<'PY'
-import pathlib, re
-for p in sorted(pathlib.Path('snapshot').glob('*.html')):
-    h = p.read_text()
-    bad = [w for w in ('<script', '<canvas', '<button') if w in h]
-    print('%-22s %7d bytes  words=%-6d %s %s' % (
-        p.name, len(h), len(re.sub(r'<[^>]+>', ' ', h).split()),
-        'canonical' if 'snapshot/%s' % p.name in h else 'NO CANONICAL',
-        'leftover: ' + ', '.join(bad) if bad else 'clean'))
-PY
-```
-
-The scorecard needs a join check of its own, for the same reason the maps do: a state whose name did not reconcile still renders, as two rows holding half a record each. Dump the legal route and read the row set:
-
-```bash
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-  --headless=new --no-sandbox --disable-gpu --disable-software-rasterizer \
-  --virtual-time-budget=14000 --dump-dom "http://localhost:8777/index.html#/legal" 2>/dev/null \
-| python3 -c "
-import sys, re
-h = sys.stdin.read()
-body = re.search(r'<table class=\"scorecard\".*?<tbody>(.*?)</tbody>', h, re.S).group(1)
-rows = re.findall(r'<tr>.*?</tr>', body, re.S)
-states = [re.search(r'<th scope=\"row\">(.*?)(?:<span|</th>)', r, re.S).group(1).strip() for r in rows]
-print('rows', len(rows), 'matrices', len(re.findall(r'<table class=\"matrix\"', h)))
-print('duplicates', sorted({s for s in states if states.count(s) > 1}) or 'none')"
-```
-
-`duplicates` must print `none`, and `matrices` must be `2`.
+---
 
 ## Publishing
 
-The dashboard is published at **https://palestinerecord.github.io/**, from the `palestinerecord/palestinerecord.github.io` repository, GitHub Pages serving `main` at the root.
-
-**Every local change to the dashboard is published, once it has passed a check.** A local edit that is never deployed leaves the live site quietly wrong, and the live site is the only copy anyone reads. So the sequence after any change — a new figure, a new chart, a copy fix, a restyle — is: validate, regenerate the derived layer, publish.
+GitHub Pages serves `main` at the site root, so a push to `main` is a deployment. Every change made on a workstation goes out through `publish.py`, and only after it passes the checks:
 
 ```bash
-python3 validate.py         # the facts, not the rendering; must print "0 failures"
-python3 manifest.py         # data/index.json
-python3 prerender.py        # snapshots, cards, sitemap
-python3 publish.py --render -m "What changed"
+python3 publish.py -m "What changed"   # validate → preflight → commit → push → wait for Pages → fetch the live site
+python3 publish.py --check             # validate and preflight only; never pushes
+python3 publish.py --dry-run           # everything up to the push
+python3 publish.py --render            # also run the headless render first
 ```
 
-`publish.py` is the only thing that should ever push the site. It runs in one direction and stops at the first thing that is wrong:
+After pushing, it waits for the Pages build and then fetches the live site to confirm the served `index.html` asks for the new `?v=` version. The edge cache can hold the old page for up to ten minutes, so it polls through a cache-busting query.
 
-```
-validate.py  →  asset preflight  →  mirror  →  commit  →  push  →  Pages build  →  live fetch
-```
+The nightly job often pushes too, so fetch and rebase before publishing. Conflicts appear only in generated files such as snapshots, the sitemap and the manifest. Take the incoming version and rerun the generators; do not merge by hand.
 
-- `--check` validates and preflights, never pushes.
-- `--dry-run` goes as far as the commit and stops before the push.
-- `--render` renders every route in headless Chrome first. Off by default because it is slow, and secondary in any case: a page that renders is not a page that is right.
-- `-m` sets the commit subject on the site repository.
+The site's commits are authored as `palestinerecord`, using GitHub's no-reply address. The publishing token is read from an untracked, gitignored file only at the moment of the push, and handed to git through a temporary helper that is then deleted. It never appears in a commit, a remote URL or a command line, and `publish.py` refuses to run if it could leak.
 
-The mirror step is `rsync --delete`, so the folder is the site: anything sitting in it is served at the site root unless `EXCLUDES` names it. `dashboard_ideas.md` is working notes and is named there; `data/raw/` is the unprocessed fetch and is too.
+---
 
-`validate.py` is the gate that matters, and it reads the data rather than the rendered page, because **a chart can draw a wrong number perfectly**. It checks broken section references, figures with no attribution, curated headline figures that disagree with the live series, country names that do not join to a polygon, cumulative series that fall, dates in the future, and that every registered chart is actually drawn by a view. Failures stop the publication; warnings do not. It also checks that the cache-bust is uniform, since a half-bumped `?v=` ships a new JS file to nobody.
+## Base data and credits
 
-After the push, `publish.py` waits on the Pages API until the build is `built`, then fetches the live site and checks that what is being served is what was just sent — including that the served `index.html` asks for the `?v=` this folder carries, which catches a deployment that silently did not take.
-
-`built` is not the same as live. The edge holds the previous `index.html` for up to its ten-minute cache, so the version is polled through a cache-busting query first; without that wait every publication reports a failure it does not have, and a check that cries wolf on every run is a check nobody reads.
-
-### The token
-
-The push reads `github-token` from the repository root at the moment it is needed and hands it to git through a temporary askpass helper, which is deleted afterwards. The token is never written into a file that survives the run, never committed, never placed in a remote URL, and never passed as a command-line argument, where `ps` would show it to every process on the machine. `git remote add` with a token in the URL writes it into `.git/config` in plain text, which is why the deploy clone has no credentialed remote at all.
-
-`token_guard()` refuses to publish unless the token file is gitignored, untracked, and absent from the folder being sent — it greps the published folder for a token's full shape, the prefix followed by its body, and stops on a hit. The prefix alone is not the test: this file and `publish.py` both have to name it in order to describe the guard, and a check that matched the prefix on its own failed on its own documentation. The site is committed as `328386359+palestinerecord@users.noreply.github.com`, so publishing never writes a personal address into a public history.
-
-## Provenance
-
-Casualty time-series: [Tech For Palestine](https://data.techforpalestine.org/) (public domain), compiled from Gaza Ministry of Health, OCHA and UN reporting. Map geometry: [Natural Earth](https://www.naturalearthdata.com/) (public domain), which draws the 1949 armistice line as the Israel/Palestine boundary and treats the West Bank and Gaza as one unit — a cartographic base, not an adjudication of any boundary, and the maps say so on the chart. Governorate boundaries: OCHA, *State of Palestine — Subnational Administrative Boundaries*, from the Common Operational Dataset, [CC BY-IGO](https://creativecommons.org/licenses/by/3.0/igo/). The 1948 village list: Salman Abu Sitta, *Atlas of Palestine 1917–1966* (Palestine Land Society, 2010), pp. 108–115. Everything else is sourced inline, and every figure carries its own source. Contested attributions carry the dispute with them rather than being resolved silently — the dashboard holds the report's evidentiary standard, not a looser one.
+- **Casualty series and the identification list:** [Tech For Palestine](https://data.techforpalestine.org/), compiled from Gaza Ministry of Health, OCHA and UN reporting (public domain).
+- **Map geometry:** [Natural Earth](https://www.naturalearthdata.com/) (public domain). Natural Earth draws the 1949 armistice line as the boundary and treats the West Bank and Gaza as one unit. That is a cartographic base, not a ruling on any boundary, and the maps say so.
+- **Governorate boundaries:** OCHA, *State of Palestine: Subnational Administrative Boundaries*, Common Operational Dataset, [CC BY 3.0 IGO](https://creativecommons.org/licenses/by/3.0/igo/).
+- **The 1948 villages:** Salman Abu Sitta, *Atlas of Palestine 1917–1966* (Palestine Land Society, 2010), pp. 108–115.
+- **The parliamentary record:** UK Parliament (Members, Commons Votes, Hansard, Register of Interests and Petitions APIs), under the [Open Parliament Licence](https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/), and the Electoral Commission's register of donations.
+- **Everything else** is sourced inline: every figure, statement and finding on the site names the body that recorded it, and the [sources page](https://palestinerecord.github.io/#/sources) links to each one.
