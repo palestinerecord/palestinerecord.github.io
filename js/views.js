@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=166" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=168" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=166" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=168" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2952,6 +2952,28 @@ const Views = (function () {
     </article>`;
   }
 
+  /* The beginner's primer at the top of the page: what a hypothesis test is, and
+     which results are established, not detected, or outside what any test here
+     can show. Its text is written once, in analysis/run_tests.py, and read out
+     of data/tests.json like everything else on the page. */
+  function primerBlock(P) {
+    if (!P) return '';
+    return `<div class="card test-card test-primer">
+      <h3>${esc(P.title)}</h3>
+      <p class="test-reading">${esc(P.lede)}</p>
+      <dl class="test-facts test-method">
+        ${P.steps.map((s) => `<dt>${esc(s.head)}</dt><dd>${esc(s.text)}</dd>`).join('')}
+      </dl>
+      <p class="test-reading" style="margin-top:14px"><b>A worked example.</b> ${esc(P.example)}</p>
+    </div>
+    <div class="test-list test-primer-groups">
+      ${P.groups.map((g) => `<div class="card test-card test-primer">
+        <h3>${esc(g.head)}</h3>
+        <ul>${g.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>
+      </div>`).join('')}
+    </div>`;
+  }
+
   function testsView() {
     const T = D.tests;
     const M = T.meta;
@@ -2985,6 +3007,7 @@ const Views = (function () {
           'Hypothesis tests on the data this site publishes and on public datasets from the UN, the Palestinian Central Bureau of Statistics, the Israel Prison Service, B\u2019Tselem, Yesh Din and the Committee to Protect Journalists: '
           + 'who is killed, the ceasefires, the ICJ orders, the West Bank, the named list of the dead, settler impunity, Area C, food prices, detention without charge, journalists and the destruction of buildings. '
           + 'Each test is stated with its null hypothesis, its data, its effect size and its confidence interval, and every figure on this page is read out of the published data file.')}
+        ${primerBlock(M.primer)}
         <div class="grid c4">
           ${statCard({ value: T.tests.length, label: 'Tests', note: 'each with its null hypothesis, data, effect size and interval' }, 'blue')}
           ${statCard({ value: 72835, label: 'Identity numbers checked', note: 'every one passes the Population Registry check digit' }, 'green')}

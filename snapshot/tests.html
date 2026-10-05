@@ -32,8 +32,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="../assets/favicon.svg?v=166" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=166">
+<link rel="icon" href="../assets/favicon.svg?v=168" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=168">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -66,8 +66,8 @@
 <meta name="twitter:title" content="Tests — the record, put to statistical test · The Documented Record">
 <meta name="twitter:description" content="Hypothesis tests on the data this site publishes: the named list of the dead, who is killed, the ceasefires, the ICJ orders and the West Bank, each with its effect size and confidence interval.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/tests.png">
-<link rel="preload" href="../css/style.css?v=166" as="style">
-<link rel="stylesheet" href="../css/style.css?v=166">
+<link rel="preload" href="../css/style.css?v=168" as="style">
+<link rel="stylesheet" href="../css/style.css?v=168">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -82,7 +82,7 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <!-- The first screen is painted from this one file; the request should be in
      flight while the parser is still in the head. -->
-<link rel="preload" href="../data/headline.json?v=166" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
+<link rel="preload" href="../data/headline.json?v=168" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
 
 
 
@@ -261,7 +261,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=166" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=168" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -321,6 +321,26 @@
       <div class="eyebrow">Tests</div>
       <h2>The record, put to statistical test</h2>
       <p>Hypothesis tests on the data this site publishes and on public datasets from the UN, the Palestinian Central Bureau of Statistics, the Israel Prison Service, B’Tselem, Yesh Din and the Committee to Protect Journalists: who is killed, the ceasefires, the ICJ orders, the West Bank, the named list of the dead, settler impunity, Area C, food prices, detention without charge, journalists and the destruction of buildings. Each test is stated with its null hypothesis, its data, its effect size and its confidence interval, and every figure on this page is read out of the published data file.</p>
+    </div>
+        <div class="card test-card test-primer">
+      <h3>Start here: what a hypothesis test is</h3>
+      <p class="test-reading">A hypothesis test is a way of asking whether a pattern in the numbers is real or could be luck. It does not prove a claim directly. It asks whether the data would be too surprising to accept if nothing were going on.</p>
+      <dl class="test-facts test-method">
+        <dt>1. The boring answer</dt><dd>The null hypothesis is the "nothing is going on" explanation, for example: the ICJ order did not change the daily death rate. A test works like a trial: the null is presumed true until the evidence is strong enough to doubt it.</dd><dt>2. How surprising is the data?</dt><dd>The p-value is the chance of seeing data at least this extreme if the null were true. A small p-value, conventionally under 0.05 (5%), means the data would be a rare accident under the null, so the null is rejected. A p-value is not the probability that the claim is true, and it says nothing about how big the effect is.</dd><dt>3. How big, and how sure?</dt><dd>The effect size says how large the difference is. Many results here are ratios: 1 means no change, 2 means doubled, 0.5 means halved. The 95% confidence interval is the range of values the data are compatible with. A narrow interval is a precise estimate; an interval that includes 1 means no change is still possible.</dd><dt>4. Too many tests</dt><dd>Run enough tests and some will pass by luck. Every p-value on this page is therefore also adjusted for the number of tests run (the Benjamini-Hochberg false discovery rate, 5%), and the page shows both. The correction counts every test that was run, published or not.</dd><dt>5. Reading "not rejected"</dt><dd>Failing to reject the null does not prove it, any more than an acquittal proves innocence. It means no change was detected, which can also mean the change is small or the data are noisy. The interval shows which sizes of change the data can and cannot rule out.</dd><dt>6. Fixed in advance</dt><dd>The hypotheses were written down in a pre-registration file, committed before the analysis script existed, so the question could not be chosen after seeing the answer.</dd>
+      </dl>
+      <p class="test-reading" style="margin-top:14px"><b>A worked example.</b> Take the first ICJ order, of 26 January 2024. Null: it did not change the daily death rate. Result: the rate after the order was 1.006 times the rate before, with a 95% interval of 0.81 to 1.25 and an adjusted p-value of 0.99. That is no detectable change, so the null is not rejected. The interval is wide enough that a change of about a fifth in either direction cannot be ruled out.</p>
+    </div>
+    <div class="test-list test-primer-groups">
+      <div class="card test-card test-primer">
+        <h3>Established: the null is rejected</h3>
+        <ul><li>The named list of the dead is internally genuine. All 72,835 identity numbers pass the Population Registry check digit, which an invented number passes about one time in ten, so invented numbers passing every time would be about one chance in ten multiplied by itself 72,835 times. There are no duplicates, every stated age matches its date of birth, and the ages show no heaping (Whipple's index 100, against 100 for the 2017 census) (H6).</li><li>The dead are not confined to men of fighting age: 52.1% (95% interval 51.7% to 52.5%) of the identified dead are women, children under 18 or people aged 60 and over (H1b).</li><li>Each ceasefire cut the daily rate of killing sharply and none stopped it: rate ratios of 0.0025 (November 2023 pause), 0.15 (January to March 2025) and 0.039 (October 2025), all with adjusted p-values below 0.001 (H2).</li><li>In the West Bank the killing rate after 7 October 2023 was 4.7 times the earlier rate (interval 3.9 to 5.6), and settler incidents in 2024 ran at 3.5 times the 2022 rate (interval 3.2 to 3.8) (H4).</li><li>Settler convictions are rare against Palestinian convictions (odds ratio 0.0025, interval 0.0014 to 0.0043); 66% of Palestinian victims of settler violence do not complain to the police (lower bound 59%); 0.94% of Palestinian building applications in Area C are approved (upper bound 1.3%); an unpermitted Palestinian structure has 2.5 times the odds of demolition of a settler's (interval 1.9 to 3.2) (H9, H10).</li><li>Food prices rose 1.30 times during the March to May 2025 blockade (interval 1.13 to 1.50) and averaged 3.2 times pre-war prices; administrative detention without charge is 7.9 times its 2008 to 2022 level (interval 6.2 to 10.0); journalists have been killed at 4.5 times the rate of the Iraq war and 7.5 times that of Syria's, on CPJ's lowest count; destroyed buildings rose at every satellite assessment (H11, H13, H14, H15).</li><li>In the 2008-09 and 2014 Gaza wars, a majority of those killed took no part in the hostilities on B'Tselem's case-by-case count: 57.2% and 64.5%, with lower bounds of 55.0% and 62.8% (H16).</li><li>No state that withholds recognition of Palestine has a government that has called the conduct in Gaza genocide, while 50 recognising states do. The odds ratio is 34, but its interval (2.1 to 570) is very wide: the direction is clear and the size is not (H8).</li></ul>
+      </div><div class="card test-card test-primer">
+        <h3>Not detected: the null is not rejected</h3>
+        <ul><li>None of the three ICJ provisional-measures orders of 2024 was followed by a detectable change in the daily death rate: ratios of 1.006 (0.81 to 1.25), 0.82 (0.65 to 1.04) and 1.12 (0.70 to 1.77), adjusted p-values 0.99, 0.17 and 0.84. The intervals are wide, and the second reaches down to a fall of about a third, so a modest change cannot be excluded; what the data show is no step down at any order (H3).</li></ul>
+      </div><div class="card test-card test-primer">
+        <h3>What no test here establishes</h3>
+        <ul><li>Why a rate changed. A change at a dated event is an association, not proof that the event caused it.</li><li>Who is missing. Tests on the named list measure the list as published, not the counted dead who are unidentified or the dead still under the rubble.</li><li>A legal conclusion. A statistical pattern in the numbers is not a finding of genocide, war crimes or intent; those are decided on the legal standards set out in the report.</li><li>More than the data allow. The Ministry of Health's daily series changed source during the war and carries days with no report; where a result depends on such a weakness, its entry says so and a sensitivity analysis tests whether it survives.</li></ul>
+      </div>
     </div>
         <div class="grid c4">
           <div class="stat blue" data-tone="blue">
@@ -1056,7 +1076,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=166" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=168" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
