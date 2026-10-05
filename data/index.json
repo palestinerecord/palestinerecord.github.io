@@ -4,7 +4,7 @@
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
   "generated": "2026-10-05",
-  "total_bytes": 7562638,
+  "total_bytes": 7560067,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -405,7 +405,7 @@
       "title": "Statistical tests on the record",
       "description": "Hypothesis tests on the published data and on public datasets: who is killed, the ceasefires and the ICJ orders against the daily death rate, the West Bank, the integrity of the named list, settler prosecutions, Area C permits and demolitions, food prices under blockade, administrative detention, journalists killed, the destruction of buildings and earlier Gaza wars. Each with its null, test, effect size, interval, raw and adjusted p-value, sources and the plotted series.",
       "source": "Written by analysis/run_tests.py in the source repository from data/, data/raw/ and the external datasets it names (PCBS, UNOSAT, B’Tselem, Yesh Din, CPJ, Peace Now).",
-      "bytes": 72425,
+      "bytes": 69854,
       "records": null,
       "fields": [
         "meta",
