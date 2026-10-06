@@ -3,8 +3,8 @@
   "description": "Every dataset behind the charts at palestinerecord.github.io, as plain JSON over HTTPS, with no login and no key.",
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
-  "generated": "2026-10-07",
-  "total_bytes": 7575035,
+  "generated": "2026-10-06",
+  "total_bytes": 7574403,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -169,7 +169,7 @@
         "switches",
         "entries"
       ],
-      "updated": "2026-10-07"
+      "updated": "2026-10-06"
     },
     {
       "path": "data/figures.json",
@@ -199,7 +199,7 @@
       "title": "The first screen",
       "description": "The eight headline figures, the current ratio and the counts, in one small file so the record can state what it establishes before the rest of the data arrives.",
       "source": "A subset of figures.json, timeseries.json and report-meta.json; each figure keeps its own source field.",
-      "bytes": 2620,
+      "bytes": 1988,
       "records": null,
       "fields": [
         "meta",
@@ -305,7 +305,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-10-07"
+      "updated": "2026-10-06"
     },
     {
       "path": "data/names.json",
@@ -318,7 +318,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-10-07"
+      "updated": "2026-10-06"
     },
     {
       "path": "data/provenance.json",
@@ -335,7 +335,7 @@
         "files",
         "claims"
       ],
-      "updated": "2026-10-07"
+      "updated": "2026-10-06"
     },
     {
       "path": "data/report-meta.json",
@@ -445,7 +445,7 @@
         "press_killed_count",
         "demographics"
       ],
-      "updated": "2026-10-07"
+      "updated": "2026-10-06"
     },
     {
       "path": "data/war-record.json",

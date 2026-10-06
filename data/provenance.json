@@ -2,7 +2,7 @@
  "meta": {
   "title": "Provenance graph",
   "description": "Every curated claim on this site, joined to the bodies it rests on. Source strings are normalised to entities with stable identifiers, and each entity is classified by origin so that a whole class of source can be removed and the remainder recounted.",
-  "generated": "2026-10-07",
+  "generated": "2026-10-06",
   "origins": [
    {
     "id": "palestinian-official",
@@ -1302,7 +1302,7 @@
    "file": "figures.json",
    "path": "headline[4]",
    "label": "Killed in the West Bank",
-   "value": 1123,
+   "value": 1124,
    "numeric": true,
    "ref": "§9.2",
    "date": "",
