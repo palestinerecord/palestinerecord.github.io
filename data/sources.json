@@ -3125,6 +3125,69 @@
           "date": "4 October 2026",
           "url": "https://www.itv.com/news/2026-10-04/greens-back-zionism-is-racism-policy-despite-opposition-from-senior-figures",
           "note": "Senior Greens' opposition; Amendment III (§21.12.5)."
+        },
+        {
+          "title": "US Senate blocks resolution seeking report on Americans killed in West Bank",
+          "org": "Al Jazeera",
+          "date": "30 September 2026",
+          "url": "https://www.aljazeera.com/news/2026/9/30/us-senate-blocks-resolution-seeking-report-on-americans-killed-in-west-bank",
+          "note": "S.Res. 852 fails; reports the tally as 47-53 (§15.5)."
+        },
+        {
+          "title": "Israeli Settlers Killed His Constituent. Fetterman Is Sole Democrat Against Investigating Them.",
+          "org": "The Intercept",
+          "date": "30 September 2026",
+          "url": "https://theintercept.com/2026/09/30/israel-west-bank-us-citizen-killings-senate-vote-fetterman/",
+          "note": "Tally 51-47; Daines' objection; the 19-year-old from Philadelphia (§15.5)."
+        },
+        {
+          "title": "Fetterman Joins GOP to Block Effort to Expose Israeli Abuses in West Bank",
+          "org": "Truthout",
+          "date": "30 September 2026",
+          "url": "https://truthout.org/articles/fetterman-joins-gop-to-block-effort-to-expose-israeli-abuses-in-west-bank/",
+          "note": "Vote and reaction (§15.5)."
+        },
+        {
+          "title": "The Shift: Senate rejects resolution requesting report on Israeli violence in West Bank",
+          "org": "Mondoweiss",
+          "date": "October 2026",
+          "url": "https://mondoweiss.net/2026/10/the-shift-senate-rejects-resolution-requesting-report-on-israeli-violence-in-west-bank/",
+          "note": "Vote and context (§15.5)."
+        },
+        {
+          "title": "Van Hollen Statement on Senate Vote on Privileged Resolution Seeking Answers on West Bank Violence",
+          "org": "Office of Senator Chris Van Hollen",
+          "date": "30 September 2026",
+          "url": "https://www.vanhollen.senate.gov/news/press-releases/van-hollen-statement-on-senate-vote-on-privileged-resolution-seeking-answers-on-west-bank-violence",
+          "note": "Sponsor's statement; page returned 403 to the fetch tool, cited from search results (§15.5)."
+        },
+        {
+          "title": "Record number of Senate Democrats vote to block weapon sales for Israel",
+          "org": "The Hill",
+          "date": "30 July 2025",
+          "url": "https://thehill.com/policy/defense/5429072-sanders-resolution-fails-israel-military/",
+          "note": "The 27-70 and 24-73 votes on S.J.Res.34 and S.J.Res.41; 20 Democrats against (§15.5)."
+        },
+        {
+          "title": "Sanders bills to kill Israel arms transfers die in two Senate votes",
+          "org": "Responsible Statecraft",
+          "date": "30 July 2025",
+          "url": "https://responsiblestatecraft.org/sanders-gaza/",
+          "note": "Tallies for the two 2025 resolutions (§15.5)."
+        },
+        {
+          "title": "IDF soldiers won't be indicted over death of elderly Palestinian-American",
+          "org": "Times of Israel",
+          "date": "June 2023",
+          "url": "https://www.timesofisrael.com/idf-soldiers-wont-be-indicted-over-death-of-elderly-palestinian-american/",
+          "note": "Closure of the Omar Assad case with disciplinary measures only (§15.5). Israeli outlet."
+        },
+        {
+          "title": "Death of Omar Assad",
+          "org": "Wikipedia (secondary summary)",
+          "date": "accessed 7 October 2026",
+          "url": "https://en.wikipedia.org/wiki/Death_of_Omar_Assad",
+          "note": "Summary of the January 2022 detention and the IDF's 'ethical failure' finding (§15.5)."
         }
       ]
     },
