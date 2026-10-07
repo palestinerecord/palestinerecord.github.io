@@ -2,7 +2,7 @@
  "meta": {
   "title": "Claim patterns",
   "description": "The phrase index behind the answer engine. Each entry maps one of the twenty-six rebuttals in Part XVI of the report to the wording the claim is made in, so a pasted text can be matched to the answer it is asking for without a language model and without a network call. The patterns carry no evidence of their own: the answer is assembled at render time from the report, the live figures and the documented statements.",
-  "generated": "2026-09-26",
+  "generated": "2026-10-08",
   "figure_ids": [
    "killed",
    "children",
@@ -828,6 +828,30 @@
    ],
    "statement_cats": [
     "warcrimes"
+   ]
+  },
+  {
+   "rebuttal": 27,
+   "label": "Zionism is not racism",
+   "strong": [
+    "zionism is not racism",
+    "national liberation movement"
+   ],
+   "phrases": [
+    "zionism is not racism",
+    "zionism is racism",
+    "zionism is not racist",
+    "national liberation movement",
+    "jewish self-determination is not racism",
+    "right to a jewish homeland",
+    "denies the jewish people",
+    "denying the jewish right to self-determination",
+    "right of jews to a homeland",
+    "jewish state has a right to exist"
+   ],
+   "figures": [],
+   "statement_cats": [
+    "apartheid"
    ]
   }
  ]

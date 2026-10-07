@@ -5,7 +5,7 @@ The patterns are the wording of the claim as it is actually made in public, not
 the wording of the rebuttal. Nothing here is evidence: every fact the route
 states is read at render time out of the report, the live figures and the
 statements, so this file can never disagree with the record. What it decides is
-only which of the twenty-six answers a pasted text is asking for.
+only which of the twenty-seven answers a pasted text is asking for.
 """
 import json
 import datetime
@@ -190,6 +190,13 @@ CLAIMS = [
         'without headlights', 'hamas staged', 'staged by hamas', 'the army has explained',
         'posed a threat to the troops',
     ], ['killed'], ['warcrimes']),
+
+    (27, 'Zionism is not racism', ['zionism is not racism', 'national liberation movement'], [
+        'zionism is not racism', 'zionism is racism', 'zionism is not racist', 'national liberation movement',
+        'jewish self-determination is not racism', 'right to a jewish homeland', 'denies the jewish people',
+        'denying the jewish right to self-determination', 'right of jews to a homeland',
+        'jewish state has a right to exist',
+    ], [], ['apartheid']),
 ]
 
 # The ids a pattern may name, resolved to live values by views.js at render
