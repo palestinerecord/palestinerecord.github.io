@@ -1,0 +1,70 @@
+{
+ "files": 188,
+ "spoke": 475,
+ "by_party": {
+  "Conservative": [
+   85,
+   14
+  ],
+  "Labour": [
+   257,
+   59
+  ],
+  "Democratic Unionist Party": [
+   5,
+   1
+  ],
+  "Labour (Co-op)": [
+   30,
+   7
+  ],
+  "Your Party": [
+   2,
+   2
+  ],
+  "Liberal Democrat": [
+   59,
+   15
+  ],
+  "Reform UK": [
+   6,
+   0
+  ],
+  "Scottish National Party": [
+   8,
+   5
+  ],
+  "Plaid Cymru": [
+   4,
+   2
+  ],
+  "Speaker": [
+   1,
+   0
+  ],
+  "Social Democratic & Labour Party": [
+   2,
+   0
+  ],
+  "Independent": [
+   9,
+   4
+  ],
+  "Green Party": [
+   4,
+   4
+  ],
+  "Alliance": [
+   1,
+   0
+  ],
+  "Ulster Unionist Party": [
+   1,
+   0
+  ],
+  "Traditional Unionist Voice": [
+   1,
+   0
+  ]
+ }
+}

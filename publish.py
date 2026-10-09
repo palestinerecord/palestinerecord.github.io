@@ -136,7 +136,8 @@ def sync_analysis():
         return
     target = HERE / 'analysis'
     target.mkdir(exist_ok=True)
-    for name in ('run_tests.py', 'PREREGISTRATION.md'):
+    (target / 'external').mkdir(exist_ok=True)
+    for name in ('run_tests.py', 'PREREGISTRATION.md', 'external/h7-counts.json'):
         source = master / name
         if source.exists() and (not (target / name).exists()
                                 or (target / name).read_bytes() != source.read_bytes()):
