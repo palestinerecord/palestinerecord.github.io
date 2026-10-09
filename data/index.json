@@ -169,14 +169,14 @@
         "switches",
         "entries"
       ],
-      "updated": "2026-10-07"
+      "updated": "2026-10-09"
     },
     {
       "path": "data/figures.json",
       "title": "The curated statistics",
       "description": "The headline figures and the topic groups behind them — each with its label, its value, the note that qualifies it, and the report section it came from.",
       "source": "Each record carries its own source field.",
-      "bytes": 47471,
+      "bytes": 42844,
       "records": null,
       "fields": [
         "meta",
@@ -246,7 +246,7 @@
       "title": "The long record, 1917–2026",
       "description": "Dispossession, detention, demolition, recognition and complicity across the whole period, as series rather than as single figures.",
       "source": "Each record carries its own source field.",
-      "bytes": 56104,
+      "bytes": 52457,
       "records": null,
       "fields": [
         "meta",
@@ -325,7 +325,7 @@
       "title": "The provenance graph",
       "description": "Every curated claim on this site joined to the bodies it rests on: 416 claims, each with the source strings it carries normalised to stable source identifiers, and each source classified by who controls the body that published it. The five switches record what share of the record still stands when a whole class of source is removed.",
       "source": "Derived by provenance.py from the source field of every curated record; each claim keeps the source text it was written with.",
-      "bytes": 277572,
+      "bytes": 277607,
       "records": null,
       "fields": [
         "meta",
@@ -335,7 +335,7 @@
         "files",
         "claims"
       ],
-      "updated": "2026-10-08"
+      "updated": "2026-10-09"
     },
     {
       "path": "data/report-meta.json",
