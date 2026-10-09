@@ -1,0 +1,82 @@
+{
+  "_note": "Figures collected by hand from published sources on 2 October 2026, for run_tests.py. Each block names its source; the two spreadsheets in this folder (pcbs-prices.xlsx, unrwa-trucks.xlsx) are read directly.",
+  "yesh_din": {
+    "source": "Yesh Din, Data Sheet: Law Enforcement on Israeli Civilians in the West Bank (Settler Violence), 2005-2024, 16 January 2025",
+    "url": "https://www.yesh-din.org/en/data-sheet-law-enforcement-on-israeli-civilians-in-the-west-bank-settler-violence-2005-2024/",
+    "files_monitored": 1701,
+    "indictments": 109,
+    "indictment_share_of_concluded": 0.066,
+    "convictions_full_or_partial": 53,
+    "complaints_not_filed_2024": [101, 153]
+  },
+  "military_courts": {
+    "source": "Israeli military courts' annual report for 2010, as reported by Haaretz, 29 November 2011",
+    "url": "https://www.haaretz.com/2011-11-29/ty-article/nearly-100-of-all-military-court-cases-in-west-bank-end-in-conviction-haaretz-learns/0000017f-e7c4-da9b-a1ff-efef7ad70000",
+    "cases": 9542,
+    "full_acquittals": 25
+  },
+  "area_c": {
+    "source": "Civil Administration figures to the Knesset Foreign Affairs and Defence Committee, 19 July 2023, and Bimkom data, as reported by Peace Now, 10 August 2023",
+    "url": "https://peacenow.org.il/en/the-civil-administration-acknowledges-extreme-discrimination-in-building-permits-and-law-enforcement-between-palestinians-and-settlers",
+    "palestinian_permits_2016_2020": {"applications": 2550, "approved": 24},
+    "settler_plan_approval_share": [0.60, 0.70],
+    "enforcement_2022_to_mid_2023": {
+      "palestinian": {"identified_illegal": 2600, "demolished": 770},
+      "settler": {"identified_illegal": 606, "demolished": 88}
+    }
+  },
+  "detention": {
+    "source": "B'Tselem, Statistics on Palestinians in Israeli custody (Israel Prison Service figures), end of December each year; 2026 is 30 June",
+    "url": "https://www.btselem.org/statistics/detainees_and_prisoners",
+    "administrative_detainees": {
+      "2008": 546, "2009": 278, "2010": 204, "2011": 307, "2012": 178, "2013": 150, "2014": 463, "2015": 584,
+      "2016": 535, "2017": 437, "2018": 494, "2019": 464, "2020": 355, "2021": 495, "2022": 784,
+      "2023": 3242, "2024": 3327, "2025": 3329, "2026": 3233
+    },
+    "illegal_combatants": {"2022": 0, "2023": 626, "2024": 1881, "2025": 1235, "2026": 1317}
+  },
+  "journalists": {
+    "source": "Committee to Protect Journalists: Iraq war and news media (March 2013); Syria totals (December 2024); Israel-Gaza war count after the June 2026 review",
+    "urls": [
+      "https://cpj.org/2013/03/iraq-war-and-news-media-a-look-inside-the-death-to/",
+      "https://cpj.org/2024/12/cpj-calls-on-new-syrian-leaders-to-protect-journalist-safety-hold-assads-media-persecutors-to-account/",
+      "https://cpj.org/issue/israel-gaza-war/"
+    ],
+    "conflicts": [
+      {"name": "Gaza war, killed by Israel (CPJ after its June 2026 review)", "killed": 209, "from": "2023-10-07", "to": "2026-06-30"},
+      {"name": "Iraq war", "killed": 150, "from": "2003-03-20", "to": "2011-12-15"},
+      {"name": "Syrian civil war", "killed": 141, "from": "2011-03-15", "to": "2024-12-08"}
+    ]
+  },
+  "unosat": {
+    "source": "UNOSAT comprehensive damage assessments of the Gaza Strip (imagery dates); June 2026 as reported from UNOSAT by IBTimes and others, 28-29 September 2026",
+    "url": "https://unosat.org/products/4165",
+    "assessments": [
+      {"date": "2023-11-07", "destroyed": 6583, "affected": 25050},
+      {"date": "2023-11-26", "destroyed": 10049, "affected": 37379},
+      {"date": "2024-01-07", "destroyed": 22130, "affected": 69146},
+      {"date": "2024-02-29", "destroyed": 31198, "affected": 88868},
+      {"date": "2024-05-03", "destroyed": 36591, "affected": 137297},
+      {"date": "2024-07-06", "destroyed": 46223, "affected": 156409},
+      {"date": "2024-09-06", "destroyed": 52564, "affected": 163778},
+      {"date": "2024-12-01", "destroyed": 60368, "affected": 170812},
+      {"date": "2025-04-04", "destroyed": 70436, "affected": 174486},
+      {"date": "2025-07-08", "destroyed": 102067, "affected": 192812},
+      {"date": "2025-10-11", "destroyed": 123464, "affected": 198273},
+      {"date": "2026-06-16", "destroyed": 134422, "affected": 201290}
+    ]
+  },
+  "btselem_wars": {
+    "source": "B'Tselem: Cast Lead complete fatality figures (9 September 2009); Pillar of Defense report (9 May 2013); Protective Edge, 50 Days (20 July 2016)",
+    "urls": [
+      "https://www.btselem.org/press_releases/20090909",
+      "https://www.btselem.org/press_releases/20130509_pillar_of_defense_report",
+      "https://www.btselem.org/press_releases/20160720_fatalities_in_gaza_conflict_2014"
+    ],
+    "wars": [
+      {"name": "Cast Lead, 2008-09", "not_taking_part": 773, "taking_part": 330, "police": 248, "unknown": 36},
+      {"name": "Pillar of Defense, 2012", "not_taking_part": 87, "taking_part": 69, "police": 0, "unknown": 11},
+      {"name": "Protective Edge, 2014", "not_taking_part": 1391, "taking_part": 765, "police": 0, "unknown": 46}
+    ]
+  }
+}

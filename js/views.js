@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=183" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=184" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=183" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=184" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -3039,7 +3039,7 @@ const Views = (function () {
             ${M.method.map((m) => `<dt>${esc(m.title)}</dt><dd>${esc(m.text)}</dd>`).join('')}
           </dl>
         </div>
-        <p class="chart-note" style="margin-top:18px"><a href="data/tests.json">data/tests.json</a> · generated ${esc(M.generated)}.</p>
+        <p class="chart-note" style="margin-top:18px"><a href="data/tests.json">data/tests.json</a> · recomputed from the live feeds every night; this version was generated ${esc(M.generated)}${M.data_to ? ` from data to ${esc(M.data_to)}` : ''}. The script is <a href="analysis/run_tests.py">analysis/run_tests.py</a>.</p>
       </section>
     </div>`;
   }

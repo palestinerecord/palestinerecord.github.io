@@ -1376,6 +1376,59 @@ def check_staleness(files):
             dt.datetime.fromtimestamp(built.stat().st_mtime).strftime('%d %b %H:%M')))
 
 
+def check_tests(files):
+    """The Tests page is recomputed from the live feeds, so it is checked like them.
+
+    What this guards is a recomputation that wrote nonsense, and a page that has
+    stopped following the data: the script refuses to write a headline its
+    results no longer support, but a statistic that came out as NaN, a p-value
+    outside 0 to 1, or an adjusted p-value below the raw one would still parse.
+    """
+    tests = files.get('tests')
+    if not tests:
+        fail('tests', 'data/tests.json is missing or empty')
+        return
+    meta = tests.get('meta', {})
+    rows = tests.get('tests', [])
+    if not rows:
+        fail('tests', 'tests.json holds no tests')
+        return
+    ids = set()
+    for t in rows:
+        tid = t.get('id', '?')
+        ids.add(tid)
+        p, q = t.get('p'), t.get('p_adjusted')
+        if p is not None and not (isinstance(p, (int, float)) and 0 <= p <= 1):
+            fail('tests', '%s: p-value %r is outside 0 to 1' % (tid, p))
+        if q is not None and not (isinstance(q, (int, float)) and 0 <= q <= 1):
+            fail('tests', '%s: adjusted p-value %r is outside 0 to 1' % (tid, q))
+        if p is not None and q is not None and q + 1e-12 < p:
+            fail('tests', '%s: adjusted p-value %.3g is below the raw p-value %.3g' % (tid, q, p))
+        eff = t.get('effect') or {}
+        value = eff.get('value')
+        if isinstance(value, float) and value != value:
+            fail('tests', '%s: the effect size is not a number' % tid)
+        if not t.get('reading'):
+            fail('tests', '%s: no reading' % tid)
+    for f in meta.get('findings', []):
+        if f.get('test') not in ids:
+            fail('tests', 'a finding points at %r, which is not a published test' % f.get('test'))
+    generated, data_to = meta.get('generated'), meta.get('data_to')
+    try:
+        if dt.date.fromisoformat(generated) > dt.date.today():
+            fail('tests', 'tests.json is dated %s, in the future' % generated)
+    except (TypeError, ValueError):
+        fail('tests', 'tests.json has no valid generated date')
+    series = (files.get('timeseries') or {}).get('summary', {}).get('lastDailyUpdate')
+    try:
+        lag = (dt.date.fromisoformat(series) - dt.date.fromisoformat(data_to)).days
+        if lag > 3:
+            warn('tests', 'the tests were computed from data to %s, %d days behind the series (%s)' % (data_to, lag, series))
+        note('tests: %d published, computed from data to %s' % (len(rows), data_to))
+    except (TypeError, ValueError):
+        warn('tests', 'tests.json carries no data_to date, so how far behind the series it is cannot be told')
+
+
 def _spellings(value):
     """Every way the report might reasonably write a number.
 
@@ -1887,6 +1940,7 @@ def main():
     files = load_all()
     if not FAILURES:
         check_staleness(files)
+        check_tests(files)
         check_references(files)
         check_attribution(files)
         check_timeseries(files)

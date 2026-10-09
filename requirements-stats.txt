@@ -1,0 +1,16 @@
+# The statistics behind data/tests.json, installed by the nightly refresh only.
+#
+# Kept apart from requirements.txt on purpose. deps_check.py holds every script
+# in the repository root to requirements.txt, and the site's own build needs
+# only Markdown and Pillow; the tests need a numerical stack that the build
+# should never be made to wait on, and a failure to install it must degrade one
+# step (the tests keep their last published values) and nothing else.
+#
+# analysis/run_tests.py --site-only writes data/tests.json and needs no
+# plotting library. Pinned to the versions the tests were last run with.
+numpy==2.5.3
+scipy==1.18.1
+pandas==3.0.6
+statsmodels==0.15.0
+patsy==1.0.3
+openpyxl==3.1.5

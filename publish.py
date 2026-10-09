@@ -122,6 +122,28 @@ def run(args, cwd=None, env=None, check=True, timeout=None):
 # ---------------------------------------------------------------- the gate
 
 
+def sync_analysis():
+    """Carry the workstation's copy of the test script into the site repository.
+
+    The nightly refresh recomputes the Tests page from analysis/run_tests.py in
+    this repository, while the full run (figures, the written report) is made
+    from the copy beside the report. They must not drift: the workstation copy
+    is the master, and this copies it across when it differs. Absent on the
+    runner, where there is nothing to copy from.
+    """
+    master = ROOT / 'reports' / 'israel-palestine' / 'analysis'
+    if not master.is_dir():
+        return
+    target = HERE / 'analysis'
+    target.mkdir(exist_ok=True)
+    for name in ('run_tests.py', 'PREREGISTRATION.md'):
+        source = master / name
+        if source.exists() and (not (target / name).exists()
+                                or (target / name).read_bytes() != source.read_bytes()):
+            (target / name).write_bytes(source.read_bytes())
+            say('analysis/%s brought up to date from the report folder' % name)
+
+
 def validate(show_warnings):
     """Run validate.py. Its failures are the reason this script exists."""
     args = [sys.executable, str(HERE / 'validate.py')]
@@ -613,6 +635,7 @@ def main():
         return 0
 
     try:
+        sync_analysis()
         print('validating')
         validate(args.warnings)
         preflight()

@@ -65,6 +65,9 @@ on:
       - 'falsify.py'
       - 'manifest.py'
       - 'render_check.py'
+      # The tests are recomputed on every run, so a change to them should say so.
+      - 'analysis/**'
+      - 'requirements-stats.txt'
       - '.github/workflows/dashboard.yml'
   workflow_dispatch:
     inputs:
@@ -227,6 +230,55 @@ jobs:
               python3 manifest.py
             } | tee -a "$RUNNER_TEMP/sync.log"
           fi
+
+      # The Tests page is a computation, not a document, so it is recomputed
+      # whenever the feeds it reads are. analysis/run_tests.py --site-only reads
+      # the daily series, the named list of the identified dead (downloaded
+      # fresh, about 12 MB) and the population baseline, runs every
+      # pre-registered test, and writes data/tests.json: the effect sizes, the
+      # intervals, the adjusted p-values, and every number in the page's
+      # headlines and primer.
+      #
+      # It refuses to write when a headline would no longer be true. If a
+      # ceasefire result stopped being significant, or a ratio the page calls
+      # "more than four times" fell below four, the script stops with the claim
+      # named rather than publish a sentence the data have overtaken. That is
+      # the one case here that needs a person, and it arrives as the issue
+      # below; the previously published tests, which were true when written,
+      # stay live meanwhile.
+      #
+      # The numerical libraries are installed in their own step so that a
+      # flaky index costs the tests one night and nothing else.
+      - name: Install the statistics libraries
+        id: statlibs
+        continue-on-error: true
+        timeout-minutes: 10
+        run: |
+          set -o pipefail
+          for attempt in 1 2 3; do
+            if python3 -m pip install --quiet --disable-pip-version-check \
+                 -r requirements-stats.txt; then
+              exit 0
+            fi
+            echo "::warning::Installing the statistics libraries failed (attempt $attempt of 3)."
+            sleep $(( attempt * 20 ))
+          done
+          echo 'Could not install the statistics libraries after three attempts.' >&2
+          exit 1
+
+      - name: Recompute the statistical tests
+        id: tests
+        continue-on-error: true
+        timeout-minutes: 15
+        if: steps.statlibs.outcome == 'success'
+        run: |
+          set -o pipefail
+          if python3 analysis/run_tests.py --site-only 2>&1 | tee "$RUNNER_TEMP/tests.log"; then
+            exit 0
+          fi
+          echo '::warning::The tests could not be recomputed; keeping the published ones.'
+          git checkout -- data/tests.json
+          exit 1
 
       - name: Validate the data
         id: validate
@@ -420,6 +472,8 @@ jobs:
           DEPS='${{ steps.deps.outcome }}'
           FETCH='${{ steps.fetch.outcome }}'
           SYNC='${{ steps.sync.outcome }}'
+          STATLIBS='${{ steps.statlibs.outcome }}'
+          TESTS='${{ steps.tests.outcome }}'
           VALIDATE='${{ steps.validate.outcome }}'
           STATIC='${{ steps.static.outcome }}'
           RENDER='${{ steps.render.outcome }}'
@@ -434,6 +488,8 @@ jobs:
             echo "| Dependency check | ${DEPS} |"
             echo "| Pull the casualty series | ${FETCH} |"
             echo "| Carry the series into the figures | ${SYNC} |"
+            echo "| Install the statistics libraries | ${STATLIBS} |"
+            echo "| Recompute the statistical tests | ${TESTS} |"
             echo "| Validate the data | ${VALIDATE} |"
             echo "| Rebuild the static layer | ${STATIC} |"
             echo "| Render every route | ${RENDER} |"
@@ -454,13 +510,26 @@ jobs:
             } >> body.md
           fi
           for pair in "pip:$PIP" "deps:$DEPS" "fetch:$FETCH" "sync:$SYNC" \
-                      "static:$STATIC" "render:$RENDER" "commit:$COMMIT"; do
+                      "statlibs:$STATLIBS" "tests:$TESTS" "static:$STATIC" "render:$RENDER" "commit:$COMMIT"; do
             name="${pair%%:*}"; outcome="${pair#*:}"
             if [ "$outcome" = 'failure' ]; then
               PROBLEM=yes
               echo "- The \`${name}\` step degraded; its log is in the run summary." >> body.md
             fi
           done
+
+          if [ "$TESTS" = 'failure' ]; then
+            {
+              echo
+              echo '**The statistical tests were not recomputed.** The page keeps the'
+              echo 'results it already had, which were true when written. If the log'
+              echo '(the `tests` section of the run summary) lists headline claims that'
+              echo 'no longer hold, the data have moved past a sentence on the Tests'
+              echo 'page: edit `build_primer` or `build_findings` in'
+              echo '`analysis/run_tests.py`. Otherwise it was the download or the'
+              echo 'libraries, and the next run will try again.'
+            } >> body.md
+          fi
 
           NUMBER="$(gh issue list --state open --search "$TITLE in:title" \
                       --json number,title \
@@ -496,12 +565,14 @@ jobs:
             echo "| Dependency check | ${{ steps.deps.outcome }} |"
             echo "| Pull the casualty series | ${{ steps.fetch.outcome }} |"
             echo "| Carry the series into the figures | ${{ steps.sync.outcome }} |"
+            echo "| Install the statistics libraries | ${{ steps.statlibs.outcome }} |"
+            echo "| Recompute the statistical tests | ${{ steps.tests.outcome }} |"
             echo "| Validate the data | ${{ steps.validate.outcome }} |"
             echo "| Rebuild the static layer | ${{ steps.static.outcome }} |"
             echo "| Render every route | ${{ steps.render.outcome }} |"
             echo "| Commit and push | ${{ steps.commit.outcome }} |"
             echo
-            for log in pip deps fetch sync validate prerender render; do
+            for log in pip deps fetch sync tests validate prerender render; do
               if [ -f "$RUNNER_TEMP/$log.log" ]; then
                 echo "### $log"
                 echo '```'
