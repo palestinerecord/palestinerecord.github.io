@@ -609,23 +609,37 @@ def walk_items(debate):
 
 
 def h7():
-    con = json.loads((DATA / "constituency.json").read_text())
-    party = {m["id"]: m["party"] for m in con["members"]}
-    spoke, used = set(), set()
+    # The Hansard debates are 10 MB of raw text that stay on the workstation (they are
+    # not in the site repository), so the counts the test needs are saved beside the
+    # other external data by the full run and read back when the debates are absent,
+    # which is how the nightly refresh runs it. H7 is not one of the published tests;
+    # it is computed so that the false discovery rate is controlled across all of them.
+    snapshot = HERE / "external" / "h7-counts.json"
     files = sorted(glob.glob(str(RAW / "hansard" / "*.json")))
-    for f in files:
-        deb = json.loads(pathlib.Path(f).read_text())
-        for it in walk_items(deb):
-            mid = it.get("MemberId")
-            if it.get("ItemType") != "Contribution" or mid not in party:
-                continue
-            spoke.add(mid)
-            if re.search(r"genocid", html.unescape(re.sub(r"<[^>]+>", " ", it.get("Value") or "")), re.I):
-                used.add(mid)
-    by = defaultdict(lambda: [0, 0])
-    for mid in spoke:
-        by[party[mid]][0] += 1
-        by[party[mid]][1] += mid in used
+    if files:
+        con = json.loads((DATA / "constituency.json").read_text())
+        party = {m["id"]: m["party"] for m in con["members"]}
+        spoke, used = set(), set()
+        for f in files:
+            deb = json.loads(pathlib.Path(f).read_text())
+            for it in walk_items(deb):
+                mid = it.get("MemberId")
+                if it.get("ItemType") != "Contribution" or mid not in party:
+                    continue
+                spoke.add(mid)
+                if re.search(r"genocid", html.unescape(re.sub(r"<[^>]+>", " ", it.get("Value") or "")), re.I):
+                    used.add(mid)
+        by = defaultdict(lambda: [0, 0])
+        for mid in spoke:
+            by[party[mid]][0] += 1
+            by[party[mid]][1] += mid in used
+        if not SITE_ONLY:
+            snapshot.write_text(json.dumps({"files": len(files), "spoke": len(spoke), "by_party": by}, indent=1))
+        n_files, n_spoke = len(files), len(spoke)
+    else:
+        saved = json.loads(snapshot.read_text())
+        by = defaultdict(lambda: [0, 0], {k: list(v) for k, v in saved["by_party"].items()})
+        n_files, n_spoke = saved["files"], saved["spoke"]
     big = {k: v for k, v in by.items() if v[0] >= 10}
     other = [sum(v[0] for k, v in by.items() if k not in big), sum(v[1] for k, v in by.items() if k not in big)]
     rows = sorted(big.items(), key=lambda kv: -kv[1][0]) + ([("Other parties and independents", other)] if other[0] else [])
@@ -636,7 +650,7 @@ def h7():
     odds, pf = stats.fisher_exact([[lab[1], lab[0] - lab[1]], [con_[1], con_[0] - con_[1]]])
     record(id="H7", group="H7", title='Party and the word "genocide" in Commons debates on Gaza',
            null="Among sitting members who spoke in these debates, use of the word is independent of party.",
-           data=f"Full Hansard text of {len(files)} Commons and Westminster Hall debates since 7 October 2023; {len(spoke)} sitting members spoke.",
+           data=f"Full Hansard text of {n_files} Commons and Westminster Hall debates since 7 October 2023; {n_spoke} sitting members spoke.",
            test="Chi-square test of independence across parties with at least 10 speakers, others pooled; Fisher's exact test, Labour against Conservative",
            statistic={"chi2": round(chi2, 1), "df": int(dof), "fisher_odds_ratio_lab_con": round(odds, 2) if math.isfinite(odds) else None, "fisher_p": float(pf)},
            p=float(p), effect={"name": "Cramér's V", "value": round(v, 3)},
