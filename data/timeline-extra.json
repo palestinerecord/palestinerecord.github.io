@@ -6,6 +6,13 @@
   },
   "items": [
     {
+      "date": "20 June 1899",
+      "year": 1899,
+      "sort": "1899-06-20a",
+      "event": "The New York Times reports the Federation of American Zionists' conference under the sub-headline 'Will Colonize Palestine'",
+      "note": "Gottheil and Wise elected to the International Congress's executive committee; Congress to assemble at Basel on 15 August (§1.0)."
+    },
+    {
       "date": "14 Jul 1915",
       "year": 1915,
       "sort": "1915-07-14",
@@ -2428,6 +2435,13 @@
       "note": "Third anniversary; full video paywalled; preview gives a 1,195 toll breakdown (§18.6)."
     },
     {
+      "date": "7 October 2026",
+      "year": 2026,
+      "sort": "2026-10-07a",
+      "event": "The Green Party opens an investigation into the proposer of the Zionism motion",
+      "note": "Complaints concern her friendship with a convicted al-Qaeda member and recent comments; no suspension (§21.10)."
+    },
+    {
       "date": "8 October 2026",
       "year": 2026,
       "sort": "2026-10-08a",
@@ -2461,6 +2475,13 @@
       "sort": "2026-10-09b",
       "event": "US sanctions the International Criminal Court itself under Executive Order 14203",
       "note": "Rubio: 'Either the ICC will end its threats, or we will end the ICC' (§15.13)."
+    },
+    {
+      "date": "12 October 2026",
+      "year": 2026,
+      "sort": "2026-10-12a",
+      "event": "UN Human Rights verifies 1,076 deaths, 268 of them children, in the first ten months of the Gaza ceasefire",
+      "note": "Ministry of Health count 1,493 killed since 10 October 2025 (§6.7)."
     }
   ]
 }
