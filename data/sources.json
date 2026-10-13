@@ -360,6 +360,13 @@
           "date": "2026",
           "url": "https://www.ochaopt.org/content/housing-land-and-property-rights-issues-pose-further-challenges-gaza-reconstruction",
           "note": "UN humanitarian analysis of housing, land and property in reconstruction (§6.7)."
+        },
+        {
+          "title": "Report of the Independent International Commission of Inquiry on the OPT and Israel (A/HRC/56/26)",
+          "org": "UN Human Rights Council",
+          "date": "June 2024",
+          "url": "https://www.un.org/unispal/document/coi-report-a-hrc-56-26-27may24/",
+          "note": "Finding that the Hannibal Directive was likely applied in two incidents on 7 October (§18.6)."
         }
       ]
     },
@@ -1277,13 +1284,6 @@
           "date": "continuous",
           "url": "https://www.aljazeera.com/where/palestine/",
           "note": "The most continuous on-the-ground reporting from Gaza; its Sanad verification unit is cited throughout the record."
-        },
-        {
-          "title": "Middle East Eye",
-          "org": "Middle East Eye",
-          "date": "continuous",
-          "url": "https://www.middleeasteye.net/",
-          "note": "Source for several Knesset-floor statements, including the Waldiger exchange of 13 May 2025, and for the Israeli government document of 8 September 2019 recording UK Lawyers for Israel's request to the Justice Ministry for assistance (§13.9)."
         },
         {
           "title": "Wire reporting",
@@ -3678,6 +3678,139 @@
           "date": "2023-2024",
           "url": "https://www.publicbooks.org/the-hyphen-unites-avi-shlaim-on-arab-jewish-life/",
           "note": "'Zionism is an Ashkenazi thing' (§23.3)."
+        },
+        {
+          "title": "Captured alive, but killed in captivity: The 40 hostages who never made it back home alive",
+          "org": "CNN",
+          "date": "8 October 2026",
+          "url": "https://www.cnn.com/2026/10/08/middleeast/october-7-israel-hostages-netanyahu-vis-intl",
+          "note": "Investigation of the 40 hostages who died in captivity; the page returned an error and was read through summaries (§18.6)."
+        },
+        {
+          "title": "Israeli military says strike in Gaza may have prompted Hamas to execute six hostages",
+          "org": "CNN",
+          "date": "4 December 2024",
+          "url": "https://www.cnn.com/2024/12/04/middleeast/israel-hostages-airstrike-hamas-intl-latam/index.html",
+          "note": "The IDF investigation of the 14 February 2024 Khan Younis tunnel strike (§18.6)."
+        },
+        {
+          "title": "IDF finds slain hostages were likely shot by captors in February amid Israeli airstrikes",
+          "org": "The Times of Israel",
+          "date": "December 2024",
+          "url": "https://www.timesofisrael.com/idf-finds-slain-hostages-were-likely-shot-by-captors-in-february-amid-israeli-airstrikes/",
+          "note": "IDF investigation of the six hostages (§18.6). Israeli outlet."
+        },
+        {
+          "title": "How 3 Israeli hostages tried to save themselves, only to be killed by their own military",
+          "org": "NBC News",
+          "date": "December 2023",
+          "url": "https://www.nbcnews.com/news/3-israeli-hostages-tried-only-killed-military-rcna130912",
+          "note": "The killing of Haim, Shamriz and Talalka (§18.6)."
+        },
+        {
+          "title": "IDF Shot One Israeli Hostage 15 Minutes After Two Others Were Killed, Probe Finds",
+          "org": "Haaretz",
+          "date": "28 December 2023",
+          "url": "https://www.haaretz.com/israel-news/2023-12-28/ty-article/.premium/idf-shot-one-israeli-hostage-15-minutes-after-two-others-were-killed-probe-finds/0000018c-b24c-d45c-a98e-bb4cf73b0000",
+          "note": "Findings of the IDF's investigation (§18.6). Israeli outlet."
+        },
+        {
+          "title": "IDF: Captors murdered children Ariel and Kfir Bibas 'in cold blood' with 'their bare hands'",
+          "org": "The Times of Israel",
+          "date": "21 February 2025",
+          "url": "https://www.timesofisrael.com/idf-says-captors-murdered-children-ariel-and-kfir-bibas-with-their-bare-hands/",
+          "note": "The IDF's forensic conclusion; Hamas disputes it (§18.6). Israeli outlet."
+        },
+        {
+          "title": "Reel claims most Oct 7 hostage deaths trace to Israeli military action",
+          "org": "Ginnysaidso (Facebook)",
+          "date": "12 October 2026",
+          "url": "https://www.facebook.com/share/v/14sNwuDieAY/",
+          "note": "Reel in the style of a CNN programme; its tally of 24 does not match its own categories (§18.6)."
+        },
+        {
+          "title": "Spying, hacking and intimidation: Israel's nine-year 'war' on the ICC exposed",
+          "org": "The Guardian, +972 Magazine and Local Call (via Haaretz, Times of Israel)",
+          "date": "28 May 2024",
+          "url": "https://www.timesofisrael.com/israel-said-to-have-waged-9-year-war-against-icc-tapping-its-communications/",
+          "note": "The investigation of the covert campaign against the ICC; the original articles were read through reports of them (§15.13)."
+        },
+        {
+          "title": "Surveillance and interference: Israel's covert war on the ICC exposed",
+          "org": "+972 Magazine",
+          "date": "28 May 2024",
+          "url": "https://www.972mag.com/icc-israel-surveillance-investigation/",
+          "note": "The investigation (§15.13)."
+        },
+        {
+          "title": "Israel denies waging 'secret war' against ICC",
+          "org": "JNS",
+          "date": "May 2024",
+          "url": "https://www.jns.org/israel-news/israel-denies-waging-secret-war-against-icc",
+          "note": "The Israeli military's response (§15.13). Israeli outlet."
+        },
+        {
+          "title": "Netanyahu said to have offered Lewinsky tapes for Pollard",
+          "org": "The Times of Israel",
+          "date": "23 July 2014",
+          "url": "https://www.timesofisrael.com/netanyahu-said-to-have-offered-lewinsky-tapes-for-pollard/",
+          "note": "Report of Daniel Halper's claim in Clinton, Inc. (§19.7). Israeli outlet."
+        },
+        {
+          "title": "A crime that denies the dead their rest: Israel steals human skin from Palestinian corpses",
+          "org": "Egypt Independent",
+          "date": "26 December 2024",
+          "url": "https://cloudflare.egyptindependent.com/a-crime-that-denies-the-dead-their-rest-israel-steals-human-skin-from-palestinian-corpses/",
+          "note": "The skin-bank allegation (§10.3B)."
+        },
+        {
+          "title": "Reel claiming all of Zionism is illegal",
+          "org": "Baliey Morgan (Facebook)",
+          "date": "12 October 2026",
+          "url": "https://www.facebook.com/share/r/1DoECw7RNx/",
+          "note": "15-second reel with headlines on the ICC, the Lewinsky tapes, the Nakba and the skin bank (§15.13)."
+        },
+        {
+          "title": "Israeli snipers shooting children 'like a game' at Gaza aid centers: British surgeon",
+          "org": "Arab News",
+          "date": "2025",
+          "url": "https://www.arabnews.jp/en/middle-east/article_151834/",
+          "note": "Nick Maynard's account (§10.7)."
+        },
+        {
+          "title": "'Why is the world letting it happen?': U.K. surgeon, back from Gaza, on starving children",
+          "org": "Democracy Now!",
+          "date": "25 July 2025",
+          "url": "https://www.democracynow.org/2025/7/25/nick_maynard_gaza",
+          "note": "Maynard on boys shot at food distribution sites (§10.7)."
+        },
+        {
+          "title": "Palestinian boys shot in testicles as 'target practice'",
+          "org": "Al Jazeera",
+          "date": "5 September 2025",
+          "url": "https://www.aljazeera.com/video/quotable/2025/9/5/palestinian-boys-shot-in-testicles-as-target",
+          "note": "Maynard's account (§10.7)."
+        },
+        {
+          "title": "65 Doctors, Nurses and Paramedics: What We Saw in Gaza",
+          "org": "The New York Times (Feroze Sidhwa)",
+          "date": "9 October 2024",
+          "url": "https://www.mediaite.com/media/new-york-times-rejects-viral-claims-that-story-on-gaza-children-being-shot-in-the-head-is-fabricated/",
+          "note": "Guest essay and the Times's defence of it; read through Mediaite (§10.7)."
+        },
+        {
+          "title": "Owen Jones reel on alleged Israeli targeting of Gaza children",
+          "org": "Owen Jones (Facebook)",
+          "date": "9 October 2026",
+          "url": "https://www.facebook.com/share/r/1LiQDHLzUa/",
+          "note": "Reel built from a Piers Morgan Uncensored clip; none of its claims is sourced in the reel (§10.7)."
+        },
+        {
+          "title": "Gaza doctors find disturbing pattern of gunshot wounds in head and chest among children",
+          "org": "Middle East Monitor (Anadolu, on De Volkskrant)",
+          "date": "14 September 2025",
+          "url": "https://www.middleeastmonitor.com/20250914-gaza-doctors-find-disturbing-pattern-of-gunshot-wounds-in-head-and-chest-among-children/",
+          "note": "Anadolu's report of the De Volkskrant investigation (§10.7)."
         }
       ]
     },
