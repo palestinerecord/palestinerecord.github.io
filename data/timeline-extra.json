@@ -2374,6 +2374,13 @@
     {
       "date": "2 October 2026",
       "year": 2026,
+      "sort": "2026-10-02a",
+      "event": "Israel's Supreme Court overturns the Elections Committee's disqualification of Ra'am and the Joint List (unanimously) and of Ofer Cassif (7-2); Sami Abu Shehadeh withdraws",
+      "note": "Nine-justice panel; the lists may stand on 27 October (§4.5)."
+    },
+    {
+      "date": "2 October 2026",
+      "year": 2026,
       "sort": "2026-10-02c",
       "event": "Royal College of Nursing ends its partnership with Teva UK over links to the Israeli military",
       "note": "Letter of 23 September to Nurses for Palestine (§15.7)."
@@ -2512,6 +2519,13 @@
       "note": "Organised by USPCN Chicago and the Anti-War Committee; the figures cited are the activists' (§15.9)."
     },
     {
+      "date": "11 October 2026",
+      "year": 2026,
+      "sort": "2026-10-11a",
+      "event": "JNS election debate: eight of nine parties reject a Palestinian state; one declines a yes/no and one gives no answer",
+      "note": "Fleisher: 'tooth and nail'; Hassan-Nahoum: 'hell no' (§4.5)."
+    },
+    {
       "date": "12 October 2026",
       "year": 2026,
       "sort": "2026-10-12a",
@@ -2538,6 +2552,20 @@
       "sort": "2026-10-14b",
       "event": "The National reports Humza Yousaf criticising a historian and BBC presenter, named in summaries as Simon Schama, who said Israel is not committing genocide in Gaza",
       "note": "Schama had called the genocide claim a 'blood libel' at the Holocaust Educational Trust dinner on 7 September 2026 (§21.11)."
+    },
+    {
+      "date": "14 October 2026",
+      "year": 2026,
+      "sort": "2026-10-14c",
+      "event": "Faber stops supplying Sally Rooney's books in the UK, citing the Palestine Action proscription",
+      "note": "Stock already in shops stays on sale; Supreme Court hearing 4-5 November (§13.9A)."
+    },
+    {
+      "date": "14 October 2026",
+      "year": 2026,
+      "sort": "2026-10-14d",
+      "event": "Israeli air strike on an apartment in Al-Rimal, Gaza City, kills Reem Asaad Awad, 33; her daughter is pulled from the fire",
+      "note": "1,501 killed in Gaza since the ceasefire per Al Jazeera (§6.7)."
     }
   ]
 }
