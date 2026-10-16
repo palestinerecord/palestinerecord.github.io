@@ -1755,6 +1755,7 @@ tr.row-partial td { opacity: .72; }
 .test-result.rejected { border-color: var(--red); color: var(--red); }
 .test-result.muted { color: var(--muted); }
 .test-reading { margin: 0 0 12px; line-height: 1.55; }
+.test-caveat { margin: 0 0 12px; padding: 8px 12px; border-left: 3px solid var(--accent); background: rgba(255,255,255,.03); font-size: 13px; line-height: 1.5; color: var(--text-2); }
 .test-facts { display: grid; grid-template-columns: 130px 1fr; gap: 6px 14px; margin: 0; font-size: 13px; color: var(--text-2); }
 .test-facts dt { color: var(--muted); }
 .test-facts dd { margin: 0; }

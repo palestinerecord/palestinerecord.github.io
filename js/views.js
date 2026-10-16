@@ -181,7 +181,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=194" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=195" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -305,7 +305,7 @@ const Views = (function () {
       <section class="hero wrap">
         <div class="hero-inner">
           <div class="hero-flag">
-            <img class="flag-ps" src="assets/flag-palestine.svg?v=194" alt="Flag of Palestine" fetchpriority="high">
+            <img class="flag-ps" src="assets/flag-palestine.svg?v=195" alt="Flag of Palestine" fetchpriority="high">
             <span>Palestine</span>
           </div>
           <h1 data-hero-title>The Documented<span>Record</span></h1>
@@ -2925,12 +2925,19 @@ const Views = (function () {
      here, so the page, the file and the PDF cannot disagree. */
 
   const pText = (p) => (p === null || p === undefined ? '—' : p < 0.001 ? '< 0.001' : p.toFixed(3));
-  const sig = (x) => (Math.abs(x) >= 100 ? Math.round(x).toString() : Number(x).toPrecision(3));
+  const sig = (x) => (Number.isInteger(x) || Math.abs(x) >= 100 ? Math.round(x).toString() : Number(x).toPrecision(3));
+
+  /* An interval named for what it is: a one-sided test gives a bound, not a two-sided range. */
+  const ciText = (o) => (!o.ci ? ''
+    : o.ci_kind === 'lower' ? ` (one-sided 95% lower bound ${sig(o.ci[0])})`
+    : o.ci_kind === 'upper' ? ` (one-sided 95% upper bound ${sig(o.ci[1])})`
+    : ` (95% CI ${sig(o.ci[0])} to ${sig(o.ci[1])})`);
 
   function testCard(t) {
     const e = t.effect || {};
-    const tone = t.status === 'not testable' ? '' : /not rejected/.test(t.result || '') ? 'muted' : 'rejected';
-    const sens = (t.sensitivity || []).map((s) => `<li>${esc(s.name)}: ${sig(s.value)}${s.ci ? ` (95% CI ${sig(s.ci[0])} to ${sig(s.ci[1])})` : ''}${s.p !== undefined ? `, p ${pText(s.p)}` : ''}</li>`).join('');
+    const descriptive = t.status === 'descriptive';
+    const tone = t.status === 'not testable' || descriptive ? '' : /not rejected/.test(t.result || '') ? 'muted' : 'rejected';
+    const sens = (t.sensitivity || []).map((s) => `<li>${esc(s.name)}: ${sig(s.value)}${ciText(s)}${s.p !== undefined ? `, p ${pText(s.p)}` : ''}</li>`).join('');
     const sources = (t.sources || []).map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.title)}</a> — ${esc(s.org)}, ${esc(s.date)}</li>`).join('');
     return `<article class="card test-card" id="test-${esc(t.id)}">
       <div class="test-head">
@@ -2939,12 +2946,13 @@ const Views = (function () {
         <span class="test-result ${tone}">${esc(t.result || t.status)}</span>
       </div>
       <p class="test-reading">${esc(t.reading || '')}</p>
+      ${t.caveat ? `<p class="test-caveat"><b>Read with care.</b> ${esc(t.caveat)}</p>` : ''}
       <dl class="test-facts">
-        <dt>Null hypothesis</dt><dd>${esc(t.null)}</dd>
+        ${descriptive ? '' : `<dt>Null hypothesis</dt><dd>${esc(t.null)}</dd>`}
         <dt>Data</dt><dd>${esc(t.data)}</dd>
-        <dt>Test</dt><dd>${esc(t.test)}</dd>
-        ${e.name ? `<dt>Effect</dt><dd>${esc(e.name)}: <b>${sig(e.value)}</b>${e.ci ? ` (95% CI ${sig(e.ci[0])} to ${sig(e.ci[1])})` : ''}</dd>` : ''}
-        <dt>p</dt><dd>${pText(t.p)}${t.p_adjusted !== undefined ? ` · adjusted for false discovery ${pText(t.p_adjusted)}` : ''}</dd>
+        <dt>${descriptive ? 'Measure' : 'Test'}</dt><dd>${esc(t.test)}</dd>
+        ${e.name ? `<dt>${descriptive ? 'Result' : 'Effect'}</dt><dd>${esc(e.name)}: <b>${sig(e.value)}</b>${e.of ? ` of ${esc(String(e.of))}` : ''}${ciText(e)}</dd>` : ''}
+        ${descriptive ? '' : `<dt>p</dt><dd>${pText(t.p)}${t.p_adjusted !== undefined ? ` · adjusted for false discovery ${pText(t.p_adjusted)}` : ''}</dd>`}
         ${sens ? `<dt>Sensitivity</dt><dd><ul>${sens}</ul></dd>` : ''}
         ${sources ? `<dt>Sources</dt><dd><ul>${sources}</ul></dd>` : ''}
         <dt>Report</dt><dd>${esc(t.ref || '')}</dd>

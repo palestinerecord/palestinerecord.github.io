@@ -191,12 +191,18 @@ def h1(people):
     pop_share = 1 - men_18_59 / total_pop
     p_b = 0.0 if wce else 1.0  # under a null share of zero, a single case outside the group rejects it
     men = int(n) - wce
-    record(id="H1b", group="H1", title="Age and sex of the dead: pattern confined to men of fighting age",
+    men_pop = 1 - pop_share
+    mlo, mhi = proportion_confint(men, n, method="wilson")
+    p_men = float(stats.binomtest(men, int(n), men_pop, alternative="greater").pvalue)
+    DEPARTURES.append({"test": "H1b", "text": "The pre-registered null is that the dead are confined to men aged 18-59, tested as a share of zero outside that group, so a single woman, child or person over 59 rejects it and the p-value carries no information about size. The test is reported as registered. The comparison that carries the substance, the share of the dead who are men aged 18-59 against their share of the population, is added as a sensitivity analysis after the data were seen, and is labelled as such."})
+    record(id="H1b", group="H1", title="Age and sex of the dead: pattern confined to men aged 18-59",
            null="The identified dead are confined to men aged 18-59.",
-           data=f"Ministry of Health named list, {int(n):,} identified dead; PCBS/UNFPA Gaza Strip population 2023 ({total_pop:,}).", test="Exact binomial test of the share of women, children and people aged 60 and over against zero",
+           data=f"Ministry of Health named list, {int(n):,} identified dead; PCBS/UNFPA Gaza Strip population 2023 ({total_pop:,}).", test="Exact binomial test of the share of women, children and people aged 60 and over against zero (a single case outside the group rejects the null; the share and its interval are what matter)",
            statistic={"women_children_elderly": wce, "men_18_59": men, "n": int(n)},
            p=float(p_b), effect={"name": "Share of dead who are women, children under 18 or aged 60+", "value": round(share, 4),
                                  "ci": ci(lo, hi), "population_share": round(pop_share, 4)},
+           sensitivity=[{"name": f"Post hoc: share of the dead who are men aged 18-59, against their {100 * men_pop:.1f}% of the population (one-sided exact test, interval two-sided Wilson)", "value": round(men / n, 4), "ci": ci(mlo, mhi), "p": p_men}],
+           caveat="The registered null is strict, so any single exception rejects it. The finding is the size: more than half the identified dead are outside the group of men aged 18 to 59, and men in that group are still about twice their share of the population among the dead, so the dead are neither confined to that group nor proportional to the population. The list records age and sex, not whether any person was a combatant.",
            ref="§6.1")
 
     ratios = []
@@ -327,7 +333,7 @@ def h2(dates, total, new):
     h2a(dates, total)
     periods = [
         ("H2b", "The January-March 2025 ceasefire", (iso("2024-11-20"), iso("2025-01-18")), (iso("2025-01-19"), iso("2025-03-17"))),
-        ("H2c", "The October 2025 ceasefire", (iso("2025-08-11"), iso("2025-10-09")), (iso("2025-10-10"), iso("2026-10-01"))),
+        ("H2c", "The October 2025 ceasefire", (iso("2025-08-11"), iso("2025-10-09")), (iso("2025-10-10"), dates[-1])),
     ]
     out = {}
     for tid, label, pre, during in periods:
@@ -401,6 +407,7 @@ def h3(dates, total):
                null=f"No change in the level or the slope of daily deaths at the order of {T:%d %B %Y}.",
                data="Ministry of Health daily series (Tech For Palestine), 1 December 2023 to 31 July 2024.",
                test="Segmented negative binomial regression (trend, and a level and slope change at each order), Newey-West errors; joint Wald test of level and slope",
+               caveat="Not rejecting the null is not evidence of no effect. The interval shows which changes the data cannot exclude; a fall of that size could be real and undetected. The series is also affected by the events of those months (the offensives, the aid situation), so a change, or its absence, is an association with a date and not an estimate of what the order did.",
                statistic={"wald_chi2": round(float(w.statistic), 2), "df": 2, "overdispersion_alpha": round(alpha, 3)},
                p=float(w.pvalue), effect={"name": "Rate ratio, level change at the order", "value": round(rr, 3), "ci": ci(lo, hi),
                                           "slope_change_per_30_days": round(math.exp(30 * res.params[si]), 3)},
@@ -552,7 +559,7 @@ def h6(people):
     p = stats.binomtest(ok, n, 0.1, alternative="greater").pvalue
     dup_ids = sum(v - 1 for v in Counter(p["id"] for p in people).values() if v > 1)
     dup_name_dob = sum(v - 1 for v in Counter((p["name"], p.get("dob")) for p in people).values() if v > 1)
-    start, end = iso("2023-10-07"), iso("2026-10-01")
+    start, end = iso("2023-10-07"), iso(daily()[-1]["report_date"])
 
     def years(b, at):
         return at.year - b.year - ((at.month, at.day) < (b.month, b.day))
@@ -575,6 +582,7 @@ def h6(people):
            statistic={"valid": ok, "n": n},
            p=float(p), effect={"name": "Share of identity numbers with a valid check digit", "value": round(ok / n, 5), "ci": ci(lo, hi)},
            decision="validity not rejected" if ok / n >= 0.99 else "validity rejected",
+           caveat="The checks show the list is internally consistent: valid numbers, no duplicates, ages that agree with dates of birth. They cannot show that each person named died, which needs matching against other records. The interval is a two-sided Wilson interval, and its upper end is 1 because every number passed.",
            descriptive={"duplicate_ids": dup_ids, "duplicate_name_and_dob": dup_name_dob,
                         "age_dob_checked": checked, "age_dob_disagree": mismatch},
            ref="§6.1")
@@ -582,9 +590,9 @@ def h6(people):
     w = whipple(ages)
     my, digits = myers(ages)
     scale = "highly accurate" if w < 105 else "fairly accurate" if w < 110 else "approximate" if w < 125 else "rough" if w < 175 else "very rough"
-    record(id="H6b", group="H6", title="Age heaping on the named list",
-           null="Age reporting shows no more heaping on ages ending in 0 and 5 than a registry-based list would.",
-           data="As H6a.", test="Whipple's index (ages 23-62) on the UN scale, and Myers' blended index (ages 10-89), against the PCBS 2017 census",
+    record(id="H6b", group="H6", kind="descriptive", title="Age heaping on the named list (a measure, not a test)",
+           null="",
+           data="As H6a.", test="Descriptive measure, no hypothesis test: Whipple's index (ages 23-62) on the UN scale, and Myers' blended index (ages 10-89), set against the PCBS 2017 census",
            statistic={"whipple": round(w, 1), "myers": round(my, 2)},
            p=None, effect={"name": "Whipple's index", "value": round(w, 1), "scale": scale,
                            "census_whipple": 100.0, "census_myers": 2.4},
@@ -694,6 +702,8 @@ def h8():
                null=f"Whether a UN member state {label} is independent of whether it recognises Palestine.",
                data=f"World positions dataset, {len(un)} UN member states.",
                test="Fisher's exact test" + (" (interval with Haldane correction for a zero cell)" if 0 in (a, b, c, d) else ""),
+               caveat=("The interval is very wide because one cell is empty: the direction is clear and the size is not. The test shows an association between recognising Palestine and a government having said this; it cannot separate recognition from region, alignment or anything else that goes with it, and it records what governments have said, not what is true." if tid == "H8b" else
+                       "The association reflects region: the recorded measures are mostly European and Western, and the test cannot separate recognition from region."),
                statistic={"recognises_and_yes": a, "recognises_and_no": b, "does_not_and_yes": c, "does_not_and_no": d},
                p=float(p), effect={"name": "Odds ratio", "value": round(float(t2.oddsratio), 2) if math.isfinite(t2.oddsratio) else None, "ci": ci(lo, hi)},
                ref="§15.4")
@@ -729,7 +739,8 @@ def h9():
     record(id="H9a", group="H9", title="Settlers and Palestinians before Israeli courts in the West Bank",
            null="An Israeli indicted for an offence against Palestinians in the West Bank is as likely to be convicted as a Palestinian tried in the military courts.",
            data=f"Yesh Din, {y['files_monitored']:,} police files on offences by Israelis against Palestinians, 2005-2024 ({ind} indictments, {conv} full or partial convictions); Israeli military courts' 2010 annual report as reported by Haaretz ({mc['cases']:,} cases, {mc['full_acquittals']} full acquittals).",
-           test="Fisher's exact test of two proportions",
+           test="Fisher's exact test of two proportions (of unlike sources: see the caveat)",
+           caveat="The two proportions come from different sources, years and courts (Yesh Din's files to 2024 against the military courts' 2010 report), and a partial conviction counts as a conviction on both sides. The p-value shows the gap is not sampling noise; it does not make the two figures a like-for-like comparison. The sturdier fact is Yesh Din's own: about 3% of the police files it followed ended in any conviction.",
            statistic={"settler_convicted": conv, "settler_indicted": ind, "palestinian_convicted": convicted_pal, "palestinian_cases": mc["cases"],
                       "indicted_share_of_concluded": round(ind / concluded, 4), "indicted_ci": ci(lo2, hi2)},
            p=p, effect={"name": "Odds ratio, settler conviction against Palestinian conviction", "value": round(orr, 4), "ci": c},
@@ -747,7 +758,7 @@ def h9():
            data=f"Yesh Din, incidents it documented in 2024: in {nf} of {n} the victims chose not to complain.",
            test="Exact binomial test against one half (one-sided)",
            statistic={"not_filed": nf, "incidents": n},
-           p=float(bt.pvalue), effect={"name": "Share of victims not filing a complaint", "value": round(nf / n, 3), "ci": ci(lo, hi)},
+           p=float(bt.pvalue), effect={"name": "Share of victims not filing a complaint", "value": round(nf / n, 3), "ci": ci(lo, hi), "ci_kind": "lower"},
            ref="§11")
 
 
@@ -761,8 +772,9 @@ def h10():
            null=f"Palestinian applications for building permits in Area C are approved at the rate settlers' plans are approved (at least {pct(bench, 0)}).",
            data=f"Civil Administration and Bimkom figures, 2016-2020: {pp['approved']} of {pp['applications']:,} Palestinian applications approved; the Civil Administration's own statement that 60-70% of settlement plans submitted are approved (Knesset, 19 July 2023).",
            test="Exact binomial test against the lower bound of the settler approval rate (one-sided)",
+           caveat="The benchmark is a different unit: the Civil Administration's figure is the share of settlement plans approved, the Palestinian figure the share of permit applications approved. The test shows the Palestinian rate is far below 60%; it does not measure a ratio between the two, and none is claimed. The rate itself, 24 of 2,550, stands on its own.",
            statistic={"approved": pp["approved"], "applications": pp["applications"]},
-           p=float(bt.pvalue), effect={"name": "Share of Palestinian applications approved", "value": round(pp["approved"] / pp["applications"], 4), "ci": ci(lo, hi), "benchmark": bench},
+           p=float(bt.pvalue), effect={"name": "Share of Palestinian applications approved", "value": round(pp["approved"] / pp["applications"], 4), "ci": ci(lo, hi), "ci_kind": "upper", "benchmark": bench},
            sources=[{"title": "The Civil Administration acknowledges extreme discrimination in building permits and law enforcement between Palestinians and settlers", "org": "Peace Now", "date": "10 August 2023", "url": A["url"]}],
            ref="§12")
     e = A["enforcement_2022_to_mid_2023"]
@@ -835,8 +847,8 @@ def h11():
                test="Regression of log price on a period indicator with item fixed effects, errors clustered by item",
                statistic={"items": len(items)},
                p=p, effect={"name": "Price ratio, after against before", "value": round(r, 3), "ci": c},
-               descriptive={"index_before": round(float(np.mean([idx[months.index(m)] for m in before])), 2),
-                            "index_after": round(float(np.mean([idx[months.index(m)] for m in after])), 2)},
+               descriptive={"index_before": round(float(np.exp(np.mean([math.log(idx[months.index(m)]) for m in before]))), 2),
+                            "index_after": round(float(np.exp(np.mean([math.log(idx[months.index(m)]) for m in after]))), 2)},
                sources=[{"title": "State of Palestine: Prices of Basic Commodities in Gaza", "org": "Palestinian Central Bureau of Statistics (HDX)", "date": "updated 13 September 2026",
                          "url": "https://data.humdata.org/dataset/state-of-palestine-price-of-basic-commodities-in-gaza"}],
                ref="§6.3")
@@ -931,22 +943,29 @@ def h15():
     t = np.array([(iso(x["date"]) - iso(a[0]["date"])).days for x in a], float)
     d = np.array([x["destroyed"] for x in a], float)
     tau, p_tau = stats.kendalltau(t, d)
+    gaps = [(iso(a[i]["date"]) - iso(a[i - 1]["date"])).days for i in range(1, len(a))]
+    incr = [float(d[i] - d[i - 1]) for i in range(1, len(a))]
+    per_day = [round(x / g_, 1) for x, g_ in zip(incr, gaps)]
+    DEPARTURES.append({"test": "H15a", "text": f"The registered Mann-Kendall test on the twelve cumulative counts is computed (tau {round(float(tau), 3)}, p {float(p_tau):.2g}) but is not reported as a test: a cumulative count of destroyed structures can only fall by reclassification, so a rising trend is near-certain whatever happened and the p-value carries no information. The entry reports the increase in each interval between assessments instead, and is excluded from the multiple-testing correction."})
     SERIES["h15"] = {"dates": [x["date"] for x in a], "destroyed": [x["destroyed"] for x in a], "affected": [x["affected"] for x in a]}
-    record(id="H15a", group="H15", title="Destroyed buildings in Gaza across twelve satellite assessments",
-           null="The number of destroyed structures shows no monotonic trend across the assessments.",
+    record(id="H15a", group="H15", kind="descriptive", title="Destroyed buildings in Gaza across twelve satellite assessments (a measure, not a test)",
+           null="",
            data=f"UNOSAT comprehensive damage assessments, {len(a)} imagery dates from {a[0]['date']} to {a[-1]['date']}.",
-           test="Kendall's tau (Mann-Kendall trend test)",
-           statistic={"assessments": len(a), "first": int(d[0]), "last": int(d[-1])},
-           p=float(p_tau), effect={"name": "Kendall's tau", "value": round(float(tau), 3)},
+           test="Descriptive measure, no hypothesis test: the increase in the cumulative count of destroyed structures in each interval between assessments",
+           caveat="The counts are cumulative, so a rising total is close to certain and is not evidence by itself. What the measure shows is that every interval between assessments added structures, at the daily rates listed. Some additions are buildings damaged earlier that later collapsed or were cleared, which the satellite count cannot separate. The latest assessment is from June 2026, so this measure ends four months before the daily series.",
+           statistic={"assessments": len(a), "first": int(d[0]), "last": int(d[-1]), "intervals": len(incr), "intervals_with_increase": sum(1 for x in incr if x > 0),
+                      "per_day_min": min(per_day), "per_day_max": max(per_day), "kendall_tau": round(float(tau), 3), "kendall_p": float(p_tau)},
+           p=None, effect={"name": "Intervals between assessments in which more structures were destroyed", "value": sum(1 for x in incr if x > 0), "of": len(incr)},
            sources=[{"title": "Gaza Strip Comprehensive Damage Assessment", "org": "UNOSAT", "date": "2023-2026", "url": U["url"]}],
            ref="§6.4")
     i0 = [x["date"] for x in a].index("2025-10-11")
     k = d[-1] - d[i0]; days = (iso(a[-1]["date"]) - iso(a[i0]["date"])).days
     lo, hi = stats.chi2.ppf(0.025, 2 * k) / 2 / days, stats.chi2.ppf(0.975, 2 * k + 2) / 2 / days
-    record(id="H15b", group="H15", title="Buildings destroyed during the October 2025 ceasefire",
-           null="No further structures were destroyed in Gaza between the ceasefire of October 2025 and June 2026.",
+    record(id="H15b", group="H15", kind="descriptive", title="Buildings destroyed during the October 2025 ceasefire (a measure, not a test)",
+           null="",
            data=f"UNOSAT: {int(d[i0]):,} structures destroyed at 11 October 2025, {int(d[-1]):,} at 16 June 2026.",
-           test="Count of newly destroyed structures, with an exact Poisson interval for the daily rate",
+           test="Descriptive measure, no hypothesis test: count of newly destroyed structures, with an exact Poisson interval for the daily rate",
+           caveat="The interval treats additions as random counts and covers sampling variation only; it does not cover reclassification of earlier damage, and it ends at the latest assessment (16 June 2026), four months before the daily series.",
            statistic={"destroyed_during_ceasefire": int(k), "days": days},
            p=None, effect={"name": "Structures destroyed a day during the ceasefire", "value": round(k / days, 1), "ci": ci(lo, hi)},
            ref="§6.4")
@@ -962,13 +981,13 @@ def h16():
         if w["police"]:
             k2 = nt + w["taking_part"]
             b2 = stats.binomtest(nt, k2, 0.5, alternative="greater")
-            sens.append({"name": "Police officers left out rather than counted as taking part", "value": round(nt / k2, 3), "ci": ci(*b2.proportion_ci(method="exact")), "p": float(b2.pvalue)})
+            sens.append({"name": "Police officers left out rather than counted as taking part", "value": round(nt / k2, 3), "ci": ci(*b2.proportion_ci(method="exact")), "ci_kind": "lower", "p": float(b2.pvalue)})
         record(id=tid, group="H16", title=f"Palestinians killed who took no part in hostilities: {w['name']}",
                null="No more than half of the Palestinians killed by Israeli forces, of those whose status B'Tselem could determine, took no part in the hostilities.",
                data=f"B'Tselem: {nt:,} took no part, {w['taking_part']:,} took part" + (f", {w['police']} police officers (counted here as taking part)" if w["police"] else "") + f", {w['unknown']} undetermined (left out).",
                test="Exact binomial test against one half (one-sided)",
                statistic={"not_taking_part": nt, "determined": known},
-               p=float(bt.pvalue), effect={"name": "Share who took no part in hostilities", "value": round(nt / known, 3), "ci": ci(lo, hi)},
+               p=float(bt.pvalue), effect={"name": "Share who took no part in hostilities", "value": round(nt / known, 3), "ci": ci(lo, hi), "ci_kind": "lower"},
                sensitivity=sens,
                sources=[{"title": "Fatality figures", "org": "B'Tselem", "date": "", "url": u} for u in B["urls"]][:1] if tid == "H16a" else None,
                ref="§10")
@@ -988,7 +1007,7 @@ GROUPS = {
     "H3": "The ICJ provisional measures orders",
     "H4": "The West Bank before and after 7 October 2023",
     "H5": "Children as a share of the dead",
-    "H6": "Is the named list genuine?",
+    "H6": "Is the named list internally consistent?",
     "H7": "Parliament and the word genocide",
     "H8": "What states have done",
     "H9": "Settler violence and the courts",
@@ -1012,8 +1031,14 @@ def hu(x, d=1):
     return str(Decimal(str(x)).quantize(Decimal(1).scaleb(-d), rounding=ROUND_HALF_UP))
 
 
-def iv(e, d=2):
+def iv(e, d=3):
+    """An interval at the precision the table beside it uses (3 significant figures), so the sentence and the table cannot disagree."""
     return f"{e['ci'][0]:.{d}g} to {e['ci'][1]:.{d}g}" if e.get("ci") else ""
+
+
+def ci1(e, kind):
+    """A one-sided 95% interval, named for what it is: a lower or an upper bound."""
+    return f"one-sided 95% {kind} bound {pct(e['ci'][0] if kind == 'lower' else e['ci'][1], 0 if kind == 'lower' else 1)}"
 
 
 def readings():
@@ -1028,8 +1053,10 @@ def readings():
     out["H1a"] = (f"The dead are not distributed as the population is (Cramér's V {T['H1a']['effect']['value']}). Men aged 20 to 59 appear among the dead at {rng(men_fa)} times their share of the population; "
                   f"women and girls under 60 at {rng(women)} times theirs, and children under ten of both sexes at {rng(kids)}. People aged 75 and over are over-represented in both sexes ({rng(old)}).")
     e = T["H1b"]["effect"]
+    sm_ = T["H1b"]["sensitivity"][0]
     out["H1b"] = (f"{pct(e['value'])} of the identified dead (95% CI {pct(e['ci'][0])} to {pct(e['ci'][1])}) are women, children under 18 or people aged 60 and over, against {pct(e['population_share'])} of the population. "
-                  "More than half of the dead fall outside the group from which armed men are drawn: the dead are not confined to men of fighting age.")
+                  f"More than half of the dead are outside the group of men aged 18 to 59, so the dead are not confined to it. Men aged 18 to 59 are still {pct(sm_['value'])} of the dead (95% CI {pct(sm_['ci'][0])} to {pct(sm_['ci'][1])}) against {pct(1 - e['population_share'])} of the population, about twice their share, so the dead are not proportional to the population either. "
+                  "The list records age and sex, not whether any person was a combatant.")
     d = T["H2a"]["descriptive"]; s = T["H2a"]["sensitivity"]
     out["H2a"] = (f"Reported killings fell from {d['before_per_day']} a day in the fortnight before the pause to {d['during_per_day']} a day during it (rate ratio {T['H2a']['effect']['value']}, 95% CI {iv(T['H2a']['effect'])}). "
                   f"Killing did not stop: at least {d['during_killed']} people were reported killed in the {d['during_days']} days. Against the upper bound of 40 deaths the ratio is {s[1]['value']}, still a fall of about 98%.")
@@ -1040,7 +1067,8 @@ def readings():
     for k in ("H3a", "H3b", "H3c"):
         e = T[k]["effect"]
         out[k] = (f"No detectable change in the level or the trend of daily deaths at the order (level rate ratio {e['value']}, 95% CI {iv(e)}; joint test p = {T[k]['p']:.2f}). "
-                  "The order was not followed by a measurable fall in the rate of killing. This is the absence of a detectable change, not proof that the order had no effect on any conduct.")
+                  f"The order was not followed by a measurable fall in the rate of killing, but the interval does not exclude a change in the level of between {pct(1 - e['ci'][0], 0)} down and {pct(e['ci'][1] - 1, 0)} up. "
+                  "This is the absence of a detectable change, not proof that the order had no effect on any conduct.")
     e = T["H4a"]["effect"]; st = T["H4a"]["statistic"]
     out["H4a"] = f"Palestinians were killed in the West Bank at {st['after_per_day']} a day after 7 October 2023 against {st['before_per_day']} before it, {e['value']} times the rate (95% CI {iv(e, 3)}), in a year that was already the deadliest on record before the war began."
     e = T["H4b"]["effect"]; s = T["H4b"]["sensitivity"][0]
@@ -1052,7 +1080,8 @@ def readings():
     st = T["H6a"]["statistic"]; d = T["H6a"]["descriptive"]
     out["H6a"] = (f"All {st['valid']:,} of the {st['n']:,} identity numbers pass the Population Registry check digit, where fabricated numbers would pass about one time in ten. "
                   f"There are {d['duplicate_ids']} duplicate identity numbers and {d['duplicate_name_and_dob']} duplicate name-and-birth-date pairs, and the stated age agrees with the date of birth in {d['age_dob_checked'] - d['age_dob_disagree']:,} of {d['age_dob_checked']:,} records. "
-                  "The list as published is consistent with registry data. These tests cannot detect a real identity number attached to someone who did not die; that question needs matching against other records.")
+                  f"The share passing has a 95% interval of {pct(T['H6a']['effect']['ci'][0], 3)} to {pct(T['H6a']['effect']['ci'][1], 0)} (two-sided; the upper end cannot exceed 100%). "
+                  "The list as published is internally consistent with registry data. These tests cannot detect a real identity number attached to someone who did not die; that question needs matching against other records.")
     st = T["H6b"]["statistic"]
     out["H6b"] = (f"No age heaping: Whipple's index is {st['whipple']} and Myers' index {st['myers']}, against the 2017 census's 100 and 2.4. "
                   "Ages on the list follow from registry dates of birth rather than estimates, which is what a list built from identity records, and not from guesses, should show.")
@@ -1064,20 +1093,20 @@ def readings():
     out["H8a"] = (f"States that recognise Palestine are less likely, not more, to impose one of the recorded sanctions: {st['recognises_and_yes']} of {st['recognises_and_yes'] + st['recognises_and_no']} recognising states against {st['does_not_and_yes']} of {st['does_not_and_yes'] + st['does_not_and_no']} that do not (odds ratio {T['H8a']['effect']['value']}). "
                   "The recorded measures are European and other Western ones. Several of the states taking them, among them Germany, Italy and the Netherlands, do not recognise Palestine, while most recognising states are in Africa, Asia and Latin America and have taken none of these measures. The association reflects region, and the test cannot separate the two.")
     st = T["H8b"]["statistic"]
-    out["H8b"] = (f"{st['recognises_and_yes']} of {st['recognises_and_yes'] + st['recognises_and_no']} recognising states have a government that has called it genocide; none of the {st['does_not_and_yes'] + st['does_not_and_no']} non-recognising states has (odds ratio {T['H8b']['effect']['value']}, with a correction for the empty cell).")
+    out["H8b"] = (f"{st['recognises_and_yes']} of {st['recognises_and_yes'] + st['recognises_and_no']} recognising states have a government that has called it genocide; none of the {st['does_not_and_yes'] + st['does_not_and_no']} non-recognising states has (odds ratio {T['H8b']['effect']['value']}, 95% CI {iv(T['H8b']['effect'])}, with a correction for the empty cell). The direction is clear and the size is not.")
     T = {t_["id"]: t_ for t_ in TESTS}
     d = T["H9a"]["descriptive"]
     out["H9a"] = (f"Of Israelis indicted for offences against Palestinians in the West Bank, {pct(d['settler_conviction_rate'], 0)} were convicted in full or in part (95% CI {pct(d['settler_ci'][0], 0)} to {pct(d['settler_ci'][1], 0)}); "
                   f"of Palestinians tried in the military courts, {pct(d['palestinian_conviction_rate'], 2)} were. Only {pct(d['files_ending_in_conviction'], 0)} of the police files Yesh Din followed ended in any conviction. "
-                  "The two figures come from different years and different courts, and a partial conviction is counted as a conviction on both sides.")
+                  "The two proportions come from different years and different courts, and a partial conviction is counted as a conviction on both sides, so the test shows the gap is not sampling noise and is not a like-for-like comparison.")
     e = T["H9b"]["effect"]
     out["H9b"] = f"In {pct(e['value'], 0)} of the attacks Yesh Din documented in 2024, the Palestinian victims chose not to complain to the Israeli police, most citing distrust of the investigation or fear of reprisal. The prosecution figures in H9a therefore start from a minority of the attacks."
     e = T["H10a"]["effect"]
-    out["H10a"] = f"Between 2016 and 2020, {T['H10a']['statistic']['approved']} of {T['H10a']['statistic']['applications']:,} Palestinian applications for building permits in Area C were approved: {pct(e['value'])} (95% CI up to {pct(e['ci'][1])}). The Civil Administration told the Knesset that 60-70% of settlement plans are approved. The units differ (permits against plans), but the gap is more than sixty-fold."
+    out["H10a"] = f"Between 2016 and 2020, {T['H10a']['statistic']['approved']} of {T['H10a']['statistic']['applications']:,} Palestinian applications for building permits in Area C were approved: {pct(e['value'])} ({ci1(e, 'upper')}). The Civil Administration told the Knesset that 60-70% of settlement plans are approved. The units differ (applications for permits against plans submitted), so the test shows only that the Palestinian rate is far below that benchmark, and no ratio between the two is claimed."
     d = T["H10b"]["descriptive"]
     out["H10b"] = f"Of structures the Civil Administration identified as built without a permit in 2022 and the first half of 2023, {pct(d['palestinian_rate'], 0)} of Palestinian structures were demolished against {pct(d['settler_rate'], 0)} of settler structures: the odds of demolition were {T['H10b']['effect']['value']} times higher for a Palestinian structure (95% CI {iv(T['H10b']['effect'])})."
     d = T["H11a"]["descriptive"]; e = T["H11a"]["effect"]
-    out["H11a"] = f"During the total blockade of March to May 2025, food prices in Gaza rose {pct(e['value'] - 1, 0)} above the three months before (95% CI {pct(e['ci'][0] - 1, 0)} to {pct(e['ci'][1] - 1, 0)}), from {d['index_before']} to {d['index_after']} times their pre-war level."
+    out["H11a"] = f"During the total blockade of March to May 2025, the typical food price in Gaza rose {pct(e['value'] - 1, 0)} above the three months before (95% CI {pct(e['ci'][0] - 1, 0)} to {pct(e['ci'][1] - 1, 0)}); the food index, the geometric mean of the items' prices against their pre-war level, went from {d['index_before']} to {d['index_after']} times that level over the same months (a rise of {pct(d['index_after'] / d['index_before'] - 1, 0)})."
     e = T["H11c"]["effect"]; d = T["H11c"]["descriptive"]
     out["H11c"] = f"Across the {T['H11c']['statistic']['months']} months of data, food in Gaza cost on average {e['value']} times its pre-war price (95% CI {iv(e)}), and was above its pre-war price in {T['H11c']['statistic']['months_above_prewar']} of {T['H11c']['statistic']['months']} months. At the peak, in {d['peak_month']}, it cost {d['peak_index']} times as much."
     s = T["H13"]["statistic"]; e = T["H13"]["effect"]
@@ -1087,12 +1116,13 @@ def readings():
         war = T[k]["title"].split("against the ")[-1]
         out[k] = f"Journalists were killed by Israel in the Gaza war at {s['gaza_per_year']} a year, against {s['other_per_year']} a year in the {war}: {e['value']} times the rate (95% CI {iv(e, 3)}). The Gaza figure is the lowest CPJ has published, after its June 2026 review removed names."
     s = T["H15a"]["statistic"]
-    out["H15a"] = f"Destroyed structures rose at every one of the twelve UNOSAT assessments, from {s['first']:,} in November 2023 to {s['last']:,} in June 2026 (Kendall's tau {T['H15a']['effect']['value']}). The destruction was not a single episode; it continued through every phase of the war."
+    out["H15a"] = (f"The count of destroyed structures rose from {s['first']:,} in November 2023 to {s['last']:,} in June 2026, and every one of the {s['intervals']} intervals between the twelve UNOSAT assessments added structures, at between {s['per_day_min']:g} and {s['per_day_max']:g} a day. "
+                   "The count is cumulative, so a rising total is close to certain and is not tested; the measure is the rate in each interval, which shows the destruction continued through every interval of the war, including the one that follows the October 2025 ceasefire.")
     s = T["H15b"]["statistic"]; e = T["H15b"]["effect"]
     out["H15b"] = f"{s['destroyed_during_ceasefire']:,} more structures were recorded as destroyed between the October 2025 ceasefire and June 2026, about {e['value']:.0f} a day for {s['days']} days. Some will be buildings damaged earlier that later collapsed or were cleared; the satellite count cannot separate those from new demolitions."
     for k in ("H16a", "H16b", "H16c"):
         e = T[k]["effect"]
-        out[k] = f"Of those killed whose status B'Tselem could determine, {pct(e['value'], 0)} took no part in the hostilities (95% CI from {pct(e['ci'][0], 0)})." + (" This counts the police officers killed on the first day as taking part, the reading least favourable to the finding." if k == "H16a" else "")
+        out[k] = f"Of those killed whose status B'Tselem could determine, {pct(e['value'], 0)} took no part in the hostilities ({ci1(e, 'lower')})." + (" This counts the police officers killed on the first day as taking part, the reading least favourable to the finding." if k == "H16a" else "")
     for t_ in TESTS:
         t_["reading"] = out.get(t_["id"], t_.get("reading", ""))
 
@@ -1126,31 +1156,37 @@ def build_primer(T):
     need(h8["statistic"]["does_not_and_yes"] == 0 and h8["result"] == "null rejected", "H8b: a non-recognising state now has a government calling it genocide")
     h16 = (T["H16a"], T["H16c"])
     need(all(t["result"] == "null rejected" for t in h16), "H16: a share is no longer above one half")
-    need(all(T[k]["result"] == "null rejected" for k in ("H9a", "H9b", "H10a", "H11c", "H13", "H14a", "H14b", "H15a")), "H9 to H15: a result is no longer rejected")
+    need(all(T[k]["result"] == "null rejected" for k in ("H9a", "H9b", "H10a", "H11c", "H13", "H14a", "H14b")), "H9 to H14: a result is no longer rejected")
+    need(T["H15a"]["statistic"]["intervals_with_increase"] == T["H15a"]["statistic"]["intervals"], "H15a: an interval between satellite assessments no longer adds destroyed structures")
     return {
         "title": "Start here: what a hypothesis test is",
         "lede": "A hypothesis test asks whether a pattern in the numbers is real or could be luck. It does not prove a claim directly; it asks whether the data would be too surprising if nothing were going on.",
         "steps": [
             {"head": "Null hypothesis", "text": "The \"nothing is going on\" answer, for example: the ICJ order did not change the daily death rate. It is presumed true until the data make it hard to believe."},
             {"head": "p-value", "text": "How likely data this extreme would be if the null were true. Under 0.05 (5%) rejects the null. It is not the chance the claim is true, and it says nothing about size."},
-            {"head": "Effect and interval", "text": "The size of the difference, often a ratio: 1 is no change, 2 is doubled, 0.5 is halved. The 95% interval is the range the data allow; if it includes 1, no change is still possible."},
-            {"head": "Many tests", "text": "Some tests pass by luck, so each p-value is also adjusted across every test run (Benjamini-Hochberg, 5%). Both are shown."},
+            {"head": "Effect and interval", "text": "The size of the difference, often a ratio: 1 is no change, 2 is doubled, 0.5 is halved. The 95% interval is the range that chance variation in the data allows; if it includes 1, no change is still possible. It does not include the errors a source can carry (changed definitions, missing days, undercounts), which a sensitivity analysis or a caveat on the entry addresses. A one-sided test gives a one-sided bound, labelled as such."},
+            {"head": "Many tests", "text": "Some tests pass by luck, so each p-value is also adjusted across every test run, including the few not shown on this page and listed under Method (Benjamini-Hochberg, 5%). Both are shown."},
             {"head": "\"Not rejected\"", "text": "This does not prove the null. It means no change was detected; check the interval for what was ruled out."},
         ],
         "example": f"First ICJ order, 26 January 2024: the rate afterwards was {e3['value']:.3f} times the rate before (95% interval {e3['ci'][0]:.2f} to {e3['ci'][1]:.2f}, adjusted p {T['H3a']['p_adjusted']:.2f}). No detectable change, so the null is not rejected.",
         "groups": [
             {"head": "Established: the null is rejected", "items": [
-                f"The named list is internally genuine: all {st['n']:,} identity numbers pass the check digit (an invented one passes about 1 time in 10), none is duplicated, and ages match dates of birth (H6).",
-                f"The dead are not just men of fighting age: {pct(h1['effect']['value'])} (interval {pct(h1['effect']['ci'][0])} to {pct(h1['effect']['ci'][1])}) are women, under-18s or aged 60 and over (H1b).",
+                f"The named list is internally consistent: all {st['n']:,} identity numbers pass the check digit (an invented one passes about 1 time in 10), none is duplicated, and ages match dates of birth. That shows the list is coherent, not that each person named died (H6).",
+                f"The dead are not only men aged 18 to 59: {pct(h1['effect']['value'])} (interval {pct(h1['effect']['ci'][0])} to {pct(h1['effect']['ci'][1])}) are women, under-18s or aged 60 and over, though men aged 18 to 59 are still about twice their share of the population among the dead. The registered null was strict, so its p-value says little; the share is the finding (H1b).",
                 f"Each ceasefire cut the rate of killing and none stopped it: ratios {h2[0]['effect']['value']:.2g}, {h2[1]['effect']['value']:.2g} and {h2[2]['effect']['value']:.2g}, all adjusted p < 0.001 (H2).",
                 f"In the West Bank the killing rate after 7 October 2023 was {hu(a4['effect']['value'])} times the earlier rate ({hu(a4['effect']['ci'][0])} to {hu(a4['effect']['ci'][1])}), and settler incidents in 2024 were {hu(b4['effect']['value'])} times the 2022 rate (H4).",
-                f"Settler convictions are rare (odds ratio {T['H9a']['effect']['value']:.2g} against Palestinians); {pct(T['H9b']['effect']['value'], 0)} of Palestinian victims do not complain to the police; {pct(T['H10a']['effect']['value'], 2)} of Area C building applications are approved (H9, H10).",
-                f"Food costs {T['H11c']['effect']['value']:.1f} times pre-war prices; detention without charge is {hu(T['H13']['effect']['value'])} times its 2008 to 2022 level; journalists are killed at {T['H14a']['effect']['value']:.1f} times the Iraq war rate and {T['H14b']['effect']['value']:.1f} times Syria's; destroyed buildings rose at every satellite assessment (H11, H13 to H15).",
+                f"{pct(T['H9b']['effect']['value'], 0)} of Palestinian victims of settler violence documented by Yesh Din in 2024 did not complain to the police, and {pct(T['H10a']['effect']['value'], 2)} of Palestinian Area C building applications in 2016 to 2020 were approved (H9b, H10a, as rates; the comparisons are below).",
+                f"Food costs {T['H11c']['effect']['value']:.1f} times pre-war prices; detention without charge is {hu(T['H13']['effect']['value'])} times its 2008 to 2022 level; journalists are killed at {T['H14a']['effect']['value']:.1f} times the Iraq war rate and {T['H14b']['effect']['value']:.1f} times Syria's, on CPJ's lowest count (H11, H13, H14).",
                 f"In the 2008-09 and 2014 wars, {pct(h16[0]['effect']['value'])} and {pct(h16[1]['effect']['value'])} of those killed took no part in the hostilities, on B'Tselem's count (H16).",
-                f"No state withholding recognition of Palestine has a government that has called Gaza genocide; {h8['statistic']['recognises_and_yes']} recognising states do. The odds ratio is {h8['effect']['value']:.2g}, but the interval ({h8['effect']['ci'][0]:.2g} to {round(h8['effect']['ci'][1], -1):.0f}) is wide: the direction is clear, the size is not (H8).",
+            ]},
+            {"head": "Rejected, with the weakness named: read the entry's caveat", "items": [
+                f"No state withholding recognition of Palestine has a government that has called Gaza genocide; {h8['statistic']['recognises_and_yes']} recognising states do. The odds ratio is {h8['effect']['value']:.2g} but its interval ({h8['effect']['ci'][0]:.2g} to {round(h8['effect']['ci'][1], -1):.0f}) is very wide: the direction is clear, the size is not, and the test cannot separate recognition from region (H8b).",
+                f"Settler conviction against Palestinian conviction (odds ratio {T['H9a']['effect']['value']:.2g}): the gap is not sampling noise, but the two proportions come from different sources, years and courts, so it is not a like-for-like comparison (H9a). The sturdier fact is Yesh Din's: about {pct(T['H9a']['descriptive']['files_ending_in_conviction'], 0)} of its police files ended in any conviction.",
+                f"Area C approvals against settlement plan approvals: the Palestinian rate is far below the 60% benchmark, but a permit application and a settlement plan are different units, so no ratio is claimed (H10a).",
+                f"Destroyed buildings: the count rose at every satellite assessment, but a cumulative count is bound to rise, so H15 reports the rate in each interval and does not test the trend (H15).",
             ]},
             {"head": "Not detected: the null is not rejected", "items": [
-                f"The three ICJ orders of 2024 were not followed by a detectable change in the daily death rate: ratios {h3[0]['effect']['value']:.3f}, {hu(h3[1]['effect']['value'], 2)} and {hu(h3[2]['effect']['value'], 2)}, adjusted p {h3[0]['p_adjusted']:.2f}, {h3[1]['p_adjusted']:.2f} and {h3[2]['p_adjusted']:.2f}. The intervals are wide enough that a modest change cannot be excluded (H3).",
+                f"The three ICJ orders of 2024 were not followed by a detectable change in the daily death rate: ratios {h3[0]['effect']['value']:.3f}, {hu(h3[1]['effect']['value'], 2)} and {hu(h3[2]['effect']['value'], 2)}, adjusted p {h3[0]['p_adjusted']:.2f}, {h3[1]['p_adjusted']:.2f} and {h3[2]['p_adjusted']:.2f}. The intervals ({iv(h3[0]['effect'])}, {iv(h3[1]['effect'])} and {iv(h3[2]['effect'])}) do not exclude a fall in the level of {pct(1 - h3[0]['effect']['ci'][0], 0)}, {pct(1 - h3[1]['effect']['ci'][0], 0)} and {pct(1 - h3[2]['effect']['ci'][0], 0)} respectively, so the result is that no change was detected, not that there was none (H3).",
             ]},
             {"head": "What no test here establishes", "items": [
                 "Why a rate changed: a change at a dated event is an association, not proof of cause.",
@@ -1174,35 +1210,37 @@ def build_findings(T):
     need(T["H14a"]["effect"]["value"] > 4 and T["H14b"]["effect"]["value"] > 4, "H14: the journalist rate ratios are no longer above four")
     need(T["H16a"]["effect"]["value"] > 0.5 and T["H16c"]["effect"]["value"] > 0.5, "H16: most of those killed no longer took no part")
     return [
-        ("The named list of the dead is genuine on every internal test.",
-         f"Every one of the {st['n']:,} identity numbers on the Ministry of Health list passes the Population Registry check digit, which a fabricated number passes about one time in ten; none is duplicated; and every stated age agrees with its date of birth.", "H6a"),
-        ("The dead are not confined to men of fighting age.",
-         f"{pct(h1, 0)} of the identified dead are women, children or people aged 60 and over.", "H1b"),
+        ("The named list of the dead is internally consistent on every test run.",
+         f"Every one of the {st['n']:,} identity numbers on the Ministry of Health list passes the Population Registry check digit, which a fabricated number passes about one time in ten; none is duplicated; and every stated age agrees with its date of birth. That shows the list is coherent, not that each person named died.", "H6a"),
+        ("The dead are not confined to men aged 18 to 59.",
+         f"{pct(h1, 0)} of the identified dead are women, children or people aged 60 and over, though men aged 18 to 59 are about twice their population share among the dead.", "H1b"),
         ("Every ceasefire cut the rate of killing, and none stopped it.",
          "Killings continued through the November 2023 pause, the January to March 2025 ceasefire and the ceasefire in force since October 2025.", "H2c"),
-        ("The three ICJ provisional measures orders of 2024 were not followed by any detectable fall in the daily death rate.", "", "H3a"),
+        ("The three ICJ provisional measures orders of 2024 were not followed by any detectable fall in the daily death rate,", f"though the intervals do not exclude a fall in the level of {pct(1 - T['H3a']['effect']['ci'][0], 0)}, {pct(1 - T['H3b']['effect']['ci'][0], 0)} and {pct(1 - T['H3c']['effect']['ci'][0], 0)}.", "H3a"),
         (f"In the West Bank, Palestinians were killed at {a4:.1f} times the earlier rate after 7 October 2023,",
          f"and settler incidents in 2024 ran at {b4:.1f} times the 2022 rate.", "H4a"),
         ("No state that withholds recognition of Palestine has a government that has called the conduct in Gaza genocide;",
-         f"{T['H8b']['statistic']['recognises_and_yes']} recognising states do.", "H8b"),
+         f"{T['H8b']['statistic']['recognises_and_yes']} recognising states do (a clear direction, but the size is uncertain and the test cannot separate recognition from region).", "H8b"),
         ("Settlers who attack Palestinians are rarely convicted.",
-         f"Only {pct(h9['files_ending_in_conviction'], 0)} of the police files Yesh Din followed ended in a conviction, and an indicted settler is convicted in about {pct(h9['settler_conviction_rate'], 0)} of cases, against {pct(h9['palestinian_conviction_rate'])} for Palestinians in the military courts.", "H9a"),
-        (f"In Area C, under 1% of Palestinian building applications are approved,",
+         f"Only {pct(h9['files_ending_in_conviction'], 0)} of the police files Yesh Din followed ended in a conviction. An indicted settler is convicted in about {pct(h9['settler_conviction_rate'], 0)} of cases, against {pct(h9['palestinian_conviction_rate'])} for Palestinians in the military courts, figures from different years and courts that are not a like-for-like comparison.", "H9a"),
+        (f"In Area C, under 1% of Palestinian building applications were approved in 2016 to 2020,",
          f"and the odds of demolition are {h10b:.1f} times higher for an unpermitted Palestinian structure than for a settler's.", "H10b"),
-        (f"Food prices rose by about {pct(T['H11a']['effect']['value'] - 1, 0)} during the total blockade of 2025,", f"and across the war food has cost {T['H11c']['effect']['value']:.1f} times its pre-war price.", "H11a"),
+        (f"The typical food price rose by about {pct(T['H11a']['effect']['value'] - 1, 0)} during the total blockade of 2025,", f"and across the war food has cost {T['H11c']['effect']['value']:.1f} times its pre-war price.", "H11a"),
         (f"Administrative detention without charge is {hu(T['H13']['effect']['value'])} times its 2008-2022 level.", "", "H13"),
         (f"Journalists have been killed at {T['H14a']['effect']['value']:.1f} times the rate of the Iraq war and {T['H14b']['effect']['value']:.1f} times that of Syria's,", "on CPJ's lowest count.", "H14a"),
-        (f"Destroyed buildings rose at every satellite assessment, and about {round(T['H15b']['statistic']['destroyed_during_ceasefire'], -2):,} more were recorded destroyed after the October 2025 ceasefire.", "", "H15b"),
+        (f"Every interval between the satellite assessments added destroyed buildings, and about {round(T['H15b']['statistic']['destroyed_during_ceasefire'], -2):,} more were recorded destroyed between the October 2025 ceasefire and June 2026.", "", "H15b"),
         ("In the 2008-09 and 2014 Gaza wars, most of those killed took no part in the hostilities, on B'Tselem's case-by-case count.", "", "H16c"),
     ]
 
 
-def build_method(unidentified):
+def build_method(unidentified, windows):
     return [
         ("Tests", "Counts are modelled as negative binomial, after a likelihood-ratio test rejected the Poisson model in every series where it was applied. Time series use Newey-West standard errors with a lag of seven days. Rates are compared with the exact conditional test for two Poisson rates. Two-by-two tables use Fisher's exact test."),
         ("Multiple testing", None),  # filled from the correction line
         ("Caution", None),           # filled from the caution line
         ("What the tests are not", f"A test of a ceasefire or a court order measures whether the death rate changed around a date, not why. A test on the named list measures the list as published, not the deaths it does not contain: the {unidentified:,} counted dead who have not been identified, and the dead still under the rubble, are outside it."),
+        ("What the intervals cover", "A confidence interval describes sampling variation: how much the estimate would move if the same process were observed again. It does not cover the errors a source can carry: a changed definition, a missing day, an undercount, or the comparison of figures collected differently. Where a test depends on one of those, its entry says so, and a sensitivity analysis or a caveat states what survives it. A one-sided test gives a one-sided bound, labelled as a lower or an upper bound and not as a two-sided interval."),
+        ("Windows", windows),
         ("Limits", "The tests are only as good as the data. The Ministry of Health's daily series changed source during the war (to the Government Media Office from 11 November 2023, and back), carries days on which no report was issued, and, from 2025, separates new killings from bodies recovered only on some days. The named list covers the identified dead only. The population baseline is the PCBS projection for 2023, before the war. Where a test depends on one of these weaknesses, its entry says so, and a sensitivity analysis tests whether the result survives it."),
     ]
 
@@ -1235,7 +1273,9 @@ def main():
         t["p_adjusted"] = float(q)
         t["result"] = "null rejected" if r else "null not rejected"
     for t in TESTS:
-        t.setdefault("status", "run")
+        t.setdefault("status", "descriptive" if t.get("kind") == "descriptive" else "run")
+        if t.get("kind") == "descriptive":
+            t["result"] = "descriptive measure"
         if t["id"] == "H6b":
             t["result"] = t["effect"]["scale"]
         if t["id"] == "H6a":
@@ -1245,7 +1285,12 @@ def main():
     PRIMER = build_primer(T_)
     FINDINGS = build_findings(T_)
     last = daily()[-1]
-    METHOD = build_method(int(last.get("ext_killed_cum") or last["killed_cum"]) - len(people))
+    h15_end = SERIES["h15"]["dates"][-1]
+    windows = (f"Each test uses the latest data its source publishes, so the windows end on different dates. The daily-series tests (H2, H3) run to {dates[-1]:%d %B %Y} and the named list (H6) is checked to the same date; "
+               f"the food-price tests (H11) end with the {dt.date.fromisoformat(SERIES['h11']['months'][-1] + '-01'):%B %Y} PCBS release; the satellite measure (H15) ends at the latest UNOSAT assessment, {dt.date.fromisoformat(h15_end):%d %B %Y}, "
+               "which is why the ceasefire count of destroyed buildings stops four months before the death-rate test; detention and journalists (H13, H14) are at 30 June 2026; and the settler, Area C and earlier-war tests (H9, H10, H16) use the fixed periods their sources report. "
+               "Tests with different end dates are not comparable with one another.")
+    METHOD = build_method(int(last.get("ext_killed_cum") or last["killed_cum"]) - len(people), windows)
     if PROBLEMS:
         print("tests.json NOT written: these headline claims no longer hold, and the text must be reviewed:", file=sys.stderr)
         for m in PROBLEMS:
@@ -1262,7 +1307,7 @@ def main():
                                 "url": "preregistration.md",
                                 "note": "Committed to the source repository, which is not public, before the analysis script existed; the file is published here unchanged."},
             "correction": f"Benjamini-Hochberg false discovery rate at 5% across the {len(corr)} tests with a p-value.",
-            "caution": "A change in a series at a dated event is an association, not proof that the event caused it. Tests on the named list inherit any bias in who has been identified.",
+            "caution": "A change in a series at a dated event is an association, not proof that the event caused it. Tests on the named list inherit any bias in who has been identified, and the intervals cover sampling variation only, not the changes of source, missing days and undercounts the entries describe.",
         },
         "groups": GROUPS,
         "departures": DEPARTURES,
@@ -1274,6 +1319,17 @@ def main():
     if not SITE_ONLY:
         (HERE / "results-full.json").write_text(json.dumps(out, ensure_ascii=False, indent=1, default=float))
     shown = [t_ for t_ in TESTS if t_["id"] in PUBLISHED]
+    shown_p = [t_ for t_ in shown if t_.get("p") is not None]
+    hidden = [t_ for t_ in TESTS if t_["id"] not in PUBLISHED]
+    qtxt = lambda q: "< 0.001" if q < 0.001 else f"{q:.3g}"
+    hidden_txt = "; ".join(
+        f"{t_['id']} ({t_['title']}) {t_.get('result', t_['status'])}"
+        + (f", adjusted p {qtxt(t_['p_adjusted'])}" if t_.get("p_adjusted") is not None else "")
+        for t_ in hidden)
+    n_measures = sum(1 for t_ in shown if t_.get("p") is None)
+    correction_site = (f"p-values are adjusted for the false discovery rate (Benjamini-Hochberg, 5%) across all {len(corr)} tests with a p-value that were run in the analysis. "
+                       f"{len(shown_p)} of them are shown on this page, beside {n_measures} descriptive measures that carry no p-value and are outside the correction. "
+                       f"The other {len(corr) - len(shown_p)} were run and are not shown, so the correction covers them and their results are listed here: {hidden_txt}.")
     site = {
         "meta": {
             "title": "Statistical tests on the record",
@@ -1282,12 +1338,12 @@ def main():
                            "7 October 2023, the integrity of the Ministry of Health named list, and recognition of Palestine against governments calling it genocide.",
             "generated": out["meta"]["generated"],
             "data_to": out["meta"]["data_to"],
-            "correction": f"p-values are adjusted for the false discovery rate (Benjamini-Hochberg, 5%) across all {len(corr)} tests run in the analysis.",
+            "correction": correction_site,
             "caution": out["meta"]["caution"],
             "findings": [{"head": h, "text": x, "test": tid} for h, x, tid in FINDINGS],
             "primer": PRIMER,
             "method": [{"title": k, "text": v if v is not None else (
-                f"{out['meta']['correction'].replace('Benjamini-Hochberg false discovery rate at 5% across the', 'p-values are adjusted for the false discovery rate (Benjamini-Hochberg, 5%) across all the')} Both raw and adjusted p-values are reported."
+                f"{correction_site} Both raw and adjusted p-values are reported."
                 if k == "Multiple testing" else out["meta"]["caution"])} for k, v in METHOD],
         },
         "series": {**{k: v for k, v in SERIES.items() if k.upper() in {t_["group"] for t_ in shown}},

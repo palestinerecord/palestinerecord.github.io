@@ -1410,6 +1410,22 @@ def check_tests(files):
             fail('tests', '%s: the effect size is not a number' % tid)
         if not t.get('reading'):
             fail('tests', '%s: no reading' % tid)
+        # A measure that is not a test must say so: no p-value, no null hypothesis, a descriptive status.
+        if p is None and t.get('status') != 'descriptive':
+            fail('tests', '%s: has no p-value but is not marked as a descriptive measure' % tid)
+        if t.get('status') == 'descriptive' and (t.get('null') or p is not None):
+            fail('tests', '%s: a descriptive measure carries a null hypothesis or a p-value' % tid)
+        # An interval from a one-sided test is a bound and must be labelled one: its far end is the limit of the scale.
+        ci = eff.get('ci')
+        if ci and eff.get('ci_kind') not in ('lower', 'upper') and (ci[0] == 0.0 or ci[1] == 1.0) and 'Share' in str(eff.get('name', '')) and 'valid check digit' not in str(eff.get('name', '')):
+            fail('tests', '%s: an interval ending at 0 or 1 is not labelled as a one-sided bound' % tid)
+        # The sentence and the table must give the same interval: every "95% CI a to b" in a reading is checked against the effect.
+        m = re.search(r'95% CI (-?[\d.]+) to (-?[\d.]+)(?![\d.]*%)', t.get('reading') or '')
+        if m and ci and not eff.get('ci_kind'):
+            for got, want in ((float(m.group(1)), ci[0]), (float(m.group(2)), ci[1])):
+                if want and abs(got - want) > 0.006 * abs(want) + 1e-9:
+                    fail('tests', '%s: the reading gives %s but the table gives %.4g for the same interval' % (tid, m.group(0), want))
+                    break
     for f in meta.get('findings', []):
         if f.get('test') not in ids:
             fail('tests', 'a finding points at %r, which is not a published test' % f.get('test'))
