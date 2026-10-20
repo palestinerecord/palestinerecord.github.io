@@ -34,7 +34,7 @@
    this worker and empties every cache it made.
    ============================================================ */
 
-const VERSION = 'v195';
+const VERSION = 'v196';
 const SHELL = 'record-shell-' + VERSION;
 const DATA = 'record-data';
 const MINE = /^record-(shell|data)/;
@@ -46,15 +46,15 @@ const MINE = /^record-(shell|data)/;
 const SHELL_FILES = [
   './',
   './index.html',
-  './css/style.css?v=195',
-  './js/charts.js?v=195',
-  './js/share.js?v=195',
-  './js/views.js?v=195',
-  './js/app.js?v=195',
-  './js/scene.js?v=195',
+  './css/style.css?v=196',
+  './js/charts.js?v=196',
+  './js/share.js?v=196',
+  './js/views.js?v=196',
+  './js/app.js?v=196',
+  './js/scene.js?v=196',
   './manifest.webmanifest',
-  './assets/flag-palestine.svg?v=195',
-  './assets/favicon.svg?v=195',
+  './assets/flag-palestine.svg?v=196',
+  './assets/favicon.svg?v=196',
   './assets/icon-192.png',
   './assets/icon-512.png',
 ];

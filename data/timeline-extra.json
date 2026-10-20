@@ -951,6 +951,13 @@
       "note": "Hebrew graffiti reading “Revenge!” was left at the scene; a second, empty house in the village was firebombed the same night. The couple's five-year-old son Ahmed survived with severe burns."
     },
     {
+      "date": "8 March 2016",
+      "year": 2016,
+      "sort": "2016-03-08a",
+      "event": "Pew publishes its survey of Israel: 48% of Israeli Jews agree that Arabs should be expelled or transferred; President Rivlin calls it a wake-up call",
+      "note": "Fieldwork October 2014 to May 2015; wording criticised by Israeli pollsters (§3.5D)."
+    },
+    {
       "date": "23 Dec 2016",
       "year": 2016,
       "sort": "2016-12-23",
@@ -1369,6 +1376,13 @@
       "sort": "2025-02-27",
       "event": "The British Prime Minister meets Palantir in a meeting for which no minutes were produced",
       "note": "Brokered by Peter Mandelson, then Ambassador to the United States, who retained a shareholding in the lobbying firm Global Counsel."
+    },
+    {
+      "date": "6 March 2025",
+      "year": 2025,
+      "sort": "2025-03-06a",
+      "event": "Haaretz reports a Penn State survey: 82% of Jewish Israelis back forced expulsion of Gaza's residents, 56% of Arab citizens, 47% the Jericho model",
+      "note": "1,005 respondents; 45% and 31% on the first two questions in 2003 (§3.5D)."
     },
     {
       "date": "18 Mar 2025",
@@ -2580,6 +2594,13 @@
       "sort": "2026-10-16a",
       "event": "Greens for Palestine hold a London press conference defending the 'Zionism is racism' motion; Alnaouq and Karmi speak",
       "note": "Motion passed 1,022 to 813 on 4 October (§21.10)."
+    },
+    {
+      "date": "20 October 2026",
+      "year": 2026,
+      "sort": "2026-10-20a",
+      "event": "The record adds the polling on Jewish Israeli attitudes, the character of the three intifadas and the record on Israel and the Syrian jihadists",
+      "note": "§3.5D, §5.3, §11.2."
     }
   ]
 }

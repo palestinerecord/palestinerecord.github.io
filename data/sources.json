@@ -4035,6 +4035,153 @@
           "date": "2026",
           "url": "https://en.wikipedia.org/wiki/Ihud",
           "note": "Founded 1942 by Magnes, Buber, Simon and Szold after the Biltmore Conference (§21.12.3)."
+        },
+        {
+          "title": "Israel's Religiously Divided Society",
+          "org": "Pew Research Center",
+          "date": "8 March 2016",
+          "url": "https://www.pewresearch.org/religion/2016/03/08/israels-religiously-divided-society/",
+          "note": "48% of Israeli Jews agree Arabs should be expelled or transferred; fieldwork Oct 2014 to May 2015 (§3.5D)."
+        },
+        {
+          "title": "President urges 'soul-searching' over poll showing support for Arab transfer",
+          "org": "Times of Israel",
+          "date": "8 March 2016",
+          "url": "https://www.timesofisrael.com/president-urges-soul-searching-over-poll-showing-support-for-arab-transfer/",
+          "note": "Rivlin's reaction to the Pew results (§3.5D)."
+        },
+        {
+          "title": "Israeli Democracy Index 2022",
+          "org": "Israel Democracy Institute",
+          "date": "January 2023",
+          "url": "https://en.idi.org.il/articles/47344",
+          "note": "49% of Jewish citizens say Jews should have more rights than non-Jews (§3.5D)."
+        },
+        {
+          "title": "Survey: Most Israeli Jews Wouldn't Give Palestinians Vote if West Bank Was Annexed",
+          "org": "Haaretz",
+          "date": "23 October 2012",
+          "url": "https://www.haaretz.com/2012-10-23/ty-article/.premium/israelis-say-no-vote-to-arabs-if-w-bank-annexed/0000017f-f55e-d460-afff-ff7e683c0000",
+          "note": "Dialog poll for the Yisraela Goldblum Fund; headline changed, wording of the apartheid question disputed (§3.5D)."
+        },
+        {
+          "title": "Nearly half of Israelis support army killing all Palestinians in Gaza, poll finds",
+          "org": "Middle East Eye",
+          "date": "24 May 2025",
+          "url": "https://www.middleeasteye.net/news/majority-israelis-support-expulsion-palestinians-gaza-poll",
+          "note": "Penn State survey of 1,005 Jewish Israelis, March 2025 (§3.5D)."
+        },
+        {
+          "title": "Abby Martin's 2017 Israeli street interviews (Zeteo, Mehdi Hasan)",
+          "org": "Zeteo",
+          "date": "12 July 2026",
+          "url": "https://zeteo.com/p/death-and-mass-murder-are-us-policy-towards-cuba",
+          "note": "Testimony of informal Jerusalem interviews, not a survey (§3.5D)."
+        },
+        {
+          "title": "Israel votes in poll seen as referendum on Netanyahu",
+          "org": "Al Jazeera",
+          "date": "17 March 2015",
+          "url": "https://www.aljazeera.com/news/2015/3/17/israel-votes-in-poll-seen-as-referendum-on-netanyahu",
+          "note": "Netanyahu's election-day remark on Arab voters (§3.5D)."
+        },
+        {
+          "title": "Israel's Bezalel Smotrich: There is no such thing as a Palestinian people",
+          "org": "Jerusalem Post",
+          "date": "20 March 2023",
+          "url": "https://www.jpost.com/israel-news/article-734835",
+          "note": "Smotrich in Paris, 19 March 2023 (§3.5D)."
+        },
+        {
+          "title": "Jewish settler in West Bank sentenced to life for killing 3 Palestinians, including toddler",
+          "org": "CBC News",
+          "date": "15 September 2020",
+          "url": "https://www.cbc.ca/news/world/israel-conviction-west-bank-attack-1.5722948",
+          "note": "Duma arson: Ben-Uliel convicted by the Lod District Court (§3.5D)."
+        },
+        {
+          "title": "170 Palestinians and 26 Israelis killed in 2015",
+          "org": "OCHA oPt",
+          "date": "January 2016",
+          "url": "https://www.ochaopt.org/content/170-palestinians-and-26-israelis-killed-2015",
+          "note": "Fatalities in the 2015 wave (§5.3)."
+        },
+        {
+          "title": "Shin Bet: Hopelessness fueling recent Palestinian attacks",
+          "org": "Times of Israel",
+          "date": "October 2015",
+          "url": "https://www.timesofisrael.com/shin-bet-hopelessness-fueling-recent-palestinian-attacks/",
+          "note": "The Shin Bet's profile of the 2015 attackers: lone, unaffiliated (§5.3)."
+        },
+        {
+          "title": "Four Jews at prayer, Druze policeman, killed in Jerusalem synagogue terror attack",
+          "org": "Times of Israel",
+          "date": "18 November 2014",
+          "url": "https://www.timesofisrael.com/jerusalem-terror-attack-leaves-four-dead/",
+          "note": "Har Nof synagogue attack (§5.3)."
+        },
+        {
+          "title": "The October 2000 Killings",
+          "org": "Adalah",
+          "date": "2000-2005",
+          "url": "https://www.adalah.org/en/content/view/8639",
+          "note": "Or Commission findings and the closing of the case (§5.3)."
+        },
+        {
+          "title": "Public Opinion Poll No (89)",
+          "org": "Palestinian Center for Policy and Survey Research",
+          "date": "September 2023",
+          "url": "https://www.pcpsr.org/en/node/951",
+          "note": "Last Palestinian poll before 7 October 2023 (§5.3)."
+        },
+        {
+          "title": "Hamas document accepts Palestinian state with 1967 borders",
+          "org": "Al Jazeera",
+          "date": "1 May 2017",
+          "url": "https://www.aljazeera.com/amp/news/2017/05/hamas-accepts-palestinian-state-1967-borders-170501114309725.html",
+          "note": "Hamas's Document of General Principles and Policies (§5.3)."
+        },
+        {
+          "title": "Beit Sahour tax strike",
+          "org": "Wikipedia",
+          "date": "2026",
+          "url": "https://en.wikipedia.org/wiki/Beit_Sahour_tax_strike",
+          "note": "The 1989 tax strike and the 42-day siege (§5.3)."
+        },
+        {
+          "title": "MI5 files: Lehi planned to assassinate Churchill",
+          "org": "Ynet",
+          "date": "5 April 2011",
+          "url": "https://www.ynetnews.com/articles/0,7340,L-4051769,00.html",
+          "note": "Bet-Zuri's 1944 proposal and the 1946 plot against Bevin (§1.3)."
+        },
+        {
+          "title": "MI5 Declassifies Documents Saying Mandate-Era Lehi Intended to Murder Winston Churchill",
+          "org": "Haaretz",
+          "date": "5 April 2011",
+          "url": "https://www.haaretz.com/2011-04-05/ty-article/mi5-declassifies-documents-saying-mandate-era-lehi-intended-to-murder-winston-churchill/0000017f-dbe7-df62-a9ff-dff7a1860000",
+          "note": "The MI5 release (§1.3)."
+        },
+        {
+          "title": "Israel wants Syria's Assad gone",
+          "org": "PBS NewsHour",
+          "date": "September 2013",
+          "url": "https://www.pbs.org/newshour/nation/israel-wants-syrias-assad-gone",
+          "note": "Oren's remark on preferring groups not backed by Iran (§11.2)."
+        },
+        {
+          "title": "Report: Israel treating al-Qaida fighters wounded in Syria civil war",
+          "org": "Jerusalem Post (reporting the Wall Street Journal)",
+          "date": "March 2015",
+          "url": "https://www.jpost.com/middle-east/report-israel-treating-al-qaida-fighters-wounded-in-syria-civil-war-393862",
+          "note": "Treatment of wounded Nusra Front fighters; Yadlin's remark (§11.2)."
+        },
+        {
+          "title": "Israel provides steady flow of cash, aid to Syrian rebels, says WSJ report",
+          "org": "Times of Israel",
+          "date": "June 2017",
+          "url": "https://www.timesofisrael.com/israel-provides-steady-flow-of-cash-aid-to-syrian-rebels-report/",
+          "note": "Aid to Golan rebel groups (§11.2)."
         }
       ]
     },
