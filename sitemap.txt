@@ -20,7 +20,6 @@ https://palestinerecord.github.io/snapshot/statements.html
 https://palestinerecord.github.io/snapshot/legal.html
 https://palestinerecord.github.io/snapshot/sources.html
 https://palestinerecord.github.io/snapshot/provenance.html
-https://palestinerecord.github.io/snapshot/answer.html
 https://palestinerecord.github.io/snapshot/ledger.html
 https://palestinerecord.github.io/snapshot/mp.html
 https://palestinerecord.github.io/snapshot/tests.html

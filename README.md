@@ -49,7 +49,6 @@ The site is a single page with a hash router. Every route below can be linked to
 | [`#/legal`](https://palestinerecord.github.io/#/legal) | The ICJ proceedings, the ICC warrants and the findings under the Genocide, Fourth Geneva and Apartheid Conventions. It also holds the element matrices (each element of genocide and of apartheid set against the evidence for it), a graph of which finding rests on which instrument, and a sortable state-by-state duty-to-prevent scorecard. |
 | [`#/ledger`](https://palestinerecord.github.io/#/ledger) | The persons and companies named in the record: office held, statements made, arrest warrants and their status, sanctions imposed and by whom, and what each firm supplies. |
 | [`#/mp`](https://palestinerecord.github.io/#/mp) | *The constituency ledger*, for readers in Britain. Enter a postcode to find your MP. The page shows how they voted in every Commons division on Palestine, the early day motions they signed, what they have said in Parliament (including whether they called the conduct in Gaza genocide), petition signatures in the seat, and what the Register of Members' Financial Interests and the Electoral Commission record against their name. |
-| [`#/answer`](https://palestinerecord.github.io/#/answer) | *Answer a claim.* Paste a post or a quotation. The page marks each claim it recognises and builds the answer from the report, the live figures and the documented statements. |
 | [`#/provenance`](https://palestinerecord.github.io/#/provenance) | Every claim joined to the bodies it rests on, with switches that remove a whole class of source (all Palestinian sources, all Israeli sources, the UN, every human rights organisation) and recount what still stands. |
 | [`#/tests`](https://palestinerecord.github.io/#/tests) | Statistical hypothesis tests on the published data, each with its null hypothesis, test, effect size, interval and adjusted p-value. |
 | [`#/method`](https://palestinerecord.github.io/#/method) | The standard of proof: why the method is impartial but the conclusions are not neutral, three objections answered, the conditions under which the findings would fail, and the falsification register. |
@@ -144,7 +143,6 @@ curl -s https://palestinerecord.github.io/data/timeseries.json -o timeseries.jso
 | `provenance.json` | The provenance graph: each claim, the source bodies it rests on, how each body is classified, and the results of the switches | derived from every record's `source` field |
 | `falsification.json` | The falsification register, ordered weakest first | derived from `provenance.json` and `statements.json` |
 | `tests.json` | The statistical tests, recomputed nightly: null hypothesis, test, effect size, interval, raw and adjusted p-value, sources and the series plotted, with the date of the data they were computed from | `data/`, plus PCBS, UNOSAT, B'Tselem, Yesh Din, CPJ, Peace Now |
-| `claim-patterns.json` | The phrase index behind `#/answer`: how each claim is worded in public, mapped to the rebuttal that answers it | the survey, Part XVI |
 | `chart-events.json` | Dated events that can be drawn on the time series: ceasefires, ICJ orders, ICC warrants, the total blockade, the famine declaration, closures of crossings | OCHA and contemporaneous reporting |
 | `sources.json` | The linked source library, grouped by kind | each entry links to its publisher |
 | `report.json` | The whole survey as structured data: every part, section, paragraph, list, table, chronology entry and bibliography entry | the survey |
@@ -318,7 +316,6 @@ Most of the published data is built by scripts in this repository from open upst
 | `build_nakba.py` | `nakba.json` | Abu Sitta's village table, checked against the table's own totals |
 | `build_geo.py` | `data/geo/*.json` | Natural Earth 1:50m and 1:10m, and the OCHA Common Operational Dataset (it asserts exactly 16 governorates) |
 | `entities.py` | `entities.json` | joins statements, the survey and state positions; no new claims are added here |
-| `patterns.py` | `claim-patterns.json` | the phrase index for `#/answer` |
 | `provenance.py` | `provenance.json` | the `source` field of every curated record |
 | `falsify.py` | `falsification.json` | the provenance graph and the statements |
 | `manifest.py` | `index.json` | every file in `data/`. It fails if a file has no description or a description has no file. `--check` compares without rewriting. |
