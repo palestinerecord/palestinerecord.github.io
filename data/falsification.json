@@ -5,15 +5,15 @@
   "source": "data/provenance.json; data/statements.json",
   "repo": "palestinerecord/palestinerecord.github.io",
   "label": "challenge",
-  "entries": 515,
+  "entries": 521,
   "kinds": {
    "figure": 130,
-   "statement": 151,
+   "statement": 157,
    "record": 234
   },
-  "single_origin": 367,
-  "exposed": 230,
-  "claims": 574
+  "single_origin": 372,
+  "exposed": 232,
+  "claims": 580
  },
  "conditions": [
   {
@@ -204,6 +204,10 @@
    "name": "Ynet and Yedioth Ahronoth",
    "origin": "israeli-media"
   },
+  "cnn": {
+   "name": "CNN",
+   "origin": "media"
+  },
   "israel-hcj": {
    "name": "High Court of Justice (Israel)",
    "origin": "israeli-court"
@@ -219,10 +223,6 @@
   "amnesty": {
    "name": "Amnesty International",
    "origin": "international-ngo"
-  },
-  "cnn": {
-   "name": "CNN",
-   "origin": "media"
   },
   "france24": {
    "name": "France 24 and Euronews",
@@ -392,6 +392,10 @@
    "name": "Lemkin Institute for Genocide Prevention",
    "origin": "international-ngo"
   },
+  "npr": {
+   "name": "NPR",
+   "origin": "media"
+  },
   "pal-mfa": {
    "name": "Palestinian Ministry of Foreign Affairs",
    "origin": "palestinian-official"
@@ -462,10 +466,6 @@
   },
   "nbc": {
    "name": "NBC News",
-   "origin": "media"
-  },
-  "npr": {
-   "name": "NPR",
    "origin": "media"
   },
   "pcbs": {
@@ -634,9 +634,9 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 446,
+   "stands": 450,
    "falls": 31,
-   "share": 93.5
+   "share": 93.6
   },
   {
    "id": "no-israeli",
@@ -648,8 +648,8 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 399,
-   "falls": 78,
+   "stands": 402,
+   "falls": 79,
    "share": 83.6
   },
   {
@@ -659,9 +659,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 410,
-   "falls": 67,
-   "share": 86.0
+   "stands": 413,
+   "falls": 68,
+   "share": 85.9
   },
   {
    "id": "no-ngo",
@@ -672,9 +672,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 373,
+   "stands": 377,
    "falls": 104,
-   "share": 78.2
+   "share": 78.4
   },
   {
    "id": "israeli-western-only",
@@ -687,9 +687,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 277,
-   "falls": 200,
-   "share": 58.1
+   "stands": 280,
+   "falls": 201,
+   "share": 58.2
   }
  ],
  "entries": [
@@ -2270,6 +2270,26 @@
    "statement": 131
   },
   {
+   "id": "statements-orit-strock",
+   "claim": "Orit Strock",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "un-coi"
+   ],
+   "origins": [
+    "un"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-un",
+    "israeli-western-only"
+   ],
+   "date": "February 2024",
+   "attribution": "UN Commission of Inquiry, A/81/430, 14 October 2026 (§6.2, §10.7B).",
+   "statement": 153
+  },
+  {
    "id": "statements-physicians-for-human-rights-israel",
    "claim": "Physicians for Human Rights Israel",
    "kind": "statement",
@@ -3655,6 +3675,25 @@
    "date": "September 2025",
    "attribution": "Times of Israel; Jerusalem Post; Crisis Group, “Israel's Quickening Annexation of the West Bank”, October 2025.",
    "statement": 100
+  },
+  {
+   "id": "statements-bezalel-smotrich-12",
+   "claim": "Bezalel Smotrich",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "times-of-israel"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "27 November 2023",
+   "attribution": "The Times of Israel, 27 November 2023, as cited by A/81/430 (§6.2).",
+   "statement": 156
   },
   {
    "id": "statements-ehud-barak",
@@ -5341,6 +5380,19 @@
    "context": "One vendor, two states"
   },
   {
+   "id": "statements-bezalel-smotrich-11",
+   "claim": "Bezalel Smotrich",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "6 January 2025",
+   "attribution": "X (@bezalelsm), 6 January 2025, as cited by A/81/430 (§6.2).",
+   "statement": 155
+  },
+  {
    "id": "statements-helen-mcentee",
    "claim": "Helen McEntee",
    "kind": "statement",
@@ -5352,6 +5404,19 @@
    "date": "22 September 2026",
    "attribution": "RTE, 22 September 2026, as carried by Anadolu Agency, the Irish Star and the Irish Daily Mirror.",
    "statement": 144
+  },
+  {
+   "id": "statements-itamar-ben-gvir-8",
+   "claim": "Itamar Ben-Gvir",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [],
+   "origins": [],
+   "independence": 0,
+   "falls": [],
+   "date": "19 October 2026",
+   "attribution": "TIME, 22 October 2026 (§6.2).",
+   "statement": 151
   },
   {
    "id": "statements-jewish-council-of-australia",
@@ -7094,6 +7159,25 @@
    "statement": 138
   },
   {
+   "id": "statements-benjamin-netanyahu-8",
+   "claim": "Benjamin Netanyahu",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "cnn",
+    "npr",
+    "aljazeera"
+   ],
+   "origins": [
+    "media"
+   ],
+   "independence": 1,
+   "falls": [],
+   "date": "23 October 2026",
+   "attribution": "NPR; Al Jazeera; CNN, 23 October 2026 (§6.2, §9.6).",
+   "statement": 152
+  },
+  {
    "id": "statements-bezalel-smotrich-5",
    "claim": "Bezalel Smotrich",
    "kind": "statement",
@@ -8564,6 +8648,26 @@
    "date": "27 September 2026",
    "attribution": "Ynet; The Times of Israel; Al Jazeera, 27 September 2026 (§6.2)",
    "statement": 150
+  },
+  {
+   "id": "statements-bezalel-smotrich-10",
+   "claim": "Bezalel Smotrich",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "un-coi",
+    "haaretz",
+    "times-of-israel"
+   ],
+   "origins": [
+    "israeli-media",
+    "un"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "11 November 2024",
+   "attribution": "UN Commission of Inquiry, A/81/430; The Times of Israel; Al-Monitor; Haaretz, 12 November 2024 (§6.2).",
+   "statement": 154
   },
   {
    "id": "statements-central-conference-of-american-rabbis",

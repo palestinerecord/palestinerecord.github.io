@@ -2,7 +2,7 @@
  "meta": {
   "title": "Provenance graph",
   "description": "Every curated claim on this site, joined to the bodies it rests on. Source strings are normalised to entities with stable identifiers, and each entity is classified by origin so that a whole class of source can be removed and the remainder recounted.",
-  "generated": "2026-11-01",
+  "generated": "2026-11-02",
   "origins": [
    {
     "id": "palestinian-official",
@@ -38,13 +38,13 @@
     "id": "israeli-media",
     "label": "Israeli press",
     "sources": 9,
-    "claims": 86
+    "claims": 88
    },
    {
     "id": "un",
     "label": "United Nations bodies",
     "sources": 22,
-    "claims": 123
+    "claims": 125
    },
    {
     "id": "international-court",
@@ -74,7 +74,7 @@
     "id": "media",
     "label": "International press",
     "sources": 22,
-    "claims": 91
+    "claims": 92
    },
    {
     "id": "data-project",
@@ -91,13 +91,13 @@
   ]
  },
  "summary": {
-  "claims": 574,
-  "attributed": 477,
-  "unattributed": 97,
+  "claims": 580,
+  "attributed": 481,
+  "unattributed": 99,
   "sources": 127,
   "origins": 14,
-  "multi_source": 185,
-  "independent": 153
+  "multi_source": 187,
+  "independent": 154
  },
  "switches": [
   {
@@ -108,9 +108,9 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 446,
+   "stands": 450,
    "falls": 31,
-   "share": 93.5
+   "share": 93.6
   },
   {
    "id": "no-israeli",
@@ -122,8 +122,8 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 399,
-   "falls": 78,
+   "stands": 402,
+   "falls": 79,
    "share": 83.6
   },
   {
@@ -133,9 +133,9 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 410,
-   "falls": 67,
-   "share": 86.0
+   "stands": 413,
+   "falls": 68,
+   "share": 85.9
   },
   {
    "id": "no-ngo",
@@ -146,9 +146,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 373,
+   "stands": 377,
    "falls": 104,
-   "share": 78.2
+   "share": 78.4
   },
   {
    "id": "israeli-western-only",
@@ -161,9 +161,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 277,
-   "falls": 200,
-   "share": 58.1
+   "stands": 280,
+   "falls": 201,
+   "share": 58.2
   }
  ],
  "sources": [
@@ -189,7 +189,7 @@
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
-   "claims": 32
+   "claims": 34
   },
   {
    "id": "trade-press",
@@ -229,7 +229,7 @@
    "kind": "press",
    "origin": "media",
    "origin_label": "International press",
-   "claims": 25
+   "claims": 26
   },
   {
    "id": "icj",
@@ -245,7 +245,7 @@
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
-   "claims": 17
+   "claims": 18
   },
   {
    "id": "mee",
@@ -269,7 +269,7 @@
    "kind": "un",
    "origin": "un",
    "origin_label": "United Nations bodies",
-   "claims": 15
+   "claims": 17
   },
   {
    "id": "tfp",
@@ -344,6 +344,14 @@
    "claims": 9
   },
   {
+   "id": "cnn",
+   "name": "CNN",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 8
+  },
+  {
    "id": "israel-hcj",
    "name": "High Court of Justice (Israel)",
    "kind": "court",
@@ -373,14 +381,6 @@
    "kind": "ngo",
    "origin": "international-ngo",
    "origin_label": "International human rights organisations",
-   "claims": 7
-  },
-  {
-   "id": "cnn",
-   "name": "CNN",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
    "claims": 7
   },
   {
@@ -720,6 +720,14 @@
    "claims": 3
   },
   {
+   "id": "npr",
+   "name": "NPR",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 3
+  },
+  {
    "id": "pal-mfa",
    "name": "Palestinian Ministry of Foreign Affairs",
    "kind": "ministry",
@@ -858,14 +866,6 @@
   {
    "id": "nbc",
    "name": "NBC News",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 2
-  },
-  {
-   "id": "npr",
-   "name": "NPR",
    "kind": "press",
    "origin": "media",
    "origin_label": "International press",
@@ -1191,7 +1191,7 @@
   },
   {
    "file": "statements.json",
-   "claims": 151
+   "claims": 157
   },
   {
    "file": "elements.json",
@@ -4310,6 +4310,90 @@
     "aljazeera"
    ],
    "id": "statements-bezalel-smotrich-9"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[151]",
+   "label": "Itamar Ben-Gvir",
+   "value": "We want sovereignty in Judea and Samaria, where we also want voluntary emigration.",
+   "numeric": false,
+   "ref": "",
+   "date": "19 October 2026",
+   "source_text": "TIME, 22 October 2026 (§6.2).",
+   "sources": [],
+   "id": "statements-itamar-ben-gvir-8"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[152]",
+   "label": "Benjamin Netanyahu",
+   "value": "We will act to demolish this place, to change it completely.",
+   "numeric": false,
+   "ref": "",
+   "date": "23 October 2026",
+   "source_text": "NPR; Al Jazeera; CNN, 23 October 2026 (§6.2, §9.6).",
+   "sources": [
+    "cnn",
+    "npr",
+    "aljazeera"
+   ],
+   "id": "statements-benjamin-netanyahu-8"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[153]",
+   "label": "Orit Strock",
+   "value": "there will never be a Palestinian state in the land of Israel, because there is no such thing as a Palestinian people",
+   "numeric": false,
+   "ref": "",
+   "date": "February 2024",
+   "source_text": "UN Commission of Inquiry, A/81/430, 14 October 2026 (§6.2, §10.7B).",
+   "sources": [
+    "un-coi"
+   ],
+   "id": "statements-orit-strock"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[154]",
+   "label": "Bezalel Smotrich",
+   "value": "the new Nazis have to pay a price in the territory that will be taken from them forever both in Gaza and in Judea and Samaria",
+   "numeric": false,
+   "ref": "",
+   "date": "11 November 2024",
+   "source_text": "UN Commission of Inquiry, A/81/430; The Times of Israel; Al-Monitor; Haaretz, 12 November 2024 (§6.2).",
+   "sources": [
+    "un-coi",
+    "haaretz",
+    "times-of-israel"
+   ],
+   "id": "statements-bezalel-smotrich-10"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[155]",
+   "label": "Bezalel Smotrich",
+   "value": "Fondouk, Nablus, and Jenin must look like Jabalia",
+   "numeric": false,
+   "ref": "",
+   "date": "6 January 2025",
+   "source_text": "X (@bezalelsm), 6 January 2025, as cited by A/81/430 (§6.2).",
+   "sources": [],
+   "id": "statements-bezalel-smotrich-11"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[156]",
+   "label": "Bezalel Smotrich",
+   "value": "two million Nazis",
+   "numeric": false,
+   "ref": "",
+   "date": "27 November 2023",
+   "source_text": "The Times of Israel, 27 November 2023, as cited by A/81/430 (§6.2).",
+   "sources": [
+    "times-of-israel"
+   ],
+   "id": "statements-bezalel-smotrich-12"
   },
   {
    "file": "elements.json",

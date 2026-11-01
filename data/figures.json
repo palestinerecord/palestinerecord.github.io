@@ -8,7 +8,7 @@
    "label": "Palestinians killed in Gaza",
    "value": 74594,
    "suffix": "+",
-   "note": "identified killed, Oct 2023 – Sept 2026",
+   "note": "identified killed, Oct 2023 – Oct 2026",
    "source": "Gaza MoH / OCHA",
    "ref": "§6.3",
    "live": true,
@@ -169,7 +169,7 @@
    },
    {
     "operation": "Gaza 2023–2026",
-    "period": "Oct 2023 – Sept 2026",
+    "period": "Oct 2023 – Oct 2026",
     "deaths": 73670,
     "civilian_pct": 70,
     "finding": "UN COI — genocide; ICC warrants; ICJ provisional measures"

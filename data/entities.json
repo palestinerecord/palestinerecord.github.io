@@ -3,7 +3,7 @@
   "title": "The accountability ledger",
   "note": "Persons and companies named in the record, with what a court, a government or a shareholder has actually done about them. Statements are joined from the statements file, the sections are found in the report itself, and the sanctions are the measures on the world-positions file. Nothing on this page is asserted that is not already somewhere else on this site.",
   "source": "report-final.md; data/statements.json; data/world-positions.json; Rome Statute of the International Criminal Court, Articles 86, 89(1) and 127(1)",
-  "persons": 87,
+  "persons": 88,
   "companies": 15,
   "warrants": 3,
   "sanctioned": 10,
@@ -55,9 +55,9 @@
   {
    "id": "benjamin-netanyahu",
    "name": "Benjamin Netanyahu",
-   "role": "Prime Minister of Israel",
+   "role": "Prime Minister",
    "class": "government",
-   "tier": "Head of government",
+   "tier": "Head government",
    "statements": [
     49,
     52,
@@ -65,26 +65,39 @@
     86,
     116,
     138,
-    149
+    149,
+    152
    ],
    "mentions": [
     {
      "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
      "title": "18.7 Prior Intelligence Knowledge: The \"Jericho Wall\" Document and the Surveillance Failure",
      "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
-     "n": 34
+     "n": 36
+    },
+    {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 19
     },
     {
      "id": "111-israel-funded-hamas",
      "title": "11.1 Israel Funded Hamas",
      "part": "PART XI - STATE-SPONSORED TERROR AND THE HAMAS STRATEGY",
-     "n": 11
+     "n": 17
     },
     {
      "id": "155-icc-arrest-warrant---effective-travel-restrictions",
      "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 11
+     "n": 15
+    },
+    {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 9
     },
     {
      "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
@@ -93,9 +106,33 @@
      "n": 7
     },
     {
+     "id": "93-the-annexation-drive",
+     "title": "9.3 The Annexation Drive",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 7
+    },
+    {
+     "id": "186-the-hannibal-directive-israel-killed-its-own-citizens-on-october-7",
+     "title": "18.6 The Hannibal Directive: Israel Killed Its Own Citizens on October 7",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 5
+    },
+    {
      "id": "136-the-maga-isolationist-fracture-israels-growing-strategic-liability-within-th",
      "title": "13.6 The MAGA-Isolationist Fracture: Israel's Growing Strategic Liability Within the US Right",
      "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 4
+    },
+    {
+     "id": "1511a-netanyahus-own-account-of-the-mechanism-i-can-paint-you-as-a-monster",
+     "title": "15.11A Netanyahu's Own Account of the Mechanism: \"I Can Paint You as a Monster\"",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 4
+    },
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 4
     },
     {
@@ -111,49 +148,13 @@
      "n": 4
     },
     {
-     "id": "610-the-30-july-2026-disarmament-agreement-and-its-immediate-rejection",
-     "title": "6.10 The 30 July 2026 Disarmament Agreement and Its Immediate Rejection",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "id": "2111-testimony-and-documents-on-the-use-of-antisemitism-accusations-against-crit",
+     "title": "21.11 Testimony and Documents on the Use of Antisemitism Accusations Against Critics of Israel",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
      "n": 4
-    },
-    {
-     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
-     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
-     "n": 4
-    },
-    {
-     "id": "92-cumulative-west-bank-violence-oct-2023-june-2026",
-     "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
-     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
-     "n": 4
-    },
-    {
-     "id": "242-the-four-limbs-of-the-case",
-     "title": "24.2 The Four Limbs of the Case",
-     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
-     "n": 3
-    },
-    {
-     "id": "107-un-commission-of-inquiry-the-deliberate-targeting-of-children-as-a-genocidal",
-     "title": "10.7 UN Commission of Inquiry: The Deliberate Targeting of Children as a Genocidal Act (June 2026)",
-     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
-     "n": 2
-    },
-    {
-     "id": "141d-the-turn-to-investigation---the-prime-minister-the-chief-of-the-general-sta",
-     "title": "14.1D The Turn to Investigation - The Prime Minister, the Chief of the General Staff, and the Search for the Sources (14 September 2026)",
-     "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
-     "n": 2
-    },
-    {
-     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
-     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 2
     }
    ],
-   "sections": 96,
+   "sections": 139,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -174,6 +175,12 @@
     38
    ],
    "mentions": [
+    {
+     "id": "186-the-hannibal-directive-israel-killed-its-own-citizens-on-october-7",
+     "title": "18.6 The Hannibal Directive: Israel Killed Its Own Citizens on October 7",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 8
+    },
     {
      "id": "155-icc-arrest-warrant---effective-travel-restrictions",
      "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
@@ -199,15 +206,15 @@
      "n": 2
     },
     {
-     "id": "105-un-secretary-generals-conflict-related-sexual-violence-blacklist-28-may-2026",
-     "title": "10.5 UN Secretary-General's Conflict-Related Sexual Violence Blacklist (28 May 2026)",
-     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
-     "n": 1
-    },
-    {
      "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
      "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "105-un-secretary-generals-conflict-related-sexual-violence-blacklist-28-may-2026",
+     "title": "10.5 UN Secretary-General's Conflict-Related Sexual Violence Blacklist (28 May 2026)",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
      "n": 1
     },
     {
@@ -229,7 +236,7 @@
      "n": 1
     }
    ],
-   "sections": 18,
+   "sections": 27,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -251,10 +258,10 @@
      "id": "183-legal-characterisation-under-international-law",
      "title": "18.3 Legal Characterisation Under International Law",
      "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
-     "n": 6
+     "n": 5
     }
    ],
-   "sections": 6,
+   "sections": 5,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -273,12 +280,16 @@
    "statements": [
     22,
     51,
+    156,
     72,
+    154,
+    155,
     80,
     83,
     100,
     109,
-    115
+    115,
+    150
    ],
    "mentions": [
     {
@@ -306,8 +317,26 @@
      "n": 4
     },
     {
+     "id": "107b-the-commissions-fifth-report-to-the-general-assembly-genocidal-acts-after-t",
+     "title": "10.7B The Commission's Fifth Report to the General Assembly: Genocidal Acts After the Ceasefire and Crimes Against Humanity in the West Bank (A/81/430, 26 October 2026)",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 3
+    },
+    {
+     "id": "197-the-documented-record-of-official-israeli-disinformation-and-state-funded-in",
+     "title": "19.7 The Documented Record of Official Israeli Disinformation and State-Funded Influence Operations",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 2
+    },
+    {
      "id": "35b-the-jerusalem-day-flag-march-documented-public-incitement-in-occupied-east-j",
      "title": "3.5B The Jerusalem Day Flag March: Documented Public Incitement in Occupied East Jerusalem (2022-2026)",
+     "part": "PART III - THE 58-YEAR ILLEGAL OCCUPATION (1967–2026)",
+     "n": 2
+    },
+    {
+     "id": "35d-what-jewish-israelis-tell-pollsters-about-arab-citizens-and-palestinians-201",
+     "title": "3.5D What Jewish Israelis Tell Pollsters About Arab Citizens and Palestinians (2012-2025)",
      "part": "PART III - THE 58-YEAR ILLEGAL OCCUPATION (1967–2026)",
      "n": 2
     },
@@ -324,13 +353,31 @@
      "n": 2
     },
     {
+     "id": "2110-the-green-party-motion-on-zionism-4-october-2026-and-the-polling-on-attitud",
+     "title": "21.10 The Green Party Motion on Zionism (4 October 2026) and the Polling on Attitudes by Party",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
+     "n": 1
+    },
+    {
      "id": "242a-the-witnesses-israeli-jewish-and-international",
      "title": "24.2A The Witnesses: Israeli, Jewish, and International",
      "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
      "n": 1
+    },
+    {
+     "id": "93-the-annexation-drive",
+     "title": "9.3 The Annexation Drive",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 1
+    },
+    {
+     "id": "95-the-west-bank-in-the-last-week-of-september-2026-the-security-council-briefin",
+     "title": "9.5 The West Bank in the Last Week of September 2026: The Security Council Briefing, the Sukkot Closure, the E1 Tender and B'Tselem's \"Elimination Project\"",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 1
     }
    ],
-   "sections": 23,
+   "sections": 33,
    "warrant": null,
    "sanctions": [
     {
@@ -374,13 +421,26 @@
     119,
     124,
     126,
-    130
+    130,
+    151
    ],
    "mentions": [
     {
      "id": "104a-ben-gvirs-ai-generated-slaughterhouse-video-of-palestinian-prisoners-31-aug",
      "title": "10.4A Ben-Gvir's AI-Generated \"Slaughterhouse\" Video of Palestinian Prisoners (31 August - 4 September 2026)",
      "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 6
+    },
+    {
+     "id": "1512e-two-public-responses-in-one-week-bonos-comparison-of-ben-gvir-to-himmler-a",
+     "title": "15.12E Two Public Responses in One Week: Bono's Comparison of Ben-Gvir to Himmler, and the Ireland-Israel Fixture (21-30 September 2026)",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 6
+    },
+    {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
      "n": 6
     },
     {
@@ -408,12 +468,6 @@
      "n": 3
     },
     {
-     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
-     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
-     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
-     "n": 3
-    },
-    {
      "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
      "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
      "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
@@ -432,6 +486,18 @@
      "n": 2
     },
     {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "2110-the-green-party-motion-on-zionism-4-october-2026-and-the-polling-on-attitud",
+     "title": "21.10 The Green Party Motion on Zionism (4 October 2026) and the Polling on Attitudes by Party",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
+     "n": 2
+    },
+    {
      "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
      "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
      "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
@@ -442,27 +508,9 @@
      "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
      "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
      "n": 2
-    },
-    {
-     "id": "103-sde-teiman---the-black-site",
-     "title": "10.3 Sde Teiman - The Black Site",
-     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
-     "n": 1
-    },
-    {
-     "id": "186-the-hannibal-directive-israel-killed-its-own-citizens-on-october-7",
-     "title": "18.6 The Hannibal Directive: Israel Killed Its Own Citizens on October 7",
-     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
-     "n": 1
-    },
-    {
-     "id": "242a-the-witnesses-israeli-jewish-and-international",
-     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
-     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
-     "n": 1
     }
    ],
-   "sections": 39,
+   "sections": 49,
    "warrant": null,
    "sanctions": [
     {
@@ -515,16 +563,22 @@
    ],
    "mentions": [
     {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 5
+    },
+    {
+     "id": "194-casualty-figures---methodology-challenges-and-independent-corroboration",
+     "title": "19.4 Casualty Figures - Methodology, Challenges, and Independent Corroboration",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 5
+    },
+    {
      "id": "151b-gaza-genocide-a-collective-crime---the-special-rapporteur-on-third-state-co",
      "title": "15.1B \"Gaza Genocide: A Collective Crime\" - The Special Rapporteur on Third-State Complicity (20 October 2025)",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 4
-    },
-    {
-     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
-     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 3
     },
     {
      "id": "103a-ketziot-prison-the-killing-of-thaer-abu-asab-and-guards-own-whatsapp-messag",
@@ -557,7 +611,7 @@
      "n": 2
     }
    ],
-   "sections": 17,
+   "sections": 24,
    "warrant": null,
    "sanctions": [
     {
@@ -582,19 +636,25 @@
    "statements": [],
    "mentions": [
     {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 4
+    },
+    {
      "id": "155-icc-arrest-warrant---effective-travel-restrictions",
      "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 4
     },
     {
-     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
-     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 2
+     "id": "2111-testimony-and-documents-on-the-use-of-antisemitism-accusations-against-crit",
+     "title": "21.11 Testimony and Documents on the Use of Antisemitism Accusations Against Critics of Israel",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
+     "n": 1
     }
    ],
-   "sections": 6,
+   "sections": 9,
    "warrant": null,
    "sanctions": [
     {
@@ -605,6 +665,37 @@
       "United States"
      ],
      "reason": "Designated for seeking the arrest warrants against Netanyahu and Gallant.",
+     "ref": "§15.13",
+     "direction": "accountability"
+    }
+   ]
+  },
+  {
+   "id": "nazhat-shameem-khan",
+   "name": "Nazhat Shameem Khan",
+   "role": "Deputy Prosecutor of the International Criminal Court",
+   "class": "accountability",
+   "country": "Fiji",
+   "statements": [],
+   "mentions": [
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 3
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": [
+    {
+     "id": "eo-14203-deputies",
+     "date": "20 August 2025",
+     "measure": "Designation under Executive Order 14203",
+     "by": [
+      "United States"
+     ],
+     "reason": "Both Deputy Prosecutors and two judges, designated together. Judge Prost has described being unable to use her credit card or reach her Google and Amazon accounts.",
      "ref": "§15.13",
      "direction": "accountability"
     }
@@ -684,37 +775,6 @@
    "role": "Judge of the International Criminal Court",
    "class": "accountability",
    "country": "Canada",
-   "statements": [],
-   "mentions": [
-    {
-     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
-     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
-    }
-   ],
-   "sections": 1,
-   "warrant": null,
-   "sanctions": [
-    {
-     "id": "eo-14203-deputies",
-     "date": "20 August 2025",
-     "measure": "Designation under Executive Order 14203",
-     "by": [
-      "United States"
-     ],
-     "reason": "Both Deputy Prosecutors and two judges, designated together. Judge Prost has described being unable to use her credit card or reach her Google and Amazon accounts.",
-     "ref": "§15.13",
-     "direction": "accountability"
-    }
-   ]
-  },
-  {
-   "id": "nazhat-shameem-khan",
-   "name": "Nazhat Shameem Khan",
-   "role": "Deputy Prosecutor of the International Criminal Court",
-   "class": "accountability",
-   "country": "Fiji",
    "statements": [],
    "mentions": [
     {
@@ -828,6 +888,30 @@
      "n": 4
     },
     {
+     "id": "186-the-hannibal-directive-israel-killed-its-own-citizens-on-october-7",
+     "title": "18.6 The Hannibal Directive: Israel Killed Its Own Citizens on October 7",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 3
+    },
+    {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 3
+    },
+    {
+     "id": "95-the-west-bank-in-the-last-week-of-september-2026-the-security-council-briefin",
+     "title": "9.5 The West Bank in the Last Week of September 2026: The Security Council Briefing, the Sukkot Closure, the E1 Tender and B'Tselem's \"Elimination Project\"",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 3
+    },
+    {
+     "id": "2110-the-green-party-motion-on-zionism-4-october-2026-and-the-polling-on-attitud",
+     "title": "21.10 The Green Party Motion on Zionism (4 October 2026) and the Polling on Attitudes by Party",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
+     "n": 2
+    },
+    {
      "id": "242a-the-witnesses-israeli-jewish-and-international",
      "title": "24.2A The Witnesses: Israeli, Jewish, and International",
      "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
@@ -840,13 +924,13 @@
      "n": 2
     },
     {
-     "id": "186-the-hannibal-directive-israel-killed-its-own-citizens-on-october-7",
-     "title": "18.6 The Hannibal Directive: Israel Killed Its Own Citizens on October 7",
-     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
-     "n": 1
+     "id": "96-hebron-the-operation-of-23-october-2026-the-west-bank-closure-and-the-record-",
+     "title": "9.6 Hebron: The Operation of 23 October 2026, the West Bank Closure and the Record Month of Settler Attacks",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 2
     }
    ],
-   "sections": 13,
+   "sections": 25,
    "warrant": null,
    "sanctions": []
   },
@@ -902,12 +986,18 @@
      "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
      "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
      "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 2
+     "n": 4
     },
     {
      "id": "153e-the-eighty-first-general-assembly-what-was-said-from-the-podium-22-septembe",
      "title": "15.3E The Eighty-First General Assembly: What Was Said From the Podium (22 September 2026)",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "2110-the-green-party-motion-on-zionism-4-october-2026-and-the-polling-on-attitud",
+     "title": "21.10 The Green Party Motion on Zionism (4 October 2026) and the Polling on Attitudes by Party",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
      "n": 2
     },
     {
@@ -935,13 +1025,19 @@
      "n": 1
     },
     {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 1
+    },
+    {
      "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
      "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
      "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
      "n": 1
     }
    ],
-   "sections": 9,
+   "sections": 14,
    "warrant": null,
    "sanctions": []
   },
@@ -969,6 +1065,12 @@
      "n": 3
     },
     {
+     "id": "107b-the-commissions-fifth-report-to-the-general-assembly-genocidal-acts-after-t",
+     "title": "10.7B The Commission's Fifth Report to the General Assembly: Genocidal Acts After the Ceasefire and Crimes Against Humanity in the West Bank (A/81/430, 26 October 2026)",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 2
+    },
+    {
      "id": "141d-the-turn-to-investigation---the-prime-minister-the-chief-of-the-general-sta",
      "title": "14.1D The Turn to Investigation - The Prime Minister, the Chief of the General Staff, and the Search for the Sources (14 September 2026)",
      "part": "PART XIV - VOICES FROM WITHIN ISRAEL AND THE HOLOCAUST SURVIVOR COMMUNITY",
@@ -981,7 +1083,47 @@
      "n": 1
     }
    ],
-   "sections": 11,
+   "sections": 13,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "avi-shlaim",
+   "name": "Avi Shlaim",
+   "role": "Emeritus Professor of International Relations, University of Oxford; Israeli historian and former Israeli soldier; Fellow of the British Academy",
+   "class": "dissent",
+   "tier": "Israeli historian",
+   "statements": [
+    17,
+    89
+   ],
+   "mentions": [
+    {
+     "id": "233-jewish-and-israeli-scholars",
+     "title": "23.3 Jewish and Israeli Scholars",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 3
+    },
+    {
+     "id": "214-the-conflation-as-a-driver-of-antisemitism",
+     "title": "21.4 The Conflation as a Driver of Antisemitism",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
+     "n": 2
+    },
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 2
+    },
+    {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 1
+    }
+   ],
+   "sections": 8,
    "warrant": null,
    "sanctions": []
   },
@@ -1004,34 +1146,6 @@
     }
    ],
    "sections": 5,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "avi-shlaim",
-   "name": "Avi Shlaim",
-   "role": "Emeritus Professor of International Relations, University of Oxford; Israeli historian and former Israeli soldier; Fellow of the British Academy",
-   "class": "dissent",
-   "tier": "Israeli historian",
-   "statements": [
-    17,
-    89
-   ],
-   "mentions": [
-    {
-     "id": "233-jewish-and-israeli-scholars",
-     "title": "23.3 Jewish and Israeli Scholars",
-     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
-     "n": 2
-    },
-    {
-     "id": "242a-the-witnesses-israeli-jewish-and-international",
-     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
-     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
-     "n": 2
-    }
-   ],
-   "sections": 4,
    "warrant": null,
    "sanctions": []
   },
@@ -1194,22 +1308,34 @@
      "n": 9
     },
     {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 7
+    },
+    {
      "id": "153e-the-eighty-first-general-assembly-what-was-said-from-the-podium-22-septembe",
      "title": "15.3E The Eighty-First General Assembly: What Was Said From the Podium (22 September 2026)",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 5
     },
     {
-     "id": "86-the-2026-usisrael-war-on-iran",
-     "title": "8.6 The 2026 US–Israel War on Iran",
-     "part": "PART VIII - REGIONAL AGGRESSION: SYRIA, YEMEN, IRAN",
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 4
     },
     {
      "id": "155-icc-arrest-warrant---effective-travel-restrictions",
      "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 3
+     "n": 4
+    },
+    {
+     "id": "86-the-2026-usisrael-war-on-iran",
+     "title": "8.6 The 2026 US–Israel War on Iran",
+     "part": "PART VIII - REGIONAL AGGRESSION: SYRIA, YEMEN, IRAN",
+     "n": 4
     },
     {
      "id": "156a-the-united-states-own-position-statehood-deferred-annexation-opposed",
@@ -1224,8 +1350,8 @@
      "n": 2
     },
     {
-     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
-     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "id": "1511-american-public-opinion-the-same-collapse-measured-independently",
+     "title": "15.11 American Public Opinion: The Same Collapse, Measured Independently",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 2
     },
@@ -1248,19 +1374,154 @@
      "n": 1
     },
     {
-     "id": "610-the-30-july-2026-disarmament-agreement-and-its-immediate-rejection",
-     "title": "6.10 The 30 July 2026 Disarmament Agreement and Its Immediate Rejection",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
-     "n": 1
-    },
-    {
-     "id": "69-the-cairo-talks-and-continued-killing-june-2026",
-     "title": "6.9 The Cairo Talks and Continued Killing (June 2026)",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "id": "2110-the-green-party-motion-on-zionism-4-october-2026-and-the-polling-on-attitud",
+     "title": "21.10 The Green Party Motion on Zionism (4 October 2026) and the Polling on Attitudes by Party",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
      "n": 1
     }
    ],
-   "sections": 45,
+   "sections": 56,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "isaac-herzog",
+   "name": "Isaac Herzog",
+   "role": "President of Israel",
+   "class": "government",
+   "tier": "Head of state",
+   "statements": [
+    42
+   ],
+   "mentions": [
+    {
+     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
+     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 4
+    },
+    {
+     "id": "234-organisations-and-public-statements-2023-2026",
+     "title": "23.4 Organisations and Public Statements (2023-2026)",
+     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
+     "n": 3
+    },
+    {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 3
+    },
+    {
+     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
+     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "153-sanctions-on-israeli-officials",
+     "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 2
+    },
+    {
+     "id": "2110-the-green-party-motion-on-zionism-4-october-2026-and-the-polling-on-attitud",
+     "title": "21.10 The Green Party Motion on Zionism (4 October 2026) and the Polling on Attitudes by Party",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
+     "n": 2
+    },
+    {
+     "id": "242-the-four-limbs-of-the-case",
+     "title": "24.2 The Four Limbs of the Case",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 2
+    }
+   ],
+   "sections": 20,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "maj-gen-avi-bluth",
+   "name": "Maj. Gen. Avi Bluth",
+   "role": "Commander, IDF Central Command (the occupied West Bank)",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    114
+   ],
+   "mentions": [
+    {
+     "id": "94-the-two-tier-open-fire-policy-a-documented-admission-of-apartheid",
+     "title": "9.4 The Two-Tier Open Fire Policy: A Documented Admission of Apartheid",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 10
+    },
+    {
+     "id": "92-cumulative-west-bank-violence-oct-2023-june-2026",
+     "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 5
+    },
+    {
+     "id": "107b-the-commissions-fifth-report-to-the-general-assembly-genocidal-acts-after-t",
+     "title": "10.7B The Commission's Fifth Report to the General Assembly: Genocidal Acts After the Ceasefire and Crimes Against Humanity in the West Bank (A/81/430, 26 October 2026)",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 3
+    }
+   ],
+   "sections": 18,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "maj-gen-gadi-eisenkot",
+   "name": "Maj. Gen. Gadi Eisenkot",
+   "role": "IDF Northern Command (later Chief of the General Staff)",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    16
+   ],
+   "mentions": [
+    {
+     "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
+     "title": "18.7 Prior Intelligence Knowledge: The \"Jericho Wall\" Document and the Surveillance Failure",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 6
+    },
+    {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 5
+    },
+    {
+     "id": "73-the-dahiya-doctrine---codified-disproportionality",
+     "title": "7.3 The Dahiya Doctrine - Codified Disproportionality",
+     "part": "PART VII - THE 2024 LEBANON WAR AND THE PAGER MASSACRE",
+     "n": 3
+    },
+    {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 2
+    },
+    {
+     "id": "93-the-annexation-drive",
+     "title": "9.3 The Annexation Drive",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 2
+    }
+   ],
+   "sections": 18,
    "warrant": null,
    "sanctions": []
   },
@@ -1298,78 +1559,6 @@
    "sanctions": []
   },
   {
-   "id": "maj-gen-avi-bluth",
-   "name": "Maj. Gen. Avi Bluth",
-   "role": "Commander, IDF Central Command (the occupied West Bank)",
-   "class": "military",
-   "tier": "Military",
-   "statements": [
-    114
-   ],
-   "mentions": [
-    {
-     "id": "94-the-two-tier-open-fire-policy-a-documented-admission-of-apartheid",
-     "title": "9.4 The Two-Tier Open Fire Policy: A Documented Admission of Apartheid",
-     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
-     "n": 10
-    },
-    {
-     "id": "92-cumulative-west-bank-violence-oct-2023-june-2026",
-     "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
-     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
-     "n": 5
-    }
-   ],
-   "sections": 15,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "isaac-herzog",
-   "name": "Isaac Herzog",
-   "role": "President of Israel",
-   "class": "government",
-   "tier": "Head of state",
-   "statements": [
-    42
-   ],
-   "mentions": [
-    {
-     "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
-     "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
-     "n": 4
-    },
-    {
-     "id": "234-organisations-and-public-statements-2023-2026",
-     "title": "23.4 Organisations and Public Statements (2023-2026)",
-     "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
-     "n": 3
-    },
-    {
-     "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
-     "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 2
-    },
-    {
-     "id": "153-sanctions-on-israeli-officials",
-     "title": "15.3 Sanctions on Israeli Officials",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 2
-    },
-    {
-     "id": "242-the-four-limbs-of-the-case",
-     "title": "24.2 The Four Limbs of the Case",
-     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
-     "n": 2
-    }
-   ],
-   "sections": 13,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
    "id": "yitzhak-yezernitzky-yitzhak-shamir",
    "name": "Yitzhak Yezernitzky (Yitzhak Shamir)",
    "role": "Lehi operations commander; later Prime Minister of Israel (1983-1984, 1986-1992)",
@@ -1403,29 +1592,116 @@
    "sanctions": []
   },
   {
-   "id": "maj-gen-gadi-eisenkot",
-   "name": "Maj. Gen. Gadi Eisenkot",
-   "role": "IDF Northern Command (later Chief of the General Staff)",
-   "class": "military",
-   "tier": "Military",
+   "id": "ed-miliband",
+   "name": "Ed Miliband",
+   "role": "Secretary of State for Foreign, Commonwealth and Development Affairs, United Kingdom",
+   "class": "allied",
+   "tier": "Allied government",
    "statements": [
-    16
+    133
    ],
    "mentions": [
     {
-     "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
-     "title": "18.7 Prior Intelligence Knowledge: The \"Jericho Wall\" Document and the Surveillance Failure",
-     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
-     "n": 6
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 3
     },
     {
-     "id": "73-the-dahiya-doctrine---codified-disproportionality",
-     "title": "7.3 The Dahiya Doctrine - Codified Disproportionality",
-     "part": "PART VII - THE 2024 LEBANON WAR AND THE PAGER MASSACRE",
-     "n": 3
+     "id": "133-the-united-kingdom",
+     "title": "13.3 The United Kingdom",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "139a-the-palestine-action-proscription-in-the-courts-r-ammori-v-secretary-of-sta",
+     "title": "13.9A The Palestine Action Proscription in the Courts: *R (Ammori) v Secretary of State for the Home Department* (2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "151c-where-governments-stand-on-the-word-a-state-by-state-record-to-25-september",
+     "title": "15.1C Where Governments Stand on the Word: A State-by-State Record (to 25 September 2026)",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "152-arms-embargoes",
+     "title": "15.2 Arms Embargoes",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "153-sanctions-on-israeli-officials",
+     "title": "15.3 Sanctions on Israeli Officials",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "153a-british-charitable-funds-and-the-settlements-the-regulatory-record",
+     "title": "15.3A British Charitable Funds and the Settlements: The Regulatory Record",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "153b-the-measures-tested-the-legal-professions-assessment-the-enforcement-gap-an",
+     "title": "15.3B The Measures Tested: The Legal Profession's Assessment, the Enforcement Gap, and the State's Own Contracts",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
     }
    ],
-   "sections": 9,
+   "sections": 10,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "donald-trump",
+   "name": "Donald Trump",
+   "role": "President of the United States",
+   "class": "allied",
+   "tier": "Allied government",
+   "statements": [
+    148
+   ],
+   "mentions": [
+    {
+     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
+     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 2
+    },
+    {
+     "id": "1511-american-public-opinion-the-same-collapse-measured-independently",
+     "title": "15.11 American Public Opinion: The Same Collapse, Measured Independently",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "152-arms-embargoes",
+     "title": "15.2 Arms Embargoes",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "153e-the-eighty-first-general-assembly-what-was-said-from-the-podium-22-septembe",
+     "title": "15.3E The Eighty-First General Assembly: What Was Said From the Podium (22 September 2026)",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
+     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 8,
    "warrant": null,
    "sanctions": []
   },
@@ -1457,38 +1733,20 @@
    "sanctions": []
   },
   {
-   "id": "ed-miliband",
-   "name": "Ed Miliband",
-   "role": "Secretary of State for Foreign, Commonwealth and Development Affairs, United Kingdom",
+   "id": "mike-huckabee",
+   "name": "Mike Huckabee",
+   "role": "United States Ambassador to Israel",
    "class": "allied",
    "tier": "Allied government",
    "statements": [
-    133
+    132
    ],
    "mentions": [
     {
-     "id": "133-the-united-kingdom",
-     "title": "13.3 The United Kingdom",
-     "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 1
-    },
-    {
-     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
-     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
-     "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 1
-    },
-    {
-     "id": "151c-where-governments-stand-on-the-word-a-state-by-state-record-to-25-september",
-     "title": "15.1C Where Governments Stand on the Word: A State-by-State Record (to 25 September 2026)",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
-    },
-    {
-     "id": "152-arms-embargoes",
-     "title": "15.2 Arms Embargoes",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
+     "id": "92-cumulative-west-bank-violence-oct-2023-june-2026",
+     "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 2
     },
     {
      "id": "153-sanctions-on-israeli-officials",
@@ -1497,9 +1755,21 @@
      "n": 1
     },
     {
-     "id": "153a-british-charitable-funds-and-the-settlements-the-regulatory-record",
-     "title": "15.3A British Charitable Funds and the Settlements: The Regulatory Record",
+     "id": "153e-the-eighty-first-general-assembly-what-was-said-from-the-podium-22-septembe",
+     "title": "15.3E The Eighty-First General Assembly: What Was Said From the Podium (22 September 2026)",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
+     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "611-the-christian-community-of-gaza-2023-2026",
+     "title": "6.11 The Christian Community of Gaza (2023-2026)",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
      "n": 1
     }
    ],
@@ -1547,45 +1817,6 @@
    "sanctions": []
   },
   {
-   "id": "mike-huckabee",
-   "name": "Mike Huckabee",
-   "role": "United States Ambassador to Israel",
-   "class": "allied",
-   "tier": "Allied government",
-   "statements": [
-    132
-   ],
-   "mentions": [
-    {
-     "id": "92-cumulative-west-bank-violence-oct-2023-june-2026",
-     "title": "9.2 Cumulative West Bank Violence (Oct 2023 – June 2026)",
-     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
-     "n": 2
-    },
-    {
-     "id": "153-sanctions-on-israeli-officials",
-     "title": "15.3 Sanctions on Israeli Officials",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
-    },
-    {
-     "id": "153e-the-eighty-first-general-assembly-what-was-said-from-the-podium-22-septembe",
-     "title": "15.3E The Eighty-First General Assembly: What Was Said From the Podium (22 September 2026)",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
-    },
-    {
-     "id": "611-the-christian-community-of-gaza-2023-2026",
-     "title": "6.11 The Christian Community of Gaza (2023-2026)",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
-     "n": 1
-    }
-   ],
-   "sections": 5,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
    "id": "theodor-herzl",
    "name": "Theodor Herzl",
    "role": "Founder of political Zionism",
@@ -1609,45 +1840,6 @@
     }
    ],
    "sections": 5,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "donald-trump",
-   "name": "Donald Trump",
-   "role": "President of the United States",
-   "class": "allied",
-   "tier": "Allied government",
-   "statements": [
-    148
-   ],
-   "mentions": [
-    {
-     "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
-     "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
-    },
-    {
-     "id": "152-arms-embargoes",
-     "title": "15.2 Arms Embargoes",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
-    },
-    {
-     "id": "153e-the-eighty-first-general-assembly-what-was-said-from-the-podium-22-septembe",
-     "title": "15.3E The Eighty-First General Assembly: What Was Said From the Podium (22 September 2026)",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
-    },
-    {
-     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
-     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
-    }
-   ],
-   "sections": 4,
    "warrant": null,
    "sanctions": []
   },
@@ -1901,6 +2093,39 @@
    "sanctions": []
   },
   {
+   "id": "sir-keir-starmer",
+   "name": "Sir Keir Starmer",
+   "role": "Leader of the Opposition, United Kingdom (Prime Minister, July 2024 – June 2026)",
+   "class": "allied",
+   "tier": "Allied government",
+   "statements": [
+    39
+   ],
+   "mentions": [
+    {
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "139b-a-jurys-answer-on-protest-the-churchill-statue-acquittal-15-september-2026",
+     "title": "13.9B A Jury's Answer on Protest: The Churchill Statue Acquittal (15 September 2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
+    },
+    {
+     "id": "2110-the-green-party-motion-on-zionism-4-october-2026-and-the-polling-on-attitud",
+     "title": "21.10 The Green Party Motion on Zionism (4 October 2026) and the Polling on Attitudes by Party",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
+     "n": 1
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "wes-streeting",
    "name": "Wes Streeting",
    "role": "Secretary of State for Defence, United Kingdom",
@@ -2024,6 +2249,27 @@
    "sanctions": []
   },
   {
+   "id": "lt-gen-rafael-eitan",
+   "name": "Lt. Gen. Rafael Eitan",
+   "role": "Chief of the General Staff of the IDF (1978–1983)",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    12
+   ],
+   "mentions": [
+    {
+     "id": "53a-the-hebron-court-martial-and-the-chief-of-staffs-harassment-orders-1982-83",
+     "title": "5.3A The Hebron Court-Martial and the Chief of Staff's \"Harassment\" Orders (1982-83)",
+     "part": "PART V - THE PATTERN OF WAR CRIMES: A 75-YEAR RECORD",
+     "n": 2
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "masha-gessen",
    "name": "Masha Gessen",
    "role": "Staff writer, The New Yorker; descendant of Holocaust survivors",
@@ -2045,26 +2291,20 @@
    "sanctions": []
   },
   {
-   "id": "sir-keir-starmer",
-   "name": "Sir Keir Starmer",
-   "role": "Leader of the Opposition, United Kingdom (Prime Minister, July 2024 – June 2026)",
-   "class": "allied",
-   "tier": "Allied government",
+   "id": "orit-strock",
+   "name": "Orit Strock",
+   "role": "Minister of Settlements and National Projects",
+   "class": "government",
+   "tier": "Cabinet",
    "statements": [
-    39
+    153
    ],
    "mentions": [
     {
-     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
-     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
-     "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 1
-    },
-    {
-     "id": "139b-a-jurys-answer-on-protest-the-churchill-statue-acquittal-15-september-2026",
-     "title": "13.9B A Jury's Answer on Protest: The Churchill Statue Acquittal (15 September 2026)",
-     "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 1
+     "id": "107b-the-commissions-fifth-report-to-the-general-assembly-genocidal-acts-after-t",
+     "title": "10.7B The Commission's Fifth Report to the General Assembly: Genocidal Acts After the Ceasefire and Crimes Against Humanity in the West Bank (A/81/430, 26 October 2026)",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 2
     }
    ],
    "sections": 2,
@@ -2091,6 +2331,81 @@
      "id": "12a-the-haavara-agreement-and-the-kareski-affair---zionist-institutions-direct-d",
      "title": "1.2A The Haavara Agreement and the Kareski Affair - Zionist Institutions' Direct Dealings with Nazi Germany, 1933-1935",
      "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
+     "n": 1
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yair-lapid",
+   "name": "Yair Lapid",
+   "role": "Leader of the Opposition; Prime Minister of Israel, 2022",
+   "class": "government",
+   "tier": "Former head of government",
+   "statements": [
+    93
+   ],
+   "mentions": [
+    {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 1
+    },
+    {
+     "id": "63a-the-rafah-humanitarian-city-plan-july-2025-and-the-israeli-legal-revolt-agai",
+     "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yitzhak-wasserlauf",
+   "name": "Yitzhak Wasserlauf",
+   "role": "Minister for the Development of the Negev and Galilee (Otzma Yehudit)",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    105
+   ],
+   "mentions": [
+    {
+     "id": "197-the-documented-record-of-official-israeli-disinformation-and-state-funded-in",
+     "title": "19.7 The Documented Record of Official Israeli Disinformation and State-Funded Influence Operations",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 2
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yuli-novak",
+   "name": "Yuli Novak",
+   "role": "Executive Director, B'Tselem",
+   "class": "dissent",
+   "tier": "Israeli human rights organisation",
+   "statements": [
+    96
+   ],
+   "mentions": [
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 1
+    },
+    {
+     "id": "95-the-west-bank-in-the-last-week-of-september-2026-the-security-council-briefin",
+     "title": "9.5 The West Bank in the Last Week of September 2026: The Security Council Briefing, the Sukkot Closure, the E1 Tender and B'Tselem's \"Elimination Project\"",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
      "n": 1
     }
    ],
@@ -2273,48 +2588,6 @@
    "sanctions": []
   },
   {
-   "id": "yair-lapid",
-   "name": "Yair Lapid",
-   "role": "Leader of the Opposition; Prime Minister of Israel, 2022",
-   "class": "government",
-   "tier": "Former head of government",
-   "statements": [
-    93
-   ],
-   "mentions": [
-    {
-     "id": "63a-the-rafah-humanitarian-city-plan-july-2025-and-the-israeli-legal-revolt-agai",
-     "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
-     "n": 1
-    }
-   ],
-   "sections": 1,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "yuli-novak",
-   "name": "Yuli Novak",
-   "role": "Executive Director, B'Tselem",
-   "class": "dissent",
-   "tier": "Israeli human rights organisation",
-   "statements": [
-    96
-   ],
-   "mentions": [
-    {
-     "id": "242a-the-witnesses-israeli-jewish-and-international",
-     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
-     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
-     "n": 1
-    }
-   ],
-   "sections": 1,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
    "id": "almog-cohen",
    "name": "Almog Cohen",
    "role": "Member of Knesset (Otzma Yehudit)",
@@ -2406,20 +2679,6 @@
    "tier": "Cabinet",
    "statements": [
     44
-   ],
-   "mentions": [],
-   "sections": 0,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "lt-gen-rafael-eitan",
-   "name": "Lt. Gen. Rafael Eitan",
-   "role": "Chief of the General Staff of the IDF (1978–1983)",
-   "class": "military",
-   "tier": "Military",
-   "statements": [
-    12
    ],
    "mentions": [],
    "sections": 0,
@@ -2609,20 +2868,6 @@
    "sanctions": []
   },
   {
-   "id": "yitzhak-wasserlauf",
-   "name": "Yitzhak Wasserlauf",
-   "role": "Minister for the Development of the Negev and Galilee (Otzma Yehudit)",
-   "class": "government",
-   "tier": "Cabinet",
-   "statements": [
-    105
-   ],
-   "mentions": [],
-   "sections": 0,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
    "id": "yoav-kisch",
    "name": "Yoav Kisch",
    "role": "Education Minister",
@@ -2652,6 +2897,12 @@
      "title": "13.8 Corporate and Platform Complicity",
      "part": "PART XIII - WESTERN COMPLICITY",
      "n": 4
+    },
+    {
+     "id": "133a-what-british-ministers-said-and-what-the-british-state-did-2023-2026",
+     "title": "13.3A What British Ministers Said, and What the British State Did (2023-2026)",
+     "part": "PART XIII - WESTERN COMPLICITY",
+     "n": 1
     },
     {
      "id": "139b-a-jurys-answer-on-protest-the-churchill-statue-acquittal-15-september-2026",
@@ -2699,6 +2950,12 @@
      "id": "152-arms-embargoes",
      "title": "15.2 Arms Embargoes",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
      "n": 1
     }
    ],
@@ -2773,9 +3030,21 @@
      "n": 9
     },
     {
+     "id": "63-the-material-acts-of-genocide",
+     "title": "6.3 The Material Acts of Genocide",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 3
+    },
+    {
      "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
      "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    },
+    {
+     "id": "186-the-hannibal-directive-israel-killed-its-own-citizens-on-october-7",
+     "title": "18.6 The Hannibal Directive: Israel Killed Its Own Citizens on October 7",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
      "n": 1
     }
    ],
