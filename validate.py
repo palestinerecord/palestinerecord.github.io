@@ -561,6 +561,39 @@ def check_statements(files):
     note('statements: %d entries, %d categories' % (len(blob.get('items', [])), len(categories)))
 
 
+def check_snapshot_links(files):
+    """Every link in a static snapshot must resolve to a file in the repository.
+
+    The snapshots are generated from the live page and sit one directory down,
+    so a link written for the site root (snapshot/x.html, feed.xml, licence.html)
+    points at a path that does not exist from inside snapshot/. The link then
+    works on the homepage and 404s on every snapshot, which nothing else notices.
+    """
+    snap = HERE / 'snapshot'
+    if not snap.is_dir():
+        return
+    missing = {}
+    checked = 0
+    for page in sorted(snap.glob('*.html')):
+        text = page.read_text(encoding='utf-8')
+        for m in re.finditer(r'(?:href|src)="([^"]*)"', text):
+            url = m.group(1)
+            if not url or re.match(r'(https?:|//|#|mailto:|data:|javascript:|/)', url):
+                continue
+            url = url.split('#')[0].split('?')[0]
+            if not url:
+                continue
+            checked += 1
+            target = (page.parent / url).resolve()
+            if target.is_dir():
+                target = target / 'index.html'
+            if not target.exists():
+                missing.setdefault(url, []).append(page.name)
+    for url, pages in sorted(missing.items()):
+        fail('snapshots', 'the link %r in %d snapshot(s) (first: %s) resolves to no file' % (url, len(pages), pages[0]))
+    note('snapshots: %d relative links checked, %d broken' % (checked, len(missing)))
+
+
 def check_entities(files):
     """The ledger names people, so it is held to the strictest joins in the file.
 
@@ -1905,6 +1938,7 @@ def main():
         check_statements(files)
         check_sources(files)
         check_provenance(files)
+        check_snapshot_links(files)
         check_entities(files)
         check_falsification(files)
         check_constituency(files)

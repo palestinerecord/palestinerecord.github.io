@@ -274,8 +274,25 @@ def clean(html, snapshot_url, route_url, generated, depth_prefix='../'):
         html)
 
     # The snapshot sits one directory down, and its route links must leave it.
-    html = re.sub(r'(href|src)="(assets/|css/|js/|data/)', r'\1="%s\2' % depth_prefix, html)
+    html = re.sub(r'(href|src)="(assets/|css/|js/|data/|analysis/)', r'\1="%s\2' % depth_prefix, html)
+    # The files that sit at the site root beside index.html: the feed, the web
+    # app manifest and the sitemap.
+    html = re.sub(r'(href|src)="(feed\.xml|manifest\.webmanifest|sitemap[\w-]*\.xml)"',
+                  r'\1="%s\2"' % depth_prefix, html)
     html = html.replace('href="#/', 'href="%sindex.html#/' % depth_prefix)
+    # The footer's text-only list is written for the site root, where the
+    # snapshots live under snapshot/. From inside snapshot/ that prefix points at
+    # snapshot/snapshot/, which does not exist, so it is dropped: the page is
+    # already in the directory the link names.
+    html = html.replace('href="snapshot/"', 'href="./"')
+    # The pages that live at the root beside index.html (the licence, the
+    # companion documents) are linked by bare name from the root footer.
+    root_pages = sorted(p.name for p in ROOT.glob('*.html')
+                        if p.name not in ('index.html', '404.html') and not p.name.startswith('google'))
+    for name in root_pages:
+        if not (SNAPSHOT_DIR / name).exists():
+            html = html.replace('href="%s"' % name, 'href="%s%s"' % (depth_prefix, name))
+    html = html.replace('href="snapshot/', 'href="')
 
     # Self-canonical: a canonical pointing at a fragment collapses to the site
     # root for every search engine, which would leave twenty-two of twenty-three
