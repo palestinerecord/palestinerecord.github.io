@@ -16,7 +16,7 @@
   },
   {
    "label": "Children killed in Gaza",
-   "value": 20179,
+   "value": 21976,
    "note": "~27% of all identified fatalities",
    "source": "Gaza MoH / UN COI",
    "ref": "§6.3",
@@ -183,7 +183,7 @@
   "items": [
    {
     "label": "Children",
-    "value": 20179,
+    "value": 21976,
     "source": "Gaza MoH / UN COI",
     "live": true,
     "series": "killed.children"
@@ -197,7 +197,7 @@
    },
    {
     "label": "Medical personnel",
-    "value": 1701,
+    "value": 1723,
     "source": "WHO / Gaza MoH",
     "live": true,
     "series": "killed.medical"
@@ -214,7 +214,7 @@
    },
    {
     "label": "Journalists",
-    "value": 262,
+    "value": 263,
     "source": "Gaza MoH / CPJ",
     "live": true,
     "series": "killed.press"
