@@ -32,8 +32,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="../assets/favicon.svg?v=198" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=198">
+<link rel="icon" href="../assets/favicon.svg?v=199" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=199">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -66,8 +66,8 @@
 <meta name="twitter:title" content="Provenance — pull the thread · The Documented Record">
 <meta name="twitter:description" content="Every claim joined to the bodies it rests on, with a switch that rejects a whole class of source and recounts what still stands without it.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/provenance.png">
-<link rel="preload" href="../css/style.css?v=198" as="style">
-<link rel="stylesheet" href="../css/style.css?v=198">
+<link rel="preload" href="../css/style.css?v=199" as="style">
+<link rel="stylesheet" href="../css/style.css?v=199">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -82,7 +82,7 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <!-- The first screen is painted from this one file; the request should be in
      flight while the parser is still in the head. -->
-<link rel="preload" href="../data/headline.json?v=198" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
+<link rel="preload" href="../data/headline.json?v=199" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
 
 
 
@@ -105,7 +105,7 @@
   "url": "https://palestinerecord.github.io/",
   "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
   "image": "https://palestinerecord.github.io/assets/share-card.png",
-  "wordCount": 245812,
+  "wordCount": 253118,
   "dateModified": "2026-11-15",
   "temporalCoverage": "1917/2026",
   "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
@@ -261,7 +261,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=198" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=199" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -323,7 +323,7 @@
     </div>
         <div class="grid c4">
           <div class="stat blue" data-tone="blue">
-      <div class="val" data-count="580">580</div>
+      <div class="val" data-count="582">582</div>
       <div class="lbl">Curated claims</div>
       <div class="note">every figure, statement, determination and record entry that carries a source, across 13 data files</div>
       
@@ -335,15 +335,15 @@
       
       
     </div><div class="stat green" data-tone="green">
-      <div class="val" data-count="154">154</div>
+      <div class="val" data-count="155">155</div>
       <div class="lbl">Claims on two or more classes of source</div>
       <div class="note">a figure attested by bodies with no common controller does not fall when one of them is rejected</div>
       
       
     </div><div class="stat amber" data-tone="amber">
-      <div class="val" data-count="58.2">58.2<span class="suffix">%</span></div>
+      <div class="val" data-count="58.4">58.4<span class="suffix">%</span></div>
       <div class="lbl">Still standing at the hardest setting</div>
-      <div class="note">keep only israeli and western sources — 280 of 481 attributed claims</div>
+      <div class="note">keep only israeli and western sources — 282 of 483 attributed claims</div>
       
       
     </div>
@@ -357,8 +357,8 @@
       <p>The commonest objection to a record like this one is not that a figure is wrong. It is that a class of source cannot be trusted. The answer here is not to defend the source but to remove it. Each setting deletes every body of that class and recounts what is left: a claim stands if it still has one source outside the classes removed, and falls if it does not. Nothing else on the page changes.</p>
     </div>
         <div class="chips" id="prov-switch"></div>
-        <div class="card prov-panel" id="prov-panel"><p class="prov-panel-lede">Every source in place. <b>481</b> of
-          580 claims carry at least one; 154 of them rest on
+        <div class="card prov-panel" id="prov-panel"><p class="prov-panel-lede">Every source in place. <b>483</b> of
+          582 claims carry at least one; 155 of them rest on
           two or more classes of source at once.</p></div>
         <div class="card chart-card" id="chart-provenance-switch" data-chart-card="provenance-switch" data-title="What survives each rejection" data-source="data/provenance.json" data-note="The share of attributed claims that still rest on at least one source outside the class removed.">
       <div class="chart-head">
@@ -411,7 +411,7 @@
     </tr><tr data-origin="israeli-media">
       <td>Israeli press</td>
       <td class="num">9</td>
-      <td class="num">88</td>
+      <td class="num">90</td>
     </tr><tr data-origin="un">
       <td>United Nations bodies</td>
       <td class="num">22</td>
@@ -435,7 +435,7 @@
     </tr><tr data-origin="media">
       <td>International press</td>
       <td class="num">22</td>
-      <td class="num">92</td>
+      <td class="num">93</td>
     </tr><tr data-origin="data-project">
       <td>Open datasets and derived figures</td>
       <td class="num">4</td>
@@ -490,7 +490,7 @@
     </tr><tr class="prov-src" data-origin="israeli-media" data-name="the times of israel israeli press">
       <td>The Times of Israel</td>
       <td class="muted">Israeli press</td>
-      <td class="num">34</td>
+      <td class="num">35</td>
     </tr><tr class="prov-src" data-origin="media" data-name="entertainment and trade press international press">
       <td>Entertainment and trade press</td>
       <td class="muted">International press</td>
@@ -506,7 +506,7 @@
     </tr><tr class="prov-src" data-origin="israeli-media" data-name="israeli broadcast media israeli press">
       <td>Israeli broadcast media</td>
       <td class="muted">Israeli press</td>
-      <td class="num">27</td>
+      <td class="num">28</td>
     </tr><tr class="prov-src" data-origin="media" data-name="al jazeera international press">
       <td>Al Jazeera</td>
       <td class="muted">International press</td>
@@ -555,6 +555,14 @@
       <td>Defence for Children International – Palestine</td>
       <td class="muted">Palestinian human rights organisations</td>
       <td class="num">11</td>
+    </tr><tr class="prov-src" data-origin="israeli-media" data-name="ynet and yedioth ahronoth israeli press">
+      <td>Ynet and Yedioth Ahronoth</td>
+      <td class="muted">Israeli press</td>
+      <td class="num">10</td>
+    </tr><tr class="prov-src" data-origin="media" data-name="cnn international press">
+      <td>CNN</td>
+      <td class="muted">International press</td>
+      <td class="num">9</td>
     </tr><tr class="prov-src" data-origin="media" data-name="reuters international press">
       <td>Reuters</td>
       <td class="muted">International press</td>
@@ -563,14 +571,6 @@
       <td>US Congress and the Congressional Research Service</td>
       <td class="muted">Western states and parliaments</td>
       <td class="num">9</td>
-    </tr><tr class="prov-src" data-origin="israeli-media" data-name="ynet and yedioth ahronoth israeli press">
-      <td>Ynet and Yedioth Ahronoth</td>
-      <td class="muted">Israeli press</td>
-      <td class="num">9</td>
-    </tr><tr class="prov-src" data-origin="media" data-name="cnn international press">
-      <td>CNN</td>
-      <td class="muted">International press</td>
-      <td class="num">8</td>
     </tr><tr class="prov-src" data-origin="israeli-court" data-name="high court of justice (israel) israeli courts and commissions">
       <td>High Court of Justice (Israel)</td>
       <td class="muted">Israeli courts and commissions</td>
@@ -695,6 +695,10 @@
       <td>Founding Zionist texts and primary documents</td>
       <td class="muted">Declassified archives</td>
       <td class="num">4</td>
+    </tr><tr class="prov-src" data-origin="israeli-media" data-name="jns israeli press">
+      <td>JNS</td>
+      <td class="muted">Israeli press</td>
+      <td class="num">4</td>
     </tr><tr class="prov-src" data-origin="palestinian-ngo" data-name="palestinian centre for human rights palestinian human rights organisations">
       <td>Palestinian Centre for Human Rights</td>
       <td class="muted">Palestinian human rights organisations</td>
@@ -719,6 +723,10 @@
       <td>Yesh Din</td>
       <td class="muted">Israeli human rights organisations</td>
       <td class="num">4</td>
+    </tr><tr class="prov-src" data-origin="israeli-media" data-name="+972 magazine and local call israeli press">
+      <td>+972 Magazine and Local Call</td>
+      <td class="muted">Israeli press</td>
+      <td class="num">3</td>
     </tr><tr class="prov-src" data-origin="palestinian-ngo" data-name="al mezan centre for human rights palestinian human rights organisations">
       <td>Al Mezan Centre for Human Rights</td>
       <td class="muted">Palestinian human rights organisations</td>
@@ -746,10 +754,6 @@
     </tr><tr class="prov-src" data-origin="israeli-ngo" data-name="israeli committee against house demolitions israeli human rights organisations">
       <td>Israeli Committee Against House Demolitions</td>
       <td class="muted">Israeli human rights organisations</td>
-      <td class="num">3</td>
-    </tr><tr class="prov-src" data-origin="israeli-media" data-name="jns israeli press">
-      <td>JNS</td>
-      <td class="muted">Israeli press</td>
       <td class="num">3</td>
     </tr><tr class="prov-src" data-origin="international-ngo" data-name="lemkin institute for genocide prevention international human rights organisations">
       <td>Lemkin Institute for Genocide Prevention</td>
@@ -791,10 +795,6 @@
       <td>Wikipedia (with its own cited sources)</td>
       <td class="muted">Open datasets and derived figures</td>
       <td class="num">3</td>
-    </tr><tr class="prov-src" data-origin="israeli-media" data-name="+972 magazine and local call israeli press">
-      <td>+972 Magazine and Local Call</td>
-      <td class="muted">Israeli press</td>
-      <td class="num">2</td>
     </tr><tr class="prov-src" data-origin="media" data-name="abc news international press">
       <td>ABC News</td>
       <td class="muted">International press</td>
@@ -995,13 +995,13 @@
       <section class="section">
         <div class="section-head">
       <div class="eyebrow">The claims</div>
-      <h2>580 claims, each with its chain</h2>
+      <h2>582 claims, each with its chain</h2>
       <p>Every curated record that carries a source, with the source text it was written with and the entities that text resolves to. Filter by where the claim lives, search the text, or set the switch above and watch the claims that fall grey out.</p>
     </div>
         <div class="chips" id="prov-files"></div>
         <div class="tl-controls">
           <input type="search" id="prov-search" placeholder="Search claims, values and source text…" autocomplete="off">
-          <span class="small muted" id="prov-count">580 of 580 claims</span>
+          <span class="small muted" id="prov-count">582 of 582 claims</span>
         </div>
         <ul class="prov-claims" id="prov-claims"><li class="prov-claim" data-origins="palestinian-official un" data-file="figures.json" data-text="palestinians killed in gaza 74,699 gaza moh / ocha gaza ministry of health un ocha gaza-moh ocha" id="prov-figures-palestinians-killed-in-gaza">
         <div class="prov-claim-head">
@@ -2938,6 +2938,24 @@
         <div class="prov-value">two million Nazis</div>
         <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">The Times of Israel</span></div>
         <div class="prov-src-text">The Times of Israel, 27 November 2023, as cited by A/81/430 (§6.2).</div>
+      </li><li class="prov-claim" data-origins="israeli-media" data-file="statements.json" data-text="yisrael ganz we are dismantling the oslo accords through our actions - house by house, family by family. the times of israel, 4 november 2026; +972 magazine; drop site news (§6.2, §9.7). +972 magazine and local call the times of israel 972 times-of-israel" id="prov-statements-yisrael-ganz">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">Yisrael Ganz</a>
+          <span class="prov-date">4 November 2026</span>
+          
+        </div>
+        <div class="prov-value">We are dismantling the Oslo Accords through our actions - house by house, family by family.</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">+972 Magazine and Local Call</span><span class="prov-chip" data-origin="israeli-media">The Times of Israel</span></div>
+        <div class="prov-src-text">The Times of Israel, 4 November 2026; +972 Magazine; Drop Site News (§6.2, §9.7).</div>
+      </li><li class="prov-claim" data-origins="israeli-media media" data-file="statements.json" data-text="israel katz the idf continues to eliminate hamas leaders in gaza, and another one joins his predecessors in the depths of hell. ... the offensive policy ... will continue until gaza is demilitarized and there is no hamas. cnn; ynet; israel national news; jns, 15 november 2026 (§6.2, §6.7). ynet and yedioth ahronoth israeli broadcast media jns cnn ynet israel-tv jns cnn" id="prov-statements-israel-katz-5">
+        <div class="prov-claim-head">
+          <a href="../index.html#/statements" class="prov-label">Israel Katz</a>
+          <span class="prov-date">14 November 2026</span>
+          
+        </div>
+        <div class="prov-value">The IDF continues to eliminate Hamas leaders in Gaza, and another one joins his predecessors in the depths of hell. ... the offensive policy ... will continue until Gaza is demilitarized and there is no Hamas.</div>
+        <div class="prov-chain"><span class="prov-chip" data-origin="israeli-media">Ynet and Yedioth Ahronoth</span><span class="prov-chip" data-origin="israeli-media">Israeli broadcast media</span><span class="prov-chip" data-origin="israeli-media">JNS</span><span class="prov-chip" data-origin="media">CNN</span></div>
+        <div class="prov-src-text">CNN; Ynet; Israel National News; JNS, 15 November 2026 (§6.2, §6.7).</div>
       </li><li class="prov-claim" data-origins="international-court" data-file="elements.json" data-text="icj, the wall  international court of justice international court of justice icj" id="prov-elements-icj-the-wall">
         <div class="prov-claim-head">
           <a href="../index.html#/legal" class="prov-label">ICJ, the Wall</a>
@@ -6232,13 +6250,13 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=198" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=199" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
             evidentiary standards to all actors. Every heading, paragraph, list and table it contains is
             reproduced in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">245,812 words · 36 parts · 215 sections · 15 tables · 522 chronology entries · 157 documented statements · 669 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-11.</p>
+    <p class="muted" id="footer-stats">253,118 words · 36 parts · 217 sections · 15 tables · 534 chronology entries · 159 documented statements · 706 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-11.</p>
     <!-- A record meant to be used in an argument has to be citable in one.
          Filled in by app.js with the route on screen and the date of the data
          it is showing, so a citation copied from here names the version the

@@ -5,15 +5,15 @@
   "source": "data/provenance.json; data/statements.json",
   "repo": "palestinerecord/palestinerecord.github.io",
   "label": "challenge",
-  "entries": 521,
+  "entries": 523,
   "kinds": {
    "figure": 130,
-   "statement": 157,
+   "statement": 159,
    "record": 234
   },
-  "single_origin": 372,
-  "exposed": 232,
-  "claims": 580
+  "single_origin": 373,
+  "exposed": 233,
+  "claims": 582
  },
  "conditions": [
   {
@@ -192,14 +192,6 @@
    "name": "Defence for Children International – Palestine",
    "origin": "palestinian-ngo"
   },
-  "reuters": {
-   "name": "Reuters",
-   "origin": "media"
-  },
-  "us-congress": {
-   "name": "US Congress and the Congressional Research Service",
-   "origin": "western-state"
-  },
   "ynet": {
    "name": "Ynet and Yedioth Ahronoth",
    "origin": "israeli-media"
@@ -207,6 +199,14 @@
   "cnn": {
    "name": "CNN",
    "origin": "media"
+  },
+  "reuters": {
+   "name": "Reuters",
+   "origin": "media"
+  },
+  "us-congress": {
+   "name": "US Congress and the Congressional Research Service",
+   "origin": "western-state"
   },
   "israel-hcj": {
    "name": "High Court of Justice (Israel)",
@@ -332,6 +332,10 @@
    "name": "Founding Zionist texts and primary documents",
    "origin": "archive"
   },
+  "jns": {
+   "name": "JNS",
+   "origin": "israeli-media"
+  },
   "pchr": {
    "name": "Palestinian Centre for Human Rights",
    "origin": "palestinian-ngo"
@@ -355,6 +359,10 @@
   "yesh-din": {
    "name": "Yesh Din",
    "origin": "israeli-ngo"
+  },
+  "972": {
+   "name": "+972 Magazine and Local Call",
+   "origin": "israeli-media"
   },
   "al-mezan": {
    "name": "Al Mezan Centre for Human Rights",
@@ -383,10 +391,6 @@
   "icahd": {
    "name": "Israeli Committee Against House Demolitions",
    "origin": "israeli-ngo"
-  },
-  "jns": {
-   "name": "JNS",
-   "origin": "israeli-media"
   },
   "lemkin": {
    "name": "Lemkin Institute for Genocide Prevention",
@@ -427,10 +431,6 @@
   "wikipedia": {
    "name": "Wikipedia (with its own cited sources)",
    "origin": "data-project"
-  },
-  "972": {
-   "name": "+972 Magazine and Local Call",
-   "origin": "israeli-media"
   },
   "abc": {
    "name": "ABC News",
@@ -634,7 +634,7 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 450,
+   "stands": 452,
    "falls": 31,
    "share": 93.6
   },
@@ -648,9 +648,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 402,
-   "falls": 79,
-   "share": 83.6
+   "stands": 403,
+   "falls": 80,
+   "share": 83.4
   },
   {
    "id": "no-un",
@@ -659,7 +659,7 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 413,
+   "stands": 415,
    "falls": 68,
    "share": 85.9
   },
@@ -672,9 +672,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 377,
+   "stands": 379,
    "falls": 104,
-   "share": 78.4
+   "share": 78.5
   },
   {
    "id": "israeli-western-only",
@@ -687,9 +687,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 280,
+   "stands": 282,
    "falls": 201,
-   "share": 58.2
+   "share": 58.4
   }
  ],
  "entries": [
@@ -4041,6 +4041,26 @@
    "date": "2025",
    "attribution": "Israeli media, 2025.",
    "statement": 88
+  },
+  {
+   "id": "statements-yisrael-ganz",
+   "claim": "Yisrael Ganz",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "972",
+    "times-of-israel"
+   ],
+   "origins": [
+    "israeli-media"
+   ],
+   "independence": 1,
+   "falls": [
+    "no-israeli"
+   ],
+   "date": "4 November 2026",
+   "attribution": "The Times of Israel, 4 November 2026; +972 Magazine; Drop Site News (§6.2, §9.7).",
+   "statement": 157
   },
   {
    "id": "statements-yitzhak-rabin",
@@ -8938,6 +8958,27 @@
    "date": "2 September 2026",
    "attribution": "Times of Israel; Al Jazeera, 2 September 2026; US Senator Chris Van Hollen: “Now the Israeli Minister of Defense confirmed that's the goal.”",
    "statement": 129
+  },
+  {
+   "id": "statements-israel-katz-5",
+   "claim": "Israel Katz",
+   "kind": "statement",
+   "file": "statements.json",
+   "sources": [
+    "ynet",
+    "israel-tv",
+    "jns",
+    "cnn"
+   ],
+   "origins": [
+    "israeli-media",
+    "media"
+   ],
+   "independence": 2,
+   "falls": [],
+   "date": "14 November 2026",
+   "attribution": "CNN; Ynet; Israel National News; JNS, 15 November 2026 (§6.2, §6.7).",
+   "statement": 158
   },
   {
    "id": "statements-itamar-ben-gvir",

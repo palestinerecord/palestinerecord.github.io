@@ -38,7 +38,7 @@
     "id": "israeli-media",
     "label": "Israeli press",
     "sources": 9,
-    "claims": 88
+    "claims": 90
    },
    {
     "id": "un",
@@ -74,7 +74,7 @@
     "id": "media",
     "label": "International press",
     "sources": 22,
-    "claims": 92
+    "claims": 93
    },
    {
     "id": "data-project",
@@ -91,13 +91,13 @@
   ]
  },
  "summary": {
-  "claims": 580,
-  "attributed": 481,
+  "claims": 582,
+  "attributed": 483,
   "unattributed": 99,
   "sources": 127,
   "origins": 14,
-  "multi_source": 187,
-  "independent": 154
+  "multi_source": 189,
+  "independent": 155
  },
  "switches": [
   {
@@ -108,7 +108,7 @@
     "palestinian-ngo"
    ],
    "note": "The commonest objection to this record is that the casualty figures come from the Gaza Ministry of Health. This removes the ministry, the Palestinian Central Bureau of Statistics, WAFA and every Palestinian human rights organisation.",
-   "stands": 450,
+   "stands": 452,
    "falls": 31,
    "share": 93.6
   },
@@ -122,9 +122,9 @@
     "israeli-media"
    ],
    "note": "The mirror objection, that Israeli critics of the state are unrepresentative. This removes B'Tselem, Yesh Din, Breaking the Silence, Haaretz, the Israeli courts and the military’s own statements.",
-   "stands": 402,
-   "falls": 79,
-   "share": 83.6
+   "stands": 403,
+   "falls": 80,
+   "share": 83.4
   },
   {
    "id": "no-un",
@@ -133,7 +133,7 @@
     "un"
    ],
    "note": "The objection that UN bodies are institutionally hostile. This removes OCHA, UNRWA, the WHO, the Commission of Inquiry, the Special Rapporteurs and the IPC.",
-   "stands": 413,
+   "stands": 415,
    "falls": 68,
    "share": 85.9
   },
@@ -146,9 +146,9 @@
     "israeli-ngo"
    ],
    "note": "The objection that the NGO sector campaigns rather than reports. This removes Amnesty, Human Rights Watch and every organisation of that kind on any side.",
-   "stands": 377,
+   "stands": 379,
    "falls": 104,
-   "share": 78.4
+   "share": 78.5
   },
   {
    "id": "israeli-western-only",
@@ -161,9 +161,9 @@
     "data-project"
    ],
    "note": "The hardest test the record can be put to: nothing Palestinian, nothing from the UN, nothing from an NGO. What is left is the Israeli state, the Israeli press, Israeli human rights organisations, Western states, Western courts, Western universities and the Western press.",
-   "stands": 280,
+   "stands": 282,
    "falls": 201,
-   "share": 58.2
+   "share": 58.4
   }
  ],
  "sources": [
@@ -189,7 +189,7 @@
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
-   "claims": 34
+   "claims": 35
   },
   {
    "id": "trade-press",
@@ -221,7 +221,7 @@
    "kind": "press",
    "origin": "israeli-media",
    "origin_label": "Israeli press",
-   "claims": 27
+   "claims": 28
   },
   {
    "id": "aljazeera",
@@ -320,6 +320,22 @@
    "claims": 11
   },
   {
+   "id": "ynet",
+   "name": "Ynet and Yedioth Ahronoth",
+   "kind": "press",
+   "origin": "israeli-media",
+   "origin_label": "Israeli press",
+   "claims": 10
+  },
+  {
+   "id": "cnn",
+   "name": "CNN",
+   "kind": "press",
+   "origin": "media",
+   "origin_label": "International press",
+   "claims": 9
+  },
+  {
    "id": "reuters",
    "name": "Reuters",
    "kind": "press",
@@ -334,22 +350,6 @@
    "origin": "western-state",
    "origin_label": "Western states and parliaments",
    "claims": 9
-  },
-  {
-   "id": "ynet",
-   "name": "Ynet and Yedioth Ahronoth",
-   "kind": "press",
-   "origin": "israeli-media",
-   "origin_label": "Israeli press",
-   "claims": 9
-  },
-  {
-   "id": "cnn",
-   "name": "CNN",
-   "kind": "press",
-   "origin": "media",
-   "origin_label": "International press",
-   "claims": 8
   },
   {
    "id": "israel-hcj",
@@ -600,6 +600,14 @@
    "claims": 4
   },
   {
+   "id": "jns",
+   "name": "JNS",
+   "kind": "press",
+   "origin": "israeli-media",
+   "origin_label": "Israeli press",
+   "claims": 4
+  },
+  {
    "id": "pchr",
    "name": "Palestinian Centre for Human Rights",
    "kind": "ngo",
@@ -646,6 +654,14 @@
    "origin": "israeli-ngo",
    "origin_label": "Israeli human rights organisations",
    "claims": 4
+  },
+  {
+   "id": "972",
+   "name": "+972 Magazine and Local Call",
+   "kind": "press",
+   "origin": "israeli-media",
+   "origin_label": "Israeli press",
+   "claims": 3
   },
   {
    "id": "al-mezan",
@@ -701,14 +717,6 @@
    "kind": "ngo",
    "origin": "israeli-ngo",
    "origin_label": "Israeli human rights organisations",
-   "claims": 3
-  },
-  {
-   "id": "jns",
-   "name": "JNS",
-   "kind": "press",
-   "origin": "israeli-media",
-   "origin_label": "Israeli press",
    "claims": 3
   },
   {
@@ -790,14 +798,6 @@
    "origin": "data-project",
    "origin_label": "Open datasets and derived figures",
    "claims": 3
-  },
-  {
-   "id": "972",
-   "name": "+972 Magazine and Local Call",
-   "kind": "press",
-   "origin": "israeli-media",
-   "origin_label": "Israeli press",
-   "claims": 2
   },
   {
    "id": "abc",
@@ -1191,7 +1191,7 @@
   },
   {
    "file": "statements.json",
-   "claims": 157
+   "claims": 159
   },
   {
    "file": "elements.json",
@@ -4394,6 +4394,38 @@
     "times-of-israel"
    ],
    "id": "statements-bezalel-smotrich-12"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[157]",
+   "label": "Yisrael Ganz",
+   "value": "We are dismantling the Oslo Accords through our actions - house by house, family by family.",
+   "numeric": false,
+   "ref": "",
+   "date": "4 November 2026",
+   "source_text": "The Times of Israel, 4 November 2026; +972 Magazine; Drop Site News (§6.2, §9.7).",
+   "sources": [
+    "972",
+    "times-of-israel"
+   ],
+   "id": "statements-yisrael-ganz"
+  },
+  {
+   "file": "statements.json",
+   "path": "items[158]",
+   "label": "Israel Katz",
+   "value": "The IDF continues to eliminate Hamas leaders in Gaza, and another one joins his predecessors in the depths of hell. ... the offensive policy ... will continue until Gaza is demilitarized and there is no Hamas.",
+   "numeric": false,
+   "ref": "",
+   "date": "14 November 2026",
+   "source_text": "CNN; Ynet; Israel National News; JNS, 15 November 2026 (§6.2, §6.7).",
+   "sources": [
+    "ynet",
+    "israel-tv",
+    "jns",
+    "cnn"
+   ],
+   "id": "statements-israel-katz-5"
   },
   {
    "file": "elements.json",

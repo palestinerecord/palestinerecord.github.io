@@ -3,7 +3,7 @@
   "title": "The accountability ledger",
   "note": "Persons and companies named in the record, with what a court, a government or a shareholder has actually done about them. Statements are joined from the statements file, the sections are found in the report itself, and the sanctions are the measures on the world-positions file. Nothing on this page is asserted that is not already somewhere else on this site.",
   "source": "report-final.md; data/statements.json; data/world-positions.json; Rome Statute of the International Criminal Court, Articles 86, 89(1) and 127(1)",
-  "persons": 88,
+  "persons": 89,
   "companies": 15,
   "warrants": 3,
   "sanctioned": 10,
@@ -97,13 +97,13 @@
      "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
      "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
      "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
-     "n": 9
+     "n": 13
     },
     {
      "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
      "title": "15.12 Cultural Figures and the Public Response: Celebrities, Artists and the Entertainment Industry",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 7
+     "n": 12
     },
     {
      "id": "93-the-annexation-drive",
@@ -154,7 +154,7 @@
      "n": 4
     }
    ],
-   "sections": 139,
+   "sections": 148,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -341,6 +341,12 @@
      "n": 2
     },
     {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 2
+    },
+    {
      "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
      "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
      "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
@@ -369,15 +375,9 @@
      "title": "9.3 The Annexation Drive",
      "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
      "n": 1
-    },
-    {
-     "id": "95-the-west-bank-in-the-last-week-of-september-2026-the-security-council-briefin",
-     "title": "9.5 The West Bank in the Last Week of September 2026: The Security Council Briefing, the Sukkot Closure, the E1 Tender and B'Tselem's \"Elimination Project\"",
-     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
-     "n": 1
     }
    ],
-   "sections": 33,
+   "sections": 34,
    "warrant": null,
    "sanctions": [
     {
@@ -426,6 +426,12 @@
    ],
    "mentions": [
     {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 8
+    },
+    {
      "id": "104a-ben-gvirs-ai-generated-slaughterhouse-video-of-palestinian-prisoners-31-aug",
      "title": "10.4A Ben-Gvir's AI-Generated \"Slaughterhouse\" Video of Palestinian Prisoners (31 August - 4 September 2026)",
      "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
@@ -435,12 +441,6 @@
      "id": "1512e-two-public-responses-in-one-week-bonos-comparison-of-ben-gvir-to-himmler-a",
      "title": "15.12E Two Public Responses in One Week: Bono's Comparison of Ben-Gvir to Himmler, and the Ireland-Israel Fixture (21-30 September 2026)",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 6
-    },
-    {
-     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
-     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
-     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
      "n": 6
     },
     {
@@ -510,7 +510,7 @@
      "n": 2
     }
    ],
-   "sections": 49,
+   "sections": 51,
    "warrant": null,
    "sanctions": [
     {
@@ -872,7 +872,8 @@
     41,
     91,
     110,
-    129
+    129,
+    158
    ],
    "mentions": [
     {
@@ -924,13 +925,25 @@
      "n": 2
     },
     {
+     "id": "67-the-gaza-ceasefire-october-2025-and-post-ceasefire-conduct",
+     "title": "6.7 The Gaza Ceasefire (October 2025) and Post-Ceasefire Conduct",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 2
+    },
+    {
      "id": "96-hebron-the-operation-of-23-october-2026-the-west-bank-closure-and-the-record-",
      "title": "9.6 Hebron: The Operation of 23 October 2026, the West Bank Closure and the Record Month of Settler Attacks",
      "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
      "n": 2
+    },
+    {
+     "id": "97-jericho-the-end-of-the-hebron-operation-and-the-record-month-2-15-november-20",
+     "title": "9.7 Jericho, the End of the Hebron Operation and the Record Month (2-15 November 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 1
     }
    ],
-   "sections": 25,
+   "sections": 28,
    "warrant": null,
    "sanctions": []
   },
@@ -1121,9 +1134,15 @@
      "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
      "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
      "n": 1
+    },
+    {
+     "id": "2110-the-green-party-motion-on-zionism-4-october-2026-and-the-polling-on-attitud",
+     "title": "21.10 The Green Party Motion on Zionism (4 October 2026) and the Polling on Attitudes by Party",
+     "part": "PART XXI - THE WEAPONISATION OF ANTISEMITISM: ETYMOLOGY, THE IHRA DEFINITION, AND THE CONFLATION TRAP",
+     "n": 1
     }
    ],
-   "sections": 8,
+   "sections": 9,
    "warrant": null,
    "sanctions": []
   },
@@ -1338,6 +1357,12 @@
      "n": 4
     },
     {
+     "id": "1511-american-public-opinion-the-same-collapse-measured-independently",
+     "title": "15.11 American Public Opinion: The Same Collapse, Measured Independently",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 3
+    },
+    {
      "id": "156a-the-united-states-own-position-statehood-deferred-annexation-opposed",
      "title": "15.6A The United States' Own Position: Statehood Deferred, Annexation Opposed",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
@@ -1347,12 +1372,6 @@
      "id": "1310-the-supplier-state-the-united-states-record-behind-the-transfers",
      "title": "13.10 The Supplier State: The United States Record Behind the Transfers",
      "part": "PART XIII - WESTERN COMPLICITY",
-     "n": 2
-    },
-    {
-     "id": "1511-american-public-opinion-the-same-collapse-measured-independently",
-     "title": "15.11 American Public Opinion: The Same Collapse, Measured Independently",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 2
     },
     {
@@ -1380,7 +1399,58 @@
      "n": 1
     }
    ],
-   "sections": 56,
+   "sections": 57,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "maj-gen-gadi-eisenkot",
+   "name": "Maj. Gen. Gadi Eisenkot",
+   "role": "IDF Northern Command (later Chief of the General Staff)",
+   "class": "military",
+   "tier": "Military",
+   "statements": [
+    16
+   ],
+   "mentions": [
+    {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 12
+    },
+    {
+     "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
+     "title": "18.7 Prior Intelligence Knowledge: The \"Jericho Wall\" Document and the Surveillance Failure",
+     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
+     "n": 6
+    },
+    {
+     "id": "73-the-dahiya-doctrine---codified-disproportionality",
+     "title": "7.3 The Dahiya Doctrine - Codified Disproportionality",
+     "part": "PART VII - THE 2024 LEBANON WAR AND THE PAGER MASSACRE",
+     "n": 3
+    },
+    {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 2
+    },
+    {
+     "id": "93-the-annexation-drive",
+     "title": "9.3 The Annexation Drive",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 2
+    },
+    {
+     "id": "1511-american-public-opinion-the-same-collapse-measured-independently",
+     "title": "15.11 American Public Opinion: The Same Collapse, Measured Independently",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
+    }
+   ],
+   "sections": 26,
    "warrant": null,
    "sanctions": []
   },
@@ -1395,6 +1465,12 @@
    ],
    "mentions": [
     {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 8
+    },
+    {
      "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
      "title": "6.2 The Specific Intent (Dolus Specialis) - Documented Statements by Israeli Officials",
      "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
@@ -1404,12 +1480,6 @@
      "id": "234-organisations-and-public-statements-2023-2026",
      "title": "23.4 Organisations and Public Statements (2023-2026)",
      "part": "PART XXIII - JEWISH OPPOSITION TO ZIONISM AND TO THE CONDUCT OF THE STATE: THE RELIGIOUS, INTELLECTUAL AND ORGANISATIONAL RECORD",
-     "n": 3
-    },
-    {
-     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
-     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
-     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
      "n": 3
     },
     {
@@ -1443,7 +1513,7 @@
      "n": 2
     }
    ],
-   "sections": 20,
+   "sections": 25,
    "warrant": null,
    "sanctions": []
   },
@@ -1470,58 +1540,19 @@
      "n": 5
     },
     {
+     "id": "97-jericho-the-end-of-the-hebron-operation-and-the-record-month-2-15-november-20",
+     "title": "9.7 Jericho, the End of the Hebron Operation and the Record Month (2-15 November 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 4
+    },
+    {
      "id": "107b-the-commissions-fifth-report-to-the-general-assembly-genocidal-acts-after-t",
      "title": "10.7B The Commission's Fifth Report to the General Assembly: Genocidal Acts After the Ceasefire and Crimes Against Humanity in the West Bank (A/81/430, 26 October 2026)",
      "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
      "n": 3
     }
    ],
-   "sections": 18,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "maj-gen-gadi-eisenkot",
-   "name": "Maj. Gen. Gadi Eisenkot",
-   "role": "IDF Northern Command (later Chief of the General Staff)",
-   "class": "military",
-   "tier": "Military",
-   "statements": [
-    16
-   ],
-   "mentions": [
-    {
-     "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
-     "title": "18.7 Prior Intelligence Knowledge: The \"Jericho Wall\" Document and the Surveillance Failure",
-     "part": "PART XVIII - HAMAS'S OCTOBER 7, 2023 WAR CRIMES: THE DOCUMENTED RECORD AND LEGAL FRAMEWORK",
-     "n": 6
-    },
-    {
-     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
-     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
-     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
-     "n": 5
-    },
-    {
-     "id": "73-the-dahiya-doctrine---codified-disproportionality",
-     "title": "7.3 The Dahiya Doctrine - Codified Disproportionality",
-     "part": "PART VII - THE 2024 LEBANON WAR AND THE PAGER MASSACRE",
-     "n": 3
-    },
-    {
-     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
-     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
-     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
-     "n": 2
-    },
-    {
-     "id": "93-the-annexation-drive",
-     "title": "9.3 The Annexation Drive",
-     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
-     "n": 2
-    }
-   ],
-   "sections": 18,
+   "sections": 22,
    "warrant": null,
    "sanctions": []
   },
@@ -1555,39 +1586,6 @@
     }
    ],
    "sections": 15,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "yitzhak-yezernitzky-yitzhak-shamir",
-   "name": "Yitzhak Yezernitzky (Yitzhak Shamir)",
-   "role": "Lehi operations commander; later Prime Minister of Israel (1983-1984, 1986-1992)",
-   "class": "historic",
-   "tier": "Contemporaneous witness",
-   "statements": [
-    7
-   ],
-   "mentions": [
-    {
-     "id": "13-the-documented-crimes-of-pre-state-zionist-terrorism",
-     "title": "1.3 The Documented Crimes of Pre-State Zionist Terrorism",
-     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
-     "n": 5
-    },
-    {
-     "id": "242-the-four-limbs-of-the-case",
-     "title": "24.2 The Four Limbs of the Case",
-     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
-     "n": 3
-    },
-    {
-     "id": "242a-the-witnesses-israeli-jewish-and-international",
-     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
-     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
-     "n": 3
-    }
-   ],
-   "sections": 11,
    "warrant": null,
    "sanctions": []
   },
@@ -1648,9 +1646,48 @@
      "title": "15.3B The Measures Tested: The Legal Profession's Assessment, the Enforcement Gap, and the State's Own Contracts",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 1
+    },
+    {
+     "id": "612-the-winter-flood-and-the-aid-position-2-15-november-2026",
+     "title": "6.12 The Winter Flood and the Aid Position (2-15 November 2026)",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
     }
    ],
-   "sections": 10,
+   "sections": 11,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yitzhak-yezernitzky-yitzhak-shamir",
+   "name": "Yitzhak Yezernitzky (Yitzhak Shamir)",
+   "role": "Lehi operations commander; later Prime Minister of Israel (1983-1984, 1986-1992)",
+   "class": "historic",
+   "tier": "Contemporaneous witness",
+   "statements": [
+    7
+   ],
+   "mentions": [
+    {
+     "id": "13-the-documented-crimes-of-pre-state-zionist-terrorism",
+     "title": "1.3 The Documented Crimes of Pre-State Zionist Terrorism",
+     "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
+     "n": 5
+    },
+    {
+     "id": "242-the-four-limbs-of-the-case",
+     "title": "24.2 The Four Limbs of the Case",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 3
+    },
+    {
+     "id": "242a-the-witnesses-israeli-jewish-and-international",
+     "title": "24.2A The Witnesses: Israeli, Jewish, and International",
+     "part": "PART XXIV - THE \"TERRORIST STATE\" DESIGNATION: THE CASE, THE STANDARD, AND THE OBJECTION",
+     "n": 3
+    }
+   ],
+   "sections": 11,
    "warrant": null,
    "sanctions": []
   },
@@ -1930,6 +1967,33 @@
      "title": "15.12A Organised Cultural Refusal: A Benefit Concert, an Industry Pledge, and a Circulated Claim (2025-2026)",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 1
+    }
+   ],
+   "sections": 4,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "orit-strock",
+   "name": "Orit Strock",
+   "role": "Minister of Settlements and National Projects",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    153
+   ],
+   "mentions": [
+    {
+     "id": "107b-the-commissions-fifth-report-to-the-general-assembly-genocidal-acts-after-t",
+     "title": "10.7B The Commission's Fifth Report to the General Assembly: Genocidal Acts After the Ceasefire and Crimes Against Humanity in the West Bank (A/81/430, 26 October 2026)",
+     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
+     "n": 2
+    },
+    {
+     "id": "97-jericho-the-end-of-the-hebron-operation-and-the-record-month-2-15-november-20",
+     "title": "9.7 Jericho, the End of the Hebron Operation and the Record Month (2-15 November 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 2
     }
    ],
    "sections": 4,
@@ -2291,27 +2355,6 @@
    "sanctions": []
   },
   {
-   "id": "orit-strock",
-   "name": "Orit Strock",
-   "role": "Minister of Settlements and National Projects",
-   "class": "government",
-   "tier": "Cabinet",
-   "statements": [
-    153
-   ],
-   "mentions": [
-    {
-     "id": "107b-the-commissions-fifth-report-to-the-general-assembly-genocidal-acts-after-t",
-     "title": "10.7B The Commission's Fifth Report to the General Assembly: Genocidal Acts After the Ceasefire and Crimes Against Humanity in the West Bank (A/81/430, 26 October 2026)",
-     "part": "PART X - DETENTION, TORTURE, AND SDE TEIMAN",
-     "n": 2
-    }
-   ],
-   "sections": 2,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
    "id": "vladimir-jabotinsky",
    "name": "Vladimir Jabotinsky",
    "role": "Founder of Revisionist Zionism; ideological forebear of Likud",
@@ -2359,6 +2402,27 @@
      "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
      "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
      "n": 1
+    }
+   ],
+   "sections": 2,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
+   "id": "yisrael-ganz",
+   "name": "Yisrael Ganz",
+   "role": "Head of the Binyamin Regional Council",
+   "class": "government",
+   "tier": "Cabinet",
+   "statements": [
+    157
+   ],
+   "mentions": [
+    {
+     "id": "97-jericho-the-end-of-the-hebron-operation-and-the-record-month-2-15-november-20",
+     "title": "9.7 Jericho, the End of the Hebron Operation and the Record Month (2-15 November 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 2
     }
    ],
    "sections": 2,
