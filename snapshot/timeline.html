@@ -32,8 +32,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="../assets/favicon.svg?v=199" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=199">
+<link rel="icon" href="../assets/favicon.svg?v=200" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=200">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -66,8 +66,8 @@
 <meta name="twitter:title" content="Timeline — a dated chronology, 1917–2026 · The Documented Record">
 <meta name="twitter:description" content="Two chronologies in one: the record of major crimes and massacres, set against the mandates, laws, plans, rulings and admissions between them.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/timeline.png">
-<link rel="preload" href="../css/style.css?v=199" as="style">
-<link rel="stylesheet" href="../css/style.css?v=199">
+<link rel="preload" href="../css/style.css?v=200" as="style">
+<link rel="stylesheet" href="../css/style.css?v=200">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -82,7 +82,7 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <!-- The first screen is painted from this one file; the request should be in
      flight while the parser is still in the head. -->
-<link rel="preload" href="../data/headline.json?v=199" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
+<link rel="preload" href="../data/headline.json?v=200" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
 
 
 
@@ -105,7 +105,7 @@
   "url": "https://palestinerecord.github.io/",
   "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
   "image": "https://palestinerecord.github.io/assets/share-card.png",
-  "wordCount": 253118,
+  "wordCount": 253403,
   "dateModified": "2026-11-16",
   "temporalCoverage": "1917/2026",
   "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
@@ -261,7 +261,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=199" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=200" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -308,7 +308,7 @@
       </div>
     </div>
   </nav>
-  <div class="freshness" id="freshness" title="Casualty time-series last updated 15 November 2026 (1 days ago). Report and curated figures compiled 16 November 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>15 November 2026</b></span></div>
+  <div class="freshness" id="freshness" title="Casualty time-series last updated 16 November 2026 (0 days ago). Report and curated figures compiled 16 November 2026."><span class="dot"></span><span><span class="fresh-label">Casualty data </span><b>16 November 2026</b></span></div>
   
   
   
@@ -318,7 +318,7 @@
       <section class="section">
         <div class="section-head">
       <div class="eyebrow">Timeline</div>
-      <h2>534 dated events, 1899–2026</h2>
+      <h2>535 dated events, 1899–2026</h2>
       <p>Two chronologies in one. The <b>record</b> entries are the report's own chronology of major crimes and massacres (Appendix B). The <b>context</b> entries are the legal and political steps between them — the mandates, laws, plans, rulings and admissions that make the pattern legible. Filter by era or kind, or search the text of every entry.</p>
     </div>
         <div class="card chart-card" id="chart-era-density" data-chart-card="era-density" data-title="Documented events per decade" data-source="Appendix B + contextual chronology" data-note="The density of the record itself. Crimes and massacres against the legal and political record.">
@@ -338,7 +338,7 @@
       <div class="chart-table" hidden=""></div>
     </div>
         <div class="tl-controls" style="margin-top:26px">
-          <input type="search" id="tl-search" placeholder="Search 534 events — a place, a name, a year…" autocomplete="off">
+          <input type="search" id="tl-search" placeholder="Search 535 events — a place, a name, a year…" autocomplete="off">
           <select id="tl-era">
             <option value="all">All eras</option>
             <option value="pre">Pre-state and Mandate (to 1947)</option>
@@ -349,9 +349,9 @@
           <select id="tl-kind">
             <option value="all">Both chronologies</option>
             <option value="record">Crimes and massacres (142)</option>
-            <option value="context">Legal and political context (392)</option>
+            <option value="context">Legal and political context (393)</option>
           </select>
-          <span class="small muted" id="tl-count">534 of 534 events</span>
+          <span class="small muted" id="tl-count">535 of 535 events</span>
         </div>
         <div class="tl" id="tl-list">
           <h3 class="tl-period" data-period="1890s">1890s</h3><div class="tl-item era-early tl-context" id="tl-0" data-year="1899" data-period="1890s" data-i="0">
@@ -2479,14 +2479,18 @@
             <div class="tl-text">The 26th Knesset is sworn in; an Israeli strike on a Zeitoun shelter kills Fadi Rajab and his son Abubakr, 13</div>
             <div class="tl-note">At least seven killed in Gaza that day (§4.5, §6.7).</div>
           </div><div class="tl-item era-now tl-context" id="tl-531" data-year="2026" data-period="November 2026" data-i="531">
+            <div class="tl-date">11 November 2026</div>
+            <div class="tl-text">Gal Gadot, David Ellison and Jeffrey Katzenberg present Skydance co-CEO Ynon Kreiz with the Simon Wiesenthal Center's Humanitarian Award; Kreiz thanks Skydance for a 'bold stand for Israel and the Jewish people'</div>
+            <div class="tl-note">Two days after the DC Studios change; no account of the dinner mentions DC Studios (§15.12).</div>
+          </div><div class="tl-item era-now tl-context" id="tl-532" data-year="2026" data-period="November 2026" data-i="532">
             <div class="tl-date">12 November 2026</div>
             <div class="tl-text">Israeli strike on the surgical wing of Nasser Hospital, Khan Younis, kills six including surgeon Dr Rizk Abu Shaira and a 13-year-old boy</div>
             <div class="tl-note">IDF says it targeted a Hamas brigade commander and that the second floor was a headquarters (§6.7).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-532" data-year="2026" data-period="November 2026" data-i="532">
+          </div><div class="tl-item era-now tl-context" id="tl-533" data-year="2026" data-period="November 2026" data-i="533">
             <div class="tl-date">13 November 2026</div>
             <div class="tl-text">Israel bars Al-Haq director Shawan Jabarin from travelling to the ICC Assembly of States Parties</div>
             <div class="tl-note">Human Rights Watch calls it an escalation of a campaign against Palestinian rights groups (§15.13).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-533" data-year="2026" data-period="November 2026" data-i="533">
+          </div><div class="tl-item era-now tl-context" id="tl-534" data-year="2026" data-period="November 2026" data-i="534">
             <div class="tl-date">14 November 2026</div>
             <div class="tl-text">Israel kills the Hamas Rafah Brigade commander Samir Abu Younis in Khan Younis; Katz: the offensive 'will continue until Gaza is demilitarized and there is no Hamas'</div>
             <div class="tl-note">At least 1,643 killed since the ceasefire on Al Jazeera's count (§6.7).</div>
@@ -2499,13 +2503,13 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=199" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=200" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
             evidentiary standards to all actors. Every heading, paragraph, list and table it contains is
             reproduced in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">253,118 words · 36 parts · 217 sections · 15 tables · 534 chronology entries · 159 documented statements · 706 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-11.</p>
+    <p class="muted" id="footer-stats">253,403 words · 36 parts · 217 sections · 15 tables · 535 chronology entries · 159 documented statements · 711 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-11.</p>
     <!-- A record meant to be used in an argument has to be citable in one.
          Filled in by app.js with the route on screen and the date of the data
          it is showing, so a citation copied from here names the version the
@@ -2513,7 +2517,7 @@
     <details class="cite" id="cite">
       <summary>Cite this record</summary>
       <div class="cite-body">
-        <p class="small muted" id="cite-note">This is a living document. The figures below were compiled on 16 November 2026; the casualty series runs to 15 November 2026. Cite the date you read it, not only the year.</p>
+        <p class="small muted" id="cite-note">This is a living document. The figures below were compiled on 16 November 2026; the casualty series runs to 16 November 2026. Cite the date you read it, not only the year.</p>
         <div class="cite-row" data-style="apa"><b>APA</b><code id="cite-apa">Kayani, U. (2026). The Documented Record — Israel and the Occupied Territories, 1917–2026 (Timeline section) [Data set and report]. Retrieved 16 November 2026, from https://palestinerecord.github.io/#/timeline</code></div>
         <div class="cite-row" data-style="harvard"><b>Harvard</b><code id="cite-harvard">Kayani, U. (2026) The Documented Record — Israel and the Occupied Territories, 1917–2026 (Timeline section). Available at: https://palestinerecord.github.io/#/timeline (Accessed: 16 November 2026).</code></div>
         <div class="cite-row" data-style="bibtex"><b>BibTeX</b><code id="cite-bibtex">@misc{palestinerecord2026,
