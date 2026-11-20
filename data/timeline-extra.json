@@ -2757,6 +2757,13 @@
       "note": "Human Rights Watch calls it an escalation of a campaign against Palestinian rights groups (§15.13)."
     },
     {
+      "date": "13 November 2026",
+      "year": 2026,
+      "sort": "2026-11-13b",
+      "event": "Channel 4 News publishes FOI files on UK arms export licences to Israel: 55 licences worth about £492 million remain in July 2026, led by combat-aircraft licences",
+      "note": "The government says it has suspended or refused over 80 licences and that the files are a partial view (§13.3B)."
+    },
+    {
       "date": "14 November 2026",
       "year": 2026,
       "sort": "2026-11-14a",
@@ -2785,6 +2792,13 @@
       "note": "(§9.7, §6.7)."
     },
     {
+      "date": "17 November 2026",
+      "year": 2026,
+      "sort": "2026-11-17b",
+      "event": "Britain Owes Palestine panel at Trinity College, Oxford: the 400-page petition of September 2025 remains unanswered by the UK government",
+      "note": "Danny Friedman KC: ministers must give reasons for refusal (§1.1)."
+    },
+    {
       "date": "18 November 2026",
       "year": 2026,
       "sort": "2026-11-18a",
@@ -2797,6 +2811,20 @@
       "sort": "2026-11-19a",
       "event": "The ICJ finds Myanmar responsible for genocide against the Rohingya, the first time it has held a State to have committed genocide",
       "note": "Nine votes to six; intent held to be the only reasonable inference; counter-insurgency explanation rejected. Does not decide South Africa v. Israel (§6.13)."
+    },
+    {
+      "date": "19 November 2026",
+      "year": 2026,
+      "sort": "2026-11-19b",
+      "event": "UN General Assembly Third Committee adopts the annual resolution on Palestinian self-determination, 162 for, 8 against, 8 abstaining",
+      "note": "Against: US, Israel, Argentina, Paraguay, Micronesia, Nauru, Papua New Guinea, Palau (§15.1D)."
+    },
+    {
+      "date": "20 November 2026",
+      "year": 2026,
+      "sort": "2026-11-20a",
+      "event": "Board of Peace adviser Josh Gruenbaum says the Board will hand Gaza back to the UN if Israeli intransigence continues",
+      "note": "Israeli strikes kill six in Gaza the same day (§6.7)."
     }
   ]
 }
