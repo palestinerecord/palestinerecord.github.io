@@ -32,8 +32,8 @@
      that has to run before first paint. Neither widens the set of origins
      script may be fetched from, which is the part that matters here. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://data.techforpalestine.org https://api.postcodes.io; worker-src 'self' blob:; base-uri 'self'; form-action 'none'; object-src 'none'">
-<link rel="icon" href="../assets/favicon.svg?v=202" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=202">
+<link rel="icon" href="../assets/favicon.svg?v=203" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/flag-palestine.svg?v=203">
 <style>.snapshot-note { max-width: 1280px; margin: 0 auto 28px; padding: 16px 20px;
   border: 1px solid rgba(217,164,65,.35); border-left: 3px solid #d9a441;
   border-radius: 12px; background: rgba(217,164,65,.07); font-size: 14px; line-height: 1.6; }
@@ -66,8 +66,8 @@
 <meta name="twitter:title" content="Timeline — a dated chronology, 1917–2026 · The Documented Record">
 <meta name="twitter:description" content="Two chronologies in one: the record of major crimes and massacres, set against the mandates, laws, plans, rulings and admissions between them.">
 <meta name="twitter:image" content="https://palestinerecord.github.io/assets/og/timeline.png">
-<link rel="preload" href="../css/style.css?v=202" as="style">
-<link rel="stylesheet" href="../css/style.css?v=202">
+<link rel="preload" href="../css/style.css?v=203" as="style">
+<link rel="stylesheet" href="../css/style.css?v=203">
 <!-- Before the stylesheet paints anything: a reader who chose the light theme
      should not be shown the dark one first. Inline and synchronous by
      necessity; a deferred script runs too late to prevent the flash. -->
@@ -82,7 +82,7 @@
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <!-- The first screen is painted from this one file; the request should be in
      flight while the parser is still in the head. -->
-<link rel="preload" href="../data/headline.json?v=202" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
+<link rel="preload" href="../data/headline.json?v=203" as="fetch" type="application/json" crossorigin="" fetchpriority="high">
 
 
 
@@ -105,7 +105,7 @@
   "url": "https://palestinerecord.github.io/",
   "mainEntityOfPage": "https://palestinerecord.github.io/#/evidence",
   "image": "https://palestinerecord.github.io/assets/share-card.png",
-  "wordCount": 259580,
+  "wordCount": 261220,
   "dateModified": "2026-11-20",
   "temporalCoverage": "1917/2026",
   "keywords": ["Palestine", "Israel", "international humanitarian law", "Genocide Convention", "International Court of Justice", "International Criminal Court", "occupation", "Gaza", "West Bank"],
@@ -261,7 +261,7 @@
 
 <header class="topbar">
   <a class="brand" href="../index.html#/overview">
-    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=202" alt="Flag of Palestine">
+    <img class="brand-mark flag-ps" src="../assets/flag-palestine.svg?v=203" alt="Flag of Palestine">
     <span class="brand-text">
       <strong>The Documented Record</strong>
       <em>Israel &amp; the Occupied Territories · 1917–2026</em>
@@ -318,7 +318,7 @@
       <section class="section">
         <div class="section-head">
       <div class="eyebrow">Timeline</div>
-      <h2>545 dated events, 1899–2026</h2>
+      <h2>549 dated events, 1899–2026</h2>
       <p>Two chronologies in one. The <b>record</b> entries are the report's own chronology of major crimes and massacres (Appendix B). The <b>context</b> entries are the legal and political steps between them — the mandates, laws, plans, rulings and admissions that make the pattern legible. Filter by era or kind, or search the text of every entry.</p>
     </div>
         <div class="card chart-card" id="chart-era-density" data-chart-card="era-density" data-title="Documented events per decade" data-source="Appendix B + contextual chronology" data-note="The density of the record itself. Crimes and massacres against the legal and political record.">
@@ -338,7 +338,7 @@
       <div class="chart-table" hidden=""></div>
     </div>
         <div class="tl-controls" style="margin-top:26px">
-          <input type="search" id="tl-search" placeholder="Search 545 events — a place, a name, a year…" autocomplete="off">
+          <input type="search" id="tl-search" placeholder="Search 549 events — a place, a name, a year…" autocomplete="off">
           <select id="tl-era">
             <option value="all">All eras</option>
             <option value="pre">Pre-state and Mandate (to 1947)</option>
@@ -349,9 +349,9 @@
           <select id="tl-kind">
             <option value="all">Both chronologies</option>
             <option value="record">Crimes and massacres (142)</option>
-            <option value="context">Legal and political context (403)</option>
+            <option value="context">Legal and political context (407)</option>
           </select>
-          <span class="small muted" id="tl-count">545 of 545 events</span>
+          <span class="small muted" id="tl-count">549 of 549 events</span>
         </div>
         <div class="tl" id="tl-list">
           <h3 class="tl-period" data-period="1890s">1890s</h3><div class="tl-item era-early tl-context" id="tl-0" data-year="1899" data-period="1890s" data-i="0">
@@ -2491,49 +2491,65 @@
             <div class="tl-text">Israeli strike on the surgical wing of Nasser Hospital, Khan Younis, kills six including surgeon Dr Rizk Abu Shaira and a 13-year-old boy</div>
             <div class="tl-note">IDF says it targeted a Hamas brigade commander and that the second floor was a headquarters (§6.7).</div>
           </div><div class="tl-item era-now tl-context" id="tl-534" data-year="2026" data-period="November 2026" data-i="534">
+            <div class="tl-date">12 November 2026</div>
+            <div class="tl-text">European Citizens' Initiative to suspend the EU-Israel Association Agreement is submitted to the Commission with 1,117,104 validated signatures</div>
+            <div class="tl-note">Commission reply due 12 May 2027 (§15.3).</div>
+          </div><div class="tl-item era-now tl-context" id="tl-535" data-year="2026" data-period="November 2026" data-i="535">
             <div class="tl-date">13 November 2026</div>
             <div class="tl-text">Israel bars Al-Haq director Shawan Jabarin from travelling to the ICC Assembly of States Parties</div>
             <div class="tl-note">Human Rights Watch calls it an escalation of a campaign against Palestinian rights groups (§15.13).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-535" data-year="2026" data-period="November 2026" data-i="535">
+          </div><div class="tl-item era-now tl-context" id="tl-536" data-year="2026" data-period="November 2026" data-i="536">
             <div class="tl-date">13 November 2026</div>
             <div class="tl-text">Channel 4 News publishes FOI files on UK arms export licences to Israel: 55 licences worth about £492 million remain in July 2026, led by combat-aircraft licences</div>
             <div class="tl-note">The government says it has suspended or refused over 80 licences and that the files are a partial view (§13.3B).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-536" data-year="2026" data-period="November 2026" data-i="536">
+          </div><div class="tl-item era-now tl-context" id="tl-537" data-year="2026" data-period="November 2026" data-i="537">
             <div class="tl-date">14 November 2026</div>
             <div class="tl-text">Israel kills the Hamas Rafah Brigade commander Samir Abu Younis in Khan Younis; Katz: the offensive 'will continue until Gaza is demilitarized and there is no Hamas'</div>
             <div class="tl-note">At least 1,643 killed since the ceasefire on Al Jazeera's count (§6.7).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-537" data-year="2026" data-period="November 2026" data-i="537">
+          </div><div class="tl-item era-now tl-context" id="tl-538" data-year="2026" data-period="November 2026" data-i="538">
             <div class="tl-date">16 November 2026</div>
             <div class="tl-text">Policy Exchange publishes 'Genocide: the use and abuse of a term', arguing against a looser test of genocidal intent</div>
             <div class="tl-note">Forewords by Dmytro Kuleba and Aharon Barak; GB News headlines it as Britain and the Irish famine (§6.13).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-538" data-year="2026" data-period="November 2026" data-i="538">
+          </div><div class="tl-item era-now tl-context" id="tl-539" data-year="2026" data-period="November 2026" data-i="539">
             <div class="tl-date">16-17 November 2026</div>
             <div class="tl-text">Settlers shoot dead a Palestinian woman and wound ten in Ein a-Duyuk a-Tahta, Jericho, where they occupied eight homes on 4 November</div>
             <div class="tl-note">The army says its account follows an attack on Israelis on 16 November (§9.7).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-539" data-year="2026" data-period="November 2026" data-i="539">
+          </div><div class="tl-item era-now tl-context" id="tl-540" data-year="2026" data-period="November 2026" data-i="540">
             <div class="tl-date">17 November 2026</div>
             <div class="tl-text">The UK freezes the assets of eight Israeli construction firms building in settlements, and of Tzav 9, ahead of the E1 bidding deadline; the Board of Peace tells the Security Council the ceasefire cannot be sustained if it 'delivers nothing visible'</div>
             <div class="tl-note">(§9.7, §6.7).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-540" data-year="2026" data-period="November 2026" data-i="540">
+          </div><div class="tl-item era-now tl-context" id="tl-541" data-year="2026" data-period="November 2026" data-i="541">
             <div class="tl-date">17 November 2026</div>
             <div class="tl-text">Britain Owes Palestine panel at Trinity College, Oxford: the 400-page petition of September 2025 remains unanswered by the UK government</div>
             <div class="tl-note">Danny Friedman KC: ministers must give reasons for refusal (§1.1).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-541" data-year="2026" data-period="November 2026" data-i="541">
+          </div><div class="tl-item era-now tl-context" id="tl-542" data-year="2026" data-period="November 2026" data-i="542">
             <div class="tl-date">18 November 2026</div>
             <div class="tl-text">Israeli tanks advance in central Gaza in the first broad ground operation since the ceasefire; the Eisenkot bloc declares replacing Netanyahu its top priority</div>
             <div class="tl-note">Ministry count since the ceasefire: 1,658 killed (§6.7, §4.5).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-542" data-year="2026" data-period="November 2026" data-i="542">
+          </div><div class="tl-item era-now tl-context" id="tl-543" data-year="2026" data-period="November 2026" data-i="543">
+            <div class="tl-date">18 November 2026</div>
+            <div class="tl-text">Defence Minister Katz says Israel will hold its security zones in Gaza, southern Lebanon and southern Syria indefinitely</div>
+            <div class="tl-note">Reported paraphrase; no full quotation available (§8.6).</div>
+          </div><div class="tl-item era-now tl-context" id="tl-544" data-year="2026" data-period="November 2026" data-i="544">
             <div class="tl-date">19 November 2026</div>
             <div class="tl-text">The ICJ finds Myanmar responsible for genocide against the Rohingya, the first time it has held a State to have committed genocide</div>
             <div class="tl-note">Nine votes to six; intent held to be the only reasonable inference; counter-insurgency explanation rejected. Does not decide South Africa v. Israel (§6.13).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-543" data-year="2026" data-period="November 2026" data-i="543">
+          </div><div class="tl-item era-now tl-context" id="tl-545" data-year="2026" data-period="November 2026" data-i="545">
             <div class="tl-date">19 November 2026</div>
             <div class="tl-text">UN General Assembly Third Committee adopts the annual resolution on Palestinian self-determination, 162 for, 8 against, 8 abstaining</div>
             <div class="tl-note">Against: US, Israel, Argentina, Paraguay, Micronesia, Nauru, Papua New Guinea, Palau (§15.1D).</div>
-          </div><div class="tl-item era-now tl-context" id="tl-544" data-year="2026" data-period="November 2026" data-i="544">
+          </div><div class="tl-item era-now tl-context" id="tl-546" data-year="2026" data-period="November 2026" data-i="546">
+            <div class="tl-date">19 November 2026</div>
+            <div class="tl-text">Trump, Xi and Putin's Shenzhen declaration calls for limits on the ICC's jurisdiction; UN Human Rights Committee adopts General Comment No. 38 on freedom of association</div>
+            <div class="tl-note">Ammori says the General Comment strengthens her Supreme Court case (§15.5, §13.9A).</div>
+          </div><div class="tl-item era-now tl-context" id="tl-547" data-year="2026" data-period="November 2026" data-i="547">
             <div class="tl-date">20 November 2026</div>
             <div class="tl-text">Board of Peace adviser Josh Gruenbaum says the Board will hand Gaza back to the UN if Israeli intransigence continues</div>
             <div class="tl-note">Israeli strikes kill six in Gaza the same day (§6.7).</div>
+          </div><div class="tl-item era-now tl-context" id="tl-548" data-year="2026" data-period="November 2026" data-i="548">
+            <div class="tl-date">20 November 2026</div>
+            <div class="tl-text">A settlement guard shoots dead a Palestinian man, Hamza Abdo, near Dura al-Qara north-east of Ramallah</div>
+            <div class="tl-note">No army or police account available (§9.7).</div>
           </div>
         </div>
         <p class="note small" style="margin-top:22px">The chronology is not exhaustive; it is the record the report anchors. Entries marked as context are compiled from the sources listed under <a href="../index.html#/sources">Sources</a> and are included to close the gaps between the massacres — a chronology of crimes alone would suggest the intervals were empty, and they were not.</p>
@@ -2543,13 +2559,13 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-flag">
-      <img class="flag-ps" src="../assets/flag-palestine.svg?v=202" alt="Flag of Palestine" loading="lazy" decoding="async">
+      <img class="flag-ps" src="../assets/flag-palestine.svg?v=203" alt="Flag of Palestine" loading="lazy" decoding="async">
       <span class="flag-rule"></span>
     </div>
     <p><strong>Source document:</strong> the report in full — a forensic academic survey applying identical
             evidentiary standards to all actors. Every heading, paragraph, list and table it contains is
             reproduced in the <a href="../index.html#/evidence">Evidence</a> section without omission.</p>
-    <p class="muted" id="footer-stats">259,580 words · 36 parts · 221 sections · 15 tables · 545 chronology entries · 159 documented statements · 753 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-11.</p>
+    <p class="muted" id="footer-stats">261,220 words · 36 parts · 221 sections · 15 tables · 549 chronology entries · 159 documented statements · 769 linked sources · 101 bibliography entries. Casualty time-series: <a href="https://data.techforpalestine.org/" target="_blank" rel="noopener">Tech For Palestine</a> (public domain), 2023-10 – 2026-11.</p>
     <!-- A record meant to be used in an argument has to be citable in one.
          Filled in by app.js with the route on screen and the date of the data
          it is showing, so a citation copied from here names the version the

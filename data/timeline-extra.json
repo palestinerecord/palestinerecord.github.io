@@ -2750,6 +2750,13 @@
       "note": "IDF says it targeted a Hamas brigade commander and that the second floor was a headquarters (§6.7)."
     },
     {
+      "date": "12 November 2026",
+      "year": 2026,
+      "sort": "2026-11-12b",
+      "event": "European Citizens' Initiative to suspend the EU-Israel Association Agreement is submitted to the Commission with 1,117,104 validated signatures",
+      "note": "Commission reply due 12 May 2027 (§15.3)."
+    },
+    {
       "date": "13 November 2026",
       "year": 2026,
       "sort": "2026-11-13a",
@@ -2806,6 +2813,13 @@
       "note": "Ministry count since the ceasefire: 1,658 killed (§6.7, §4.5)."
     },
     {
+      "date": "18 November 2026",
+      "year": 2026,
+      "sort": "2026-11-18b",
+      "event": "Defence Minister Katz says Israel will hold its security zones in Gaza, southern Lebanon and southern Syria indefinitely",
+      "note": "Reported paraphrase; no full quotation available (§8.6)."
+    },
+    {
       "date": "19 November 2026",
       "year": 2026,
       "sort": "2026-11-19a",
@@ -2820,11 +2834,25 @@
       "note": "Against: US, Israel, Argentina, Paraguay, Micronesia, Nauru, Papua New Guinea, Palau (§15.1D)."
     },
     {
+      "date": "19 November 2026",
+      "year": 2026,
+      "sort": "2026-11-19c",
+      "event": "Trump, Xi and Putin's Shenzhen declaration calls for limits on the ICC's jurisdiction; UN Human Rights Committee adopts General Comment No. 38 on freedom of association",
+      "note": "Ammori says the General Comment strengthens her Supreme Court case (§15.5, §13.9A)."
+    },
+    {
       "date": "20 November 2026",
       "year": 2026,
       "sort": "2026-11-20a",
       "event": "Board of Peace adviser Josh Gruenbaum says the Board will hand Gaza back to the UN if Israeli intransigence continues",
       "note": "Israeli strikes kill six in Gaza the same day (§6.7)."
+    },
+    {
+      "date": "20 November 2026",
+      "year": 2026,
+      "sort": "2026-11-20b",
+      "event": "A settlement guard shoots dead a Palestinian man, Hamza Abdo, near Dura al-Qara north-east of Ramallah",
+      "note": "No army or police account available (§9.7)."
     }
   ]
 }

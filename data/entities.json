@@ -97,7 +97,7 @@
      "id": "155-icc-arrest-warrant---effective-travel-restrictions",
      "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 15
+     "n": 16
     },
     {
      "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
@@ -154,7 +154,7 @@
      "n": 4
     }
    ],
-   "sections": 153,
+   "sections": 154,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -185,7 +185,7 @@
      "id": "155-icc-arrest-warrant---effective-travel-restrictions",
      "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 4
+     "n": 5
     },
     {
      "id": "62-the-specific-intent-dolus-specialis---documented-statements-by-israeli-offici",
@@ -236,7 +236,7 @@
      "n": 1
     }
    ],
-   "sections": 27,
+   "sections": 28,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -689,9 +689,15 @@
      "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 3
+    },
+    {
+     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
+     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 1
     }
    ],
-   "sections": 3,
+   "sections": 4,
    "warrant": null,
    "sanctions": [
     {
@@ -1345,6 +1351,12 @@
      "n": 7
     },
     {
+     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
+     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 6
+    },
+    {
      "id": "153e-the-eighty-first-general-assembly-what-was-said-from-the-podium-22-septembe",
      "title": "15.3E The Eighty-First General Assembly: What Was Said From the Podium (22 September 2026)",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
@@ -1353,12 +1365,6 @@
     {
      "id": "1513-the-architecture-of-non-accountability-press-exclusion-and-sanctions-on-the",
      "title": "15.13 The Architecture of Non-Accountability: Press Exclusion and Sanctions on the Court",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 4
-    },
-    {
-     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
-     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 4
     },
@@ -1411,7 +1417,7 @@
      "n": 1
     }
    ],
-   "sections": 57,
+   "sections": 59,
    "warrant": null,
    "sanctions": []
   },
@@ -1732,6 +1738,12 @@
      "n": 2
     },
     {
+     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
+     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
      "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
      "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
      "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
@@ -1754,15 +1766,9 @@
      "title": "15.3E The Eighty-First General Assembly: What Was Said From the Podium (22 September 2026)",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 1
-    },
-    {
-     "id": "155-icc-arrest-warrant---effective-travel-restrictions",
-     "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
-     "part": "PART XV - THE INTERNATIONAL VERDICT",
-     "n": 1
     }
    ],
-   "sections": 8,
+   "sections": 9,
    "warrant": null,
    "sanctions": []
   },
