@@ -3,8 +3,8 @@
   "description": "Every dataset behind the charts at palestinerecord.github.io, as plain JSON over HTTPS, with no login and no key.",
   "site": "https://palestinerecord.github.io/",
   "licence": "The compilation is published for re-use with attribution to The Documented Record. The underlying figures are not ours to licence: each record names the body that recorded it, and that body's terms govern the figure itself.",
-  "generated": "2026-11-19",
-  "total_bytes": 7850472,
+  "generated": "2026-11-20",
+  "total_bytes": 7966097,
   "datasets": [
     {
       "path": "data/chart-events.json",
@@ -79,20 +79,20 @@
       "title": "What each member said",
       "description": "For every sitting member who spoke about Gaza, Israel or Palestine in a Commons or Westminster Hall debate since 7 October 2023, one entry per debate: the debate, the number of their contributions to it, and a verbatim excerpt of the longest, taken from the sentence that first names the subject. Indexed by member id; the debate index refers to the debates list in constituency.json.",
       "source": "Hansard, via hansard-api.parliament.uk, under the Open Parliament Licence. Built by constituency.py.",
-      "bytes": 770789,
+      "bytes": 780892,
       "records": null,
       "fields": [
         "meta",
         "by_member"
       ],
-      "updated": "2026-09-23"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/constituency.json",
       "title": "The constituency ledger",
       "description": "Every seat in the House of Commons, the member who holds it, and how that member voted each time the House divided on Palestine: the 2014 motion to recognise the State of Palestine, the second and third readings of the 2023 Bill that would have barred public bodies from boycotting Israel or the settlements, the immediate-ceasefire and humanitarian-pauses amendments of 15 November 2023, and the Order proscribing Palestine Action of 2 July 2025. Each division carries the question as it was put, what a vote for it meant, the published counts that identify it, and a link to its own division list. It carries every early day motion on the subject since 7 October 2023 that takes a side, with who signed, tabled and co-sponsored it; each member's words in Parliament on whether the conduct in Gaza is genocide, classified by hand with the sentence and a Hansard link; and a score for each member combining weighted votes, the share of motions signed and those words, with the weights stated in meta.score. The file also carries every petition to Parliament on the subject that reached a government response or a debate, with signatures counted seat by seat for petitions of this Parliament; every Commons and Westminster Hall debate since 7 October 2023 in which a member spoke about it, with the number of sitting members who did; published opinion polls with their commissioners; and, against each member, any entry in the Register of Members’ Financial Interests and any donation in the Electoral Commission’s register that the published search terms match. Money that reached a party rather than a named member is aggregated to the party, because it cannot honestly be attributed to any one of them. No email address is published here.",
       "source": "Built by constituency.py from members-api.parliament.uk, commonsvotes-api.parliament.uk, hansard-api.parliament.uk, petition.parliament.uk, interests-api.parliament.uk and search.electoralcommission.org.uk. The division subjects are curated rather than machine-derived, because the House titles a division by its procedural form; the published counts are re-checked against the pulled division on every build.",
-      "bytes": 888021,
+      "bytes": 949223,
       "records": null,
       "fields": [
         "meta",
@@ -107,7 +107,7 @@
         "seats",
         "parties"
       ],
-      "updated": "2026-09-24"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/elements.json",
@@ -129,7 +129,7 @@
       "title": "The accountability ledger",
       "description": "The record cut along the axis international criminal law actually uses: named persons and named companies. Each person carries the office they hold, the statements they are recorded as making, the sections of the report that deal with them, any arrest warrant and its present status, and the measures taken against them by which states — including the measures taken against the officers of the Court itself. The companies carry what they supply and what shareholders have done about it, and the file also lists the 125 states parties to the Rome Statute with their obligation under Articles 86 and 89(1).",
       "source": "Joined by entities.py from statements.json, report.json and world-positions.json; no claim originates here.",
-      "bytes": 126211,
+      "bytes": 127401,
       "records": null,
       "fields": [
         "meta",
@@ -138,7 +138,7 @@
         "companies",
         "icc"
       ],
-      "updated": "2026-11-15"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/falsification.json",
@@ -195,7 +195,7 @@
         "ratio",
         "counts"
       ],
-      "updated": "2026-11-16"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/history.json",
@@ -292,7 +292,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-11-19"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/names.json",
@@ -305,7 +305,7 @@
         "meta",
         "people"
       ],
-      "updated": "2026-11-19"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/provenance.json",
@@ -322,7 +322,7 @@
         "files",
         "claims"
       ],
-      "updated": "2026-11-19"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/report-meta.json",
@@ -340,14 +340,14 @@
         "timeline_count",
         "parts"
       ],
-      "updated": "2026-11-16"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/report.json",
       "title": "The source report, parsed",
       "description": "Every part, section, paragraph, list, table, chronology entry and bibliography entry of the report, converted losslessly by build.py and checked by verify.py. This is the whole document as structured data.",
       "source": "The report — A Forensic Academic Survey of State Conduct, Alleged Violations of International Law, and the Documented Record (1917–2026).",
-      "bytes": 2028622,
+      "bytes": 2058965,
       "records": null,
       "fields": [
         "title",
@@ -358,20 +358,20 @@
         "bibliography",
         "tables"
       ],
-      "updated": "2026-11-16"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/sources.json",
       "title": "The linked source library",
       "description": "The evidentiary base grouped by kind: courts and tribunals, UN bodies, human rights organisations, open datasets, academic work, Israeli sources, journalism and archives.",
       "source": "Each entry links to the publisher.",
-      "bytes": 331402,
+      "bytes": 341938,
       "records": null,
       "fields": [
         "meta",
         "groups"
       ],
-      "updated": "2026-11-16"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/statements.json",
@@ -392,7 +392,7 @@
       "title": "Statistical tests on the record",
       "description": "Hypothesis tests on the published data and on public datasets: who is killed, the ceasefires and the ICJ orders against the daily death rate, the West Bank, the integrity of the named list, settler prosecutions, Area C permits and demolitions, food prices under blockade, administrative detention, journalists killed, the destruction of buildings and earlier Gaza wars. Each with its null, test, effect size, interval, raw and adjusted p-value, sources and the plotted series.",
       "source": "Written by analysis/run_tests.py in the source repository from data/, data/raw/ and the external datasets it names (PCBS, UNOSAT, B’Tselem, Yesh Din, CPJ, Peace Now).",
-      "bytes": 81717,
+      "bytes": 81716,
       "records": null,
       "fields": [
         "meta",
@@ -400,20 +400,20 @@
         "groups",
         "tests"
       ],
-      "updated": "2026-11-16"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/timeline-extra.json",
       "title": "The contextual chronology",
       "description": "The legal and political steps between the massacres recorded in Appendix B — mandates, partitions, laws, plans, rulings, resolutions and admissions.",
       "source": "Primary documents as cited per entry.",
-      "bytes": 194593,
-      "records": 393,
+      "bytes": 196845,
+      "records": 399,
       "fields": [
         "meta",
         "items"
       ],
-      "updated": "2026-11-16"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/timeseries.json",
@@ -432,7 +432,7 @@
         "press_killed_count",
         "demographics"
       ],
-      "updated": "2026-11-19"
+      "updated": "2026-11-20"
     },
     {
       "path": "data/war-record.json",

@@ -82,6 +82,12 @@
      "n": 19
     },
     {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 18
+    },
+    {
      "id": "111-israel-funded-hamas",
      "title": "11.1 Israel Funded Hamas",
      "part": "PART XI - STATE-SPONSORED TERROR AND THE HAMAS STRATEGY",
@@ -92,12 +98,6 @@
      "title": "15.5 ICC Arrest Warrant - Effective Travel Restrictions",
      "part": "PART XV - THE INTERNATIONAL VERDICT",
      "n": 15
-    },
-    {
-     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
-     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
-     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
-     "n": 13
     },
     {
      "id": "1512-cultural-figures-and-the-public-response-celebrities-artists-and-the-entert",
@@ -154,7 +154,7 @@
      "n": 4
     }
    ],
-   "sections": 148,
+   "sections": 153,
    "warrant": {
     "court": "International Criminal Court, Pre-Trial Chamber I",
     "date": "21 November 2024",
@@ -605,13 +605,19 @@
      "n": 2
     },
     {
+     "id": "159c-the-special-rapporteurs-report-on-the-media-truth-under-the-rubble-a81249-o",
+     "title": "15.9C The Special Rapporteur's Report on the Media: \"Truth Under the Rubble\" (A/81/249, October 2026)",
+     "part": "PART XV - THE INTERNATIONAL VERDICT",
+     "n": 2
+    },
+    {
      "id": "58-the-systematic-use-of-palestinian-civilians-as-human-shields",
      "title": "5.8 The Systematic Use of Palestinian Civilians as Human Shields",
      "part": "PART V - THE PATTERN OF WAR CRIMES: A 75-YEAR RECORD",
      "n": 2
     }
    ],
-   "sections": 24,
+   "sections": 26,
    "warrant": null,
    "sanctions": [
     {
@@ -1417,7 +1423,7 @@
      "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
      "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
      "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
-     "n": 12
+     "n": 17
     },
     {
      "id": "187-prior-intelligence-knowledge-the-jericho-wall-document-and-the-surveillance-",
@@ -1450,7 +1456,7 @@
      "n": 1
     }
    ],
-   "sections": 26,
+   "sections": 31,
    "warrant": null,
    "sanctions": []
   },
@@ -1652,9 +1658,21 @@
      "title": "6.12 The Winter Flood and the Aid Position (2-15 November 2026)",
      "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
      "n": 1
+    },
+    {
+     "id": "613-the-myanmar-judgment-19-november-2026-and-the-standard-the-court-applied",
+     "title": "6.13 The Myanmar Judgment (19 November 2026) and the Standard the Court Applied",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    },
+    {
+     "id": "97-jericho-the-end-of-the-hebron-operation-and-the-record-month-2-15-november-20",
+     "title": "9.7 Jericho, the End of the Hebron Operation and the Record Month (2-15 November 2026)",
+     "part": "PART IX - THE WEST BANK GENOCIDE AND OPERATION \"IRON WALL\"",
+     "n": 1
     }
    ],
-   "sections": 11,
+   "sections": 13,
    "warrant": null,
    "sanctions": []
   },
@@ -2217,6 +2235,39 @@
    "sanctions": []
   },
   {
+   "id": "yair-lapid",
+   "name": "Yair Lapid",
+   "role": "Leader of the Opposition; Prime Minister of Israel, 2022",
+   "class": "government",
+   "tier": "Former head of government",
+   "statements": [
+    93
+   ],
+   "mentions": [
+    {
+     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
+     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
+     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
+     "n": 1
+    },
+    {
+     "id": "45-the-disqualification-of-every-arab-list-from-the-2026-knesset-election-23-24-",
+     "title": "4.5 The Disqualification of Every Arab List from the 2026 Knesset Election (23-24 September 2026)",
+     "part": "PART IV - THE CRIME OF APARTHEID: TWO PEOPLES, TWO SYSTEMS",
+     "n": 1
+    },
+    {
+     "id": "63a-the-rafah-humanitarian-city-plan-july-2025-and-the-israeli-legal-revolt-agai",
+     "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
+     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
+     "n": 1
+    }
+   ],
+   "sections": 3,
+   "warrant": null,
+   "sanctions": []
+  },
+  {
    "id": "alex-karp",
    "name": "Alex Karp",
    "role": "Chief Executive Officer, Palantir Technologies",
@@ -2374,33 +2425,6 @@
      "id": "12a-the-haavara-agreement-and-the-kareski-affair---zionist-institutions-direct-d",
      "title": "1.2A The Haavara Agreement and the Kareski Affair - Zionist Institutions' Direct Dealings with Nazi Germany, 1933-1935",
      "part": "PART I - PRE-STATE FOUNDATIONS: THE COLONIAL MANDATE AND ZIONIST PARAMILITARIES (1917–1948)",
-     "n": 1
-    }
-   ],
-   "sections": 2,
-   "warrant": null,
-   "sanctions": []
-  },
-  {
-   "id": "yair-lapid",
-   "name": "Yair Lapid",
-   "role": "Leader of the Opposition; Prime Minister of Israel, 2022",
-   "class": "government",
-   "tier": "Former head of government",
-   "statements": [
-    93
-   ],
-   "mentions": [
-    {
-     "id": "196-the-flydubai-flight-and-raf-fairford-the-claim-of-a-false-flag-tested-agains",
-     "title": "19.6 The Flydubai Flight and RAF Fairford: The Claim of a \"False Flag\" Tested Against the Record (27 September - 2 October 2026)",
-     "part": "PART XIX - COMPLEXITY, COUNTER-EVIDENCE, AND ANALYTICAL LIMITATIONS",
-     "n": 1
-    },
-    {
-     "id": "63a-the-rafah-humanitarian-city-plan-july-2025-and-the-israeli-legal-revolt-agai",
-     "title": "6.3A The Rafah \"Humanitarian City\" Plan (July 2025) and the Israeli Legal Revolt Against It",
-     "part": "PART VI - GENOCIDE IN GAZA: THE LEGAL CASE (2023–2026)",
      "n": 1
     }
    ],

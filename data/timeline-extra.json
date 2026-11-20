@@ -2645,6 +2645,13 @@
       "note": "Likud 27, Yashar 21; Herzog's consultations begin 4 November (§4.5)."
     },
     {
+      "date": "27-29 October 2026",
+      "year": 2026,
+      "sort": "2026-10-27a",
+      "event": "UN Special Rapporteur Albanese's report 'Truth under the rubble: media in the time of genocide' (A/81/249) is launched and presented",
+      "note": "Finds that the BBC downplayed or omitted Israeli responsibility in 83% of relevant headlines in its sample (§15.9C)."
+    },
+    {
       "date": "29 October 2026",
       "year": 2026,
       "sort": "2026-10-29a",
@@ -2755,6 +2762,41 @@
       "sort": "2026-11-14a",
       "event": "Israel kills the Hamas Rafah Brigade commander Samir Abu Younis in Khan Younis; Katz: the offensive 'will continue until Gaza is demilitarized and there is no Hamas'",
       "note": "At least 1,643 killed since the ceasefire on Al Jazeera's count (§6.7)."
+    },
+    {
+      "date": "16 November 2026",
+      "year": 2026,
+      "sort": "2026-11-16a",
+      "event": "Policy Exchange publishes 'Genocide: the use and abuse of a term', arguing against a looser test of genocidal intent",
+      "note": "Forewords by Dmytro Kuleba and Aharon Barak; GB News headlines it as Britain and the Irish famine (§6.13)."
+    },
+    {
+      "date": "16-17 November 2026",
+      "year": 2026,
+      "sort": "2026-11-16b",
+      "event": "Settlers shoot dead a Palestinian woman and wound ten in Ein a-Duyuk a-Tahta, Jericho, where they occupied eight homes on 4 November",
+      "note": "The army says its account follows an attack on Israelis on 16 November (§9.7)."
+    },
+    {
+      "date": "17 November 2026",
+      "year": 2026,
+      "sort": "2026-11-17a",
+      "event": "The UK freezes the assets of eight Israeli construction firms building in settlements, and of Tzav 9, ahead of the E1 bidding deadline; the Board of Peace tells the Security Council the ceasefire cannot be sustained if it 'delivers nothing visible'",
+      "note": "(§9.7, §6.7)."
+    },
+    {
+      "date": "18 November 2026",
+      "year": 2026,
+      "sort": "2026-11-18a",
+      "event": "Israeli tanks advance in central Gaza in the first broad ground operation since the ceasefire; the Eisenkot bloc declares replacing Netanyahu its top priority",
+      "note": "Ministry count since the ceasefire: 1,658 killed (§6.7, §4.5)."
+    },
+    {
+      "date": "19 November 2026",
+      "year": 2026,
+      "sort": "2026-11-19a",
+      "event": "The ICJ finds Myanmar responsible for genocide against the Rohingya, the first time it has held a State to have committed genocide",
+      "note": "Nine votes to six; intent held to be the only reasonable inference; counter-insurgency explanation rejected. Does not decide South Africa v. Israel (§6.13)."
     }
   ]
 }

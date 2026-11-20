@@ -447,7 +447,7 @@ MOTIONS_PRO = {
     64387, 64589, 64733, 64800, 64865, 64879, 64922, 65017, 65057, 65236, 65286, 65406,
     65474, 65488, 65491, 65566, 65580, 65614, 65741, 65742, 65753, 65769, 65865, 65886,
     65892, 65964, 65965, 66053, 66183, 66186, 66221, 66235, 66252, 66364, 66371, 66384,
-    66469, 66565,
+    66469, 66565, 66723, 66752, 66830, 66856, 66915, 66916, 66971,
 }
 MOTIONS_AGAINST = {
     63988,  # asks the government to refuse any resettlement of Palestinians from Gaza
@@ -463,10 +463,10 @@ MOTIONS_NOT_COUNTED = {
     'about the hostages or antisemitism, without a position on Palestinians': {
         62034, 62709, 62874, 63225, 63526, 63646, 64550, 64941},
     'a tribute or a commemoration without a call for action': {
-        62233, 62244, 63467, 63480, 63495, 63507, 64235, 64832, 65353},
+        62233, 62244, 63467, 63480, 63495, 63507, 64235, 64832, 65353, 66724},
     'on another subject, and matched only because it mentions one of the search terms': {
         61505, 61880, 61890, 61923, 61952, 62140, 62221, 62358, 62463, 62485, 62515,
-        63154, 63432, 63964, 64314, 65227, 65383, 66207},
+        63154, 63432, 63964, 64314, 65227, 65383, 66207, 66685},
 }
 MOTION_URL = 'https://edm.parliament.uk/early-day-motion/%d'
 
